@@ -1,6 +1,6 @@
 {
   "name": "@lightspeed/flame",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Lightspeed's React UI components library",
   "author": "Lightspeed",
   "license": "SEE LICENSE IN LICENSE",
@@ -45,8 +45,8 @@
     "type-fest": "^0.3.0"
   },
   "devDependencies": {
-    "@lightspeed/flame-tokens": "^0.0.0",
     "@babel/core": "^7.1.6",
+    "@lightspeed/flame-tokens": "^0.1.0",
     "@types/react": "^16.8.23",
     "@types/storybook-readme": "^4.0.0",
     "concurrently": "^3.5.1",

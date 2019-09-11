@@ -1,6 +1,6 @@
 {
   "name": "@lightspeed/flame-tokens",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Design tokens for Lightspeed's Flame design system",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
