@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "allowJs": false,
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "typeRoots": ["./node_modules/@types", "./typings"]
+  },
+  "include": ["./typings", "./src/**/*.ts", "./src/**/*.tsx"],
+  "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/story.tsx"]
+}

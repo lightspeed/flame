@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> Snapshot should match snapshot 1`] = `
+.emotion-6 {
+  display: block;
+  width: 100%;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0.375rem;
+  background: #fff;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+.emotion-0 {
+  width: 100%;
+  -webkit-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  box-sizing: border-box;
+  height: 2.25rem;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 0.875rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border: solid 1px transparent;
+  background: transparent;
+  color: #494c4c;
+  min-width: 0;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+.emotion-0:disabled {
+  opacity: 1;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #abb3b3;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #abb3b3;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #abb3b3;
+}
+
+.emotion-0::placeholder {
+  color: #abb3b3;
+}
+
+.emotion-0:focus,
+.emotion-0:active {
+  outline: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  border-radius: 0.1875rem;
+  background: transparent;
+  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
+  border: solid 1px #c4cacc;
+  -webkit-transition: border-color 100ms ease-in-out;
+  transition: border-color 100ms ease-in-out;
+}
+
+.emotion-1:not([disabled]):not([readonly]):hover ~ .emotion-2 {
+  border-color: #9ba0ab;
+}
+
+.emotion-1:not([disabled]):not([readonly]):focus ~ .emotion-2 {
+  border-color: #2875c6;
+}
+
+.emotion-1:not([disabled]):not([readonly]):active ~ .emotion-2 {
+  border-color: #2875c6;
+}
+
+<label
+  className="emotion-6 emotion-7"
+  htmlFor="username"
+>
+  <div
+    className="emotion-4 emotion-5"
+  >
+    <input
+      className="emotion-0 emotion-1"
+      id="username"
+      name="username"
+      placeholder="Placeholder text"
+    />
+    <div
+      className="emotion-2 emotion-3"
+    />
+  </div>
+</label>
+`;

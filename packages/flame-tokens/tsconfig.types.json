@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "./dist",
+    "allowJs": false,
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "lib": ["es2017", "dom"]
+  },
+  "include": ["./typings", "./src/**/*.ts", "./src/**/*.tsx"],
+  "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/story.tsx"]
+}

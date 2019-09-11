@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon renders correctly 1`] = `
+.emotion-0 {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+}
+
+<svg
+  className=" cr-icon emotion-0 emotion-1"
+  style={
+    Object {
+      "height": "1rem",
+      "width": "1rem",
+    }
+  }
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    className="cr-icon__base cr-icon__base-1"
+    d="M12.058 2.82c.489.381.914.826 1.269 1.316l1.729-.077a.367.367 0 0 1 .332.219l.593 1.545a.369.369 0 0 1-.1.385l-1.337 1.099a6.538 6.538 0 0 1-.064 1.842l1.146 1.051c.101.093.14.268.083.396l-.622 1.396a.363.363 0 0 1-.35.202l-1.545-.15a6.539 6.539 0 0 1-1.328 1.283l.077 1.729a.369.369 0 0 1-.219.332l-1.545.593a.367.367 0 0 1-.385-.1l-1.099-1.337a6.539 6.539 0 0 1-1.846-.065L5.8 15.624a.367.367 0 0 1-.396.084l-1.396-.621a.363.363 0 0 1-.202-.351l.15-1.544a6.538 6.538 0 0 1-1.283-1.328l-1.729.077a.367.367 0 0 1-.332-.219l-.593-1.545a.369.369 0 0 1 .1-.385l1.337-1.099a6.538 6.538 0 0 1 .065-1.846L.376 5.801a.367.367 0 0 1-.085-.397l.622-1.396a.363.363 0 0 1 .35-.202l1.546.15a6.539 6.539 0 0 1 1.327-1.283L4.06.944a.369.369 0 0 1 .219-.332L5.823.02a.367.367 0 0 1 .385.1l1.099 1.337a6.539 6.539 0 0 1 1.843.064L10.2.375a.367.367 0 0 1 .396-.083l1.396.621a.362.362 0 0 1 .205.345l-.139 1.561zm-5.705 8.879A4.05 4.05 0 1 0 9.647 4.3a4.05 4.05 0 0 0-3.294 7.398z"
+  />
+  <path
+    className="cr-icon__base cr-icon__base-2"
+    d="M8 6l1.732 1v2L8 10 6.268 9V7z"
+    opacity=".7"
+  />
+</svg>
+`;
+
+exports[`Icon renders with baseColor and detailColor 1`] = `
+.emotion-0 {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+}
+
+<svg
+  className=" cr-icon emotion-0 emotion-1"
+  style={
+    Object {
+      "height": "1rem",
+      "width": "1rem",
+    }
+  }
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    className="cr-icon__base cr-icon__base-1"
+    d="M3.338 11h.664A2 2 0 0 0 6 9V1.675A7.005 7.005 0 0 1 16 8a7.005 7.005 0 0 1-10 6.325v-.33A1 1 0 0 0 5.01 13h-.906A7.056 7.056 0 0 1 4 12.896V11h-.662z"
+    fill="#ecde36"
+  />
+  <path
+    className="cr-icon__details cr-icon__details-2"
+    d="M6 4.001A4.976 4.976 0 0 1 9 3c2.761 0 5 2.244 5 5 0 2.761-2.244 5-5 5a4.996 4.996 0 0 1-4.138-2.195c.308-.148.573-.372.77-.649A4 4 0 1 0 6 5.356V4.001z"
+    fill="#872525"
+    opacity=".7"
+  />
+  <path
+    className="cr-icon__base cr-icon__base-2"
+    d="M2 14v-4a1.996 1.996 0 0 1-2-1.998V2.5c0-.276.215-.5.498-.5h4.004c.275 0 .498.23.498.5v5.502A2 2 0 0 1 3 10v4h1.502c.275 0 .498.232.498.5 0 .276-.215.5-.498.5H.498A.504.504 0 0 1 0 14.5c0-.276.215-.5.498-.5H2z"
+    fill="#ecde36"
+    opacity=".7"
+  />
+</svg>
+`;
+
+exports[`Icon renders with color 1`] = `
+.emotion-0 {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+}
+
+<svg
+  className=" cr-icon emotion-0 emotion-1"
+  fill="cr-blue"
+  style={
+    Object {
+      "height": "1rem",
+      "width": "1rem",
+    }
+  }
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    className="cr-icon__base cr-icon__base-1"
+    d="M1.614 14.39a5.495 5.495 0 0 1 0-7.775l.353-.353 5.11-5.086a4.001 4.001 0 0 1 5.657 0 3.996 3.996 0 0 1 0 5.654l-5.11 5.086-.353.354a2.5 2.5 0 0 1-3.536-3.534l.354-.354 5.11-5.086a1 1 0 0 1 1.414 1.413l-5.11 5.087-.354.354a.5.5 0 1 0 .707.706l.354-.354 5.11-5.087a1.998 1.998 0 0 0 0-2.827 2.001 2.001 0 0 0-2.829 0l-5.11 5.088-.353.353a3.497 3.497 0 0 0 0 4.947 3.502 3.502 0 0 0 4.95 0l.354-.353 5.964-5.93a1 1 0 0 1 1.414 1.414l-5.964 5.93-.354.353a5.502 5.502 0 0 1-7.778 0z"
+  />
+</svg>
+`;

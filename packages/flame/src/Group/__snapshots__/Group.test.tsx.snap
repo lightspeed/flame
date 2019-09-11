@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Group /> Snapshots renders a group 1`] = `
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  position: relative;
+}
+
+.emotion-8 > .emotion-9:not(:first-of-type),
+.emotion-8 .emotion-1:not(:first-of-type) {
+  margin-left: 0.75rem;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  background-color: #f3f3f3;
+  border: solid 1px #abb3b3;
+  border-radius: 0.1875rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 0;
+}
+
+.emotion-2:hover {
+  z-index: 2;
+}
+
+.emotion-2:not(:first-of-type) {
+  margin-left: 0.75rem;
+}
+
+.emotion-2 > * {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  className="emotion-8 emotion-9"
+>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    $
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <input
+      type="text"
+    />
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <button
+      type="button"
+    >
+      My button
+    </button>
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    / per unit
+  </div>
+</div>
+`;

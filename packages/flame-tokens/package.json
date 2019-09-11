@@ -1,0 +1,37 @@
+{
+  "name": "@lightspeed/flame-tokens",
+  "version": "0.0.0",
+  "description": "Design tokens for Lightspeed's Flame design system",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Lightspeed",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/lightspeed/flame#readme",
+  "repository": "https://github.com/lightspeed/flame",
+  "bugs": {
+    "url": "https://github.com/lightspeed/flame/issues"
+  },
+  "private": false,
+  "dependencies": {
+    "polished": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.3.0"
+  },
+  "scripts": {
+    "build": "yarn build:cjs && yarn build:esm && yarn build:types && ts-node -P ./tsconfig.types.json scripts/pre-publish.ts",
+    "build:cjs": "BABEL_ENV=cjs babel src --out-dir dist --config-file ../../babel.config.js --extensions .ts,.tsx,.js,.jsx",
+    "build:esm": "BABEL_ENV=production babel src --out-dir dist/esm --config-file ../../babel.config.js --extensions .ts,.tsx,.js,.jsx",
+    "build:types": "tsc --p ./tsconfig.types.json",
+    "clean": "rimraf dist && rimraf built-themes && rimraf partials",
+    "prepublish": "yarn clean && yarn build && node ../../scripts/validate-build"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

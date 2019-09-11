@@ -1,0 +1,1102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Autocomplete renders as disabled 1`] = `
+.emotion-7 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  border-color: #abb3b3;
+  border-radius: 0.1875rem;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.25rem;
+  outline: 0 !important;
+  position: relative;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+  box-sizing: border-box;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 0.875rem;
+  color: #494c4c;
+}
+
+.emotion-6:hover {
+  border-color: hsl(0,0%,70%);
+}
+
+.emotion-6:hover {
+  border-color: #848a8a;
+}
+
+.cr-autocomplete--error .emotion-6 {
+  border-color: #b93435;
+}
+
+.cr-autocomplete--error .emotion-6 .cr-autocomplete__dropdownIndicator {
+  fill: #b93435;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2px 8px;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.emotion-0 {
+  color: #abb3b3;
+  margin-left: 2px;
+  margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  visibility: visible;
+  color: hsl(0,0%,20%);
+  box-sizing: border-box;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  opacity: 1;
+  cursor: pointer;
+  color: #848a8a;
+}
+
+.emotion-5 div:hover .cr-autocomplete__clearIndicator {
+  fill: #b93435;
+}
+
+.emotion-3 {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+}
+
+<div
+  className="emotion-7 cr-autocomplete"
+  onKeyDown={[Function]}
+>
+  <div
+    className="emotion-6 cr-autocomplete__control"
+    onMouseDown={[Function]}
+    onTouchEnd={[Function]}
+  >
+    <div
+      className="emotion-2 cr-autocomplete__value-container"
+    >
+      <div
+        className="emotion-0 cr-autocomplete__placeholder"
+      >
+        Choose a color
+      </div>
+      <div
+        className="emotion-1"
+      >
+        <div
+          className="cr-autocomplete__input"
+          style={
+            Object {
+              "display": "inline-block",
+            }
+          }
+        >
+          <input
+            aria-autocomplete="list"
+            autoCapitalize="none"
+            autoComplete="off"
+            autoCorrect="off"
+            disabled={false}
+            id="color-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            spellCheck="false"
+            style={
+              Object {
+                "background": 0,
+                "border": 0,
+                "boxSizing": "content-box",
+                "color": "inherit",
+                "fontSize": "inherit",
+                "label": "input",
+                "opacity": 1,
+                "outline": 0,
+                "padding": 0,
+                "width": "1px",
+              }
+            }
+            tabIndex="0"
+            type="text"
+            value=""
+          />
+          <div
+            style={
+              Object {
+                "height": 0,
+                "left": 0,
+                "overflow": "scroll",
+                "position": "absolute",
+                "top": 0,
+                "visibility": "hidden",
+                "whiteSpace": "pre",
+              }
+            }
+          >
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-5 cr-autocomplete__indicators"
+    >
+      <div
+        aria-hidden="true"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        style={
+          Object {
+            ":hover": Object {
+              "color": "hsl(0, 0%, 60%)",
+            },
+            "boxSizing": "border-box",
+            "color": "hsl(0, 0%, 80%)",
+            "display": "flex",
+            "label": "indicatorContainer",
+            "padding": 8,
+            "transition": "color 150ms",
+          }
+        }
+      >
+        <svg
+          className="cr-autocomplete__dropdownIndicator cr-icon emotion-3 emotion-4"
+          fill="#848a8a"
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            className="cr-icon__base cr-icon__base-1"
+            d="M7.299 10.641c.388.475 1.012.482 1.406 0L11.8 6.86c.389-.475.194-.86-.418-.86H4.623c-.62 0-.812.378-.418.86l3.094 3.781z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <input
+    name="color-input"
+    type="hidden"
+    value=""
+  />
+</div>
+`;
+
+exports[`Autocomplete renders correctly 1`] = `
+.emotion-7 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  border-color: #abb3b3;
+  border-radius: 0.1875rem;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.25rem;
+  outline: 0 !important;
+  position: relative;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+  box-sizing: border-box;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 0.875rem;
+  color: #494c4c;
+}
+
+.emotion-6:hover {
+  border-color: hsl(0,0%,70%);
+}
+
+.emotion-6:hover {
+  border-color: #848a8a;
+}
+
+.cr-autocomplete--error .emotion-6 {
+  border-color: #b93435;
+}
+
+.cr-autocomplete--error .emotion-6 .cr-autocomplete__dropdownIndicator {
+  fill: #b93435;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2px 8px;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.emotion-0 {
+  color: #abb3b3;
+  margin-left: 2px;
+  margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  visibility: visible;
+  color: hsl(0,0%,20%);
+  box-sizing: border-box;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  opacity: 1;
+  cursor: pointer;
+  color: #848a8a;
+}
+
+.emotion-5 div:hover .cr-autocomplete__clearIndicator {
+  fill: #b93435;
+}
+
+.emotion-3 {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+}
+
+<div
+  className="emotion-7 cr-autocomplete"
+  onKeyDown={[Function]}
+>
+  <div
+    className="emotion-6 cr-autocomplete__control"
+    onMouseDown={[Function]}
+    onTouchEnd={[Function]}
+  >
+    <div
+      className="emotion-2 cr-autocomplete__value-container"
+    >
+      <div
+        className="emotion-0 cr-autocomplete__placeholder"
+      >
+        Choose a color
+      </div>
+      <div
+        className="emotion-1"
+      >
+        <div
+          className="cr-autocomplete__input"
+          style={
+            Object {
+              "display": "inline-block",
+            }
+          }
+        >
+          <input
+            aria-autocomplete="list"
+            autoCapitalize="none"
+            autoComplete="off"
+            autoCorrect="off"
+            disabled={false}
+            id="color-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            spellCheck="false"
+            style={
+              Object {
+                "background": 0,
+                "border": 0,
+                "boxSizing": "content-box",
+                "color": "inherit",
+                "fontSize": "inherit",
+                "label": "input",
+                "opacity": 1,
+                "outline": 0,
+                "padding": 0,
+                "width": "1px",
+              }
+            }
+            tabIndex="0"
+            type="text"
+            value=""
+          />
+          <div
+            style={
+              Object {
+                "height": 0,
+                "left": 0,
+                "overflow": "scroll",
+                "position": "absolute",
+                "top": 0,
+                "visibility": "hidden",
+                "whiteSpace": "pre",
+              }
+            }
+          >
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-5 cr-autocomplete__indicators"
+    >
+      <div
+        aria-hidden="true"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        style={
+          Object {
+            ":hover": Object {
+              "color": "hsl(0, 0%, 60%)",
+            },
+            "boxSizing": "border-box",
+            "color": "hsl(0, 0%, 80%)",
+            "display": "flex",
+            "label": "indicatorContainer",
+            "padding": 8,
+            "transition": "color 150ms",
+          }
+        }
+      >
+        <svg
+          className="cr-autocomplete__dropdownIndicator cr-icon emotion-3 emotion-4"
+          fill="#848a8a"
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            className="cr-icon__base cr-icon__base-1"
+            d="M7.299 10.641c.388.475 1.012.482 1.406 0L11.8 6.86c.389-.475.194-.86-.418-.86H4.623c-.62 0-.812.378-.418.86l3.094 3.781z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <input
+    name="color-input"
+    type="hidden"
+    value=""
+  />
+</div>
+`;
+
+exports[`Autocomplete renders in loading mode 1`] = `
+@keyframes animation-0 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-10 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.emotion-9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  border-color: #abb3b3;
+  border-radius: 0.1875rem;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.25rem;
+  outline: 0 !important;
+  position: relative;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+  box-sizing: border-box;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 0.875rem;
+  color: #494c4c;
+}
+
+.emotion-9:hover {
+  border-color: hsl(0,0%,70%);
+}
+
+.emotion-9:hover {
+  border-color: #848a8a;
+}
+
+.cr-autocomplete--error .emotion-9 {
+  border-color: #b93435;
+}
+
+.cr-autocomplete--error .emotion-9 .cr-autocomplete__dropdownIndicator {
+  fill: #b93435;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2px 8px;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.emotion-0 {
+  color: #abb3b3;
+  margin-left: 2px;
+  margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  visibility: visible;
+  color: hsl(0,0%,20%);
+  box-sizing: border-box;
+}
+
+.emotion-8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  opacity: 1;
+  cursor: pointer;
+  color: #848a8a;
+}
+
+.emotion-8 div:hover .cr-autocomplete__clearIndicator {
+  fill: #b93435;
+}
+
+.emotion-6 {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+}
+
+.emotion-4 {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+  -webkit-animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
+  animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
+}
+
+<div
+  className="emotion-10 cr-autocomplete"
+  onKeyDown={[Function]}
+>
+  <div
+    className="emotion-9 cr-autocomplete__control"
+    onMouseDown={[Function]}
+    onTouchEnd={[Function]}
+  >
+    <div
+      className="emotion-2 cr-autocomplete__value-container"
+    >
+      <div
+        className="emotion-0 cr-autocomplete__placeholder"
+      >
+        Choose a color
+      </div>
+      <div
+        className="emotion-1"
+      >
+        <div
+          className="cr-autocomplete__input"
+          style={
+            Object {
+              "display": "inline-block",
+            }
+          }
+        >
+          <input
+            aria-autocomplete="list"
+            autoCapitalize="none"
+            autoComplete="off"
+            autoCorrect="off"
+            disabled={false}
+            id="color-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            spellCheck="false"
+            style={
+              Object {
+                "background": 0,
+                "border": 0,
+                "boxSizing": "content-box",
+                "color": "inherit",
+                "fontSize": "inherit",
+                "label": "input",
+                "opacity": 1,
+                "outline": 0,
+                "padding": 0,
+                "width": "1px",
+              }
+            }
+            tabIndex="0"
+            type="text"
+            value=""
+          />
+          <div
+            style={
+              Object {
+                "height": 0,
+                "left": 0,
+                "overflow": "scroll",
+                "position": "absolute",
+                "top": 0,
+                "visibility": "hidden",
+                "whiteSpace": "pre",
+              }
+            }
+          >
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-8 cr-autocomplete__indicators"
+    >
+      <svg
+        className="emotion-3 cr-icon emotion-4 emotion-5"
+        fill="#abb3b3"
+        style={
+          Object {
+            "height": "1.125rem",
+            "width": "1.125rem",
+          }
+        }
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          className="cr-icon__base cr-icon__base-2"
+          d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zm0-3A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"
+          fill="#848a8a"
+          opacity=".3"
+        />
+        <path
+          className="cr-icon__base cr-icon__base-1"
+          d="M8 13a1.5 1.5 0 0 1 0 3A8 8 0 0 1 .323 5.742a1.5 1.5 0 1 1 2.879.846A5 5 0 0 0 8 13z"
+        />
+      </svg>
+      <div
+        aria-hidden="true"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        style={
+          Object {
+            ":hover": Object {
+              "color": "hsl(0, 0%, 60%)",
+            },
+            "boxSizing": "border-box",
+            "color": "hsl(0, 0%, 80%)",
+            "display": "flex",
+            "label": "indicatorContainer",
+            "padding": 8,
+            "transition": "color 150ms",
+          }
+        }
+      >
+        <svg
+          className="cr-autocomplete__dropdownIndicator cr-icon emotion-6 emotion-5"
+          fill="#848a8a"
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            className="cr-icon__base cr-icon__base-1"
+            d="M7.299 10.641c.388.475 1.012.482 1.406 0L11.8 6.86c.389-.475.194-.86-.418-.86H4.623c-.62 0-.812.378-.418.86l3.094 3.781z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <input
+    name="color-input"
+    type="hidden"
+    value=""
+  />
+</div>
+`;
+
+exports[`Autocomplete renders with an initial value 1`] = `
+.emotion-9 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.emotion-8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  border-color: #abb3b3;
+  border-radius: 0.1875rem;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.25rem;
+  outline: 0 !important;
+  position: relative;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+  box-sizing: border-box;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 0.875rem;
+  color: #494c4c;
+}
+
+.emotion-8:hover {
+  border-color: hsl(0,0%,70%);
+}
+
+.emotion-8:hover {
+  border-color: #848a8a;
+}
+
+.cr-autocomplete--error .emotion-8 {
+  border-color: #b93435;
+}
+
+.cr-autocomplete--error .emotion-8 .cr-autocomplete__dropdownIndicator {
+  fill: #b93435;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2px 8px;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  visibility: visible;
+  color: hsl(0,0%,20%);
+  box-sizing: border-box;
+}
+
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  opacity: 1;
+  cursor: pointer;
+  color: #848a8a;
+}
+
+.emotion-7 div:hover .cr-autocomplete__clearIndicator {
+  fill: #b93435;
+}
+
+.emotion-3 {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+}
+
+.emotion-0 {
+  color: hsl(0,0%,20%);
+  margin-left: 2px;
+  margin-right: 2px;
+  max-width: calc(100% - 8px);
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+<div
+  className="emotion-9 cr-autocomplete"
+  onKeyDown={[Function]}
+>
+  <div
+    className="emotion-8 cr-autocomplete__control"
+    onMouseDown={[Function]}
+    onTouchEnd={[Function]}
+  >
+    <div
+      className="emotion-2 cr-autocomplete__value-container cr-autocomplete__value-container--has-value"
+    >
+      <div
+        className="emotion-0 cr-autocomplete__single-value"
+      >
+        Red
+      </div>
+      <div
+        className="emotion-1"
+      >
+        <div
+          className="cr-autocomplete__input"
+          style={
+            Object {
+              "display": "inline-block",
+            }
+          }
+        >
+          <input
+            aria-autocomplete="list"
+            autoCapitalize="none"
+            autoComplete="off"
+            autoCorrect="off"
+            disabled={false}
+            id="color-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            spellCheck="false"
+            style={
+              Object {
+                "background": 0,
+                "border": 0,
+                "boxSizing": "content-box",
+                "color": "inherit",
+                "fontSize": "inherit",
+                "label": "input",
+                "opacity": 1,
+                "outline": 0,
+                "padding": 0,
+                "width": "1px",
+              }
+            }
+            tabIndex="0"
+            type="text"
+            value=""
+          />
+          <div
+            style={
+              Object {
+                "height": 0,
+                "left": 0,
+                "overflow": "scroll",
+                "position": "absolute",
+                "top": 0,
+                "visibility": "hidden",
+                "whiteSpace": "pre",
+              }
+            }
+          >
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-7 cr-autocomplete__indicators"
+    >
+      <div
+        aria-hidden="true"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        style={
+          Object {
+            ":hover": Object {
+              "color": "hsl(0, 0%, 60%)",
+            },
+            "boxSizing": "border-box",
+            "color": "hsl(0, 0%, 80%)",
+            "display": "flex",
+            "label": "indicatorContainer",
+            "padding": 8,
+            "transition": "color 150ms",
+          }
+        }
+      >
+        <svg
+          className="cr-autocomplete__clearIndicator cr-icon emotion-3 emotion-4"
+          fill="hsl(0, 0%, 80%)"
+          style={
+            Object {
+              "height": "0.625rem",
+              "width": "0.625rem",
+            }
+          }
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            className="cr-icon__base cr-icon__base-1"
+            d="M10.216 8l3.325-3.325a1.567 1.567 0 1 0-2.216-2.216L8 5.784 4.675 2.459A1.567 1.567 0 0 0 2.46 4.675L5.784 8l-3.325 3.325a1.567 1.567 0 1 0 2.216 2.216L8 10.216l3.325 3.325a1.567 1.567 0 1 0 2.216-2.216L10.216 8z"
+          />
+        </svg>
+      </div>
+      <div
+        aria-hidden="true"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+        style={
+          Object {
+            ":hover": Object {
+              "color": "hsl(0, 0%, 60%)",
+            },
+            "boxSizing": "border-box",
+            "color": "hsl(0, 0%, 80%)",
+            "display": "flex",
+            "label": "indicatorContainer",
+            "padding": 8,
+            "transition": "color 150ms",
+          }
+        }
+      >
+        <svg
+          className="cr-autocomplete__dropdownIndicator cr-icon emotion-3 emotion-4"
+          fill="#848a8a"
+          style={
+            Object {
+              "height": "1rem",
+              "width": "1rem",
+            }
+          }
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            className="cr-icon__base cr-icon__base-1"
+            d="M7.299 10.641c.388.475 1.012.482 1.406 0L11.8 6.86c.389-.475.194-.86-.418-.86H4.623c-.62 0-.812.378-.418.86l3.094 3.781z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <input
+    name="color-input"
+    type="hidden"
+    value="1"
+  />
+</div>
+`;

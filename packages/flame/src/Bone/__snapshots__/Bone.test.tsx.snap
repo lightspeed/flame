@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Bone /> Snapshots when it animated is false should render correctly 1`] = `
+.emotion-0 {
+  display: block;
+  border-radius: 0.1875rem;
+  background: #e1e4e5;
+  width: 100%;
+  height: 0.75rem;
+}
+
+<span
+  className="emotion-0 emotion-1"
+  height="2"
+  width="100%"
+/>
+`;
+
+exports[`<Bone /> Snapshots when it has empty props should render correctly 1`] = `
+.emotion-0 {
+  display: block;
+  border-radius: 0.1875rem;
+  background: #e1e4e5;
+  -webkit-animation: boneAnimation 1.8s infinite;
+  animation: boneAnimation 1.8s infinite;
+  width: 100%;
+  height: 0.75rem;
+}
+
+<span
+  className="emotion-0 emotion-1"
+  height="2"
+  width="100%"
+/>
+`;
+
+exports[`<Bone /> Snapshots when it has width and height should render correctly 1`] = `
+.emotion-0 {
+  display: block;
+  border-radius: 0.1875rem;
+  background: #e1e4e5;
+  -webkit-animation: boneAnimation 1.8s infinite;
+  animation: boneAnimation 1.8s infinite;
+  width: 1rem;
+  height: 1rem;
+}
+
+<span
+  className="emotion-0 emotion-1"
+  height="1rem"
+  width="1rem"
+/>
+`;

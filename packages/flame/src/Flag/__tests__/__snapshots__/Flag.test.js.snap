@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Flag /> Snapshots when country code should render correctly 1`] = `
+.emotion-0 {
+  width: 1rem !important;
+  height: 0.75rem !important;
+  vertical-align: text-bottom;
+}
+
+<svg
+  className="emotion-0 emotion-1"
+  size="1rem"
+  viewBox="0 0 16 12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <rect
+      height={12}
+      id="cr-flag-CA-a"
+      rx={1}
+      width={16}
+    />
+  </defs>
+  <g
+    fill="none"
+    fillRule="evenodd"
+  >
+    <mask
+      fill="#fff"
+      id="cr-flag-CA-b"
+    >
+      <use
+        xlinkHref="#cr-flag-CA-a"
+      />
+    </mask>
+    <use
+      fill="#FFF"
+      xlinkHref="#cr-flag-CA-a"
+    />
+    <path
+      d="M0 0h16v12H0z"
+      fill="#D52B1E"
+      mask="url(#cr-flag-CA-b)"
+    />
+    <path
+      d="M4 0h8v12H4z"
+      fill="#FFF"
+      mask="url(#cr-flag-CA-b)"
+    />
+    <path
+      d="M9 5.586h1.414V7L8.293 9.121 8 8.828l-.293.293L5.586 7V5.586H7V4l1-1 1 1v1.586z"
+      fill="#D52B1E"
+      mask="url(#cr-flag-CA-b)"
+    />
+    <g
+      mask="url(#cr-flag-CA-b)"
+      stroke="#000"
+      strokeOpacity=".1"
+    >
+      <path
+        d="M.5.5h15v11H.5z"
+        style={
+          Object {
+            "mixBlendMode": "multiply",
+          }
+        }
+      />
+    </g>
+  </g>
+</svg>
+`;
+
+exports[`<Flag /> Snapshots when country name should render correctly 1`] = `
+.emotion-0 {
+  width: 1rem !important;
+  height: 0.75rem !important;
+  vertical-align: text-bottom;
+}
+
+<svg
+  className="emotion-0 emotion-1"
+  size="1rem"
+  viewBox="0 0 16 12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <rect
+      height={12}
+      id="cr-flag-CA-a"
+      rx={1}
+      width={16}
+    />
+  </defs>
+  <g
+    fill="none"
+    fillRule="evenodd"
+  >
+    <mask
+      fill="#fff"
+      id="cr-flag-CA-b"
+    >
+      <use
+        xlinkHref="#cr-flag-CA-a"
+      />
+    </mask>
+    <use
+      fill="#FFF"
+      xlinkHref="#cr-flag-CA-a"
+    />
+    <path
+      d="M0 0h16v12H0z"
+      fill="#D52B1E"
+      mask="url(#cr-flag-CA-b)"
+    />
+    <path
+      d="M4 0h8v12H4z"
+      fill="#FFF"
+      mask="url(#cr-flag-CA-b)"
+    />
+    <path
+      d="M9 5.586h1.414V7L8.293 9.121 8 8.828l-.293.293L5.586 7V5.586H7V4l1-1 1 1v1.586z"
+      fill="#D52B1E"
+      mask="url(#cr-flag-CA-b)"
+    />
+    <g
+      mask="url(#cr-flag-CA-b)"
+      stroke="#000"
+      strokeOpacity=".1"
+    >
+      <path
+        d="M.5.5h15v11H.5z"
+        style={
+          Object {
+            "mixBlendMode": "multiply",
+          }
+        }
+      />
+    </g>
+  </g>
+</svg>
+`;
+
+exports[`<Flag /> Snapshots when region code should render correctly 1`] = `
+.emotion-0 {
+  width: 1rem !important;
+  height: 0.75rem !important;
+  vertical-align: text-bottom;
+}
+
+<svg
+  className="emotion-0 emotion-1"
+  size="1rem"
+  viewBox="0 0 16 12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <rect
+      height={12}
+      id="cr-flag-CA-QC-a"
+      rx={1}
+      width={16}
+    />
+  </defs>
+  <g
+    fill="none"
+    fillRule="evenodd"
+  >
+    <mask
+      fill="#fff"
+      id="cr-flag-CA-QC-b"
+    >
+      <use
+        xlinkHref="#cr-flag-CA-QC-a"
+      />
+    </mask>
+    <use
+      fill="#FFF"
+      xlinkHref="#cr-flag-CA-QC-a"
+    />
+    <path
+      d="M0 0h16v12H0z"
+      fill="#002495"
+      mask="url(#cr-flag-CA-QC-b)"
+    />
+    <path
+      d="M7 5V0h2v5h7v2H9v5H7V7H0V5z"
+      fill="#FFF"
+      mask="url(#cr-flag-CA-QC-b)"
+    />
+    <path
+      d="M13.156 2.597L12.219 1.3l-.938 1.297.938 1.14zm-8.901 0L3.318 1.3 2.38 2.597l.938 1.14zm8.901 7L12.219 8.3l-.938 1.297.938 1.14zm-8.901 0L3.318 8.3 2.38 9.597l.938 1.14z"
+      fill="#FFF"
+      mask="url(#cr-flag-CA-QC-b)"
+      opacity=".7"
+      stroke="#FFF"
+    />
+    <g
+      mask="url(#cr-flag-CA-QC-b)"
+      stroke="#000"
+      strokeOpacity=".1"
+    >
+      <path
+        d="M.5.5h15v11H.5z"
+        style={
+          Object {
+            "mixBlendMode": "multiply",
+          }
+        }
+      />
+    </g>
+  </g>
+</svg>
+`;
+
+exports[`<Flag /> Snapshots when region name should render correctly 1`] = `
+.emotion-0 {
+  width: 1rem !important;
+  height: 0.75rem !important;
+  vertical-align: text-bottom;
+}
+
+<svg
+  className="emotion-0 emotion-1"
+  size="1rem"
+  viewBox="0 0 16 12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <rect
+      height={12}
+      id="cr-flag-CA-QC-a"
+      rx={1}
+      width={16}
+    />
+  </defs>
+  <g
+    fill="none"
+    fillRule="evenodd"
+  >
+    <mask
+      fill="#fff"
+      id="cr-flag-CA-QC-b"
+    >
+      <use
+        xlinkHref="#cr-flag-CA-QC-a"
+      />
+    </mask>
+    <use
+      fill="#FFF"
+      xlinkHref="#cr-flag-CA-QC-a"
+    />
+    <path
+      d="M0 0h16v12H0z"
+      fill="#002495"
+      mask="url(#cr-flag-CA-QC-b)"
+    />
+    <path
+      d="M7 5V0h2v5h7v2H9v5H7V7H0V5z"
+      fill="#FFF"
+      mask="url(#cr-flag-CA-QC-b)"
+    />
+    <path
+      d="M13.156 2.597L12.219 1.3l-.938 1.297.938 1.14zm-8.901 0L3.318 1.3 2.38 2.597l.938 1.14zm8.901 7L12.219 8.3l-.938 1.297.938 1.14zm-8.901 0L3.318 8.3 2.38 9.597l.938 1.14z"
+      fill="#FFF"
+      mask="url(#cr-flag-CA-QC-b)"
+      opacity=".7"
+      stroke="#FFF"
+    />
+    <g
+      mask="url(#cr-flag-CA-QC-b)"
+      stroke="#000"
+      strokeOpacity=".1"
+    >
+      <path
+        d="M.5.5h15v11H.5z"
+        style={
+          Object {
+            "mixBlendMode": "multiply",
+          }
+        }
+      />
+    </g>
+  </g>
+</svg>
+`;
+
+exports[`<Flag /> Snapshots when size should render correctly 1`] = `
+.emotion-0 {
+  width: 2rem !important;
+  height: 1.5rem !important;
+  vertical-align: text-bottom;
+}
+
+<svg
+  className="emotion-0 emotion-1"
+  size="2rem"
+  viewBox="0 0 16 12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <rect
+      height={12}
+      id="cr-flag-NL-a"
+      rx={1}
+      width={16}
+    />
+  </defs>
+  <g
+    fill="none"
+    fillRule="evenodd"
+  >
+    <mask
+      fill="#fff"
+      id="cr-flag-NL-b"
+    >
+      <use
+        xlinkHref="#cr-flag-NL-a"
+      />
+    </mask>
+    <use
+      fill="#FFF"
+      xlinkHref="#cr-flag-NL-a"
+    />
+    <path
+      d="M0 8h16v4H0z"
+      fill="#21468B"
+      mask="url(#cr-flag-NL-b)"
+    />
+    <path
+      d="M0 0h16v4H0z"
+      fill="#AE1C28"
+      mask="url(#cr-flag-NL-b)"
+    />
+    <g
+      mask="url(#cr-flag-NL-b)"
+      stroke="#000"
+      strokeOpacity=".1"
+    >
+      <path
+        d="M.5.5h15v11H.5z"
+        style={
+          Object {
+            "mixBlendMode": "multiply",
+          }
+        }
+      />
+    </g>
+  </g>
+</svg>
+`;

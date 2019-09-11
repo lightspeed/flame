@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fontSizeAliases returns list of rem value by alias size 1`] = `
+Object {
+  "": "1rem",
+  "large": "1.125rem",
+  "small": "0.875rem",
+  "xlarge": "1.5rem",
+  "xsmall": "0.75rem",
+  "xxlarge": "2.25rem",
+  "xxsmall": "0.5rem",
+}
+`;
+
+exports[`fontSizes returns list of rem value by size 1`] = `
+Object {
+  "text": "1rem",
+  "text-l": "1.125rem",
+  "text-s": "0.875rem",
+  "text-xl": "1.5rem",
+  "text-xs": "0.75rem",
+  "text-xxl": "2.25rem",
+  "text-xxs": "0.5rem",
+}
+`;

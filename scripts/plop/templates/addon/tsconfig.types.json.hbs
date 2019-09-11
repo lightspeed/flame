@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "allowJs": false,
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["./typings", "./src/**/*.ts", "./src/**/*.tsx"],
+  "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/story.tsx"]
+}

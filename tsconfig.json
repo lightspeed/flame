@@ -1,0 +1,20 @@
+{
+  "extends": "@lightspeed/config-typescript/base",
+  "compilerOptions": {
+    "allowJs": true,
+    "strictNullChecks": false,
+    "declaration": false,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "test-utils": ["tests/test-utils"]
+    }
+  },
+  "exclude": [
+    "**/*.js",
+    "**/dist/**",
+    "scripts/plop/templates/**/*",
+    "packages/flame-tokens/story.tsx",
+    "**/node_modules/**"
+  ]
+}

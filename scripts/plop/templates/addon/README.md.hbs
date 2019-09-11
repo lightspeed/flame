@@ -1,0 +1,43 @@
+# {{pascalCase name}}
+
+{{pascalCase name}} component description.
+
+## Installation
+
+First, make sure you have been through the [Getting Started](https://github.com/lightspeed/flame#getting-started) steps of adding Flame in your application.
+
+If using [Yarn](https://yarnpkg.com/):
+
+```sh
+yarn add @lightspeed/flame-{{kebabCase name}}
+```
+
+Or using [npm](https://www.npmjs.com/):
+
+```sh
+npm i -S @lightspeed/flame-{{kebabCase name}}
+```
+
+### React Component
+
+#### Props
+
+| Prop       | Type            | Description                              |
+| ---------- | --------------- | ---------------------------------------- |
+| `children` | React.ReactNode | The content to display inside the button |
+| `prop`     | PropType        | Prop description                         |
+
+#### Example
+
+```tsx
+import * as React from 'react';
+import {{pascalCase name}} from '@lightspeed/flame-{{kebabCase name}}';
+
+const MyComponent: React.FC = () => (
+  <div>
+    <{{pascalCase name }}>My {{pascalCase name }}</{{pascalCase name }}>
+  </div>
+);
+
+export default MyComponent;
+```

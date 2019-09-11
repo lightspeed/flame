@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "chore": ["/*", "!/package.json", "!/yarn.lock", "!/packages"],
+    "dependencies": ["/package.json", "/yarn.lock"],
+    "pkg: flame-tokens": "packages/flame-tokens",
+    "pkg: flame": "packages/flame"
+  }
+}

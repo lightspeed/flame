@@ -1,0 +1,25 @@
+{
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "independent",
+  "command": {
+    "publish": {
+      "allowBranch": ["master"],
+      "ignoreChanges": [
+        "**/story.js",
+        "**/story.tsx",
+        "*.md",
+        "**/__tests__/**",
+        "*.test.js",
+        "*.test.ts",
+        "*.test.tsx",
+        "**/__snapshots__/**",
+        "**/examples/**",
+        "**/flame-sidebar/story/**",
+        "**/packages/framerx/**",
+        "packages/flame/scripts/check-changed.js"
+      ]
+    }
+  },
+  "packages": ["packages/*"]
+}

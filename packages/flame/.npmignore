@@ -1,0 +1,7 @@
+__snapshots__
+__tests__
+scripts
+node_modules
+CHANGELOG.md
+*.test.js
+story.js

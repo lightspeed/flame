@@ -1,0 +1,19 @@
+{
+  "eslint.enable": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/coverage": true,
+    "**/node_modules": true,
+    "**/vendor": true,
+    "**/yarn.lock": true
+  },
+  "javascript.validate.enable": false,
+  "css.validate": false,
+  "scss.validate": false,
+  "html.format.enable": false,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

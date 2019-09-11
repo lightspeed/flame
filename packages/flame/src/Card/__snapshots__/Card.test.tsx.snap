@@ -1,0 +1,644 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card CardFooter renders correctly 1`] = `
+.emotion-2 {
+  border-radius: 0.375rem;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.emotion-2 >:first-of-type {
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-2 >:last-child {
+  border-bottom-left-radius: calc(0.375rem - 1px);
+  border-bottom-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-0 {
+  color: #494c4c;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  line-height: 1.125rem;
+  border-top: 1px solid #e1e4e5;
+}
+
+<div
+  className="emotion-2 emotion-3"
+>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    Card Footer
+  </div>
+</div>
+`;
+
+exports[`Card CardHeader renders correctly 1`] = `
+.emotion-6 {
+  border-radius: 0.375rem;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.emotion-6 >:first-of-type {
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-6 >:last-child {
+  border-bottom-left-radius: calc(0.375rem - 1px);
+  border-bottom-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-4 {
+  color: #494c4c;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #0c0d0d;
+  line-height: 1.125rem;
+  border-bottom: 1px solid #e1e4e5;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+<div
+  className="emotion-6 emotion-7"
+>
+  <div
+    className="emotion-4 emotion-5"
+    color="textHeading"
+  >
+    <div
+      className="emotion-2 emotion-3"
+    >
+      <div
+        className="emotion-0 emotion-1"
+      >
+        Card Title
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card CardHeader renders with actions 1`] = `
+.emotion-6 {
+  border-radius: 0.375rem;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.emotion-6 >:first-of-type {
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-6 >:last-child {
+  border-bottom-left-radius: calc(0.375rem - 1px);
+  border-bottom-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-4 {
+  color: #494c4c;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #0c0d0d;
+  line-height: 1.125rem;
+  border-bottom: 1px solid #e1e4e5;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+<div
+  className="emotion-6 emotion-7"
+>
+  <div
+    className="emotion-4 emotion-5"
+    color="textHeading"
+  >
+    <div
+      className="emotion-2 emotion-3"
+    >
+      <div
+        className="emotion-0 emotion-1"
+      >
+        Card Title
+      </div>
+      <div>
+        <span>
+          Action
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card Spacing allows for sub-components to pass their own size 1`] = `
+.emotion-10 {
+  border-radius: 0.375rem;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.emotion-10 >:first-of-type {
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-10 >:last-child {
+  border-bottom-left-radius: calc(0.375rem - 1px);
+  border-bottom-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.emotion-4 {
+  color: #494c4c;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #0c0d0d;
+  padding: 1.5rem;
+  line-height: 1.125rem;
+  border-bottom: 1px solid #e1e4e5;
+  padding: 0 1.5rem;
+}
+
+.emotion-6 {
+  color: #494c4c;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding: 1.5rem;
+}
+
+.emotion-8 {
+  color: #494c4c;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding: 1.5rem;
+  line-height: 1.125rem;
+  border-top: 1px solid #e1e4e5;
+  padding: 0.75rem 1.5rem;
+}
+
+<div
+  className="emotion-10 emotion-11"
+>
+  <div
+    className="emotion-4 emotion-5"
+    color="textHeading"
+  >
+    <div
+      className="emotion-2 emotion-3"
+    >
+      <div
+        className="emotion-0 emotion-1"
+      >
+        Card Title
+      </div>
+    </div>
+  </div>
+  <div
+    className="emotion-6 emotion-7"
+  >
+    Card Content
+  </div>
+  <div
+    className="emotion-8 emotion-9"
+  >
+    Card Footer
+  </div>
+</div>
+`;
+
+exports[`Card Spacing render a large CardHeader, Section and Footer when Card has large prop 1`] = `
+.emotion-6 {
+  color: #494c4c;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.emotion-10 {
+  border-radius: 0.375rem;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.emotion-10 >:first-of-type {
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-10 >:last-child {
+  border-bottom-left-radius: calc(0.375rem - 1px);
+  border-bottom-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-10 .emotion-5,
+.emotion-10 .emotion-9 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.emotion-10 .emotion-7 {
+  padding: 1.5rem;
+}
+
+.emotion-4 {
+  color: #494c4c;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #0c0d0d;
+  line-height: 1.125rem;
+  border-bottom: 1px solid #e1e4e5;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.emotion-8 {
+  color: #494c4c;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  line-height: 1.125rem;
+  border-top: 1px solid #e1e4e5;
+}
+
+<div
+  className="emotion-10 emotion-11"
+>
+  <div
+    className="emotion-4 emotion-5"
+    color="textHeading"
+  >
+    <div
+      className="emotion-2 emotion-3"
+    >
+      <div
+        className="emotion-0 emotion-1"
+      >
+        Card Title
+      </div>
+    </div>
+  </div>
+  <div
+    className="emotion-6 emotion-7"
+  >
+    Card Content
+  </div>
+  <div
+    className="emotion-8 emotion-9"
+  >
+    Card Footer
+  </div>
+</div>
+`;
+
+exports[`Card Spacing render a noSpacing CardHeader, Section and Footer when Card has noSpacing prop 1`] = `
+.emotion-6 {
+  color: #494c4c;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.emotion-4 {
+  color: #494c4c;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #0c0d0d;
+  line-height: 1.125rem;
+  border-bottom: 1px solid #e1e4e5;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.emotion-8 {
+  color: #494c4c;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  line-height: 1.125rem;
+  border-top: 1px solid #e1e4e5;
+}
+
+.emotion-10 {
+  border-radius: 0.375rem;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.emotion-10 >:first-of-type {
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-10 >:last-child {
+  border-bottom-left-radius: calc(0.375rem - 1px);
+  border-bottom-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-10 .emotion-5,
+.emotion-10 .emotion-9 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.emotion-10 .emotion-7 {
+  padding: 0;
+}
+
+<div
+  className="emotion-10 emotion-11"
+>
+  <div
+    className="emotion-4 emotion-5"
+    color="textHeading"
+  >
+    <div
+      className="emotion-2 emotion-3"
+    >
+      <div
+        className="emotion-0 emotion-1"
+      >
+        Card Title
+      </div>
+    </div>
+  </div>
+  <div
+    className="emotion-6 emotion-7"
+  >
+    Card Content
+  </div>
+  <div
+    className="emotion-8 emotion-9"
+  >
+    Card Footer
+  </div>
+</div>
+`;
+
+exports[`Card Spacing renders a card with an optional section 1`] = `
+.emotion-0 {
+  border-radius: 0.375rem;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.emotion-0 >:first-of-type {
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-0 >:last-child {
+  border-bottom-left-radius: calc(0.375rem - 1px);
+  border-bottom-right-radius: calc(0.375rem - 1px);
+}
+
+<div
+  className="emotion-0 emotion-1"
+/>
+`;
+
+exports[`Card Spacing renders section without spacing 1`] = `
+.emotion-2 {
+  border-radius: 0.375rem;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.emotion-2 >:first-of-type {
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-2 >:last-child {
+  border-bottom-left-radius: calc(0.375rem - 1px);
+  border-bottom-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-0 {
+  color: #494c4c;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding: 0;
+}
+
+<div
+  className="emotion-2 emotion-3"
+>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    Card Content
+  </div>
+</div>
+`;
+
+exports[`Card Types renders correctly (default) 1`] = `
+.emotion-2 {
+  border-radius: 0.375rem;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
+}
+
+.emotion-2 >:first-of-type {
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-2 >:last-child {
+  border-bottom-left-radius: calc(0.375rem - 1px);
+  border-bottom-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-0 {
+  color: #494c4c;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+<div
+  className="emotion-2 emotion-3"
+>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    Card Content
+  </div>
+</div>
+`;
+
+exports[`Card Types renders correctly (top) 1`] = `
+.emotion-0 {
+  color: #494c4c;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.emotion-2 {
+  border-radius: 0.375rem;
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 6px 12px 0 rgba(0,0,0,0.03),0 4px 8px 0 rgba(0,0,0,0.08);
+}
+
+.emotion-2 >:first-of-type {
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+.emotion-2 >:last-child {
+  border-bottom-left-radius: calc(0.375rem - 1px);
+  border-bottom-right-radius: calc(0.375rem - 1px);
+}
+
+<div
+  className="emotion-2 emotion-3"
+>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    Card Content
+  </div>
+</div>
+`;
