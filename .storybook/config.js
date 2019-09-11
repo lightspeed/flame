@@ -12,7 +12,7 @@ class FlameStyling extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTheme: localStorage.getItem('theme') || 'light',
+      selectedTheme: localStorage.getItem('theme') || 'flame',
     };
   }
 
