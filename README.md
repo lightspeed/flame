@@ -12,7 +12,7 @@ For the deployed version of our development environment visit https://lightspeed
 
 Fork this CodeSandbox and start playing around with components:
 
-[![Edit Flame Sandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/flame-sandbox-u3jgo)
+[![Edit Flame Sandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/lightspeed-flame-components-n0bn2)
 
 ## Installing
 
