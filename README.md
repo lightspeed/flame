@@ -178,4 +178,4 @@ See the [contributing guidelines](.github/CONTRIBUTING.md).
 
 ## Licenses
 
-Source code is licensed under [MIT](https://opensource.org/licenses/MIT).
+The source code is licensed with a [custom license](https://github.com/lightspeed/flame/blob/master/LICENSE).
