@@ -25,16 +25,6 @@ On/Off --> `<Switch>`.
 | `indeterminate` | `boolean`                    | Set to true true for indeterminate style                                                  |
 | `html property` | `string`                     | Any extra properties passed will be added to the underlying `<input type="checkbox">` tag |
 
-#### `<CheckboxLabel>`
-
-A prestyled flame Text element. Please consult the [Text component readme](https://github.com/lightspeed/flame/tree/master/packages/flame/src/Text) for details on which props are available.
-
-#### `<CheckboxDescription>`
-
-A prestyled flame Text element, with a small Box wrapper. Please note that all props forwarded will be sent to the underlying Text component, not the Box.
-
-Please consult the [Text component readme](https://github.com/lightspeed/flame/tree/master/packages/flame/src/Text) for details on which props are available.
-
 ### Example
 
 #### Simple stateless Checkbox
@@ -131,12 +121,41 @@ const MyComponent = () => (
     <Checkbox
       id="feature-id"
       name="feature"
-      label={labelId => <div id={labelId}>Custom Label</div>}
-      description={descriptionId => (
-        <SomeCustomComponent id={descriptionId}>Custom description</SomeCustomComponent>
-      )}
+      label={<div>Custom Label</div>}
+      description={<SomeCustomComponent>Custom description</SomeCustomComponent>}
     />
   </div>
+);
+
+export default MyComponent;
+```
+
+#### `<BaseCheckbox>`
+
+The primitive element of Checkbox. No labels or descriptions.
+
+This component has the exact same props as the native HTML checkbox.
+
+#### `<CheckboxLabel>`
+
+Specially styled label to be used in conjunction with the BaseCheckbox component. Use this component to properly align the description.
+
+| Prop            | Type                         | Default   | Description                                                    |
+| --------------- | ---------------------------- | --------- | -------------------------------------------------------------- |
+| `description`   | `string` or `child function` | undefined | Description's text                                             |
+| `html property` | `string`                     | undefined | Any extra properties passed will be added to the `<label>` tag |
+
+##### Example
+
+```jsx
+import React from 'react';
+import { BaseCheckbox, CheckboxLabel } from '@lightspeed/flame/Checkbox';
+
+const MyComponent = () => (
+  <CheckboxLabel description="This description will be properly aligned">
+    <Checkbox id="feature-id" name="feature" />
+    My Label
+  </CheckboxLabel>
 );
 
 export default MyComponent;

@@ -16,12 +16,46 @@ import {
   typography,
   TypographyProps,
   compose,
+  system,
+  border as ssBorder,
+  BorderProps as SSBorderProps,
 } from 'styled-system';
 import { themeGet, flameTheme as ThemeUIFlame } from './theme-get';
 
 import { theme as lightTheme } from './themes/oldskool';
 import { theme as flameTheme } from './themes/flame';
 import { theme as darkTheme } from './themes/dark';
+
+export interface BorderProps extends SSBorderProps {
+  borderTopLeftRadius?: string | number;
+  borderTopRightRadius?: string | number;
+  borderBottomLeftRadius?: string | number;
+  borderBottomRightRadius?: string | number;
+}
+
+const borderRadii = system({
+  borderTopLeftRadius: {
+    property: 'borderTopLeftRadius',
+    scale: 'radii',
+  },
+  borderTopRightRadius: {
+    property: 'borderTopRightRadius',
+    scale: 'radii',
+  },
+  borderBottomLeftRadius: {
+    property: 'borderBottomLeftRadius',
+    scale: 'radii',
+  },
+  borderBottomRightRadius: {
+    property: 'borderBottomRightRadius',
+    scale: 'radii',
+  },
+});
+
+const border = compose(
+  borderRadii,
+  ssBorder,
+);
 
 type AsProps = { as?: string };
 export type FlameBoxProps = SpaceProps &
@@ -116,4 +150,5 @@ export {
   FlameGlobalStyles,
   themeGet,
   ThemeUIFlame,
+  border,
 };

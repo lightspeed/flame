@@ -3,12 +3,11 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 
-// import './Button.scss';
 import { Button } from './Button';
 import Readme from './README.md';
 import { Flex } from '../Core';
 import { Divider } from '../Divider';
-import { Group } from '../Group';
+import { InputGroup, SpacedGroup } from '../Group';
 import { Icon } from '../Icon';
 
 import spacing from '../../../flame-tokens/partials/_spacing.scss';
@@ -61,15 +60,15 @@ class ButtonPresenter extends PureComponent<{}, ButtonPresenterState> {
 stories.add('Styles', () => (
   <div>
     <h3>Outline</h3>
-    <Group>
+    <SpacedGroup>
       <Button>Default</Button>
       <Button variant="primary">Primary</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="danger">Danger</Button>
-    </Group>
+    </SpacedGroup>
 
     <h3>Forced State - Active</h3>
-    <Group>
+    <SpacedGroup>
       <Button forcedState="active">Default</Button>
       <Button variant="primary" forcedState="active">
         Primary
@@ -80,10 +79,10 @@ stories.add('Styles', () => (
       <Button variant="danger" forcedState="active">
         Danger
       </Button>
-    </Group>
+    </SpacedGroup>
 
     <h3>Forced State - Hover</h3>
-    <Group>
+    <SpacedGroup>
       <Button forcedState="hover">Default</Button>
       <Button variant="primary" forcedState="hover">
         Primary
@@ -94,10 +93,10 @@ stories.add('Styles', () => (
       <Button variant="danger" forcedState="hover">
         Danger
       </Button>
-    </Group>
+    </SpacedGroup>
     <hr />
     <h3>Fill</h3>
-    <Group>
+    <SpacedGroup>
       <Button variant="primary" fill>
         Primary
       </Button>
@@ -107,10 +106,10 @@ stories.add('Styles', () => (
       <Button variant="danger" fill>
         Danger
       </Button>
-    </Group>
+    </SpacedGroup>
 
     <h3>Forced State - Active</h3>
-    <Group>
+    <SpacedGroup>
       <Button variant="primary" fill forcedState="active">
         Primary
       </Button>
@@ -120,10 +119,10 @@ stories.add('Styles', () => (
       <Button variant="danger" fill forcedState="active">
         Danger
       </Button>
-    </Group>
+    </SpacedGroup>
 
     <h3>Forced State - Hover</h3>
-    <Group>
+    <SpacedGroup>
       <Button variant="primary" fill forcedState="hover">
         Primary
       </Button>
@@ -133,14 +132,14 @@ stories.add('Styles', () => (
       <Button variant="danger" fill forcedState="hover">
         Danger
       </Button>
-    </Group>
+    </SpacedGroup>
   </div>
 ));
 
 stories.add('Sizes', () => (
   <div>
     <div className={bottomSpace}>
-      <Group>
+      <SpacedGroup>
         <Button size="small">Small</Button>
         <Button variant="primary">Medium</Button>
         <Button variant="secondary" size="large">
@@ -149,10 +148,10 @@ stories.add('Sizes', () => (
         <Button variant="danger" size="xlarge">
           Extra Large
         </Button>
-      </Group>
+      </SpacedGroup>
     </div>
     <div className={bottomSpace}>
-      <Group type="vertical">
+      <SpacedGroup flexDirection="column">
         <Button size="small" block>
           Small Block
         </Button>
@@ -165,7 +164,7 @@ stories.add('Sizes', () => (
         <Button variant="danger" size="xlarge" block>
           Extra Large Block
         </Button>
-      </Group>
+      </SpacedGroup>
     </div>
     <Divider mt={3} />
     <h3>Multiline</h3>
@@ -213,7 +212,7 @@ stories.add('Button as Links', () => (
 stories.add('Events', () => (
   <div>
     <div className={bottomSpace}>
-      <Group type="vertical">
+      <SpacedGroup flexDirection="column">
         <Button onClick={action('Clicked')}>Button with onClick event (see Action Logger)</Button>
         <Button onFocus={action('Focused')}>Button with onFocus event (see Action Logger)</Button>
         <Button onBlur={action('Blured')}>Button with onBlur event (see Action Logger)</Button>
@@ -232,7 +231,7 @@ stories.add('Events', () => (
         <Button href="http://google.com" target="_blank" disabled>
           Disabled link removes href and target
         </Button>
-      </Group>
+      </SpacedGroup>
     </div>
   </div>
 ));
@@ -240,48 +239,48 @@ stories.add('Events', () => (
 stories.add('With Children', () => (
   <div>
     <div className={bottomSpace}>
-      <Group>
+      <SpacedGroup>
         <Button size="small">
           <Icon name="orders" />
         </Button>
         <Button>
           <Icon name="orders" />
         </Button>
-        <Group noSpacing>
+        <InputGroup>
           <Button>
             <Icon name="small-chevron-left" />
           </Button>
           <Button>
             <Icon name="small-chevron-right" />
           </Button>
-        </Group>
+        </InputGroup>
         <Button size="large">
           <Icon name="orders" />
         </Button>
         <Button size="xlarge">
           <Icon name="orders" />
         </Button>
-      </Group>
+      </SpacedGroup>
     </div>
     <div className={bottomSpace}>
-      <Group>
+      <SpacedGroup>
         <Button variant="primary">
           <Icon name="chevron-left" /> Back
         </Button>
         <Button variant="primary" fill>
           <Icon name="dashboard" /> Dashboard
         </Button>
-      </Group>
+      </SpacedGroup>
     </div>
     <div className={bottomSpace}>
-      <Group>
+      <SpacedGroup>
         <Button variant="secondary">
           View Product <Icon name="arrow-right" />
         </Button>
         <Button variant="secondary" fill>
           Customers <Icon name="customers" />
         </Button>
-      </Group>
+      </SpacedGroup>
     </div>
     <div className={bottomSpace}>
       <Button variant="danger">
@@ -292,7 +291,7 @@ stories.add('With Children', () => (
       </Button>
     </div>
     <div className={bottomSpace}>
-      <Group type="vertical">
+      <SpacedGroup flexDirection="column">
         <Button size="small" block>
           <Icon name="users" /> Small Block
         </Button>
@@ -306,15 +305,15 @@ stories.add('With Children', () => (
           <Icon name="support-tickets" /> Large Block
         </Button>
         <Button size="xlarge" block>
-          Extra Large Block with Lightspeed logo
+          Extra Large Block
         </Button>
         <Button size="xlarge" block>
           <Icon name="image" size="xsmall" /> Custom icon size in Extra Large Block
         </Button>
-      </Group>
+      </SpacedGroup>
     </div>
     <div className={bottomSpace}>
-      <Group type="vertical">
+      <SpacedGroup flexDirection="column">
         <Button size="small" block>
           <Icon name="users" /> Small Block
         </Button>
@@ -328,16 +327,16 @@ stories.add('With Children', () => (
           <Icon name="support-tickets" /> Large Block
         </Button>
         <Button size="xlarge" block>
-          Extra Large Block with Lightspeed logo
+          Extra Large Block
         </Button>
         <Button size="xlarge" block>
           <Icon name="image" size="xsmall" /> Custom icon size in Extra Large Block
         </Button>
-      </Group>
+      </SpacedGroup>
     </div>
     <div className={bottomSpace}>
       <h3>Icons with details should be colored properly</h3>
-      <Group>
+      <SpacedGroup>
         <Button variant="primary" fill>
           <Icon name="dashboard" /> Dashboard
         </Button>
@@ -350,7 +349,7 @@ stories.add('With Children', () => (
         <Button fill>
           <Icon name="dashboard" /> Dashboard
         </Button>
-      </Group>
+      </SpacedGroup>
     </div>
   </div>
 ));
@@ -358,7 +357,7 @@ stories.add('With Children', () => (
 stories.add('Loading', () => (
   <div>
     <div className={bottomSpace}>
-      <Group>
+      <SpacedGroup>
         <Button loading>Default</Button>
         <Button variant="primary" loading>
           Primary
@@ -369,10 +368,10 @@ stories.add('Loading', () => (
         <Button variant="danger" loading>
           Danger
         </Button>
-      </Group>
+      </SpacedGroup>
     </div>
     <div className={bottomSpace}>
-      <Group>
+      <SpacedGroup>
         <Button size="small" variant="primary" fill loading>
           Primary
         </Button>
@@ -382,7 +381,7 @@ stories.add('Loading', () => (
         <Button size="xlarge" variant="danger" fill loading>
           Danger
         </Button>
-      </Group>
+      </SpacedGroup>
     </div>
     <div className={bottomSpace}>
       <ButtonPresenter />

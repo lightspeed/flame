@@ -16,7 +16,7 @@ import Readme from '../README.md';
 
 import { Box } from '../../Core';
 import { Button } from '../../Button';
-import { Group } from '../../Group';
+import { SpacedGroup } from '../../Group';
 import { Input } from '../../Input';
 
 const stories = storiesOf('Flag', module).addDecorator(withReadme(Readme));
@@ -124,10 +124,10 @@ stories.add('Integration', () => (
       Flag inside a <code>Group</code> component
     </div>
     <Box mb={3}>
-      <Group>
+      <SpacedGroup>
         <Flag code="ca" />
         <span>Flag of Canada</span>
-      </Group>
+      </SpacedGroup>
     </Box>
     <div className={descriptionClasses}>
       Flag inside a <code>Button</code> component
@@ -143,10 +143,10 @@ stories.add('Integration', () => (
       Flag inside a <code>Group</code> component
     </div>
     <Box mb={3}>
-      <Group>
+      <SpacedGroup>
         <FlagCA />
         <span>Flag of Canada</span>
-      </Group>
+      </SpacedGroup>
     </Box>
     <div className={descriptionClasses}>
       Flag inside a <code>Button</code> component

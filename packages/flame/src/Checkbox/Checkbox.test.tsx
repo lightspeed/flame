@@ -82,10 +82,7 @@ describe('<Checkbox />', () => {
 
     it('renders custom components in Label and Description', () => {
       const { getByText } = customRender(
-        <Checkbox
-          label={() => <div>my label</div>}
-          description={() => <div>my description</div>}
-        />,
+        <Checkbox label={<div>my label</div>} description={<div>my description</div>} />,
       );
 
       getByText('my label');

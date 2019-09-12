@@ -7,7 +7,7 @@ import { Text, TextContent, Heading2 } from '../Text';
 
 import { Switch } from './Switch';
 import Readme from './README.md';
-import { Group } from '../Group';
+import { SpacedGroup } from '../Group';
 import { Button } from '../Button';
 
 import spacing from '../../../flame-tokens/partials/_spacing.scss';
@@ -75,10 +75,10 @@ stories.add('States', () => (
     </div>
     <div className={descriptionClasses}>Disabled On / Off</div>
     <div className={bottomSpace}>
-      <Group>
+      <SpacedGroup>
         <Switch disabled />
         <Switch checked disabled />
-      </Group>
+      </SpacedGroup>
     </div>
   </TextContent>
 ));
@@ -103,7 +103,7 @@ class ToggleEventsWrapper extends React.Component<{}, { checked?: boolean }> {
 
     return (
       <div className={bottomSpace}>
-        <Group>
+        <SpacedGroup>
           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="toggle-events">Toggle Events</label>
           <Switch
@@ -114,7 +114,7 @@ class ToggleEventsWrapper extends React.Component<{}, { checked?: boolean }> {
             onFocus={action('onFocus')}
             onBlur={action('onBlur')}
           />
-        </Group>
+        </SpacedGroup>
         <Text size="small">
           onChange value (checked): <strong>{checked.toString()}</strong>
         </Text>

@@ -4,7 +4,7 @@ import { withReadme } from 'storybook-readme';
 
 import { Spinner } from './Spinner';
 import Readme from './README.md';
-import { Group } from '../Group';
+import { SpacedGroup } from '../Group';
 
 import spacing from '../../../flame-tokens/partials/_spacing.scss';
 
@@ -20,17 +20,17 @@ stories.add('Story', () => (
     </div>
     <div className={bottomSpace}>
       <div className={descriptionClasses}>Resized</div>
-      <Group>
+      <SpacedGroup>
         <Spinner size="small" />
         <Spinner size="large" />
         <Spinner size="xlarge" />
         <Spinner size="xxlarge" />
         <Spinner size="4rem" />
-      </Group>
+      </SpacedGroup>
     </div>
     <div className={bottomSpace}>
       <div className={descriptionClasses}>Colored</div>
-      <Group>
+      <SpacedGroup>
         <Spinner size="xxlarge" color="blue" />
         <Spinner size="xxlarge" color="blue" baseColor2="night-100" />
         <Spinner size="xxlarge" color="green-200" />
@@ -39,7 +39,7 @@ stories.add('Story', () => (
         <div className="cr-p-2" style={{ backgroundColor: '#212424', display: 'inline-flex' }}>
           <Spinner size="xxlarge" color="snow" />
         </div>
-      </Group>
+      </SpacedGroup>
     </div>
   </div>
 ));

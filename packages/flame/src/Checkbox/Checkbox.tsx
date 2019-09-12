@@ -4,17 +4,14 @@ import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
 import { IconCheckmark } from '../Icon/Checkmark';
-import { Box } from '../Core';
-import { Text, TextProps } from '../Text';
+import { TextProps } from '../Text';
+import { RadioLabel } from '../Radio';
+
+const CheckboxLabel = RadioLabel;
 
 const Wrapper = styled('div')`
   position: relative;
   line-height: 1rem;
-`;
-
-const Label = styled('label')`
-  position: relative;
-  display: inline-flex;
 `;
 
 const CheckboxCheckmarkWrapper = styled('div')<{ indeterminate: boolean }>`
@@ -29,6 +26,7 @@ const CheckboxCheckmarkWrapper = styled('div')<{ indeterminate: boolean }>`
   overflow: hidden;
   cursor: default;
   background: ${themeGet('checkboxStyles.background')};
+  margin-right: ${themeGet('space.2')};
 
   ${props =>
     props.indeterminate &&
@@ -93,124 +91,46 @@ const CheckboxInput = styled('input')<{ indeterminate: boolean }>`
   }
 `;
 
-export type CheckboxLabelProps = TextProps;
-export const CheckboxLabel = styled(Text)<CheckboxLabelProps>`
-  ${props =>
-    !props.color &&
-    css`
-      color: ${themeGet('checkboxStyles.label.color')(props)};
-    `}
-`;
-CheckboxLabel.defaultProps = {
-  ml: 2,
-  fontWeight: 'bold',
-  size: 'small',
-  as: 'div',
-};
-
-// Probably wondering why we add this additional wrapper?
-// This is to detach the text from a specific color and instead rely on
-// a color alias from the theme
-const CheckboxDescriptionWrapper = styled(Box)`
-  ${Text} {
-    ${props =>
-      !props.color
-        ? css`
-            color: ${themeGet('checkboxStyles.description.color')(props)};
-          `
-        : css`
-            color: ${themeGet(`colors.${props.color}`, props.color)(props)};
-          `}
-  }
-`;
-
 export type CheckboxDescriptionProps = Merge<React.HTMLProps<HTMLDivElement>, TextProps>;
-export const CheckboxDescription: React.FC<CheckboxDescriptionProps> = ({
-  children,
-  color,
-  ...restProps
-}) => (
-  <CheckboxDescriptionWrapper ml="1rem" color={color}>
-    <Text as="div" size="small" ml={2} {...restProps}>
-      {children}
-    </Text>
-  </CheckboxDescriptionWrapper>
+export interface BaseCheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  indeterminate?: boolean;
+  checked?: boolean;
+  css?: any;
+}
+const BaseCheckbox = React.forwardRef<HTMLInputElement, BaseCheckboxProps>(
+  ({ indeterminate, checked, ...restProps }, ref) => (
+    <Wrapper>
+      <CheckboxInput
+        ref={ref}
+        type="checkbox"
+        indeterminate={indeterminate}
+        checked={checked}
+        {...restProps}
+      />
+      <CheckboxCheckmarkWrapper indeterminate={indeterminate}>
+        <StyledIcon size="0.65rem" />
+        {indeterminate && !checked && <CheckboxIndeterminate />}
+      </CheckboxCheckmarkWrapper>
+    </Wrapper>
+  ),
 );
 
-export type CheckboxProps = Merge<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  {
-    /** ClassName for the <input> */
-    inputClassName?: string;
-    /** Sets label for Checkbox */
-    label?: string | Function;
-    /** Sets description text for Checkbox */
-    description?: string | Function;
-    /** Sets indeterminate state for Checkbox */
-    indeterminate?: boolean;
-    /** https://reactjs.org/docs/forwarding-refs.html */
-    innerRef?: Function;
-    /** https://reactjs.org/docs/refs-and-the-dom.html */
-    ref?: Function;
-  }
-> & { css?: any };
-export const Checkbox: React.FC<CheckboxProps> = ({
-  className,
-  inputClassName,
-  id,
-  label,
-  description,
-  checked,
-  indeterminate,
-  innerRef,
-  ref,
-  ...props
-}) => {
-  const labelId = id ? `${id}-label` : null;
-  const descriptionId = id ? `${id}-description` : null;
-  const labelledBy = label ? labelId : null;
-  const describedBy = description ? descriptionId : null;
+export interface CheckboxProps extends BaseCheckboxProps {
+  label?: React.ReactNode;
+  description?: React.ReactNode;
+  css?: any;
+}
+const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
+  ({ label, id, description, disabled, ...restProps }, ref) => {
+    return (
+      <React.Fragment>
+        <CheckboxLabel htmlFor={id} description={description} disabled={disabled}>
+          <BaseCheckbox ref={ref} id={id} {...restProps} disabled={disabled} />
+          {label}
+        </CheckboxLabel>
+      </React.Fragment>
+    );
+  },
+);
 
-  const setCheckboxRef = (elem: HTMLInputElement) => {
-    if (elem) {
-      // eslint-disable-next-line no-param-reassign
-      elem.indeterminate = indeterminate && !checked;
-
-      if (innerRef && typeof innerRef === 'function') {
-        innerRef(elem);
-      }
-
-      if (ref && typeof innerRef === 'function') {
-        ref(elem);
-      }
-    }
-  };
-
-  return (
-    <Wrapper className={className}>
-      <Label role="presentation">
-        <CheckboxInput
-          type="checkbox"
-          id={id}
-          aria-labelledby={labelledBy}
-          aria-describedby={describedBy}
-          checked={checked}
-          ref={setCheckboxRef}
-          className={inputClassName}
-          indeterminate={indeterminate}
-          {...props}
-        />
-        <CheckboxCheckmarkWrapper indeterminate={indeterminate}>
-          <StyledIcon size="0.65rem" />
-          {indeterminate && !checked && <CheckboxIndeterminate />}
-        </CheckboxCheckmarkWrapper>
-        {typeof label === 'string' && <CheckboxLabel id={labelId}>{label}</CheckboxLabel>}
-        {typeof label === 'function' && label(labelId)}
-      </Label>
-      {typeof description === 'string' && (
-        <CheckboxDescription id={descriptionId}>{description}</CheckboxDescription>
-      )}
-      {typeof description === 'function' && description(descriptionId)}
-    </Wrapper>
-  );
-};
+export { Checkbox, CheckboxLabel, BaseCheckbox };

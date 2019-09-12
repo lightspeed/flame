@@ -1,3 +1,3 @@
-import { Group, GroupProps, GroupAddon, GroupAddonProps, GroupItem, GroupItemProps } from './Group';
+import { InputGroup, SpacedGroup, InputGroupAddon, BeThereOrBeSquare } from './Group';
 
-export { Group, GroupProps, GroupAddon, GroupAddonProps, GroupItem, GroupItemProps };
+export { InputGroup, SpacedGroup, InputGroupAddon, BeThereOrBeSquare };
