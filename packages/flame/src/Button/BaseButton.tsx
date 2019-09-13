@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { space, SpaceProps, layout, LayoutProps } from 'styled-system';
+import { space, SpaceProps, layout, LayoutProps, compose } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
 import { border, BorderProps } from '../Core';
@@ -92,9 +92,12 @@ export const BaseButton = styled('button')<Merge<ButtonHTML, BaseButtonProps>>`
   }
 
   ${setDisabled};
-  ${space};
-  ${border};
-  ${layout}
+
+  ${compose(
+    space,
+    border,
+    layout,
+  )};
 `;
 
 BaseButton.defaultProps = {
