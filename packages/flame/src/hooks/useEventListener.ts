@@ -5,18 +5,23 @@ type CallbackEvent<T> = (event: T) => void;
 export function useEventListener<T extends Event>(
   eventKey: string,
   callback: CallbackEvent<T>,
-  target: EventTarget = document,
+  // On SSR, document may not be defined at all
+  target: EventTarget | undefined = typeof document !== 'undefined' ? document : undefined,
 ) {
+  // Store callback in a ref so we don't have to remove/add the event listener when callback changes
+  const callbackRef = React.useRef(callback);
   React.useEffect(() => {
-    const captureEvent: CallbackEvent<T> = event => {
-      callback(event);
-    };
+    callbackRef.current = callback;
+  }, [callback]);
+
+  React.useEffect(() => {
+    const handler: CallbackEvent<any> = event => callbackRef.current(event);
 
     if (target) {
-      target.addEventListener(eventKey, captureEvent as any);
+      target.addEventListener(eventKey, handler);
       return () => {
-        target.removeEventListener(eventKey, captureEvent as any);
+        target.removeEventListener(eventKey, handler);
       };
     }
-  }, [callback]);
+  }, [target, eventKey]);
 }
