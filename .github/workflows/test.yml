@@ -1,5 +1,7 @@
 name: Test
+
 on: push
+
 jobs:
   build:
     name: Test, lint, typecheck
