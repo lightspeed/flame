@@ -8,7 +8,7 @@ export function useEventListener<T extends Event>(
   // On SSR, document may not be defined at all
   target: EventTarget | undefined = typeof document !== 'undefined' ? document : undefined,
 ) {
-  // Store callback in a ref so we don't have to remove/add the event listener when callback changes
+  // Store callback in a ref so we don't have to remove or add the event listener when callback changes
   const callbackRef = React.useRef(callback);
   React.useEffect(() => {
     callbackRef.current = callback;
