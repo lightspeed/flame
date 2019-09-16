@@ -1,0 +1,30 @@
+on:
+  push:
+    branches:
+    - master
+name: Publish mainline
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+    - name: Use Node.js 10.16.0
+      uses: actions/setup-node@v1.1.1
+      with:
+        node-version: 10.16.0
+        registry-url: https://registry.npmjs.org/
+    - name: Install
+      run: yarn install --frozen-lockfile
+    - name: Bootstrap
+      run: yarn bootstrap
+    - name: Publish
+      run: |
+        cd packages/flame
+        node ./scripts/check-changed.js && yarn build && npm publish dist --quiet || exit 0
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

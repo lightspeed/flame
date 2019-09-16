@@ -1,0 +1,24 @@
+name: Test
+
+on: push
+
+jobs:
+  build:
+    name: Test, lint, typecheck
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Use Node.js 10.16.0
+      uses: actions/setup-node@v1
+      with:
+        version: 10.16.0
+    - name: Install
+      run: yarn install --frozen-lockfile
+    - name: Bootstrap
+      run: yarn bootstrap
+    - name: Test
+      run: yarn test --coverage --runInBand
+    - name: Lint
+      run: yarn lint
+    - name: Typecheck
+      run: yarn typecheck
