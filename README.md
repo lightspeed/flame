@@ -30,7 +30,7 @@ yarn add react@^16 react-dom@^16 @emotion/core@^10 @emotion/styled@^10 emotion-t
 
 ## Getting Started
 
-Before being able to implement Flame in your application, there are a few steps to bootstrap the components properly. We also assume that your React application is using some form of bundler, like webpack.
+Before being able to implement Flame in your application, there are a few steps to bootstrap the components properly. We also assume that your React application is using a bundler such as webpack.
 
 **Steps required:**
 
