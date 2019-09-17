@@ -16,8 +16,8 @@ jobs:
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
-          name: Install dependencies
-          command: yarn install --frozen-lockfile
+          name: Install and bootstrap
+          command: yarn install --frozen-lockfile && yarn bootstrap
           environment:
             YARN_CACHE_FOLDER: /tmp/.cache/yarn
       - save_cache:
@@ -27,15 +27,6 @@ jobs:
       - persist_to_workspace:
           root: .
           paths: .
-
-  bootstrap:
-    <<: *defaults_node
-    steps:
-      - attach_workspace:
-          at: /tmp/build
-      - run:
-          name: Bootstrap
-          command: yarn bootstrap
 
   test:
     <<: *defaults_node
@@ -69,15 +60,12 @@ workflows:
   build-test:
     jobs:
       - install_dependencies
-      - bootstrap:
-          requires:
-            - install_dependencies
       - test:
           requires:
-            - bootstrap
+            - install_dependencies
       - lint:
           requires:
-            - bootstrap
+            - install_dependencies
       - typecheck:
           requires:
-            - bootstrap
+            - install_dependencies
