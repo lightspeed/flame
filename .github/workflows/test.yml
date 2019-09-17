@@ -1,6 +1,9 @@
 name: Test
 
-on: push
+on:
+  push:
+    branches:
+      - skip-until-it-can-run-on-forks
 
 jobs:
   build:
