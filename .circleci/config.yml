@@ -69,7 +69,9 @@ workflows:
   build-test:
     jobs:
       - install_dependencies
-      - bootstrap
+      - bootstrap:
+          requires:
+            - install_dependencies
       - test:
           requires:
             - bootstrap
