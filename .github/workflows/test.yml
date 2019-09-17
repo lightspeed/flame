@@ -3,7 +3,7 @@ name: Test
 on:
   push:
     branches:
-      - skip-until-it-can-run-on-forks
+      - skip-until-github-actions-can-run-on-forked-prs
 
 jobs:
   build:
