@@ -2,7 +2,7 @@
 
 ---
 
-[![npm version](https://badge.fury.io/js/%40lightspeed%2Fflame.svg)](https://badge.fury.io/js/%40lightspeed%2Fflame)
+[![npm version](https://badge.fury.io/js/%40lightspeed%2Fflame.svg)](https://badge.fury.io/js/%40lightspeed%2Fflame) [![Circle CI status](https://circleci.com/gh/lightspeed/flame/tree/master.svg?style=shield)](https://circleci.com/gh/lightspeed/flame/tree/master)
 
 ### Storybook
 
@@ -30,7 +30,7 @@ yarn add react@^16 react-dom@^16 @emotion/core@^10 @emotion/styled@^10 emotion-t
 
 ## Getting Started
 
-Before being able to implement Flame in your application, there are a few steps to bootstrap the components properly. We also assume that your React application is using some form of bundler, like webpack.
+Before being able to implement Flame in your application, there are a few steps to bootstrap the components properly. We also assume that your React application is using a bundler such as webpack.
 
 **Steps required:**
 
