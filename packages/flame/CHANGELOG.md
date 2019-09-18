@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Refactor and improve useEventListener hook ([#4](https://github.com/lightspeed/flame/pull/4))
+- Refactor and improve `useEventListener` hook ([#4](https://github.com/lightspeed/flame/pull/4))
 
 ## 0.1.0 - 2019-09-11
 
