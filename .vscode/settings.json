@@ -1,15 +1,6 @@
 {
   "eslint.enable": true,
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/.DS_Store": true,
-    "**/coverage": true,
-    "**/node_modules": true,
-    "**/vendor": true,
-    "**/yarn.lock": true
-  },
+  "editor.formatOnSave": true,
   "javascript.validate.enable": false,
   "css.validate": false,
   "scss.validate": false,
