@@ -14,6 +14,9 @@ export function useEventListener<T extends Event>(
     callbackRef.current = callback;
   }, [callback]);
 
+  // We have a conditional return for the cleanup function in this specific case,
+  // we can safely disable this rule.
+  // eslint-disable-next-line consistent-return
   React.useEffect(() => {
     const handler: CallbackEvent<any> = event => callbackRef.current(event);
 
