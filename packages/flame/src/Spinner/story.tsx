@@ -5,21 +5,24 @@ import { withReadme } from 'storybook-readme';
 import { Spinner } from './Spinner';
 import Readme from './README.md';
 import { Group } from '../Group';
-
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
+import { Box } from '../Core';
+import { Text } from '../Text';
 
 const stories = storiesOf('Spinner', module).addDecorator(withReadme(Readme));
-const bottomSpace = spacing[`cr-mb-3`];
-const descriptionClasses = 'cr-text-s cr-gray-300 cr-mb-1';
 
 stories.add('Story', () => (
   <div>
-    <div className={bottomSpace}>
-      <div className={descriptionClasses}>Default</div>
+    <Box mb={3}>
+      <Text fontSize="small" color="dimmed" mb={1}>
+        Default
+      </Text>
       <Spinner />
-    </div>
-    <div className={bottomSpace}>
-      <div className={descriptionClasses}>Resized</div>
+    </Box>
+
+    <Box mb={3}>
+      <Text fontSize="small" color="dimmed" mb={1}>
+        Resized
+      </Text>
       <Group>
         <Spinner size="small" />
         <Spinner size="large" />
@@ -27,9 +30,12 @@ stories.add('Story', () => (
         <Spinner size="xxlarge" />
         <Spinner size="4rem" />
       </Group>
-    </div>
-    <div className={bottomSpace}>
-      <div className={descriptionClasses}>Colored</div>
+    </Box>
+
+    <Box mb={3}>
+      <Text fontSize="small" color="dimmed" mb={1}>
+        Colored
+      </Text>
       <Group>
         <Spinner size="xxlarge" color="blue" />
         <Spinner size="xxlarge" color="blue" baseColor2="night-100" />
@@ -40,6 +46,6 @@ stories.add('Story', () => (
           <Spinner size="xxlarge" color="snow" />
         </div>
       </Group>
-    </div>
+    </Box>
   </div>
 ));

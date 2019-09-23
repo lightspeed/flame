@@ -49,72 +49,80 @@ function caseInsensitiveUnique({ option, options }: { option: any; options: any 
   return match.length === 0;
 }
 
-stories.addWithPercyOptions('Story', { skip: true }, () => (
-  <div>
-    <h3>Important note</h3>
-    <p>
-      This component is a wrapper on top of react-select. Please refer to the{' '}
-      <a href="https://github.com/JedWatson/react-select" target="_blank" rel="noopener noreferrer">
-        react-select
-      </a>{' '}
-      documentation for all available functionalities.
-    </p>
-
-    <h3>Default</h3>
+stories.add(
+  'Story',
+  () => (
     <div>
-      <Autocomplete {...exampleProps} />
+      <h3>Important note</h3>
+      <p>
+        This component is a wrapper on top of react-select. Please refer to the{' '}
+        <a
+          href="https://github.com/JedWatson/react-select"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          react-select
+        </a>{' '}
+        documentation for all available functionalities.
+      </p>
+
+      <h3>Default</h3>
+      <div>
+        <Autocomplete {...exampleProps} />
+      </div>
+
+      <h3>With Label</h3>
+      <div className={spacing['cr-mb-1']}>
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+        <label
+          htmlFor="color-input-label"
+          className={[typography['cr-bold'], typography['cr-text-s']].join(' ')}
+        >
+          Label *
+        </label>
+      </div>
+      <Autocomplete
+        {...exampleProps}
+        inputProps={{ id: 'color-input-label', name: 'color-input-label' }}
+      />
+
+      <h3>Creatable</h3>
+      <Autocomplete {...exampleProps} onCreate={onCreateOption} />
+
+      <h3>Dropdown-like (searchable disabled)</h3>
+      <Autocomplete {...exampleProps} isSearchable={false} />
+
+      <h3>Multiple selection</h3>
+      <Autocomplete {...exampleProps} isMulti />
+
+      <h3>With custom optionRenderer</h3>
+      <Autocomplete
+        {...exampleProps}
+        components={{
+          Option: (props: any) => {
+            const { children, isFocused, isSelected, innerRef, innerProps } = props;
+
+            return (
+              <i
+                ref={innerRef}
+                {...innerProps}
+                style={{
+                  display: 'block',
+                  color: isFocused || isSelected ? 'red' : 'blue',
+                  padding: '.5rem 1rem',
+                  border: '1px solid',
+                }}
+              >
+                {children}
+              </i>
+            );
+          },
+        }}
+      />
     </div>
-
-    <h3>With Label</h3>
-    <div className={spacing['cr-mb-1']}>
-      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label
-        htmlFor="color-input-label"
-        className={[typography['cr-bold'], typography['cr-text-s']].join(' ')}
-      >
-        Label *
-      </label>
-    </div>
-    <Autocomplete
-      {...exampleProps}
-      inputProps={{ id: 'color-input-label', name: 'color-input-label' }}
-    />
-
-    <h3>Creatable</h3>
-    <Autocomplete {...exampleProps} onCreate={onCreateOption} />
-
-    <h3>Dropdown-like (searchable disabled)</h3>
-    <Autocomplete {...exampleProps} isSearchable={false} />
-
-    <h3>Multiple selection</h3>
-    <Autocomplete {...exampleProps} isMulti />
-
-    <h3>With custom optionRenderer</h3>
-    <Autocomplete
-      {...exampleProps}
-      components={{
-        Option: (props: any) => {
-          const { children, isFocused, isSelected, innerRef, innerProps } = props;
-
-          return (
-            <i
-              ref={innerRef}
-              {...innerProps}
-              style={{
-                display: 'block',
-                color: isFocused || isSelected ? 'red' : 'blue',
-                padding: '.5rem 1rem',
-                border: '1px solid',
-              }}
-            >
-              {children}
-            </i>
-          );
-        },
-      }}
-    />
-  </div>
-));
+  ),
+  { percy: { skip: true } },
+);
 
 stories.add('States', () => (
   <div>
@@ -171,7 +179,7 @@ stories.add('States', () => (
   </div>
 ));
 
-stories.addWithPercyOptions('Events', { skip: true }, () => (
+stories.add('Events', () => (
   <div>
     <h3>onChange (see action logger)</h3>
     <p>

@@ -45,51 +45,63 @@ stories.add('Types', () => (
   </TextContent>
 ));
 
-stories.addWithPercyOptions('Sizes', { skip: true }, () => (
-  <TextContent>
-    <Heading2>Tag</Heading2>
-    <Heading3>Small</Heading3>
-    <div className={bottomSpace}>
-      <Tag size="small" onRemove={() => {}}>
-        My Tag
-      </Tag>
-    </div>
-    <Heading3>Normal</Heading3>
-    <div className={bottomSpace}>
-      <Tag size="normal" onRemove={() => {}}>
-        My Tag
-      </Tag>
-    </div>
-  </TextContent>
-));
+stories.add(
+  'Sizes',
+  () => (
+    <TextContent>
+      <Heading2>Tag</Heading2>
+      <Heading3>Small</Heading3>
+      <div className={bottomSpace}>
+        <Tag size="small" onRemove={() => {}}>
+          My Tag
+        </Tag>
+      </div>
+      <Heading3>Normal</Heading3>
+      <div className={bottomSpace}>
+        <Tag size="normal" onRemove={() => {}}>
+          My Tag
+        </Tag>
+      </div>
+    </TextContent>
+  ),
+  { percy: { skip: true } },
+);
 
-stories.addWithPercyOptions('Events', { skip: true }, () => (
-  <TextContent>
-    <Heading2>Events</Heading2>
-    <Heading3>On Click</Heading3>
-    <div className={bottomSpaceAction}>
-      <Tag onClick={action('onClick')}>My Tag</Tag>
-    </div>
-    <Text size="small" className={bottomSpace}>
-      (See action logger)
-    </Text>
-    <Heading3>On Click & On Close</Heading3>
-    <div className={bottomSpaceAction}>
-      <Tag onClick={action('onClick')} onRemove={action('onRemove')}>
-        My Tag
-      </Tag>
-    </div>
-    <Text size="small">(See action logger)</Text>
-  </TextContent>
-));
+stories.add(
+  'Events',
+  () => (
+    <TextContent>
+      <Heading2>Events</Heading2>
+      <Heading3>On Click</Heading3>
+      <div className={bottomSpaceAction}>
+        <Tag onClick={action('onClick')}>My Tag</Tag>
+      </div>
+      <Text size="small" className={bottomSpace}>
+        (See action logger)
+      </Text>
+      <Heading3>On Click & On Close</Heading3>
+      <div className={bottomSpaceAction}>
+        <Tag onClick={action('onClick')} onRemove={action('onRemove')}>
+          My Tag
+        </Tag>
+      </div>
+      <Text size="small">(See action logger)</Text>
+    </TextContent>
+  ),
+  { percy: { skip: true } },
+);
 
-stories.addWithPercyOptions('Functionality', { skip: true }, () => (
-  <TextContent>
-    <Heading2>Example</Heading2>
-    <Heading3>Tag list</Heading3>
-    <div className={bottomSpaceAction}>
-      <TagList />
-    </div>
-    <Text size="small">(Click label or remove icon)</Text>
-  </TextContent>
-));
+stories.add(
+  'Functionality',
+  () => (
+    <TextContent>
+      <Heading2>Example</Heading2>
+      <Heading3>Tag list</Heading3>
+      <div className={bottomSpaceAction}>
+        <TagList />
+      </div>
+      <Text size="small">(Click label or remove icon)</Text>
+    </TextContent>
+  ),
+  { percy: { skip: true } },
+);

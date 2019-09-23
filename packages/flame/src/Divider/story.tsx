@@ -101,60 +101,72 @@ stories.add('Story', () => (
   </div>
 ));
 
-stories.addWithPercyOptions('Variant', { skip: true }, () => (
-  <div>
-    <h3>Default</h3>
-    <Divider />
-    <h3>Dotted</h3>
-    <Divider variant="dotted" />
-    <h3>With Content</h3>
-    <Divider variant="dotted">
-      <Icon size="1rem" name="products" className="cr-mr-2" />
-      <span>T-Shirt</span>
-    </Divider>
-  </div>
-));
+stories.add(
+  'Variant',
+  () => (
+    <div>
+      <h3>Default</h3>
+      <Divider />
+      <h3>Dotted</h3>
+      <Divider variant="dotted" />
+      <h3>With Content</h3>
+      <Divider variant="dotted">
+        <Icon size="1rem" name="products" className="cr-mr-2" />
+        <span>T-Shirt</span>
+      </Divider>
+    </div>
+  ),
+  { percy: { skip: true } },
+);
 
-stories.addWithPercyOptions('Spacing', { skip: true }, () => (
-  <div>
-    <h3>Default</h3>
-    <div className={contentSpace} style={cardsStyles}>
-      <Card>
-        <CardHeader title="Title" />
-        <CardSection>{cardsContent}</CardSection>
-        <Divider />
-        <CardSection>{cardsContent}</CardSection>
-        <CardFooter>Footer</CardFooter>
-      </Card>
+stories.add(
+  'Spacing',
+  () => (
+    <div>
+      <h3>Default</h3>
+      <div className={contentSpace} style={cardsStyles}>
+        <Card>
+          <CardHeader title="Title" />
+          <CardSection>{cardsContent}</CardSection>
+          <Divider />
+          <CardSection>{cardsContent}</CardSection>
+          <CardFooter>Footer</CardFooter>
+        </Card>
+      </div>
+      <h3>Even Spacing</h3>
+      <div className={contentSpace} style={cardsStyles}>
+        <Card>
+          <CardHeader title="Title" />
+          <CardSection>{cardsContent}</CardSection>
+          <Divider py={4} />
+          <CardSection>{cardsContent}</CardSection>
+          <CardFooter>Footer</CardFooter>
+        </Card>
+      </div>
+      <h3>Uneven Spacing</h3>
+      <div className={contentSpace} style={cardsStyles}>
+        <Card>
+          <CardHeader title="Title" />
+          <CardSection>{cardsContent}</CardSection>
+          <Divider pt={5} pb={10} />
+          <CardSection>{cardsContent}</CardSection>
+          <CardFooter>Footer</CardFooter>
+        </Card>
+      </div>
     </div>
-    <h3>Even Spacing</h3>
-    <div className={contentSpace} style={cardsStyles}>
-      <Card>
-        <CardHeader title="Title" />
-        <CardSection>{cardsContent}</CardSection>
-        <Divider py={4} />
-        <CardSection>{cardsContent}</CardSection>
-        <CardFooter>Footer</CardFooter>
-      </Card>
-    </div>
-    <h3>Uneven Spacing</h3>
-    <div className={contentSpace} style={cardsStyles}>
-      <Card>
-        <CardHeader title="Title" />
-        <CardSection>{cardsContent}</CardSection>
-        <Divider pt={5} pb={10} />
-        <CardSection>{cardsContent}</CardSection>
-        <CardFooter>Footer</CardFooter>
-      </Card>
-    </div>
-  </div>
-));
+  ),
+  { percy: { skip: true } },
+);
 
-stories.addWithPercyOptions('Custom Colors', { skip: true }, () => (
-  <div>
-    <h3>Using a token (blue-200)</h3>
-    <Divider color="blue-200" />
-    <h3>Non token value (#F42069)</h3>
-    <Divider color="#F42069" />
-  </div>
-));
+stories.add(
+  'Custom Colors',
+  () => (
+    <div>
+      <h3>Using a token (blue-200)</h3>
+      <Divider color="blue-200" />
+      <h3>Non token value (#F42069)</h3>
+      <Divider color="#F42069" />
+    </div>
+  ),
+  { percy: { skip: true } },
+);

@@ -21,22 +21,26 @@ const placements: TooltipPlacement[] = [
   'right',
 ];
 
-stories.addWithPercyOptions('Types', { skip: true }, () => (
-  <div>
-    <h3>Dark</h3>
-    <Tooltip content="Tooltip">Trigger</Tooltip>
-    <h3>Light</h3>
-    <Tooltip content="Tooltip" light>
-      Trigger
-    </Tooltip>
-    <h3>Interactive element</h3>
-    <Tooltip content="Tooltip">
-      <a href="https://www.lightspeedhq.com" rel="noopener noreferrer" target="_blank">
+stories.add(
+  'Types',
+  () => (
+    <div>
+      <h3>Dark</h3>
+      <Tooltip content="Tooltip">Trigger</Tooltip>
+      <h3>Light</h3>
+      <Tooltip content="Tooltip" light>
         Trigger
-      </a>
-    </Tooltip>
-  </div>
-));
+      </Tooltip>
+      <h3>Interactive element</h3>
+      <Tooltip content="Tooltip">
+        <a href="https://www.lightspeedhq.com" rel="noopener noreferrer" target="_blank">
+          Trigger
+        </a>
+      </Tooltip>
+    </div>
+  ),
+  { percy: { skip: true } },
+);
 
 stories.add('Directions', () => (
   <div>

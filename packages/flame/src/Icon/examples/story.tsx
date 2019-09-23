@@ -4,8 +4,8 @@ import { withReadme } from 'storybook-readme';
 import camelCase from 'lodash/camelCase';
 
 // We load the icon-sprite through the raw-loader and through SVGInline for the story
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
-import IconSprite from '!raw-loader!../../../svg/icon-sprite.svg';
+// @ts-ignore
+import IconSprite from '!raw-loader!../../../svg/icon-sprite.svg'; // eslint-disable-line
 
 import { Icon } from '../index';
 import { IconAdd } from '../Add';
@@ -330,35 +330,39 @@ stories.add('Colors', () => (
   </div>
 ));
 
-stories.addWithPercyOptions('Using Individual Icons', { skip: true }, () => (
-  <div className="icon-sprite-listing">
-    <p className="cr-text cr-gray">
-      In order to reduce bundle size, you may want to import each Icon individually. Doing so will
-      enable proper treeshaking.
-    </p>
-    <div>
-      <p>Each icons have the exact same api as the regular `Icon`, minus the name prop.</p>
+stories.add(
+  'Using Individual Icons',
+  () => (
+    <div className="icon-sprite-listing">
+      <p className="cr-text cr-gray">
+        In order to reduce bundle size, you may want to import each Icon individually. Doing so will
+        enable proper treeshaking.
+      </p>
       <div>
-        <code>
-          <div>import Add from &#39;@lightspeed/flame-icon/icons/Add&#39;;</div>
-          <div>&lt;Add size=&#34;2rem&#34; /&gt;</div>
-        </code>
+        <p>Each icons have the exact same api as the regular `Icon`, minus the name prop.</p>
         <div>
-          <IconAdd size="2rem" />
+          <code>
+            <div>import Add from &#39;@lightspeed/flame-icon/icons/Add&#39;;</div>
+            <div>&lt;Add size=&#34;2rem&#34; /&gt;</div>
+          </code>
+          <div>
+            <IconAdd size="2rem" />
+          </div>
         </div>
-      </div>
-      <div>
-        <code>
-          <div>import ArrowDown from &#39;@lightspeed/flame-icon/icons/ArrowDown&#39;;</div>
-          <div>&lt;ArrowDown size=&#34;2rem&#34; color=&#34;blue&#34; /&gt;</div>
-        </code>
         <div>
-          <IconArrowDown size="2rem" color="blue" />
+          <code>
+            <div>import ArrowDown from &#39;@lightspeed/flame-icon/icons/ArrowDown&#39;;</div>
+            <div>&lt;ArrowDown size=&#34;2rem&#34; color=&#34;blue&#34; /&gt;</div>
+          </code>
+          <div>
+            <IconArrowDown size="2rem" color="blue" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-));
+  ),
+  { percy: { skip: true } },
+);
 
 stories.add('Sprite', () => (
   <div className="icon-sprite-listing">

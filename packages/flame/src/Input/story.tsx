@@ -150,23 +150,27 @@ stories.add('Story', () => (
   </div>
 ));
 
-stories.addWithPercyOptions('Events', { skip: true }, () => (
-  <div>
-    <div className={bottomSpace}>
-      <Input
-        placeholder="Input with onChange event (see Action Logger)"
-        onChange={firstArgAction('onChange')}
-      />
+stories.add(
+  'Events',
+  () => (
+    <div>
+      <div className={bottomSpace}>
+        <Input
+          placeholder="Input with onChange event (see Action Logger)"
+          onChange={firstArgAction('onChange')}
+        />
+      </div>
+      <div className={bottomSpace}>
+        <Input
+          placeholder="Input with onFocus & onBlur events (see Action Logger)"
+          onFocus={action('onFocus')}
+          onBlur={action('onBlur')}
+        />
+      </div>
+      <div className={bottomSpace}>
+        <InputWrapper />
+      </div>
     </div>
-    <div className={bottomSpace}>
-      <Input
-        placeholder="Input with onFocus & onBlur events (see Action Logger)"
-        onFocus={action('onFocus')}
-        onBlur={action('onBlur')}
-      />
-    </div>
-    <div className={bottomSpace}>
-      <InputWrapper />
-    </div>
-  </div>
-));
+  ),
+  { percy: { skip: true } },
+);

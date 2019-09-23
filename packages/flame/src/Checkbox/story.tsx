@@ -160,33 +160,37 @@ stories.add('Story', () => (
   </div>
 ));
 
-stories.addWithPercyOptions('Events', { skip: true }, () => (
-  <div>
-    <TextContent>
-      <Heading2>Checkbox events</Heading2>
-      <Box mb={3}>
-        <Checkbox
-          id="onChange"
-          label="Input with onChange event"
-          description="(see Action Logger)"
-          onChange={action('onChange')}
-        />
-      </Box>
-      <Box mb={3}>
-        <Checkbox
-          id="onFocusOnBlur"
-          label="Input with onFocus & onBlur events"
-          description="(see Action Logger)"
-          value="Test"
-          onFocus={action('onFocus')}
-          onBlur={action('onBlur')}
-          checked
-          onChange={noop}
-        />
-      </Box>
-      <Box mb={3}>
-        <CheckBoxWrapper />
-      </Box>
-    </TextContent>
-  </div>
-));
+stories.add(
+  'Events',
+  () => (
+    <div>
+      <TextContent>
+        <Heading2>Checkbox events</Heading2>
+        <Box mb={3}>
+          <Checkbox
+            id="onChange"
+            label="Input with onChange event"
+            description="(see Action Logger)"
+            onChange={action('onChange')}
+          />
+        </Box>
+        <Box mb={3}>
+          <Checkbox
+            id="onFocusOnBlur"
+            label="Input with onFocus & onBlur events"
+            description="(see Action Logger)"
+            value="Test"
+            onFocus={action('onFocus')}
+            onBlur={action('onBlur')}
+            checked
+            onChange={noop}
+          />
+        </Box>
+        <Box mb={3}>
+          <CheckBoxWrapper />
+        </Box>
+      </TextContent>
+    </div>
+  ),
+  { percy: { skip: true } },
+);

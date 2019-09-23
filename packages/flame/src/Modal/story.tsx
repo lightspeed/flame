@@ -271,8 +271,8 @@ class ModalStoryHelper extends React.Component<Props, State> {
   }
 }
 
-stories.addWithPercyOptions('Header', { skip: true }, () => <ModalStoryHelper header />);
+stories.add('Header', () => <ModalStoryHelper header />, { percy: { skip: true } });
 
-stories.addWithPercyOptions('Footer', { skip: true }, () => <ModalStoryHelper footer />);
+stories.add('Footer', () => <ModalStoryHelper footer />, { percy: { skip: true } });
 
-stories.addWithPercyOptions('Options', { skip: true }, () => <ModalStoryHelper options />);
+stories.add('Options', () => <ModalStoryHelper options />, { percy: { skip: true } });

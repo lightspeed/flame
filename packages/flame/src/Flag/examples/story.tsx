@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 
 // We load the flag-sprite through the raw-loader and through SVGInline for the story
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
-import flagSprite from '!raw-loader!../../../svg/flag-sprite.svg';
+// @ts-ignore
+import flagSprite from '!raw-loader!../../../svg/flag-sprite.svg'; // eslint-disable-line
 
 import '../../../svg/Flags/flag.scss';
 import { Flag } from '../index';

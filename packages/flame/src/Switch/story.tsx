@@ -126,15 +126,19 @@ class ToggleEventsWrapper extends React.Component<{}, { checked?: boolean }> {
   }
 }
 
-stories.addWithPercyOptions('Events', { skip: true }, () => (
-  <TextContent>
-    <Heading2>Switch Events</Heading2>
-    <Text>
-      These examples are using <strong>controlled</strong> components.
-    </Text>
-    <ToggleEventsWrapper />
-    <div className={bottomSpace}>
-      <SwitchWrapper />
-    </div>
-  </TextContent>
-));
+stories.add(
+  'Events',
+  () => (
+    <TextContent>
+      <Heading2>Switch Events</Heading2>
+      <Text>
+        These examples are using <strong>controlled</strong> components.
+      </Text>
+      <ToggleEventsWrapper />
+      <div className={bottomSpace}>
+        <SwitchWrapper />
+      </div>
+    </TextContent>
+  ),
+  { percy: { skip: true } },
+);
