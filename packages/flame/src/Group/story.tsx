@@ -2,62 +2,66 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 
-import { Group, GroupAddon } from './index';
 import Readme from './README.md';
+import { Group, GroupAddon } from './index';
 import { Input } from '../Input';
+import { Box } from '../Core';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
+import { Text } from '../Text';
 import { Badge, PillBadge } from '../Badge';
 
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
-
 const stories = storiesOf('Group', module).addDecorator(withReadme(Readme));
-const bottomSpace = spacing[`cr-mb-3`];
-const descriptionClasses = 'cr-text-s cr-gray-300 cr-mb-1';
+
+const Description: React.FC = ({ children }) => (
+  <Text fontSize="text-s" color="dimmed" mb={1}>
+    {children}
+  </Text>
+);
 
 stories.add('Types', () => (
   <div>
     <div>
       <h3>Horizontal Group</h3>
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Group>
           <Button>-</Button>
           <Input defaultValue="0" />
           <Button>+</Button>
         </Group>
-      </div>
-      <div className={bottomSpace}>
+      </Box>
+      <Box mb={3}>
         <Group>
           <Input placeholder="Country" />
           <Input placeholder="State" />
           <Input placeholder="City" />
         </Group>
-      </div>
-      <div className={bottomSpace}>
+      </Box>
+      <Box mb={3}>
         <Group>
           <Button>First Button</Button>
           <Button>Second Button</Button>
           <Button>Third Button</Button>
         </Group>
-      </div>
-      <div className={bottomSpace}>
+      </Box>
+      <Box mb={3}>
         <Group>
           <Badge type="success">Success</Badge>
           <Badge type="info">Info</Badge>
           <Badge type="danger">Danger</Badge>
           <Badge type="important">Important</Badge>
         </Group>
-      </div>
+      </Box>
     </div>
     <div>
       <h3>Vertical Group</h3>
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Group type="vertical">
           <Button>First Button</Button>
           <Button>Second Button</Button>
           <Button>Third Button</Button>
         </Group>
-      </div>
+      </Box>
     </div>
   </div>
 ));
@@ -66,60 +70,60 @@ stories.add('Spacing', () => (
   <div>
     <div>
       <h3>noSpacing Horizontal Group</h3>
-      <div className={bottomSpace}>
-        <div className={descriptionClasses}>
+      <Box mb={3}>
+        <Description>
           Default <code>&lt;Group /&gt;</code>
-        </div>
+        </Description>
         <Group noSpacing>
           <Button>-</Button>
           <Input defaultValue="0" />
           <Button>+</Button>
         </Group>
-      </div>
-      <div className={bottomSpace}>
-        <div className={descriptionClasses}>
+      </Box>
+      <Box mb={3}>
+        <Description>
           When <code>inputBlock</code> is set, the only the input stretches to its full parent width
-        </div>
+        </Description>
         <Group noSpacing inputBlock>
           <Button>-</Button>
           <Input defaultValue="0" />
           <Button>+</Button>
         </Group>
-      </div>
-      <div className={bottomSpace}>
-        <div className={descriptionClasses}>
+      </Box>
+      <Box mb={3}>
+        <Description>
           Multiple inputs inside an <code>inputBlock</code> <code>&lt;Group /&gt;</code>
-        </div>
+        </Description>
         <Group noSpacing inputBlock>
           <Input placeholder="Country" />
           <Input placeholder="State" />
           <Input placeholder="City" />
         </Group>
-      </div>
-      <div className={bottomSpace}>
-        <div className={descriptionClasses}>
+      </Box>
+      <Box mb={3}>
+        <Description>
           Default button <code>&lt;Group /&gt;</code>
-        </div>
+        </Description>
         <Group noSpacing>
           <Button>First Button</Button>
           <Button>Second Button</Button>
           <Button>Third Button</Button>
         </Group>
-      </div>
-      <div className={bottomSpace}>
-        <div className={descriptionClasses}>
+      </Box>
+      <Box mb={3}>
+        <Description>
           Using <code>block</code> property scales to the parent width
-        </div>
+        </Description>
         <Group noSpacing block>
           <Button>First Button</Button>
           <Button>Second Button</Button>
           <Button>Third Button</Button>
         </Group>
-      </div>
-      <div className={bottomSpace}>
-        <div className={descriptionClasses}>
+      </Box>
+      <Box mb={3}>
+        <Description>
           Creating <code>&lt;Group /&gt;</code> inside <code>&lt;Group /&gt;</code>
-        </div>
+        </Description>
         <Group>
           <Group noSpacing>
             <Button>Button</Button>
@@ -134,16 +138,16 @@ stories.add('Spacing', () => (
             <Button>Button</Button>
           </Group>
         </Group>
-      </div>
-      <div className={bottomSpace}>
-        <div className={descriptionClasses}>
+      </Box>
+      <Box mb={3}>
+        <Description>
           Text vertical aligns inside <code>&lt;Group /&gt;</code> components
-        </div>
+        </Description>
         <Group>
           <div>Some text beside a button</div>
           <Button>First Button</Button>
         </Group>
-      </div>
+      </Box>
     </div>
     <div>
       <h3>noSpacing Vertical Group</h3>
@@ -166,7 +170,7 @@ stories.add('Addon', () => (
   <div>
     <div>
       <h3>Horizontal Group Addon</h3>
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Group>
           <GroupAddon>
             <Icon name="customers" />
@@ -176,9 +180,9 @@ stories.add('Addon', () => (
             / cm<sup>2</sup>
           </GroupAddon>
         </Group>
-      </div>
+      </Box>
 
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Group noSpacing>
           <GroupAddon>$</GroupAddon>
           <Input placeholder="Group addons" />
@@ -186,11 +190,14 @@ stories.add('Addon', () => (
             / cm<sup>2</sup>
           </GroupAddon>
         </Group>
-      </div>
+      </Box>
 
       <h4>Addon horizontal positioning</h4>
-      <h5 className="cr-mb-1">align={'"left"'} (Default)</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        align={'"left"'}
+        (Default)
+      </Text>
+      <Box mb={3}>
         <div>
           <Group noSpacing block>
             <GroupAddon align="left" className="width-200px">
@@ -199,10 +206,12 @@ stories.add('Addon', () => (
             <Input />
           </Group>
         </div>
-      </div>
+      </Box>
 
-      <h5 className="cr-mb-1">align={'"center"'}</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        align={'"center"'}
+      </Text>
+      <Box mb={3}>
         <div>
           <Group noSpacing block>
             <GroupAddon align="center" className="width-200px">
@@ -211,10 +220,12 @@ stories.add('Addon', () => (
             <Input />
           </Group>
         </div>
-      </div>
+      </Box>
 
-      <h5 className="cr-mb-1">align={'"right"'}</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        align={'"right"'}
+      </Text>
+      <Box mb={3}>
         <div>
           <Group noSpacing block>
             <GroupAddon align="right" className="width-200px">
@@ -223,11 +234,13 @@ stories.add('Addon', () => (
             <Input />
           </Group>
         </div>
-      </div>
+      </Box>
 
       <h4>Addon vertically positioning</h4>
-      <h5 className="cr-mb-1">verticalAlign={'"top"'}</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        verticalAlign={'"top"'}
+      </Text>
+      <Box mb={3}>
         <div>
           <Group noSpacing block>
             <GroupAddon verticalAlign="top" className="width-200px">
@@ -237,10 +250,12 @@ stories.add('Addon', () => (
             <textarea rows={5} />
           </Group>
         </div>
-      </div>
+      </Box>
 
-      <h5 className="cr-mb-1">verticalAlign={'"middle"'} (default)</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        verticalAlign={'"middle"'} (default)
+      </Text>
+      <Box mb={3}>
         <div>
           <Group noSpacing block>
             <GroupAddon verticalAlign="middle" className="width-200px">
@@ -250,10 +265,12 @@ stories.add('Addon', () => (
             <textarea rows={5} />
           </Group>
         </div>
-      </div>
+      </Box>
 
-      <h5 className="cr-mb-1">verticalAlign={'"bottom"'}</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        verticalAlign={'"bottom"'}
+      </Text>
+      <Box mb={3}>
         <div>
           <Group noSpacing block>
             <GroupAddon verticalAlign="bottom" className="width-200px">
@@ -263,29 +280,29 @@ stories.add('Addon', () => (
             <textarea rows={5} />
           </Group>
         </div>
-      </div>
+      </Box>
 
       <h4>Custom classes</h4>
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <div>
           <Group noSpacing block>
             <GroupAddon className="width-200px">Fixed width of 200px</GroupAddon>
             <Input placeholder="Group addons" />
           </Group>
         </div>
-      </div>
+      </Box>
 
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Group noSpacing block>
           <GroupAddon className="width-200px overflow-hidden">
             <div className="ellipsis">Example using ellipsis thats very long</div>
           </GroupAddon>
           <Input placeholder="Group addons" />
         </Group>
-      </div>
+      </Box>
 
       <h4>Fixed width and {'align="center"'}</h4>
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <div>
           <Group noSpacing block>
             <GroupAddon align="center" className="width-200px">
@@ -294,7 +311,7 @@ stories.add('Addon', () => (
             <Input placeholder="Group addons" />
           </Group>
         </div>
-      </div>
+      </Box>
     </div>
 
     <div>
@@ -303,8 +320,8 @@ stories.add('Addon', () => (
         Note when using the vertical group, you will probably need to pass{' '}
         {<code>align={'"center"'}</code>} yourself to make sure {"it's"} aligned correctly
       </p>
-      <div className={bottomSpace}>
-        <div className={bottomSpace}>
+      <Box mb={3}>
+        <Box mb={3}>
           <Group type="vertical" noSpacing>
             <Button>First Button</Button>
             <GroupAddon align="center">
@@ -318,12 +335,14 @@ stories.add('Addon', () => (
             </GroupAddon>
             <Button>Second Button</Button>
           </Group>
-        </div>
-      </div>
+        </Box>
+      </Box>
 
       <h4>Addon horizontal positioning</h4>
-      <h5 className="cr-mb-1">align={'"left"'} (Default)</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        align={'"left"'} (Default)
+      </Text>
+      <Box mb={3}>
         <div>
           <Group type="vertical" noSpacing block>
             <Button>First Button</Button>
@@ -331,10 +350,12 @@ stories.add('Addon', () => (
             <Button>Second Button</Button>
           </Group>
         </div>
-      </div>
+      </Box>
 
-      <h5 className="cr-mb-1">align={'"center"'}</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        align={'"center"'}
+      </Text>
+      <Box mb={3}>
         <div>
           <Group type="vertical" noSpacing block>
             <Button>First Button</Button>
@@ -342,10 +363,12 @@ stories.add('Addon', () => (
             <Button>Second Button</Button>
           </Group>
         </div>
-      </div>
+      </Box>
 
-      <h5 className="cr-mb-1">align={'"right"'}</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        align={'"right"'}
+      </Text>
+      <Box mb={3}>
         <div>
           <Group type="vertical" noSpacing block>
             <Button>First Button</Button>
@@ -353,11 +376,13 @@ stories.add('Addon', () => (
             <Button>Second Button</Button>
           </Group>
         </div>
-      </div>
+      </Box>
 
       <h4>Addon vertically positioning</h4>
-      <h5 className="cr-mb-1">verticalAlign={'"top"'}</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        verticalAlign={'"top"'}
+      </Text>
+      <Box mb={3}>
         <div>
           <Group type="vertical" noSpacing block>
             <Button>First Button</Button>
@@ -367,10 +392,12 @@ stories.add('Addon', () => (
             <Button>Second Button</Button>
           </Group>
         </div>
-      </div>
+      </Box>
 
-      <h5 className="cr-mb-1">verticalAlign={'"middle"'} (default)</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        verticalAlign={'"middle"'} (default)
+      </Text>
+      <Box mb={3}>
         <div>
           <Group type="vertical" noSpacing block>
             <Button>First Button</Button>
@@ -380,10 +407,12 @@ stories.add('Addon', () => (
             <Button>Second Button</Button>
           </Group>
         </div>
-      </div>
+      </Box>
 
-      <h5 className="cr-mb-1">verticalAlign={'"bottom"'}</h5>
-      <div className={bottomSpace}>
+      <Text as="h5" mb={1}>
+        verticalAlign={'"bottom"'}
+      </Text>
+      <Box mb={3}>
         <div>
           <Group type="vertical" noSpacing block>
             <Button>First Button</Button>
@@ -393,7 +422,7 @@ stories.add('Addon', () => (
             <Button>Second Button</Button>
           </Group>
         </div>
-      </div>
+      </Box>
     </div>
   </div>
 ));

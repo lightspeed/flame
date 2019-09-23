@@ -1,18 +1,14 @@
 import * as React from 'react';
-import cn from 'classnames';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
 
 import { Card, CardHeader, CardFooter, CardSection } from './Card';
 import { TextLink } from '../Text';
 import { Divider } from '../Divider/index';
 import { Button } from '../Button';
-import Readme from './README.md';
+import { Box } from '../Core';
 
-const leftSpace = spacing['cr-mr-2'];
-const contentSpace = spacing['cr-mb-2'];
+import Readme from './README.md';
 
 const stories = storiesOf('Card', module)
   .addDecorator(withReadme(Readme))
@@ -26,42 +22,42 @@ const cardsContent =
 
 stories.add('Types', () => (
   <div style={{ display: 'flex' }}>
-    <div className={cn('text-center', leftSpace)}>
+    <Box textAlign="center" mr={2}>
       <Card>
         <CardSection>Default Card</CardSection>
       </Card>
-    </div>
-    <div className={cn('text-center', leftSpace)}>
+    </Box>
+    <Box textAlign="center" mr={2}>
       <Card top>
         <CardSection>Top Card</CardSection>
       </Card>
-    </div>
+    </Box>
   </div>
 ));
 
 stories.add('Spacing', () => (
   <div>
     <h3>Card spacing</h3>
-    <div className={contentSpace} style={{ display: 'flex' }}>
-      <div className={cn('text-center', leftSpace)}>
+    <Box mb={2} style={{ display: 'flex' }}>
+      <Box textAlign="center" mr={2}>
         <Card>
           <CardSection>Default</CardSection>
         </Card>
-      </div>
-      <div className={cn('text-center', leftSpace)}>
+      </Box>
+      <Box textAlign="center" mr={2}>
         <Card>
           <CardSection large>Large</CardSection>
         </Card>
-      </div>
-      <div className={cn('text-center', leftSpace)}>
+      </Box>
+      <Box textAlign="center" mr={2}>
         <Card>
           <CardSection noSpacing>No spacing</CardSection>
         </Card>
-      </div>
-    </div>
+      </Box>
+    </Box>
 
     <h3>CardSection spacing</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={2} style={cardsStyles}>
       <div>
         <Card>
           <CardSection>Default</CardSection>
@@ -75,17 +71,17 @@ stories.add('Spacing', () => (
           </CardSection>
         </Card>
       </div>
-    </div>
+    </Box>
 
     <h3>CardHeader spacing</h3>
-    <div className={contentSpace} style={cardsStyles}>
-      <div className={contentSpace}>
+    <Box mb={2} style={cardsStyles}>
+      <Box mb={2}>
         <Card>
           <CardHeader title="Header Default" actions={<Button size="small">hello world</Button>} />
           <CardSection>Static Content</CardSection>
         </Card>
-      </div>
-      <div className={contentSpace}>
+      </Box>
+      <Box mb={2}>
         <Card>
           <CardHeader
             large
@@ -94,8 +90,8 @@ stories.add('Spacing', () => (
           />
           <CardSection>Static Content</CardSection>
         </Card>
-      </div>
-      <div className={contentSpace}>
+      </Box>
+      <Box mb={2}>
         <Card>
           <CardHeader
             noSpacing
@@ -104,39 +100,39 @@ stories.add('Spacing', () => (
           />
           <CardSection>Static Content</CardSection>
         </Card>
-      </div>
-    </div>
+      </Box>
+    </Box>
 
     <h3>Footer spacing</h3>
-    <div className={contentSpace} style={cardsStyles}>
-      <div className={contentSpace}>
+    <Box mb={2} style={cardsStyles}>
+      <Box mb={2}>
         <Card>
           <CardSection>Static Content</CardSection>
           <CardFooter>Footer Default</CardFooter>
         </Card>
-      </div>
-      <div className={contentSpace}>
+      </Box>
+      <Box mb={2}>
         <Card>
           <CardSection>Static Content</CardSection>
           <CardFooter large>Footer Large</CardFooter>
         </Card>
-      </div>
-    </div>
+      </Box>
+    </Box>
   </div>
 ));
 
 stories.add('Header & Footer', () => (
   <div>
     <h3>Default</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={1} style={cardsStyles}>
       <Card>
         <CardHeader title="Header" />
         <CardSection>{cardsContent}</CardSection>
         <CardFooter>Footer</CardFooter>
       </Card>
-    </div>
+    </Box>
     <h3>Default with header actions</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={1} style={cardsStyles}>
       <Card>
         <CardHeader
           title="Header"
@@ -154,17 +150,17 @@ stories.add('Header & Footer', () => (
         <CardSection>{cardsContent}</CardSection>
         <CardFooter>Footer</CardFooter>
       </Card>
-    </div>
+    </Box>
     <h3>Large</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={2} style={cardsStyles}>
       <Card large>
         <CardHeader title="Header" />
         <CardSection>{cardsContent}</CardSection>
         <CardFooter>Footer</CardFooter>
       </Card>
-    </div>
+    </Box>
     <h3>Large with header actions</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={2} style={cardsStyles}>
       <Card large>
         <CardHeader
           title="Header"
@@ -182,14 +178,14 @@ stories.add('Header & Footer', () => (
         <CardSection>{cardsContent}</CardSection>
         <CardFooter>Footer</CardFooter>
       </Card>
-    </div>
+    </Box>
   </div>
 ));
 
 stories.add('Card with Divider', () => (
   <div>
     <h3>Card divider</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={2} style={cardsStyles}>
       <Card>
         <CardSection>{cardsContent}</CardSection>
         <Divider />
@@ -197,9 +193,9 @@ stories.add('Card with Divider', () => (
         <Divider />
         <CardSection>{cardsContent}</CardSection>
       </Card>
-    </div>
+    </Box>
     <h3>Card divider within large card</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={2} style={cardsStyles}>
       <Card large>
         <CardSection>{cardsContent}</CardSection>
         <Divider />
@@ -207,14 +203,14 @@ stories.add('Card with Divider', () => (
         <Divider />
         <CardSection>{cardsContent}</CardSection>
       </Card>
-    </div>
+    </Box>
   </div>
 ));
 
 stories.add('Custom colors', () => (
   <div>
     <h3>Custom colors</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={2} style={cardsStyles}>
       <Card bg="green-100">
         <CardHeader title="Header" color="green-300" />
         <CardSection color="night" bg="snow-100">
@@ -222,6 +218,6 @@ stories.add('Custom colors', () => (
         </CardSection>
         <CardFooter color="green-300">Footer</CardFooter>
       </Card>
-    </div>
+    </Box>
   </div>
 ));

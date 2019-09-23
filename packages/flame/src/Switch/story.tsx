@@ -9,12 +9,15 @@ import { Switch } from './Switch';
 import Readme from './README.md';
 import { Group } from '../Group';
 import { Button } from '../Button';
-
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
+import { Box } from '../Core';
 
 const stories = storiesOf('Switch', module).addDecorator(withReadme(Readme));
-const bottomSpace = spacing[`cr-mb-3`];
-const descriptionClasses = 'cr-text-s cr-gray-300 cr-mb-1';
+
+const Description: React.FC = ({ children }) => (
+  <Text fontSize="small" color="dimmed" mb={3}>
+    {children}
+  </Text>
+);
 
 type State = {
   checked?: boolean;
@@ -69,17 +72,17 @@ class SwitchWrapper extends React.Component<{}, State> {
 stories.add('States', () => (
   <TextContent>
     <Heading2>Switch States</Heading2>
-    <div className={descriptionClasses}>Toggle On / Off</div>
-    <div className={bottomSpace}>
+    <Description>Toggle On / Off</Description>
+    <Box mb={3}>
       <Switch />
-    </div>
-    <div className={descriptionClasses}>Disabled On / Off</div>
-    <div className={bottomSpace}>
+    </Box>
+    <Description>Disabled On / Off</Description>
+    <Box mb={3}>
       <Group>
         <Switch disabled />
         <Switch checked disabled />
       </Group>
-    </div>
+    </Box>
   </TextContent>
 ));
 
@@ -102,7 +105,7 @@ class ToggleEventsWrapper extends React.Component<{}, { checked?: boolean }> {
     const { checked } = this.state;
 
     return (
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Group>
           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="toggle-events">Toggle Events</label>
@@ -118,10 +121,10 @@ class ToggleEventsWrapper extends React.Component<{}, { checked?: boolean }> {
         <Text size="small">
           onChange value (checked): <strong>{checked.toString()}</strong>
         </Text>
-        <div className={descriptionClasses}>
+        <Description>
           Focus + Blur logged inside the <code>ACTION LOGGER</code> panel
-        </div>
-      </div>
+        </Description>
+      </Box>
     );
   }
 }
@@ -135,9 +138,9 @@ stories.add(
         These examples are using <strong>controlled</strong> components.
       </Text>
       <ToggleEventsWrapper />
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <SwitchWrapper />
-      </div>
+      </Box>
     </TextContent>
   ),
   { percy: { skip: true } },

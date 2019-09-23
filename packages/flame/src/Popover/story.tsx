@@ -11,8 +11,6 @@ import { Button } from '../Button';
 import { Box } from '../Core';
 import Readme from './README.md';
 import styles from '../../../../stories/styles/stories.scss';
-import typography from '../../../flame-tokens/partials/_typography.scss';
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
 
 const stories = storiesOf('Popover', module).addDecorator(withReadme(Readme));
 
@@ -32,8 +30,9 @@ const placements: PopoverPlacement[] = [
 ];
 
 const sharedTarget = ({ targetProps, targetEvents, active }: any = {}) => (
-  <div
-    className={cn(styles['example__block--dashed'], spacing['cr-pv-5'], {
+  <Box
+    py={5}
+    className={cn(styles['example__block--dashed'], {
       [styles['example__block--dashed-active']]: active,
     })}
     style={{ cursor: 'pointer' }}
@@ -41,7 +40,7 @@ const sharedTarget = ({ targetProps, targetEvents, active }: any = {}) => (
     {...targetEvents}
   >
     &#10010;
-  </div>
+  </Box>
 );
 
 type PopoverExamplesProp = Partial<PopoverProps> & { content?: string; isOpen?: boolean };
@@ -81,7 +80,9 @@ class PopoverSimple extends Component<PopoverExamplesProp, { isOpen?: boolean }>
         {...rest}
         isOpen={isOpen}
       >
-        <div className={cn(spacing['cr-p-4'], typography['cr-text-s'])}>{content}</div>
+        <Text p={4} fontSize="text-s">
+          {content}
+        </Text>
       </Popover>
     );
   }
@@ -138,10 +139,10 @@ class PopoverWithCloseButton extends Component<PopoverExamplesProp, { isOpen?: b
         isOpen={isOpen}
         {...rest}
       >
-        <div className={cn(spacing['cr-p-2'], typography['cr-text-s'])}>
+        <Box p={2} fontSize="text-s">
           <Text>{content}</Text>
           <Button onClick={this.handleClose}>Close</Button>
-        </div>
+        </Box>
       </Popover>
     );
   }
@@ -280,9 +281,9 @@ const RerenderingPopover = () => {
 
   return (
     <Popover target={sharedTarget} isOpen>
-      <div className={cn(spacing['cr-p-4'], typography['cr-text-s'])}>
+      <Text p={4} fontSize="text-s">
         Popover should not flicker (Re-render count: {state})
-      </div>
+      </Text>
     </Popover>
   );
 };

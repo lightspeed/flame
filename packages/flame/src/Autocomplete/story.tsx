@@ -2,13 +2,12 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
-import cn from 'classnames';
 
 import Autocomplete, { exampleProps, exampleItems } from './examples';
 
 import Readme from './README.md';
-import typography from '../../../flame-tokens/partials/_typography.scss';
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
+import { Box } from '../Core';
+import { Text } from '../Text';
 
 const stories = storiesOf('Autocomplete', module).addDecorator(withReadme(Readme));
 
@@ -72,15 +71,12 @@ stories.add(
       </div>
 
       <h3>With Label</h3>
-      <div className={spacing['cr-mb-1']}>
+      <Box mb={1}>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label
-          htmlFor="color-input-label"
-          className={[typography['cr-bold'], typography['cr-text-s']].join(' ')}
-        >
+        <Text as="label" fontWeight="bold" fontSize="text-s">
           Label *
-        </label>
-      </div>
+        </Text>
+      </Box>
       <Autocomplete
         {...exampleProps}
         inputProps={{ id: 'color-input-label', name: 'color-input-label' }}
@@ -132,15 +128,12 @@ stories.add('States', () => (
     </div>
 
     <h3>With Label</h3>
-    <div className={spacing['cr-mb-1']}>
+    <Box mb={1}>
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label
-        htmlFor="color-input-label"
-        className={cn(typography['cr-bold'], typography['cr-text-s'])}
-      >
+      <Text fontWeight="bold" fontSize="text-s">
         Label *
-      </label>
-    </div>
+      </Text>
+    </Box>
     <Autocomplete
       {...exampleProps}
       inputProps={{ id: 'color-input-label', name: 'color-input-label' }}

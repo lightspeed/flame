@@ -13,6 +13,7 @@ import { IconArrowDown } from '../ArrowDown';
 import Readme from '../README.md';
 import IconList from '../../../svg/Icon.list.json';
 import '../../../svg/Icons/icon.scss';
+import { Ul } from '../../../../../stories/components/Ul';
 
 const stories = storiesOf('Icon', module).addDecorator(withReadme(Readme));
 
@@ -75,7 +76,7 @@ class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresente
           <span className="cr-ml-2 cr-text-s">{name}</span>
         </div>
         <div>
-          <ul className="cr-text-xs cr-gray-300" style={{ cursor: 'pointer', textAlign: 'right' }}>
+          <Ul className="cr-text-xs cr-gray-300" style={{ cursor: 'pointer', textAlign: 'right' }}>
             {(iconList[name as string] as any).map((iconName: string) => (
               <li
                 key={iconName}
@@ -86,7 +87,7 @@ class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresente
                 {iconName}
               </li>
             ))}
-          </ul>
+          </Ul>
         </div>
       </li>
     );
@@ -94,7 +95,7 @@ class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresente
 }
 
 stories.add('Story', () => (
-  <ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
+  <Ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(iconList).map(name => {
       const SingleIcon = () => (
         <IconPresenter>
@@ -107,11 +108,11 @@ stories.add('Story', () => (
 
       return <SingleIcon />;
     })}
-  </ul>
+  </Ul>
 ));
 
 stories.add('Size', () => (
-  <ul>
+  <Ul>
     {['0.875rem', '1rem', '1.125rem', '1.5rem', '2.25rem', '4rem'].map(size => (
       <li className="cr-mb-2" key={size}>
         <Icon name="register" size={size} />
@@ -120,7 +121,7 @@ stories.add('Size', () => (
         </span>
       </li>
     ))}
-  </ul>
+  </Ul>
 ));
 
 const whiteBackgroundIcons = {
@@ -281,7 +282,7 @@ const darkBackgroundIcons = {
 
 stories.add('Colors', () => (
   <div>
-    <ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <Ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
       {Object.keys(whiteBackgroundIcons).map(name =>
         (whiteBackgroundIcons as any)[name].map((colors: any) => (
           <li
@@ -294,17 +295,17 @@ stories.add('Colors', () => (
             }}
           >
             <Icon name={name} {...colors} size="2rem" />
-            <ul className="cr-ml-2 cr-text-xs cr-gray-300" style={{ textAlign: 'right' }}>
+            <Ul className="cr-ml-2 cr-text-xs cr-gray-300" style={{ textAlign: 'right' }}>
               {Object.keys(colors).map(key => (
                 <li className="cr-mr-2 cr-text-s" key={key}>{`${key}: ${colors[key]}`}</li>
               ))}
-            </ul>
+            </Ul>
           </li>
         )),
       )}
-    </ul>
+    </Ul>
     <div className="cr-pt-4 cr-pb-1" style={{ background: '#232a3b', color: '#fff' }}>
-      <ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <Ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
         {Object.keys(darkBackgroundIcons).map(name =>
           (darkBackgroundIcons as any)[name].map((colors: any) => (
             <li
@@ -317,15 +318,15 @@ stories.add('Colors', () => (
               }}
             >
               <Icon name={name} {...colors} size="2rem" />
-              <ul className="cr-ml-2 cr-text-xs cr-gray-100" style={{ textAlign: 'right' }}>
+              <Ul className="cr-ml-2 cr-text-xs cr-gray-100" style={{ textAlign: 'right' }}>
                 {Object.keys(colors).map(key => (
                   <li className="cr-mr-2 cr-text-s" key={key}>{`${key}: ${colors[key]}`}</li>
                 ))}
-              </ul>
+              </Ul>
             </li>
           )),
         )}
-      </ul>
+      </Ul>
     </div>
   </div>
 ));

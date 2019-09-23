@@ -2,14 +2,12 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
 import { Card, CardHeader, CardSection, CardFooter } from '../Card';
 import { Icon } from '../Icon';
+import { Box } from '../Core';
 import { Divider } from './Divider';
 
 import Readme from './README.md';
-
-const contentSpace = spacing['cr-mb-2'];
 
 const stories = storiesOf('Divider', module).addDecorator(withReadme(Readme));
 const cardsStyles = { maxWidth: '640px' };
@@ -25,7 +23,7 @@ stories.add('Story', () => (
       <span>T-Shirt</span>
     </Divider>
     <h3>Between Elements</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={2} style={cardsStyles}>
       <Card>
         <CardHeader title="Title" />
         <CardSection>{cardsContent}</CardSection>
@@ -37,9 +35,9 @@ stories.add('Story', () => (
         <CardSection>{cardsContent}</CardSection>
         <CardFooter>Footer</CardFooter>
       </Card>
-    </div>
+    </Box>
     <h3>Between CardSection</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={2} style={cardsStyles}>
       <Card>
         <CardHeader title="Title" />
         <CardSection>{cardsContent}</CardSection>
@@ -47,7 +45,7 @@ stories.add('Story', () => (
         <CardSection>{cardsContent}</CardSection>
         <CardFooter>Footer</CardFooter>
       </Card>
-    </div>
+    </Box>
     <div>
       <h3>Default</h3>
       <Divider />
@@ -61,7 +59,7 @@ stories.add('Story', () => (
     </div>
     <div>
       <h3>Spacing</h3>
-      <div className={contentSpace} style={cardsStyles}>
+      <Box mb={2} style={cardsStyles}>
         <Card>
           <CardHeader title="Title" />
           <CardSection>{cardsContent}</CardSection>
@@ -69,9 +67,9 @@ stories.add('Story', () => (
           <CardSection>{cardsContent}</CardSection>
           <CardFooter>Footer</CardFooter>
         </Card>
-      </div>
+      </Box>
       <h3>Even Spacing</h3>
-      <div className={contentSpace} style={cardsStyles}>
+      <Box mb={2} style={cardsStyles}>
         <Card>
           <CardHeader title="Title" />
           <CardSection>{cardsContent}</CardSection>
@@ -79,9 +77,9 @@ stories.add('Story', () => (
           <CardSection>{cardsContent}</CardSection>
           <CardFooter>Footer</CardFooter>
         </Card>
-      </div>
+      </Box>
       <h3>Uneven Spacing</h3>
-      <div className={contentSpace} style={cardsStyles}>
+      <Box mb={2} style={cardsStyles}>
         <Card>
           <CardHeader title="Title" />
           <CardSection>{cardsContent}</CardSection>
@@ -89,7 +87,7 @@ stories.add('Story', () => (
           <CardSection>{cardsContent}</CardSection>
           <CardFooter>Footer</CardFooter>
         </Card>
-      </div>
+      </Box>
     </div>
     <div>
       <h2>Custom Colors</h2>
@@ -124,7 +122,7 @@ stories.add(
   () => (
     <div>
       <h3>Default</h3>
-      <div className={contentSpace} style={cardsStyles}>
+      <Box mb={2} style={cardsStyles}>
         <Card>
           <CardHeader title="Title" />
           <CardSection>{cardsContent}</CardSection>
@@ -132,9 +130,9 @@ stories.add(
           <CardSection>{cardsContent}</CardSection>
           <CardFooter>Footer</CardFooter>
         </Card>
-      </div>
+      </Box>
       <h3>Even Spacing</h3>
-      <div className={contentSpace} style={cardsStyles}>
+      <Box mb={2} style={cardsStyles}>
         <Card>
           <CardHeader title="Title" />
           <CardSection>{cardsContent}</CardSection>
@@ -142,9 +140,9 @@ stories.add(
           <CardSection>{cardsContent}</CardSection>
           <CardFooter>Footer</CardFooter>
         </Card>
-      </div>
+      </Box>
       <h3>Uneven Spacing</h3>
-      <div className={contentSpace} style={cardsStyles}>
+      <Box mb={2} style={cardsStyles}>
         <Card>
           <CardHeader title="Title" />
           <CardSection>{cardsContent}</CardSection>
@@ -152,7 +150,7 @@ stories.add(
           <CardSection>{cardsContent}</CardSection>
           <CardFooter>Footer</CardFooter>
         </Card>
-      </div>
+      </Box>
     </div>
   ),
   { percy: { skip: true } },

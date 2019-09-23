@@ -18,9 +18,16 @@ import { Box } from '../../Core';
 import { Button } from '../../Button';
 import { Group } from '../../Group';
 import { Input } from '../../Input';
+import { Text } from '../../Text';
+import { Ul } from '../../../../../stories/components/Ul';
 
 const stories = storiesOf('Flag', module).addDecorator(withReadme(Readme));
-const descriptionClasses = 'cr-text-s cr-gray-300 cr-mb-1';
+
+const Description: React.FC = ({ children }) => (
+  <Text fontSize="text-s" color="dimmed" mb={1}>
+    {children}
+  </Text>
+);
 
 type FlagPresenterProps = {};
 type FlagPresenterState = {
@@ -105,7 +112,7 @@ stories.add('Story', () => (
 ));
 
 stories.add('Size', () => (
-  <ul>
+  <Ul>
     {['0.875rem', '1rem', '1.125rem', '1.5rem', '2.25rem', '4rem'].map(size => (
       <li className="cr-mb-2" key={size}>
         <Flag code="ca" size={size} />
@@ -114,24 +121,24 @@ stories.add('Size', () => (
         </span>
       </li>
     ))}
-  </ul>
+  </Ul>
 ));
 
 stories.add('Integration', () => (
   <div>
     <h3>Using the Icon component</h3>
-    <div className={descriptionClasses}>
+    <Description>
       Flag inside a <code>Group</code> component
-    </div>
+    </Description>
     <Box mb={3}>
       <Group>
         <Flag code="ca" />
         <span>Flag of Canada</span>
       </Group>
     </Box>
-    <div className={descriptionClasses}>
+    <Description>
       Flag inside a <code>Button</code> component
-    </div>
+    </Description>
     <Box mb={3}>
       <Button>
         <Flag code="nl" />
@@ -139,18 +146,18 @@ stories.add('Integration', () => (
       </Button>
     </Box>
     <h3>Using single component imports</h3>
-    <div className={descriptionClasses}>
+    <Description>
       Flag inside a <code>Group</code> component
-    </div>
+    </Description>
     <Box mb={3}>
       <Group>
         <FlagCA />
         <span>Flag of Canada</span>
       </Group>
     </Box>
-    <div className={descriptionClasses}>
+    <Description>
       Flag inside a <code>Button</code> component
-    </div>
+    </Description>
     <Box mb={3}>
       <Button>
         <FlagNL />

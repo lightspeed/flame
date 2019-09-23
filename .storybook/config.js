@@ -1,5 +1,5 @@
 import React from 'react';
-import { configure, getStorybook, addDecorator, addParameters } from '@storybook/react';
+import { configure, addDecorator, addParameters } from '@storybook/react';
 import { Global } from '@emotion/core';
 import { FlameTheme, FlameGlobalStyles, Box } from '../packages/flame/src/Core';
 import { Select } from '../packages/flame/src/Select';
@@ -63,5 +63,3 @@ function loadStories() {
 }
 
 configure(loadStories, module);
-
-serializeStories(getStorybook);
