@@ -37,8 +37,10 @@ stories.add('Types', () => (
     <Heading3>Any element as child</Heading3>
     <Box mb={3}>
       <Tag onRemove={() => {}}>
-        <Icon name="small-chevron-down" color="snow" className="cr-mr-1" />
-        🍊 🍋 🍌 🍉 🍇
+        <Icon name="small-chevron-down" color="white" />
+        <Box as="span" ml={1}>
+          🍊 🍋 🍌 🍉 🍇
+        </Box>
       </Tag>
     </Box>
   </TextContent>
