@@ -38,6 +38,7 @@ stories.add('Types', () => (
     <Box mb={3}>
       <Tag onRemove={() => {}}>
         <Icon name="small-chevron-down" color="white" />
+        {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
         <Box as="span" ml={1}>
           🍊 🍋 🍌 🍉 🍇
         </Box>
