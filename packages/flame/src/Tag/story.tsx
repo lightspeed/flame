@@ -4,44 +4,43 @@ import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 
 import { Tag } from './Tag';
+import { Box } from '../Core';
 import Readme from './README.md';
 import { Text, TextContent, Heading2, Heading3 } from '../Text';
 import TagList from './examples/TagList';
 import { Icon } from '../Icon';
 
 const stories = storiesOf('Tag', module).addDecorator(withReadme(Readme));
-const bottomSpace = 'cr-mb-3';
-const bottomSpaceAction = 'cr-mb-1';
 
 stories.add('Types', () => (
   <TextContent>
     <Heading3>Small</Heading3>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <Tag size="small" onRemove={() => {}}>
         My Tag
       </Tag>
-    </div>
+    </Box>
     <Heading3>Default</Heading3>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <Tag>My Tag</Tag>
-    </div>
+    </Box>
     <Heading3>Dismissible</Heading3>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <Tag onRemove={() => {}}>My Tag</Tag>
-    </div>
+    </Box>
     <Heading3>Long text</Heading3>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <Tag onRemove={() => {}}>
         Long tag on <br /> multiple lines
       </Tag>
-    </div>
+    </Box>
     <Heading3>Any element as child</Heading3>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <Tag onRemove={() => {}}>
         <Icon name="small-chevron-down" color="snow" className="cr-mr-1" />
         🍊 🍋 🍌 🍉 🍇
       </Tag>
-    </div>
+    </Box>
   </TextContent>
 ));
 
@@ -51,17 +50,17 @@ stories.add(
     <TextContent>
       <Heading2>Tag</Heading2>
       <Heading3>Small</Heading3>
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Tag size="small" onRemove={() => {}}>
           My Tag
         </Tag>
-      </div>
+      </Box>
       <Heading3>Normal</Heading3>
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Tag size="normal" onRemove={() => {}}>
           My Tag
         </Tag>
-      </div>
+      </Box>
     </TextContent>
   ),
   { percy: { skip: true } },
@@ -73,18 +72,18 @@ stories.add(
     <TextContent>
       <Heading2>Events</Heading2>
       <Heading3>On Click</Heading3>
-      <div className={bottomSpaceAction}>
+      <Box mb={1}>
         <Tag onClick={action('onClick')}>My Tag</Tag>
-      </div>
-      <Text size="small" className={bottomSpace}>
+      </Box>
+      <Text size="small" mb={3}>
         (See action logger)
       </Text>
       <Heading3>On Click & On Close</Heading3>
-      <div className={bottomSpaceAction}>
+      <Box mb={1}>
         <Tag onClick={action('onClick')} onRemove={action('onRemove')}>
           My Tag
         </Tag>
-      </div>
+      </Box>
       <Text size="small">(See action logger)</Text>
     </TextContent>
   ),
@@ -97,9 +96,9 @@ stories.add(
     <TextContent>
       <Heading2>Example</Heading2>
       <Heading3>Tag list</Heading3>
-      <div className={bottomSpaceAction}>
+      <Box mb={1}>
         <TagList />
-      </div>
+      </Box>
       <Text size="small">(Click label or remove icon)</Text>
     </TextContent>
   ),

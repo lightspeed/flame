@@ -10,6 +10,7 @@ import IconSprite from '!raw-loader!../../../svg/icon-sprite.svg'; // eslint-dis
 import { Icon } from '../index';
 import { IconAdd } from '../Add';
 import { IconArrowDown } from '../ArrowDown';
+import { Box } from '../../Core';
 import Readme from '../README.md';
 import IconList from '../../../svg/Icon.list.json';
 import '../../../svg/Icons/icon.scss';
@@ -59,8 +60,10 @@ class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresente
     const { colors } = this.state;
 
     return (
-      <li
-        className="cr-mb-2 cr-ph-4"
+      <Box
+        as="li"
+        mb={2}
+        px={4}
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -73,7 +76,9 @@ class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresente
 
             return React.cloneElement(child as any, { name, ...colors });
           })}
-          <span className="cr-ml-2 cr-text-s">{name}</span>
+          <Box as="span" ml={2} fontSize="text-s">
+            {name}
+          </Box>
         </div>
         <div>
           <Ul className="cr-text-xs cr-gray-300" style={{ cursor: 'pointer', textAlign: 'right' }}>
@@ -89,7 +94,7 @@ class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresente
             ))}
           </Ul>
         </div>
-      </li>
+      </Box>
     );
   }
 }
@@ -114,12 +119,12 @@ stories.add('Story', () => (
 stories.add('Size', () => (
   <Ul>
     {['0.875rem', '1rem', '1.125rem', '1.5rem', '2.25rem', '4rem'].map(size => (
-      <li className="cr-mb-2" key={size}>
+      <Box as="li" mb={2} key={size}>
         <Icon name="register" size={size} />
-        <span className="cr-ml-2" style={{ fontSize: size }}>
+        <Box as="span" ml={2} style={{ fontSize: size }}>
           {size}
-        </span>
-      </li>
+        </Box>
+      </Box>
     ))}
   </Ul>
 ));

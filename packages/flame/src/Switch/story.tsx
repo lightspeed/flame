@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 
-import { Text, TextContent, Heading2 } from '../Text';
+import { Text, Heading2 } from '../Text';
 
 import { Switch } from './Switch';
 import Readme from './README.md';
@@ -14,7 +14,7 @@ import { Box } from '../Core';
 const stories = storiesOf('Switch', module).addDecorator(withReadme(Readme));
 
 const Description: React.FC = ({ children }) => (
-  <Text fontSize="small" color="dimmed" mb={3}>
+  <Text fontSize="text-s" mb={1}>
     {children}
   </Text>
 );
@@ -70,8 +70,8 @@ class SwitchWrapper extends React.Component<{}, State> {
 }
 
 stories.add('States', () => (
-  <TextContent>
-    <Heading2>Switch States</Heading2>
+  <div>
+    <Heading2 mb={2}>Switch States</Heading2>
     <Description>Toggle On / Off</Description>
     <Box mb={3}>
       <Switch />
@@ -83,7 +83,7 @@ stories.add('States', () => (
         <Switch checked disabled />
       </Group>
     </Box>
-  </TextContent>
+  </div>
 ));
 
 // eslint-disable-next-line react/no-multi-comp
@@ -132,8 +132,8 @@ class ToggleEventsWrapper extends React.Component<{}, { checked?: boolean }> {
 stories.add(
   'Events',
   () => (
-    <TextContent>
-      <Heading2>Switch Events</Heading2>
+    <div>
+      <Heading2 mb={2}>Switch Events</Heading2>
       <Text>
         These examples are using <strong>controlled</strong> components.
       </Text>
@@ -141,7 +141,7 @@ stories.add(
       <Box mb={3}>
         <SwitchWrapper />
       </Box>
-    </TextContent>
+    </div>
   ),
   { percy: { skip: true } },
 );

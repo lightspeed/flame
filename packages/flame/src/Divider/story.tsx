@@ -19,8 +19,8 @@ stories.add('Story', () => (
     <Divider />
     <h3>With Content</h3>
     <Divider>
-      <Icon size="1rem" name="products" className="cr-mr-2" />
-      <span>T-Shirt</span>
+      <Icon size="1rem" name="products" />
+      <Box ml={2}>T-Shirt</Box>
     </Divider>
     <h3>Between Elements</h3>
     <Box mb={2} style={cardsStyles}>
@@ -53,8 +53,8 @@ stories.add('Story', () => (
       <Divider variant="dotted" />
       <h3>With Content</h3>
       <Divider variant="dotted">
-        <Icon size="1rem" name="products" className="cr-mr-2" />
-        <span>T-Shirt</span>
+        <Icon size="1rem" name="products" />
+        <Box ml={2}>T-Shirt</Box>
       </Divider>
     </div>
     <div>
@@ -109,8 +109,8 @@ stories.add(
       <Divider variant="dotted" />
       <h3>With Content</h3>
       <Divider variant="dotted">
-        <Icon size="1rem" name="products" className="cr-mr-2" />
-        <span>T-Shirt</span>
+        <Icon size="1rem" name="products" />
+        <Box ml={2}>T-Shirt</Box>
       </Divider>
     </div>
   ),

@@ -24,7 +24,7 @@ import { Ul } from '../../../../../stories/components/Ul';
 const stories = storiesOf('Flag', module).addDecorator(withReadme(Readme));
 
 const Description: React.FC = ({ children }) => (
-  <Text fontSize="text-s" color="dimmed" mb={1}>
+  <Text fontSize="text-s" mb={1}>
     {children}
   </Text>
 );
@@ -56,9 +56,9 @@ class FlagPresenter extends React.Component<FlagPresenterProps, FlagPresenterSta
 
     return (
       <div>
-        <div className="cr-mb-1">
+        <Box mb={1}>
           <Input readOnly size="small" value={selectedName} onFocus={e => e.target.select()} />
-        </div>
+        </Box>
 
         {flagList.map((flag: { code: string; name: string }) => (
           <span
@@ -114,12 +114,12 @@ stories.add('Story', () => (
 stories.add('Size', () => (
   <Ul>
     {['0.875rem', '1rem', '1.125rem', '1.5rem', '2.25rem', '4rem'].map(size => (
-      <li className="cr-mb-2" key={size}>
+      <Box as="li" mb={2} key={size}>
         <Flag code="ca" size={size} />
-        <span className="cr-ml-2" style={{ fontSize: size }}>
+        <Box as="span" ml={2} style={{ fontSize: size }}>
           {size}
-        </span>
-      </li>
+        </Box>
+      </Box>
     ))}
   </Ul>
 ));

@@ -13,14 +13,14 @@ const stories = storiesOf('Spinner', module).addDecorator(withReadme(Readme));
 stories.add('Story', () => (
   <div>
     <Box mb={3}>
-      <Text fontSize="small" color="dimmed" mb={1}>
+      <Text fontSize="small" mb={1}>
         Default
       </Text>
       <Spinner />
     </Box>
 
     <Box mb={3}>
-      <Text fontSize="small" color="dimmed" mb={1}>
+      <Text fontSize="small" mb={1}>
         Resized
       </Text>
       <Group>
@@ -33,7 +33,7 @@ stories.add('Story', () => (
     </Box>
 
     <Box mb={3}>
-      <Text fontSize="small" color="dimmed" mb={1}>
+      <Text fontSize="small" mb={1}>
         Colored
       </Text>
       <Group>

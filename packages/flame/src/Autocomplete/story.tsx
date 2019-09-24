@@ -172,38 +172,43 @@ stories.add('States', () => (
   </div>
 ));
 
-stories.add('Events', () => (
-  <div>
-    <h3>onChange (see action logger)</h3>
-    <p>
-      This method is required to update the value as react-select requires it (Note that (as of 1.0)
-      you must handle the change and pass the updated value to the Select.) See the{' '}
-      <a href="https://react-select.com/home" target="_blank" rel="noopener noreferrer">
-        usage
-      </a>{' '}
-      documentation.
-    </p>
-    <Autocomplete {...exampleProps} onChange={action('onChange')} />
+stories.add(
+  'Events',
+  () => (
+    <div>
+      <h3>onChange (see action logger)</h3>
+      <p>
+        This method is required to update the value as react-select requires it (Note that (as of
+        1.0) you must handle the change and pass the updated value to the Select.) See the{' '}
+        <a href="https://react-select.com/home" target="_blank" rel="noopener noreferrer">
+          usage
+        </a>{' '}
+        documentation.
+      </p>
+      <Autocomplete {...exampleProps} onChange={action('onChange')} />
 
-    <h3>onFocus (see action logger)</h3>
-    <Autocomplete {...exampleProps} onFocus={action('onFocus')} />
+      <h3>onFocus (see action logger)</h3>
+      <Autocomplete {...exampleProps} onFocus={action('onFocus')} />
 
-    <h3>onBlur (see action logger)</h3>
-    <Autocomplete {...exampleProps} onBlur={action('onBlur')} />
+      <h3>onBlur (see action logger)</h3>
+      <Autocomplete {...exampleProps} onBlur={action('onBlur')} />
 
-    <h3>onCreateOption success (see action logger)</h3>
-    <Autocomplete {...exampleProps} onCreate={onCreateOption} />
+      <h3>onCreateOption success (see action logger)</h3>
+      <Autocomplete {...exampleProps} onCreate={onCreateOption} />
 
-    <h3>onCreateOption error (see action logger)</h3>
-    <Autocomplete {...exampleProps} onCreate={onCreateOptionError} />
+      <h3>onCreateOption error (see action logger)</h3>
+      <Autocomplete {...exampleProps} onCreate={onCreateOptionError} />
 
-    <h3>
-      onCreateOption with custom isOptionUnique - case insensitive as an example (see action logger)
-    </h3>
-    <Autocomplete
-      {...exampleProps}
-      onCreate={onCreateOption}
-      isOptionUnique={caseInsensitiveUnique}
-    />
-  </div>
-));
+      <h3>
+        onCreateOption with custom isOptionUnique - case insensitive as an example (see action
+        logger)
+      </h3>
+      <Autocomplete
+        {...exampleProps}
+        onCreate={onCreateOption}
+        isOptionUnique={caseInsensitiveUnique}
+      />
+    </div>
+  ),
+  { percy: { skip: true } },
+);

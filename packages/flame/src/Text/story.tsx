@@ -4,6 +4,7 @@ import { withReadme } from 'storybook-readme';
 
 import { Text, Heading1, Heading2, Heading3, Heading4, TextLink, TextContent } from './Text';
 import { Divider } from '../Divider';
+import { Box } from '../Core';
 import Readme from './README.md';
 
 const stories = storiesOf('Text', module).addDecorator(withReadme(Readme));
@@ -27,9 +28,9 @@ const BodyContent = () => (
 stories.add('Body', () => (
   <div>
     {textBodyStyles.map(style => (
-      <div key={style} className="cr-mb-3">
+      <Box key={style} mb={3}>
         <Text size={style}>Text {style}</Text>
-      </div>
+      </Box>
     ))}
     <Text lineHeight={8} fontSize="3rem">
       Custom line height & font size
@@ -44,14 +45,14 @@ stories.add('Body', () => (
     <Divider py={4}>Variants</Divider>
     <div>
       {textBodyStyles.map(style => (
-        <div key={`${style}`} className="cr-mb-3">
+        <Box key={`${style}`} mb={3}>
           <Text size={style} fontWeight="bold">
             Text {style} bold
           </Text>
           <Text size={style} color="gray-300">
             Text {style} dimmed
           </Text>
-        </div>
+        </Box>
       ))}
     </div>
     <Divider py={4}>Link</Divider>
@@ -108,16 +109,16 @@ stories.add('Body', () => (
         <tr>
           <td>
             {['maple', 'green-300', 'orange-200'].map(color => (
-              <div key={`${color}`} className="cr-mb-3">
+              <Box key={`${color}`} mb={3}>
                 <Text color={color}>Text {color}</Text>
-              </div>
+              </Box>
             ))}
           </td>
           <td>
             {['#3c7797', 'pink', 'rgb(185, 52, 53)'].map(color => (
-              <div key={`${color}`} className="cr-mb-3">
+              <Box key={`${color}`} mb={3}>
                 <Text color={color}>Text {color}</Text>
-              </div>
+              </Box>
             ))}
             <Text style={{ color: 'blue' }}>Blue in style attribute</Text>
           </td>
@@ -235,16 +236,16 @@ stories.add(
         <tr>
           <td>
             {['maple-300', 'green-300', 'orange-200'].map(color => (
-              <div key={`${color}`} className="cr-mb-3">
+              <Box key={`${color}`} mb={3}>
                 <Text color={color}>Text {color}</Text>
-              </div>
+              </Box>
             ))}
           </td>
           <td>
             {['#3c7797', 'pink', 'rgb(185, 52, 53)'].map(color => (
-              <div key={`${color}`} className="cr-mb-3">
+              <Box key={`${color}`} mb={3}>
                 <Text color={color}>Text {color}</Text>
-              </div>
+              </Box>
             ))}
             <Text style={{ color: 'blue' }}>Blue in style attribute</Text>
           </td>

@@ -14,7 +14,7 @@ import { Badge, PillBadge } from '../Badge';
 const stories = storiesOf('Group', module).addDecorator(withReadme(Readme));
 
 const Description: React.FC = ({ children }) => (
-  <Text fontSize="text-s" color="dimmed" mb={1}>
+  <Text fontSize="text-s" mb={1}>
     {children}
   </Text>
 );
