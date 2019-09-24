@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 const isFolder = s => {
   return fs.lstatSync(s).isDirectory();
 };
-const whitelist = /.*(.json|.sass)/;
+const whitelist = /.*(.json|.sass|.svg)/;
 const isInWhitelist = s => whitelist.test(s);
 
 fs.copySync('./src/', './dist/', {
@@ -23,4 +23,3 @@ fs.copySync('./CHANGELOG.md', './dist/CHANGELOG.md');
 fs.copySync('./README.md', './dist/README.md');
 fs.copySync('./LICENSE', './dist/LICENSE');
 fs.copySync('./.npmignore', './dist/.npmignore');
-fs.copySync('./svg', './dist/svg');

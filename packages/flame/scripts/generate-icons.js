@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 const _ = require('lodash');
 const prettier = require('prettier');
@@ -192,6 +192,12 @@ export { NextIcon as Icon${componentIconName} };`;
         2,
       ),
       () => {},
+    );
+
+    fs.copySync(path.resolve(__dirname, '../svg/Icons'), path.resolve(__dirname, '../src/Icon'));
+    fs.copySync(
+      path.resolve(__dirname, '../svg/icon-sprite.svg'),
+      path.resolve(__dirname, '../src/Icon/icon-sprite.svg'),
     );
   });
 });

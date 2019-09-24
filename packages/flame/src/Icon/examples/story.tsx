@@ -5,7 +5,7 @@ import camelCase from 'lodash/camelCase';
 
 // We load the icon-sprite through the raw-loader and through SVGInline for the story
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
-import IconSprite from '!raw-loader!../../../svg/icon-sprite.svg';
+import IconSprite from '!raw-loader!../icon-sprite.svg';
 
 import { Icon } from '../index';
 import { IconAdd } from '../Add';
