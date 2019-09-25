@@ -11,7 +11,6 @@ import { Divider } from '../Divider/index';
 import { Button } from '../Button';
 import Readme from './README.md';
 
-const leftSpace = spacing['cr-mr-2'];
 const contentSpace = spacing['cr-mb-2'];
 
 const stories = storiesOf('Card', module)
@@ -26,13 +25,13 @@ const cardsContent =
 
 stories.add('Types', () => (
   <div style={{ display: 'flex' }}>
-    <div className={cn('text-center', leftSpace)}>
-      <Card>
+    <div className={cn('text-center')}>
+      <Card mr={2}>
         <CardSection>Default Card</CardSection>
       </Card>
     </div>
-    <div className={cn('text-center', leftSpace)}>
-      <Card top>
+    <div className={cn('text-center')}>
+      <Card top mr={2}>
         <CardSection>Top Card</CardSection>
       </Card>
     </div>
@@ -43,17 +42,17 @@ stories.add('Spacing', () => (
   <div>
     <h3>Card spacing</h3>
     <div className={contentSpace} style={{ display: 'flex' }}>
-      <div className={cn('text-center', leftSpace)}>
-        <Card>
+      <div className={cn('text-center')}>
+        <Card mr={2}>
           <CardSection>Default</CardSection>
         </Card>
       </div>
-      <div className={cn('text-center', leftSpace)}>
-        <Card>
-          <CardSection large>Large</CardSection>
+      <div className={cn('text-center')}>
+        <Card mr={2} large>
+          <CardSection>Large</CardSection>
         </Card>
       </div>
-      <div className={cn('text-center', leftSpace)}>
+      <div className={cn('text-center')}>
         <Card>
           <CardSection noSpacing>No spacing</CardSection>
         </Card>
