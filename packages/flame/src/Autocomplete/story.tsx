@@ -2,13 +2,12 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
-import cn from 'classnames';
 
 import Autocomplete, { exampleProps, exampleItems } from './examples';
 
 import Readme from './README.md';
-import typography from '../../../flame-tokens/partials/_typography.scss';
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
+import { Box } from '../Core';
+import { Text } from '../Text';
 
 const stories = storiesOf('Autocomplete', module).addDecorator(withReadme(Readme));
 
@@ -49,72 +48,77 @@ function caseInsensitiveUnique({ option, options }: { option: any; options: any 
   return match.length === 0;
 }
 
-stories.addWithPercyOptions('Story', { skip: true }, () => (
-  <div>
-    <h3>Important note</h3>
-    <p>
-      This component is a wrapper on top of react-select. Please refer to the{' '}
-      <a href="https://github.com/JedWatson/react-select" target="_blank" rel="noopener noreferrer">
-        react-select
-      </a>{' '}
-      documentation for all available functionalities.
-    </p>
-
-    <h3>Default</h3>
+stories.add(
+  'Story',
+  () => (
     <div>
-      <Autocomplete {...exampleProps} />
+      <h3>Important note</h3>
+      <p>
+        This component is a wrapper on top of react-select. Please refer to the{' '}
+        <a
+          href="https://github.com/JedWatson/react-select"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          react-select
+        </a>{' '}
+        documentation for all available functionalities.
+      </p>
+
+      <h3>Default</h3>
+      <div>
+        <Autocomplete {...exampleProps} />
+      </div>
+
+      <h3>With Label</h3>
+      <Box mb={1}>
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+        <Text as="label" fontWeight="bold" fontSize="text-s">
+          Label *
+        </Text>
+      </Box>
+      <Autocomplete
+        {...exampleProps}
+        inputProps={{ id: 'color-input-label', name: 'color-input-label' }}
+      />
+
+      <h3>Creatable</h3>
+      <Autocomplete {...exampleProps} onCreate={onCreateOption} />
+
+      <h3>Dropdown-like (searchable disabled)</h3>
+      <Autocomplete {...exampleProps} isSearchable={false} />
+
+      <h3>Multiple selection</h3>
+      <Autocomplete {...exampleProps} isMulti />
+
+      <h3>With custom optionRenderer</h3>
+      <Autocomplete
+        {...exampleProps}
+        components={{
+          Option: (props: any) => {
+            const { children, isFocused, isSelected, innerRef, innerProps } = props;
+
+            return (
+              <i
+                ref={innerRef}
+                {...innerProps}
+                style={{
+                  display: 'block',
+                  color: isFocused || isSelected ? 'red' : 'blue',
+                  padding: '.5rem 1rem',
+                  border: '1px solid',
+                }}
+              >
+                {children}
+              </i>
+            );
+          },
+        }}
+      />
     </div>
-
-    <h3>With Label</h3>
-    <div className={spacing['cr-mb-1']}>
-      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label
-        htmlFor="color-input-label"
-        className={[typography['cr-bold'], typography['cr-text-s']].join(' ')}
-      >
-        Label *
-      </label>
-    </div>
-    <Autocomplete
-      {...exampleProps}
-      inputProps={{ id: 'color-input-label', name: 'color-input-label' }}
-    />
-
-    <h3>Creatable</h3>
-    <Autocomplete {...exampleProps} onCreate={onCreateOption} />
-
-    <h3>Dropdown-like (searchable disabled)</h3>
-    <Autocomplete {...exampleProps} isSearchable={false} />
-
-    <h3>Multiple selection</h3>
-    <Autocomplete {...exampleProps} isMulti />
-
-    <h3>With custom optionRenderer</h3>
-    <Autocomplete
-      {...exampleProps}
-      components={{
-        Option: (props: any) => {
-          const { children, isFocused, isSelected, innerRef, innerProps } = props;
-
-          return (
-            <i
-              ref={innerRef}
-              {...innerProps}
-              style={{
-                display: 'block',
-                color: isFocused || isSelected ? 'red' : 'blue',
-                padding: '.5rem 1rem',
-                border: '1px solid',
-              }}
-            >
-              {children}
-            </i>
-          );
-        },
-      }}
-    />
-  </div>
-));
+  ),
+  { percy: { skip: true } },
+);
 
 stories.add('States', () => (
   <div>
@@ -124,15 +128,12 @@ stories.add('States', () => (
     </div>
 
     <h3>With Label</h3>
-    <div className={spacing['cr-mb-1']}>
+    <Box mb={1}>
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label
-        htmlFor="color-input-label"
-        className={cn(typography['cr-bold'], typography['cr-text-s'])}
-      >
+      <Text fontWeight="bold" fontSize="text-s">
         Label *
-      </label>
-    </div>
+      </Text>
+    </Box>
     <Autocomplete
       {...exampleProps}
       inputProps={{ id: 'color-input-label', name: 'color-input-label' }}
@@ -171,38 +172,43 @@ stories.add('States', () => (
   </div>
 ));
 
-stories.addWithPercyOptions('Events', { skip: true }, () => (
-  <div>
-    <h3>onChange (see action logger)</h3>
-    <p>
-      This method is required to update the value as react-select requires it (Note that (as of 1.0)
-      you must handle the change and pass the updated value to the Select.) See the{' '}
-      <a href="https://react-select.com/home" target="_blank" rel="noopener noreferrer">
-        usage
-      </a>{' '}
-      documentation.
-    </p>
-    <Autocomplete {...exampleProps} onChange={action('onChange')} />
+stories.add(
+  'Events',
+  () => (
+    <div>
+      <h3>onChange (see action logger)</h3>
+      <p>
+        This method is required to update the value as react-select requires it (Note that (as of
+        1.0) you must handle the change and pass the updated value to the Select.) See the{' '}
+        <a href="https://react-select.com/home" target="_blank" rel="noopener noreferrer">
+          usage
+        </a>{' '}
+        documentation.
+      </p>
+      <Autocomplete {...exampleProps} onChange={action('onChange')} />
 
-    <h3>onFocus (see action logger)</h3>
-    <Autocomplete {...exampleProps} onFocus={action('onFocus')} />
+      <h3>onFocus (see action logger)</h3>
+      <Autocomplete {...exampleProps} onFocus={action('onFocus')} />
 
-    <h3>onBlur (see action logger)</h3>
-    <Autocomplete {...exampleProps} onBlur={action('onBlur')} />
+      <h3>onBlur (see action logger)</h3>
+      <Autocomplete {...exampleProps} onBlur={action('onBlur')} />
 
-    <h3>onCreateOption success (see action logger)</h3>
-    <Autocomplete {...exampleProps} onCreate={onCreateOption} />
+      <h3>onCreateOption success (see action logger)</h3>
+      <Autocomplete {...exampleProps} onCreate={onCreateOption} />
 
-    <h3>onCreateOption error (see action logger)</h3>
-    <Autocomplete {...exampleProps} onCreate={onCreateOptionError} />
+      <h3>onCreateOption error (see action logger)</h3>
+      <Autocomplete {...exampleProps} onCreate={onCreateOptionError} />
 
-    <h3>
-      onCreateOption with custom isOptionUnique - case insensitive as an example (see action logger)
-    </h3>
-    <Autocomplete
-      {...exampleProps}
-      onCreate={onCreateOption}
-      isOptionUnique={caseInsensitiveUnique}
-    />
-  </div>
-));
+      <h3>
+        onCreateOption with custom isOptionUnique - case insensitive as an example (see action
+        logger)
+      </h3>
+      <Autocomplete
+        {...exampleProps}
+        onCreate={onCreateOption}
+        isOptionUnique={caseInsensitiveUnique}
+      />
+    </div>
+  ),
+  { percy: { skip: true } },
+);

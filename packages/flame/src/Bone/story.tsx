@@ -101,28 +101,32 @@ stories.add('Styles', () => (
   </div>
 ));
 
-stories.addWithPercyOptions('Types', { skip: true }, () => (
-  <div className="cr-p-3">
-    <Heading2>Bone</Heading2>
-    <Text color="gray-300">Types</Text>
+stories.add(
+  'Types',
+  () => (
+    <div className="cr-p-3">
+      <Heading2>Bone</Heading2>
+      <Text color="gray-300">Types</Text>
 
-    <div style={{ display: 'inline-flex' }} className="cr-mt-4">
-      <div className="cr-pr-4" style={{ alignSelf: 'flex-end' }}>
-        <Text className="cr-pb-2">
-          <Bone width="5rem" height="1.125rem" />
-        </Text>
-        <Text size="small" color="gray-300">
-          Default
-        </Text>
-      </div>
-      <div className="cr-pr-4" style={{ alignSelf: 'flex-end' }}>
-        <Text className="cr-pb-2">
-          <Bone width="5rem" height="1.125rem" animated={false} />
-        </Text>
-        <Text size="small" color="gray-300">
-          Not animated
-        </Text>
+      <div style={{ display: 'inline-flex' }} className="cr-mt-4">
+        <div className="cr-pr-4" style={{ alignSelf: 'flex-end' }}>
+          <Text className="cr-pb-2">
+            <Bone width="5rem" height="1.125rem" />
+          </Text>
+          <Text size="small" color="gray-300">
+            Default
+          </Text>
+        </div>
+        <div className="cr-pr-4" style={{ alignSelf: 'flex-end' }}>
+          <Text className="cr-pb-2">
+            <Bone width="5rem" height="1.125rem" animated={false} />
+          </Text>
+          <Text size="small" color="gray-300">
+            Not animated
+          </Text>
+        </div>
       </div>
     </div>
-  </div>
-));
+  ),
+  { percy: { skip: true } },
+);

@@ -1,12 +1,6 @@
-@import '../../packages/flame-tokens/index.scss';
+@import '../../packages/flame-tokens/partials/index.scss';
 
 // Required imports for state placeholders use
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
 .list-50 {
   > li {

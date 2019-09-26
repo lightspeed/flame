@@ -127,4 +127,4 @@ class DialogStoryHelper extends React.Component<{}, State> {
   }
 }
 
-stories.addWithPercyOptions('Story', { skip: true }, () => <DialogStoryHelper />);
+stories.add('Story', () => <DialogStoryHelper />, { percy: { skip: true } });

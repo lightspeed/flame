@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 
 import { Alert } from './Alert';
+import { Text } from '../Text';
 import Readme from './README.md';
 
 const stories = storiesOf('Alert', module).addDecorator(withReadme(Readme));
@@ -13,7 +14,9 @@ stories.add('Story', () => {
     const [letter, ...rest] = type;
     return (
       <Alert key={type} type={type} title={`${letter.toUpperCase().concat(rest.join(''))}`} mb={2}>
-        <p className="cr-m-0">Description of alert.</p>
+        <Text as="p" m={0}>
+          Description of alert.
+        </Text>
       </Alert>
     );
   });
@@ -29,10 +32,14 @@ stories.add('Story', () => {
         }}
         mb={2}
       >
-        <p className="cr-m-0">This alert uses a custom handler on the close button</p>
+        <Text as="p" m={0}>
+          This alert uses a custom handler on the close button
+        </Text>
       </Alert>
       <Alert title="Some Title" mb={2} noCloseBtn>
-        <p className="cr-m-0">This alert uses has no close button</p>
+        <Text as="p" m={0}>
+          This alert uses has no close button
+        </Text>
       </Alert>
     </div>
   );

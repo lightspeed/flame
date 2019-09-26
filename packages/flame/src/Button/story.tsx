@@ -3,19 +3,14 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 
-// import './Button.scss';
 import { Button } from './Button';
 import Readme from './README.md';
-import { Flex } from '../Core';
+import { Flex, Box } from '../Core';
 import { Divider } from '../Divider';
 import { Group } from '../Group';
 import { Icon } from '../Icon';
 
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
-
 const stories = storiesOf('Button', module).addDecorator(withReadme(Readme));
-
-const bottomSpace = spacing[`cr-mb-3`];
 
 type ButtonPresenterState = {
   isDisabled?: boolean;
@@ -139,7 +134,7 @@ stories.add('Styles', () => (
 
 stories.add('Sizes', () => (
   <div>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <Group>
         <Button size="small">Small</Button>
         <Button variant="primary">Medium</Button>
@@ -150,8 +145,8 @@ stories.add('Sizes', () => (
           Extra Large
         </Button>
       </Group>
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Group type="vertical">
         <Button size="small" block>
           Small Block
@@ -166,7 +161,7 @@ stories.add('Sizes', () => (
           Extra Large Block
         </Button>
       </Group>
-    </div>
+    </Box>
     <Divider mt={3} />
     <h3>Multiline</h3>
     <div style={{ width: '180px' }}>
@@ -212,7 +207,7 @@ stories.add('Button as Links', () => (
 ));
 stories.add('Events', () => (
   <div>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <Group type="vertical">
         <Button onClick={action('Clicked')}>Button with onClick event (see Action Logger)</Button>
         <Button onFocus={action('Focused')}>Button with onFocus event (see Action Logger)</Button>
@@ -233,13 +228,13 @@ stories.add('Events', () => (
           Disabled link removes href and target
         </Button>
       </Group>
-    </div>
+    </Box>
   </div>
 ));
 
 stories.add('With Children', () => (
   <div>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <Group>
         <Button size="small">
           <Icon name="orders" />
@@ -262,8 +257,8 @@ stories.add('With Children', () => (
           <Icon name="orders" />
         </Button>
       </Group>
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Group>
         <Button variant="primary">
           <Icon name="chevron-left" /> Back
@@ -272,8 +267,8 @@ stories.add('With Children', () => (
           <Icon name="dashboard" /> Dashboard
         </Button>
       </Group>
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Group>
         <Button variant="secondary">
           View Product <Icon name="arrow-right" />
@@ -282,16 +277,16 @@ stories.add('With Children', () => (
           Customers <Icon name="customers" />
         </Button>
       </Group>
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Button variant="danger">
         Export <Icon name="export" /> Documents
       </Button>
       <Button variant="danger" fill>
         Print <Icon name="printers" /> Documents
       </Button>
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Group type="vertical">
         <Button size="small" block>
           <Icon name="users" /> Small Block
@@ -312,8 +307,8 @@ stories.add('With Children', () => (
           <Icon name="image" size="xsmall" /> Custom icon size in Extra Large Block
         </Button>
       </Group>
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Group type="vertical">
         <Button size="small" block>
           <Icon name="users" /> Small Block
@@ -334,8 +329,8 @@ stories.add('With Children', () => (
           <Icon name="image" size="xsmall" /> Custom icon size in Extra Large Block
         </Button>
       </Group>
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <h3>Icons with details should be colored properly</h3>
       <Group>
         <Button variant="primary" fill>
@@ -351,13 +346,13 @@ stories.add('With Children', () => (
           <Icon name="dashboard" /> Dashboard
         </Button>
       </Group>
-    </div>
+    </Box>
   </div>
 ));
 
 stories.add('Loading', () => (
   <div>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <Group>
         <Button loading>Default</Button>
         <Button variant="primary" loading>
@@ -370,8 +365,8 @@ stories.add('Loading', () => (
           Danger
         </Button>
       </Group>
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Group>
         <Button size="small" variant="primary" fill loading>
           Primary
@@ -383,10 +378,10 @@ stories.add('Loading', () => (
           Danger
         </Button>
       </Group>
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <ButtonPresenter />
-    </div>
+    </Box>
     <div>
       <h3>Loading should always have priority over disabled</h3>
       <Button

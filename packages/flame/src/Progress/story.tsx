@@ -7,28 +7,25 @@ import IndeterminateProgress from './examples/Indeterminate';
 import StaticProgress from './examples/Static';
 
 import { Heading2, Heading3, TextContent } from '../Text';
+import { Box } from '../Core';
 import Readme from './README.md';
 
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
-
 const stories = storiesOf('Progress', module).addDecorator(withReadme(Readme));
-
-const bottomSpace = spacing[`cr-mb-3`];
 
 stories.add('Linear', () => (
   <TextContent>
     <Heading2>Progress - linear</Heading2>
     <Heading3>Determinate</Heading3>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <DeterminateProgress />
-    </div>
+    </Box>
     <Heading3>Indeterminate</Heading3>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <IndeterminateProgress />
-    </div>
+    </Box>
     <Heading3>Static</Heading3>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <StaticProgress />
-    </div>
+    </Box>
   </TextContent>
 ));
