@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Added
 
-- Add the `space` props to `<Card>` ([#10](https://github.com/lightspeed/flame/pull/10))
+- Enable `space` props for `<Card>` ([#10](https://github.com/lightspeed/flame/pull/10))
 
 ## 0.1.1 - 2019-09-18
 
