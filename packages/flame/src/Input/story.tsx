@@ -7,13 +7,10 @@ import { Input } from './Input';
 import Readme from './README.md';
 import { Badge } from '../Badge';
 import { Button } from '../Button';
+import { Box } from '../Core';
 import { Icon } from '../Icon';
 
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
-
 const stories = storiesOf('Input', module).addDecorator(withReadme(Readme));
-
-const bottomSpace = spacing[`cr-mb-3`];
 
 const firstArgAction = decorateAction([(args: any) => [args[0].target.value]]);
 
@@ -72,11 +69,11 @@ class InputWrapper extends React.Component<any, State> {
 
 stories.add('Story', () => (
   <div>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <h3>Simple text input</h3>
       <Input id="simple" label="Label" placeholder="Placeholder text..." />
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <h3>Advanced text input</h3>
       <Input
         placeholder="Placeholder text..."
@@ -92,81 +89,85 @@ stories.add('Story', () => (
         }
         textHelper="Text helper"
       />
-    </div>
+    </Box>
 
     <h2>States</h2>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <Input placeholder="Placeholder text..." />
-    </div>
-    <div className={`${bottomSpace}`}>
+    </Box>
+    <Box mb={3}>
       <Input placeholder="Hover input..." />
-    </div>
-    <div className={`${bottomSpace}`}>
+    </Box>
+    <Box mb={3}>
       <Input placeholder="Focus input..." />
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Input readOnly value="Readonly input" />
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Input disabled placeholder="Disabled input..." />
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Input
         prefix={<Icon name="customers" color="textHeading" />}
         suffix={<Icon name="info" color="secondary" />}
         status={{ type: 'valid' }}
         placeholder="Valid input..."
       />
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Input status={{ type: 'warning' }} placeholder="Warning input..." />
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Input status={{ type: 'error' }} placeholder="Error input..." />
-    </div>
+    </Box>
 
     <div>
       <h2>Size</h2>
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Input size="small" placeholder="Small input..." />
-      </div>
-      <div className={bottomSpace}>
+      </Box>
+      <Box mb={3}>
         <Input placeholder="Normal input..." />
-      </div>
-      <div className={bottomSpace}>
+      </Box>
+      <Box mb={3}>
         <Input size="large" placeholder="Large input..." />
-      </div>
+      </Box>
     </div>
 
     <div>
       <h2>Input Error Text</h2>
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Input
           value="This is some text on an input that has an error"
           status={{ type: 'error', message: 'This is an error message' }}
         />
-      </div>
+      </Box>
     </div>
   </div>
 ));
 
-stories.addWithPercyOptions('Events', { skip: true }, () => (
-  <div>
-    <div className={bottomSpace}>
-      <Input
-        placeholder="Input with onChange event (see Action Logger)"
-        onChange={firstArgAction('onChange')}
-      />
+stories.add(
+  'Events',
+  () => (
+    <div>
+      <Box mb={3}>
+        <Input
+          placeholder="Input with onChange event (see Action Logger)"
+          onChange={firstArgAction('onChange')}
+        />
+      </Box>
+      <Box mb={3}>
+        <Input
+          placeholder="Input with onFocus & onBlur events (see Action Logger)"
+          onFocus={action('onFocus')}
+          onBlur={action('onBlur')}
+        />
+      </Box>
+      <Box mb={3}>
+        <InputWrapper />
+      </Box>
     </div>
-    <div className={bottomSpace}>
-      <Input
-        placeholder="Input with onFocus & onBlur events (see Action Logger)"
-        onFocus={action('onFocus')}
-        onBlur={action('onBlur')}
-      />
-    </div>
-    <div className={bottomSpace}>
-      <InputWrapper />
-    </div>
-  </div>
-));
+  ),
+  { percy: { skip: true } },
+);

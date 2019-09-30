@@ -99,298 +99,326 @@ const ColorRenderer: React.FC<ColorRendererProps> = ({ theme }) => {
 };
 const ThemeColorRenderer = withTheme(ColorRenderer);
 
-stories.addWithPercyOptions('Colors', { skip: true }, () => (
-  <div>
-    <ThemeColorRenderer />
-  </div>
-));
+stories.add(
+  'Colors',
+  () => (
+    <div>
+      <ThemeColorRenderer />
+    </div>
+  ),
+  { percy: { skip: true } },
+);
 
-stories.addWithPercyOptions('Typography', { skip: true }, () => (
-  <div>
-    <h2>Typefaces</h2>
-    {Object.keys(typeface).map((className, index) => (
-      <ExampleWithValues
-        title={
-          <div style={{ fontFamily: typeface[className] }}>
-            The quick brown fox jumps over the lazy dog
-          </div>
-        }
-        values={[`.cr-${className}`]}
-        paddingTop={index > 0}
-      >
-        <code>font-family: {typeface[className]}</code>
-      </ExampleWithValues>
-    ))}
-    <h2>Weights</h2>
-    {Object.keys(weights).map((className, index) => (
-      <ExampleWithValues
-        title={
-          <div style={{ fontWeight: weights[className] }}>
-            The quick brown fox jumps over the lazy dog
-          </div>
-        }
-        values={[`.cr-${className}`, `weight: ${weights[className]}`]}
-        paddingTop={index > 0}
-      />
-    ))}
-
-    <h2>Font Sizes</h2>
-    <div className={styles.example}>
-      {Object.keys(fontSizes).map((className, index) => (
+stories.add(
+  'Typography',
+  () => (
+    <div>
+      <h2>Typefaces</h2>
+      {Object.keys(typeface).map((className, index) => (
         <ExampleWithValues
-          title={<div style={{ fontSize: fontSizes[className] }}>Text ({className})</div>}
-          values={[
-            `.cr-${className}`,
-            fontSizes[className],
-            `${remToPxFromString(fontSizes[className])}px`,
-          ]}
+          title={
+            <div style={{ fontFamily: typeface[className] }}>
+              The quick brown fox jumps over the lazy dog
+            </div>
+          }
+          values={[`.cr-${className}`]}
+          paddingTop={index > 0}
+        >
+          <code>font-family: {typeface[className]}</code>
+        </ExampleWithValues>
+      ))}
+      <h2>Weights</h2>
+      {Object.keys(weights).map((className, index) => (
+        <ExampleWithValues
+          title={
+            <div style={{ fontWeight: weights[className] }}>
+              The quick brown fox jumps over the lazy dog
+            </div>
+          }
+          values={[`.cr-${className}`, `weight: ${weights[className]}`]}
           paddingTop={index > 0}
         />
       ))}
-    </div>
 
-    <h2>Letter Spacing</h2>
-    <div className={styles.example}>
-      {Object.keys(letterSpacings).map((className, index) => (
-        <ExampleWithValues
-          title={<div style={{ letterSpacing: letterSpacings[className] }}>Text ({className})</div>}
-          values={[
-            `.cr-${className}`,
-            letterSpacings[className],
-            `${remToPxFromString(letterSpacings[className])}px`,
-          ]}
-          paddingTop={index > 0}
-        />
-      ))}
-    </div>
-  </div>
-));
+      <h2>Font Sizes</h2>
+      <div className={styles.example}>
+        {Object.keys(fontSizes).map((className, index) => (
+          <ExampleWithValues
+            title={<div style={{ fontSize: fontSizes[className] }}>Text ({className})</div>}
+            values={[
+              `.cr-${className}`,
+              fontSizes[className],
+              `${remToPxFromString(fontSizes[className])}px`,
+            ]}
+            paddingTop={index > 0}
+          />
+        ))}
+      </div>
 
-stories.addWithPercyOptions('Spacing', { skip: true }, () => (
-  <div>
-    {Object.keys(scale).map(value => (
-      <div key={value} className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
-          <div
-            className={cn(
-              styles.box,
-              styles[`box--fixed`],
-              styles[`block-center`],
-              styles[`bg-blue-100`],
-            )}
-            style={{
-              position: 'relative',
-              borderRadius: scale[value] === 0 ? 0 : radii.values['radius-2'],
-            }}
-          >
+      <h2>Letter Spacing</h2>
+      <div className={styles.example}>
+        {Object.keys(letterSpacings).map((className, index) => (
+          <ExampleWithValues
+            title={
+              <div style={{ letterSpacing: letterSpacings[className] }}>Text ({className})</div>
+            }
+            values={[
+              `.cr-${className}`,
+              letterSpacings[className],
+              `${remToPxFromString(letterSpacings[className])}px`,
+            ]}
+            paddingTop={index > 0}
+          />
+        ))}
+      </div>
+    </div>
+  ),
+
+  { percy: { skip: true } },
+);
+
+stories.add(
+  'Spacing',
+  () => (
+    <div>
+      {Object.keys(scale).map(value => (
+        <div key={value} className={cn(styles.example, styles[`example--col`])}>
+          <div className={styles.example__block}>
             <div
-              className={styles[`bg-snow`]}
+              className={cn(
+                styles.box,
+                styles[`box--fixed`],
+                styles[`block-center`],
+                styles[`bg-blue-100`],
+              )}
               style={{
-                position: 'absolute',
-                top: scale[value],
-                left: scale[value],
-                right: scale[value],
-                bottom: scale[value],
+                position: 'relative',
+                borderRadius: scale[value] === 0 ? 0 : radii.values['radius-2'],
               }}
+            >
+              <div
+                className={styles[`bg-snow`]}
+                style={{
+                  position: 'absolute',
+                  top: scale[value],
+                  left: scale[value],
+                  right: scale[value],
+                  bottom: scale[value],
+                }}
+              />
+            </div>
+          </div>
+          <div className={cn(styles.example__code, styles['text-left'])}>
+            <div>
+              <code>.cr-{value}</code>
+            </div>
+            <div
+              style={{
+                marginTop: spacing.scale['spacing-1'],
+              }}
+            >
+              <code>{scale[value] === 0 ? `${scale[value]}rem` : scale[value]}</code>
+            </div>
+            <div
+              style={{
+                marginTop: spacing.scale['spacing-1'],
+              }}
+            >
+              <code>{remToPxFromString(scale[value])}px</code>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  ),
+  { percy: { skip: true } },
+);
+
+stories.add(
+  'Shadows',
+  () => (
+    <div>
+      {Object.keys(outer).map(value => (
+        <div key={value} className={cn(styles.example, styles[`example--col`])}>
+          <div className={styles.example__block}>
+            <div
+              className={cn(
+                styles.box,
+                styles[`box--fixed`],
+                styles[`box--borderless`],
+                styles[`block-center`],
+              )}
+              style={{ boxShadow: outer[value] }}
             />
           </div>
-        </div>
-        <div className={cn(styles.example__code, styles['text-left'])}>
-          <div>
-            <code>.cr-{value}</code>
-          </div>
-          <div
-            style={{
-              marginTop: spacing.scale['spacing-1'],
-            }}
-          >
-            <code>{scale[value] === 0 ? `${scale[value]}rem` : scale[value]}</code>
-          </div>
-          <div
-            style={{
-              marginTop: spacing.scale['spacing-1'],
-            }}
-          >
-            <code>{remToPxFromString(scale[value])}px</code>
+          <div className={cn(styles.example__code, styles[`text-left`])}>
+            <div>
+              <code>.cr-{value}</code>
+            </div>
+            <div
+              style={{
+                marginTop: spacing.scale['spacing-1'],
+              }}
+            >
+              <code>{outer[value]}</code>
+            </div>
           </div>
         </div>
-      </div>
-    ))}
-  </div>
-));
+      ))}
+      <h2>Inner</h2>
+      {Object.keys(inner).map(value => (
+        <div key={value} className={cn(styles.example, styles[`example--col`])}>
+          <div className={styles.example__block}>
+            <div
+              className={cn(
+                styles.box,
+                styles[`box--fixed`],
+                styles[`box--borderless`],
+                styles[`block-center`],
+              )}
+              style={{ boxShadow: inner[value] }}
+            />
+          </div>
+          <div className={cn(styles.example__code, styles[`text-left`])}>
+            <div>
+              <code>.cr-{value}</code>
+            </div>
+            <div
+              style={{
+                marginTop: spacing.scale['spacing-1'],
+              }}
+            >
+              <code>{inner[value]}</code>
+            </div>
+          </div>
+        </div>
+      ))}
+      {Object.keys(innerN).map(value => (
+        <div key={value} className={cn(styles.example, styles[`example--col`])}>
+          <div className={styles.example__block}>
+            <div
+              className={cn(
+                styles.box,
+                styles[`box--fixed`],
+                styles[`box--borderless`],
+                styles[`block-center`],
+              )}
+              style={{ boxShadow: innerN[value] }}
+            />
+          </div>
+          <div className={cn(styles.example__code, styles[`text-left`])}>
+            <div>
+              <code>.cr-{value}</code>
+            </div>
+            <div
+              style={{
+                marginTop: spacing.scale['spacing-1'],
+              }}
+            >
+              <code>{innerN[value]}</code>
+            </div>
+          </div>
+        </div>
+      ))}
+      <h2>Border</h2>
+      {Object.keys(border).map(value => (
+        <div key={value} className={cn(styles.example, styles[`example--col`])}>
+          <div className={styles.example__block}>
+            <div
+              className={cn(
+                styles.box,
+                styles[`box--fixed`],
+                styles[`box--borderless`],
+                styles[`block-center`],
+              )}
+              style={{ boxShadow: border[value] }}
+            />
+          </div>
+          <div className={cn(styles.example__code, styles[`text-left`])}>
+            <div>
+              <code>.cr-{value}</code>
+            </div>
+            <div
+              style={{
+                marginTop: spacing.scale['spacing-1'],
+              }}
+            >
+              <code>{border[value]}</code>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  ),
+  { percy: { skip: true } },
+);
 
-stories.addWithPercyOptions('Shadows', { skip: true }, () => (
-  <div>
-    {Object.keys(outer).map(value => (
-      <div key={value} className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
-          <div
-            className={cn(
-              styles.box,
-              styles[`box--fixed`],
-              styles[`box--borderless`],
-              styles[`block-center`],
-            )}
-            style={{ boxShadow: outer[value] }}
-          />
-        </div>
-        <div className={cn(styles.example__code, styles[`text-left`])}>
-          <div>
-            <code>.cr-{value}</code>
+stories.add(
+  'Border Radii',
+  () => (
+    <div>
+      {Object.keys(radii.values).map(value => (
+        <div key={value} className={cn(styles.example, styles[`example--col`])}>
+          <div className={styles.example__block}>
+            <div
+              className={cn(styles.box, styles[`box--fixed`], styles[`block-center`])}
+              style={{ borderRadius: radii.values[value] }}
+            />
           </div>
-          <div
-            style={{
-              marginTop: spacing.scale['spacing-1'],
-            }}
-          >
-            <code>{outer[value]}</code>
+          <div className={cn(styles.example__code, styles[`text-left`])}>
+            <div>
+              <code>.cr-{value}</code>
+            </div>
+            <div
+              style={{
+                marginTop: spacing.scale['spacing-1'],
+              }}
+            >
+              <code>{radii.values[value]}</code>
+            </div>
           </div>
         </div>
-      </div>
-    ))}
-    <h2>Inner</h2>
-    {Object.keys(inner).map(value => (
-      <div key={value} className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
-          <div
-            className={cn(
-              styles.box,
-              styles[`box--fixed`],
-              styles[`box--borderless`],
-              styles[`block-center`],
-            )}
-            style={{ boxShadow: inner[value] }}
-          />
-        </div>
-        <div className={cn(styles.example__code, styles[`text-left`])}>
-          <div>
-            <code>.cr-{value}</code>
-          </div>
-          <div
-            style={{
-              marginTop: spacing.scale['spacing-1'],
-            }}
-          >
-            <code>{inner[value]}</code>
-          </div>
-        </div>
-      </div>
-    ))}
-    {Object.keys(innerN).map(value => (
-      <div key={value} className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
-          <div
-            className={cn(
-              styles.box,
-              styles[`box--fixed`],
-              styles[`box--borderless`],
-              styles[`block-center`],
-            )}
-            style={{ boxShadow: innerN[value] }}
-          />
-        </div>
-        <div className={cn(styles.example__code, styles[`text-left`])}>
-          <div>
-            <code>.cr-{value}</code>
-          </div>
-          <div
-            style={{
-              marginTop: spacing.scale['spacing-1'],
-            }}
-          >
-            <code>{innerN[value]}</code>
-          </div>
-        </div>
-      </div>
-    ))}
-    <h2>Border</h2>
-    {Object.keys(border).map(value => (
-      <div key={value} className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
-          <div
-            className={cn(
-              styles.box,
-              styles[`box--fixed`],
-              styles[`box--borderless`],
-              styles[`block-center`],
-            )}
-            style={{ boxShadow: border[value] }}
-          />
-        </div>
-        <div className={cn(styles.example__code, styles[`text-left`])}>
-          <div>
-            <code>.cr-{value}</code>
-          </div>
-          <div
-            style={{
-              marginTop: spacing.scale['spacing-1'],
-            }}
-          >
-            <code>{border[value]}</code>
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-));
+      ))}
+    </div>
+  ),
+  { percy: { skip: true } },
+);
 
-stories.addWithPercyOptions('Border Radii', { skip: true }, () => (
-  <div>
-    {Object.keys(radii.values).map(value => (
-      <div key={value} className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
-          <div
-            className={cn(styles.box, styles[`box--fixed`], styles[`block-center`])}
-            style={{ borderRadius: radii.values[value] }}
-          />
-        </div>
-        <div className={cn(styles.example__code, styles[`text-left`])}>
-          <div>
-            <code>.cr-{value}</code>
+stories.add(
+  'Transitions',
+  () => (
+    <div>
+      <h2>Durations</h2>
+      <p>Hover boxes to see example.</p>
+      {Object.keys(transition.durations).map(value => (
+        <div key={value} className={cn(styles.example, styles[`example--col`])}>
+          <div className={styles.example__block}>
+            <div
+              className={cn(
+                styles.box,
+                styles[`box--fixed`],
+                styles[`box--animate`],
+                styles[`block-center`],
+              )}
+              style={{ transitionDuration: transition.durations[value] }}
+            />
           </div>
-          <div
-            style={{
-              marginTop: spacing.scale['spacing-1'],
-            }}
-          >
-            <code>{radii.values[value]}</code>
+          <div className={cn(styles.example__code, styles[`text-left`])}>
+            <div>
+              <code>.cr-{value}</code>
+            </div>
+            <div
+              style={{
+                marginTop: spacing.scale['spacing-1'],
+              }}
+            >
+              <code>{transition.durations[value]}</code>
+            </div>
           </div>
         </div>
-      </div>
-    ))}
-  </div>
-));
+      ))}
+    </div>
+  ),
 
-stories.addDecorator(withReadme(Readme)).addWithPercyOptions('Transitions', { skip: true }, () => (
-  <div>
-    <h2>Durations</h2>
-    <p>Hover boxes to see example.</p>
-    {Object.keys(transition.durations).map(value => (
-      <div key={value} className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
-          <div
-            className={cn(
-              styles.box,
-              styles[`box--fixed`],
-              styles[`box--animate`],
-              styles[`block-center`],
-            )}
-            style={{ transitionDuration: transition.durations[value] }}
-          />
-        </div>
-        <div className={cn(styles.example__code, styles[`text-left`])}>
-          <div>
-            <code>.cr-{value}</code>
-          </div>
-          <div
-            style={{
-              marginTop: spacing.scale['spacing-1'],
-            }}
-          >
-            <code>{transition.durations[value]}</code>
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-));
+  { percy: { skip: true } },
+);

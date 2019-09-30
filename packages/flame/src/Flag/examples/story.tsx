@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 
 // We load the flag-sprite through the raw-loader and through SVGInline for the story
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
-import flagSprite from '!raw-loader!../../../svg/flag-sprite.svg';
+// @ts-ignore
+import flagSprite from '!raw-loader!../../../svg/flag-sprite.svg'; // eslint-disable-line
 
 import '../../../svg/Flags/flag.scss';
 import { Flag } from '../index';
@@ -18,9 +18,16 @@ import { Box } from '../../Core';
 import { Button } from '../../Button';
 import { Group } from '../../Group';
 import { Input } from '../../Input';
+import { Text } from '../../Text';
+import { Ul } from '../../../../../stories/components/Ul';
 
 const stories = storiesOf('Flag', module).addDecorator(withReadme(Readme));
-const descriptionClasses = 'cr-text-s cr-gray-300 cr-mb-1';
+
+const Description: React.FC = ({ children }) => (
+  <Text fontSize="text-s" mb={1}>
+    {children}
+  </Text>
+);
 
 type FlagPresenterProps = {};
 type FlagPresenterState = {
@@ -49,9 +56,9 @@ class FlagPresenter extends React.Component<FlagPresenterProps, FlagPresenterSta
 
     return (
       <div>
-        <div className="cr-mb-1">
+        <Box mb={1}>
           <Input readOnly size="small" value={selectedName} onFocus={e => e.target.select()} />
-        </div>
+        </Box>
 
         {flagList.map((flag: { code: string; name: string }) => (
           <span
@@ -105,33 +112,33 @@ stories.add('Story', () => (
 ));
 
 stories.add('Size', () => (
-  <ul>
+  <Ul>
     {['0.875rem', '1rem', '1.125rem', '1.5rem', '2.25rem', '4rem'].map(size => (
-      <li className="cr-mb-2" key={size}>
+      <Box as="li" mb={2} key={size}>
         <Flag code="ca" size={size} />
-        <span className="cr-ml-2" style={{ fontSize: size }}>
+        <Box as="span" ml={2} style={{ fontSize: size }}>
           {size}
-        </span>
-      </li>
+        </Box>
+      </Box>
     ))}
-  </ul>
+  </Ul>
 ));
 
 stories.add('Integration', () => (
   <div>
     <h3>Using the Icon component</h3>
-    <div className={descriptionClasses}>
+    <Description>
       Flag inside a <code>Group</code> component
-    </div>
+    </Description>
     <Box mb={3}>
       <Group>
         <Flag code="ca" />
         <span>Flag of Canada</span>
       </Group>
     </Box>
-    <div className={descriptionClasses}>
+    <Description>
       Flag inside a <code>Button</code> component
-    </div>
+    </Description>
     <Box mb={3}>
       <Button>
         <Flag code="nl" />
@@ -139,18 +146,18 @@ stories.add('Integration', () => (
       </Button>
     </Box>
     <h3>Using single component imports</h3>
-    <div className={descriptionClasses}>
+    <Description>
       Flag inside a <code>Group</code> component
-    </div>
+    </Description>
     <Box mb={3}>
       <Group>
         <FlagCA />
         <span>Flag of Canada</span>
       </Group>
     </Box>
-    <div className={descriptionClasses}>
+    <Description>
       Flag inside a <code>Button</code> component
-    </div>
+    </Description>
     <Box mb={3}>
       <Button>
         <FlagNL />
