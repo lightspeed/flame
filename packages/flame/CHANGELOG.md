@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- SVGs will now be copied into their respective folder instead of being hosted on the global namespace
+- SVGs will now be copied into their respective folder instead of being hosted on the global namespace ([#9](https://github.com/lightspeed/flame/pull/9))
 
 ## 0.1.1 - 2019-09-18
 
