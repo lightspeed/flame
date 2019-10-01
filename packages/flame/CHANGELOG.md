@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Added
 
-- Enable `space` props for `<Card>` ([#12](https://github.com/lightspeed/flame/pull/12))
+- Enable `space` Styled System props on `<Card>` ([#12](https://github.com/lightspeed/flame/pull/12))
 
 ## 0.2.0 - 2019-10-01
 
