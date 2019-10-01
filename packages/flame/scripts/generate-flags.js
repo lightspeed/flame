@@ -1,4 +1,5 @@
-const fs = require('fs');
+const fs = require('fs-extra');
+const path = require('path');
 const prettier = require('prettier');
 const HTMLtoJSX = require('htmltojsx');
 const _ = require('lodash');
@@ -124,6 +125,12 @@ export { StyledFlag as Flag${componentFlagISO} };`;
         .replace(/;/, '')
         .replace(/className/g, 'class'),
       () => {},
+    );
+
+    fs.copySync(path.resolve(__dirname, '../svg/Flags'), path.resolve(__dirname, '../src/Flag'));
+    fs.copySync(
+      path.resolve(__dirname, '../svg/flag-sprite.svg'),
+      path.resolve(__dirname, '../src/Flag/flag-sprite.svg'),
     );
   });
 });
