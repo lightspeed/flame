@@ -4,7 +4,7 @@ A package containing all Flame React components.
 
 Refer to [main README](https://github.com/lightspeed/flame/blob/master/README.md#getting-started) for usage.
 
-## Styled System Props
+## Styled System props
 
 | Component Name     | styled-system props                                                                                                                        |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
