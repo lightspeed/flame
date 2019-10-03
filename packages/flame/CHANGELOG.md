@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Breaking
+
+- Alert: Remove exposed `AlertState` type ([#15](https://github.com/lightspeed/flame/pull/15))
+
+### Added
+
+- Alert: Added the ability to pass `icon` ([#15](https://github.com/lightspeed/flame/pull/15))
+
 ## 0.2.0 - 2019-10-01
 
 ### Changed
