@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { transparentize } from 'polished';
 import { space, variant, SpaceProps } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
-import { Box } from '../Core';
+import { Flex, Box } from '../Core';
 import { Text } from '../Text';
 
 const alertStyles = variant({
@@ -56,6 +56,8 @@ export interface AlertProps {
   onClose?: Function;
   /** Whether a Close button appears */
   noCloseBtn?: boolean;
+  /** Icon for the alert */
+  icon?: React.ReactNode;
   /** Text for the alert's title */
   title?: string;
 }
@@ -66,6 +68,7 @@ const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
   title,
   noCloseBtn,
   onClose,
+  icon = null,
   ...restProps
 }) => {
   const [isHidden, setIsHidden] = React.useState(false);
@@ -79,14 +82,17 @@ const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
 
   return (
     <AlertWrapper type={type} {...restProps}>
-      <Box flex="1">
-        {title && (
-          <Text color="textHeading" fontWeight="bold" fontSize="text" mt={0} mr={0} mb={1} ml={0}>
-            {title}
-          </Text>
-        )}
-        <Box fontSize="text-s">{children}</Box>
-      </Box>
+      <Flex flex="1">
+        {icon && <Box pr={2}>{icon}</Box>}
+        <Box flex="1">
+          {title && (
+            <Text color="textHeading" fontWeight="bold" fontSize="text" mt={0} mr={0} mb={1} ml={0}>
+              {title}
+            </Text>
+          )}
+          <Box fontSize="text-s">{children}</Box>
+        </Box>
+      </Flex>
       {!noCloseBtn && (
         <CloseButton type="button" onClick={handleClose}>
           <svg
