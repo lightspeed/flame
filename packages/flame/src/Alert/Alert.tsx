@@ -82,8 +82,12 @@ const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
 
   return (
     <AlertWrapper type={type} {...restProps}>
-      <Flex flex="1">
-        {icon && <Box pr={2}>{icon}</Box>}
+      <Flex flex="1" alignItems="flex-start">
+        {icon && (
+          <Flex alignItems="center" pr={2} pt="2px">
+            {icon}
+          </Flex>
+        )}
         <Box flex="1">
           {title && (
             <Text color="textHeading" fontWeight="bold" fontSize="text" mt={0} mr={0} mb={1} ml={0}>
