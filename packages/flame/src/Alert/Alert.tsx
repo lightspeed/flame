@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { transparentize } from 'polished';
 import { space, variant, SpaceProps } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
-import { Box } from '../Core';
+import { Flex, Box } from '../Core';
 import { Text } from '../Text';
 
 const alertStyles = variant({
@@ -56,39 +56,38 @@ export interface AlertProps {
   onClose?: Function;
   /** Whether a Close button appears */
   noCloseBtn?: boolean;
+  /** Icon for the alert */
+  icon?: React.ReactNode;
   /** Text for the alert's title */
   title?: string;
 }
-export interface AlertState {
-  closed: boolean;
-}
-class Alert extends React.Component<AlertProps & SpaceProps, AlertState> {
-  constructor(props: any) {
-    super(props);
 
-    this.state = {
-      closed: false,
-    };
+const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
+  children,
+  type = 'info',
+  title,
+  noCloseBtn,
+  onClose,
+  icon = null,
+  ...restProps
+}) => {
+  const [isHidden, setIsHidden] = React.useState(false);
 
-    this.handleClose = this.handleClose.bind(this);
-  }
+  const handleClose = (e: React.MouseEvent<HTMLElement>) => {
+    if (onClose && typeof onClose === 'function') onClose(e);
+    setIsHidden(s => !s);
+  };
 
-  handleClose(e: React.MouseEvent<HTMLElement>) {
-    this.setState(prevState => {
-      if (this.props.onClose && typeof this.props.onClose === 'function') this.props.onClose(e);
+  if (isHidden) return null;
 
-      return {
-        closed: !prevState.closed,
-      };
-    });
-  }
-
-  render() {
-    if (this.state.closed) return null;
-    const { children, type, title, noCloseBtn, ...restProps } = this.props;
-
-    return (
-      <AlertWrapper type={type} {...restProps}>
+  return (
+    <AlertWrapper type={type} {...restProps}>
+      <Flex flex="1" alignItems="flex-start">
+        {icon && (
+          <Flex alignItems="center" pr={2} pt="2px">
+            {icon}
+          </Flex>
+        )}
         <Box flex="1">
           {title && (
             <Text color="textHeading" fontWeight="bold" fontSize="text" mt={0} mr={0} mb={1} ml={0}>
@@ -97,38 +96,34 @@ class Alert extends React.Component<AlertProps & SpaceProps, AlertState> {
           )}
           <Box fontSize="text-s">{children}</Box>
         </Box>
-        {!noCloseBtn && (
-          <CloseButton type="button" onClick={this.handleClose}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 8 8"
-              css={{
-                width: '0.5em',
-                height: '0.5em',
-                fill: 'black',
-                position: 'absolute',
-                top: '0.25em',
-                left: '0.25em',
-                right: '0',
-                bottom: '0',
-              }}
-            >
-              <g fillRule="evenodd" transform="translate(-4 -4)">
-                <path
-                  fillOpacity=".5"
-                  d="M9.414 8l2.122-2.121a1 1 0 1 0-1.415-1.415L8 6.586 5.879 4.464A1 1 0 0 0 4.464 5.88L6.586 8l-2.122 2.121a1 1 0 0 0 1.415 1.415L8 9.414l2.121 2.122a1 1 0 0 0 1.415-1.415L9.414 8z"
-                />
-              </g>
-            </svg>
-          </CloseButton>
-        )}
-      </AlertWrapper>
-    );
-  }
-}
-
-(Alert as any).defaultProps = {
-  type: 'info',
+      </Flex>
+      {!noCloseBtn && (
+        <CloseButton type="button" onClick={handleClose}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 8 8"
+            css={{
+              width: '0.5em',
+              height: '0.5em',
+              fill: 'black',
+              position: 'absolute',
+              top: '0.25em',
+              left: '0.25em',
+              right: '0',
+              bottom: '0',
+            }}
+          >
+            <g fillRule="evenodd" transform="translate(-4 -4)">
+              <path
+                fillOpacity=".5"
+                d="M9.414 8l2.122-2.121a1 1 0 1 0-1.415-1.415L8 6.586 5.879 4.464A1 1 0 0 0 4.464 5.88L6.586 8l-2.122 2.121a1 1 0 0 0 1.415 1.415L8 9.414l2.121 2.122a1 1 0 0 0 1.415-1.415L9.414 8z"
+              />
+            </g>
+          </svg>
+        </CloseButton>
+      )}
+    </AlertWrapper>
+  );
 };
 
 export { Alert };

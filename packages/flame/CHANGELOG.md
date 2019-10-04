@@ -9,9 +9,14 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## [Unreleased]
 
+### Breaking
+
+- Alert: Remove exposed `AlertState` type ([#15](https://github.com/lightspeed/flame/pull/15))
+
 ### Added
 
-- Enable `space` Styled System props on `<Card>` ([#12](https://github.com/lightspeed/flame/pull/12))
+- Alert: Added the ability to pass `icon` ([#15](https://github.com/lightspeed/flame/pull/15))
+- Enable `space` Styled System props on `<Card>` ([#12](https://github.com/lightspeed/flame/pull/12)
 
 ## 0.2.0 - 2019-10-01
 

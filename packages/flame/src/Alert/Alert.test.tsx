@@ -24,6 +24,13 @@ describe('Alert', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
+  it('renders with an icon', () => {
+    const { getByTestId } = customRender(
+      <Alert icon={<i data-testid="icon" />}>Hello World</Alert>,
+    );
+    expect(getByTestId('icon')).toBeInTheDocument();
+  });
+
   it('renders with a title', () => {
     const component = createComponent(<Alert title="My Title">Hello World</Alert>);
     expect(component.toJSON()).toMatchSnapshot();

@@ -11,6 +11,7 @@ First, make sure you have been through the [Getting started](https://github.com/
 | Prop                  | Type                                      | Description                                |
 | --------------------- | ----------------------------------------- | ------------------------------------------ |
 | `type`                | `info`, `warning`, `danger`, or `success` | default is `info`                          |
+| `icon`                | `React.ReactNode`                         | An icon to place inside of the alert       |
 | `title`               | `string`                                  |                                            |
 | `onClose`             | `fn()`                                    | custom `fn(event)` passed the event object |
 | `noCloseBtn`          | `boolean`                                 |                                            |

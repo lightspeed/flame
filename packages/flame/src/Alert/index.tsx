@@ -1,3 +1,3 @@
-import { Alert, AlertProps, AlertState } from './Alert';
+import { Alert, AlertProps } from './Alert';
 
-export { Alert, AlertProps, AlertState };
+export { Alert, AlertProps };

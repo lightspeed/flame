@@ -4,6 +4,7 @@ import { withReadme } from 'storybook-readme';
 
 import { Alert } from './Alert';
 import { Text } from '../Text';
+import { IconWarning } from '../Icon/Warning';
 import Readme from './README.md';
 
 const stories = storiesOf('Alert', module).addDecorator(withReadme(Readme));
@@ -39,6 +40,11 @@ stories.add('Story', () => {
       <Alert title="Some Title" mb={2} noCloseBtn>
         <Text as="p" m={0}>
           This alert uses has no close button
+        </Text>
+      </Alert>
+      <Alert type="warning" icon={<IconWarning color="orange" />} title="Some Title" mb={2}>
+        <Text as="p" m={0}>
+          With icon
         </Text>
       </Alert>
     </div>
