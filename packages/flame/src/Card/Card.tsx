@@ -186,7 +186,8 @@ export type CardProps = BackgroundColorProps &
     large: boolean;
     /** Disables default padding */
     noSpacing: boolean;
-  }>;
+  }> &
+  SpaceProps;
 
 export const Card = styled('div')<CardProps>`
   border-radius: ${themeGet('radii.radius-2')};
@@ -204,6 +205,9 @@ export const Card = styled('div')<CardProps>`
   }
 
   ${setCardVariant};
-  ${color};
+  ${compose(
+    color,
+    space,
+  )};
   ${setCardSizingProp};
 `;
