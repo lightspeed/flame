@@ -3,4 +3,4 @@ coverage:
   status:
     project:
       default:
-        target: auto
+        target: 90%
