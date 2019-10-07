@@ -18,6 +18,10 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 - Alert: Added the ability to pass `icon` ([#15](https://github.com/lightspeed/flame/pull/15))
 - Enable `space` Styled System props on `<Card>` ([#12](https://github.com/lightspeed/flame/pull/12)
 
+### Fixed
+
+- Adjust added Partial within the Flex color props to prevent wonky type gen on opacity prop ([#19](https://github.com/lightspeed/flame/pull/19))
+
 ## 0.2.0 - 2019-10-01
 
 ### Changed
