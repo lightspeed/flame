@@ -9,7 +9,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## [Unreleased]
 
-Flame tokens is now considered stable
+Flame tokens is now considered stable ([#22](https://github.com/lightspeed/flame/pull/22))
 
 ## 0.1.0 - 2019-09-11
 
