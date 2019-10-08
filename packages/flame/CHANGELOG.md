@@ -9,7 +9,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## [Unreleased]
 
-Flame is now considered stable ([#22](https://github.com/lightspeed/flame/pull/22))
+- Flame is now considered stable :tada:
 
 ## 0.3.1 - 2019-10-08
 
