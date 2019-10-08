@@ -362,7 +362,6 @@ class InnerInput extends React.Component<InnerInputProps, InnerInputState> {
     });
   }
 
-  // What the heck Typescript?
   // eslint-disable-next-line react/sort-comp
   input: HTMLInputElement;
 
