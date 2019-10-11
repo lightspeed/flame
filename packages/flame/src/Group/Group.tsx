@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 
-import { Flex, border, FlameFlexProps, BorderProps } from '../Core';
+import { Box, Flex, border, FlameFlexProps, BorderProps } from '../Core';
 
 export interface InputGroupAddonProps extends FlameFlexProps, BorderProps {}
 const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
@@ -53,14 +53,14 @@ export interface SpacedGroupProps extends FlameFlexProps {}
 const SpacedGroup: React.FC<SpacedGroupProps> = ({ flexDirection, children, ...restProps }) => {
   const nextChildren = React.Children.map(children, (child: any, index) => {
     if (flexDirection && flexDirection === 'column') {
-      return <Flex mt={index !== 0 ? 1 : undefined}>{child}</Flex>;
+      return <Box mt={index !== 0 ? 1 : undefined}>{child}</Box>;
     }
 
     if (flexDirection && flexDirection === 'column-reverse') {
-      return <Flex mb={index !== 0 ? 1 : undefined}>{child}</Flex>;
+      return <Box mb={index !== 0 ? 1 : undefined}>{child}</Box>;
     }
 
-    return <Flex ml={index !== 0 ? 1 : undefined}>{child}</Flex>;
+    return <Box ml={index !== 0 ? 1 : undefined}>{child}</Box>;
   });
 
   return (

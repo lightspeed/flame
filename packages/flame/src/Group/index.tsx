@@ -1,5 +1,5 @@
 import { InputGroup, SpacedGroup, InputGroupAddon, BeThereOrBeSquare } from './Group';
-import { Group, GroupAddon, GroupAddonProps } from './LegacyGroup';
+import { Group, GroupAddon, GroupAddonProps } from './legacy/LegacyGroup';
 
 export {
   InputGroup,
