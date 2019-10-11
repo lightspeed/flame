@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action, decorateAction } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 
-import { Input, BaseInput } from './Input';
+import { Input } from './Input';
 import Readme from './README.md';
 import { Box } from '../Core';
 import { Badge } from '../Badge';

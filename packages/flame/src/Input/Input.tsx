@@ -291,12 +291,18 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
   },
 );
 
-export interface InputProps extends BaseInputProps {
+export interface InputProps extends Omit<BaseInputProps, 'status'> {
   label?: React.ReactNode;
   labelHelper?: React.ReactNode;
   description?: React.ReactNode;
   statusMessage?: React.ReactNode;
   textHelper?: React.ReactNode;
+  status?:
+    | StatusType
+    | {
+        type: StatusType;
+        message: React.ReactNode;
+      };
   css?: any;
 }
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
@@ -306,6 +312,16 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ) => {
     const labelId = id && label ? `${id}-label` : undefined;
     const descriptionId = id && description ? `${id}-description` : undefined;
+    const nextStatus = typeof status === 'object' ? status.type : status;
+    const nextMessage = typeof status === 'object' ? status.message : statusMessage;
+
+    if (typeof status === 'object') {
+      console.warn(`
+Using status as an object will be deprecated in the next version of flame.
+Please prefer passing the status.type to the status prop directly and
+pass the status.message to the statusMessage prop.
+`);
+    }
 
     return (
       <React.Fragment>
@@ -334,13 +350,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <BaseInput
           ref={ref}
           id={id}
-          status={status}
+          status={nextStatus}
           aria-labelledby={labelId}
           aria-describedby={descriptionId}
           {...restProps}
         />
-        {status && statusMessage && <FormHelper status={status}>{statusMessage}</FormHelper>}
-        {textHelper && !statusMessage && <FormHelper>{textHelper}</FormHelper>}
+        {status && nextMessage && <FormHelper status={nextStatus}>{nextMessage}</FormHelper>}
+        {textHelper && !nextMessage && <FormHelper>{textHelper}</FormHelper>}
       </React.Fragment>
     );
   },
