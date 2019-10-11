@@ -10,11 +10,7 @@ import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
 
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
-
 const stories = storiesOf('Input', module).addDecorator(withReadme(Readme));
-
-const bottomSpace = spacing[`cr-mb-3`];
 
 const firstArgAction = decorateAction([(args: any) => [args[0].target.value]]);
 
@@ -74,13 +70,12 @@ class InputWrapper extends React.Component<any, State> {
 
 stories.add('Story', () => (
   <div>
-    <div className={bottomSpace}>
+    <Box mb={3}>
       <h3>Simple text input</h3>
       <Input id="simple" label="Label" placeholder="Placeholder text..." />
-    </div>
-
-    <div className={bottomSpace}>
-      <h3>Advanced test input</h3>
+    </Box>
+    <Box mb={3}>
+      <h3>Advanced text input</h3>
       <Input
         id="simple"
         label="Label"
@@ -95,140 +90,85 @@ stories.add('Story', () => (
         prefix="$"
         suffix="*"
       />
-    </div>
+    </Box>
 
     <h2>States</h2>
-    <div className={bottomSpace}>
-      <Input id="default-state" placeholder="Placeholder text..." />
-    </div>
-    <div className={`${bottomSpace}`}>
+    <Box mb={3}>
+      <Input placeholder="Placeholder text..." />
+    </Box>
+    <Box mb={3}>
       <Input placeholder="Hover input..." />
-    </div>
-    <div className={`${bottomSpace}`}>
+    </Box>
+    <Box mb={3}>
       <Input placeholder="Focus input..." />
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Input readOnly value="Readonly input" />
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Input disabled placeholder="Disabled input..." />
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
       <Input
         status="valid"
         placeholder="Valid input..."
         prefix={<Icon name="customers" />}
         suffix={<Icon name="info" color="secondary" />}
       />
-    </div>
-    <div className={bottomSpace}>
-      <Input status="warning" placeholder="Warning input..." />
-    </div>
-    <div className={bottomSpace}>
+    </Box>
+    <Box mb={3}>
+      <Input status="error" placeholder="Warning input..." />
+    </Box>
+    <Box mb={3}>
       <Input status="error" placeholder="Error input..." />
-    </div>
+    </Box>
 
     <div>
       <h2>Size</h2>
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Input size="small" placeholder="Small input..." />
-      </div>
-      <div className={bottomSpace}>
+      </Box>
+      <Box mb={3}>
         <Input placeholder="Normal input..." />
-      </div>
-      <div className={bottomSpace}>
+      </Box>
+      <Box mb={3}>
         <Input size="large" placeholder="Large input..." />
-      </div>
+      </Box>
     </div>
     <div>
       <h2>Input Error Text</h2>
-      <div className={bottomSpace}>
+      <Box mb={3}>
         <Input
           placeholder="This is some text on an input that has an error"
           status="error"
           statusMessage="This is an error message"
         />
-      </div>
+      </Box>
     </div>
   </div>
 ));
 
-stories.addWithPercyOptions('Events', { skip: true }, () => (
-  <div>
-    <div className={bottomSpace}>
-      <Input
-        placeholder="Input with onChange event (see Action Logger)"
-        onChange={firstArgAction('onChange')}
-      />
-    </div>
-    <div className={bottomSpace}>
-      <Input
-        placeholder="Input with onFocus & onBlur events (see Action Logger)"
-        onFocus={action('onFocus')}
-        onBlur={action('onBlur')}
-      />
-    </div>
-    <div className={bottomSpace}>
-      <InputWrapper />
-    </div>
-  </div>
-));
-
-stories.addWithPercyOptions('Basic Input', { skip: true }, () => (
-  <div>
-    <p>The following examples use the BaseInput component</p>
-    <Box mb={1}>
-      <h3>Basic Input</h3>
-      <BaseInput placeholder="basic input" />
-    </Box>
-
-    <Box mb={1}>
-      <h3>With an error</h3>
-      <BaseInput placeholder="basic input" type="error" />
-    </Box>
-
-    <Box mb={1}>
-      <h3>Disabled State</h3>
-      <BaseInput placeholder="basic input" disabled />
-    </Box>
-
-    <Box mb={1}>
-      <h3>With a prefix</h3>
-      <BaseInput placeholder="basic input" prefix="$" />
-    </Box>
-  </div>
-));
-
-const BasicInputWithRef = () => {
-  const ref = React.createRef<HTMLInputElement>();
-  const ref2 = React.createRef<HTMLInputElement>();
-  const onChange = () => {
-    console.log('Current Ref:', ref, ref2);
-  };
-
-  return (
+stories.add(
+  'Events',
+  () => (
     <div>
-      <p>Check console to see the right ref</p>
-      <h3>BaseInput with forwarded Ref</h3>
       <Box mb={3}>
-        <BaseInput
-          ref={ref}
-          onChange={onChange}
-          placeholder="Write some stuff here and check your console"
+        <Input
+          placeholder="Input with onChange event (see Action Logger)"
+          onChange={firstArgAction('onChange')}
         />
       </Box>
-      <h3>Input with forwarded Ref</h3>
-      <Input
-        ref={ref2}
-        onChange={onChange}
-        placeholder="Write some stuff here and check your console"
-      />
+      <Box mb={3}>
+        <Input
+          placeholder="Input with onFocus & onBlur events (see Action Logger)"
+          onFocus={action('onFocus')}
+          onBlur={action('onBlur')}
+        />
+      </Box>
+      <Box mb={3}>
+        <InputWrapper />
+      </Box>
     </div>
-  );
-};
-
-stories.addWithPercyOptions('Ref Input', { skip: true }, () => (
-  <div>
-    <BasicInputWithRef />
-  </div>
-));
+  ),
+  { percy: { skip: true } },
+);

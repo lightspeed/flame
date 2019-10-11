@@ -2,14 +2,12 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 
-import spacing from '../../../flame-tokens/partials/_spacing.scss';
 import { Card, CardHeader, CardSection, CardFooter } from '../Card';
 import { Icon } from '../Icon';
+import { Box } from '../Core';
 import { Divider } from './Divider';
 
 import Readme from './README.md';
-
-const contentSpace = spacing['cr-mb-2'];
 
 const stories = storiesOf('Divider', module).addDecorator(withReadme(Readme));
 const cardsStyles = { maxWidth: '640px' };
@@ -21,11 +19,11 @@ stories.add('Story', () => (
     <Divider />
     <h3>With Content</h3>
     <Divider>
-      <Icon size="1rem" name="products" className="cr-mr-2" />
-      <span>T-Shirt</span>
+      <Icon size="1rem" name="products" />
+      <Box ml={2}>T-Shirt</Box>
     </Divider>
     <h3>Between Elements</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={2} style={cardsStyles}>
       <Card>
         <CardHeader title="Title" />
         <CardSection>{cardsContent}</CardSection>
@@ -37,9 +35,9 @@ stories.add('Story', () => (
         <CardSection>{cardsContent}</CardSection>
         <CardFooter>Footer</CardFooter>
       </Card>
-    </div>
+    </Box>
     <h3>Between CardSection</h3>
-    <div className={contentSpace} style={cardsStyles}>
+    <Box mb={2} style={cardsStyles}>
       <Card>
         <CardHeader title="Title" />
         <CardSection>{cardsContent}</CardSection>
@@ -47,7 +45,7 @@ stories.add('Story', () => (
         <CardSection>{cardsContent}</CardSection>
         <CardFooter>Footer</CardFooter>
       </Card>
-    </div>
+    </Box>
     <div>
       <h3>Default</h3>
       <Divider />
@@ -55,13 +53,13 @@ stories.add('Story', () => (
       <Divider variant="dotted" />
       <h3>With Content</h3>
       <Divider variant="dotted">
-        <Icon size="1rem" name="products" className="cr-mr-2" />
-        <span>T-Shirt</span>
+        <Icon size="1rem" name="products" />
+        <Box ml={2}>T-Shirt</Box>
       </Divider>
     </div>
     <div>
       <h3>Spacing</h3>
-      <div className={contentSpace} style={cardsStyles}>
+      <Box mb={2} style={cardsStyles}>
         <Card>
           <CardHeader title="Title" />
           <CardSection>{cardsContent}</CardSection>
@@ -69,9 +67,9 @@ stories.add('Story', () => (
           <CardSection>{cardsContent}</CardSection>
           <CardFooter>Footer</CardFooter>
         </Card>
-      </div>
+      </Box>
       <h3>Even Spacing</h3>
-      <div className={contentSpace} style={cardsStyles}>
+      <Box mb={2} style={cardsStyles}>
         <Card>
           <CardHeader title="Title" />
           <CardSection>{cardsContent}</CardSection>
@@ -79,9 +77,9 @@ stories.add('Story', () => (
           <CardSection>{cardsContent}</CardSection>
           <CardFooter>Footer</CardFooter>
         </Card>
-      </div>
+      </Box>
       <h3>Uneven Spacing</h3>
-      <div className={contentSpace} style={cardsStyles}>
+      <Box mb={2} style={cardsStyles}>
         <Card>
           <CardHeader title="Title" />
           <CardSection>{cardsContent}</CardSection>
@@ -89,7 +87,7 @@ stories.add('Story', () => (
           <CardSection>{cardsContent}</CardSection>
           <CardFooter>Footer</CardFooter>
         </Card>
-      </div>
+      </Box>
     </div>
     <div>
       <h2>Custom Colors</h2>
@@ -101,60 +99,72 @@ stories.add('Story', () => (
   </div>
 ));
 
-stories.addWithPercyOptions('Variant', { skip: true }, () => (
-  <div>
-    <h3>Default</h3>
-    <Divider />
-    <h3>Dotted</h3>
-    <Divider variant="dotted" />
-    <h3>With Content</h3>
-    <Divider variant="dotted">
-      <Icon size="1rem" name="products" className="cr-mr-2" />
-      <span>T-Shirt</span>
-    </Divider>
-  </div>
-));
+stories.add(
+  'Variant',
+  () => (
+    <div>
+      <h3>Default</h3>
+      <Divider />
+      <h3>Dotted</h3>
+      <Divider variant="dotted" />
+      <h3>With Content</h3>
+      <Divider variant="dotted">
+        <Icon size="1rem" name="products" />
+        <Box ml={2}>T-Shirt</Box>
+      </Divider>
+    </div>
+  ),
+  { percy: { skip: true } },
+);
 
-stories.addWithPercyOptions('Spacing', { skip: true }, () => (
-  <div>
-    <h3>Default</h3>
-    <div className={contentSpace} style={cardsStyles}>
-      <Card>
-        <CardHeader title="Title" />
-        <CardSection>{cardsContent}</CardSection>
-        <Divider />
-        <CardSection>{cardsContent}</CardSection>
-        <CardFooter>Footer</CardFooter>
-      </Card>
+stories.add(
+  'Spacing',
+  () => (
+    <div>
+      <h3>Default</h3>
+      <Box mb={2} style={cardsStyles}>
+        <Card>
+          <CardHeader title="Title" />
+          <CardSection>{cardsContent}</CardSection>
+          <Divider />
+          <CardSection>{cardsContent}</CardSection>
+          <CardFooter>Footer</CardFooter>
+        </Card>
+      </Box>
+      <h3>Even Spacing</h3>
+      <Box mb={2} style={cardsStyles}>
+        <Card>
+          <CardHeader title="Title" />
+          <CardSection>{cardsContent}</CardSection>
+          <Divider py={4} />
+          <CardSection>{cardsContent}</CardSection>
+          <CardFooter>Footer</CardFooter>
+        </Card>
+      </Box>
+      <h3>Uneven Spacing</h3>
+      <Box mb={2} style={cardsStyles}>
+        <Card>
+          <CardHeader title="Title" />
+          <CardSection>{cardsContent}</CardSection>
+          <Divider pt={5} pb={10} />
+          <CardSection>{cardsContent}</CardSection>
+          <CardFooter>Footer</CardFooter>
+        </Card>
+      </Box>
     </div>
-    <h3>Even Spacing</h3>
-    <div className={contentSpace} style={cardsStyles}>
-      <Card>
-        <CardHeader title="Title" />
-        <CardSection>{cardsContent}</CardSection>
-        <Divider py={4} />
-        <CardSection>{cardsContent}</CardSection>
-        <CardFooter>Footer</CardFooter>
-      </Card>
-    </div>
-    <h3>Uneven Spacing</h3>
-    <div className={contentSpace} style={cardsStyles}>
-      <Card>
-        <CardHeader title="Title" />
-        <CardSection>{cardsContent}</CardSection>
-        <Divider pt={5} pb={10} />
-        <CardSection>{cardsContent}</CardSection>
-        <CardFooter>Footer</CardFooter>
-      </Card>
-    </div>
-  </div>
-));
+  ),
+  { percy: { skip: true } },
+);
 
-stories.addWithPercyOptions('Custom Colors', { skip: true }, () => (
-  <div>
-    <h3>Using a token (blue-200)</h3>
-    <Divider color="blue-200" />
-    <h3>Non token value (#F42069)</h3>
-    <Divider color="#F42069" />
-  </div>
-));
+stories.add(
+  'Custom Colors',
+  () => (
+    <div>
+      <h3>Using a token (blue-200)</h3>
+      <Divider color="blue-200" />
+      <h3>Non token value (#F42069)</h3>
+      <Divider color="#F42069" />
+    </div>
+  ),
+  { percy: { skip: true } },
+);

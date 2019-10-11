@@ -1,12 +1,8 @@
 import React from 'react';
-import { configure, setAddon, getStorybook, addDecorator, addParameters } from '@storybook/react';
-import createPercyAddon from '@percy-io/percy-storybook';
+import { configure, addDecorator, addParameters } from '@storybook/react';
 import { Global } from '@emotion/core';
 import { FlameTheme, FlameGlobalStyles, Box } from '../packages/flame/src/Core';
 import { Select } from '../packages/flame/src/Select';
-
-const { percyAddon, serializeStories } = createPercyAddon();
-setAddon(percyAddon);
 
 class FlameStyling extends React.Component {
   constructor(props) {
@@ -67,5 +63,3 @@ function loadStories() {
 }
 
 configure(loadStories, module);
-
-serializeStories(getStorybook);

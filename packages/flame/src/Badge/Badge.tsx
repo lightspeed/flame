@@ -56,7 +56,7 @@ export type BadgeProps = ColorProps & {
   size?: BadgeSizes;
 };
 
-export const Badge = styled('span')<React.HTMLAttributes<HTMLSpanElement> & BadgeProps>`
+export const Badge = styled('span')<React.HTMLAttributes<HTMLSpanElement> & Partial<BadgeProps>>`
   display: inline-flex;
   align-items: center;
   text-transform: uppercase;
@@ -73,12 +73,18 @@ Badge.defaultProps = {
   size: 'medium',
 };
 
-export const PillBadge = styled(Badge)<React.HTMLAttributes<HTMLSpanElement> & BadgeProps>(
-  setPillBadgeSizing,
-  css`
-    border-radius: 10rem;
-  `,
-);
+export const PillBadge = styled('span')<React.HTMLAttributes<HTMLSpanElement> & BadgeProps>`
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: ${themeGet('radii.radius-1')};
+  ${badgeColors};
+  ${setBadgeSizing};
+  ${setPillBadgeSizing};
+  ${color};
+  border-radius: 10rem;
+`;
 
 PillBadge.defaultProps = {
   type: 'default',

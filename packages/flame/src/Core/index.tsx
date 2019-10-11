@@ -62,7 +62,7 @@ export type FlameBoxProps = SpaceProps &
   LayoutProps &
   FlexboxProps &
   TypographyProps &
-  Omit<ColorProps, 'color'> & // Fun clashing between native color prop & styled-system color prop
+  Partial<Omit<ColorProps, 'color'>> & // Fun clashing between native color prop & styled-system color prop
   AsProps;
 export const Box = styled('div')<FlameBoxProps>(
   compose(

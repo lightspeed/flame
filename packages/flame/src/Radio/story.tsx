@@ -124,65 +124,73 @@ stories.add('Rebuilding using the base components', () => (
   </div>
 ));
 
-stories.addWithPercyOptions('Uncontrolled state', { skip: true }, () => (
-  <TextContent>
-    <Heading2>Uncontrolled Radio states</Heading2>
-    <Box mb={3}>
-      <Radio id="option_1" name="zoo" label="Lion" />
-    </Box>
-    <Box mb={3}>
-      <Radio id="option_2" name="zoo" label="Tiger" />
-    </Box>
-    <Box mb={3}>
-      <Radio id="option_3" name="zoo" label="Bear" />
-    </Box>
-  </TextContent>
-));
+stories.add(
+  'Uncontrolled state',
+  () => (
+    <TextContent>
+      <Heading2>Uncontrolled Radio states</Heading2>
+      <Box mb={3}>
+        <Radio id="option_1" name="test" label="Lion" />
+      </Box>
+      <Box mb={3}>
+        <Radio id="option_2" name="test" label="Tiger" />
+      </Box>
+      <Box mb={3}>
+        <Radio id="option_3" name="test" label="Bear" />
+      </Box>
+    </TextContent>
+  ),
+  { percy: { skip: true } },
+);
 
-stories.addWithPercyOptions('Events', { skip: true }, () => (
-  <TextContent>
-    <Heading2>Radio events</Heading2>
-    <Box mb={3}>
-      <Text as="div" fontWeight="bold" mb={1}>
-        Input with onChange event
-      </Text>
-      <Radio
-        id="onChange"
-        label="Click me"
-        onChange={action('onChange')}
-        checked={false}
-        className="cr-mb-1"
-      />
-      <Text as="div" size="small" color="gray-300">
-        (See action logger)
-      </Text>
-    </Box>
-    <Box mb={3}>
-      <Text as="div" size="small" fontWeight="bold" mb={1}>
-        Input with onFocus & onBlur events
-      </Text>
-      <Radio
-        label="Click me"
-        id="onFocusOnBlur"
-        value="Test"
-        onFocus={action('onFocus')}
-        onBlur={action('onBlur')}
-        onChange={() => {}}
-        checked
-        className="cr-mb-1"
-      />
-      <Text as="div" size="small" color="gray-300">
-        (See action logger)
-      </Text>
-    </Box>
-    <Box mb={3}>
-      <Text as="div" size="small" fontWeight="bold" mb={1}>
-        Input with state management
-      </Text>
-      <RadioWrapper action={action('onChange')} />
-      <Text as="div" size="small" color="gray-300">
-        (See action logger)
-      </Text>
-    </Box>
-  </TextContent>
-));
+stories.add(
+  'Events',
+  () => (
+    <TextContent>
+      <Heading2>Radio events</Heading2>
+      <Box mb={3}>
+        <Text as="div" fontWeight="bold" mb={1}>
+          Input with onChange event
+        </Text>
+        <Radio
+          id="onChange"
+          label="Click me"
+          onChange={action('onChange')}
+          checked={false}
+          className="cr-mb-1"
+        />
+        <Text as="div" size="small" color="gray-300">
+          (See action logger)
+        </Text>
+      </Box>
+      <Box mb={3}>
+        <Text as="div" size="small" fontWeight="bold" mb={1}>
+          Input with onFocus & onBlur events
+        </Text>
+        <Radio
+          id="onFocusOnBlur"
+          label="Click me"
+          value="Test"
+          onFocus={action('onFocus')}
+          onBlur={action('onBlur')}
+          onChange={() => {}}
+          checked
+          className="cr-mb-1"
+        />
+        <Text as="div" size="small" color="gray-300">
+          (See action logger)
+        </Text>
+      </Box>
+      <Box mb={3}>
+        <Text as="div" size="small" fontWeight="bold" mb={1}>
+          Input with state management
+        </Text>
+        <RadioWrapper action={action('onChange')} />
+        <Text as="div" size="small" color="gray-300">
+          (See action logger)
+        </Text>
+      </Box>
+    </TextContent>
+  ),
+  { percy: { skip: true } },
+);
