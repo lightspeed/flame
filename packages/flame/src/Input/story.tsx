@@ -145,6 +145,15 @@ stories.add('Story', () => (
         />
       </Box>
     </div>
+    <div>
+      <h2>Input Error Text (using the legacy API)</h2>
+      <Box mb={3}>
+        <Input
+          placeholder="This is some text on an input that has an error"
+          status={{ type: 'error', message: 'This is an error message' }}
+        />
+      </Box>
+    </div>
   </div>
 ));
 

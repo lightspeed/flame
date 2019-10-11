@@ -24,7 +24,7 @@ describe('<Input />', () => {
 
   it('should have rendered an input of type text', () => {
     const { getByPlaceholderText } = customRender(
-      <Input {...baseProps} placeholder="test-input" />,
+      <Input {...baseProps} placeholder="test-input" size="large" />,
     );
     const element: any = getByPlaceholderText('test-input');
     expect(element.type).toBe('text');
@@ -32,7 +32,7 @@ describe('<Input />', () => {
 
   it('should forward the disabled property to the base input', () => {
     const { getByPlaceholderText } = customRender(
-      <Input {...baseProps} disabled placeholder="test-input" />,
+      <Input {...baseProps} disabled placeholder="test-input" size="small" />,
     );
     const element: any = getByPlaceholderText('test-input');
     expect(element.disabled).toBeTruthy();
@@ -74,6 +74,14 @@ describe('<Input />', () => {
     it('should render an warning state', () => {
       const { getByText, getByTestId } = customRender(
         <Input {...baseProps} status="warning" statusMessage="Warning input." />,
+      );
+      getByText('Warning input.');
+      getByTestId('icon-warning');
+    });
+
+    it('should support the legacy API', () => {
+      const { getByText, getByTestId } = customRender(
+        <Input {...baseProps} status={{ type: 'warning', message: 'Warning input.' }} />,
       );
       getByText('Warning input.');
       getByTestId('icon-warning');
