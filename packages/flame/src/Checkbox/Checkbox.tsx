@@ -61,7 +61,7 @@ const StyledIcon = styled(IconCheckmark)<{ size: string }>`
   fill: ${themeGet('checkboxStyles.checked.color')};
 `;
 
-const CheckboxInput = styled('input')<LayoutProps & { indeterminate: boolean }>`
+const CheckboxInput = styled('input')<{ indeterminate: boolean }>`
   position: absolute;
   ${layout}
   top: 0;
