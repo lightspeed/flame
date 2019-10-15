@@ -117,7 +117,7 @@ CheckboxLabel.defaultProps = {
   ml: 2,
   fontWeight: 'bold',
   fontSize: ['text', 'text-s'],
-  lineHeight: [4, 3],
+  lineHeight: 3,
   as: 'div',
 };
 

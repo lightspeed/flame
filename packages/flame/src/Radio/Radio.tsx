@@ -99,7 +99,7 @@ export const RadioLabel = styled(Text)`
 
 RadioLabel.defaultProps = {
   fontSize: ['text', 'text-s'],
-  lineHeight: [4, 3],
+  lineHeight: 3,
   fontWeight: 'bold',
   ml: 2,
 };
