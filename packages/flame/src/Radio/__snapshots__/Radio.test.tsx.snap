@@ -98,7 +98,7 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
 .emotion-6 {
   margin: 0;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.125rem;
   font-weight: 700;
   margin-left: 0.75rem;
   font-weight: 700;
@@ -108,7 +108,6 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
 @media screen and (min-width:601px) {
   .emotion-6 {
     font-size: 0.875rem;
-    line-height: 1.125rem;
   }
 }
 

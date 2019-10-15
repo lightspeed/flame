@@ -262,7 +262,7 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
   margin-left: 0.75rem;
   font-weight: 700;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.125rem;
   font-weight: 700;
   color: #0c0d0d;
 }
@@ -270,7 +270,6 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 @media screen and (min-width:601px) {
   .emotion-7 {
     font-size: 0.875rem;
-    line-height: 1.125rem;
   }
 }
 
