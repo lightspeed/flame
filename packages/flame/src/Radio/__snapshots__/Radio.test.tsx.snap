@@ -16,14 +16,21 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
 
 .emotion-0 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 0;
   margin: 0;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-0:checked + .emotion-5 {
@@ -48,6 +55,8 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
   position: relative;
   width: 1rem;
   height: 1rem;
+  width: 18px;
+  height: 18px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -59,6 +68,13 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
 }
 
+@media screen and (min-width:601px) {
+  .emotion-4 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .emotion-2 {
   position: absolute;
   top: 50%;
@@ -66,20 +82,34 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  width: 0.375rem;
-  height: 0.375rem;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
 }
 
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    width: 6px;
+    height: 6px;
+  }
+}
+
 .emotion-6 {
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 700;
   margin-left: 0.75rem;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
   font-weight: 700;
   color: #0c0d0d;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-6 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 
 .emotion-12 {
@@ -110,24 +140,65 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
       aria-labelledby="Radio-label"
       checked={false}
       className="emotion-0 emotion-1"
+      height={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
       id="Radio"
       onChange={[MockFunction]}
       type="radio"
       value="value"
+      width={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
     />
     <div
       className="emotion-4 emotion-5"
+      height={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
+      width={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
     >
       <div
         className="emotion-2 emotion-3"
         data-testid="radio-centermark"
+        height={
+          Array [
+            "7px",
+            "6px",
+          ]
+        }
+        width={
+          Array [
+            "7px",
+            "6px",
+          ]
+        }
       />
     </div>
     <div
       className="emotion-6 emotion-7"
+      fontSize={
+        Array [
+          "text",
+          "text-s",
+        ]
+      }
       fontWeight="bold"
       id="Radio-label"
-      size="small"
     >
       Label
     </div>
@@ -162,14 +233,21 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
 
 .emotion-0 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 0;
   margin: 0;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-0:checked + .emotion-5 {
@@ -194,6 +272,8 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
   position: relative;
   width: 1rem;
   height: 1rem;
+  width: 18px;
+  height: 18px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -205,6 +285,13 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
 }
 
+@media screen and (min-width:601px) {
+  .emotion-4 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .emotion-2 {
   position: absolute;
   top: 50%;
@@ -212,10 +299,17 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  width: 0.375rem;
-  height: 0.375rem;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
+}
+
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 <div
@@ -231,17 +325,53 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
       aria-labelledby={null}
       checked={true}
       className="emotion-0 emotion-1"
+      height={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
       id="Radio"
       onChange={[MockFunction]}
       type="radio"
       value="value"
+      width={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
     />
     <div
       className="emotion-4 emotion-5"
+      height={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
+      width={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
     >
       <div
         className="emotion-2 emotion-3"
         data-testid="radio-centermark"
+        height={
+          Array [
+            "7px",
+            "6px",
+          ]
+        }
+        width={
+          Array [
+            "7px",
+            "6px",
+          ]
+        }
       />
     </div>
   </label>
@@ -264,14 +394,21 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
 
 .emotion-0 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 0;
   margin: 0;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-0:checked + .emotion-5 {
@@ -296,6 +433,8 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
   position: relative;
   width: 1rem;
   height: 1rem;
+  width: 18px;
+  height: 18px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -307,6 +446,13 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
 }
 
+@media screen and (min-width:601px) {
+  .emotion-4 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .emotion-2 {
   position: absolute;
   top: 50%;
@@ -314,10 +460,17 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  width: 0.375rem;
-  height: 0.375rem;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
+}
+
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 <div
@@ -334,17 +487,53 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
       checked={false}
       className="emotion-0 emotion-1"
       disabled={true}
+      height={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
       id="Radio"
       onChange={[MockFunction]}
       type="radio"
       value="value"
+      width={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
     />
     <div
       className="emotion-4 emotion-5"
+      height={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
+      width={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
     >
       <div
         className="emotion-2 emotion-3"
         data-testid="radio-centermark"
+        height={
+          Array [
+            "7px",
+            "6px",
+          ]
+        }
+        width={
+          Array [
+            "7px",
+            "6px",
+          ]
+        }
       />
     </div>
   </label>
@@ -367,14 +556,21 @@ exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
 
 .emotion-0 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 0;
   margin: 0;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-0:checked + .emotion-5 {
@@ -399,6 +595,8 @@ exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
   position: relative;
   width: 1rem;
   height: 1rem;
+  width: 18px;
+  height: 18px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -410,6 +608,13 @@ exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
 }
 
+@media screen and (min-width:601px) {
+  .emotion-4 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .emotion-2 {
   position: absolute;
   top: 50%;
@@ -417,10 +622,17 @@ exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  width: 0.375rem;
-  height: 0.375rem;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
+}
+
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 <div
@@ -435,15 +647,51 @@ exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
       aria-labelledby={null}
       checked={false}
       className="emotion-0 emotion-1"
+      height={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
       onChange={[MockFunction]}
       type="radio"
+      width={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
     />
     <div
       className="emotion-4 emotion-5"
+      height={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
+      width={
+        Array [
+          "18px",
+          "16px",
+        ]
+      }
     >
       <div
         className="emotion-2 emotion-3"
         data-testid="radio-centermark"
+        height={
+          Array [
+            "7px",
+            "6px",
+          ]
+        }
+        width={
+          Array [
+            "7px",
+            "6px",
+          ]
+        }
       />
     </div>
   </label>

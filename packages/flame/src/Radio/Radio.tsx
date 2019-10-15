@@ -2,6 +2,7 @@ import * as React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
+import { layout, LayoutProps } from 'styled-system';
 import { Merge } from 'type-fest';
 
 import { Text, TextProps } from '../Text';
@@ -17,10 +18,11 @@ const Label = styled('label')`
   display: inline-flex;
 `;
 
-const Checkmark = styled('div')`
+const Checkmark = styled('div')<LayoutProps>`
   position: relative;
   width: 1rem;
   height: 1rem;
+  ${layout};
   flex: 0 0 auto;
   border-radius: ${themeGet('radii.radius-circle')};
   background-color: transparent;
@@ -30,21 +32,29 @@ const Checkmark = styled('div')`
   background: ${themeGet('radioStyles.background')};
 `;
 
-const Centermark = styled('div')`
+Checkmark.defaultProps = {
+  width: ['18px', '16px'],
+  height: ['18px', '16px'],
+};
+
+const Centermark = styled('div')<LayoutProps>`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: ${themeGet('space.1')};
-  height: ${themeGet('space.1')};
+  ${layout};
   border-radius: ${themeGet('radii.radius-circle')};
   background: ${themeGet('radioStyles.background')};
 `;
 
+Centermark.defaultProps = {
+  width: ['7px', '6px'],
+  height: ['7px', '6px'],
+};
+
 const RadioInput = styled('input')`
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  ${layout};
   top: 0;
   left: 0;
   opacity: 0;
@@ -71,6 +81,14 @@ const RadioInput = styled('input')`
   }
 `;
 
+RadioInput.defaultProps = {
+  // Fun clashing between legacy props and our custom props
+  // @ts-ignore
+  width: ['18px', '16px'],
+  // @ts-ignore
+  height: ['18px', '16px'],
+};
+
 export const RadioLabel = styled(Text)`
   ${props =>
     !props.color &&
@@ -80,7 +98,8 @@ export const RadioLabel = styled(Text)`
 `.withComponent('div');
 
 RadioLabel.defaultProps = {
-  size: 'small',
+  fontSize: ['text', 'text-s'],
+  lineHeight: [4, 3],
   fontWeight: 'bold',
   ml: 2,
 };
