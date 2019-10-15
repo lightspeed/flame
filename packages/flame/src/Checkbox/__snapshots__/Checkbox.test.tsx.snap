@@ -132,11 +132,18 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
         </svg>
       </div>
     </div>
+    <div>
+      Label
+    </div>
   </label>
   <div
     className="emotion-11 emotion-12"
     size="small"
-  />
+  >
+    <div>
+      Description
+    </div>
+  </div>
 </div>
 `;
 
