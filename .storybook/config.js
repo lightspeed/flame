@@ -64,7 +64,7 @@ addParameters({
         name: 'Small',
         styles: {
           width: '623px',
-          height: '100%',
+          height: '98%',
         },
         type: 'mobile',
       },
@@ -72,7 +72,7 @@ addParameters({
         name: 'Medium',
         styles: {
           width: '1023px',
-          height: '100%',
+          height: '98%',
         },
         type: 'tablet',
       },
