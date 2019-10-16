@@ -57,6 +57,29 @@ addParameters({
   },
 });
 
+addParameters({
+  viewport: {
+    viewports: {
+      small: {
+        name: 'Small',
+        styles: {
+          width: '623px',
+          height: '100%',
+        },
+        type: 'mobile',
+      },
+      medium: {
+        name: 'Medium',
+        styles: {
+          width: '1023px',
+          height: '100%',
+        },
+        type: 'tablet',
+      },
+    },
+  },
+});
+
 function loadStories() {
   /* eslint-disable global-require, import/no-unresolved, import/no-webpack-loader-syntax */
   require('./require-stories!./empty');
