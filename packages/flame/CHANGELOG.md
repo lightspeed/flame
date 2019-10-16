@@ -11,8 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Checkbox will now resize properly in mobile view ([#26](https://github.com/lightspeed/flame/pull/26))
-- Radio will now resize properly in mobile view ([#26](https://github.com/lightspeed/flame/pull/26))
+- Checkbox and Radio will now resize properly in mobile view ([#26](https://github.com/lightspeed/flame/pull/26))
 
 ## 1.0.0 - 2019-10-08
 
