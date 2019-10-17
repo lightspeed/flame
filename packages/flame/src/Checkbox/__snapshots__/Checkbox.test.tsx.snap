@@ -6,6 +6,7 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
   color: #0c0d0d;
   font-weight: 700;
   font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -98,7 +99,7 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
   <label
     className="emotion-9 emotion-10"
     color="textHeading"
-    fontSize="small"
+    fontSize="text-s"
     fontWeight="bold"
     htmlFor="id"
   >
@@ -153,6 +154,7 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
   color: #0c0d0d;
   font-weight: 700;
   font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -245,7 +247,7 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
   <label
     className="emotion-9 emotion-10"
     color="textHeading"
-    fontSize="small"
+    fontSize="text-s"
     fontWeight="bold"
     htmlFor="id"
   >
@@ -296,6 +298,7 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
   color: #0c0d0d;
   font-weight: 700;
   font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -381,7 +384,7 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
   <label
     className="emotion-9 emotion-10"
     color="textHeading"
-    fontSize="small"
+    fontSize="text-s"
     fontWeight="bold"
   >
     <div
@@ -496,6 +499,7 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
   color: #e1e4e5;
   font-weight: 700;
   font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -509,7 +513,7 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
   <label
     className="emotion-9 emotion-10"
     color="disabled"
-    fontSize="small"
+    fontSize="text-s"
     fontWeight="bold"
   >
     <div
@@ -551,6 +555,7 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
   color: #0c0d0d;
   font-weight: 700;
   font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -636,7 +641,7 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
   <label
     className="emotion-9 emotion-10"
     color="textHeading"
-    fontSize="small"
+    fontSize="text-s"
     fontWeight="bold"
   >
     <div
@@ -677,6 +682,7 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
   color: #0c0d0d;
   font-weight: 700;
   font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -776,7 +782,7 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
   <label
     className="emotion-11 emotion-12"
     color="textHeading"
-    fontSize="small"
+    fontSize="text-s"
     fontWeight="bold"
   >
     <div
@@ -820,6 +826,7 @@ exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
   color: #0c0d0d;
   font-weight: 700;
   font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -905,7 +912,7 @@ exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
   <label
     className="emotion-9 emotion-10"
     color="textHeading"
-    fontSize="small"
+    fontSize="text-s"
     fontWeight="bold"
   >
     <div

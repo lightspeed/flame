@@ -6,6 +6,7 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
   color: #0c0d0d;
   font-weight: 700;
   font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -90,7 +91,7 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
   <label
     className="emotion-8 emotion-9"
     color="textHeading"
-    fontSize="small"
+    fontSize="text-s"
     fontWeight="bold"
     htmlFor="Radio"
   >
@@ -131,6 +132,7 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
   color: #0c0d0d;
   font-weight: 700;
   font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -208,7 +210,7 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
   <label
     className="emotion-8 emotion-9"
     color="textHeading"
-    fontSize="small"
+    fontSize="text-s"
     fontWeight="bold"
     htmlFor="Radio"
   >
@@ -306,6 +308,7 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
   color: #e1e4e5;
   font-weight: 700;
   font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -319,7 +322,7 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
   <label
     className="emotion-8 emotion-9"
     color="disabled"
-    fontSize="small"
+    fontSize="text-s"
     fontWeight="bold"
     htmlFor="Radio"
   >
@@ -354,6 +357,7 @@ exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
   color: #0c0d0d;
   font-weight: 700;
   font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -431,7 +435,7 @@ exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
   <label
     className="emotion-8 emotion-9"
     color="textHeading"
-    fontSize="small"
+    fontSize="text-s"
     fontWeight="bold"
   >
     <div

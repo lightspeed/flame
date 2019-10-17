@@ -50,21 +50,30 @@ const InputGroup: React.FC = ({ children, ...restProps }) => {
 };
 
 export interface SpacedGroupProps extends FlameFlexProps {}
-const SpacedGroup: React.FC<SpacedGroupProps> = ({ flexDirection, children, ...restProps }) => {
+const SpacedGroup: React.FC<SpacedGroupProps> = ({
+  flexDirection = 'row',
+  alignItems = 'center',
+  children,
+  ...restProps
+}) => {
   const nextChildren = React.Children.map(children, (child: any, index) => {
     if (flexDirection && flexDirection === 'column') {
-      return <Box mt={index !== 0 ? 1 : undefined}>{child}</Box>;
+      return <Box mt={index !== 0 ? 2 : undefined}>{child}</Box>;
     }
 
     if (flexDirection && flexDirection === 'column-reverse') {
-      return <Box mb={index !== 0 ? 1 : undefined}>{child}</Box>;
+      return <Box mb={index !== 0 ? 2 : undefined}>{child}</Box>;
     }
 
-    return <Box ml={index !== 0 ? 1 : undefined}>{child}</Box>;
+    return <Box ml={index !== 0 ? 2 : undefined}>{child}</Box>;
   });
 
   return (
-    <Flex flexDirection={flexDirection} {...restProps}>
+    <Flex
+      flexDirection={flexDirection}
+      alignItems={flexDirection === 'row' && 'center'}
+      {...restProps}
+    >
       {nextChildren}
     </Flex>
   );
