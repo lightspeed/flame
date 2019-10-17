@@ -17,9 +17,19 @@ exports[`Alert Removes close button 1`] = `
   box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
   border-top: 4px solid;
   border-radius: 0.375rem;
-  padding: 0.75rem 1.125rem;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
   background: #e9fafe;
   border-color: #2875c6;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-8 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 
 .emotion-6 {
@@ -126,9 +136,19 @@ exports[`Alert renders a number 1`] = `
   box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
   border-top: 4px solid;
   border-radius: 0.375rem;
-  padding: 0.75rem 1.125rem;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
   background: #e9fafe;
   border-color: #2875c6;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 
 .emotion-4 {
@@ -273,9 +293,19 @@ exports[`Alert renders correctly 1`] = `
   box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
   border-top: 4px solid;
   border-radius: 0.375rem;
-  padding: 0.75rem 1.125rem;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
   background: #e9fafe;
   border-color: #2875c6;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 
 .emotion-4 {
@@ -486,9 +516,19 @@ exports[`Alert renders type danger correctly 1`] = `
   box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
   border-top: 4px solid;
   border-radius: 0.375rem;
-  padding: 0.75rem 1.125rem;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
   background: #fee3e3;
   border-color: #b93435;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 
 <div
@@ -567,9 +607,19 @@ exports[`Alert renders type info correctly 1`] = `
   box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
   border-top: 4px solid;
   border-radius: 0.375rem;
-  padding: 0.75rem 1.125rem;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
   background: #e9fafe;
   border-color: #2875c6;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 
 .emotion-4 {
@@ -780,9 +830,19 @@ exports[`Alert renders type success correctly 1`] = `
   box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
   border-top: 4px solid;
   border-radius: 0.375rem;
-  padding: 0.75rem 1.125rem;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
   background: #e0f8e6;
   border-color: #26853f;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 
 <div
@@ -927,9 +987,19 @@ exports[`Alert renders type warning correctly 1`] = `
   box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
   border-top: 4px solid;
   border-radius: 0.375rem;
-  padding: 0.75rem 1.125rem;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
   background: #fdebd0;
   border-color: #e69524;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 
 <div
@@ -1008,9 +1078,19 @@ exports[`Alert renders with a title 1`] = `
   box-shadow: 0 0 0 1px rgba(0,0,0,0.06),0 3px 6px 0 rgba(0,0,0,0.03),0 1px 2px 0 rgba(0,0,0,0.1);
   border-top: 4px solid;
   border-radius: 0.375rem;
-  padding: 0.75rem 1.125rem;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
   background: #e9fafe;
   border-color: #2875c6;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-11 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 
 .emotion-6 {

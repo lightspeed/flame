@@ -11,7 +11,7 @@ const alertStyles = variant({
   prop: 'type',
 });
 
-const AlertWrapper = styled('div')<{ type: string }>`
+const AlertWrapper = styled('div')<SpaceProps & { type: string }>`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -19,13 +19,14 @@ const AlertWrapper = styled('div')<{ type: string }>`
     0 1px 2px 0 rgba(0, 0, 0, 0.1);
   border-top: 4px solid;
   border-radius: ${themeGet('radii.radius-2')};
-  padding: ${themeGet('space.2')} ${themeGet('space.3')};
   ${space}
   ${alertStyles}
 `;
 
 AlertWrapper.defaultProps = {
   type: 'info',
+  px: 3,
+  py: [3, 2],
 };
 
 const CloseButton = styled('button')<LayoutProps>`
