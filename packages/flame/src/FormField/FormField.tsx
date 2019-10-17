@@ -32,7 +32,8 @@ const BaseLabel = styled(Text)<React.HTMLAttributes<HTMLLabelElement> & TextProp
 BaseLabel.defaultProps = {
   fontWeight: 'bold',
   color: 'textHeading',
-  fontSize: 'small',
+  fontSize: 'text-s',
+  lineHeight: 3,
 };
 
 export interface LabelProps

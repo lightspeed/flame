@@ -117,7 +117,7 @@ stories.add('Story', () => (
       />
     </Box>
     <Box mb={3}>
-      <Input status="error" placeholder="Warning input..." />
+      <Input status="warning" placeholder="Warning input..." />
     </Box>
     <Box mb={3}>
       <Input status="error" placeholder="Error input..." />
