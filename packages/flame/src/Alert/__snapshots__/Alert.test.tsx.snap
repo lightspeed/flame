@@ -43,19 +43,31 @@ exports[`Alert Removes close button 1`] = `
 }
 
 .emotion-2 {
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-0 {
   margin: 0;
   color: #0c0d0d;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.125rem;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0.375rem;
   margin-left: 0;
   font-weight: 700;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    font-size: 1rem;
+  }
 }
 
 <div
@@ -71,14 +83,24 @@ exports[`Alert Removes close button 1`] = `
       <p
         className="emotion-0 emotion-1"
         color="textHeading"
-        fontSize="text"
+        fontSize={
+          Array [
+            "text-l",
+            "text",
+          ]
+        }
         fontWeight="bold"
       >
         My Title
       </p>
       <div
         className="emotion-2 emotion-3"
-        fontSize="text-s"
+        fontSize={
+          Array [
+            "text",
+            "text-s",
+          ]
+        }
       >
         Hello World
       </div>
@@ -130,7 +152,13 @@ exports[`Alert renders a number 1`] = `
 }
 
 .emotion-0 {
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -140,10 +168,17 @@ exports[`Alert renders a number 1`] = `
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  width: 1em;
-  height: 1em;
   padding: 0;
   position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-7 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-7:focus {
@@ -155,10 +190,11 @@ exports[`Alert renders a number 1`] = `
   height: 0.5em;
   fill: black;
   position: absolute;
-  top: 0.25em;
-  left: 0.25em;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
 <div
@@ -173,7 +209,12 @@ exports[`Alert renders a number 1`] = `
     >
       <div
         className="emotion-0 emotion-1"
-        fontSize="text-s"
+        fontSize={
+          Array [
+            "text",
+            "text-s",
+          ]
+        }
       >
         300
       </div>
@@ -181,8 +222,20 @@ exports[`Alert renders a number 1`] = `
   </div>
   <button
     className="emotion-7 emotion-8"
+    height={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
     onClick={[Function]}
     type="button"
+    width={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
   >
     <svg
       className="emotion-6"
@@ -246,7 +299,13 @@ exports[`Alert renders correctly 1`] = `
 }
 
 .emotion-0 {
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -256,10 +315,17 @@ exports[`Alert renders correctly 1`] = `
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  width: 1em;
-  height: 1em;
   padding: 0;
   position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-7 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-7:focus {
@@ -271,10 +337,11 @@ exports[`Alert renders correctly 1`] = `
   height: 0.5em;
   fill: black;
   position: absolute;
-  top: 0.25em;
-  left: 0.25em;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
 <div
@@ -289,7 +356,12 @@ exports[`Alert renders correctly 1`] = `
     >
       <div
         className="emotion-0 emotion-1"
-        fontSize="text-s"
+        fontSize={
+          Array [
+            "text",
+            "text-s",
+          ]
+        }
       >
         Hello World
       </div>
@@ -297,8 +369,20 @@ exports[`Alert renders correctly 1`] = `
   </div>
   <button
     className="emotion-7 emotion-8"
+    height={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
     onClick={[Function]}
     type="button"
+    width={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
   >
     <svg
       className="emotion-6"
@@ -341,7 +425,13 @@ exports[`Alert renders type danger correctly 1`] = `
 }
 
 .emotion-0 {
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -351,10 +441,17 @@ exports[`Alert renders type danger correctly 1`] = `
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  width: 1em;
-  height: 1em;
   padding: 0;
   position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-7 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-7:focus {
@@ -366,10 +463,11 @@ exports[`Alert renders type danger correctly 1`] = `
   height: 0.5em;
   fill: black;
   position: absolute;
-  top: 0.25em;
-  left: 0.25em;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
 .emotion-9 {
@@ -405,7 +503,12 @@ exports[`Alert renders type danger correctly 1`] = `
     >
       <div
         className="emotion-0 emotion-1"
-        fontSize="text-s"
+        fontSize={
+          Array [
+            "text",
+            "text-s",
+          ]
+        }
       >
         Hello World
       </div>
@@ -413,8 +516,20 @@ exports[`Alert renders type danger correctly 1`] = `
   </div>
   <button
     className="emotion-7 emotion-8"
+    height={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
     onClick={[Function]}
     type="button"
+    width={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
   >
     <svg
       className="emotion-6"
@@ -478,7 +593,13 @@ exports[`Alert renders type info correctly 1`] = `
 }
 
 .emotion-0 {
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -488,10 +609,17 @@ exports[`Alert renders type info correctly 1`] = `
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  width: 1em;
-  height: 1em;
   padding: 0;
   position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-7 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-7:focus {
@@ -503,10 +631,11 @@ exports[`Alert renders type info correctly 1`] = `
   height: 0.5em;
   fill: black;
   position: absolute;
-  top: 0.25em;
-  left: 0.25em;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
 <div
@@ -521,7 +650,12 @@ exports[`Alert renders type info correctly 1`] = `
     >
       <div
         className="emotion-0 emotion-1"
-        fontSize="text-s"
+        fontSize={
+          Array [
+            "text",
+            "text-s",
+          ]
+        }
       >
         Hello World
       </div>
@@ -529,8 +663,20 @@ exports[`Alert renders type info correctly 1`] = `
   </div>
   <button
     className="emotion-7 emotion-8"
+    height={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
     onClick={[Function]}
     type="button"
+    width={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
   >
     <svg
       className="emotion-6"
@@ -573,7 +719,13 @@ exports[`Alert renders type success correctly 1`] = `
 }
 
 .emotion-0 {
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -583,10 +735,17 @@ exports[`Alert renders type success correctly 1`] = `
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  width: 1em;
-  height: 1em;
   padding: 0;
   position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-7 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-7:focus {
@@ -598,10 +757,11 @@ exports[`Alert renders type success correctly 1`] = `
   height: 0.5em;
   fill: black;
   position: absolute;
-  top: 0.25em;
-  left: 0.25em;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
 .emotion-9 {
@@ -637,7 +797,12 @@ exports[`Alert renders type success correctly 1`] = `
     >
       <div
         className="emotion-0 emotion-1"
-        fontSize="text-s"
+        fontSize={
+          Array [
+            "text",
+            "text-s",
+          ]
+        }
       >
         Hello World
       </div>
@@ -645,8 +810,20 @@ exports[`Alert renders type success correctly 1`] = `
   </div>
   <button
     className="emotion-7 emotion-8"
+    height={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
     onClick={[Function]}
     type="button"
+    width={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
   >
     <svg
       className="emotion-6"
@@ -689,7 +866,13 @@ exports[`Alert renders type warning correctly 1`] = `
 }
 
 .emotion-0 {
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -699,10 +882,17 @@ exports[`Alert renders type warning correctly 1`] = `
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  width: 1em;
-  height: 1em;
   padding: 0;
   position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-7 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-7:focus {
@@ -714,10 +904,11 @@ exports[`Alert renders type warning correctly 1`] = `
   height: 0.5em;
   fill: black;
   position: absolute;
-  top: 0.25em;
-  left: 0.25em;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
 .emotion-9 {
@@ -753,7 +944,12 @@ exports[`Alert renders type warning correctly 1`] = `
     >
       <div
         className="emotion-0 emotion-1"
-        fontSize="text-s"
+        fontSize={
+          Array [
+            "text",
+            "text-s",
+          ]
+        }
       >
         Hello World
       </div>
@@ -761,8 +957,20 @@ exports[`Alert renders type warning correctly 1`] = `
   </div>
   <button
     className="emotion-7 emotion-8"
+    height={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
     onClick={[Function]}
     type="button"
+    width={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
   >
     <svg
       className="emotion-6"
@@ -826,7 +1034,13 @@ exports[`Alert renders with a title 1`] = `
 }
 
 .emotion-2 {
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-9 {
@@ -836,10 +1050,17 @@ exports[`Alert renders with a title 1`] = `
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  width: 1em;
-  height: 1em;
   padding: 0;
   position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-9:focus {
@@ -851,22 +1072,29 @@ exports[`Alert renders with a title 1`] = `
   height: 0.5em;
   fill: black;
   position: absolute;
-  top: 0.25em;
-  left: 0.25em;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
 .emotion-0 {
   margin: 0;
   color: #0c0d0d;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.125rem;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0.375rem;
   margin-left: 0;
   font-weight: 700;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    font-size: 1rem;
+  }
 }
 
 <div
@@ -882,14 +1110,24 @@ exports[`Alert renders with a title 1`] = `
       <p
         className="emotion-0 emotion-1"
         color="textHeading"
-        fontSize="text"
+        fontSize={
+          Array [
+            "text-l",
+            "text",
+          ]
+        }
         fontWeight="bold"
       >
         My Title
       </p>
       <div
         className="emotion-2 emotion-3"
-        fontSize="text-s"
+        fontSize={
+          Array [
+            "text",
+            "text-s",
+          ]
+        }
       >
         Hello World
       </div>
@@ -897,8 +1135,20 @@ exports[`Alert renders with a title 1`] = `
   </div>
   <button
     className="emotion-9 emotion-10"
+    height={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
     onClick={[Function]}
     type="button"
+    width={
+      Array [
+        "18px",
+        "16px",
+      ]
+    }
   >
     <svg
       className="emotion-8"

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { transparentize } from 'polished';
-import { space, variant, SpaceProps } from 'styled-system';
+import { space, variant, SpaceProps, layout, LayoutProps } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
 import { Flex, Box } from '../Core';
 import { Text } from '../Text';
@@ -28,22 +28,26 @@ AlertWrapper.defaultProps = {
   type: 'info',
 };
 
-const CloseButton = styled('button')`
+const CloseButton = styled('button')<LayoutProps>`
   font-size: ${themeGet('fontSizes.text')};
   color: ${themeGet('colors.textHeading')};
   background-color: ${props => transparentize(0.9, themeGet('colors.textHeading', '#000')(props))};
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  width: 1em;
-  height: 1em;
   padding: 0;
   position: relative;
+  ${layout}
 
   &:focus {
     outline: none;
   }
 `;
+
+CloseButton.defaultProps = {
+  width: ['18px', '16px'],
+  height: ['18px', '16px'],
+};
 
 CloseButton.displayName = 'CloseButton';
 
@@ -90,11 +94,19 @@ const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
         )}
         <Box flex="1">
           {title && (
-            <Text color="textHeading" fontWeight="bold" fontSize="text" mt={0} mr={0} mb={1} ml={0}>
+            <Text
+              color="textHeading"
+              fontWeight="bold"
+              fontSize={['text-l', 'text']}
+              mt={0}
+              mr={0}
+              mb={1}
+              ml={0}
+            >
               {title}
             </Text>
           )}
-          <Box fontSize="text-s">{children}</Box>
+          <Box fontSize={['text', 'text-s']}>{children}</Box>
         </Box>
       </Flex>
       {!noCloseBtn && (
@@ -107,10 +119,9 @@ const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
               height: '0.5em',
               fill: 'black',
               position: 'absolute',
-              top: '0.25em',
-              left: '0.25em',
-              right: '0',
-              bottom: '0',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
             }}
           >
             <g fillRule="evenodd" transform="translate(-4 -4)">

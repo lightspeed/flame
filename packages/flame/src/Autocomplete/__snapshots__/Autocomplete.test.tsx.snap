@@ -125,9 +125,9 @@ exports[`Autocomplete renders as disabled 1`] = `
 }
 
 .emotion-3 {
+  vertical-align: text-bottom;
   width: 1rem;
   height: 1rem;
-  vertical-align: text-bottom;
 }
 
 <div
@@ -229,13 +229,9 @@ exports[`Autocomplete renders as disabled 1`] = `
         <svg
           className="cr-autocomplete__dropdownIndicator cr-icon emotion-3 emotion-4"
           fill="#848a8a"
-          style={
-            Object {
-              "height": "1rem",
-              "width": "1rem",
-            }
-          }
+          height="1rem"
           viewBox="0 0 16 16"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -379,9 +375,9 @@ exports[`Autocomplete renders correctly 1`] = `
 }
 
 .emotion-3 {
+  vertical-align: text-bottom;
   width: 1rem;
   height: 1rem;
-  vertical-align: text-bottom;
 }
 
 <div
@@ -483,13 +479,9 @@ exports[`Autocomplete renders correctly 1`] = `
         <svg
           className="cr-autocomplete__dropdownIndicator cr-icon emotion-3 emotion-4"
           fill="#848a8a"
-          style={
-            Object {
-              "height": "1rem",
-              "width": "1rem",
-            }
-          }
+          height="1rem"
           viewBox="0 0 16 16"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -647,15 +639,15 @@ exports[`Autocomplete renders in loading mode 1`] = `
 }
 
 .emotion-6 {
+  vertical-align: text-bottom;
   width: 1rem;
   height: 1rem;
-  vertical-align: text-bottom;
 }
 
 .emotion-4 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
   -webkit-animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
   animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
 }
@@ -741,13 +733,9 @@ exports[`Autocomplete renders in loading mode 1`] = `
       <svg
         className="emotion-3 cr-icon emotion-4 emotion-5"
         fill="#abb3b3"
-        style={
-          Object {
-            "height": "1.125rem",
-            "width": "1.125rem",
-          }
-        }
+        height="1.125rem"
         viewBox="0 0 16 16"
+        width="1.125rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -782,13 +770,9 @@ exports[`Autocomplete renders in loading mode 1`] = `
         <svg
           className="cr-autocomplete__dropdownIndicator cr-icon emotion-6 emotion-5"
           fill="#848a8a"
-          style={
-            Object {
-              "height": "1rem",
-              "width": "1rem",
-            }
-          }
+          height="1rem"
           viewBox="0 0 16 16"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -919,10 +903,16 @@ exports[`Autocomplete renders with an initial value 1`] = `
   fill: #b93435;
 }
 
-.emotion-3 {
+.emotion-5 {
+  vertical-align: text-bottom;
   width: 1rem;
   height: 1rem;
+}
+
+.emotion-3 {
   vertical-align: text-bottom;
+  width: 0.625rem;
+  height: 0.625rem;
 }
 
 .emotion-0 {
@@ -1040,13 +1030,9 @@ exports[`Autocomplete renders with an initial value 1`] = `
         <svg
           className="cr-autocomplete__clearIndicator cr-icon emotion-3 emotion-4"
           fill="hsl(0, 0%, 80%)"
-          style={
-            Object {
-              "height": "0.625rem",
-              "width": "0.625rem",
-            }
-          }
+          height="0.625rem"
           viewBox="0 0 16 16"
+          width="0.625rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -1074,15 +1060,11 @@ exports[`Autocomplete renders with an initial value 1`] = `
         }
       >
         <svg
-          className="cr-autocomplete__dropdownIndicator cr-icon emotion-3 emotion-4"
+          className="cr-autocomplete__dropdownIndicator cr-icon emotion-5 emotion-4"
           fill="#848a8a"
-          style={
-            Object {
-              "height": "1rem",
-              "width": "1rem",
-            }
-          }
+          height="1rem"
           viewBox="0 0 16 16"
+          width="1rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
