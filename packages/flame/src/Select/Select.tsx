@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
-import { layout, LayoutProps } from 'styled-system';
+import { layout, LayoutProps, compose } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
+import { border, BorderProps } from '../Core';
 
 export type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement>;
 
-export const Select = styled('select')<Omit<LayoutProps, 'size'>>`
+export const Select = styled('select')<Omit<LayoutProps, 'size'> & BorderProps>`
   width: 100%;
   color: ${themeGet('selectStyles.color')};
   font-size: ${themeGet('fontSizes.text-s')};
@@ -48,5 +49,8 @@ export const Select = styled('select')<Omit<LayoutProps, 'size'>>`
     color: transparent;
     text-shadow: 0 0 0 ${themeGet('selectStyles.color')};
   }
-  ${layout}
+  ${compose(
+    layout,
+    border,
+  )}
 `;
