@@ -2,6 +2,7 @@ import * as React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
+import { layout, LayoutProps } from 'styled-system';
 import { Merge } from 'type-fest';
 import { IconCheckmark } from '../Icon/Checkmark';
 import { Box } from '../Core';
@@ -17,10 +18,9 @@ const Label = styled('label')`
   display: inline-flex;
 `;
 
-const CheckboxCheckmarkWrapper = styled('div')<{ indeterminate: boolean }>`
+const CheckboxCheckmarkWrapper = styled('div')<LayoutProps & { indeterminate: boolean }>`
   position: relative;
-  width: 1rem;
-  height: 1rem;
+  ${layout};
   flex: 0 0 auto;
   border-radius: ${themeGet('radii.radius-1')};
   background-color: transparent;
@@ -36,6 +36,11 @@ const CheckboxCheckmarkWrapper = styled('div')<{ indeterminate: boolean }>`
       border-color: ${themeGet('checkboxStyles.indeterminate.border')(props)};
     `};
 `;
+
+CheckboxCheckmarkWrapper.defaultProps = {
+  width: ['18px', '16px'],
+  height: ['18px', '16px'],
+};
 
 const CheckboxIndeterminate = styled('div')`
   position: absolute;
@@ -58,8 +63,7 @@ const StyledIcon = styled(IconCheckmark)<{ size: string }>`
 
 const CheckboxInput = styled('input')<{ indeterminate: boolean }>`
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  ${layout}
   top: 0;
   left: 0;
   opacity: 0;
@@ -93,6 +97,14 @@ const CheckboxInput = styled('input')<{ indeterminate: boolean }>`
   }
 `;
 
+CheckboxInput.defaultProps = {
+  // Fun clashing between legacy props and our custom props
+  // @ts-ignore
+  width: ['18px', '16px'],
+  // @ts-ignore
+  height: ['18px', '16px'],
+};
+
 export type CheckboxLabelProps = TextProps;
 export const CheckboxLabel = styled(Text)<CheckboxLabelProps>`
   ${props =>
@@ -104,7 +116,8 @@ export const CheckboxLabel = styled(Text)<CheckboxLabelProps>`
 CheckboxLabel.defaultProps = {
   ml: 2,
   fontWeight: 'bold',
-  size: 'small',
+  fontSize: ['text', 'text-s'],
+  lineHeight: 3,
   as: 'div',
 };
 
@@ -130,7 +143,7 @@ export const CheckboxDescription: React.FC<CheckboxDescriptionProps> = ({
   color,
   ...restProps
 }) => (
-  <CheckboxDescriptionWrapper ml="1rem" color={color}>
+  <CheckboxDescriptionWrapper ml={['18px', '16px']} color={color}>
     <Text as="div" size="small" ml={2} {...restProps}>
       {children}
     </Text>
