@@ -126,7 +126,7 @@ export const RadioDescription: React.FC<RadioDescriptionProps> = ({
   color,
   ...restProps
 }) => (
-  <RadioDescriptionWrapper ml="1rem" color={color}>
+  <RadioDescriptionWrapper ml={['18px', '16px']} color={color}>
     <Text as="div" size="small" ml={2} {...restProps}>
       {children}
     </Text>

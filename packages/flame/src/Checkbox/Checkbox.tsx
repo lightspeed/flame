@@ -143,7 +143,7 @@ export const CheckboxDescription: React.FC<CheckboxDescriptionProps> = ({
   color,
   ...restProps
 }) => (
-  <CheckboxDescriptionWrapper ml="1rem" color={color}>
+  <CheckboxDescriptionWrapper ml={['18px', '16px']} color={color}>
     <Text as="div" size="small" ml={2} {...restProps}>
       {children}
     </Text>
