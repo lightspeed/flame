@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import { themeGet } from '@styled-system/theme-get';
-import { layout, LayoutProps } from 'styled-system';
+import { layout, LayoutProps, compose } from 'styled-system';
 import { Merge } from 'type-fest';
 
 import { Flex, Box, border, BorderProps } from '../Core';
@@ -138,7 +138,10 @@ const Wrapper = styled('div')<WrapperProps>`
   transition: all ${themeGet('transition.transition-duration-fast')} ease-in-out;
   width: 100%;
 
-  ${layout}
+  ${compose(
+    layout,
+    border,
+  )}
 
   ${props =>
     props.disabled &&

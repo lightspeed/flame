@@ -23,6 +23,8 @@ exports[`Group Snaphots should adjust border radii 1`] = `
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
   width: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .emotion-0 {
@@ -262,23 +264,6 @@ exports[`Group Snaphots should adjust border radii when surrounded 1`] = `
   display: flex;
 }
 
-.emotion-10 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 0.375rem;
-  background: #fff;
-  -webkit-transition: all 100ms ease-in-out;
-  transition: all 100ms ease-in-out;
-  width: 100%;
-}
-
 .emotion-6 {
   width: 100%;
   -webkit-flex: 1 1 0%;
@@ -457,6 +442,26 @@ exports[`Group Snaphots should adjust border radii when surrounded 1`] = `
   background-color: #f3f3f3;
   box-shadow: rgba(12,13,13,0.18) 0px 0px 0.375rem inset;
   border-color: #abb3b3;
+}
+
+.emotion-10 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0.375rem;
+  background: #fff;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  width: 100%;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
 }
 
 .emotion-8 {
