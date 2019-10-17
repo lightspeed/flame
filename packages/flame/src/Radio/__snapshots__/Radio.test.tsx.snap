@@ -112,7 +112,13 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
 }
 
 .emotion-12 {
-  margin-left: 1rem;
+  margin-left: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-12 {
+    margin-left: 16px;
+  }
 }
 
 .emotion-12 .emotion-11 {

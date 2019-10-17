@@ -274,7 +274,13 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 }
 
 .emotion-13 {
-  margin-left: 1rem;
+  margin-left: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-13 {
+    margin-left: 16px;
+  }
 }
 
 .emotion-13 .emotion-12 {
