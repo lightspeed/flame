@@ -101,7 +101,7 @@ const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
               fontSize={['text-l', 'text']}
               mt={0}
               mr={0}
-              mb={1}
+              mb={0}
               ml={0}
             >
               {title}
