@@ -27,6 +27,8 @@ What actually happens? Include an error message (in a `<details></details>` tag 
 
 1. 2. 3.
 
+Or provide a [CodeSandbox](https://codesandbox.io/s/lightspeed-flame-components-n0bn2)
+
 ## Specifications
 
 - Affected component(s):
