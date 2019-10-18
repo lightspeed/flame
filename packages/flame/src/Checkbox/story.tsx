@@ -5,6 +5,7 @@ import { withReadme } from 'storybook-readme';
 
 import { Heading2, Heading3, TextContent } from '../Text';
 import { Box } from '../Core';
+import { percyBreakpoints, percySkip } from '../../../../stories/helpers/percy';
 
 import { Checkbox, CheckboxLabel, CheckboxDescription, CheckboxProps } from './Checkbox';
 import Readme from './README.md';
@@ -91,74 +92,80 @@ class CheckBoxWrapper extends React.Component<{}, { checked: boolean; indetermin
   }
 }
 
-stories.add('Story', () => (
-  <div>
-    <TextContent>
-      <Heading2>Checkbox types</Heading2>
-      <Heading3>Checkbox with label</Heading3>
-      <Box mb={3}>
-        <StatefulCheckbox id="simple" label="Label" />
-      </Box>
-      <Heading3>Checkbox with label and description</Heading3>
-      <Box mb={3}>
-        <StatefulCheckbox id="checked" label="Label" description="Description text" checked />
-      </Box>
-      <Heading3>Checkbox with long label and description in a 50% container</Heading3>
-      <Box mb={3} style={{ width: '50%' }}>
-        <StatefulCheckbox
-          id="longLabel"
-          label="Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label"
-          description="Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description"
-          indeterminate
-        />
-      </Box>
-      <Heading3>Using custom elements</Heading3>
-      <Box mb={3}>
-        <StatefulCheckbox
-          id="longLabel"
-          label={() => (
-            <CheckboxLabel ml="4" width="100%" color="red" fontWeight="normal">
-              Customizing the base exported `CheckboxLabel`
-            </CheckboxLabel>
-          )}
-          description={() => (
-            <CheckboxDescription color="blue" ml={4} mt={1} size="large">
-              Customizing the base exported `CheckboxDescription`
-            </CheckboxDescription>
-          )}
-        />
-      </Box>
-    </TextContent>
+stories.add(
+  'Story',
+  () => (
+    <div>
+      <TextContent>
+        <Heading2>Checkbox types</Heading2>
+        <Heading3>Checkbox with label</Heading3>
+        <Box mb={3}>
+          <StatefulCheckbox id="simple" label="Label" />
+        </Box>
+        <Heading3>Checkbox with label and description</Heading3>
+        <Box mb={3}>
+          <StatefulCheckbox id="checked" label="Label" description="Description text" checked />
+        </Box>
+        <Heading3>Checkbox with long label and description in a 50% container</Heading3>
+        <Box mb={3} style={{ width: '50%' }}>
+          <StatefulCheckbox
+            id="longLabel"
+            label="Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label"
+            description="Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description"
+            indeterminate
+          />
+        </Box>
+        <Heading3>Using custom elements</Heading3>
+        <Box mb={3}>
+          <StatefulCheckbox
+            id="longLabel"
+            label={() => (
+              <CheckboxLabel ml="4" width="100%" color="red" fontWeight="normal">
+                Customizing the base exported `CheckboxLabel`
+              </CheckboxLabel>
+            )}
+            description={() => (
+              <CheckboxDescription color="blue" ml={4} mt={1} size="large">
+                Customizing the base exported `CheckboxDescription`
+              </CheckboxDescription>
+            )}
+          />
+        </Box>
+      </TextContent>
 
-    <TextContent>
-      <Heading2>Checkbox states</Heading2>
+      <TextContent>
+        <Heading2>Checkbox states</Heading2>
 
-      <Box mb={3}>
-        <StatefulCheckbox id="unchecked" label="Unchecked" />
-      </Box>
-      <Box mb={3}>
-        <StatefulCheckbox id="indeterminate" label="Indeterminate" indeterminate />
-      </Box>
-      <Box mb={3}>
-        <StatefulCheckbox id="checked" label="Checked" checked />
-      </Box>
-      <Box mb={3}>
-        <StatefulCheckbox id="disabled" label="Disabled" disabled />
-      </Box>
-      <Box mb={3}>
-        <StatefulCheckbox
-          id="indeterminate-disabled"
-          label="Indeterminate Disabled"
-          indeterminate
-          disabled
-        />
-      </Box>
-      <Box mb={3}>
-        <StatefulCheckbox id="checked-disabled" label="Checked Disabled" checked disabled />
-      </Box>
-    </TextContent>
-  </div>
-));
+        <Box mb={3}>
+          <StatefulCheckbox id="unchecked" label="Unchecked" />
+        </Box>
+        <Box mb={3}>
+          <StatefulCheckbox id="indeterminate" label="Indeterminate" indeterminate />
+        </Box>
+        <Box mb={3}>
+          <StatefulCheckbox id="checked" label="Checked" checked />
+        </Box>
+        <Box mb={3}>
+          <StatefulCheckbox id="disabled" label="Disabled" disabled />
+        </Box>
+        <Box mb={3}>
+          <StatefulCheckbox
+            id="indeterminate-disabled"
+            label="Indeterminate Disabled"
+            indeterminate
+            disabled
+          />
+        </Box>
+        <Box mb={3}>
+          <StatefulCheckbox id="checked-disabled" label="Checked Disabled" checked disabled />
+        </Box>
+      </TextContent>
+    </div>
+  ),
+  {
+    ...percyBreakpoints,
+  },
+);
 
 stories.add(
   'Events',
@@ -192,5 +199,5 @@ stories.add(
       </TextContent>
     </div>
   ),
-  { percy: { skip: true } },
+  { ...percySkip },
 );
