@@ -89,7 +89,7 @@ const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
 
   return (
     <AlertWrapper type={type} {...restProps}>
-      <Flex flex="1" alignItems="flex-start" mt={`-${borderTopHeight}px`}>
+      <Flex flex="1" alignItems="flex-start" mt={`-${borderTopHeight}`}>
         {icon && (
           <Box lineHeight={4} pr={2}>
             {icon}
