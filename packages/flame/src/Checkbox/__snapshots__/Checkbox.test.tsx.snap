@@ -82,9 +82,9 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
 }
 
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -138,13 +138,9 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
     >
       <svg
         className="emotion-2 cr-icon emotion-3 emotion-4"
-        style={
-          Object {
-            "height": "0.65rem",
-            "width": "0.65rem",
-          }
-        }
+        height="0.65rem"
         viewBox="0 0 16 16"
+        width="0.65rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -245,9 +241,9 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 }
 
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -338,13 +334,9 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
     >
       <svg
         className="emotion-2 cr-icon emotion-3 emotion-4"
-        style={
-          Object {
-            "height": "0.65rem",
-            "width": "0.65rem",
-          }
-        }
+        height="0.65rem"
         viewBox="0 0 16 16"
+        width="0.65rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -463,9 +455,9 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
 }
 
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -519,13 +511,9 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
     >
       <svg
         className="emotion-2 cr-icon emotion-3 emotion-4"
-        style={
-          Object {
-            "height": "0.65rem",
-            "width": "0.65rem",
-          }
-        }
+        height="0.65rem"
         viewBox="0 0 16 16"
+        width="0.65rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -620,9 +608,9 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
 }
 
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -675,13 +663,9 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
     >
       <svg
         className="emotion-2 cr-icon emotion-3 emotion-4"
-        style={
-          Object {
-            "height": "0.65rem",
-            "width": "0.65rem",
-          }
-        }
+        height="0.65rem"
         viewBox="0 0 16 16"
+        width="0.65rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -776,9 +760,9 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
 }
 
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -830,13 +814,9 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
     >
       <svg
         className="emotion-2 cr-icon emotion-3 emotion-4"
-        style={
-          Object {
-            "height": "0.65rem",
-            "width": "0.65rem",
-          }
-        }
+        height="0.65rem"
         viewBox="0 0 16 16"
+        width="0.65rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -908,9 +888,9 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
 }
 
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -999,13 +979,9 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
     >
       <svg
         className="emotion-2 cr-icon emotion-3 emotion-4"
-        style={
-          Object {
-            "height": "0.65rem",
-            "width": "0.65rem",
-          }
-        }
+        height="0.65rem"
         viewBox="0 0 16 16"
+        width="0.65rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -1103,9 +1079,9 @@ exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
 }
 
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1158,13 +1134,9 @@ exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
     >
       <svg
         className="emotion-2 cr-icon emotion-3 emotion-4"
-        style={
-          Object {
-            "height": "0.65rem",
-            "width": "0.65rem",
-          }
-        }
+        height="0.65rem"
         viewBox="0 0 16 16"
+        width="0.65rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

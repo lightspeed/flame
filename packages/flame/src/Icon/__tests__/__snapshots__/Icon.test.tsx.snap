@@ -2,20 +2,33 @@
 
 exports[`Icon renders correctly 1`] = `
 .emotion-0 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 <svg
   className=" cr-icon emotion-0 emotion-1"
-  style={
-    Object {
-      "height": "1rem",
-      "width": "1rem",
-    }
+  height={
+    Array [
+      "18px",
+      "1rem",
+    ]
   }
   viewBox="0 0 16 16"
+  width={
+    Array [
+      "18px",
+      "1rem",
+    ]
+  }
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -32,20 +45,33 @@ exports[`Icon renders correctly 1`] = `
 
 exports[`Icon renders with baseColor and detailColor 1`] = `
 .emotion-0 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 <svg
   className=" cr-icon emotion-0 emotion-1"
-  style={
-    Object {
-      "height": "1rem",
-      "width": "1rem",
-    }
+  height={
+    Array [
+      "18px",
+      "1rem",
+    ]
   }
   viewBox="0 0 16 16"
+  width={
+    Array [
+      "18px",
+      "1rem",
+    ]
+  }
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -70,21 +96,34 @@ exports[`Icon renders with baseColor and detailColor 1`] = `
 
 exports[`Icon renders with color 1`] = `
 .emotion-0 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 <svg
   className=" cr-icon emotion-0 emotion-1"
   fill="cr-blue"
-  style={
-    Object {
-      "height": "1rem",
-      "width": "1rem",
-    }
+  height={
+    Array [
+      "18px",
+      "1rem",
+    ]
   }
   viewBox="0 0 16 16"
+  width={
+    Array [
+      "18px",
+      "1rem",
+    ]
+  }
   xmlns="http://www.w3.org/2000/svg"
 >
   <path

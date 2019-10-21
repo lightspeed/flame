@@ -242,12 +242,19 @@ exports[`<Tag /> Snapshots when dismissible should render correctly 1`] = `
 }
 
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 18px;
+  height: 18px;
   margin: 0 0.375rem;
   border-radius: 50%;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-3 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 <div
@@ -269,13 +276,19 @@ exports[`<Tag /> Snapshots when dismissible should render correctly 1`] = `
   >
     <svg
       className="emotion-2 cr-icon emotion-3 emotion-4"
-      style={
-        Object {
-          "height": "1rem",
-          "width": "1rem",
-        }
+      height={
+        Array [
+          "18px",
+          "1rem",
+        ]
       }
       viewBox="0 0 16 16"
+      width={
+        Array [
+          "18px",
+          "1rem",
+        ]
+      }
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -366,12 +379,19 @@ exports[`<Tag /> Snapshots when small should render correctly 1`] = `
 }
 
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 18px;
+  height: 18px;
   margin: 0 0.375rem;
   border-radius: 50%;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-3 {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .emotion-0 {
@@ -463,13 +483,19 @@ exports[`<Tag /> Snapshots when small should render correctly 1`] = `
   >
     <svg
       className="emotion-2 cr-icon emotion-3 emotion-4"
-      style={
-        Object {
-          "height": "1rem",
-          "width": "1rem",
-        }
+      height={
+        Array [
+          "18px",
+          "1rem",
+        ]
       }
       viewBox="0 0 16 16"
+      width={
+        Array [
+          "18px",
+          "1rem",
+        ]
+      }
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
