@@ -6,6 +6,8 @@ import { themeGet } from '@styled-system/theme-get';
 import { Flex, Box } from '../Core';
 import { Text } from '../Text';
 
+const borderTopHeight = '4px';
+
 const alertStyles = variant({
   key: 'alertVariants',
   prop: 'type',
@@ -17,7 +19,7 @@ const AlertWrapper = styled('div')<SpaceProps & { type: string }>`
   align-items: flex-start;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 3px 6px 0 rgba(0, 0, 0, 0.03),
     0 1px 2px 0 rgba(0, 0, 0, 0.1);
-  border-top: 4px solid;
+  border-top: ${borderTopHeight} solid;
   border-radius: ${themeGet('radii.radius-2')};
   ${space}
   ${alertStyles}
@@ -29,7 +31,7 @@ AlertWrapper.defaultProps = {
   py: [3, 2],
 };
 
-const CloseButton = styled('button')<LayoutProps & SpaceProps>`
+const CloseButton = styled('button')<LayoutProps>`
   font-size: ${themeGet('fontSizes.text')};
   color: ${themeGet('colors.textHeading')};
   background-color: ${props => transparentize(0.9, themeGet('colors.textHeading', '#000')(props))};
@@ -87,7 +89,7 @@ const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
 
   return (
     <AlertWrapper type={type} {...restProps}>
-      <Flex flex="1" alignItems="flex-start">
+      <Flex flex="1" alignItems="flex-start" mt={`-${borderTopHeight}px`}>
         {icon && (
           <Box lineHeight={4} pr={2}>
             {icon}
