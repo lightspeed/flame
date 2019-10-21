@@ -29,7 +29,7 @@ AlertWrapper.defaultProps = {
   py: [3, 2],
 };
 
-const CloseButton = styled('button')<LayoutProps>`
+const CloseButton = styled('button')<LayoutProps & SpaceProps>`
   font-size: ${themeGet('fontSizes.text')};
   color: ${themeGet('colors.textHeading')};
   background-color: ${props => transparentize(0.9, themeGet('colors.textHeading', '#000')(props))};
@@ -89,51 +89,57 @@ const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
     <AlertWrapper type={type} {...restProps}>
       <Flex flex="1" alignItems="flex-start">
         {icon && (
-          <Flex alignItems="center" pr={2} pt="2px">
+          <Box lineHeight={4} pr={2}>
             {icon}
-          </Flex>
+          </Box>
         )}
         <Box flex="1">
-          {title && (
-            <Text
-              color="textHeading"
-              fontWeight="bold"
-              fontSize={['text-l', 'text']}
-              mt={0}
-              mr={0}
-              mb={0}
-              ml={0}
-            >
-              {title}
-            </Text>
-          )}
+          <Flex alignItems="center">
+            {title && (
+              <Box flex="1">
+                <Text
+                  color="textHeading"
+                  fontWeight="bold"
+                  lineHeight={4}
+                  fontSize={['text-l', 'text']}
+                  mt={0}
+                  mr={0}
+                  mb={0}
+                  ml={0}
+                >
+                  {title}
+                </Text>
+              </Box>
+            )}
+            {!noCloseBtn && (
+              <CloseButton type="button" onClick={handleClose}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 8 8"
+                  css={{
+                    width: '0.5em',
+                    height: '0.5em',
+                    fill: 'black',
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                  }}
+                >
+                  <g fillRule="evenodd" transform="translate(-4 -4)">
+                    <path
+                      fillOpacity=".5"
+                      d="M9.414 8l2.122-2.121a1 1 0 1 0-1.415-1.415L8 6.586 5.879 4.464A1 1 0 0 0 4.464 5.88L6.586 8l-2.122 2.121a1 1 0 0 0 1.415 1.415L8 9.414l2.121 2.122a1 1 0 0 0 1.415-1.415L9.414 8z"
+                    />
+                  </g>
+                </svg>
+              </CloseButton>
+            )}
+          </Flex>
+
           <Box fontSize={['text', 'text-s']}>{children}</Box>
         </Box>
       </Flex>
-      {!noCloseBtn && (
-        <CloseButton type="button" onClick={handleClose}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 8 8"
-            css={{
-              width: '0.5em',
-              height: '0.5em',
-              fill: 'black',
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-            }}
-          >
-            <g fillRule="evenodd" transform="translate(-4 -4)">
-              <path
-                fillOpacity=".5"
-                d="M9.414 8l2.122-2.121a1 1 0 1 0-1.415-1.415L8 6.586 5.879 4.464A1 1 0 0 0 4.464 5.88L6.586 8l-2.122 2.121a1 1 0 0 0 1.415 1.415L8 9.414l2.121 2.122a1 1 0 0 0 1.415-1.415L9.414 8z"
-              />
-            </g>
-          </svg>
-        </CloseButton>
-      )}
     </AlertWrapper>
   );
 };
