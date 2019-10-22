@@ -55,6 +55,15 @@ jobs:
           name: Run typechecking
           command: yarn typecheck
 
+  percy:
+    <<: *defaults_node
+    steps:
+      - attach_workspace:
+          at: /tmp/build
+      - run:
+          name: Run visual regression tests
+          command: yarn snapshot
+
 workflows:
   version: 2
   build-test:
@@ -67,5 +76,8 @@ workflows:
           requires:
             - install
       - typecheck:
+          requires:
+            - install
+      - percy:
           requires:
             - install
