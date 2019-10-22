@@ -2,7 +2,7 @@ version: 2.1
 
 defaults_node: &defaults_node
   docker:
-    - image: circleci/node:10
+    - image: circleci/node:10.16.0-browsers
   working_directory: /tmp/build
 
 jobs:
