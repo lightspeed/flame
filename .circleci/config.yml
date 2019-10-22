@@ -62,7 +62,7 @@ jobs:
           at: /tmp/build
       - run:
           name: Run visual regression tests
-          command: yarn snapshot
+          command: yarn run percy
 
 workflows:
   version: 2
