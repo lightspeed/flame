@@ -10,10 +10,14 @@ const SpacedGroup: React.FC<SpacedGroupProps> = ({
   ...restProps
 }) => {
   const nextChildren = React.Children.map(children, (child: any, index) => {
+    // Covered by visual regression test, ignore from coverage report
+    /* istanbul ignore next */
     if (flexDirection && flexDirection === 'column') {
       return <Box mt={index !== 0 ? 2 : undefined}>{child}</Box>;
     }
 
+    // Covered by visual regression test, ignore from coverage report
+    /* istanbul ignore next */
     if (flexDirection && flexDirection === 'column-reverse') {
       return <Box mb={index !== 0 ? 2 : undefined}>{child}</Box>;
     }
