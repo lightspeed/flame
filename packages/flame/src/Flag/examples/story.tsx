@@ -16,7 +16,7 @@ import Readme from '../README.md';
 
 import { Box } from '../../Core';
 import { Button } from '../../Button';
-import { SpacedGroup } from '../../Group';
+import { SpacedGroup } from '../../SpacedGroup';
 import { Input } from '../../Input';
 import { Text } from '../../Text';
 import { Ul } from '../../../../../stories/components/Ul';

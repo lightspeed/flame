@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 
-import { Box, Flex, border, FlameFlexProps, BorderProps } from '../Core';
+import { Flex, border, FlameFlexProps, BorderProps } from '../Core';
 
 export interface InputGroupAddonProps extends FlameFlexProps, BorderProps {}
 const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
@@ -49,36 +49,6 @@ const InputGroup: React.FC = ({ children, ...restProps }) => {
   return <Flex {...restProps}>{nextChildren}</Flex>;
 };
 
-export interface SpacedGroupProps extends FlameFlexProps {}
-const SpacedGroup: React.FC<SpacedGroupProps> = ({
-  flexDirection = 'row',
-  alignItems = 'center',
-  children,
-  ...restProps
-}) => {
-  const nextChildren = React.Children.map(children, (child: any, index) => {
-    if (flexDirection && flexDirection === 'column') {
-      return <Box mt={index !== 0 ? 2 : undefined}>{child}</Box>;
-    }
-
-    if (flexDirection && flexDirection === 'column-reverse') {
-      return <Box mb={index !== 0 ? 2 : undefined}>{child}</Box>;
-    }
-
-    return <Box ml={index !== 0 ? 2 : undefined}>{child}</Box>;
-  });
-
-  return (
-    <Flex
-      flexDirection={flexDirection}
-      alignItems={flexDirection === 'row' && 'center'}
-      {...restProps}
-    >
-      {nextChildren}
-    </Flex>
-  );
-};
-
 const BeThereOrBeSquare = InputGroup;
 
-export { SpacedGroup, InputGroup, InputGroupAddon, BeThereOrBeSquare };
+export { InputGroup, InputGroupAddon, BeThereOrBeSquare };

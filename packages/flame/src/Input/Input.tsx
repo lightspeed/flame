@@ -319,8 +319,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     const nextMessage = typeof status === 'object' ? status.message : statusMessage;
 
     if (typeof status === 'object') {
+      // eslint-disable-next-line no-console
       console.warn(`
-Using status as an object will be deprecated in the next version of flame.
+Using status as an object will be deprecated in the next version of Flame.
 Please prefer passing the status.type to the status prop directly and
 pass the status.message to the statusMessage prop.
 `);

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 
-import { InputGroup, InputGroupAddon, SpacedGroup } from './index';
+import { InputGroup, InputGroupAddon } from './index';
 import Readme from './README.md';
 import { Input } from '../Input';
 import { Box } from '../Core';
@@ -11,7 +11,6 @@ import { Dropdown, DropdownContent } from '../Dropdown';
 import { Icon } from '../Icon';
 import { Select } from '../Select';
 import { Text, TextLink } from '../Text';
-import { Badge } from '../Badge';
 
 const SampleDropdownContent = () => (
   <DropdownContent width="100px">
@@ -29,7 +28,7 @@ const SampleDropdownContent = () => (
   </DropdownContent>
 );
 
-const stories = storiesOf('Groups', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('InputGroup', module).addDecorator(withReadme(Readme));
 
 stories.add('Story', () => (
   <div>
@@ -49,21 +48,10 @@ stories.add('Story', () => (
       </InputGroup>
     </Box>
 
-    <h3>Adding an input to the mix</h3>
-
-    <Box mb={3}>
-      <InputGroup>
-        <Button>-</Button>
-        <Input defaultValue="this is some value" />
-        <Button>+</Button>
-      </InputGroup>
-    </Box>
-
     <h3>Search bar pattern</h3>
-
     <Box mb={3}>
       <InputGroup>
-        <Input defaultValue="Some arbitrary value" />
+        <Input defaultValue="Some arbitrary value" autoFocus={true} />
         <Button>Submit</Button>
       </InputGroup>
     </Box>
@@ -87,6 +75,16 @@ stories.add('Story', () => (
         <Dropdown buttonContent="Menu">
           <SampleDropdownContent />
         </Dropdown>
+      </InputGroup>
+    </Box>
+
+    <h3>Adding an input to the mix</h3>
+
+    <Box mb={3}>
+      <InputGroup>
+        <Button>-</Button>
+        <Input defaultValue="this is some value" />
+        <Button>+</Button>
       </InputGroup>
     </Box>
 
@@ -174,44 +172,5 @@ stories.add('Input Group Addon', () => (
         <Input width="inherit" defaultValue="Some arbitrary value" />
       </InputGroup>
     </Box>
-  </div>
-));
-
-stories.add('Spaced Group', () => (
-  <div>
-    <h3>Spaced Group</h3>
-
-    <SpacedGroup mb={3}>
-      <Button>-</Button>
-      <Input defaultValue="0" />
-      <Button>+</Button>
-    </SpacedGroup>
-
-    <SpacedGroup mb={3}>
-      <Input placeholder="Country" />
-      <Input placeholder="State" />
-      <Input placeholder="City" />
-    </SpacedGroup>
-
-    <SpacedGroup mb={3}>
-      <Button>First Button</Button>
-      <Button>Second Button</Button>
-      <Button>Third Button</Button>
-    </SpacedGroup>
-
-    <SpacedGroup mb={3}>
-      <Badge type="success">Success</Badge>
-      <Badge type="info">Info</Badge>
-      <Badge type="danger">Danger</Badge>
-      <Badge type="important">Important</Badge>
-    </SpacedGroup>
-
-    <h3>Spaced Group - Column layout</h3>
-
-    <SpacedGroup flexDirection="column">
-      <Button width="100%">First Button</Button>
-      <Button width="100%">Second Button</Button>
-      <Button width="100%">Third Button</Button>
-    </SpacedGroup>
   </div>
 ));

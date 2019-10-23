@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from '../Modal';
 import { Button } from '../Button';
-import { SpacedGroup } from '../Group';
+import { SpacedGroup } from '../SpacedGroup';
 
 type OptionalProps = {
   /** Variant of the Dialog's CTA */

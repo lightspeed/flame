@@ -7,7 +7,8 @@ import { Button } from './Button';
 import Readme from './README.md';
 import { Flex, Box } from '../Core';
 import { Divider } from '../Divider';
-import { InputGroup, SpacedGroup } from '../Group';
+import { InputGroup } from '../InputGroup';
+import { SpacedGroup } from '../SpacedGroup';
 import { Icon } from '../Icon';
 
 const stories = storiesOf('Button', module).addDecorator(withReadme(Readme));

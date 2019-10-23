@@ -4,7 +4,7 @@ import { withReadme } from 'storybook-readme';
 
 import { Spinner } from './Spinner';
 import Readme from './README.md';
-import { SpacedGroup } from '../Group';
+import { SpacedGroup } from '../SpacedGroup';
 import { Box } from '../Core';
 import { Text } from '../Text';
 

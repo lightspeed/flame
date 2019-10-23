@@ -7,7 +7,7 @@ import { Text, Heading2 } from '../Text';
 
 import { Switch } from './Switch';
 import Readme from './README.md';
-import { SpacedGroup } from '../Group';
+import { SpacedGroup } from '../SpacedGroup';
 import { Button } from '../Button';
 import { Box } from '../Core';
 

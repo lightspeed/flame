@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Group Snaphots should adjust border radii 1`] = `
+exports[`InputGroup Snaphots should adjust border radii 1`] = `
 .emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -256,7 +256,7 @@ exports[`Group Snaphots should adjust border radii 1`] = `
 </div>
 `;
 
-exports[`Group Snaphots should adjust border radii when surrounded 1`] = `
+exports[`InputGroup Snaphots should adjust border radii when surrounded 1`] = `
 .emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
