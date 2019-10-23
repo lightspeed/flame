@@ -32,6 +32,7 @@ export const GroupItem = styled('div')<GroupItemProps>`
   ${flexbox};
   ${layout};
   ${() => {
+    // eslint-disable-next-line no-console
     console.warn(`
 DEPRECATION WARNING
 GroupItem will be removed in the next major version of Flame.
@@ -100,6 +101,7 @@ export const GroupAddon = styled('div')<GroupAddonProps>`
 
   ${layout};
   ${() => {
+    // eslint-disable-next-line no-console
     console.warn(`
 DEPRECATION WARNING
 GroupAddon will be removed in the next major version of Flame.
@@ -251,6 +253,7 @@ export const Group: React.FunctionComponent<GroupProps> = ({
   inputBlock,
   ...restProps
 }) => {
+  // eslint-disable-next-line no-console
   console.warn(`
 DEPRECATION WARNING
 Group will be removed in the next major version of Flame.
