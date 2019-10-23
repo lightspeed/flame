@@ -1,15 +1,18 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withReadme } from 'storybook-readme';
 
-import { Group, GroupAddon } from './Group';
+import Readme from './README.md';
+import { Group, GroupAddon } from './index';
 import { Input } from '../Input';
 import { Box } from '../Core';
+import { Alert } from '../Alert';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
 import { Badge, PillBadge } from '../Badge';
 
-const stories = storiesOf('Group', module);
+const stories = storiesOf('Group', module).addDecorator(withReadme(Readme));
 
 const Description: React.FC = ({ children }) => (
   <Text fontSize="text-s" mb={1}>
@@ -17,8 +20,23 @@ const Description: React.FC = ({ children }) => (
   </Text>
 );
 
+const DeprecationWarning: React.FC = () => (
+  <div className="hide-in-percy">
+    <Alert
+      type="warning"
+      icon={<Icon name="warning" color="orange" />}
+      title="Deprecation notice"
+      mb={2}
+    >
+      Group will be deprecated in the next major version of Flame, see README on how to replace each
+      of its component.
+    </Alert>
+  </div>
+);
+
 stories.add('Types', () => (
   <div>
+    <DeprecationWarning />
     <div>
       <h3>Horizontal Group</h3>
       <Box mb={3}>
@@ -66,6 +84,7 @@ stories.add('Types', () => (
 
 stories.add('Spacing', () => (
   <div>
+    <DeprecationWarning />
     <div>
       <h3>noSpacing Horizontal Group</h3>
       <Box mb={3}>
@@ -166,6 +185,7 @@ stories.add('Spacing', () => (
 
 stories.add('Addon', () => (
   <div>
+    <DeprecationWarning />
     <div>
       <h3>Horizontal Group Addon</h3>
       <Box mb={3}>
