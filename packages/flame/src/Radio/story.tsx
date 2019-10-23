@@ -39,29 +39,25 @@ stories.add('Story', () => (
       />
     </Box>
 
-    <Heading3 mb={2}>Radio with long label and description</Heading3>
+    <Heading3 mb={2}>Radio with long label and description in a 50% container</Heading3>
     <Box mb={3} style={{ width: '50%' }}>
       <Radio
         name="radiolong"
         id="radiolong"
         label="Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label"
-        description="Long Descrchecked={false}iption Long Description Long Description Long Description Long Description Long Description Long Description Long Description"
+        description="Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description"
         checked={false}
       />
     </Box>
-    <Heading3>Radio with long label and description in a 50% container</Heading3>
+    <Heading3 mb={2}>Radio with custom label and description</Heading3>
     <Box mb={3}>
       <Radio
-        name="radiolong"
-        id="radiolong"
+        name="radio-custom"
+        id="radio-custom"
         checked={false}
-        label={
-          <Text color="red" ml={2}>
-            Customizing the radio label
-          </Text>
-        }
+        label={<Text color="red">Customizing the radio label</Text>}
         description={
-          <Text color="blue" fontSize="large" mt={2} ml={2}>
+          <Text color="blue" fontSize="large" mt={2}>
             Customizing the radio label description
           </Text>
         }

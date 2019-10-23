@@ -66,6 +66,7 @@ stories.add('Story', () => (
   <div>
     <TextContent>
       <Heading2>Checkbox types</Heading2>
+      <Heading3>Checkbox with label</Heading3>
       <Box mb={3}>
         <Checkbox id="simple" label="Label" />
       </Box>
