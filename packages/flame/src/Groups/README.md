@@ -1,6 +1,6 @@
-# Group
+# Groups
 
-A utility box to Group components together in various styles.
+A utility box of Group components to group together in various styles.
 
 ### React Component
 

@@ -1,30 +1,43 @@
-import * as React from 'react';
-import { createComponent } from 'test-utils';
-import { InputGroup } from './Group';
-import { Input } from '../Input';
-import { Button } from '../Button';
+/* eslint-disable import/no-extraneous-dependencies */
 
-describe('Group', () => {
-  describe('Snaphots', () => {
-    it('should adjust border radii', () => {
+import * as React from 'react';
+import { createComponent, customRender } from 'test-utils';
+import { Group, GroupAddon } from './Group';
+
+describe('<Group />', () => {
+  describe('Snapshots', () => {
+    it('renders a group', () => {
       const component = createComponent(
-        <InputGroup>
-          <Input />
-          <Button>action</Button>
-        </InputGroup>,
+        <Group>
+          <GroupAddon>$</GroupAddon>
+          <input type="text" />
+          <button type="button">My button</button>
+          <GroupAddon>/ per unit</GroupAddon>
+        </Group>,
       );
       expect(component.toJSON()).toMatchSnapshot();
     });
+  });
 
-    it('should adjust border radii when surrounded', () => {
-      const component = createComponent(
-        <InputGroup>
-          <Button>action</Button>
-          <Input />
-          <Button>action</Button>
-        </InputGroup>,
+  describe('Render', () => {
+    it('render Group with a className attribute', () => {
+      const className = 'custom-class';
+      const groupAddonClassName = 'groupAddonClassName';
+      const anotherClassName = 'anotherClassName';
+
+      const { container } = customRender(
+        <Group className={className}>
+          <GroupAddon className={groupAddonClassName}>$</GroupAddon>
+          <span className={anotherClassName}>Test Group</span>
+        </Group>,
       );
-      expect(component.toJSON()).toMatchSnapshot();
+      const groupEl = container.querySelector('.custom-class');
+      const groupAddonEl = container.querySelector('.groupAddonClassName');
+      const spanEl = container.querySelector('.anotherClassName');
+
+      expect(groupEl).toBeTruthy();
+      expect(groupAddonEl).toBeTruthy();
+      expect(spanEl).toBeTruthy();
     });
   });
 });
