@@ -18,4 +18,3 @@ Which problem(s) does it solve and how? What does this PR add?
 - [ ] I have prepared [CHANGELOGs](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md#git-workflow) for release
 - [ ] I have tested my changes on [supported browsers](https://browserl.ist/?q=%3E0.25%25%2C+not+op_mini+all%2C+not+ie+%3C%3D+11)
 - [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] When approved, I have run [visual regression tests](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md#running-visual-regression-tests), got it approved and [posted a link](https://percy.io/Lightspeed/flame)
