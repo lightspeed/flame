@@ -5,7 +5,13 @@ import { themeGet } from '@styled-system/theme-get';
 import { Box } from '../Core';
 import { BaseLabel, LabelProps, FormHelper } from '../FormField/FormField';
 
-const RadioLabel: React.FC<LabelProps> = ({ description, disabled, children, ...restProps }) => {
+export interface RadioLabelProps extends LabelProps {}
+const RadioLabel: React.FC<RadioLabelProps> = ({
+  description,
+  disabled,
+  children,
+  ...restProps
+}) => {
   return (
     <Box>
       <BaseLabel {...restProps}>{children}</BaseLabel>
