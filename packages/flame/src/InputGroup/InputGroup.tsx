@@ -1,10 +1,14 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
+import { color, compose, ColorProps } from 'styled-system';
 
 import { Flex, border, FlameFlexProps, BorderProps } from '../Core';
 
-export interface InputGroupAddonProps extends FlameFlexProps, BorderProps {}
+export interface InputGroupAddonProps
+  extends FlameFlexProps,
+    BorderProps,
+    Partial<Omit<ColorProps, 'color'>> {}
 const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
   padding: ${themeGet('space.1')} ${themeGet('space.2')};
   text-align: center;
@@ -12,7 +16,10 @@ const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
   border: solid 1px ${themeGet('groupStyles.addon.borderColor')};
   border-radius: ${themeGet('radii.radius-1')};
   align-items: center;
-  ${border};
+  ${compose(
+    border,
+    color,
+  )};
 `;
 
 const InputGroup: React.FC = ({ children, ...restProps }) => {

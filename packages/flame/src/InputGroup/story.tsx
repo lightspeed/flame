@@ -51,7 +51,7 @@ stories.add('Story', () => (
     <h3>Search bar pattern</h3>
     <Box mb={3}>
       <InputGroup>
-        <Input defaultValue="Some arbitrary value" autoFocus={true} />
+        <Input defaultValue="Some arbitrary value" />
         <Button>Submit</Button>
       </InputGroup>
     </Box>
@@ -170,6 +170,21 @@ stories.add('Input Group Addon', () => (
           <Text size="small">Fixed width of 200px</Text>
         </InputGroupAddon>
         <Input width="inherit" defaultValue="Some arbitrary value" />
+      </InputGroup>
+    </Box>
+
+    <h3>Custom bg/border/color Addon</h3>
+    <p>
+      Use <code>bg</code>, <code>border</code> and <code>color</code> Styled System props if
+      customization is needed.
+    </p>
+    <Box mb={3}>
+      <InputGroup>
+        <InputGroupAddon bg="gray-300" color="white" borderColor="gray-500">
+          <Icon name="customers" />
+        </InputGroupAddon>
+        <Input width="inherit" defaultValue="Some arbitrary value" />
+        <Button>Submit</Button>
       </InputGroup>
     </Box>
   </div>
