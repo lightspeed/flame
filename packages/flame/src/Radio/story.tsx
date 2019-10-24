@@ -63,6 +63,20 @@ stories.add('Story', () => (
         }
       />
     </Box>
+
+    <Heading3 mb={2}>Radio states</Heading3>
+    <Box mb={3}>
+      <Radio id="unchecked" label="Unchecked" checked={false} onChange={() => {}} />
+    </Box>
+    <Box mb={3}>
+      <Radio id="checked" label="Checked" checked onChange={() => {}} />
+    </Box>
+    <Box mb={3}>
+      <Radio id="disabled" label="Disabled" disabled checked={false} onChange={() => {}} />
+    </Box>
+    <Box mb={3}>
+      <Radio id="checked-disabled" label="Checked Disabled" checked onChange={() => {}} disabled />
+    </Box>
   </div>
 ));
 

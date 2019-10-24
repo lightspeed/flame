@@ -8,9 +8,7 @@ import { BaseLabel, LabelProps, FormHelper } from '../FormField/FormField';
 const RadioLabel: React.FC<LabelProps> = ({ description, disabled, children, ...restProps }) => {
   return (
     <Box>
-      <BaseLabel color={disabled ? 'disabled' : undefined} {...restProps}>
-        {children}
-      </BaseLabel>
+      <BaseLabel {...restProps}>{children}</BaseLabel>
       {description && <FormHelper ml="1.75rem">{description}</FormHelper>}
     </Box>
   );
