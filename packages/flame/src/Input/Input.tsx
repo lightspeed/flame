@@ -361,8 +361,12 @@ pass the status.message to the statusMessage prop.
           aria-describedby={descriptionId}
           {...restProps}
         />
-        {status && nextMessage && <FormHelper status={nextStatus}>{nextMessage}</FormHelper>}
-        {textHelper && !nextMessage && <FormHelper>{textHelper}</FormHelper>}
+        {status && nextMessage && (
+          <FormHelper mt={1} status={nextStatus}>
+            {nextMessage}
+          </FormHelper>
+        )}
+        {textHelper && !nextMessage && <FormHelper mt={1}>{textHelper}</FormHelper>}
       </React.Fragment>
     );
   },

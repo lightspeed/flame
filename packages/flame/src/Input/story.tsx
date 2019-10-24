@@ -77,7 +77,7 @@ stories.add('Story', () => (
     <Box mb={3}>
       <h3>Advanced text input</h3>
       <Input
-        id="simple"
+        id="advanced"
         label="Label"
         labelHelper={
           <Badge type="info" size="small">
