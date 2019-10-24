@@ -11,7 +11,9 @@ const formHelperColorMap = {
   warning: 'warning',
 };
 
-interface FormHelperProps extends React.HTMLAttributes<HTMLDivElement>, Omit<TextProps, 'color'> {
+export interface FormHelperProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    Omit<TextProps, 'color'> {
   status?: StatusTypes;
   css?: any;
 }
@@ -25,7 +27,8 @@ const FormHelper: React.FC<FormHelperProps> = ({ status, children, ...restProps 
   );
 };
 
-const BaseLabel = styled(Text)<React.HTMLAttributes<HTMLLabelElement> & TextProps & { css?: any }>`
+export type BaseLabelProps = React.HTMLAttributes<HTMLLabelElement> & TextProps & { css?: any };
+const BaseLabel = styled(Text)<BaseLabelProps>`
   display: flex;
 `.withComponent('label');
 
