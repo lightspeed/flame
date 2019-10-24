@@ -17,8 +17,8 @@ import {
   TypographyProps,
   compose,
   system,
-  border as ssBorder,
-  BorderProps as SSBorderProps,
+  border as styledSystemBorder,
+  BorderProps as StyledSystemBorderProps,
 } from 'styled-system';
 import { themeGet, flameTheme as ThemeUIFlame } from './theme-get';
 
@@ -26,7 +26,7 @@ import { theme as lightTheme } from './themes/oldskool';
 import { theme as flameTheme } from './themes/flame';
 import { theme as darkTheme } from './themes/dark';
 
-export interface BorderProps extends SSBorderProps {
+export interface BorderProps extends StyledSystemBorderProps {
   borderTopLeftRadius?: string | number;
   borderTopRightRadius?: string | number;
   borderBottomLeftRadius?: string | number;
@@ -54,7 +54,7 @@ const borderRadii = system({
 
 const border = compose(
   borderRadii,
-  ssBorder,
+  styledSystemBorder,
 );
 
 type AsProps = { as?: string };
