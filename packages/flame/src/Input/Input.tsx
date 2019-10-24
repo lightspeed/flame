@@ -368,4 +368,8 @@ pass the status.message to the statusMessage prop.
   },
 );
 
+// Keeping flameName for compat with Group & inputBlock prop. Will be deprecated.
+// @ts-ignore
+Input.flameName = 'Input';
+
 export { Input, InputBackdrop, BaseInput };
