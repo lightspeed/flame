@@ -12,7 +12,7 @@ First, make sure you have been through the [Getting started](https://github.com/
 
 #### `<Group>`
 
-🚨 **Group will be removed in the next major version of Flame. Please use [SpacedGroup](https://github.com/lightspeed/flame/tree/master/packages/flame/src/SpacedGroup) or [InputGroup](https://github.com/lightspeed/flame/tree/master/packages/flame/src/InputGroup) instead.** 🚨
+🚨 **Group will be removed in the next major version of Flame. Please use [Flex and Box](https://github.com/lightspeed/flame/tree/master/packages/flame/src/Core) or [InputGroup](https://github.com/lightspeed/flame/tree/master/packages/flame/src/InputGroup) instead.** 🚨
 
 | Prop         | Type                                | Description                                                |
 | ------------ | ----------------------------------- | ---------------------------------------------------------- |

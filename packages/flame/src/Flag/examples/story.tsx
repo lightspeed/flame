@@ -14,12 +14,12 @@ import { FlagNL } from '../NL';
 import flagList from '../../../svg/flag.list.json';
 import Readme from '../README.md';
 
-import { Box } from '../../Core';
+import { Box, Flex } from '../../Core';
 import { Button } from '../../Button';
-import { SpacedGroup } from '../../SpacedGroup';
 import { Input } from '../../Input';
 import { Text } from '../../Text';
 import { Ul } from '../../../../../stories/components/Ul';
+import { SpacedGroup } from '../../../../../stories/components/SpacedGroup';
 
 const stories = storiesOf('Flag', module).addDecorator(withReadme(Readme));
 
@@ -128,11 +128,13 @@ stories.add('Integration', () => (
   <div>
     <h3>Using the Icon component</h3>
     <Description>
-      Flag inside a <code>Group</code> component
+      Flag inside a <code>Flex/Box</code> component
     </Description>
     <Box mb={3}>
       <SpacedGroup>
-        <Flag code="ca" />
+        <Flex>
+          <Flag code="ca" />
+        </Flex>
         <span>Flag of Canada</span>
       </SpacedGroup>
     </Box>
@@ -147,11 +149,13 @@ stories.add('Integration', () => (
     </Box>
     <h3>Using single component imports</h3>
     <Description>
-      Flag inside a <code>Group</code> component
+      Flag inside a <code>Flex/Box</code> component
     </Description>
     <Box mb={3}>
       <SpacedGroup>
-        <FlagCA />
+        <Flex>
+          <FlagCA />
+        </Flex>
         <span>Flag of Canada</span>
       </SpacedGroup>
     </Box>

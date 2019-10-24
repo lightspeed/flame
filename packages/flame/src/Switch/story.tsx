@@ -7,9 +7,10 @@ import { Text, Heading2 } from '../Text';
 
 import { Switch } from './Switch';
 import Readme from './README.md';
-import { SpacedGroup } from '../SpacedGroup';
 import { Button } from '../Button';
 import { Box } from '../Core';
+
+import { SpacedGroup } from '../../../../stories/components/SpacedGroup';
 
 const stories = storiesOf('Switch', module).addDecorator(withReadme(Readme));
 

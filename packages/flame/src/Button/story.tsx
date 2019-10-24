@@ -8,8 +8,9 @@ import Readme from './README.md';
 import { Flex, Box } from '../Core';
 import { Divider } from '../Divider';
 import { InputGroup } from '../InputGroup';
-import { SpacedGroup } from '../SpacedGroup';
 import { Icon } from '../Icon';
+
+import { SpacedGroup } from '../../../../stories/components/SpacedGroup';
 
 const stories = storiesOf('Button', module).addDecorator(withReadme(Readme));
 
