@@ -26,7 +26,7 @@ const FormHelper: React.FC<FormHelperProps> = ({ status, children, ...restProps 
 };
 
 const BaseLabel = styled(Text)<React.HTMLAttributes<HTMLLabelElement> & TextProps & { css?: any }>`
-  display: inline-flex;
+  display: flex;
 `.withComponent('label');
 
 BaseLabel.defaultProps = {

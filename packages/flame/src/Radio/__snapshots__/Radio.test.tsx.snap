@@ -8,10 +8,10 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-6 {
@@ -135,10 +135,10 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-6 {
@@ -247,10 +247,10 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-6 {
@@ -360,10 +360,10 @@ exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-6 {
