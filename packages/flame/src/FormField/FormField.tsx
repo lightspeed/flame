@@ -19,7 +19,7 @@ const FormHelper: React.FC<FormHelperProps> = ({ status, children, ...restProps 
   const nextColor = formHelperColorMap[status];
 
   return (
-    <Text as="div" size="small" color={nextColor} {...restProps}>
+    <Text as="div" size="small" mt={1} color={nextColor} {...restProps}>
       {children}
     </Text>
   );

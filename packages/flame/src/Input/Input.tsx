@@ -284,9 +284,11 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
         {(status || suffix) && (
           <Flex flex={0} pr={2} fontSize="text-s">
             {suffix}
-            <Box ml={2}>
-              <StatusIcon status={status} />
-            </Box>
+            {status && (
+              <Box ml={2}>
+                <StatusIcon status={status} />
+              </Box>
+            )}
           </Flex>
         )}
       </Wrapper>
