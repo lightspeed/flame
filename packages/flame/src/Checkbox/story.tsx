@@ -83,7 +83,6 @@ stories.add('Story', () => (
         />
       </Box>
       <Heading3>Using custom elements</Heading3>
-      <Text>Adding custom elements is as simply as just using your own components directly</Text>
       <Box mb={3}>
         <Checkbox
           id="customlabel"
