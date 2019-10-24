@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import { themeGet } from '@styled-system/theme-get';
-import { layout, LayoutProps, compose } from 'styled-system';
+import { layout, LayoutProps, zIndex, ZIndexProps, compose } from 'styled-system';
 import { Merge } from 'type-fest';
 
 import { Flex, Box, border, BorderProps } from '../Core';
@@ -123,7 +123,7 @@ const InputBackdrop = styled('div')<InputBackdropProps>`
   ${border}
 `;
 
-interface WrapperProps extends BorderProps, LayoutProps {
+interface WrapperProps extends BorderProps, LayoutProps, ZIndexProps {
   disabled: boolean;
   readOnly: boolean;
   isAutofilled: boolean;
@@ -141,6 +141,7 @@ const Wrapper = styled('div')<WrapperProps>`
   ${compose(
     layout,
     border,
+    zIndex,
   )}
 
   ${props =>

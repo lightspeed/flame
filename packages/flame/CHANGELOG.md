@@ -13,6 +13,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 - Add InputGroup and FormField (Label + FormHelper) components ([#2](https://github.com/lightspeed/flame/pull/2))
 - Expose Input, Radio and Checkbox base components ([#2](https://github.com/lightspeed/flame/pull/2))
+- Enable `zIndex` Styled System props for Button, BaseInput and InputGroupAddon components ([#2](https://github.com/lightspeed/flame/pull/2))
 
 ### Changed
 

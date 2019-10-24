@@ -1,6 +1,14 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { space, SpaceProps, layout, LayoutProps, compose } from 'styled-system';
+import {
+  space,
+  SpaceProps,
+  layout,
+  LayoutProps,
+  zIndex,
+  ZIndexProps,
+  compose,
+} from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
 import { border, BorderProps } from '../Core';
@@ -16,7 +24,8 @@ export type BaseButtonProps = {
   block?: boolean;
 } & SpaceProps &
   LayoutProps &
-  BorderProps;
+  BorderProps &
+  ZIndexProps;
 
 const generateSize = (height: number, px: number, font: string, radius: string) => (
   props: BaseButtonProps,
@@ -97,6 +106,7 @@ export const BaseButton = styled('button')<Merge<ButtonHTML, BaseButtonProps>>`
     space,
     border,
     layout,
+    zIndex,
   )};
 `;
 
