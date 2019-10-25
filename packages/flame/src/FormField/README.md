@@ -59,7 +59,7 @@ const MyComponent = () => (
     <Label htmlFor="myinput" description="Some description">
       My Label
     </Label>
-    {/* Input still needs a status prop */}
+    {/* Input also needs the status prop to match FormHelper */}
     <Input id="myinput" placeholder="My input placeholder" status="error" />
     <FormHelper status="error">This is an error message</FormHelper>
   </React.Fragment>
