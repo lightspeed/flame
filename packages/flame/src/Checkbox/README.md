@@ -143,7 +143,7 @@ Specially styled label to be used in conjunction with the BaseCheckbox component
 | Prop            | Type                         | Default   | Description                                                    |
 | --------------- | ---------------------------- | --------- | -------------------------------------------------------------- |
 | `description`   | `string` or `child function` | undefined | Description's text                                             |
-| `html property` | `string`                     | undefined | Any extra properties passed will be added to the `<label>` tag |
+| `html property` | `string`                     | undefined | Any extra properties passed will be added to the `<label>` tag, for example `id`, `for`, etc. |
 
 ##### Example
 
