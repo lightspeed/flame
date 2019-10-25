@@ -25,8 +25,12 @@ import { Label } from '@lightspeed/flame/FormField';
 import { Input } from '@lightspeed/flame/Input';
 
 const MyComponent = () => (
-  <Label htmlFor="myinput" description="Some description">My Label</Label>
-  <Input id="myinput" placeholder="My input placeholder" />
+  <React.Fragment>
+    <Label htmlFor="myinput" description="Some description">
+      My Label
+    </Label>
+    <Input id="myinput" placeholder="My input placeholder" />
+  </React.Fragment>
 );
 
 export default MyComponent;
@@ -51,12 +55,14 @@ import { Label, FormHelper } from '@lightspeed/flame/FormField';
 import { Input } from '@lightspeed/flame/Input';
 
 const MyComponent = () => (
-  <Label htmlFor="myinput" description="Some description">My Label</Label>
-  // Input still has a status prop
-  <Input id="myinput" placeholder="My input placeholder" status="error" />
-  <FormHelper status="error">
-    This is an error message
-  </FormHelper>
+  <React.Fragment>
+    <Label htmlFor="myinput" description="Some description">
+      My Label
+    </Label>
+    {/* Input still needs a status prop */}
+    <Input id="myinput" placeholder="My input placeholder" status="error" />
+    <FormHelper status="error">This is an error message</FormHelper>
+  </React.Fragment>
 );
 
 export default MyComponent;
