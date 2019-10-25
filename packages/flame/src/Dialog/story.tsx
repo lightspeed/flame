@@ -128,3 +128,17 @@ class DialogStoryHelper extends React.Component<{}, State> {
 }
 
 stories.add('Story', () => <DialogStoryHelper />, { percy: { skip: true } });
+
+stories.add('Percy story', () => (
+  <Dialog
+    title={title}
+    message={message}
+    isOpen={true}
+    isLoading={false}
+    onCancel={() => {}}
+    onConfirm={() => {}}
+    cancelText="No"
+    confirmText="Yes"
+    type="default"
+  />
+));

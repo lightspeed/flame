@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from '../Modal';
 import { Button } from '../Button';
-import { Group } from '../Group';
+import { Box, Flex } from '../Core';
 
 type OptionalProps = {
   /** Variant of the Dialog's CTA */
@@ -67,14 +67,18 @@ const Dialog: React.FC<DialogProps> = props => {
       <ModalHeader showCloseButton={showCloseButton}>{title}</ModalHeader>
       <ModalBody scroll={scroll}>{message}</ModalBody>
       <ModalFooter>
-        <Group justifyContent="flex-end">
-          <Button {...cancelRest} onClick={onCancel} disabled={isLoading}>
-            {cancelText}
-          </Button>
-          <Button fill {...confirmRest} onClick={onConfirm} loading={isLoading} variant={type}>
-            {confirmText}
-          </Button>
-        </Group>
+        <Flex justifyContent="flex-end">
+          <Box>
+            <Button {...cancelRest} onClick={onCancel} disabled={isLoading}>
+              {cancelText}
+            </Button>
+          </Box>
+          <Box ml={2}>
+            <Button fill {...confirmRest} onClick={onConfirm} loading={isLoading} variant={type}>
+              {confirmText}
+            </Button>
+          </Box>
+        </Flex>
       </ModalFooter>
     </StyledModal>
   );

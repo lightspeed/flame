@@ -12,6 +12,17 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 ### Added
 
 - Add Interac icon ([#33](https://github.com/lightspeed/flame/pull/33))
+- Add InputGroup and FormField (Label + FormHelper) components ([#2](https://github.com/lightspeed/flame/pull/2))
+- Expose Input, Radio and Checkbox base components ([#2](https://github.com/lightspeed/flame/pull/2))
+- Enable `zIndex` Styled System props for Button, BaseInput and InputGroupAddon components ([#2](https://github.com/lightspeed/flame/pull/2))
+
+### Changed
+
+- Input no longer uses objects to represent status and status message ([#2](https://github.com/lightspeed/flame/pull/2))
+
+### Deprecated
+
+- Group component will be removed from the next major version of Flame ([#2](https://github.com/lightspeed/flame/pull/2))
 
 ## 1.0.0 - 2019-10-08
 

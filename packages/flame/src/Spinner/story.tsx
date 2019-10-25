@@ -4,9 +4,10 @@ import { withReadme } from 'storybook-readme';
 
 import { Spinner } from './Spinner';
 import Readme from './README.md';
-import { Group } from '../Group';
-import { Box } from '../Core';
+import { Box, Flex } from '../Core';
 import { Text } from '../Text';
+
+import { SpacedGroup } from '../../../../stories/components/SpacedGroup';
 
 const stories = storiesOf('Spinner', module).addDecorator(withReadme(Readme));
 
@@ -23,29 +24,49 @@ stories.add('Story', () => (
       <Text fontSize="small" mb={1}>
         Resized
       </Text>
-      <Group>
-        <Spinner size="small" />
-        <Spinner size="large" />
-        <Spinner size="xlarge" />
-        <Spinner size="xxlarge" />
-        <Spinner size="4rem" />
-      </Group>
+      <SpacedGroup>
+        <Flex>
+          <Spinner size="small" />
+        </Flex>
+        <Flex>
+          <Spinner size="large" />
+        </Flex>
+        <Flex>
+          <Spinner size="xlarge" />
+        </Flex>
+        <Flex>
+          <Spinner size="xxlarge" />
+        </Flex>
+        <Flex>
+          <Spinner size="4rem" />
+        </Flex>
+      </SpacedGroup>
     </Box>
 
     <Box mb={3}>
       <Text fontSize="small" mb={1}>
         Colored
       </Text>
-      <Group>
-        <Spinner size="xxlarge" color="blue" />
-        <Spinner size="xxlarge" color="blue" baseColor2="night-100" />
-        <Spinner size="xxlarge" color="green-200" />
-        <Spinner size="xxlarge" color="maple-200" />
-        <Spinner size="xxlarge" color="yellow-200" baseColor2="night-100" />
+      <SpacedGroup>
+        <Flex>
+          <Spinner size="xxlarge" color="blue" />
+        </Flex>
+        <Flex>
+          <Spinner size="xxlarge" color="blue" baseColor2="night-100" />
+        </Flex>
+        <Flex>
+          <Spinner size="xxlarge" color="green-200" />
+        </Flex>
+        <Flex>
+          <Spinner size="xxlarge" color="maple-200" />
+        </Flex>
+        <Flex>
+          <Spinner size="xxlarge" color="yellow-200" baseColor2="night-100" />
+        </Flex>
         <div className="cr-p-2" style={{ backgroundColor: '#212424', display: 'inline-flex' }}>
           <Spinner size="xxlarge" color="snow" />
         </div>
-      </Group>
+      </SpacedGroup>
     </Box>
   </div>
 ));

@@ -1,3 +1,3 @@
-import { Radio, RadioProps, RadioLabel, RadioDescription, RadioDescriptionProps } from './Radio';
+import { BaseRadio, Radio, RadioProps, RadioLabel, RadioLabelProps } from './Radio';
 
-export { Radio, RadioProps, RadioLabel, RadioDescription, RadioDescriptionProps };
+export { BaseRadio, Radio, RadioProps, RadioLabel, RadioLabelProps };

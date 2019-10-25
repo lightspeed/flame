@@ -1,3 +1,3 @@
-import { Input, InputProps } from './Input';
+import { BaseInput, BaseInputProps, Input, InputProps } from './Input';
 
-export { Input, InputProps };
+export { BaseInput, BaseInputProps, Input, InputProps };

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box, Flex } from '../../Core';
-import { Radio } from '../index';
+import { BaseRadio, RadioLabel } from '../index';
 
 class RadioWrapper extends React.Component<{ action: Function }, { checked: boolean }> {
   constructor(props: any) {
@@ -27,21 +27,25 @@ class RadioWrapper extends React.Component<{ action: Function }, { checked: bool
     return (
       <Flex flexDirection="row">
         <Box mr={2} mb={1}>
-          <Radio
-            id="yes"
-            label="Yes"
-            checked={this.state.checked}
-            value="yes"
+          <RadioLabel htmlFor="yes">
+            <BaseRadio
+              id="yes"
+              checked={this.state.checked}
+              value="yes"
+              onChange={this.handleChange}
+            />
+            Yes
+          </RadioLabel>
+        </Box>
+        <RadioLabel htmlFor="no">
+          <BaseRadio
+            id="no"
+            checked={!this.state.checked}
+            value="no"
             onChange={this.handleChange}
           />
-        </Box>
-        <Radio
-          id="no"
-          label="No"
-          checked={!this.state.checked}
-          value="no"
-          onChange={this.handleChange}
-        />
+          No
+        </RadioLabel>
       </Flex>
     );
   }

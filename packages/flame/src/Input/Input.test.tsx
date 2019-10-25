@@ -24,7 +24,7 @@ describe('<Input />', () => {
 
   it('should have rendered an input of type text', () => {
     const { getByPlaceholderText } = customRender(
-      <Input {...baseProps} placeholder="test-input" />,
+      <Input {...baseProps} placeholder="test-input" size="large" />,
     );
     const element: any = getByPlaceholderText('test-input');
     expect(element.type).toBe('text');
@@ -32,7 +32,7 @@ describe('<Input />', () => {
 
   it('should forward the disabled property to the base input', () => {
     const { getByPlaceholderText } = customRender(
-      <Input {...baseProps} disabled placeholder="test-input" />,
+      <Input {...baseProps} disabled placeholder="test-input" size="small" />,
     );
     const element: any = getByPlaceholderText('test-input');
     expect(element.disabled).toBeTruthy();
@@ -42,8 +42,8 @@ describe('<Input />', () => {
     const { getByPlaceholderText } = customRender(
       <Input {...baseProps} readOnly placeholder="test-input" />,
     );
-    const element: any = getByPlaceholderText('test-input');
-    expect(element.readOnly).toBeTruthy();
+
+    expect(getByPlaceholderText('test-input')).toHaveAttribute('readonly');
   });
 
   it('should contain a prefix and a Suffix', () => {
@@ -57,7 +57,7 @@ describe('<Input />', () => {
   describe('Input types and their messages', () => {
     it('should render a valid state', () => {
       const { getByText, getByTestId } = customRender(
-        <Input {...baseProps} status={{ type: 'valid', message: 'Valid input.' }} />,
+        <Input {...baseProps} status="valid" statusMessage="Valid input." />,
       );
       getByText('Valid input.');
       getByTestId('icon-valid');
@@ -65,13 +65,21 @@ describe('<Input />', () => {
 
     it('should render an errored state', () => {
       const { getByText, getByTestId } = customRender(
-        <Input {...baseProps} status={{ type: 'error', message: 'Error input!' }} />,
+        <Input {...baseProps} status="error" statusMessage="Error input!" />,
       );
       getByText('Error input!');
       getByTestId('icon-error');
     });
 
     it('should render an warning state', () => {
+      const { getByText, getByTestId } = customRender(
+        <Input {...baseProps} status="warning" statusMessage="Warning input." />,
+      );
+      getByText('Warning input.');
+      getByTestId('icon-warning');
+    });
+
+    it('should support the legacy API', () => {
       const { getByText, getByTestId } = customRender(
         <Input {...baseProps} status={{ type: 'warning', message: 'Warning input.' }} />,
       );
@@ -94,12 +102,9 @@ describe('<Input />', () => {
 
   describe('label', () => {
     it('Can find input by label', () => {
-      const { container, queryByLabelText } = customRender(<Input label="My Label" />);
-      const label = container.querySelectorAll('label');
-      const input = queryByLabelText('My Label');
+      const { getByText } = customRender(<Input label="My Label" />);
 
-      expect(input).toBeInTheDocument();
-      expect(input).toBe(label[0].querySelector('input'));
+      expect(getByText('My Label')).toBeTruthy();
     });
 
     it('Should set htmlFor properly', () => {

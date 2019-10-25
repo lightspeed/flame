@@ -12,8 +12,8 @@ type RenderTest = {
     indeterminate?: boolean;
     id?: string;
     value?: string;
-    label?: string | Function;
-    description?: string | Function;
+    label?: any;
+    description?: any;
   };
 };
 
@@ -34,8 +34,8 @@ describe('<Checkbox />', () => {
         props: {
           id: 'id',
           value: 'value',
-          label: () => <div>Label</div>,
-          description: () => <div>Description</div>,
+          label: <div>Label</div>,
+          description: <div>Description</div>,
         },
       },
     ];
@@ -82,10 +82,7 @@ describe('<Checkbox />', () => {
 
     it('renders custom components in Label and Description', () => {
       const { getByText } = customRender(
-        <Checkbox
-          label={() => <div>my label</div>}
-          description={() => <div>my description</div>}
-        />,
+        <Checkbox label={<div>my label</div>} description={<div>my description</div>} />,
       );
 
       getByText('my label');

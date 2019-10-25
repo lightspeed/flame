@@ -1,3 +1,5 @@
+🚨 **Group will be deprecated in the next major version of Flame, see how each [component](#react-component) can be replaced** 🚨
+
 # Group
 
 Group component bundles other components.
@@ -10,6 +12,8 @@ First, make sure you have been through the [Getting started](https://github.com/
 
 #### `<Group>`
 
+🚨 **Group will be removed in the next major version of Flame. Please use [Flex and Box](https://github.com/lightspeed/flame/tree/master/packages/flame/src/Core) or [InputGroup](https://github.com/lightspeed/flame/tree/master/packages/flame/src/InputGroup) instead.** 🚨
+
 | Prop         | Type                                | Description                                                |
 | ------------ | ----------------------------------- | ---------------------------------------------------------- |
 | `className`  | `string`                            | Custom className to add in addition to the default ones    |
@@ -21,6 +25,8 @@ First, make sure you have been through the [Getting started](https://github.com/
 
 #### `<GroupAddon>`
 
+🚨 **GroupAddon will be removed in the next major version of Flame. Please use [InputGroup and InputGroupAddon](https://github.com/lightspeed/flame/tree/master/packages/flame/src/InputGroup) instead.** 🚨
+
 | Prop            | Type                                 | Description                                                   |
 | --------------- | ------------------------------------ | ------------------------------------------------------------- |
 | `children *`    | `React.node`                         | The content of the group addon                                |
@@ -29,6 +35,8 @@ First, make sure you have been through the [Getting started](https://github.com/
 | `verticalAlign` | `oneOf(['top', 'middle', 'bottom'])` | Vertically aligns the text rendered element (default: middle) |
 
 #### `<GroupItem>`
+
+🚨 **GroupItem will be removed in the next major version of Flame. Please use [Flex and Box](https://github.com/lightspeed/flame/tree/master/packages/flame/src/Core) components for wrapping things properly.** 🚨
 
 | Prop         | Type         | Description                                             |
 | ------------ | ------------ | ------------------------------------------------------- |
