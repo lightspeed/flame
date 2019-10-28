@@ -1,4 +1,7 @@
-<h3 align="center">🔥 Lightspeed's React UI components library.</h3>
+<p align="center">
+  <img alt="Lightspeed Flame" width="204px" src="https://user-images.githubusercontent.com/24464151/67687230-648a1300-f96e-11e9-9de0-7735ea1682c0.png" />
+</p>
+<h3 align="center">Lightspeed's products design tokens and component library.</h3>
 
 ---
 
