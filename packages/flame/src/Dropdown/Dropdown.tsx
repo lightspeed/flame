@@ -59,7 +59,10 @@ const DropdownContainer = styled(BasePopoverContainer)<{
   isActive: boolean;
   placement?: Placement;
 }>`
-  ${containerIsActive}
+  ${
+    /* istanbul ignore next */
+    containerIsActive
+  }
 
   transition-property: opacity, visibility, transform;
   transition-duration: ${themeGet('transition.transition-duration-base')};
