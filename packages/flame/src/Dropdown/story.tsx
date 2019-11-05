@@ -54,6 +54,27 @@ stories.add(
           </Dropdown>
         </Flex>
 
+        <h4>Dropdown - Menu on the right</h4>
+        <Flex justifyContent="flex-start">
+          <Dropdown buttonContent="Menu" placement="right-start">
+            <SampleDropdownContent />
+          </Dropdown>
+        </Flex>
+
+        <h4>Dropdown - Menu on the left</h4>
+        <Flex justifyContent="flex-end">
+          <Dropdown buttonContent="Menu" placement="left-start">
+            <SampleDropdownContent />
+          </Dropdown>
+        </Flex>
+
+        <h4>Dropdown - Menu on the top</h4>
+        <Flex justifyContent="flex-start">
+          <Dropdown buttonContent="Menu" placement="top-start">
+            <SampleDropdownContent />
+          </Dropdown>
+        </Flex>
+
         <h4>Dropdown - Content positioned right</h4>
         <Flex justifyContent="flex-end">
           <Dropdown buttonContent="Menu" placement="end">
@@ -154,12 +175,24 @@ stories.add('Story for Percy', () => {
   return (
     <div>
       <Flex justifyContent="flex-start">
-        <Dropdown buttonContent="Menu" mb={3}>
+        <Dropdown buttonContent="Menu" placement="left-start" initiallyOpen>
           <SampleDropdownContent />
         </Dropdown>
       </Flex>
 
-      <Flex justifyContent="flex-start">
+      <Flex justifyContent="flex-end" mt={8}>
+        <Dropdown buttonContent="Menu" placement="right-start" initiallyOpen>
+          <SampleDropdownContent />
+        </Dropdown>
+      </Flex>
+
+      <Flex justifyContent="flex-start" mt={8}>
+        <Dropdown buttonContent="Menu" placement="top-start" initiallyOpen>
+          <SampleDropdownContent />
+        </Dropdown>
+      </Flex>
+
+      <Flex justifyContent="flex-start" mt={8}>
         <Dropdown buttonContent="Menu" initiallyOpen>
           <SampleDropdownContent />
         </Dropdown>
