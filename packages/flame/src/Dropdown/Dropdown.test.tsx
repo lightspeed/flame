@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { customRender, fireEvent } from 'test-utils';
+import { customRender, fireEvent, wait } from 'test-utils';
 
 import { Dropdown, useDropdown } from './Dropdown';
 
@@ -41,6 +41,25 @@ describe('<Dropdown />', () => {
     expect(queryByText('Some dropdown content')).toBeVisible();
 
     fireEvent.click(queryByText('I am outside the dropdown'));
+    expect(queryByText('Some dropdown content')).not.toBeVisible();
+  });
+
+  it('should close when we hit escape', async () => {
+    const { queryByText, container } = customRender(
+      <div>
+        <Dropdown buttonContent="My Dropdown">Some dropdown content</Dropdown>
+        <div>I am outside the dropdown</div>
+      </div>,
+    );
+
+    expect(queryByText('My Dropdown')).toBeTruthy();
+    expect(queryByText('Some dropdown content')).not.toBeVisible();
+
+    fireEvent.click(queryByText('My Dropdown'));
+    expect(queryByText('Some dropdown content')).toBeVisible();
+
+    fireEvent.keyUp(container, { key: 'Escape', code: 'Escape' });
+    await wait();
     expect(queryByText('Some dropdown content')).not.toBeVisible();
   });
 
