@@ -26,6 +26,7 @@ const Context = React.createContext<{ closeDropdown: () => void }>({
   closeDropdown: () => {},
 });
 
+/* istanbul ignore next */
 const inactivePlacement = (placement: Placement) => {
   const pos = placement && placement.replace(/-start|-center|-end/gi, '');
 
@@ -59,10 +60,7 @@ const DropdownContainer = styled(BasePopoverContainer)<{
   isActive: boolean;
   placement?: Placement;
 }>`
-  ${
-    /* istanbul ignore next */
-    containerIsActive
-  }
+  ${containerIsActive}
 
   transition-property: opacity, visibility, transform;
   transition-duration: ${themeGet('transition.transition-duration-base')};

@@ -1,49 +1,9 @@
 import * as React from 'react';
-import { customRender, fireEvent, createComponent } from 'test-utils';
+import { customRender, fireEvent } from 'test-utils';
 
 import { Dropdown, useDropdown } from './Dropdown';
 
 describe('<Dropdown />', () => {
-  describe('Snapshots', () => {
-    it('should match placement default (bottom) rendering', () => {
-      const component = createComponent(
-        <Dropdown buttonContent="My Dropdown">Some dropdown content</Dropdown>,
-      );
-
-      expect(component.toJSON()).toMatchSnapshot();
-    });
-
-    it('should match placement top rendering', () => {
-      const component = createComponent(
-        <Dropdown buttonContent="My Dropdown" placement="top">
-          Some dropdown content
-        </Dropdown>,
-      );
-
-      expect(component.toJSON()).toMatchSnapshot();
-    });
-
-    it('should match placement left rendering', () => {
-      const component = createComponent(
-        <Dropdown buttonContent="My Dropdown" placement="left">
-          Some dropdown content
-        </Dropdown>,
-      );
-
-      expect(component.toJSON()).toMatchSnapshot();
-    });
-
-    it('should match placement right rendering', () => {
-      const component = createComponent(
-        <Dropdown buttonContent="My Dropdown" placement="right">
-          Some dropdown content
-        </Dropdown>,
-      );
-
-      expect(component.toJSON()).toMatchSnapshot();
-    });
-  });
-
   it('should render a button with out text content', () => {
     const { queryByText } = customRender(
       <Dropdown buttonContent="My Dropdown">Some dropdown content</Dropdown>,
