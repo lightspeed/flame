@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { customRender, fireEvent } from 'test-utils';
 
-import { Dropdown, useDropdown } from './Dropdown';
+import { Dropdown, DropdownContent, useDropdown } from './Dropdown';
 
 describe('<Dropdown />', () => {
   it('should render a button with out text content', () => {
     const { queryByText } = customRender(
-      <Dropdown buttonContent="My Dropdown">Some dropdown content</Dropdown>,
+      <Dropdown buttonContent="My Dropdown">
+        <DropdownContent>Some dropdown content</DropdownContent>
+      </Dropdown>,
     );
 
     expect(queryByText('My Dropdown')).toBeTruthy();
