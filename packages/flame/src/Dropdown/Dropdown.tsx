@@ -40,8 +40,6 @@ const inactivePlacement = (placement: Placement) => {
       return 'top: -5px !important';
   }
 };
-
-/* istanbul ignore next */
 const containerIsActive = (props: { isActive: boolean; placement?: Placement }) => {
   return props.isActive
     ? css`
