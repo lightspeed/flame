@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { customRender, fireEvent, wait } from 'test-utils';
+import { customRender, fireEvent } from 'test-utils';
 
 import { Dropdown, useDropdown } from './Dropdown';
 
@@ -44,7 +44,7 @@ describe('<Dropdown />', () => {
     expect(queryByText('Some dropdown content')).not.toBeVisible();
   });
 
-  it('should close when we hit escape', async () => {
+  it('should close when we hit escape', () => {
     const { queryByText, container } = customRender(
       <div>
         <Dropdown buttonContent="My Dropdown">Some dropdown content</Dropdown>
@@ -59,7 +59,6 @@ describe('<Dropdown />', () => {
     expect(queryByText('Some dropdown content')).toBeVisible();
 
     fireEvent.keyUp(container, { key: 'Escape', code: 'Escape' });
-    await wait();
     expect(queryByText('Some dropdown content')).not.toBeVisible();
   });
 
