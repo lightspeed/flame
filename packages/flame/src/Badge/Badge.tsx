@@ -56,6 +56,9 @@ export type BadgeProps = ColorProps & {
   size?: BadgeSizes;
 };
 
+/**
+ * A pill-shaped, glanceable bit of information meant to qualify that by which it stands.
+ */
 export const Badge = styled('span')<React.HTMLAttributes<HTMLSpanElement> & Partial<BadgeProps>>`
   display: inline-flex;
   align-items: center;
@@ -73,6 +76,9 @@ Badge.defaultProps = {
   size: 'medium',
 };
 
+/**
+ * A pill-shaped, glanceable bit of information meant to qualify that by which it stands.
+ */
 export const PillBadge = styled('span')<React.HTMLAttributes<HTMLSpanElement> & BadgeProps>`
   display: inline-flex;
   align-items: center;

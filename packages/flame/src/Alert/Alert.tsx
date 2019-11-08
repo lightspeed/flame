@@ -61,8 +61,11 @@ export interface AlertProps {
   /** Text for the alert's title */
   title?: string;
 }
-
-const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
+/**
+ * An alert is a message about the state of the system, the result of a user action or useful information about something on the page.
+ * There are four types of alert and each has a different function.
+ */
+const Alert: React.FC<AlertProps & SpaceProps> = ({
   children,
   type = 'info',
   title,

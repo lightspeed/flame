@@ -32,6 +32,7 @@
     "build:private-to-public": "node ./scripts/private-to-public.js",
     "build": "yarn build:icons && yarn build:flags && yarn build:themes && yarn build:cjs && yarn build:copy-files && yarn build:types && yarn build:private-to-public && node ../../scripts/validate-build",
     "release": "yarn build && npm publish dist --quiet",
+    "docgen": "node ./scripts/docgen.js",
     "release:dryrun": "npm publish dist --dry-run"
   },
   "dependencies": {
@@ -55,6 +56,7 @@
     "htmltojsx": "^0.3.0",
     "nodemon": "1.19.1",
     "prettier": "^1.16.1",
+    "react-docgen-typescript": "^1.15.1",
     "rimraf": "2.6.2",
     "ts-node": "8.3.0"
   }
