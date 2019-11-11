@@ -1,20 +1,20 @@
 import { colors } from '../colors';
 
 const checkboxStyles: CheckboxStyles = {
-  background: `linear-gradient(180deg, ${colors.white}, ${colors['gray-50']})`,
-  borderColor: colors['gray-200'],
-  color: '',
+  background: colors['gray-900'],
+  borderColor: colors['gray-300'],
+  color: colors.white,
   focus: {
-    boxShadow: ` 0 0 0 1px ${colors.white}, 0 0 0 3px ${colors['blue-500']}`,
+    boxShadow: `${colors.bodyBg} 0px 0px 0px 1px, ${colors['blue-500']} 0px 0px 0px 3px`,
   },
   indeterminate: {
-    border: colors['blue-600'],
-    background: colors['blue-600'],
+    border: colors['blue-400'],
+    background: colors['blue-400'],
   },
   checked: {
-    background: `linear-gradient(180deg, ${colors['blue-400']}, ${colors['blue-500']})`,
-    border: colors['blue-600'],
-    color: colors.white,
+    background: colors['blue-300'],
+    border: colors['blue-400'],
+    color: colors.bodyBg,
   },
   label: {
     color: colors['gray-800'],
