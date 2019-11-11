@@ -4,17 +4,16 @@ import { withReadme } from 'storybook-readme';
 import camelCase from 'lodash/camelCase';
 
 // We load the icon-sprite through the raw-loader and through SVGInline for the story
-// @ts-ignore
-import IconSprite from '!raw-loader!../icon-sprite.svg'; // eslint-disable-line import/no-webpack-loader-syntax, import/no-unresolved
-
+// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+import IconSprite from '!raw-loader!../../../svg/icon-sprite.svg';
 import { Icon } from '../index';
+import { Box } from '../../Core/index';
+import { Text } from '../../Text/index';
 import { IconAdd } from '../Add';
 import { IconArrowDown } from '../ArrowDown';
-import { Box } from '../../Core';
 import Readme from '../README.md';
 import IconList from '../../../svg/Icon.list.json';
 import '../../../svg/Icons/icon.scss';
-import { Ul } from '../../../../../stories/components/Ul';
 
 const stories = storiesOf('Icon', module).addDecorator(withReadme(Readme));
 
@@ -22,6 +21,7 @@ const iconList: any = IconList;
 
 type IconPresenterProps = { name?: string };
 type IconPresenterState = { colors: any };
+
 class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresenterState> {
   constructor(props: IconPresenterProps) {
     super(props);
@@ -76,23 +76,25 @@ class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresente
 
             return React.cloneElement(child as any, { name, ...colors });
           })}
-          <Box as="span" ml={2} fontSize="text-s">
+          <Text as="span" ml={2} size="small">
             {name}
-          </Box>
+          </Text>
         </div>
         <div>
-          <Ul className="cr-text-xs cr-gray-300" style={{ cursor: 'pointer', textAlign: 'right' }}>
+          <ul style={{ cursor: 'pointer', textAlign: 'right' }}>
             {(iconList[name as string] as any).map((iconName: string) => (
-              <li
+              <Text
+                as="li"
+                size="small"
                 key={iconName}
                 onMouseEnter={this.handleOnMouseEnter}
                 onMouseLeave={this.handleOnMouseLeave}
                 data-icon-iconname={`${iconName}`}
               >
                 {iconName}
-              </li>
+              </Text>
             ))}
-          </Ul>
+          </ul>
         </div>
       </Box>
     );
@@ -100,7 +102,7 @@ class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresente
 }
 
 stories.add('Story', () => (
-  <Ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
+  <ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(iconList).map(name => {
       const SingleIcon = () => (
         <IconPresenter>
@@ -113,20 +115,20 @@ stories.add('Story', () => (
 
       return <SingleIcon />;
     })}
-  </Ul>
+  </ul>
 ));
 
 stories.add('Size', () => (
-  <Ul>
+  <ul>
     {['0.875rem', '1rem', '1.125rem', '1.5rem', '2.25rem', '4rem'].map(size => (
-      <Box as="li" mb={2} key={size}>
+      <li className="cr-mb-2" key={size}>
         <Icon name="register" size={size} />
-        <Box as="span" ml={2} style={{ fontSize: size }}>
+        <span className="cr-ml-2" style={{ fontSize: size }}>
           {size}
-        </Box>
-      </Box>
+        </span>
+      </li>
     ))}
-  </Ul>
+  </ul>
 ));
 
 const whiteBackgroundIcons = {
@@ -287,7 +289,7 @@ const darkBackgroundIcons = {
 
 stories.add('Colors', () => (
   <div>
-    <Ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
       {Object.keys(whiteBackgroundIcons).map(name =>
         (whiteBackgroundIcons as any)[name].map((colors: any) => (
           <li
@@ -300,17 +302,17 @@ stories.add('Colors', () => (
             }}
           >
             <Icon name={name} {...colors} size="2rem" />
-            <Ul className="cr-ml-2 cr-text-xs cr-gray-300" style={{ textAlign: 'right' }}>
+            <ul className="cr-ml-2 cr-text-xs cr-gray-300" style={{ textAlign: 'right' }}>
               {Object.keys(colors).map(key => (
                 <li className="cr-mr-2 cr-text-s" key={key}>{`${key}: ${colors[key]}`}</li>
               ))}
-            </Ul>
+            </ul>
           </li>
         )),
       )}
-    </Ul>
+    </ul>
     <div className="cr-pt-4 cr-pb-1" style={{ background: '#232a3b', color: '#fff' }}>
-      <Ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
         {Object.keys(darkBackgroundIcons).map(name =>
           (darkBackgroundIcons as any)[name].map((colors: any) => (
             <li
@@ -323,52 +325,48 @@ stories.add('Colors', () => (
               }}
             >
               <Icon name={name} {...colors} size="2rem" />
-              <Ul className="cr-ml-2 cr-text-xs cr-gray-100" style={{ textAlign: 'right' }}>
+              <ul className="cr-ml-2 cr-text-xs cr-gray-100" style={{ textAlign: 'right' }}>
                 {Object.keys(colors).map(key => (
                   <li className="cr-mr-2 cr-text-s" key={key}>{`${key}: ${colors[key]}`}</li>
                 ))}
-              </Ul>
+              </ul>
             </li>
           )),
         )}
-      </Ul>
+      </ul>
     </div>
   </div>
 ));
 
-stories.add(
-  'Using Individual Icons',
-  () => (
-    <div className="icon-sprite-listing">
-      <p className="cr-text cr-gray">
-        In order to reduce bundle size, you may want to import each Icon individually. Doing so will
-        enable proper treeshaking.
-      </p>
+stories.add('Using Individual Icons', () => (
+  <div className="icon-sprite-listing">
+    <p className="cr-text cr-gray">
+      In order to reduce bundle size, you may want to import each Icon individually. Doing so will
+      enable proper treeshaking.
+    </p>
+    <div>
+      <p>Each icons have the exact same api as the regular `Icon`, minus the name prop.</p>
       <div>
-        <p>Each icons have the exact same api as the regular `Icon`, minus the name prop.</p>
+        <code>
+          <div>import Add from &#39;@lightspeed/cirrus-icon/icons/Add&#39;;</div>
+          <div>&lt;Add size=&#34;2rem&#34; /&gt;</div>
+        </code>
         <div>
-          <code>
-            <div>import Add from &#39;@lightspeed/flame-icon/icons/Add&#39;;</div>
-            <div>&lt;Add size=&#34;2rem&#34; /&gt;</div>
-          </code>
-          <div>
-            <IconAdd size="2rem" />
-          </div>
+          <IconAdd size="2rem" />
         </div>
+      </div>
+      <div>
+        <code>
+          <div>import ArrowDown from &#39;@lightspeed/cirrus-icon/icons/ArrowDown&#39;;</div>
+          <div>&lt;ArrowDown size=&#34;2rem&#34; color=&#34;blue&#34; /&gt;</div>
+        </code>
         <div>
-          <code>
-            <div>import ArrowDown from &#39;@lightspeed/flame-icon/icons/ArrowDown&#39;;</div>
-            <div>&lt;ArrowDown size=&#34;2rem&#34; color=&#34;blue&#34; /&gt;</div>
-          </code>
-          <div>
-            <IconArrowDown size="2rem" color="blue" />
-          </div>
+          <IconArrowDown size="2rem" color="blue" />
         </div>
       </div>
     </div>
-  ),
-  { percy: { skip: true } },
-);
+  </div>
+));
 
 stories.add('Sprite', () => (
   <div className="icon-sprite-listing">

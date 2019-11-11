@@ -6,16 +6,16 @@ const modalStyles: ModalStyles = {
     background: rgba(colors['gray-1000'], 0.8),
   },
   modal: {
-    background: colors.white,
-    color: colors['gray-800'],
+    background: colors.bodyBg,
+    color: colors.textBody,
   },
   header: {
-    border: colors['gray-200'],
-    color: colors['gray-1000'],
+    border: colors['gray-800'],
+    color: colors.textHeading,
   },
   footer: {
-    background: colors['gray-50'],
-    border: colors['gray-200'],
+    background: colors['gray-850'],
+    border: colors['gray-800'],
   },
 };
 

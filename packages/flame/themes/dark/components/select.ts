@@ -1,13 +1,14 @@
-import { colors } from '../colors';
+import { inputStyles } from './input';
+import { buttonVariants } from './button';
 
 const selectStyles: SelectStyles = {
-  backgroundColor: '',
-  background: `linear-gradient(180deg, ${colors.white}, ${colors['gray-50']})`,
-  border: colors['gray-200'],
-  color: colors['gray-800'],
-  focusBorder: colors['blue-500'],
-  disabledColor: '',
-  disabledBackground: '',
+  backgroundColor: buttonVariants.fill.neutral.backgroundColor,
+  background: 'none',
+  border: buttonVariants.fill.neutral.borderColor,
+  color: inputStyles.color,
+  focusBorder: inputStyles.focus.border,
+  disabledColor: inputStyles.disabled.color,
+  disabledBackground: inputStyles.disabled.background,
 };
 
 export { selectStyles };
