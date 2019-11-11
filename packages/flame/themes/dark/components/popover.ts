@@ -1,5 +1,5 @@
 import { shadows } from '../shadows';
-import { colors } from '../colors';
+import { cardVariants } from './card';
 
 const popoverStyles: PopoverStyles = {
   // @ts-ignore
@@ -7,12 +7,12 @@ const popoverStyles: PopoverStyles = {
     // @ts-ignore
     shadows.outer['shadow-3']
   }`,
-  arrowColor: colors['gray-200'],
+  arrowColor: cardVariants.neutral.background,
   light: {
-    background: colors.white,
+    background: cardVariants.neutral.background,
   },
   dark: {
-    background: colors['gray-50'],
+    background: cardVariants.top.background,
   },
 };
 
