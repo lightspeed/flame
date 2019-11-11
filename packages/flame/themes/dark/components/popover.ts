@@ -9,7 +9,7 @@ const popoverStyles: PopoverStyles = {
   }`,
   arrowColor: cardVariants.neutral.background,
   light: {
-    background: cardVariants.neutral.background,
+    background: cardVariants.top.background,
   },
   dark: {
     background: cardVariants.top.background,

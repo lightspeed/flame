@@ -3,7 +3,7 @@ import { colors } from '../colors';
 
 const switchStyles: SwitchStyles = {
   on: {
-    background: `linear-gradient(180deg, ${colors['blue-300']}, ${colors['blue-400']})`,
+    background: colors['blue-300'],
     border: colors['blue-600'],
     color: colors.white,
     focusBorder: colors['blue-500'],
@@ -11,7 +11,7 @@ const switchStyles: SwitchStyles = {
     checkedBorder: colors['blue-600'],
   },
   off: {
-    background: `linear-gradient(180deg, ${colors['gray-800']}, ${colors['gray-700']})`,
+    background: colors['gray-700'],
     border: colors['gray-300'],
     color: colors['gray-600'],
   },
