@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { customRender, fireEvent } from 'test-utils';
 
-import { Dropdown, useDropdown } from './Dropdown';
+import { Dropdown, DropdownContent, useDropdown } from './Dropdown';
 
 describe('<Dropdown />', () => {
   it('should render a button with out text content', () => {
     const { queryByText } = customRender(
-      <Dropdown buttonContent="My Dropdown">Some dropdown content</Dropdown>,
+      <Dropdown buttonContent="My Dropdown">
+        <DropdownContent>Some dropdown content</DropdownContent>
+      </Dropdown>,
     );
 
     expect(queryByText('My Dropdown')).toBeTruthy();
@@ -41,6 +43,24 @@ describe('<Dropdown />', () => {
     expect(queryByText('Some dropdown content')).toBeVisible();
 
     fireEvent.click(queryByText('I am outside the dropdown'));
+    expect(queryByText('Some dropdown content')).not.toBeVisible();
+  });
+
+  it('should close when we hit escape', () => {
+    const { queryByText, container } = customRender(
+      <div>
+        <Dropdown buttonContent="My Dropdown">Some dropdown content</Dropdown>
+        <div>I am outside the dropdown</div>
+      </div>,
+    );
+
+    expect(queryByText('My Dropdown')).toBeTruthy();
+    expect(queryByText('Some dropdown content')).not.toBeVisible();
+
+    fireEvent.click(queryByText('My Dropdown'));
+    expect(queryByText('Some dropdown content')).toBeVisible();
+
+    fireEvent.keyUp(container, { key: 'Escape', code: 'Escape' });
     expect(queryByText('Some dropdown content')).not.toBeVisible();
   });
 
