@@ -259,14 +259,15 @@ declare interface ButtonIconVariants {
 declare interface CardVariants {
   neutral: {
     boxShadow: string;
+    background: string;
   };
   top: {
     boxShadow: string;
+    background: string;
   };
 }
 
 declare interface CardStyles {
-  background: string;
   header: {
     border: string;
   };

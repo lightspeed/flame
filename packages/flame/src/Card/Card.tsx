@@ -142,10 +142,12 @@ const setCardVariant = (props: { top?: boolean }) => {
   if (props.top) {
     return css`
       box-shadow: ${themeGet('cardVariants.top.boxShadow')(props)};
+      background-color: ${themeGet('cardVariants.top.background')(props)};
     `;
   }
   return css`
     box-shadow: ${themeGet('cardVariants.neutral.boxShadow')(props)};
+    background-color: ${themeGet('cardVariants.neutral.background')(props)};
   `;
 };
 
@@ -192,7 +194,6 @@ export type CardProps = BackgroundColorProps &
 export const Card = styled('div')<CardProps>`
   border-radius: ${themeGet('radii.radius-2')};
   font-family: ${themeGet('fontFamily.sans-serif')};
-  background-color: ${themeGet('cardStyles.background')};
 
   > :first-of-type {
     border-top-left-radius: calc(${themeGet('radii.radius-2')} - 1px);
