@@ -9,7 +9,7 @@ const cardVariants: CardVariants = {
   top: {
     boxShadow:
       '0 0 0 1px rgba(0, 0, 0, 0.06), 0 6px 12px 0 rgba(0, 0, 0, 0.03), 0 4px 8px 0 rgba(0, 0, 0, 0.08)',
-    background: '#323338',
+    background: colors['gray-800'],
   },
 };
 
