@@ -1,8 +1,8 @@
 import { shadows } from '../shadows';
 import { colors } from '../colors';
 
-const blue = colors['blue-500'];
-const lightBlue = colors['blue-300'];
+const blue = colors['blue-300'];
+const lightBlue = colors['blue-200'];
 
 const progressBarSurface = `
 linear-gradient(
@@ -15,15 +15,15 @@ linear-gradient(
 `;
 
 const progressStyles: ProgressStyles = {
-  background: colors['gray-100'],
+  background: colors['gray-700'],
   // @ts-ignore
   boxShadow: shadows.inner['inner-shadow-0'],
   progressBar: {
-    background: `${colors['gray-100']} ${progressBarSurface}`,
+    background: `${colors['gray-700']} ${progressBarSurface}`,
     backgroundSize: '400% 400%',
   },
   progressBarStatic: {
-    background: colors['blue-500'],
+    background: colors['blue-300'],
   },
 };
 
