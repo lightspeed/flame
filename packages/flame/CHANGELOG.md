@@ -15,8 +15,8 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Dropdown toggle when clicked will not be overwritten if we override the `onClick` prop ([#40](https://github.com/lightspeed/flame/pull/40))
-- InputGroup is now typed properly using the `Flex` props ([#40](https://github.com/lightspeed/flame/pull/40))
+- Dropdown toggle when clicked will not be overwritten if we override the `onClick` prop ([#41](https://github.com/lightspeed/flame/pull/41))
+- InputGroup is now typed properly using the `Flex` props ([#41](https://github.com/lightspeed/flame/pull/41))
 
 ## 1.1.0 - 2019-10-25
 
