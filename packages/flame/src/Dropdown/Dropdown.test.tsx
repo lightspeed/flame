@@ -46,6 +46,37 @@ describe('<Dropdown />', () => {
     expect(queryByText('Some dropdown content')).not.toBeVisible();
   });
 
+  it('should trigger our custom callback when we click the button', () => {
+    const mockFn = jest.fn();
+    const { queryByText } = customRender(
+      <div>
+        <Dropdown
+          buttonContent="My Dropdown"
+          onClick={toggle => {
+            mockFn();
+            toggle();
+          }}
+        >
+          Some dropdown content
+        </Dropdown>
+        <div>I am outside the dropdown</div>
+      </div>,
+    );
+
+    expect(queryByText('My Dropdown')).toBeTruthy();
+    expect(queryByText('Some dropdown content')).not.toBeVisible();
+
+    fireEvent.click(queryByText('My Dropdown'));
+    expect(queryByText('Some dropdown content')).toBeVisible();
+
+    expect(mockFn).toHaveBeenCalledTimes(1);
+
+    fireEvent.click(queryByText('I am outside the dropdown'));
+    expect(queryByText('Some dropdown content')).not.toBeVisible();
+
+    expect(mockFn).toHaveBeenCalledTimes(1);
+  });
+
   it('should close when we hit escape', () => {
     const { queryByText, container } = customRender(
       <div>

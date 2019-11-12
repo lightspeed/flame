@@ -16,10 +16,11 @@ import { useOnClickOutside } from '../hooks/useOnClickOutside';
 
 type Placement = 'start' | 'center' | 'end' | PopperPlacement;
 
-interface Props extends Merge<PopoverContainerProps, ButtonProps> {
+interface Props extends Merge<PopoverContainerProps, Omit<ButtonProps, 'onClick'>> {
   buttonContent: React.ReactNode;
   initiallyOpen?: boolean;
   placement?: Placement;
+  onClick?: (toggle: () => void, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 const Context = React.createContext<{ closeDropdown: () => void }>({
@@ -108,6 +109,7 @@ const Dropdown: React.FC<Props> = ({
   initiallyOpen = false,
   zIndex = 1,
   children,
+  onClick,
   ...restProps
 }) => {
   const targetRef = React.createRef<HTMLDivElement>();
@@ -144,7 +146,13 @@ const Dropdown: React.FC<Props> = ({
         <Button
           pr={2}
           pl={2}
-          onClick={toggle}
+          onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+            if (typeof onClick === 'function') {
+              onClick(toggle, event);
+            } else {
+              toggle();
+            }
+          }}
           forcedState={isActive ? 'active' : null}
           {...(restProps as any)}
         >
