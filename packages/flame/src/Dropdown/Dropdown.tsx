@@ -108,6 +108,7 @@ const Dropdown: React.FC<Props> = ({
   initiallyOpen = false,
   zIndex = 1,
   children,
+  onClick,
   ...restProps
 }) => {
   const targetRef = React.createRef<HTMLDivElement>();
@@ -144,7 +145,12 @@ const Dropdown: React.FC<Props> = ({
         <Button
           pr={2}
           pl={2}
-          onClick={toggle}
+          onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+            if (typeof onClick === 'function') {
+              onClick(event);
+            }
+            toggle();
+          }}
           forcedState={isActive ? 'active' : null}
           {...(restProps as any)}
         >

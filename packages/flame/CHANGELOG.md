@@ -13,6 +13,11 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 - Dropdown menu position can now be further customized. You can simply pass the the appropriate PopperJS placement to the `placement` prop and the menu will be adjusted accordingly ([#37](https://github.com/lightspeed/flame/pull/37))
 
+### Fixed
+
+- Dropdown toggle when clicked will not be overwritten if we override the `onClick` prop
+- InputGroup is now typed properly using the `Flex` props
+
 ## 1.1.0 - 2019-10-25
 
 ### Added
