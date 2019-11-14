@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
-import { color, ColorProps, zIndex, ZIndexProps, compose } from 'styled-system';
+import { color, ColorProps, zIndex, ZIndexProps, compose, space } from 'styled-system';
 
 import { Flex, border, FlameFlexProps, BorderProps } from '../Core';
 
@@ -11,7 +11,8 @@ export interface InputGroupAddonProps
     Partial<Omit<ColorProps, 'color'>>,
     ZIndexProps {}
 const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
-  padding: ${themeGet('space.1')} ${themeGet('space.2')};
+  padding-left: ${themeGet('space.2')};
+  padding-right: ${themeGet('space.2')};
   text-align: center;
   background-color: ${themeGet('groupStyles.addon.background')};
   border: solid 1px ${themeGet('groupStyles.addon.borderColor')};
@@ -20,11 +21,12 @@ const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
   ${compose(
     border,
     color,
+    space,
     zIndex,
   )};
 `;
 
-const InputGroup: React.FC = ({ children, ...restProps }) => {
+const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps }) => {
   const nextChildren = React.Children.map(children, (child: any, index) => {
     if (index === 0) {
       return React.cloneElement(child, {

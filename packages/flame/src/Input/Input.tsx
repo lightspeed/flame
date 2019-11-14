@@ -306,8 +306,8 @@ export interface InputProps extends Omit<BaseInputProps, 'status'> {
   status?:
     | StatusType
     | {
-        type: StatusType;
-        message: React.ReactNode;
+        type?: StatusType;
+        message?: React.ReactNode;
       };
   css?: any;
 }
