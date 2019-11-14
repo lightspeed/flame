@@ -100,8 +100,10 @@ Here's a list of type of changes (for the `###` titles):
 - **Changed** for changes in existing functionality.
 - **Deprecated** for soon-to-be removed features.
 - **Removed** for now removed features.
-- **Fixed** for any bug fixes.
-- **Breaking** for any breaking changes.
+- **Fixed** for bug fixes.
+- **Dependencies** for updated dependencies.
+- **Documentation** for docs updates.
+- **Breaking** for breaking changes.
 
 ## FAQ
 
