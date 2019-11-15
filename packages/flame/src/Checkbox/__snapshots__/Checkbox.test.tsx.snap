@@ -3,15 +3,21 @@
 exports[`<Checkbox /> Snapshots when all props and label/description with html should render correctly 1`] = `
 .emotion-9 {
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
   font-weight: 700;
   color: #0c0d0d;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -21,14 +27,21 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
 
 .emotion-0 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 0;
   margin: 0;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-0:checked + .emotion-6 {
@@ -58,8 +71,8 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
 
 .emotion-5 {
   position: relative;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -73,10 +86,17 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
   margin-right: 0.75rem;
 }
 
+@media screen and (min-width:601px) {
+  .emotion-5 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -88,9 +108,15 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
 
 .emotion-11 {
   margin: 0;
-  margin-left: 1.75rem;
+  margin-left: 1.85rem;
   font-size: 0.875rem;
   line-height: 1.125rem;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-11 {
+    margin-left: 1.75rem;
+  }
 }
 
 <div
@@ -99,7 +125,12 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
   <label
     className="emotion-9 emotion-10"
     color="textHeading"
-    fontSize="text-s"
+    fontSize={
+      Array [
+        "text",
+        "text-s",
+      ]
+    }
     fontWeight="bold"
     htmlFor="id"
   >
@@ -108,22 +139,42 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
     >
       <input
         className="emotion-0 emotion-1"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
         id="id"
         type="checkbox"
         value="value"
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       />
       <div
         className="emotion-5 emotion-6"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       >
         <svg
           className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
+          height="0.65rem"
           viewBox="0 0 16 16"
+          width="0.65rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -151,15 +202,21 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
 exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 .emotion-9 {
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
   font-weight: 700;
   color: #0c0d0d;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -169,14 +226,21 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 
 .emotion-0 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 0;
   margin: 0;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-0:checked + .emotion-6 {
@@ -206,8 +270,8 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 
 .emotion-5 {
   position: relative;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -221,10 +285,17 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
   margin-right: 0.75rem;
 }
 
+@media screen and (min-width:601px) {
+  .emotion-5 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -236,9 +307,15 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 
 .emotion-11 {
   margin: 0;
-  margin-left: 1.75rem;
+  margin-left: 1.85rem;
   font-size: 0.875rem;
   line-height: 1.125rem;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-11 {
+    margin-left: 1.75rem;
+  }
 }
 
 <div
@@ -247,7 +324,12 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
   <label
     className="emotion-9 emotion-10"
     color="textHeading"
-    fontSize="text-s"
+    fontSize={
+      Array [
+        "text",
+        "text-s",
+      ]
+    }
     fontWeight="bold"
     htmlFor="id"
   >
@@ -256,22 +338,42 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
     >
       <input
         className="emotion-0 emotion-1"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
         id="id"
         type="checkbox"
         value="value"
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       />
       <div
         className="emotion-5 emotion-6"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       >
         <svg
           className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
+          height="0.65rem"
           viewBox="0 0 16 16"
+          width="0.65rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -295,15 +397,21 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
 .emotion-9 {
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
   font-weight: 700;
   color: #0c0d0d;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -313,14 +421,21 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
 
 .emotion-0 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 0;
   margin: 0;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-0:checked + .emotion-6 {
@@ -350,8 +465,8 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
 
 .emotion-5 {
   position: relative;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -365,10 +480,17 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
   margin-right: 0.75rem;
 }
 
+@media screen and (min-width:601px) {
+  .emotion-5 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -384,7 +506,12 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
   <label
     className="emotion-9 emotion-10"
     color="textHeading"
-    fontSize="text-s"
+    fontSize={
+      Array [
+        "text",
+        "text-s",
+      ]
+    }
     fontWeight="bold"
   >
     <div
@@ -393,21 +520,41 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
       <input
         checked={true}
         className="emotion-0 emotion-1"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
         onChange={[Function]}
         type="checkbox"
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       />
       <div
         className="emotion-5 emotion-6"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       >
         <svg
           className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
+          height="0.65rem"
           viewBox="0 0 16 16"
+          width="0.65rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -424,15 +571,21 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
 exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
 .emotion-9 {
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
   font-weight: 700;
   color: #0c0d0d;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -442,14 +595,21 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
 
 .emotion-0 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 0;
   margin: 0;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-0:checked + .emotion-6 {
@@ -479,8 +639,8 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
 
 .emotion-5 {
   position: relative;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -494,10 +654,17 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
   margin-right: 0.75rem;
 }
 
+@media screen and (min-width:601px) {
+  .emotion-5 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -513,7 +680,12 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
   <label
     className="emotion-9 emotion-10"
     color="textHeading"
-    fontSize="text-s"
+    fontSize={
+      Array [
+        "text",
+        "text-s",
+      ]
+    }
     fontWeight="bold"
   >
     <div
@@ -522,20 +694,40 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
       <input
         className="emotion-0 emotion-1"
         disabled={true}
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
         type="checkbox"
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       />
       <div
         className="emotion-5 emotion-6"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       >
         <svg
           className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
+          height="0.65rem"
           viewBox="0 0 16 16"
+          width="0.65rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -552,15 +744,21 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
 exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
 .emotion-9 {
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
   font-weight: 700;
   color: #0c0d0d;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -570,14 +768,21 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
 
 .emotion-0 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 0;
   margin: 0;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-0:checked + .emotion-6 {
@@ -607,8 +812,8 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
 
 .emotion-5 {
   position: relative;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -622,10 +827,17 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
   margin-right: 0.75rem;
 }
 
+@media screen and (min-width:601px) {
+  .emotion-5 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -641,7 +853,12 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
   <label
     className="emotion-9 emotion-10"
     color="textHeading"
-    fontSize="text-s"
+    fontSize={
+      Array [
+        "text",
+        "text-s",
+      ]
+    }
     fontWeight="bold"
   >
     <div
@@ -649,20 +866,40 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
     >
       <input
         className="emotion-0 emotion-1"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
         type="checkbox"
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       />
       <div
         className="emotion-5 emotion-6"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       >
         <svg
           className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
+          height="0.65rem"
           viewBox="0 0 16 16"
+          width="0.65rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -679,15 +916,21 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
 exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] = `
 .emotion-11 {
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
   font-weight: 700;
   color: #0c0d0d;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-11 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-9 {
@@ -697,14 +940,21 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
 
 .emotion-0 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 0;
   margin: 0;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-0:checked + .emotion-8 {
@@ -733,9 +983,9 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
 }
 
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -747,8 +997,8 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
 
 .emotion-7 {
   position: relative;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -761,6 +1011,13 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
   background: linear-gradient(180deg,#fff,#f3f3f3);
   margin-right: 0.75rem;
   border-color: #2875c6;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-7 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-5 {
@@ -782,7 +1039,12 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
   <label
     className="emotion-11 emotion-12"
     color="textHeading"
-    fontSize="text-s"
+    fontSize={
+      Array [
+        "text",
+        "text-s",
+      ]
+    }
     fontWeight="bold"
   >
     <div
@@ -790,20 +1052,40 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
     >
       <input
         className="emotion-0 emotion-1"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
         type="checkbox"
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       />
       <div
         className="emotion-7 emotion-8"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       >
         <svg
           className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
+          height="0.65rem"
           viewBox="0 0 16 16"
+          width="0.65rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -823,15 +1105,21 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
 exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
 .emotion-9 {
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
   font-weight: 700;
   color: #0c0d0d;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-9 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-7 {
@@ -841,14 +1129,21 @@ exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
 
 .emotion-0 {
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 0;
   margin: 0;
   z-index: 1;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-0 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .emotion-0:checked + .emotion-6 {
@@ -878,8 +1173,8 @@ exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
 
 .emotion-5 {
   position: relative;
-  width: 1rem;
-  height: 1rem;
+  width: 18px;
+  height: 18px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -893,10 +1188,17 @@ exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
   margin-right: 0.75rem;
 }
 
+@media screen and (min-width:601px) {
+  .emotion-5 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .emotion-3 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.65rem;
+  height: 0.65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -912,7 +1214,12 @@ exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
   <label
     className="emotion-9 emotion-10"
     color="textHeading"
-    fontSize="text-s"
+    fontSize={
+      Array [
+        "text",
+        "text-s",
+      ]
+    }
     fontWeight="bold"
   >
     <div
@@ -921,20 +1228,40 @@ exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
       <input
         checked={false}
         className="emotion-0 emotion-1"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
         type="checkbox"
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       />
       <div
         className="emotion-5 emotion-6"
+        height={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
       >
         <svg
           className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
+          height="0.65rem"
           viewBox="0 0 16 16"
+          width="0.65rem"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

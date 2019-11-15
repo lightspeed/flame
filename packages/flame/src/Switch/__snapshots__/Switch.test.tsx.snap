@@ -119,16 +119,16 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
 }
 
 .emotion-7 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #fff;
 }
 
 .emotion-10 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #848a8a;
 }
 
@@ -166,13 +166,9 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
     >
       <svg
         className="emotion-6 cr-icon emotion-7 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -182,13 +178,9 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
       </svg>
       <svg
         className="emotion-9 cr-icon emotion-10 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -320,16 +312,16 @@ exports[`<Switch /> when checked should render correctly 1`] = `
 }
 
 .emotion-7 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #fff;
 }
 
 .emotion-10 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #848a8a;
 }
 
@@ -367,13 +359,9 @@ exports[`<Switch /> when checked should render correctly 1`] = `
     >
       <svg
         className="emotion-6 cr-icon emotion-7 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -383,13 +371,9 @@ exports[`<Switch /> when checked should render correctly 1`] = `
       </svg>
       <svg
         className="emotion-9 cr-icon emotion-10 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -521,16 +505,16 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
 }
 
 .emotion-7 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #fff;
 }
 
 .emotion-10 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #848a8a;
 }
 
@@ -568,13 +552,9 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
     >
       <svg
         className="emotion-6 cr-icon emotion-7 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -584,13 +564,9 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
       </svg>
       <svg
         className="emotion-9 cr-icon emotion-10 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -722,16 +698,16 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
 }
 
 .emotion-7 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #fff;
 }
 
 .emotion-10 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #848a8a;
 }
 
@@ -768,13 +744,9 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
     >
       <svg
         className="emotion-6 cr-icon emotion-7 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -784,13 +756,9 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
       </svg>
       <svg
         className="emotion-9 cr-icon emotion-10 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -922,16 +890,16 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
 }
 
 .emotion-7 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #fff;
 }
 
 .emotion-10 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #848a8a;
 }
 
@@ -970,13 +938,9 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
     >
       <svg
         className="emotion-6 cr-icon emotion-7 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -986,13 +950,9 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
       </svg>
       <svg
         className="emotion-9 cr-icon emotion-10 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -1124,16 +1084,16 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
 }
 
 .emotion-7 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #fff;
 }
 
 .emotion-10 {
-  width: 1rem;
-  height: 1rem;
   vertical-align: text-bottom;
+  width: 0.75rem;
+  height: 0.75rem;
   fill: #848a8a;
 }
 
@@ -1171,13 +1131,9 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
     >
       <svg
         className="emotion-6 cr-icon emotion-7 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -1187,13 +1143,9 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
       </svg>
       <svg
         className="emotion-9 cr-icon emotion-10 emotion-8"
-        style={
-          Object {
-            "height": "0.75rem",
-            "width": "0.75rem",
-          }
-        }
+        height="0.75rem"
         viewBox="0 0 16 16"
+        width="0.75rem"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

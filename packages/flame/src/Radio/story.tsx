@@ -7,78 +7,90 @@ import { Text, Heading2, Heading3, TextContent } from '../Text';
 import RadioWrapper from './examples';
 import { Radio, BaseRadio, RadioLabel } from './Radio';
 import { Box } from '../Core';
+import { percyBreakpoints, percySkip } from '../../../../stories/helpers/percy';
 
 import Readme from './README.md';
 
 const stories = storiesOf('Radio', module).addDecorator(withReadme(Readme));
 
-stories.add('Story', () => (
-  <div>
-    <Heading3 mb={2}>Form Radio</Heading3>
-    <Box mb={1}>
-      <Radio name="animal_radio" id="radio_animal_1" label="Lion" />
-    </Box>
-    <Box mb={1}>
-      <Radio name="animal_radio" id="radio_animal_2" label="Tiger" />
-    </Box>
-    <Box mb={1}>
-      <Radio name="animal_radio" id="radio_animal_3" label="Bear" />
-    </Box>
-    <Box mb={1}>
-      <Radio name="animal_radio" id="radio_animal_4" label="Lama" disabled />
-    </Box>
+stories.add(
+  'Story',
+  () => (
+    <div>
+      <Heading3 mb={2}>Form Radio</Heading3>
+      <Box mb={1}>
+        <Radio name="animal_radio" id="radio_animal_1" label="Lion" />
+      </Box>
+      <Box mb={1}>
+        <Radio name="animal_radio" id="radio_animal_2" label="Tiger" />
+      </Box>
+      <Box mb={1}>
+        <Radio name="animal_radio" id="radio_animal_3" label="Bear" />
+      </Box>
+      <Box mb={1}>
+        <Radio name="animal_radio" id="radio_animal_4" label="Lama" disabled />
+      </Box>
 
-    <Heading3 mb={2}>Radio with label and description</Heading3>
-    <Box mb={3}>
-      <Radio
-        name="radiolabelanddescription"
-        id="radiolabelanddescription"
-        label="Label"
-        description="Description text"
-        checked={false}
-      />
-    </Box>
+      <Heading3 mb={2}>Radio with label and description</Heading3>
+      <Box mb={3}>
+        <Radio
+          name="radiolabelanddescription"
+          id="radiolabelanddescription"
+          label="Label"
+          description="Description text"
+          checked={false}
+        />
+      </Box>
 
-    <Heading3 mb={2}>Radio with long label and description in a 50% container</Heading3>
-    <Box mb={3} style={{ width: '50%' }}>
-      <Radio
-        name="radiolong"
-        id="radiolong"
-        label="Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label"
-        description="Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description"
-        checked={false}
-      />
-    </Box>
-    <Heading3 mb={2}>Radio with custom label and description</Heading3>
-    <Box mb={3}>
-      <Radio
-        name="radio-custom"
-        id="radio-custom"
-        checked={false}
-        label={<Text color="red">Customizing the radio label</Text>}
-        description={
-          <Text color="blue" fontSize="large" mt={2}>
-            Customizing the radio label description
-          </Text>
-        }
-      />
-    </Box>
+      <Heading3 mb={2}>Radio with long label and description in a 50% container</Heading3>
+      <Box mb={3} style={{ width: '50%' }}>
+        <Radio
+          name="radiolong"
+          id="radiolong"
+          label="Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label"
+          description="Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description"
+          checked={false}
+        />
+      </Box>
+      <Heading3 mb={2}>Radio with custom label and description</Heading3>
+      <Box mb={3}>
+        <Radio
+          name="radio-custom"
+          id="radio-custom"
+          checked={false}
+          label={<Text color="red">Customizing the radio label</Text>}
+          description={
+            <Text color="blue" fontSize="large" mt={2}>
+              Customizing the radio label description
+            </Text>
+          }
+        />
+      </Box>
 
-    <Heading3 mb={2}>Radio states</Heading3>
-    <Box mb={3}>
-      <Radio id="unchecked" label="Unchecked" checked={false} onChange={() => {}} />
-    </Box>
-    <Box mb={3}>
-      <Radio id="checked" label="Checked" checked onChange={() => {}} />
-    </Box>
-    <Box mb={3}>
-      <Radio id="disabled" label="Disabled" disabled checked={false} onChange={() => {}} />
-    </Box>
-    <Box mb={3}>
-      <Radio id="checked-disabled" label="Checked Disabled" checked onChange={() => {}} disabled />
-    </Box>
-  </div>
-));
+      <Heading3 mb={2}>Radio states</Heading3>
+      <Box mb={3}>
+        <Radio id="unchecked" label="Unchecked" checked={false} onChange={() => {}} />
+      </Box>
+      <Box mb={3}>
+        <Radio id="checked" label="Checked" checked onChange={() => {}} />
+      </Box>
+      <Box mb={3}>
+        <Radio id="disabled" label="Disabled" disabled checked={false} onChange={() => {}} />
+      </Box>
+      <Box mb={3}>
+        <Radio
+          id="checked-disabled"
+          label="Checked Disabled"
+          checked
+          onChange={() => {}}
+          disabled
+        />
+      </Box>
+    </div>
+  ),
+
+  { ...percyBreakpoints },
+);
 
 stories.add('Rebuilding using the base components', () => (
   <div>
@@ -150,7 +162,7 @@ stories.add(
       </Box>
     </TextContent>
   ),
-  { percy: { skip: true } },
+  { ...percySkip },
 );
 
 stories.add(
@@ -202,5 +214,5 @@ stories.add(
       </Box>
     </TextContent>
   ),
-  { percy: { skip: true } },
+  { ...percySkip },
 );

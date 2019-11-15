@@ -7,6 +7,8 @@
 
 [![npm version](https://badge.fury.io/js/%40lightspeed%2Fflame.svg)](https://badge.fury.io/js/%40lightspeed%2Fflame) [![GitHub Actions workflow status badge](https://github.com/lightspeed/flame/workflows/Test/badge.svg)](https://github.com/lightspeed/flame/actions) [![codecov](https://codecov.io/gh/lightspeed/flame/branch/master/graph/badge.svg)](https://codecov.io/gh/lightspeed/flame)
 
+## 🚨 You are currently viewing the work in progress branch for Flame Mobile Friendliness 🚨
+
 ### Storybook
 
 For the deployed version of our development environment visit https://lightspeed-flame.netlify.com.

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
+import { layout, LayoutProps } from 'styled-system';
 
 import { Box } from '../Core';
 import { BaseLabel, LabelProps, FormHelper } from '../FormField/FormField';
@@ -15,9 +16,15 @@ const RadioLabel: React.FC<RadioLabelProps> = ({
   return (
     <Box>
       <BaseLabel {...restProps}>{children}</BaseLabel>
-      {description && <FormHelper ml="1.75rem">{description}</FormHelper>}
+      {description && <FormHelper ml={['1.85rem', '1.75rem']}>{description}</FormHelper>}
     </Box>
   );
+};
+
+RadioLabel.defaultProps = {
+  fontSize: ['text', 'text-s'],
+  lineHeight: 3,
+  fontWeight: 'bold',
 };
 
 const WrapperRadio = styled('div')`
@@ -25,10 +32,11 @@ const WrapperRadio = styled('div')`
   line-height: 1rem;
 `;
 
-const Checkmark = styled('div')`
+const Checkmark = styled('div')<LayoutProps>`
   position: relative;
   width: 1rem;
   height: 1rem;
+  ${layout};
   flex: 0 0 auto;
   border-radius: ${themeGet('radii.radius-circle')};
   background-color: transparent;
@@ -39,21 +47,29 @@ const Checkmark = styled('div')`
   margin-right: ${themeGet('space.2')};
 `;
 
-const Centermark = styled('div')`
+Checkmark.defaultProps = {
+  width: ['18px', '16px'],
+  height: ['18px', '16px'],
+};
+
+const Centermark = styled('div')<LayoutProps>`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: ${themeGet('space.1')};
-  height: ${themeGet('space.1')};
+  ${layout};
   border-radius: ${themeGet('radii.radius-circle')};
   background: ${themeGet('radioStyles.background')};
 `;
 
+Centermark.defaultProps = {
+  width: ['7px', '6px'],
+  height: ['7px', '6px'],
+};
+
 const RadioInput = styled('input')`
   position: absolute;
-  width: 1rem;
-  height: 1rem;
+  ${layout};
   top: 0;
   left: 0;
   opacity: 0;
@@ -80,9 +96,18 @@ const RadioInput = styled('input')`
   }
 `;
 
+RadioInput.defaultProps = {
+  // Fun clashing between legacy props and our custom props
+  // @ts-ignore
+  width: ['18px', '16px'],
+  // @ts-ignore
+  height: ['18px', '16px'],
+};
+
 export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
   css?: any;
 }
+
 const BaseRadio = React.forwardRef<HTMLInputElement, RadioProps>(({ ...restProps }, ref) => (
   <WrapperRadio>
     <RadioInput ref={ref} type="radio" {...restProps} />
@@ -91,7 +116,6 @@ const BaseRadio = React.forwardRef<HTMLInputElement, RadioProps>(({ ...restProps
     </Checkmark>
   </WrapperRadio>
 ));
-
 interface FormRadioProps extends RadioProps {
   label?: React.ReactNode;
   description?: React.ReactNode;

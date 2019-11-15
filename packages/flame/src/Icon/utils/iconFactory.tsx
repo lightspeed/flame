@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { withTheme } from 'emotion-theming';
 import { themeGet } from '@styled-system/theme-get';
+import { layout, LayoutProps } from 'styled-system';
 
 export type IconProps = {
   /** Name of requested Icon */
@@ -29,7 +30,7 @@ export type IconProps = {
 
 export default function iconFactory(BaseIconComponent: React.FC, displayName = 'FlameIcon') {
   const EnhancedIcon: React.FC<IconProps> = ({
-    size = '1rem',
+    size,
     className,
     color,
     baseColor,
@@ -59,14 +60,17 @@ export default function iconFactory(BaseIconComponent: React.FC, displayName = '
         to set an icons color or fill property.
       */
       className: [className, 'cr-icon'].join(' '),
-      style: { width: iconSize, height: iconSize },
     };
 
-    const StyledIcon = styled(BaseIconComponent)`
-      width: 1rem;
-      height: 1rem;
+    const StyledIcon = styled(BaseIconComponent)<LayoutProps>`
       vertical-align: text-bottom;
+      ${layout};
     `;
+
+    StyledIcon.defaultProps = {
+      width: iconSize || ['18px', '1rem'],
+      height: iconSize || ['18px', '1rem'],
+    };
 
     return <StyledIcon {...stylingProps} {...restProps} />;
   };

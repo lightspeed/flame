@@ -3,6 +3,7 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { Global } from '@emotion/core';
 import { FlameTheme, FlameGlobalStyles, Box } from '../packages/flame/src/Core';
 import { Select } from '../packages/flame/src/Select';
+import { commonTheme } from '../packages/flame-tokens/src/theme-ui/common';
 
 class FlameStyling extends React.Component {
   constructor(props) {
@@ -54,6 +55,29 @@ addParameters({
   options: {
     name: 'Lightspeed Flame',
     panelPosition: 'right',
+  },
+});
+
+addParameters({
+  viewport: {
+    viewports: {
+      small: {
+        name: 'Small',
+        styles: {
+          width: `${Number.parseInt(commonTheme.breakpoints[0].replace('px', ''), 10) - 1}px`,
+          height: '98%',
+        },
+        type: 'mobile',
+      },
+      medium: {
+        name: 'Medium',
+        styles: {
+          width: `${Number.parseInt(commonTheme.breakpoints[1].replace('px', ''), 10) - 1}px`,
+          height: '98%',
+        },
+        type: 'tablet',
+      },
+    },
   },
 });
 
