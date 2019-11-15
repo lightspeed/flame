@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- InputGroup will now properly manage null children, instead of throwing errors
+- InputGroup will now properly manage null children, instead of throwing errors ([#43](https://github.com/lightspeed/flame/pull/43))
 
 ## 1.2.0 - 2019-11-14
 
