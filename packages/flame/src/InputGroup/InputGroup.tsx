@@ -28,6 +28,10 @@ const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
 
 const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps }) => {
   const nextChildren = React.Children.map(children, (child: any, index) => {
+    if (!child) {
+      return null;
+    }
+
     if (index === 0) {
       return React.cloneElement(child, {
         borderTopRightRadius: 0,

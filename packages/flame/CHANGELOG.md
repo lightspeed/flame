@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- InputGroup will now properly manage null children, instead of throwing errors
+
 ## 1.2.0 - 2019-11-14
 
 ### Added
