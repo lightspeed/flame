@@ -1,8 +1,11 @@
-<h3 align="center">🔥 Lightspeed's React UI components library.</h3>
+<p align="center">
+  <img alt="Lightspeed Flame" width="204px" src="https://user-images.githubusercontent.com/24464151/67687230-648a1300-f96e-11e9-9de0-7735ea1682c0.png" />
+</p>
+<h3 align="center">Component library for building Lightspeed products.</h3>
 
 ---
 
-[![npm version](https://badge.fury.io/js/%40lightspeed%2Fflame.svg)](https://badge.fury.io/js/%40lightspeed%2Fflame) [![Circle CI status](https://circleci.com/gh/lightspeed/flame/tree/master.svg?style=shield)](https://circleci.com/gh/lightspeed/flame/tree/master) [![codecov](https://codecov.io/gh/lightspeed/flame/branch/master/graph/badge.svg)](https://codecov.io/gh/lightspeed/flame)
+[![npm version](https://badge.fury.io/js/%40lightspeed%2Fflame.svg)](https://badge.fury.io/js/%40lightspeed%2Fflame) [![GitHub Actions workflow status badge](https://github.com/lightspeed/flame/workflows/Test/badge.svg)](https://github.com/lightspeed/flame/actions) [![codecov](https://codecov.io/gh/lightspeed/flame/branch/master/graph/badge.svg)](https://codecov.io/gh/lightspeed/flame)
 
 ## 🚨 You are currently viewing the work in progress branch for Flame Mobile Friendliness 🚨
 

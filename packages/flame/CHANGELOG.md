@@ -13,6 +13,36 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 - Checkbox and Radio mobile view ([#26](https://github.com/lightspeed/flame/pull/26))
 
+## 1.2.0 - 2019-11-14
+
+### Added
+
+- Dropdown menu position can now be further customized. You can simply pass the the appropriate PopperJS placement to the `placement` prop and the menu will be adjusted accordingly ([#37](https://github.com/lightspeed/flame/pull/37))
+
+### Fixed
+
+- Dropdown toggle when clicked will not be overwritten if we override the `onClick` prop ([#41](https://github.com/lightspeed/flame/pull/41))
+- InputGroup is now typed properly using the `Flex` props ([#41](https://github.com/lightspeed/flame/pull/41))
+- Made Input status and message optional in typings ([#41](https://github.com/lightspeed/flame/pull/41))
+- Pass back in space props to the InputGroupAddon ([#41](https://github.com/lightspeed/flame/pull/41))
+
+## 1.1.0 - 2019-10-25
+
+### Added
+
+- Add Interac icon ([#33](https://github.com/lightspeed/flame/pull/33))
+- Add InputGroup and FormField (Label + FormHelper) components ([#2](https://github.com/lightspeed/flame/pull/2))
+- Expose Input, Radio and Checkbox base components ([#2](https://github.com/lightspeed/flame/pull/2))
+- Enable `zIndex` Styled System props for Button, BaseInput and InputGroupAddon components ([#2](https://github.com/lightspeed/flame/pull/2))
+
+### Changed
+
+- Input no longer uses objects to represent status and status message ([#2](https://github.com/lightspeed/flame/pull/2))
+
+### Deprecated
+
+- Group component will be removed from the next major version of Flame ([#2](https://github.com/lightspeed/flame/pull/2))
+
 ## 1.0.0 - 2019-10-08
 
 - Flame is now considered stable :tada:

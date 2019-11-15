@@ -4,7 +4,7 @@ By contributing to Flame, you agree to abide by the [code of conduct](/.github/C
 
 ## Development
 
-To get started, clone the repo:
+To get started, clone (internal contributors) or fork (external contributors) the repository:
 
 ```sh
 git clone git@github.com:lightspeed/flame.git
@@ -100,18 +100,10 @@ Here's a list of type of changes (for the `###` titles):
 - **Changed** for changes in existing functionality.
 - **Deprecated** for soon-to-be removed features.
 - **Removed** for now removed features.
-- **Fixed** for any bug fixes.
-- **Breaking** for any breaking changes.
-
-### Running visual regression tests
-
-We use [Percy](https://percy.io/) to run visual regression tests on our Storybook stories.
-
-Until this process is automated, you will need to run the command locally from your branch. This is an **optional** step when potential visual breakage can happen. To do this you will need to:
-
-1. Run `yarn snapshot`, this will trigger a build in Percy
-2. Get an approval from a designer
-3. After a PR with visual changes and Percy build was merged, you need to **re-run** `yarn snapshot` so that the new approved changes (they will be auto-approved by Percy) are set as the new base for subsequent builds.
+- **Fixed** for bug fixes.
+- **Dependencies** for updated dependencies.
+- **Documentation** for docs updates.
+- **Breaking** for breaking changes.
 
 ## FAQ
 

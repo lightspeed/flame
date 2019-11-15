@@ -4,7 +4,7 @@ For when buttons aren't enough
 
 ## Usage
 
-First, make sure you have been through the [Getting started](https://github.com/lightspeed/flame#getting-started) steps of adding Cirrus in your application.
+First, make sure you have been through the [Getting started](https://github.com/lightspeed/flame#getting-started) steps of adding Flame in your application.
 
 ### React Component
 
@@ -29,7 +29,7 @@ Wrap your Tabs with this component to get proper spacing between each element
 
 ```js
 import React from 'react';
-import { Tab, TabContainer } from '@lightspeed/cirrus/Tab';
+import { Tab, TabContainer } from '@lightspeed/flame/Tab';
 
 const MyComponent = () => (
   <TabContainer>

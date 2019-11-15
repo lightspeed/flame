@@ -1,17 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Radio /> Snapshots renders a Radio with a label and description correctly 1`] = `
-.emotion-14 {
-  position: relative;
-  line-height: 1rem;
+.emotion-8 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+  color: #0c0d0d;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-8 {
+@media screen and (min-width:601px) {
+  .emotion-8 {
+    font-size: 0.875rem;
+  }
+}
+
+.emotion-6 {
   position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  line-height: 1rem;
 }
 
 .emotion-0 {
@@ -66,6 +77,7 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
   box-sizing: border-box;
   overflow: hidden;
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
+  margin-right: 0.75rem;
 }
 
 @media screen and (min-width:601px) {
@@ -95,145 +107,124 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
   }
 }
 
-.emotion-6 {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  margin-left: 0.75rem;
-  font-weight: 700;
-  color: #0c0d0d;
-}
-
-@media screen and (min-width:601px) {
-  .emotion-6 {
-    font-size: 0.875rem;
-  }
-}
-
-.emotion-12 {
-  margin-left: 18px;
-}
-
-@media screen and (min-width:601px) {
-  .emotion-12 {
-    margin-left: 16px;
-  }
-}
-
-.emotion-12 .emotion-11 {
-  color: #848a8a;
-}
-
 .emotion-10 {
   margin: 0;
-  margin-left: 0.75rem;
+  margin-left: 1.85rem;
   font-size: 0.875rem;
   line-height: 1.125rem;
 }
 
+@media screen and (min-width:601px) {
+  .emotion-10 {
+    margin-left: 1.75rem;
+  }
+}
+
 <div
-  className="emotion-14 emotion-15"
+  className="emotion-12 emotion-13"
 >
   <label
     className="emotion-8 emotion-9"
+    color="textHeading"
+    fontSize={
+      Array [
+        "text",
+        "text-s",
+      ]
+    }
+    fontWeight="bold"
     htmlFor="Radio"
-    role="presentation"
   >
-    <input
-      aria-describedby="Radio-description"
-      aria-labelledby="Radio-label"
-      checked={false}
-      className="emotion-0 emotion-1"
-      height={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-      id="Radio"
-      onChange={[MockFunction]}
-      type="radio"
-      value="value"
-      width={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-    />
     <div
-      className="emotion-4 emotion-5"
-      height={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-      width={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
+      className="emotion-6 emotion-7"
     >
-      <div
-        className="emotion-2 emotion-3"
-        data-testid="radio-centermark"
+      <input
+        checked={false}
+        className="emotion-0 emotion-1"
         height={
           Array [
-            "7px",
-            "6px",
+            "18px",
+            "16px",
+          ]
+        }
+        id="Radio"
+        onChange={[MockFunction]}
+        type="radio"
+        value="value"
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
+      />
+      <div
+        className="emotion-4 emotion-5"
+        height={
+          Array [
+            "18px",
+            "16px",
           ]
         }
         width={
           Array [
-            "7px",
-            "6px",
+            "18px",
+            "16px",
           ]
         }
-      />
+      >
+        <div
+          className="emotion-2 emotion-3"
+          data-testid="radio-centermark"
+          height={
+            Array [
+              "7px",
+              "6px",
+            ]
+          }
+          width={
+            Array [
+              "7px",
+              "6px",
+            ]
+          }
+        />
+      </div>
     </div>
-    <div
-      className="emotion-6 emotion-7"
-      fontSize={
-        Array [
-          "text",
-          "text-s",
-        ]
-      }
-      fontWeight="bold"
-      id="Radio-label"
-    >
-      Label
-    </div>
+    Label
   </label>
   <div
-    className="emotion-12 emotion-13"
+    className="emotion-10 emotion-11"
+    size="small"
   >
-    <div
-      className="emotion-10 emotion-11"
-      id="Radio-label"
-      size="small"
-    >
-      Description
-    </div>
+    Description
   </div>
 </div>
 `;
 
 exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
 .emotion-8 {
-  position: relative;
-  line-height: 1rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+  color: #0c0d0d;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-8 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-6 {
   position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  line-height: 1rem;
 }
 
 .emotion-0 {
@@ -288,6 +279,7 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
   box-sizing: border-box;
   overflow: hidden;
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
+  margin-right: 0.75rem;
 }
 
 @media screen and (min-width:601px) {
@@ -318,66 +310,75 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
 }
 
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-10 emotion-11"
 >
   <label
-    className="emotion-6 emotion-7"
+    className="emotion-8 emotion-9"
+    color="textHeading"
+    fontSize={
+      Array [
+        "text",
+        "text-s",
+      ]
+    }
+    fontWeight="bold"
     htmlFor="Radio"
-    role="presentation"
   >
-    <input
-      aria-describedby={null}
-      aria-labelledby={null}
-      checked={true}
-      className="emotion-0 emotion-1"
-      height={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-      id="Radio"
-      onChange={[MockFunction]}
-      type="radio"
-      value="value"
-      width={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-    />
     <div
-      className="emotion-4 emotion-5"
-      height={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-      width={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
+      className="emotion-6 emotion-7"
     >
-      <div
-        className="emotion-2 emotion-3"
-        data-testid="radio-centermark"
+      <input
+        checked={true}
+        className="emotion-0 emotion-1"
         height={
           Array [
-            "7px",
-            "6px",
+            "18px",
+            "16px",
+          ]
+        }
+        id="Radio"
+        onChange={[MockFunction]}
+        type="radio"
+        value="value"
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
+      />
+      <div
+        className="emotion-4 emotion-5"
+        height={
+          Array [
+            "18px",
+            "16px",
           ]
         }
         width={
           Array [
-            "7px",
-            "6px",
+            "18px",
+            "16px",
           ]
         }
-      />
+      >
+        <div
+          className="emotion-2 emotion-3"
+          data-testid="radio-centermark"
+          height={
+            Array [
+              "7px",
+              "6px",
+            ]
+          }
+          width={
+            Array [
+              "7px",
+              "6px",
+            ]
+          }
+        />
+      </div>
     </div>
   </label>
 </div>
@@ -385,16 +386,27 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
 
 exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
 .emotion-8 {
-  position: relative;
-  line-height: 1rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+  color: #0c0d0d;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-8 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-6 {
   position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  line-height: 1rem;
 }
 
 .emotion-0 {
@@ -449,6 +461,7 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
   box-sizing: border-box;
   overflow: hidden;
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
+  margin-right: 0.75rem;
 }
 
 @media screen and (min-width:601px) {
@@ -479,67 +492,76 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
 }
 
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-10 emotion-11"
 >
   <label
-    className="emotion-6 emotion-7"
+    className="emotion-8 emotion-9"
+    color="textHeading"
+    fontSize={
+      Array [
+        "text",
+        "text-s",
+      ]
+    }
+    fontWeight="bold"
     htmlFor="Radio"
-    role="presentation"
   >
-    <input
-      aria-describedby={null}
-      aria-labelledby={null}
-      checked={false}
-      className="emotion-0 emotion-1"
-      disabled={true}
-      height={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-      id="Radio"
-      onChange={[MockFunction]}
-      type="radio"
-      value="value"
-      width={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-    />
     <div
-      className="emotion-4 emotion-5"
-      height={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-      width={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
+      className="emotion-6 emotion-7"
     >
-      <div
-        className="emotion-2 emotion-3"
-        data-testid="radio-centermark"
+      <input
+        checked={false}
+        className="emotion-0 emotion-1"
+        disabled={true}
         height={
           Array [
-            "7px",
-            "6px",
+            "18px",
+            "16px",
+          ]
+        }
+        id="Radio"
+        onChange={[MockFunction]}
+        type="radio"
+        value="value"
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
+      />
+      <div
+        className="emotion-4 emotion-5"
+        height={
+          Array [
+            "18px",
+            "16px",
           ]
         }
         width={
           Array [
-            "7px",
-            "6px",
+            "18px",
+            "16px",
           ]
         }
-      />
+      >
+        <div
+          className="emotion-2 emotion-3"
+          data-testid="radio-centermark"
+          height={
+            Array [
+              "7px",
+              "6px",
+            ]
+          }
+          width={
+            Array [
+              "7px",
+              "6px",
+            ]
+          }
+        />
+      </div>
     </div>
   </label>
 </div>
@@ -547,16 +569,27 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
 
 exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
 .emotion-8 {
-  position: relative;
-  line-height: 1rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+  color: #0c0d0d;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width:601px) {
+  .emotion-8 {
+    font-size: 0.875rem;
+  }
 }
 
 .emotion-6 {
   position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  line-height: 1rem;
 }
 
 .emotion-0 {
@@ -611,6 +644,7 @@ exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
   box-sizing: border-box;
   overflow: hidden;
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
+  margin-right: 0.75rem;
 }
 
 @media screen and (min-width:601px) {
@@ -641,63 +675,72 @@ exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
 }
 
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-10 emotion-11"
 >
   <label
-    className="emotion-6 emotion-7"
-    role="presentation"
+    className="emotion-8 emotion-9"
+    color="textHeading"
+    fontSize={
+      Array [
+        "text",
+        "text-s",
+      ]
+    }
+    fontWeight="bold"
   >
-    <input
-      aria-describedby={null}
-      aria-labelledby={null}
-      checked={false}
-      className="emotion-0 emotion-1"
-      height={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-      onChange={[MockFunction]}
-      type="radio"
-      width={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-    />
     <div
-      className="emotion-4 emotion-5"
-      height={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
-      width={
-        Array [
-          "18px",
-          "16px",
-        ]
-      }
+      className="emotion-6 emotion-7"
     >
-      <div
-        className="emotion-2 emotion-3"
-        data-testid="radio-centermark"
+      <input
+        checked={false}
+        className="emotion-0 emotion-1"
         height={
           Array [
-            "7px",
-            "6px",
+            "18px",
+            "16px",
+          ]
+        }
+        onChange={[MockFunction]}
+        type="radio"
+        width={
+          Array [
+            "18px",
+            "16px",
+          ]
+        }
+      />
+      <div
+        className="emotion-4 emotion-5"
+        height={
+          Array [
+            "18px",
+            "16px",
           ]
         }
         width={
           Array [
-            "7px",
-            "6px",
+            "18px",
+            "16px",
           ]
         }
-      />
+      >
+        <div
+          className="emotion-2 emotion-3"
+          data-testid="radio-centermark"
+          height={
+            Array [
+              "7px",
+              "6px",
+            ]
+          }
+          width={
+            Array [
+              "7px",
+              "6px",
+            ]
+          }
+        />
+      </div>
     </div>
   </label>
 </div>

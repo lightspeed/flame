@@ -112,7 +112,7 @@ describe('<Radio />', () => {
 
   describe('Render', () => {
     const { getByText } = customRender(
-      <Radio label={() => <div>my label</div>} description={() => <div>my description</div>} />,
+      <Radio label={<div>my label</div>} description={<div>my description</div>} />,
     );
 
     getByText('my label');

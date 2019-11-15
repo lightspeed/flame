@@ -1,11 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Input /> Snapshot should match snapshot 1`] = `
-.emotion-6 {
-  display: block;
-  width: 100%;
-}
-
 .emotion-4 {
   position: relative;
   display: -webkit-box;
@@ -20,6 +15,7 @@ exports[`<Input /> Snapshot should match snapshot 1`] = `
   background: #fff;
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
+  width: 100%;
 }
 
 .emotion-0 {
@@ -66,6 +62,18 @@ exports[`<Input /> Snapshot should match snapshot 1`] = `
   outline: none;
 }
 
+.emotion-0:not([disabled]):not([readonly]):hover + div {
+  border-color: #9ba0ab;
+}
+
+.emotion-0:not([disabled]):not([readonly]):focus + div {
+  border-color: #2875c6;
+}
+
+.emotion-0:not([disabled]):not([readonly]):active + div {
+  border-color: #2875c6;
+}
+
 .emotion-2 {
   position: absolute;
   top: 0;
@@ -81,34 +89,17 @@ exports[`<Input /> Snapshot should match snapshot 1`] = `
   transition: border-color 100ms ease-in-out;
 }
 
-.emotion-1:not([disabled]):not([readonly]):hover ~ .emotion-2 {
-  border-color: #9ba0ab;
-}
-
-.emotion-1:not([disabled]):not([readonly]):focus ~ .emotion-2 {
-  border-color: #2875c6;
-}
-
-.emotion-1:not([disabled]):not([readonly]):active ~ .emotion-2 {
-  border-color: #2875c6;
-}
-
-<label
-  className="emotion-6 emotion-7"
-  htmlFor="username"
+<div
+  className="emotion-4 emotion-5"
 >
+  <input
+    className="emotion-0 emotion-1"
+    id="username"
+    name="username"
+    placeholder="Placeholder text"
+  />
   <div
-    className="emotion-4 emotion-5"
-  >
-    <input
-      className="emotion-0 emotion-1"
-      id="username"
-      name="username"
-      placeholder="Placeholder text"
-    />
-    <div
-      className="emotion-2 emotion-3"
-    />
-  </div>
-</label>
+    className="emotion-2 emotion-3"
+  />
+</div>
 `;

@@ -3,6 +3,7 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
+import { Placement as PopperPlacement } from 'popper.js';
 
 import { Box, FlameBoxProps } from '../Core';
 import { Button, ButtonProps } from '../Button';
@@ -13,36 +14,56 @@ import { useToggle } from '../hooks/useToggle';
 import { useEventListener } from '../hooks/useEventListener';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
 
-interface Props extends Merge<PopoverContainerProps, ButtonProps> {
+type Placement = 'start' | 'center' | 'end' | PopperPlacement;
+
+interface Props extends Merge<PopoverContainerProps, Omit<ButtonProps, 'onClick'>> {
   buttonContent: React.ReactNode;
   initiallyOpen?: boolean;
-  placement?: 'start' | 'center' | 'end';
+  placement?: Placement;
+  onClick?: (toggle: () => void, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 const Context = React.createContext<{ closeDropdown: () => void }>({
   closeDropdown: () => {},
 });
 
-const containerIsActive = (props: { isActive: boolean }) =>
-  props.isActive
+/* istanbul ignore next */
+const inactivePlacement = (placement: Placement) => {
+  const pos = placement && placement.replace(/-start|-center|-end/gi, '');
+
+  switch (pos) {
+    case 'top':
+      return 'top: 5px !important';
+    case 'right':
+    case 'left':
+      return '';
+    default:
+      return 'top: -5px !important';
+  }
+};
+const containerIsActive = (props: { isActive: boolean; placement?: Placement }) => {
+  return props.isActive
     ? css`
-        top: 8px !important;
         opacity: 1;
         visibility: visible;
       `
     : css`
-        top: 5px !important;
+        ${inactivePlacement(props.placement)};
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
       `;
+};
 
 const animSpeed = 'transition.transition-duration-fast';
 
-const DropdownContainer = styled(BasePopoverContainer)<{ isActive: boolean }>`
+const DropdownContainer = styled(BasePopoverContainer)<{
+  isActive: boolean;
+  placement?: Placement;
+}>`
   ${containerIsActive}
 
-  transition-property: opacity, visibility;
+  transition-property: opacity, visibility, transform;
   transition-duration: ${themeGet('transition.transition-duration-base')};
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 
@@ -88,13 +109,20 @@ const Dropdown: React.FC<Props> = ({
   initiallyOpen = false,
   zIndex = 1,
   children,
+  onClick,
   ...restProps
 }) => {
   const targetRef = React.createRef<HTMLDivElement>();
   const popperRef = React.createRef<HTMLDivElement>();
 
   usePopper(targetRef, popperRef, {
-    placement: (placementWhitelist[placement] as any) || 'bottom-start',
+    placement: (placementWhitelist[placement] as any) || placement || 'bottom-start',
+    modifiers: {
+      offset: {
+        enabled: true,
+        offset: '0px, 8px',
+      },
+    },
   });
 
   const { isActive, toggle, setInactive } = useToggle(!!initiallyOpen);
@@ -118,7 +146,13 @@ const Dropdown: React.FC<Props> = ({
         <Button
           pr={2}
           pl={2}
-          onClick={toggle}
+          onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+            if (typeof onClick === 'function') {
+              onClick(toggle, event);
+            } else {
+              toggle();
+            }
+          }}
           forcedState={isActive ? 'active' : null}
           {...(restProps as any)}
         >
@@ -127,7 +161,13 @@ const Dropdown: React.FC<Props> = ({
         </Button>
       </Box>
 
-      <DropdownContainer ref={popperRef} light zIndex={zIndex} isActive={isActive}>
+      <DropdownContainer
+        ref={popperRef}
+        light
+        zIndex={zIndex}
+        isActive={isActive}
+        placement={placement}
+      >
         {typeof children === 'function' ? children(setInactive) : children}
       </DropdownContainer>
     </Context.Provider>

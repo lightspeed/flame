@@ -5,9 +5,9 @@ import { withReadme } from 'storybook-readme';
 
 import { Input } from './Input';
 import Readme from './README.md';
+import { Box } from '../Core';
 import { Badge } from '../Badge';
 import { Button } from '../Button';
-import { Box } from '../Core';
 import { Icon } from '../Icon';
 
 const stories = storiesOf('Input', module).addDecorator(withReadme(Readme));
@@ -55,10 +55,11 @@ class InputWrapper extends React.Component<any, State> {
         <Input
           placeholder="Input with error message..."
           id="error"
-          label="Enter a number"
-          status={this.state.status}
           onChange={e => this.handleChange(e)}
           onFocus={() => this.handleFocus()}
+          label="Enter a number"
+          status={this.state.status.type as any}
+          statusMessage={this.state.status.message}
         />
         <br />
         <Button onClick={() => this.handleClick()}>Submit</Button>
@@ -76,18 +77,18 @@ stories.add('Story', () => (
     <Box mb={3}>
       <h3>Advanced text input</h3>
       <Input
+        id="advanced"
+        label="Label"
+        labelHelper={
+          <Badge type="info" size="small">
+            Label Helper
+          </Badge>
+        }
+        textHelper="Text Helper"
+        description="Description text"
         placeholder="Placeholder text..."
         prefix="$"
         suffix="*"
-        id="username"
-        label="Label"
-        description="Description text"
-        labelHelper={
-          <Badge type="info" size="small">
-            label helper
-          </Badge>
-        }
-        textHelper="Text helper"
       />
     </Box>
 
@@ -109,17 +110,17 @@ stories.add('Story', () => (
     </Box>
     <Box mb={3}>
       <Input
-        prefix={<Icon name="customers" color="textHeading" />}
-        suffix={<Icon name="info" color="secondary" />}
-        status={{ type: 'valid' }}
+        status="valid"
         placeholder="Valid input..."
+        prefix={<Icon name="customers" />}
+        suffix={<Icon name="info" color="secondary" />}
       />
     </Box>
     <Box mb={3}>
-      <Input status={{ type: 'warning' }} placeholder="Warning input..." />
+      <Input status="warning" placeholder="Warning input..." />
     </Box>
     <Box mb={3}>
-      <Input status={{ type: 'error' }} placeholder="Error input..." />
+      <Input status="error" placeholder="Error input..." />
     </Box>
 
     <div>
@@ -134,12 +135,21 @@ stories.add('Story', () => (
         <Input size="large" placeholder="Large input..." />
       </Box>
     </div>
-
     <div>
       <h2>Input Error Text</h2>
       <Box mb={3}>
         <Input
-          value="This is some text on an input that has an error"
+          placeholder="This is some text on an input that has an error"
+          status="error"
+          statusMessage="This is an error message"
+        />
+      </Box>
+    </div>
+    <div>
+      <h2>Input Error Text (using the legacy API)</h2>
+      <Box mb={3}>
+        <Input
+          placeholder="This is some text on an input that has an error"
           status={{ type: 'error', message: 'This is an error message' }}
         />
       </Box>

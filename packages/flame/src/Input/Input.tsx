@@ -1,54 +1,28 @@
-/* eslint-disable react/no-multi-comp */
 import * as React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import { themeGet } from '@styled-system/theme-get';
+import { layout, LayoutProps, zIndex, ZIndexProps, compose } from 'styled-system';
 import { Merge } from 'type-fest';
+
+import { Flex, Box, border, BorderProps } from '../Core';
+import { Label, FormHelper } from '../FormField';
 
 import { IconVerified } from '../Icon/Verified';
 import { IconWarning } from '../Icon/Warning';
 import { IconDanger } from '../Icon/Danger';
-import { Text } from '../Text';
 
-const BORDER_COLOR = 'inputStyles.border';
-const HOVER_BORDER_COLOR = 'inputStyles.hover.border';
-const FOCUS_BORDER_COLOR = 'inputStyles.focus.border';
-const ERROR_BORDER_COLOR = 'inputStyles.error.border';
-const PLACEHOLDER_COLOR = 'inputStyles.placeholder.color';
-const ACTIVE_BORDER_COLOR = 'inputStyles.active.border';
-
-type StatusType = 'valid' | 'error' | 'warning' | '';
+type StatusType = 'valid' | 'error' | 'warning';
 type InputSizes = 'small' | 'regular' | 'large';
 
-const handleSizes = (props: { inputSize?: InputSizes; theme?: any }) => {
-  switch (props.inputSize) {
-    case 'small':
-      return css`
-        font-size: ${themeGet('fontSizes.text-xs')(props)};
-        height: ${themeGet('space.5')(props)};
-      `;
-    case 'large':
-      return css`
-        height: ${themeGet('space.7')(props)};
-      `;
-    case 'regular':
-    default:
-      return css``;
-  }
+type StyledInputProps = {
+  inputSize?: InputSizes;
+  hasSuffix?: boolean;
+  hasPrefix?: boolean;
+  readOnly?: boolean;
 };
-
-type BaseInputProps = Merge<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  Partial<{
-    inputSize: InputSizes;
-    hasSuffix: boolean;
-    hasPrefix: boolean;
-    readOnly: boolean;
-    css: any;
-  }>
->;
-const BaseInput = styled('input')<BaseInputProps>`
+const StyledInput = styled('input')<StyledInputProps>`
   width: 100%;
   flex: 1 1 0%;
   box-sizing: border-box;
@@ -67,7 +41,22 @@ const BaseInput = styled('input')<BaseInputProps>`
     opacity: 1;
   }
 
-  ${handleSizes};
+  ${props => {
+    switch (props.inputSize) {
+      case 'small':
+        return css`
+          font-size: ${themeGet('fontSizes.text-xs')(props)};
+          height: ${themeGet('space.5')(props)};
+        `;
+      case 'large':
+        return css`
+          height: ${themeGet('space.7')(props)};
+        `;
+      case 'regular':
+      default:
+        return css``;
+    }
+  }}
 
   ${props =>
     props.hasPrefix &&
@@ -82,7 +71,7 @@ const BaseInput = styled('input')<BaseInputProps>`
     `};
 
   &::placeholder {
-    color: ${themeGet(PLACEHOLDER_COLOR)};
+    color: ${themeGet('inputStyles.placeholder.color')};
   }
 
   &:focus,
@@ -95,12 +84,25 @@ const BaseInput = styled('input')<BaseInputProps>`
     css`
       color: ${themeGet('inputStyles.readonly.color')(props)};
     `};
+
+  &:not([disabled]):not([readonly]):hover + div {
+    border-color: ${themeGet('inputStyles.hover.border')};
+  }
+
+  /* Prettier does some nasty things if we merge both selectors... */
+  &:not([disabled]):not([readonly]):focus + div {
+    border-color: ${themeGet('inputStyles.focus.border')};
+  }
+
+  &:not([disabled]):not([readonly]):active + div {
+    border-color: ${themeGet('inputStyles.active.border')};
+  }
 `;
 
-type InputBackdropType = React.HTMLAttributes<HTMLDivElement> & {
-  type: StatusType | string;
-};
-const InputBackdrop = styled('div')<InputBackdropType>`
+interface InputBackdropProps extends BorderProps {
+  status?: StatusType;
+}
+const InputBackdrop = styled('div')<InputBackdropProps>`
   position: absolute;
   top: 0;
   bottom: 0;
@@ -110,107 +112,37 @@ const InputBackdrop = styled('div')<InputBackdropType>`
   border-radius: ${themeGet('radii.radius-1')};
   background: transparent;
   box-shadow: ${themeGet('inputStyles.boxShadow')};
-  border: solid 1px ${themeGet(BORDER_COLOR)};
+  border: solid 1px ${themeGet('inputStyles.border')};
   transition: border-color ${themeGet('transition.transition-duration-fast')} ease-in-out;
 
-  ${BaseInput}:not([disabled]):not([readonly]):hover ~ & {
-    border-color: ${themeGet(HOVER_BORDER_COLOR)};
-  }
-
-  /* Prettier does some nasty things if we merge both selectors... */
-  ${BaseInput}:not([disabled]):not([readonly]):focus ~ & {
-    border-color: ${themeGet(FOCUS_BORDER_COLOR)};
-  }
-  ${BaseInput}:not([disabled]):not([readonly]):active ~ & {
-    border-color: ${themeGet(ACTIVE_BORDER_COLOR)};
-  }
-
   ${props =>
-    props.type &&
-    props.type === 'error' &&
+    props.status === 'error' &&
     css`
-      border-color: ${themeGet(ERROR_BORDER_COLOR)(props)};
+      border-color: ${themeGet('inputStyles.error.border')(props)} !important;
     `};
+  ${border}
 `;
 
-const InputContainer = styled('label')`
-  display: block;
-  width: 100%;
-`;
-
-const InputHeader = styled('div')`
-  margin-bottom: ${themeGet('space.1')};
-`;
-
-const InputLabelWrapper = styled('div')`
-  display: flex;
-  justify-content: space-between;
-`;
-
-const InputLabelHelper = styled('div')`
-  display: flex;
-
-  > * {
-    vertical-align: middle;
-  }
-`;
-
-const InputPrefix = styled('div')`
-  display: flex;
-  flex: 0 0 auto;
-  font-size: ${themeGet('fontSizes.text-s')};
-  padding-left: ${themeGet('space.2')};
-  padding-right: ${themeGet('space.1')};
-`;
-
-const InputSuffix = styled('div')`
-  display: flex;
-  flex: 0 0 auto;
-  padding-right: ${themeGet('space.2')};
-  font-size: ${themeGet('fontSizes.text-s')};
-`;
-
-const setFillStatus = (props: { type: StatusType; theme?: any }) => {
-  switch (props.type) {
-    case 'valid':
-      return css`
-        fill: ${themeGet('inputStyles.valid.color')(props)};
-      `;
-    case 'error':
-      return css`
-        fill: ${themeGet('inputStyles.error.color')(props)};
-      `;
-    case 'warning':
-      return css`
-        fill: ${themeGet('inputStyles.warning.color')(props)};
-      `;
-    default:
-      return '';
-  }
-};
-
-type InputStatusProps = {
-  type: StatusType;
-};
-const InputStatus = styled('div')<InputStatusProps>`
-  display: flex;
-  flex: 0 0 auto;
-  padding-right: ${themeGet('space.2')};
-  ${setFillStatus};
-`;
-
-type WrapperProps = {
+interface WrapperProps extends BorderProps, LayoutProps, ZIndexProps {
   disabled: boolean;
   readOnly: boolean;
   isAutofilled: boolean;
-};
+  status?: StatusType;
+}
 const Wrapper = styled('div')<WrapperProps>`
   position: relative;
   display: flex;
   align-items: center;
-  border-radius: ${themeGet('space.1')};
+  border-radius: ${themeGet('radii.radius-2')};
   background: ${themeGet('inputStyles.background')};
   transition: all ${themeGet('transition.transition-duration-fast')} ease-in-out;
+  width: 100%;
+
+  ${compose(
+    layout,
+    border,
+    zIndex,
+  )}
 
   ${props =>
     props.disabled &&
@@ -233,251 +165,216 @@ const Wrapper = styled('div')<WrapperProps>`
       background-image: none;
       color: ${themeGet('inputStyles.autofilled.color')(props)};
     `};
+
+  ${props => {
+    switch (props.status) {
+      case 'error':
+        return css`
+          .cr-input__status-icon {
+            fill: ${themeGet('inputStyles.error.border')(props)};
+          }
+        `;
+      case 'valid':
+        return css`
+          .cr-input__status-icon {
+            fill: ${themeGet('inputStyles.valid.color')(props)};
+          }
+        `;
+      case 'warning':
+        return css`
+          .cr-input__status-icon {
+            fill: ${themeGet('inputStyles.warning.color')(props)};
+          }
+        `;
+      default:
+        return '';
+    }
+  }};
 `;
 
-const StatusIcon = ({ type }: { type?: StatusType }) => {
-  switch (type) {
+interface StatusIconProps {
+  status?: StatusType;
+}
+const StatusIcon: React.FC<StatusIconProps> = ({ status }) => {
+  switch (status) {
     case 'valid':
-      return <IconVerified data-testid="icon-valid" />;
-    case 'warning':
-      return <IconWarning data-testid="icon-warning" />;
+      return <IconVerified data-testid="icon-valid" className="cr-input__status-icon" />;
     case 'error':
-      return <IconDanger data-testid="icon-error" />;
+      return <IconDanger data-testid="icon-error" className="cr-input__status-icon" />;
+    case 'warning':
+      return <IconWarning data-testid="icon-warning" className="cr-input__status-icon" />;
     default:
       return null;
   }
 };
 
-type InputLabelProps = Partial<{
-  label: string;
-  id: string;
-  childrend: React.ReactNode;
-}>;
-const InputLabel: React.FC<InputLabelProps> = ({ label, id, children }) => (
-  <InputLabelWrapper>
-    <Text size="small" fontWeight="bold" color="textHeading" id={id}>
-      {label}
-    </Text>
-    {children}
-  </InputLabelWrapper>
-);
-
-const setStatusTextColor = (props: { status: StatusType; theme?: any }) => {
-  switch (props.status) {
-    case 'valid':
-      return css`
-        color: ${themeGet('inputStyles.valid.color')(props)};
-      `;
-    case 'error':
-      return css`
-        color: ${themeGet('inputStyles.error.color')(props)};
-      `;
-    case 'warning':
-      return css`
-        color: ${themeGet('inputStyles.warning.color')(props)};
-      `;
-    default:
-      return '';
-  }
-};
-
-const StatusText = styled(Text)<{ status: StatusType }>`
-  ${setStatusTextColor};
-`;
-
-const TextHelper = styled(Text)`
-  color: ${themeGet('inputStyles.helper.background')};
-`;
-type StatusObject = {
-  type: StatusType;
-  message: React.ReactNode;
-};
-type InnerInputProps = Merge<
-  React.HTMLProps<HTMLInputElement>,
-  Partial<{
-    /** Text label for Input */
-    label: string;
-    /** Helper to appear to the right of the label */
-    labelHelper: React.ReactElement<any> | string;
-    /** Text to show belog the label */
-    description: string;
-    /** Value of Input */
-    value: string;
-    /** Node to place at start of Input */
-    prefix: React.ReactElement<any> | Element | string;
-    /** Node to place at end of Input */
-    suffix: React.ReactElement<any> | Element | string;
-    /** Context clarification to appear below Input */
-    textHelper: string;
-    /** Sets Input disabled state */
-    disabled: boolean;
-    /** Sets input readonly state (immutability) */
-    readOnly: boolean;
-    /** One of "valid", "warning", "error", or "" */
-    status: Partial<StatusObject>;
-    /** One of "small", "regular", "large" */
-    size: InputSizes;
-    /** https://reactjs.org/docs/forwarding-refs.html */
-    forwardedRef: React.Ref<any>; // will be extracted out because autocomplete shenannigans
-    /** https://reactjs.org/docs/refs-and-the-dom.html */
-    ref: React.Ref<any>; // will be extracted out because autocomplete shenannigans
-    css: any;
-  }>
->;
-type InnerInputState = {
-  isAutofilled: boolean;
-};
-class InnerInput extends React.Component<InnerInputProps, InnerInputState> {
-  constructor(props: any) {
-    super(props);
-
-    this.state = {
-      isAutofilled: false,
-    };
-
-    this.onAnimationStart = this.onAnimationStart.bind(this);
-    this.setAutofilledState = this.setAutofilledState.bind(this);
-    this.registerNode = this.registerNode.bind(this);
-  }
-
-  componentDidMount() {
-    if (this.input) {
-      this.input.addEventListener('animationstart', this.onAnimationStart, false);
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.input) {
-      this.input.removeEventListener('animationstart', this.onAnimationStart);
-    }
-  }
-
-  onAnimationStart({ animationName }: { animationName?: string }) {
-    this.setAutofilledState(animationName === 'onAutoFillStart');
-  }
-
-  setAutofilledState(isAutofilled?: boolean) {
-    this.setState({
-      isAutofilled,
-    });
-  }
-
-  // eslint-disable-next-line react/sort-comp
-  input: HTMLInputElement;
-
-  registerNode(ref: any) {
-    const { forwardedRef } = this.props;
-    this.input = ref;
-
-    if (typeof forwardedRef === 'function') {
-      forwardedRef(ref);
-    }
-  }
-
-  render() {
-    const {
-      id,
-      label,
-      labelHelper,
-      description,
-      prefix,
-      suffix,
-      textHelper,
+export type BaseInputProps = Merge<
+  Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'>,
+  Omit<StyledInputProps, 'inputSize'>
+> &
+  InputBackdropProps & {
+    size?: InputSizes;
+    status?: StatusType;
+    disabled?: boolean;
+    isAutofilled?: boolean;
+    prefix?: React.ReactNode;
+    suffix?: React.ReactNode;
+    css?: any;
+  };
+const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
+  (
+    {
+      size,
+      status,
       disabled,
       readOnly,
-      status,
-      forwardedRef,
-      ref, // Extract this out
-      size,
-      ...rest
-    } = this.props;
-
-    const { isAutofilled } = this.state;
-
-    const labelledBy = id && label && `${id}-label`;
-    const describedBy = id && description && `${id}-description`;
-    const statusType = status && status.type;
-    const statusMessage = status && status.message;
-
-    const statusHelperMarkup = statusMessage && (
-      <StatusText mt="1" as="div" size="small" status={statusType}>
-        {status.message}
-      </StatusText>
+      isAutofilled,
+      prefix,
+      suffix,
+      borderLeft,
+      borderRight,
+      borderRadius,
+      borderTopLeftRadius,
+      borderTopRightRadius,
+      borderBottomLeftRadius,
+      borderBottomRightRadius,
+      width,
+      ...restProps
+    },
+    ref,
+  ) => {
+    return (
+      <Wrapper
+        disabled={disabled}
+        readOnly={readOnly}
+        isAutofilled={isAutofilled}
+        status={status}
+        width={width}
+        borderLeft={borderLeft}
+        borderRight={borderRight}
+        borderRadius={borderRadius}
+        borderTopLeftRadius={borderTopLeftRadius}
+        borderTopRightRadius={borderTopRightRadius}
+        borderBottomLeftRadius={borderBottomLeftRadius}
+        borderBottomRightRadius={borderBottomRightRadius}
+      >
+        {prefix && (
+          <Flex flex={0} pl={2} pr={1} fontSize="text-s">
+            {prefix}
+          </Flex>
+        )}
+        <StyledInput
+          ref={ref}
+          disabled={disabled}
+          inputSize={size}
+          hasPrefix={!!prefix}
+          hasSuffix={!!status || !!suffix}
+          readOnly={readOnly}
+          {...restProps}
+        />
+        <InputBackdrop
+          status={status}
+          borderLeft={borderLeft}
+          borderRight={borderRight}
+          borderRadius={borderRadius}
+          borderTopLeftRadius={borderTopLeftRadius}
+          borderTopRightRadius={borderTopRightRadius}
+          borderBottomLeftRadius={borderBottomLeftRadius}
+          borderBottomRightRadius={borderBottomRightRadius}
+        />
+        {(status || suffix) && (
+          <Flex flex={0} pr={2} fontSize="text-s">
+            {suffix}
+            {status && (
+              <Box ml={2}>
+                <StatusIcon status={status} />
+              </Box>
+            )}
+          </Flex>
+        )}
+      </Wrapper>
     );
+  },
+);
 
-    const textHelperMarkup = textHelper && (
-      <TextHelper as="div" size="small">
-        {textHelper}
-      </TextHelper>
-    );
+export interface InputProps extends Omit<BaseInputProps, 'status'> {
+  label?: React.ReactNode;
+  labelHelper?: React.ReactNode;
+  description?: React.ReactNode;
+  statusMessage?: React.ReactNode;
+  textHelper?: React.ReactNode;
+  status?:
+    | StatusType
+    | {
+        type?: StatusType;
+        message?: React.ReactNode;
+      };
+  css?: any;
+}
+const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  (
+    { label, id, status, description, statusMessage, textHelper, labelHelper, ...restProps },
+    ref,
+  ) => {
+    const labelId = id && label ? `${id}-label` : undefined;
+    const descriptionId = id && description ? `${id}-description` : undefined;
+    const nextStatus = typeof status === 'object' ? status.type : status;
+    const nextMessage = typeof status === 'object' ? status.message : statusMessage;
+
+    if (typeof status === 'object') {
+      // eslint-disable-next-line no-console
+      console.warn(`
+Using status as an object will be deprecated in the next version of Flame.
+Please prefer passing the status.type to the status prop directly and
+pass the status.message to the statusMessage prop.
+`);
+    }
 
     return (
-      <InputContainer htmlFor={id}>
-        {(label || description) && (
-          <InputHeader>
-            {label && (
-              <InputLabel id={labelledBy} label={label}>
-                {labelHelper && <InputLabelHelper>{labelHelper}</InputLabelHelper>}
-              </InputLabel>
+      <React.Fragment>
+        {label && (
+          <Label
+            id={labelId}
+            htmlFor={id}
+            description={description}
+            descriptionProps={{ id: descriptionId }}
+          >
+            {labelHelper ? (
+              <Flex
+                width="100%"
+                flexDirection="row"
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <div>{label}</div>
+                <div>{labelHelper}</div>
+              </Flex>
+            ) : (
+              label
             )}
-
-            {description && (
-              <Text as="div" size="small" id={`${id}-description`}>
-                {description}
-              </Text>
-            )}
-          </InputHeader>
+          </Label>
         )}
-
-        <Wrapper disabled={disabled} readOnly={readOnly} isAutofilled={isAutofilled}>
-          {prefix && <InputPrefix>{prefix}</InputPrefix>}
-
-          <BaseInput
-            ref={this.registerNode}
-            id={id}
-            hasSuffix={!!suffix}
-            hasPrefix={!!prefix}
-            aria-labelledby={labelledBy}
-            aria-describedby={describedBy}
-            disabled={disabled}
-            readOnly={readOnly}
-            inputSize={size}
-            {...rest}
-          />
-
-          {suffix && <InputSuffix>{suffix}</InputSuffix>}
-
-          {statusType && (
-            <InputStatus type={statusType}>
-              <StatusIcon type={statusType} />
-            </InputStatus>
-          )}
-
-          <InputBackdrop type={statusType} />
-        </Wrapper>
-        {statusHelperMarkup || textHelperMarkup}
-      </InputContainer>
+        <BaseInput
+          ref={ref}
+          id={id}
+          status={nextStatus}
+          aria-labelledby={labelId}
+          aria-describedby={descriptionId}
+          {...restProps}
+        />
+        {status && nextMessage && (
+          <FormHelper mt={1} status={nextStatus}>
+            {nextMessage}
+          </FormHelper>
+        )}
+        {textHelper && !nextMessage && <FormHelper mt={1}>{textHelper}</FormHelper>}
+      </React.Fragment>
     );
-  }
-}
-
-(InnerInput as any).defaultProps = {
-  size: 'regular',
-};
-
-// @ts-ignore
-InnerInput.defaultName = 'FlameInput';
-// Keeping flameName for compat with Group & inputBlock prop. Will be deprecated.
-// @ts-ignore
-InnerInput.flameName = 'Input';
-
-export type InputProps = Merge<React.HTMLProps<any>, InnerInputProps & { css?: any }>;
-const Input: React.FunctionComponent<InputProps> = React.forwardRef((props, ref) => (
-  <InnerInput {...props} forwardedRef={ref} />
-));
+  },
+);
 
 // Keeping flameName for compat with Group & inputBlock prop. Will be deprecated.
 // @ts-ignore
 Input.flameName = 'Input';
 
-export { Input };
+export { Input, InputBackdrop, BaseInput };

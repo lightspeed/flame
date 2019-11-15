@@ -3,44 +3,16 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 
-import { Heading2, Heading3, TextContent } from '../Text';
+import { Text, Heading2, Heading3, TextContent } from '../Text';
 import { Box } from '../Core';
 import { percyBreakpoints, percySkip } from '../../../../stories/helpers/percy';
 
-import { Checkbox, CheckboxLabel, CheckboxDescription, CheckboxProps } from './Checkbox';
+import { Checkbox } from './Checkbox';
 import Readme from './README.md';
 
 const stories = storiesOf('Checkbox', module).addDecorator(withReadme(Readme));
 
 const noop = () => {};
-
-class StatefulCheckbox extends React.Component<CheckboxProps, { checked?: boolean }> {
-  constructor(props: CheckboxProps) {
-    super(props);
-    this.state = {
-      checked: props.checked,
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange() {
-    this.setState(prevState => ({ checked: !prevState.checked }));
-  }
-
-  render() {
-    return (
-      <Checkbox
-        {...(this.props as any)}
-        checked={this.state.checked}
-        onChange={this.handleChange}
-      />
-    );
-  }
-}
-
-(StatefulCheckbox as any).defaultProps = {
-  checked: false,
-};
 
 // eslint-disable-next-line react/no-multi-comp
 class CheckBoxWrapper extends React.Component<{}, { checked: boolean; indeterminate: boolean }> {
@@ -91,7 +63,6 @@ class CheckBoxWrapper extends React.Component<{}, { checked: boolean; indetermin
     );
   }
 }
-
 stories.add(
   'Story',
   () => (
@@ -100,68 +71,63 @@ stories.add(
         <Heading2>Checkbox types</Heading2>
         <Heading3>Checkbox with label</Heading3>
         <Box mb={3}>
-          <StatefulCheckbox id="simple" label="Label" />
+          <Checkbox id="simple" label="Label" />
         </Box>
         <Heading3>Checkbox with label and description</Heading3>
         <Box mb={3}>
-          <StatefulCheckbox id="checked" label="Label" description="Description text" checked />
+          <Checkbox id="description" label="Label" description="Description text" />
         </Box>
         <Heading3>Checkbox with long label and description in a 50% container</Heading3>
         <Box mb={3} style={{ width: '50%' }}>
-          <StatefulCheckbox
-            id="longLabel"
+          <Checkbox
+            id="longdescription"
             label="Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label Long Label"
             description="Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description"
-            indeterminate
           />
         </Box>
         <Heading3>Using custom elements</Heading3>
         <Box mb={3}>
-          <StatefulCheckbox
-            id="longLabel"
-            label={() => (
-              <CheckboxLabel ml="4" width="100%" color="red" fontWeight="normal">
-                Customizing the base exported `CheckboxLabel`
-              </CheckboxLabel>
-            )}
-            description={() => (
-              <CheckboxDescription color="blue" ml={4} mt={1} size="large">
+          <Checkbox
+            id="customlabel"
+            label={<Text color="red">Customizing the base exported `CheckboxLabel`</Text>}
+            description={
+              <Text color="blue" fontSize="large" mt={2}>
                 Customizing the base exported `CheckboxDescription`
-              </CheckboxDescription>
-            )}
+              </Text>
+            }
           />
         </Box>
       </TextContent>
 
       <TextContent>
         <Heading2>Checkbox states</Heading2>
-
         <Box mb={3}>
-          <StatefulCheckbox id="unchecked" label="Unchecked" />
+          <Checkbox id="unchecked" label="Unchecked" checked={false} />
         </Box>
         <Box mb={3}>
-          <StatefulCheckbox id="indeterminate" label="Indeterminate" indeterminate />
+          <Checkbox id="indeterminate" label="Indeterminate" indeterminate />
         </Box>
         <Box mb={3}>
-          <StatefulCheckbox id="checked" label="Checked" checked />
+          <Checkbox id="checked" label="Checked" checked />
         </Box>
         <Box mb={3}>
-          <StatefulCheckbox id="disabled" label="Disabled" disabled />
+          <Checkbox id="disabled" label="Disabled" disabled />
         </Box>
         <Box mb={3}>
-          <StatefulCheckbox
+          <Checkbox
             id="indeterminate-disabled"
             label="Indeterminate Disabled"
-            indeterminate
             disabled
+            indeterminate
           />
         </Box>
         <Box mb={3}>
-          <StatefulCheckbox id="checked-disabled" label="Checked Disabled" checked disabled />
+          <Checkbox id="checked-disabled" label="Checked Disabled" disabled checked />
         </Box>
       </TextContent>
     </div>
   ),
+
   {
     ...percyBreakpoints,
   },

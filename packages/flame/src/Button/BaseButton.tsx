@@ -1,8 +1,17 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { space, SpaceProps } from 'styled-system';
+import {
+  space,
+  SpaceProps,
+  layout,
+  LayoutProps,
+  zIndex,
+  ZIndexProps,
+  compose,
+} from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
+import { border, BorderProps } from '../Core';
 
 export type ButtonHTML = React.HTMLProps<HTMLButtonElement> & React.HTMLProps<HTMLAnchorElement>;
 export type ButtonSizes = 'small' | 'large' | 'xlarge' | 'medium';
@@ -13,7 +22,10 @@ export type BaseButtonProps = {
   disabled?: boolean;
   /** Sets display: block on Button */
   block?: boolean;
-} & SpaceProps;
+} & SpaceProps &
+  LayoutProps &
+  BorderProps &
+  ZIndexProps;
 
 const generateSize = (height: number, px: number, font: string, radius: string) => (
   props: BaseButtonProps,
@@ -89,7 +101,13 @@ export const BaseButton = styled('button')<Merge<ButtonHTML, BaseButtonProps>>`
   }
 
   ${setDisabled};
-  ${space};
+
+  ${compose(
+    space,
+    border,
+    layout,
+    zIndex,
+  )};
 `;
 
 BaseButton.defaultProps = {

@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+
 import * as React from 'react';
 import { createComponent, customRender } from 'test-utils';
 import { Group, GroupAddon } from './Group';

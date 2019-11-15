@@ -1,21 +1,35 @@
 import * as React from 'react';
-import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 import { layout, LayoutProps } from 'styled-system';
-import { Merge } from 'type-fest';
 
-import { Text, TextProps } from '../Text';
 import { Box } from '../Core';
+import { BaseLabel, LabelProps, FormHelper } from '../FormField/FormField';
+
+export interface RadioLabelProps extends LabelProps {}
+const RadioLabel: React.FC<RadioLabelProps> = ({
+  description,
+  disabled,
+  children,
+  ...restProps
+}) => {
+  return (
+    <Box>
+      <BaseLabel {...restProps}>{children}</BaseLabel>
+      {description && <FormHelper ml={['1.85rem', '1.75rem']}>{description}</FormHelper>}
+    </Box>
+  );
+};
+
+RadioLabel.defaultProps = {
+  fontSize: ['text', 'text-s'],
+  lineHeight: 3,
+  fontWeight: 'bold',
+};
 
 const WrapperRadio = styled('div')`
   position: relative;
   line-height: 1rem;
-`;
-
-const Label = styled('label')`
-  position: relative;
-  display: inline-flex;
 `;
 
 const Checkmark = styled('div')<LayoutProps>`
@@ -30,6 +44,7 @@ const Checkmark = styled('div')<LayoutProps>`
   box-sizing: border-box;
   overflow: hidden;
   background: ${themeGet('radioStyles.background')};
+  margin-right: ${themeGet('space.2')};
 `;
 
 Checkmark.defaultProps = {
@@ -89,88 +104,34 @@ RadioInput.defaultProps = {
   height: ['18px', '16px'],
 };
 
-export const RadioLabel = styled(Text)`
-  ${props =>
-    !props.color &&
-    css`
-      color: ${themeGet('radioStyles.label.color')(props)};
-    `}
-`.withComponent('div');
+export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  css?: any;
+}
 
-RadioLabel.defaultProps = {
-  fontSize: ['text', 'text-s'],
-  lineHeight: 3,
-  fontWeight: 'bold',
-  ml: 2,
-};
-
-// Probably wondering why we add this additional wrapper?
-// This is to detach the text from a specific color and instead rely on
-// a color alias from the theme
-const RadioDescriptionWrapper = styled(Box)`
-  ${Text} {
-    ${props =>
-      !props.color
-        ? css`
-            color: ${themeGet('radioStyles.description.color')(props)};
-          `
-        : css`
-            color: ${themeGet(`colors.${props.color}`, props.color)(props)};
-          `}
-  }
-`;
-
-export type RadioDescriptionProps = Merge<React.HTMLAttributes<any>, TextProps>;
-export const RadioDescription: React.FC<RadioDescriptionProps> = ({
-  children,
-  color,
-  ...restProps
-}) => (
-  <RadioDescriptionWrapper ml={['18px', '16px']} color={color}>
-    <Text as="div" size="small" ml={2} {...restProps}>
-      {children}
-    </Text>
-  </RadioDescriptionWrapper>
+const BaseRadio = React.forwardRef<HTMLInputElement, RadioProps>(({ ...restProps }, ref) => (
+  <WrapperRadio>
+    <RadioInput ref={ref} type="radio" {...restProps} />
+    <Checkmark>
+      <Centermark data-testid="radio-centermark" />
+    </Checkmark>
+  </WrapperRadio>
+));
+interface FormRadioProps extends RadioProps {
+  label?: React.ReactNode;
+  description?: React.ReactNode;
+  css?: any;
+}
+const Radio = React.forwardRef<HTMLInputElement, FormRadioProps>(
+  ({ label, id, description, disabled, ...restProps }, ref) => {
+    return (
+      <React.Fragment>
+        <RadioLabel htmlFor={id} disabled={disabled} description={description}>
+          <BaseRadio ref={ref} id={id} disabled={disabled} {...restProps} />
+          {label}
+        </RadioLabel>
+      </React.Fragment>
+    );
+  },
 );
 
-export type RadioProps = Merge<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  Partial<{
-    /** Sets label for Radio */
-    label: string | Function;
-    /** Sets description text for Radio */
-    description: string | Function;
-    css: any;
-  }>
->;
-export const Radio: React.FC<RadioProps> = props => {
-  const { id, label, description, checked, className, ...restProps } = props;
-  const labelId = id ? `${id}-label` : null;
-  const descriptionId = id ? `${id}-description` : null;
-  const labelledBy = label ? labelId : null;
-  const describedBy = description ? descriptionId : null;
-
-  return (
-    <WrapperRadio className={className}>
-      <Label role="presentation" htmlFor={id}>
-        <RadioInput
-          type="radio"
-          id={id}
-          aria-labelledby={labelledBy}
-          aria-describedby={describedBy}
-          checked={checked}
-          {...restProps}
-        />
-        <Checkmark>
-          <Centermark data-testid="radio-centermark" />
-        </Checkmark>
-        {typeof label === 'string' && <RadioLabel id={labelId}>{label}</RadioLabel>}
-        {typeof label === 'function' && label(labelId)}
-      </Label>
-      {typeof description === 'string' && (
-        <RadioDescription id={labelId}>{description}</RadioDescription>
-      )}
-      {typeof description === 'function' && description(labelId)}
-    </WrapperRadio>
-  );
-};
+export { BaseRadio, RadioLabel, Radio };

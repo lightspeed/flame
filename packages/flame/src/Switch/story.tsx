@@ -7,9 +7,10 @@ import { Text, Heading2 } from '../Text';
 
 import { Switch } from './Switch';
 import Readme from './README.md';
-import { Group } from '../Group';
 import { Button } from '../Button';
 import { Box } from '../Core';
+
+import { SpacedGroup } from '../../../../stories/components/SpacedGroup';
 
 const stories = storiesOf('Switch', module).addDecorator(withReadme(Readme));
 
@@ -78,10 +79,10 @@ stories.add('States', () => (
     </Box>
     <Description>Disabled On / Off</Description>
     <Box mb={3}>
-      <Group>
+      <SpacedGroup>
         <Switch disabled />
         <Switch checked disabled />
-      </Group>
+      </SpacedGroup>
     </Box>
   </div>
 ));
@@ -106,7 +107,7 @@ class ToggleEventsWrapper extends React.Component<{}, { checked?: boolean }> {
 
     return (
       <Box mb={3}>
-        <Group>
+        <SpacedGroup>
           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="toggle-events">Toggle Events</label>
           <Switch
@@ -117,7 +118,7 @@ class ToggleEventsWrapper extends React.Component<{}, { checked?: boolean }> {
             onFocus={action('onFocus')}
             onBlur={action('onBlur')}
           />
-        </Group>
+        </SpacedGroup>
         <Text size="small">
           onChange value (checked): <strong>{checked.toString()}</strong>
         </Text>

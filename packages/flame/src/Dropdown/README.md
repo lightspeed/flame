@@ -10,11 +10,11 @@ Instantiates a button with a menu that will appear at the bottom of the button.
 
 #### Props
 
-| Prop            | Type                       | Default  | Description                                                                                                          |
-| --------------- | -------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
-| `children`      | react.node                 | required | Content to display inside the Dropdown. Can accept a child function that contains the close event as first parameter |
-| `buttonContent` | react.node                 | required | Content to display within the Dropdown Button                                                                        |
-| `placement`     | ['start', 'center', 'end'] | 'start'  | Positioning of the Dropdown content. By default, it will be aligned left (aka the start)                             |
+| Prop            | Type                                         | Default  | Description                                                                                                                                                                                                                                                |
+| --------------- | -------------------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children`      | react.node                                   | required | Content to display inside the Dropdown. Can accept a child function that contains the close event as first parameter                                                                                                                                       |
+| `buttonContent` | react.node                                   | required | Content to display within the Dropdown Button                                                                                                                                                                                                              |
+| `placement`     | ['start', 'center', 'end', PopperPlacements] | 'start'  | Positioning of the Dropdown content. By default, it will be aligned left (aka the start). For a full list of all additional PopperPlacements, please consult [the popper documentation](https://popper.js.org/popper-documentation.html#Popper.placements) |
 
 ```js
 import React from 'react';
