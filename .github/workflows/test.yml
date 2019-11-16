@@ -31,6 +31,8 @@ jobs:
       run: yarn bootstrap
     - name: Test
       run: yarn test:ci
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     - name: Lint
       run: yarn lint
     - name: Typecheck
