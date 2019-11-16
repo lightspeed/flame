@@ -30,7 +30,7 @@ jobs:
     - name: Bootstrap
       run: yarn bootstrap
     - name: Test
-      run: yarn test --coverage --runInBand
+      run: yarn test:ci
     - name: Lint
       run: yarn lint
     - name: Typecheck
