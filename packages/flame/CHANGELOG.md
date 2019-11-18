@@ -7,11 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
-## [Unreleased]
+## 1.2.1 - 2019-11-15
+
+### Fixed
+
+- InputGroup will now properly manage null children, instead of throwing errors ([#43](https://github.com/lightspeed/flame/pull/43))
+
+## 1.2.0 - 2019-11-14
 
 ### Added
 
 - Dropdown menu position can now be further customized. You can simply pass the the appropriate PopperJS placement to the `placement` prop and the menu will be adjusted accordingly ([#37](https://github.com/lightspeed/flame/pull/37))
+
+### Fixed
+
+- Dropdown toggle when clicked will not be overwritten if we override the `onClick` prop ([#41](https://github.com/lightspeed/flame/pull/41))
+- InputGroup is now typed properly using the `Flex` props ([#41](https://github.com/lightspeed/flame/pull/41))
+- Made Input status and message optional in typings ([#41](https://github.com/lightspeed/flame/pull/41))
+- Pass back in space props to the InputGroupAddon ([#41](https://github.com/lightspeed/flame/pull/41))
 
 ## 1.1.0 - 2019-10-25
 
