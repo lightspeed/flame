@@ -35,8 +35,10 @@
     "release:dryrun": "npm publish dist --dry-run"
   },
   "dependencies": {
+    "@styled-system/css": "^5.0.23",
     "@styled-system/theme-get": "5.0.16",
     "@types/styled-system": "^5.0.0",
+    "@types/styled-system__css": "^5.0.4",
     "polished": "^2.3.0",
     "popper.js": "^1.15.0",
     "react-modal": "^3.5.1",

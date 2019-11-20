@@ -142,6 +142,8 @@ const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = ({ th
   );
 };
 
+const cssGet = (path: string) => (theme: any) => themeGet(path)({ theme });
+
 export {
   lightTheme,
   flameTheme,
@@ -149,6 +151,7 @@ export {
   FlameTheme,
   FlameGlobalStyles,
   themeGet,
+  cssGet,
   ThemeUIFlame,
   border,
 };

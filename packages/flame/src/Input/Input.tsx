@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { css } from '@emotion/core';
+import styledCss from '@styled-system/css';
 import styled from '@emotion/styled';
 
 import { themeGet } from '@styled-system/theme-get';
 import { layout, LayoutProps, zIndex, ZIndexProps, compose } from 'styled-system';
-import { Merge } from 'type-fest';
 
-import { Flex, Box, border, BorderProps } from '../Core';
+import { Flex, Box, border, BorderProps, cssGet } from '../Core';
 import { Label, FormHelper } from '../FormField';
 
 import { IconVerified } from '../Icon/Verified';
@@ -15,89 +15,6 @@ import { IconDanger } from '../Icon/Danger';
 
 type StatusType = 'valid' | 'error' | 'warning';
 type InputSizes = 'small' | 'regular' | 'large';
-
-type StyledInputProps = {
-  inputSize?: InputSizes;
-  hasSuffix?: boolean;
-  hasPrefix?: boolean;
-  readOnly?: boolean;
-};
-const StyledInput = styled('input')<StyledInputProps>`
-  width: 100%;
-  flex: 1 1 0%;
-  box-sizing: border-box;
-  height: ${themeGet('space.6')};
-  font-family: ${themeGet('fontFamily.sans-serif')};
-  font-size: ${themeGet('fontSizes.text-s')};
-  padding-left: ${themeGet('space.2')};
-  padding-right: ${themeGet('space.2')};
-  border: solid 1px transparent;
-  background: transparent;
-  color: ${themeGet('inputStyles.color')};
-  min-width: 0;
-  transition: all ${themeGet('transition.transition-duration-fast')} ease-in-out;
-
-  &:disabled {
-    opacity: 1;
-  }
-
-  ${props => {
-    switch (props.inputSize) {
-      case 'small':
-        return css`
-          font-size: ${themeGet('fontSizes.text-xs')(props)};
-          height: ${themeGet('space.5')(props)};
-        `;
-      case 'large':
-        return css`
-          height: ${themeGet('space.7')(props)};
-        `;
-      case 'regular':
-      default:
-        return css``;
-    }
-  }}
-
-  ${props =>
-    props.hasPrefix &&
-    css`
-      padding-left: 0;
-    `};
-
-  ${props =>
-    props.hasSuffix &&
-    css`
-      padding-right: 0;
-    `};
-
-  &::placeholder {
-    color: ${themeGet('inputStyles.placeholder.color')};
-  }
-
-  &:focus,
-  &:active {
-    outline: none;
-  }
-
-  ${props =>
-    props.readOnly &&
-    css`
-      color: ${themeGet('inputStyles.readonly.color')(props)};
-    `};
-
-  &:not([disabled]):not([readonly]):hover + div {
-    border-color: ${themeGet('inputStyles.hover.border')};
-  }
-
-  /* Prettier does some nasty things if we merge both selectors... */
-  &:not([disabled]):not([readonly]):focus + div {
-    border-color: ${themeGet('inputStyles.focus.border')};
-  }
-
-  &:not([disabled]):not([readonly]):active + div {
-    border-color: ${themeGet('inputStyles.active.border')};
-  }
-`;
 
 interface InputBackdropProps extends BorderProps {
   status?: StatusType;
@@ -208,11 +125,26 @@ const StatusIcon: React.FC<StatusIconProps> = ({ status }) => {
   }
 };
 
-export type BaseInputProps = Merge<
-  Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'>,
-  Omit<StyledInputProps, 'inputSize'>
-> &
+const setBaseInputSize = (inputSize: string, t: any) => {
+  switch (inputSize) {
+    case 'small':
+      return {
+        fontSize: cssGet('fontSizes.text-xs')(t),
+        height: cssGet('space.5')(t),
+      };
+    case 'large':
+      return {
+        height: cssGet('space.7')(t),
+      };
+    case 'regular':
+    default:
+      return {};
+  }
+};
+
+export type BaseInputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> &
   InputBackdropProps & {
+    readOnly?: boolean;
     size?: InputSizes;
     status?: StatusType;
     disabled?: boolean;
@@ -263,13 +195,49 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
             {prefix}
           </Flex>
         )}
-        <StyledInput
+        <input
           ref={ref}
           disabled={disabled}
-          inputSize={size}
-          hasPrefix={!!prefix}
-          hasSuffix={!!status || !!suffix}
           readOnly={readOnly}
+          css={styledCss(t => ({
+            color: readOnly
+              ? cssGet('inputStyles.readonly.color')(t)
+              : cssGet('inputStyles.color')(t),
+            width: '100%',
+            flex: '1 1 0%',
+            boxSizing: 'border-box',
+            border: 'solid 1px transparent',
+            background: 'transparent',
+            fontFamily: 'sans-serif',
+            minWidth: 0,
+            fontSize: ['text', 'text-s'],
+            height: ['40px', '36px'],
+            paddingLeft: prefix ? 0 : 2,
+            paddingRight: suffix ? 0 : 2,
+            '&::placeholder': {
+              color: cssGet('inputStyles.placeholder.color')(t),
+            },
+            transition: `all ${cssGet('transition.transition-duration-fast')(t)} ease-in-out`,
+            '&:disabled': {
+              opacity: 1,
+            },
+            '&:focus': {
+              outline: 'none',
+            },
+            '&:active ': {
+              outline: 'none',
+            },
+            '&:not([disabled]):not([readonly]):hover + div ': {
+              borderColor: cssGet('inputStyles.hover.border')(t),
+            },
+            '&:not([disabled]):not([readonly]):focus + div ': {
+              borderColor: cssGet('inputStyles.focus.border')(t),
+            },
+            '&:not([disabled]):not([readonly]):active + div ': {
+              borderColor: cssGet('inputStyles.active.border')(t),
+            },
+            ...setBaseInputSize(size, t),
+          }))}
           {...restProps}
         />
         <InputBackdrop
