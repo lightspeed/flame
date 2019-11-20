@@ -4,14 +4,6 @@ import {
   Checkbox,
   CheckboxProps,
   CheckboxLabel,
-  CheckboxDescriptionProps,
 } from './Checkbox';
 
-export {
-  BaseCheckbox,
-  BaseCheckboxProps,
-  Checkbox,
-  CheckboxProps,
-  CheckboxLabel,
-  CheckboxDescriptionProps,
-};
+export { BaseCheckbox, BaseCheckboxProps, Checkbox, CheckboxProps, CheckboxLabel };
