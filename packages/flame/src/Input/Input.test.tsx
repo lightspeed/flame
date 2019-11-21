@@ -30,6 +30,14 @@ describe('<Input />', () => {
     expect(element.type).toBe('text');
   });
 
+  it('should not crash on null status', () => {
+    const { getByPlaceholderText } = customRender(
+      <Input {...baseProps} status={null} placeholder="test-input" size="large" />,
+    );
+    const element: any = getByPlaceholderText('test-input');
+    expect(element.type).toBe('text');
+  });
+
   it('should forward the disabled property to the base input', () => {
     const { getByPlaceholderText } = customRender(
       <Input {...baseProps} disabled placeholder="test-input" size="small" />,
