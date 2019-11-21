@@ -318,8 +318,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ) => {
     const labelId = id && label ? `${id}-label` : undefined;
     const descriptionId = id && description ? `${id}-description` : undefined;
-    const nextStatus = typeof status === 'object' ? status.type : status;
-    const nextMessage = typeof status === 'object' ? status.message : statusMessage;
+    const nextStatus = status && typeof status === 'object' ? status.type : (status as StatusType);
+    const nextMessage = status && typeof status === 'object' ? status.message : statusMessage;
 
     if (typeof status === 'object') {
       // eslint-disable-next-line no-console
