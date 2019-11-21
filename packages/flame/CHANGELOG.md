@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Input will no longer crash when status is set to null
+- Input will no longer crash when status is set to null ([#46](https://github.com/lightspeed/flame/pull/46))
 
 ## 1.2.1 - 2019-11-15
 
