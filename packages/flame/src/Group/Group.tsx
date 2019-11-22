@@ -31,15 +31,6 @@ export const GroupItem = styled('div')<GroupItemProps>`
 
   ${flexbox};
   ${layout};
-  ${() => {
-    // eslint-disable-next-line no-console
-    console.warn(`
-DEPRECATION WARNING
-GroupItem will be removed in the next major version of Flame.
-Please rely on using Flex and Box components for wrapping things properly.
-    `);
-    return '';
-  }};
 `;
 
 // @ts-ignore
@@ -100,15 +91,6 @@ export const GroupAddon = styled('div')<GroupAddonProps>`
   ${horizontalAlignment};
 
   ${layout};
-  ${() => {
-    // eslint-disable-next-line no-console
-    console.warn(`
-DEPRECATION WARNING
-GroupAddon will be removed in the next major version of Flame.
-Please rely on InputGroup and the InputGroupAddon component.
-    `);
-    return '';
-  }};
 `;
 
 // @ts-ignore
@@ -253,12 +235,6 @@ export const Group: React.FunctionComponent<GroupProps> = ({
   inputBlock,
   ...restProps
 }) => {
-  // eslint-disable-next-line no-console
-  console.warn(`
-DEPRECATION WARNING
-Group will be removed in the next major version of Flame.
-Please use SpacedGroup or InputGroup instead.
-  `);
   const wrappedChildren = React.Children.map(children, (child: any) => {
     if (
       child &&
