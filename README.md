@@ -55,23 +55,6 @@ Add this `<link>` tag to your `<head>` to load the required fonts:
 />
 ```
 
-Alternatively, if you use `React Helmet` or can render to the `<head>` tag in JavaScript, you may use the provided `FlameFonts` component:
-
-```jsx
-import { Helmet } from 'react-helmet';
-import { FlameFonts } from '@lightspeed/flame/Core';
-
-// ..
-render() {
-  return (
-    <Helmet>
-      <title>My Title</title>
-      <FlameFonts />
-    </Helmet>
-  );
-}
-```
-
 ### Hook the theme provider, load global styles, and import components
 
 In order to have the proper styling, it is necessary to load the theme object into the application.
