@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Deprecated
 
-- FlameTheme component will be removed from the next major version of Flame, use [link](https://github.com/lightspeed/flame#link-fonts) instead
+- FlameTheme component will be removed from the next major version of Flame, use [link](https://github.com/lightspeed/flame#link-fonts) instead ([#50](https://github.com/lightspeed/flame/pull/50))
 
 ## 1.2.3 - 2019-11-22
 

@@ -106,7 +106,8 @@ const FlameTheme: React.FunctionComponent<FlameThemeProps> = ({
   return <ThemeProvider theme={{ ...selectedTheme, ...themeOverrides }}>{children}</ThemeProvider>;
 };
 
-// TODO: Will be deprecated in v2, instead, use the link tag directly:
+// WARNING!
+// This component will be deprecated in v2. Instead, use the link tag directly:
 // https://github.com/lightspeed/flame#link-fonts
 const FlameFonts: React.FunctionComponent = () => (
   <link
