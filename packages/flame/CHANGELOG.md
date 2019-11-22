@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Removed excessive `console.warn` from Group and Input
+- Removed excessive `console.warn` from Group and Input ([#47](https://github.com/lightspeed/flame/pull/47))
 
 ## 1.2.2 - 2019-11-21
 
