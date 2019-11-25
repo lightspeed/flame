@@ -1,12 +1,6 @@
 import * as React from 'react';
-import { css } from '@emotion/core';
-import styled from '@emotion/styled';
 
-import { themeGet } from '@styled-system/theme-get';
-import { layout, LayoutProps, zIndex, ZIndexProps, compose } from 'styled-system';
-import { Merge } from 'type-fest';
-
-import { Flex, Box, border, BorderProps } from '../Core';
+import { Flex, Box, BorderProps, css } from '../Core';
 import { Label, FormHelper } from '../FormField';
 
 import { IconVerified } from '../Icon/Verified';
@@ -16,181 +10,88 @@ import { IconDanger } from '../Icon/Danger';
 type StatusType = 'valid' | 'error' | 'warning';
 type InputSizes = 'small' | 'regular' | 'large';
 
-type StyledInputProps = {
-  inputSize?: InputSizes;
-  hasSuffix?: boolean;
-  hasPrefix?: boolean;
-  readOnly?: boolean;
-};
-const StyledInput = styled('input')<StyledInputProps>`
-  width: 100%;
-  flex: 1 1 0%;
-  box-sizing: border-box;
-  height: ${themeGet('space.6')};
-  font-family: ${themeGet('fontFamily.sans-serif')};
-  font-size: ${themeGet('fontSizes.text-s')};
-  padding-left: ${themeGet('space.2')};
-  padding-right: ${themeGet('space.2')};
-  border: solid 1px transparent;
-  background: transparent;
-  color: ${themeGet('inputStyles.color')};
-  min-width: 0;
-  transition: all ${themeGet('transition.transition-duration-fast')} ease-in-out;
-
-  &:disabled {
-    opacity: 1;
-  }
-
-  ${props => {
-    switch (props.inputSize) {
-      case 'small':
-        return css`
-          font-size: ${themeGet('fontSizes.text-xs')(props)};
-          height: ${themeGet('space.5')(props)};
-        `;
-      case 'large':
-        return css`
-          height: ${themeGet('space.7')(props)};
-        `;
-      case 'regular':
-      default:
-        return css``;
-    }
-  }}
-
-  ${props =>
-    props.hasPrefix &&
-    css`
-      padding-left: 0;
-    `};
-
-  ${props =>
-    props.hasSuffix &&
-    css`
-      padding-right: 0;
-    `};
-
-  &::placeholder {
-    color: ${themeGet('inputStyles.placeholder.color')};
-  }
-
-  &:focus,
-  &:active {
-    outline: none;
-  }
-
-  ${props =>
-    props.readOnly &&
-    css`
-      color: ${themeGet('inputStyles.readonly.color')(props)};
-    `};
-
-  &:not([disabled]):not([readonly]):hover + div {
-    border-color: ${themeGet('inputStyles.hover.border')};
-  }
-
-  /* Prettier does some nasty things if we merge both selectors... */
-  &:not([disabled]):not([readonly]):focus + div {
-    border-color: ${themeGet('inputStyles.focus.border')};
-  }
-
-  &:not([disabled]):not([readonly]):active + div {
-    border-color: ${themeGet('inputStyles.active.border')};
-  }
-`;
-
-interface InputBackdropProps extends BorderProps {
+interface InputBackdropProps {
   status?: StatusType;
 }
-const InputBackdrop = styled('div')<InputBackdropProps>`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  pointer-events: none;
-  border-radius: ${themeGet('radii.radius-1')};
-  background: transparent;
-  box-shadow: ${themeGet('inputStyles.boxShadow')};
-  border: solid 1px ${themeGet('inputStyles.border')};
-  transition: border-color ${themeGet('transition.transition-duration-fast')} ease-in-out;
+const InputBackdrop: React.FC<InputBackdropProps> = ({ status, children, ...restProps }) => (
+  <div
+    css={css(get => ({
+      position: 'absolute',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      pointerEvents: 'none',
+      borderRadius: 'radius-1',
+      background: 'transparent',
+      boxShadow: get('inputStyles.boxShadow'),
+      border: `solid 1px ${get('inputStyles.border')}`,
+      transition: `border-color ${get('transition.transition-duration-fast')} ease-in-out`,
+      ...(status === 'error' && {
+        borderColor: `${get('inputStyles.error.border')} !important`,
+      }),
+    }))}
+    {...restProps}
+  >
+    {children}
+  </div>
+);
 
-  ${props =>
-    props.status === 'error' &&
-    css`
-      border-color: ${themeGet('inputStyles.error.border')(props)} !important;
-    `};
-  ${border}
-`;
-
-interface WrapperProps extends BorderProps, LayoutProps, ZIndexProps {
+interface WrapperProps {
   disabled: boolean;
   readOnly: boolean;
   isAutofilled: boolean;
   status?: StatusType;
 }
-const Wrapper = styled('div')<WrapperProps>`
-  position: relative;
-  display: flex;
-  align-items: center;
-  border-radius: ${themeGet('radii.radius-2')};
-  background: ${themeGet('inputStyles.background')};
-  transition: all ${themeGet('transition.transition-duration-fast')} ease-in-out;
-  width: 100%;
-
-  ${compose(
-    layout,
-    border,
-    zIndex,
-  )}
-
-  ${props =>
-    props.disabled &&
-    css`
-      color: ${themeGet('inputStyles.disabled.color')(props)};
-      background: ${themeGet('inputStyles.disabled.background')(props)};
-      -webkit-text-fill-color: currentColor;
-    `};
-
-  ${props =>
-    props.readOnly &&
-    css`
-      background: ${themeGet('inputStyles.readonly.background')(props)};
-    `};
-
-  ${props =>
-    props.isAutofilled &&
-    css`
-      background: ${themeGet('inputStyles.autofilled.background')(props)};
-      background-image: none;
-      color: ${themeGet('inputStyles.autofilled.color')(props)};
-    `};
-
-  ${props => {
-    switch (props.status) {
-      case 'error':
-        return css`
-          .cr-input__status-icon {
-            fill: ${themeGet('inputStyles.error.border')(props)};
-          }
-        `;
-      case 'valid':
-        return css`
-          .cr-input__status-icon {
-            fill: ${themeGet('inputStyles.valid.color')(props)};
-          }
-        `;
-      case 'warning':
-        return css`
-          .cr-input__status-icon {
-            fill: ${themeGet('inputStyles.warning.color')(props)};
-          }
-        `;
-      default:
-        return '';
-    }
-  }};
-`;
+const Wrapper: React.FC<WrapperProps> = ({
+  disabled,
+  readOnly,
+  isAutofilled,
+  status,
+  children,
+  ...restProps
+}) => (
+  <div
+    css={css(get => ({
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      transition: `all ${get('transition.transition-duration-fast')} ease-in-out`,
+      background: get('inputStyles.background'),
+      ...(disabled && {
+        color: get('inputStyles.disabled.color'),
+        background: get('inputStyles.disabled.background'),
+        '-webkit-text-fill-color': 'currentColor',
+      }),
+      ...(readOnly && {
+        background: get('inputStyles.readonly.background'),
+      }),
+      ...(isAutofilled && {
+        background: get('inputStyles.autofilled.background'),
+        backgroundImage: 'none',
+        color: get('inputStyles.autofilled.color'),
+      }),
+      ...(status === 'error' && {
+        '.cr-input__status-icon': {
+          fill: get('inputStyles.error.border'),
+        },
+      }),
+      ...(status === 'valid' && {
+        '.cr-input__status-icon': {
+          fill: get('inputStyles.valid.color'),
+        },
+      }),
+      ...(status === 'warning' && {
+        '.cr-input__status-icon': {
+          fill: get('inputStyles.warning.color'),
+        },
+      }),
+    }))}
+    {...restProps}
+  >
+    {children}
+  </div>
+);
 
 interface StatusIconProps {
   status?: StatusType;
@@ -208,11 +109,9 @@ const StatusIcon: React.FC<StatusIconProps> = ({ status }) => {
   }
 };
 
-export type BaseInputProps = Merge<
-  Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'>,
-  Omit<StyledInputProps, 'inputSize'>
-> &
-  InputBackdropProps & {
+export type BaseInputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> &
+  BorderProps & {
+    readOnly?: boolean;
     size?: InputSizes;
     status?: StatusType;
     disabled?: boolean;
@@ -246,41 +145,85 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
     return (
       <Wrapper
         disabled={disabled}
-        readOnly={readOnly}
         isAutofilled={isAutofilled}
+        readOnly={readOnly}
         status={status}
-        width={width}
-        borderLeft={borderLeft}
-        borderRight={borderRight}
-        borderRadius={borderRadius}
-        borderTopLeftRadius={borderTopLeftRadius}
-        borderTopRightRadius={borderTopRightRadius}
-        borderBottomLeftRadius={borderBottomLeftRadius}
-        borderBottomRightRadius={borderBottomRightRadius}
+        css={css(get => ({
+          borderRadius: borderRadius || get('radii.radius-2'),
+          width: width || '100%',
+          borderLeft,
+          borderRight,
+          borderTopLeftRadius,
+          borderTopRightRadius,
+          borderBottomLeftRadius,
+          borderBottomRightRadius,
+        }))}
       >
         {prefix && (
           <Flex flex={0} pl={2} pr={1} fontSize="text-s">
             {prefix}
           </Flex>
         )}
-        <StyledInput
+        <input
           ref={ref}
           disabled={disabled}
-          inputSize={size}
-          hasPrefix={!!prefix}
-          hasSuffix={!!status || !!suffix}
           readOnly={readOnly}
+          css={css(get => ({
+            color: readOnly ? get('inputStyles.readonly.color') : get('inputStyles.color'),
+            width: '100%',
+            flex: '1 1 0%',
+            boxSizing: 'border-box',
+            border: 'solid 1px transparent',
+            background: 'transparent',
+            fontFamily: 'sans-serif',
+            minWidth: 0,
+            fontSize: ['text', 'text-s'],
+            height: ['40px', '36px'],
+            paddingLeft: prefix ? 0 : 2,
+            paddingRight: suffix ? 0 : 2,
+            '&::placeholder': {
+              color: get('inputStyles.placeholder.color'),
+            },
+            transition: `all ${get('transition.transition-duration-fast')} ease-in-out`,
+            '&:disabled': {
+              opacity: 1,
+            },
+            '&:focus': {
+              outline: 'none',
+            },
+            '&:active ': {
+              outline: 'none',
+            },
+            '&:not([disabled]):not([readonly]):hover + div ': {
+              borderColor: get('inputStyles.hover.border'),
+            },
+            '&:not([disabled]):not([readonly]):focus + div ': {
+              borderColor: get('inputStyles.focus.border'),
+            },
+            '&:not([disabled]):not([readonly]):active + div ': {
+              borderColor: get('inputStyles.active.border'),
+            },
+            ...(size === 'small' && {
+              fontSize: 'text-xs',
+              height: get('space.5'),
+            }),
+            ...(size === 'large' && {
+              height: get('space.7'),
+            }),
+          }))}
           {...restProps}
         />
         <InputBackdrop
           status={status}
-          borderLeft={borderLeft}
-          borderRight={borderRight}
-          borderRadius={borderRadius}
-          borderTopLeftRadius={borderTopLeftRadius}
-          borderTopRightRadius={borderTopRightRadius}
-          borderBottomLeftRadius={borderBottomLeftRadius}
-          borderBottomRightRadius={borderBottomRightRadius}
+          css={css(() => ({
+            borderLeft,
+            borderRight,
+            borderRadius,
+            borderTopLeftRadius,
+            borderTopRightRadius,
+            borderBottomLeftRadius,
+            borderBottomRightRadius,
+          }))}
         />
         {(status || suffix) && (
           <Flex flex={0} pr={2} fontSize="text-s">
@@ -338,6 +281,9 @@ pass the status.message to the statusMessage prop.
             htmlFor={id}
             description={description}
             descriptionProps={{ id: descriptionId }}
+            css={css(() => ({
+              fontSize: ['text', 'text-s'],
+            }))}
           >
             {labelHelper ? (
               <Flex

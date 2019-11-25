@@ -156,7 +156,7 @@ type flameCssCallback = (get: (path: string) => any, theme: object) => object;
  * issues with css props
  */
 const flameCss = (cb: flameCssCallback): any => {
-  return styledSystemCss(theme => cb(get(theme), get));
+  return styledSystemCss(theme => cb(get(theme), theme));
 };
 
 export {
