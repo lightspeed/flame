@@ -281,6 +281,9 @@ pass the status.message to the statusMessage prop.
             htmlFor={id}
             description={description}
             descriptionProps={{ id: descriptionId }}
+            css={css(() => ({
+              fontSize: ['text', 'text-s'],
+            }))}
           >
             {labelHelper ? (
               <Flex
