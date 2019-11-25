@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Switch /> when autoFocus should render correctly 1`] = `
-.emotion-16 {
+.emotion-9 {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -17,19 +17,19 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-0:checked + .emotion-15 {
+.emotion-0:checked + .fl-switch__wrapper {
   background: #2875c6;
   border-color: #1d5794;
 }
 
-.emotion-0:checked + .emotion-15 .emotion-5 {
+.emotion-0:checked + .fl-switch__wrapper .fl-switch__slider {
   -webkit-transform: translateX(1.5rem);
   -ms-transform: translateX(1.5rem);
   transform: translateX(1.5rem);
   border-color: #1d5794;
 }
 
-.emotion-0:focus + .emotion-15 {
+.emotion-0:focus + .fl-switch__wrapper {
   box-shadow: 0 0 0 1pt #fff,0 0 0 3pt #2875c6;
 }
 
@@ -37,11 +37,13 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
   cursor: default;
 }
 
-.emotion-0:disabled + .emotion-15 {
+.emotion-0:disabled + .fl-switch__wrapper {
   opacity: 0.5;
 }
 
-.emotion-14 {
+.emotion-8 {
+  width: 3.375rem;
+  height: 1.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,11 +52,9 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 3rem;
-  height: 1.5rem;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
-  border-radius: 0.75rem;
+  border-radius: 1.125rem;
   background: #fff;
   -webkit-transition-property: background;
   transition-property: background;
@@ -64,7 +64,15 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-4 {
+@media screen and (min-width:601px) {
+  .emotion-8 {
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+  }
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,10 +85,10 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
   -ms-flex-item-align: center;
   align-self: center;
   position: absolute;
-  top: calc(0.375rem / 2);
-  width: calc(1.5rem - 0.375rem);
-  height: calc(1.5rem - 0.375rem);
   margin: 0 2px;
+  top: 3px;
+  width: 24px;
+  height: 24px;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
   border-radius: 50%;
@@ -95,13 +103,21 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-2 {
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    top: 3px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.emotion-1 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.emotion-12 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,14 +134,14 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-7 {
+.emotion-3 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
   fill: #fff;
 }
 
-.emotion-10 {
+.emotion-5 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
@@ -133,23 +149,22 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
 }
 
 <label
-  className="emotion-16 emotion-17"
-  role="presentation"
+  className="emotion-9"
 >
   <input
     autoFocus={true}
-    className="emotion-0 emotion-1"
+    className="emotion-0"
     type="checkbox"
     value={0}
   />
   <span
-    className="emotion-14 emotion-15"
+    className="fl-switch__wrapper emotion-8"
   >
     <span
-      className="emotion-4 emotion-5"
+      className="fl-switch__slider emotion-2"
     >
       <svg
-        className="emotion-2 emotion-3"
+        className="emotion-1"
         height="2"
         width="10"
         xmlns="http://www.w3.org/2000/svg"
@@ -162,10 +177,10 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
       </svg>
     </span>
     <span
-      className="emotion-12 emotion-13"
+      className="emotion-7"
     >
       <svg
-        className="emotion-6 cr-icon emotion-7 emotion-8"
+        className="cr-icon emotion-3 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"
@@ -177,7 +192,7 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
         />
       </svg>
       <svg
-        className="emotion-9 cr-icon emotion-10 emotion-8"
+        className="cr-icon emotion-5 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"
@@ -194,7 +209,7 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
 `;
 
 exports[`<Switch /> when checked should render correctly 1`] = `
-.emotion-16 {
+.emotion-9 {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -210,19 +225,19 @@ exports[`<Switch /> when checked should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-0:checked + .emotion-15 {
+.emotion-0:checked + .fl-switch__wrapper {
   background: #2875c6;
   border-color: #1d5794;
 }
 
-.emotion-0:checked + .emotion-15 .emotion-5 {
+.emotion-0:checked + .fl-switch__wrapper .fl-switch__slider {
   -webkit-transform: translateX(1.5rem);
   -ms-transform: translateX(1.5rem);
   transform: translateX(1.5rem);
   border-color: #1d5794;
 }
 
-.emotion-0:focus + .emotion-15 {
+.emotion-0:focus + .fl-switch__wrapper {
   box-shadow: 0 0 0 1pt #fff,0 0 0 3pt #2875c6;
 }
 
@@ -230,11 +245,13 @@ exports[`<Switch /> when checked should render correctly 1`] = `
   cursor: default;
 }
 
-.emotion-0:disabled + .emotion-15 {
+.emotion-0:disabled + .fl-switch__wrapper {
   opacity: 0.5;
 }
 
-.emotion-14 {
+.emotion-8 {
+  width: 3.375rem;
+  height: 1.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -243,11 +260,9 @@ exports[`<Switch /> when checked should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 3rem;
-  height: 1.5rem;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
-  border-radius: 0.75rem;
+  border-radius: 1.125rem;
   background: #fff;
   -webkit-transition-property: background;
   transition-property: background;
@@ -257,7 +272,15 @@ exports[`<Switch /> when checked should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-4 {
+@media screen and (min-width:601px) {
+  .emotion-8 {
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+  }
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -270,10 +293,10 @@ exports[`<Switch /> when checked should render correctly 1`] = `
   -ms-flex-item-align: center;
   align-self: center;
   position: absolute;
-  top: calc(0.375rem / 2);
-  width: calc(1.5rem - 0.375rem);
-  height: calc(1.5rem - 0.375rem);
   margin: 0 2px;
+  top: 3px;
+  width: 24px;
+  height: 24px;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
   border-radius: 50%;
@@ -288,13 +311,21 @@ exports[`<Switch /> when checked should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-2 {
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    top: 3px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.emotion-1 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.emotion-12 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -311,14 +342,14 @@ exports[`<Switch /> when checked should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-7 {
+.emotion-3 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
   fill: #fff;
 }
 
-.emotion-10 {
+.emotion-5 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
@@ -326,23 +357,22 @@ exports[`<Switch /> when checked should render correctly 1`] = `
 }
 
 <label
-  className="emotion-16 emotion-17"
-  role="presentation"
+  className="emotion-9"
 >
   <input
     checked={true}
-    className="emotion-0 emotion-1"
+    className="emotion-0"
     type="checkbox"
     value={1}
   />
   <span
-    className="emotion-14 emotion-15"
+    className="fl-switch__wrapper emotion-8"
   >
     <span
-      className="emotion-4 emotion-5"
+      className="fl-switch__slider emotion-2"
     >
       <svg
-        className="emotion-2 emotion-3"
+        className="emotion-1"
         height="2"
         width="10"
         xmlns="http://www.w3.org/2000/svg"
@@ -355,10 +385,10 @@ exports[`<Switch /> when checked should render correctly 1`] = `
       </svg>
     </span>
     <span
-      className="emotion-12 emotion-13"
+      className="emotion-7"
     >
       <svg
-        className="emotion-6 cr-icon emotion-7 emotion-8"
+        className="cr-icon emotion-3 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"
@@ -370,7 +400,7 @@ exports[`<Switch /> when checked should render correctly 1`] = `
         />
       </svg>
       <svg
-        className="emotion-9 cr-icon emotion-10 emotion-8"
+        className="cr-icon emotion-5 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"
@@ -387,7 +417,7 @@ exports[`<Switch /> when checked should render correctly 1`] = `
 `;
 
 exports[`<Switch /> when disabled should render correctly 1`] = `
-.emotion-16 {
+.emotion-9 {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -403,19 +433,19 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-0:checked + .emotion-15 {
+.emotion-0:checked + .fl-switch__wrapper {
   background: #2875c6;
   border-color: #1d5794;
 }
 
-.emotion-0:checked + .emotion-15 .emotion-5 {
+.emotion-0:checked + .fl-switch__wrapper .fl-switch__slider {
   -webkit-transform: translateX(1.5rem);
   -ms-transform: translateX(1.5rem);
   transform: translateX(1.5rem);
   border-color: #1d5794;
 }
 
-.emotion-0:focus + .emotion-15 {
+.emotion-0:focus + .fl-switch__wrapper {
   box-shadow: 0 0 0 1pt #fff,0 0 0 3pt #2875c6;
 }
 
@@ -423,11 +453,13 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
   cursor: default;
 }
 
-.emotion-0:disabled + .emotion-15 {
+.emotion-0:disabled + .fl-switch__wrapper {
   opacity: 0.5;
 }
 
-.emotion-14 {
+.emotion-8 {
+  width: 3.375rem;
+  height: 1.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -436,11 +468,9 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 3rem;
-  height: 1.5rem;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
-  border-radius: 0.75rem;
+  border-radius: 1.125rem;
   background: #fff;
   -webkit-transition-property: background;
   transition-property: background;
@@ -450,7 +480,15 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-4 {
+@media screen and (min-width:601px) {
+  .emotion-8 {
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+  }
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -463,10 +501,10 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
   -ms-flex-item-align: center;
   align-self: center;
   position: absolute;
-  top: calc(0.375rem / 2);
-  width: calc(1.5rem - 0.375rem);
-  height: calc(1.5rem - 0.375rem);
   margin: 0 2px;
+  top: 3px;
+  width: 24px;
+  height: 24px;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
   border-radius: 50%;
@@ -481,13 +519,21 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-2 {
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    top: 3px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.emotion-1 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.emotion-12 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -504,14 +550,14 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-7 {
+.emotion-3 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
   fill: #fff;
 }
 
-.emotion-10 {
+.emotion-5 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
@@ -519,23 +565,22 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
 }
 
 <label
-  className="emotion-16 emotion-17"
-  role="presentation"
+  className="emotion-9"
 >
   <input
-    className="emotion-0 emotion-1"
+    className="emotion-0"
     disabled={true}
     type="checkbox"
     value={0}
   />
   <span
-    className="emotion-14 emotion-15"
+    className="fl-switch__wrapper emotion-8"
   >
     <span
-      className="emotion-4 emotion-5"
+      className="fl-switch__slider emotion-2"
     >
       <svg
-        className="emotion-2 emotion-3"
+        className="emotion-1"
         height="2"
         width="10"
         xmlns="http://www.w3.org/2000/svg"
@@ -548,10 +593,10 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
       </svg>
     </span>
     <span
-      className="emotion-12 emotion-13"
+      className="emotion-7"
     >
       <svg
-        className="emotion-6 cr-icon emotion-7 emotion-8"
+        className="cr-icon emotion-3 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"
@@ -563,7 +608,7 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
         />
       </svg>
       <svg
-        className="emotion-9 cr-icon emotion-10 emotion-8"
+        className="cr-icon emotion-5 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"
@@ -580,7 +625,7 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
 `;
 
 exports[`<Switch /> when empty props should render correctly 1`] = `
-.emotion-16 {
+.emotion-9 {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -596,19 +641,19 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-0:checked + .emotion-15 {
+.emotion-0:checked + .fl-switch__wrapper {
   background: #2875c6;
   border-color: #1d5794;
 }
 
-.emotion-0:checked + .emotion-15 .emotion-5 {
+.emotion-0:checked + .fl-switch__wrapper .fl-switch__slider {
   -webkit-transform: translateX(1.5rem);
   -ms-transform: translateX(1.5rem);
   transform: translateX(1.5rem);
   border-color: #1d5794;
 }
 
-.emotion-0:focus + .emotion-15 {
+.emotion-0:focus + .fl-switch__wrapper {
   box-shadow: 0 0 0 1pt #fff,0 0 0 3pt #2875c6;
 }
 
@@ -616,11 +661,13 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
   cursor: default;
 }
 
-.emotion-0:disabled + .emotion-15 {
+.emotion-0:disabled + .fl-switch__wrapper {
   opacity: 0.5;
 }
 
-.emotion-14 {
+.emotion-8 {
+  width: 3.375rem;
+  height: 1.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -629,11 +676,9 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 3rem;
-  height: 1.5rem;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
-  border-radius: 0.75rem;
+  border-radius: 1.125rem;
   background: #fff;
   -webkit-transition-property: background;
   transition-property: background;
@@ -643,7 +688,15 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-4 {
+@media screen and (min-width:601px) {
+  .emotion-8 {
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+  }
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -656,10 +709,10 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
   -ms-flex-item-align: center;
   align-self: center;
   position: absolute;
-  top: calc(0.375rem / 2);
-  width: calc(1.5rem - 0.375rem);
-  height: calc(1.5rem - 0.375rem);
   margin: 0 2px;
+  top: 3px;
+  width: 24px;
+  height: 24px;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
   border-radius: 50%;
@@ -674,13 +727,21 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-2 {
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    top: 3px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.emotion-1 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.emotion-12 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -697,14 +758,14 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-7 {
+.emotion-3 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
   fill: #fff;
 }
 
-.emotion-10 {
+.emotion-5 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
@@ -712,22 +773,21 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
 }
 
 <label
-  className="emotion-16 emotion-17"
-  role="presentation"
+  className="emotion-9"
 >
   <input
-    className="emotion-0 emotion-1"
+    className="emotion-0"
     type="checkbox"
     value={0}
   />
   <span
-    className="emotion-14 emotion-15"
+    className="fl-switch__wrapper emotion-8"
   >
     <span
-      className="emotion-4 emotion-5"
+      className="fl-switch__slider emotion-2"
     >
       <svg
-        className="emotion-2 emotion-3"
+        className="emotion-1"
         height="2"
         width="10"
         xmlns="http://www.w3.org/2000/svg"
@@ -740,10 +800,10 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
       </svg>
     </span>
     <span
-      className="emotion-12 emotion-13"
+      className="emotion-7"
     >
       <svg
-        className="emotion-6 cr-icon emotion-7 emotion-8"
+        className="cr-icon emotion-3 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"
@@ -755,7 +815,7 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
         />
       </svg>
       <svg
-        className="emotion-9 cr-icon emotion-10 emotion-8"
+        className="cr-icon emotion-5 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"
@@ -772,7 +832,7 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
 `;
 
 exports[`<Switch /> when id, name should render correctly 1`] = `
-.emotion-16 {
+.emotion-9 {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -788,19 +848,19 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-0:checked + .emotion-15 {
+.emotion-0:checked + .fl-switch__wrapper {
   background: #2875c6;
   border-color: #1d5794;
 }
 
-.emotion-0:checked + .emotion-15 .emotion-5 {
+.emotion-0:checked + .fl-switch__wrapper .fl-switch__slider {
   -webkit-transform: translateX(1.5rem);
   -ms-transform: translateX(1.5rem);
   transform: translateX(1.5rem);
   border-color: #1d5794;
 }
 
-.emotion-0:focus + .emotion-15 {
+.emotion-0:focus + .fl-switch__wrapper {
   box-shadow: 0 0 0 1pt #fff,0 0 0 3pt #2875c6;
 }
 
@@ -808,11 +868,13 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
   cursor: default;
 }
 
-.emotion-0:disabled + .emotion-15 {
+.emotion-0:disabled + .fl-switch__wrapper {
   opacity: 0.5;
 }
 
-.emotion-14 {
+.emotion-8 {
+  width: 3.375rem;
+  height: 1.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -821,11 +883,9 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 3rem;
-  height: 1.5rem;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
-  border-radius: 0.75rem;
+  border-radius: 1.125rem;
   background: #fff;
   -webkit-transition-property: background;
   transition-property: background;
@@ -835,7 +895,15 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-4 {
+@media screen and (min-width:601px) {
+  .emotion-8 {
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+  }
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -848,10 +916,10 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
   -ms-flex-item-align: center;
   align-self: center;
   position: absolute;
-  top: calc(0.375rem / 2);
-  width: calc(1.5rem - 0.375rem);
-  height: calc(1.5rem - 0.375rem);
   margin: 0 2px;
+  top: 3px;
+  width: 24px;
+  height: 24px;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
   border-radius: 50%;
@@ -866,13 +934,21 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-2 {
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    top: 3px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.emotion-1 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.emotion-12 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -889,14 +965,14 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-7 {
+.emotion-3 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
   fill: #fff;
 }
 
-.emotion-10 {
+.emotion-5 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
@@ -904,24 +980,24 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
 }
 
 <label
-  className="emotion-16 emotion-17"
-  role="presentation"
+  className="emotion-9"
+  htmlFor="feature1-id"
 >
   <input
-    className="emotion-0 emotion-1"
+    className="emotion-0"
     id="feature1-id"
     name="feature1"
     type="checkbox"
     value={0}
   />
   <span
-    className="emotion-14 emotion-15"
+    className="fl-switch__wrapper emotion-8"
   >
     <span
-      className="emotion-4 emotion-5"
+      className="fl-switch__slider emotion-2"
     >
       <svg
-        className="emotion-2 emotion-3"
+        className="emotion-1"
         height="2"
         width="10"
         xmlns="http://www.w3.org/2000/svg"
@@ -934,10 +1010,10 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
       </svg>
     </span>
     <span
-      className="emotion-12 emotion-13"
+      className="emotion-7"
     >
       <svg
-        className="emotion-6 cr-icon emotion-7 emotion-8"
+        className="cr-icon emotion-3 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"
@@ -949,7 +1025,7 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
         />
       </svg>
       <svg
-        className="emotion-9 cr-icon emotion-10 emotion-8"
+        className="cr-icon emotion-5 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"
@@ -966,7 +1042,7 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
 `;
 
 exports[`<Switch /> when passing data-props should render correctly 1`] = `
-.emotion-16 {
+.emotion-9 {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -982,19 +1058,19 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-0:checked + .emotion-15 {
+.emotion-0:checked + .fl-switch__wrapper {
   background: #2875c6;
   border-color: #1d5794;
 }
 
-.emotion-0:checked + .emotion-15 .emotion-5 {
+.emotion-0:checked + .fl-switch__wrapper .fl-switch__slider {
   -webkit-transform: translateX(1.5rem);
   -ms-transform: translateX(1.5rem);
   transform: translateX(1.5rem);
   border-color: #1d5794;
 }
 
-.emotion-0:focus + .emotion-15 {
+.emotion-0:focus + .fl-switch__wrapper {
   box-shadow: 0 0 0 1pt #fff,0 0 0 3pt #2875c6;
 }
 
@@ -1002,11 +1078,13 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
   cursor: default;
 }
 
-.emotion-0:disabled + .emotion-15 {
+.emotion-0:disabled + .fl-switch__wrapper {
   opacity: 0.5;
 }
 
-.emotion-14 {
+.emotion-8 {
+  width: 3.375rem;
+  height: 1.875rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1015,11 +1093,9 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 3rem;
-  height: 1.5rem;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
-  border-radius: 0.75rem;
+  border-radius: 1.125rem;
   background: #fff;
   -webkit-transition-property: background;
   transition-property: background;
@@ -1029,7 +1105,15 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-4 {
+@media screen and (min-width:601px) {
+  .emotion-8 {
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+  }
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1042,10 +1126,10 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
   -ms-flex-item-align: center;
   align-self: center;
   position: absolute;
-  top: calc(0.375rem / 2);
-  width: calc(1.5rem - 0.375rem);
-  height: calc(1.5rem - 0.375rem);
   margin: 0 2px;
+  top: 3px;
+  width: 24px;
+  height: 24px;
   box-sizing: border-box;
   border: solid 1px #abb3b3;
   border-radius: 50%;
@@ -1060,13 +1144,21 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
   transition-timing-function: cubic-bezier(0.68,1.46,0.1,1.06);
 }
 
-.emotion-2 {
+@media screen and (min-width:601px) {
+  .emotion-2 {
+    top: 3px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.emotion-1 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.emotion-12 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1083,14 +1175,14 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-7 {
+.emotion-3 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
   fill: #fff;
 }
 
-.emotion-10 {
+.emotion-5 {
   vertical-align: text-bottom;
   width: 0.75rem;
   height: 0.75rem;
@@ -1098,23 +1190,22 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
 }
 
 <label
-  className="emotion-16 emotion-17"
-  role="presentation"
+  className="emotion-9"
 >
   <input
-    className="emotion-0 emotion-1"
+    className="emotion-0"
     data-property1={true}
     type="checkbox"
     value={0}
   />
   <span
-    className="emotion-14 emotion-15"
+    className="fl-switch__wrapper emotion-8"
   >
     <span
-      className="emotion-4 emotion-5"
+      className="fl-switch__slider emotion-2"
     >
       <svg
-        className="emotion-2 emotion-3"
+        className="emotion-1"
         height="2"
         width="10"
         xmlns="http://www.w3.org/2000/svg"
@@ -1127,10 +1218,10 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
       </svg>
     </span>
     <span
-      className="emotion-12 emotion-13"
+      className="emotion-7"
     >
       <svg
-        className="emotion-6 cr-icon emotion-7 emotion-8"
+        className="cr-icon emotion-3 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"
@@ -1142,7 +1233,7 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
         />
       </svg>
       <svg
-        className="emotion-9 cr-icon emotion-10 emotion-8"
+        className="cr-icon emotion-5 emotion-4"
         height="0.75rem"
         viewBox="0 0 16 16"
         width="0.75rem"

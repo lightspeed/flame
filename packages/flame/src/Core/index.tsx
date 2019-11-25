@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Global, css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { ThemeProvider } from 'emotion-theming';
+import { css as styledSystemCss } from '@styled-system/css';
 import { Omit } from 'type-fest';
 
 import {
@@ -143,6 +144,21 @@ const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = ({ th
 };
 
 const cssGet = (path: string) => (theme: any) => themeGet(path)({ theme });
+const get = (theme: object) => (path: string) => themeGet(path)({ theme });
+type flameCssCallback = (get: (path: string) => any, theme: object) => object;
+/**
+ * flameCss
+ * @description
+ * Augmented version of styled-system/css with a pre-bound themeGet to safely access
+ * token values
+ *
+ * Note:
+ * Use the return type `any` for now until styled-system/css has fixed their wonky typing
+ * issues with css props
+ */
+const flameCss = (cb: flameCssCallback): any => {
+  return styledSystemCss(theme => cb(get(theme), get));
+};
 
 export {
   lightTheme,
@@ -153,5 +169,6 @@ export {
   themeGet,
   cssGet,
   ThemeUIFlame,
+  flameCss as css,
   border,
 };

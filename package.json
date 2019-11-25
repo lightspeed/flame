@@ -34,9 +34,9 @@
     "percy": "build-storybook -c .storybook && percy-storybook --widths=1280"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.9",
-    "@emotion/styled": "^10.0.9",
-    "@styled-system/theme-get": "5.0.16",
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "@styled-system/theme-get": "5.1.2",
     "classnames": "^2.2.5",
     "emotion-theming": "^10.0.7",
     "polished": "^2.3.0",
@@ -80,7 +80,8 @@
     "@types/storybook-readme": "^5.0.3",
     "@types/storybook__addon-actions": "^3.4.3",
     "@types/storybook__react": "^4.0.2",
-    "@types/styled-system": "^5.0.0",
+    "@types/styled-system": "^5.1.4",
+    "@types/styled-system__css": "^5.0.4",
     "array-move": "^2.1.0",
     "autoprefixer": "^8.0.0",
     "babel-eslint": "^10.0.1",
