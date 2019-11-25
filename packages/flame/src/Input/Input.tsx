@@ -3,7 +3,6 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import { themeGet } from '@styled-system/theme-get';
-import { layout, LayoutProps, zIndex, ZIndexProps, compose } from 'styled-system';
 
 import { Flex, Box, border, BorderProps, css as coreCss } from '../Core';
 import { Label, FormHelper } from '../FormField';
@@ -39,74 +38,61 @@ const InputBackdrop = styled('div')<InputBackdropProps>`
   ${border}
 `;
 
-interface WrapperProps extends BorderProps, LayoutProps, ZIndexProps {
+interface WrapperProps {
   disabled: boolean;
   readOnly: boolean;
   isAutofilled: boolean;
   status?: StatusType;
 }
-const Wrapper = styled('div')<WrapperProps>`
-  position: relative;
-  display: flex;
-  align-items: center;
-  border-radius: ${themeGet('radii.radius-2')};
-  background: ${themeGet('inputStyles.background')};
-  transition: all ${themeGet('transition.transition-duration-fast')} ease-in-out;
-  width: 100%;
-
-  ${compose(
-    layout,
-    border,
-    zIndex,
-  )}
-
-  ${props =>
-    props.disabled &&
-    css`
-      color: ${themeGet('inputStyles.disabled.color')(props)};
-      background: ${themeGet('inputStyles.disabled.background')(props)};
-      -webkit-text-fill-color: currentColor;
-    `};
-
-  ${props =>
-    props.readOnly &&
-    css`
-      background: ${themeGet('inputStyles.readonly.background')(props)};
-    `};
-
-  ${props =>
-    props.isAutofilled &&
-    css`
-      background: ${themeGet('inputStyles.autofilled.background')(props)};
-      background-image: none;
-      color: ${themeGet('inputStyles.autofilled.color')(props)};
-    `};
-
-  ${props => {
-    switch (props.status) {
-      case 'error':
-        return css`
-          .cr-input__status-icon {
-            fill: ${themeGet('inputStyles.error.border')(props)};
-          }
-        `;
-      case 'valid':
-        return css`
-          .cr-input__status-icon {
-            fill: ${themeGet('inputStyles.valid.color')(props)};
-          }
-        `;
-      case 'warning':
-        return css`
-          .cr-input__status-icon {
-            fill: ${themeGet('inputStyles.warning.color')(props)};
-          }
-        `;
-      default:
-        return '';
-    }
-  }};
-`;
+const Wrapper: React.FC<WrapperProps> = ({
+  disabled,
+  readOnly,
+  isAutofilled,
+  status,
+  children,
+  ...restProps
+}) => (
+  <div
+    css={coreCss(get => ({
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      transition: `all ${get('transition.transition-duration-fast')} ease-in-out`,
+      background: get('inputStyles.background'),
+      ...(disabled && {
+        color: get('inputStyles.disabled.color'),
+        background: get('inputStyles.disabled.background'),
+        '-webkit-text-fill-color': 'currentColor',
+      }),
+      ...(readOnly && {
+        background: get('inputStyles.readonly.background'),
+      }),
+      ...(isAutofilled && {
+        background: get('inputStyles.autofilled.background'),
+        backgroundImage: 'none',
+        color: get('inputStyles.autofilled.color'),
+      }),
+      ...(status === 'error' && {
+        '.cr-input__status-icon': {
+          fill: get('inputStyles.error.border'),
+        },
+      }),
+      ...(status === 'valid' && {
+        '.cr-input__status-icon': {
+          fill: get('inputStyles.valid.color'),
+        },
+      }),
+      ...(status === 'warning' && {
+        '.cr-input__status-icon': {
+          fill: get('inputStyles.warning.color'),
+        },
+      }),
+    }))}
+    {...restProps}
+  >
+    {children}
+  </div>
+);
 
 interface StatusIconProps {
   status?: StatusType;
@@ -124,16 +110,16 @@ const StatusIcon: React.FC<StatusIconProps> = ({ status }) => {
   }
 };
 
-const setBaseInputSize = (inputSize: string, t: any) => {
+const setBaseInputSize = (inputSize: string, theme: any) => {
   switch (inputSize) {
     case 'small':
       return {
-        fontSize: themeGet('fontSizes.text-xs')(t),
-        height: themeGet('space.5')(t),
+        fontSize: themeGet('fontSizes.text-xs')({ theme }),
+        height: themeGet('space.5')({ theme }),
       };
     case 'large':
       return {
-        height: themeGet('space.7')(t),
+        height: themeGet('space.7')({ theme }),
       };
     case 'regular':
     default:
@@ -177,17 +163,19 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
     return (
       <Wrapper
         disabled={disabled}
-        readOnly={readOnly}
         isAutofilled={isAutofilled}
+        readOnly={readOnly}
         status={status}
-        width={width}
-        borderLeft={borderLeft}
-        borderRight={borderRight}
-        borderRadius={borderRadius}
-        borderTopLeftRadius={borderTopLeftRadius}
-        borderTopRightRadius={borderTopRightRadius}
-        borderBottomLeftRadius={borderBottomLeftRadius}
-        borderBottomRightRadius={borderBottomRightRadius}
+        css={coreCss(get => ({
+          borderRadius: borderRadius || get('radii.radius-2'),
+          width: width || '100%',
+          borderLeft,
+          borderRight,
+          borderTopLeftRadius,
+          borderTopRightRadius,
+          borderBottomLeftRadius,
+          borderBottomRightRadius,
+        }))}
       >
         {prefix && (
           <Flex flex={0} pl={2} pr={1} fontSize="text-s">
