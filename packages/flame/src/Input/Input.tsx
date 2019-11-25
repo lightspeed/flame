@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import { themeGet } from '@styled-system/theme-get';
-
 import { Flex, Box, BorderProps, css } from '../Core';
 import { Label, FormHelper } from '../FormField';
 
@@ -111,23 +109,6 @@ const StatusIcon: React.FC<StatusIconProps> = ({ status }) => {
   }
 };
 
-const setBaseInputSize = (inputSize: string, theme: any) => {
-  switch (inputSize) {
-    case 'small':
-      return {
-        fontSize: themeGet('fontSizes.text-xs')({ theme }),
-        height: themeGet('space.5')({ theme }),
-      };
-    case 'large':
-      return {
-        height: themeGet('space.7')({ theme }),
-      };
-    case 'regular':
-    default:
-      return {};
-  }
-};
-
 export type BaseInputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> &
   BorderProps & {
     readOnly?: boolean;
@@ -187,7 +168,7 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
           ref={ref}
           disabled={disabled}
           readOnly={readOnly}
-          css={css((get, t) => ({
+          css={css(get => ({
             color: readOnly ? get('inputStyles.readonly.color') : get('inputStyles.color'),
             width: '100%',
             flex: '1 1 0%',
@@ -222,7 +203,13 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
             '&:not([disabled]):not([readonly]):active + div ': {
               borderColor: get('inputStyles.active.border'),
             },
-            ...setBaseInputSize(size, t),
+            ...(size === 'small' && {
+              fontSize: 'text-xs',
+              height: get('space.5'),
+            }),
+            ...(size === 'large' && {
+              height: get('space.7'),
+            }),
           }))}
           {...restProps}
         />
