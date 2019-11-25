@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { css } from '@emotion/core';
-import styledCss from '@styled-system/css';
 import styled from '@emotion/styled';
 
 import { themeGet } from '@styled-system/theme-get';
 import { layout, LayoutProps, zIndex, ZIndexProps, compose } from 'styled-system';
 
-import { Flex, Box, border, BorderProps, cssGet } from '../Core';
+import { Flex, Box, border, BorderProps, css as coreCss } from '../Core';
 import { Label, FormHelper } from '../FormField';
 
 import { IconVerified } from '../Icon/Verified';
@@ -129,12 +128,12 @@ const setBaseInputSize = (inputSize: string, t: any) => {
   switch (inputSize) {
     case 'small':
       return {
-        fontSize: cssGet('fontSizes.text-xs')(t),
-        height: cssGet('space.5')(t),
+        fontSize: themeGet('fontSizes.text-xs')(t),
+        height: themeGet('space.5')(t),
       };
     case 'large':
       return {
-        height: cssGet('space.7')(t),
+        height: themeGet('space.7')(t),
       };
     case 'regular':
     default:
@@ -199,10 +198,8 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
           ref={ref}
           disabled={disabled}
           readOnly={readOnly}
-          css={styledCss(t => ({
-            color: readOnly
-              ? cssGet('inputStyles.readonly.color')(t)
-              : cssGet('inputStyles.color')(t),
+          css={coreCss((get, t) => ({
+            color: readOnly ? get('inputStyles.readonly.color') : get('inputStyles.color'),
             width: '100%',
             flex: '1 1 0%',
             boxSizing: 'border-box',
@@ -215,9 +212,9 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
             paddingLeft: prefix ? 0 : 2,
             paddingRight: suffix ? 0 : 2,
             '&::placeholder': {
-              color: cssGet('inputStyles.placeholder.color')(t),
+              color: get('inputStyles.placeholder.color'),
             },
-            transition: `all ${cssGet('transition.transition-duration-fast')(t)} ease-in-out`,
+            transition: `all ${get('transition.transition-duration-fast')} ease-in-out`,
             '&:disabled': {
               opacity: 1,
             },
@@ -228,13 +225,13 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
               outline: 'none',
             },
             '&:not([disabled]):not([readonly]):hover + div ': {
-              borderColor: cssGet('inputStyles.hover.border')(t),
+              borderColor: get('inputStyles.hover.border'),
             },
             '&:not([disabled]):not([readonly]):focus + div ': {
-              borderColor: cssGet('inputStyles.focus.border')(t),
+              borderColor: get('inputStyles.focus.border'),
             },
             '&:not([disabled]):not([readonly]):active + div ': {
-              borderColor: cssGet('inputStyles.active.border')(t),
+              borderColor: get('inputStyles.active.border'),
             },
             ...setBaseInputSize(size, t),
           }))}
