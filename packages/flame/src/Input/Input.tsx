@@ -1,10 +1,8 @@
 import * as React from 'react';
-import { css } from '@emotion/core';
-import styled from '@emotion/styled';
 
 import { themeGet } from '@styled-system/theme-get';
 
-import { Flex, Box, border, BorderProps, css as coreCss } from '../Core';
+import { Flex, Box, BorderProps, css } from '../Core';
 import { Label, FormHelper } from '../FormField';
 
 import { IconVerified } from '../Icon/Verified';
@@ -14,29 +12,32 @@ import { IconDanger } from '../Icon/Danger';
 type StatusType = 'valid' | 'error' | 'warning';
 type InputSizes = 'small' | 'regular' | 'large';
 
-interface InputBackdropProps extends BorderProps {
+interface InputBackdropProps {
   status?: StatusType;
 }
-const InputBackdrop = styled('div')<InputBackdropProps>`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  pointer-events: none;
-  border-radius: ${themeGet('radii.radius-1')};
-  background: transparent;
-  box-shadow: ${themeGet('inputStyles.boxShadow')};
-  border: solid 1px ${themeGet('inputStyles.border')};
-  transition: border-color ${themeGet('transition.transition-duration-fast')} ease-in-out;
-
-  ${props =>
-    props.status === 'error' &&
-    css`
-      border-color: ${themeGet('inputStyles.error.border')(props)} !important;
-    `};
-  ${border}
-`;
+const InputBackdrop: React.FC<InputBackdropProps> = ({ status, children, ...restProps }) => (
+  <div
+    css={css(get => ({
+      position: 'absolute',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      pointerEvents: 'none',
+      borderRadius: 'radius-1',
+      background: 'transparent',
+      boxShadow: get('inputStyles.boxShadow'),
+      border: `solid 1px ${get('inputStyles.border')}`,
+      transition: `border-color ${get('transition.transition-duration-fast')} ease-in-out`,
+      ...(status === 'error' && {
+        borderColor: `${get('inputStyles.error.border')} !important`,
+      }),
+    }))}
+    {...restProps}
+  >
+    {children}
+  </div>
+);
 
 interface WrapperProps {
   disabled: boolean;
@@ -53,7 +54,7 @@ const Wrapper: React.FC<WrapperProps> = ({
   ...restProps
 }) => (
   <div
-    css={coreCss(get => ({
+    css={css(get => ({
       position: 'relative',
       display: 'flex',
       alignItems: 'center',
@@ -128,7 +129,7 @@ const setBaseInputSize = (inputSize: string, theme: any) => {
 };
 
 export type BaseInputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> &
-  InputBackdropProps & {
+  BorderProps & {
     readOnly?: boolean;
     size?: InputSizes;
     status?: StatusType;
@@ -166,7 +167,7 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
         isAutofilled={isAutofilled}
         readOnly={readOnly}
         status={status}
-        css={coreCss(get => ({
+        css={css(get => ({
           borderRadius: borderRadius || get('radii.radius-2'),
           width: width || '100%',
           borderLeft,
@@ -186,7 +187,7 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
           ref={ref}
           disabled={disabled}
           readOnly={readOnly}
-          css={coreCss((get, t) => ({
+          css={css((get, t) => ({
             color: readOnly ? get('inputStyles.readonly.color') : get('inputStyles.color'),
             width: '100%',
             flex: '1 1 0%',
@@ -227,13 +228,15 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
         />
         <InputBackdrop
           status={status}
-          borderLeft={borderLeft}
-          borderRight={borderRight}
-          borderRadius={borderRadius}
-          borderTopLeftRadius={borderTopLeftRadius}
-          borderTopRightRadius={borderTopRightRadius}
-          borderBottomLeftRadius={borderBottomLeftRadius}
-          borderBottomRightRadius={borderBottomRightRadius}
+          css={css(() => ({
+            borderLeft,
+            borderRight,
+            borderRadius,
+            borderTopLeftRadius,
+            borderTopRightRadius,
+            borderBottomLeftRadius,
+            borderBottomRightRadius,
+          }))}
         />
         {(status || suffix) && (
           <Flex flex={0} pr={2} fontSize="text-s">
