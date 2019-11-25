@@ -11,6 +11,7 @@ import { Button } from '../Button';
 import { Box } from '../Core';
 
 import { SpacedGroup } from '../../../../stories/components/SpacedGroup';
+import { percyBreakpoints, percySkip } from '../../../../stories/helpers/percy';
 
 const stories = storiesOf('Switch', module).addDecorator(withReadme(Readme));
 
@@ -70,22 +71,26 @@ class SwitchWrapper extends React.Component<{}, State> {
   }
 }
 
-stories.add('States', () => (
-  <div>
-    <Heading2 mb={2}>Switch States</Heading2>
-    <Description>Toggle On / Off</Description>
-    <Box mb={3}>
-      <Switch />
-    </Box>
-    <Description>Disabled On / Off</Description>
-    <Box mb={3}>
-      <SpacedGroup>
-        <Switch disabled />
-        <Switch checked disabled />
-      </SpacedGroup>
-    </Box>
-  </div>
-));
+stories.add(
+  'States',
+  () => (
+    <div>
+      <Heading2 mb={2}>Switch States</Heading2>
+      <Description>Toggle On / Off</Description>
+      <Box mb={3}>
+        <Switch />
+      </Box>
+      <Description>Disabled On / Off</Description>
+      <Box mb={3}>
+        <SpacedGroup>
+          <Switch disabled />
+          <Switch checked disabled />
+        </SpacedGroup>
+      </Box>
+    </div>
+  ),
+  { ...percyBreakpoints },
+);
 
 // eslint-disable-next-line react/no-multi-comp
 class ToggleEventsWrapper extends React.Component<{}, { checked?: boolean }> {
@@ -144,5 +149,5 @@ stories.add(
       </Box>
     </div>
   ),
-  { percy: { skip: true } },
+  { ...percySkip },
 );
