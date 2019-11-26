@@ -3,16 +3,16 @@
 exports[`Select renders correctly 1`] = `
 .emotion-0 {
   width: 100%;
+  border: 1px solid #c4cacc;
+  border-radius: 0.1875rem;
   color: #494c4c;
   font-size: 1.125rem;
   font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-weight: 700;
   height: 3rem;
   background-color: #fff;
-  border: 1px solid #c4cacc;
-  border-radius: 0.1875rem;
   line-height: 1.125rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16' fill='%23494c4c'%3E%3Cg id='chevron-up-down'%3E%3Cpath id='base-1' d='M8 12l2-2 1 1-3 3-3-3 1-1 2 2zm0-8L6 6 5 5l3-3 3 3-1 1-2-2z'/%3E%3C/g%3E%3C/svg%3E"),linear-gradient(180deg,#fff,#f3f3f3);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='24' height='24' fill='%23494c4c'%3E%3Cg id='chevron-up-down'%3E%3Cpath id='base-1' d='M8 12l2-2 1 1-3 3-3-3 1-1 2 2zm0-8L6 6 5 5l3-3 3 3-1 1-2-2z'/%3E%3C/g%3E%3C/svg%3E"),linear-gradient(180deg,#fff,#f3f3f3);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -29,6 +29,7 @@ exports[`Select renders correctly 1`] = `
   .emotion-0 {
     font-size: 0.875rem;
     height: 2.25rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16' fill='%23494c4c'%3E%3Cg id='chevron-up-down'%3E%3Cpath id='base-1' d='M8 12l2-2 1 1-3 3-3-3 1-1 2 2zm0-8L6 6 5 5l3-3 3 3-1 1-2-2z'/%3E%3C/g%3E%3C/svg%3E"),linear-gradient(180deg,#fff,#f3f3f3);
   }
 }
 
