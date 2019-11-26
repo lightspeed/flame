@@ -10,7 +10,7 @@ import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
 
-const stories = storiesOf('Input', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Input', module).addDecorator(withReadme(Readme));
 
 const firstArgAction = decorateAction([(args: any) => [args[0].target.value]]);
 

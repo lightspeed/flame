@@ -9,7 +9,7 @@ import { Divider } from './Divider';
 
 import Readme from './README.md';
 
-const stories = storiesOf('Divider', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Divider', module).addDecorator(withReadme(Readme));
 const cardsStyles = { maxWidth: '640px' };
 const cardsContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
 

@@ -14,7 +14,7 @@ import { hex2rgba } from '../../stories/helpers/color';
 import { remToPxFromString } from '../../stories/helpers/unit';
 import { Grid } from '../../stories/components/grid';
 
-const stories = storiesOf('tokens', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Theme|Tokens', module).addDecorator(withReadme(Readme));
 
 const { typeface, weights, fontSizes, letterSpacings } = typography;
 const { scale } = spacing;

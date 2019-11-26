@@ -21,7 +21,7 @@ import { Text } from '../../Text';
 import { Ul } from '../../../../../stories/components/Ul';
 import { SpacedGroup } from '../../../../../stories/components/SpacedGroup';
 
-const stories = storiesOf('Flag', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Flag', module).addDecorator(withReadme(Readme));
 
 const Description: React.FC = ({ children }) => (
   <Text fontSize="text-s" mb={1}>

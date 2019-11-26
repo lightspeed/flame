@@ -9,7 +9,7 @@ import Readme from './README.md';
 
 const title = 'Dialog Prompt';
 const message = `It seems you're about to do this action. It might be destructive or not, but anyways, a heads up about what's going to happen. Are you really sure you want to proceed?`;
-const stories = storiesOf('Dialog', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Dialog', module).addDecorator(withReadme(Readme));
 
 const delay = (milliseconds: number) => (result?: any) =>
   new Promise(resolve => {

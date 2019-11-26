@@ -7,7 +7,7 @@ import { Divider } from '../Divider';
 import { Box } from '../Core';
 import Readme from './README.md';
 
-const stories = storiesOf('Text', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Text', module).addDecorator(withReadme(Readme));
 
 const textBodyStyles: ('small' | 'normal' | 'large' | 'xlarge')[] = [
   'small',

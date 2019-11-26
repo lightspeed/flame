@@ -60,7 +60,7 @@ module.exports = plop => {
   });
 
   plop.setGenerator('Add-on component', {
-    description: 'Create a new add-on/experimentall component',
+    description: 'Create a new add-on/experimental component',
     prompts: [
       {
         type: 'input',

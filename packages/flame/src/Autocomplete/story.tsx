@@ -9,7 +9,7 @@ import Readme from './README.md';
 import { Box } from '../Core';
 import { Text } from '../Text';
 
-const stories = storiesOf('Autocomplete', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Autocomplete', module).addDecorator(withReadme(Readme));
 
 function onCreateOption(value: any, currentItems: any) {
   const newOption = {

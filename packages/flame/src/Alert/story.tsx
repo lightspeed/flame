@@ -7,7 +7,7 @@ import { Text } from '../Text';
 import { IconWarning } from '../Icon/Warning';
 import Readme from './README.md';
 
-const stories = storiesOf('Alert', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Alert', module).addDecorator(withReadme(Readme));
 
 stories.add('Story', () => {
   const alerts = ['info', 'warning', 'success', 'danger'].map(type => {

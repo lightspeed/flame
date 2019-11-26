@@ -6,7 +6,7 @@ import Readme from './README.md';
 import { Tab, TabContainer } from './Tab';
 import { Card, CardSection } from '../Card';
 
-const stories = storiesOf('Tab', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Tab', module).addDecorator(withReadme(Readme));
 
 const StoryTab = () => {
   const [state, setState] = React.useState(0);

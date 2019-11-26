@@ -12,7 +12,7 @@ import { Icon } from '../Icon';
 import { Text } from '../Text';
 import { Badge, PillBadge } from '../Badge';
 
-const stories = storiesOf('Group', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Group', module).addDecorator(withReadme(Readme));
 
 const Description: React.FC = ({ children }) => (
   <Text fontSize="text-s" mb={1}>

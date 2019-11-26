@@ -10,7 +10,7 @@ import { Text, TextContent, Heading2, Heading3 } from '../Text';
 import TagList from './examples/TagList';
 import { Icon } from '../Icon';
 
-const stories = storiesOf('Tag', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Tag', module).addDecorator(withReadme(Readme));
 
 stories.add('Types', () => (
   <TextContent>

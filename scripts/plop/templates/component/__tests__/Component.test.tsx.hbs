@@ -7,6 +7,7 @@ import { {{pascalCase name}} } from '../{{pascalCase name}}';
 describe('{{pascalCase name}}', () => {
   it('should be tested', () => {
     const { container } = customRender(<{{pascalCase name}}>children</{{pascalCase name}}>);
-    expect(container).toBeDefined();
+    // This will fail on purpose
+    expect(container).toHaveTextContent('my component');
   });
 });

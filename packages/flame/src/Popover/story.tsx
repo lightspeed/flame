@@ -12,7 +12,7 @@ import { Box } from '../Core';
 import Readme from './README.md';
 import styles from '../../../../stories/styles/stories.scss';
 
-const stories = storiesOf('Popover', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Popover', module).addDecorator(withReadme(Readme));
 
 const placements: PopoverPlacement[] = [
   'top-start',

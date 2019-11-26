@@ -8,7 +8,7 @@ import { Box } from '../Core';
 import SelectExample from './examples';
 import Readme from './README.md';
 
-const stories = storiesOf('Select', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Select', module).addDecorator(withReadme(Readme));
 
 stories.add('Story', () => (
   <TextContent>

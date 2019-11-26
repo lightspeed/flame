@@ -10,7 +10,7 @@ import { Heading2, Heading3, TextContent } from '../Text';
 import { Box } from '../Core';
 import Readme from './README.md';
 
-const stories = storiesOf('Progress', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Progress', module).addDecorator(withReadme(Readme));
 
 stories.add('Linear', () => (
   <TextContent>

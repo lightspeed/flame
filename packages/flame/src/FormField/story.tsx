@@ -7,7 +7,7 @@ import { Heading3, Text } from '../Text';
 import { Autocomplete } from '../Autocomplete';
 import { Label } from './FormField';
 
-const stories = storiesOf('FormField', module);
+const stories = storiesOf('Components|FormField', module);
 
 const exampleItems = [
   { value: '1', label: 'Red' },

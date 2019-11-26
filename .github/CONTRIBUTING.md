@@ -4,9 +4,9 @@ Lightspeed Flame is a project that is actively used and maintained to build Ligh
 
 The main purpose of working on it open-source is to be transparent on what we bring to our customers, but also to be able to get valuable feedback and contribution from the community. We believe open-source is vital to software development as most of the libraries we rely on are built in the open space.
 
-As our journey begins in the open-source world, we are accepting [bug reports](https://github.com/lightspeed/flame/issues/new?template=BUG_REPORT.md), [feature request](https://github.com/lightspeed/flame/issues/new?template=FEATURE_REQUEST.md) as well as pull requests for improvements, but no additions or breaking changes until we have a proper process to accept and treat those accordingly.
+As our journey begins in the open-source world, we are accepting [bug reports](https://github.com/lightspeed/flame/issues/new?template=BUG_REPORT.md), [feature requests](https://github.com/lightspeed/flame/issues/new?template=FEATURE_REQUEST.md) and pull requests for improvements. We are not accepting additions or breaking changes until we have a proper process to triage and approve these changes accordingly.
 
-We still encourage anyone to fork and play around Flame for personal usage. Read our [LICENSE](../LICENSE) in case of uncertainty on what we allow in this regard.
+We still encourage anyone to fork and play around Flame for personal usage. Read our [LICENSE](../LICENSE) in the case of commercial use.
 
 Thanks in advance for any contribution made to Flame and we look forward to hear from you!
 
@@ -34,7 +34,7 @@ You will be given a choice of "Mainline" or "Add-on" component, then have to cho
 
 #### Mainline component
 
-Mainline components will be created under `packages/flame/src/{ComponentName}`, where all other components are located. This will create the base component structure ready for development, including README for docs, story for Storybook development and visual regression test, tests and TypeScript component file.
+Mainline components will be created under `packages/flame/src/{ComponentName}`, where all other components are located. The base component structure includes a Storybook file, a test file and a component file.
 
 #### Add-on component
 

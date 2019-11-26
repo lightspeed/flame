@@ -12,7 +12,7 @@ import { Button } from '../Button';
 import { Select } from '../Select';
 import { Heading3, TextLink } from '../Text';
 
-const stories = storiesOf('Dropdown', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Dropdown', module).addDecorator(withReadme(Readme));
 
 const SampleDropdownContent = () => (
   <DropdownContent width="100px">

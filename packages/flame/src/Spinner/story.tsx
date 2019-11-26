@@ -9,7 +9,7 @@ import { Text } from '../Text';
 
 import { SpacedGroup } from '../../../../stories/components/SpacedGroup';
 
-const stories = storiesOf('Spinner', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Spinner', module).addDecorator(withReadme(Readme));
 
 stories.add('Story', () => (
   <div>
