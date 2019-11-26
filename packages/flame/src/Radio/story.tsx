@@ -10,7 +10,7 @@ import { Box } from '../Core';
 
 import Readme from './README.md';
 
-const stories = storiesOf('Radio', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Radio', module).addDecorator(withReadme(Readme));
 
 stories.add('Story', () => (
   <div>

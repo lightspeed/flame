@@ -5,7 +5,7 @@ import { withReadme } from 'storybook-readme';
 import { Badge, PillBadge, BadgeTypes } from './Badge';
 import Readme from './README.md';
 
-const stories = storiesOf('Badge', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Badge', module).addDecorator(withReadme(Readme));
 
 const statuses: BadgeTypes[] = ['success', 'danger', 'info', 'important', 'warning', 'default'];
 

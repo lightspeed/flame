@@ -16,7 +16,7 @@ import IconList from '../../../svg/Icon.list.json';
 import '../../../svg/Icons/icon.scss';
 import { Ul } from '../../../../../stories/components/Ul';
 
-const stories = storiesOf('Icon', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Icon', module).addDecorator(withReadme(Readme));
 
 const iconList: any = IconList;
 

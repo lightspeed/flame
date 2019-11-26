@@ -10,7 +10,7 @@ import { Box, Flex } from '../../Core';
 import { Button } from '../../Button';
 import { Text } from '../../Text';
 
-const stories = storiesOf('Layout', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Layout', module).addDecorator(withReadme(Readme));
 
 const FakeContent = () => (
   <React.Fragment>

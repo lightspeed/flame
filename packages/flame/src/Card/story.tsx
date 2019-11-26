@@ -10,7 +10,7 @@ import { Box } from '../Core';
 
 import Readme from './README.md';
 
-const stories = storiesOf('Card', module)
+const stories = storiesOf('Components|Card', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(storyFn => {
     return <React.Fragment>{storyFn()}</React.Fragment>;

@@ -8,7 +8,7 @@ import { Input } from '../Input';
 import Readme from './README.md';
 import styles from '../../../../stories/styles/stories.scss';
 
-const stories = storiesOf('Tooltip', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Tooltip', module).addDecorator(withReadme(Readme));
 
 const placements: TooltipPlacement[] = [
   'top',

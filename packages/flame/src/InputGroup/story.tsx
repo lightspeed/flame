@@ -28,7 +28,7 @@ const SampleDropdownContent = () => (
   </DropdownContent>
 );
 
-const stories = storiesOf('InputGroup', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|InputGroup', module).addDecorator(withReadme(Readme));
 
 stories.add('Story', () => (
   <div>

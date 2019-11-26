@@ -9,7 +9,7 @@ import { Box } from '../Core';
 import { Checkbox } from './Checkbox';
 import Readme from './README.md';
 
-const stories = storiesOf('Checkbox', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Checkbox', module).addDecorator(withReadme(Readme));
 
 const noop = () => {};
 

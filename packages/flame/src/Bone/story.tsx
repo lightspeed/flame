@@ -9,7 +9,7 @@ import Readme from './README.md';
 import { Card, CardSection } from '../Card';
 import { Divider } from '../Divider';
 
-const stories = storiesOf('Bone', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Bone', module).addDecorator(withReadme(Readme));
 
 stories.add('Styles', () => (
   <div>

@@ -12,7 +12,7 @@ import { Icon } from '../Icon';
 
 import { SpacedGroup } from '../../../../stories/components/SpacedGroup';
 
-const stories = storiesOf('Button', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Button', module).addDecorator(withReadme(Readme));
 
 type ButtonPresenterState = {
   isDisabled?: boolean;

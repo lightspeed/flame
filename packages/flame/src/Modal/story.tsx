@@ -10,7 +10,7 @@ import { ModalFooter } from './ModalFooter';
 import { Button } from '../Button';
 import Readme from './README.md';
 
-const stories = storiesOf('Modal', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Modal', module).addDecorator(withReadme(Readme));
 
 type Props = {
   header?: boolean;

@@ -12,7 +12,7 @@ import { Box } from '../Core';
 
 import { SpacedGroup } from '../../../../stories/components/SpacedGroup';
 
-const stories = storiesOf('Switch', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Switch', module).addDecorator(withReadme(Readme));
 
 const Description: React.FC = ({ children }) => (
   <Text fontSize="text-s" mb={1}>
