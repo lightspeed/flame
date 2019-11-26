@@ -1,13 +1,15 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { layout, LayoutProps, compose } from 'styled-system';
-import { border, BorderProps, css } from '../Core';
+import { border, BorderProps, css, themeGet } from '../Core';
 
 export type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement>;
 
 interface BaseSelectProps extends Omit<LayoutProps, 'size'>, BorderProps {}
 const BaseSelect = styled('select')<BaseSelectProps>`
   width: 100%;
+  border: 1px solid ${themeGet('selectStyles.border')};
+  border-radius: ${themeGet('radii.radius-1')};
 
   ${compose(
     layout,
@@ -30,8 +32,6 @@ export const Select: React.FC<Props> = ({ children, ...restProps }) => {
         fontWeight: 'bold',
         height: [get('space.8'), get('space.6')],
         backgroundColor: get('selectStyles.backgroundColor'),
-        border: `1px solid ${get('selectStyles.border')}`,
-        borderRadius: 'radius-1',
         lineHeight: get('space.3'),
         backgroundImage: [
           `url(${generateDataImage(24)}), ${get('selectStyles.background')}`,
