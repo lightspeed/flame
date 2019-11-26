@@ -1,5 +1,7 @@
 # Release workflow
 
+We follow [semver (Semantic Versioning)](https://semver.org/) for Flame releases. Releases are handled by Flame maintainers manually when changes merged to `master` are deemed ready for publishing.
+
 ## Versioning and publishing
 
 1. Make sure your local `master` branch is up to date including tags
