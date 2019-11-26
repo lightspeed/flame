@@ -1,5 +1,17 @@
 /* eslint-disable no-console */
-const addToFolder = (filename, { path = '', preset = 'addon' } = {}) => {
+const addToComponent = (filename, { path = '' } = {}) => {
+  const componentName = '{{pascalCase name}}';
+  const templatePath = path.replace('{{kebabCase name}}', 'name');
+  const nextFilename = filename.replace('Component', '{{pascalCase name}}');
+
+  return {
+    type: 'add',
+    path: `packages/flame/src/${componentName}/${path}${nextFilename}`,
+    templateFile: `scripts/plop/templates/component/${templatePath}${filename}.hbs`,
+  };
+};
+
+const addToAddon = (filename, { path = '' } = {}) => {
   const packageName = 'flame-{{kebabCase name}}';
   const templatePath = path.replace('{{kebabCase name}}', 'name');
   const nextFilename = filename.replace('Component', '{{pascalCase name}}');
@@ -7,11 +19,9 @@ const addToFolder = (filename, { path = '', preset = 'addon' } = {}) => {
   return {
     type: 'add',
     path: `packages/${packageName}/${path}${nextFilename}`,
-    templateFile: `scripts/plop/templates/${preset}/${templatePath}${filename}.hbs`,
+    templateFile: `scripts/plop/templates/addon/${templatePath}${filename}.hbs`,
   };
 };
-
-const addToAddon = (filename, config = {}) => addToFolder(filename, { ...config });
 
 const exitMessage = answers => {
   const { name } = answers;
@@ -29,8 +39,28 @@ module.exports = plop => {
 
   plop.addHelper('currentYear', () => new Date().getFullYear());
 
+  plop.setGenerator('Mainline component', {
+    description: 'Create a new mainline component',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Enter component name',
+        default: 'Component',
+      },
+    ],
+    actions: [
+      addToComponent('Component.test.tsx', { path: '__tests__/' }),
+      addToComponent('Component.tsx'),
+      addToComponent('index.tsx'),
+      addToComponent('README.md'),
+      addToComponent('story.tsx'),
+      { type: 'exitMessage' },
+    ],
+  });
+
   plop.setGenerator('Add-on component', {
-    description: 'Create a new add-on component',
+    description: 'Create a new add-on/experimentall component',
     prompts: [
       {
         type: 'input',
