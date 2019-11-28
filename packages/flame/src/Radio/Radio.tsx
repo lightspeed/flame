@@ -80,34 +80,35 @@ const RadioInput = styled('input')`
   }
 `;
 
-export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  css?: any;
-}
-const BaseRadio = React.forwardRef<HTMLInputElement, RadioProps>(({ ...restProps }, ref) => (
-  <WrapperRadio>
-    <RadioInput ref={ref} type="radio" {...restProps} />
-    <Checkmark>
-      <Centermark data-testid="radio-centermark" />
-    </Checkmark>
-  </WrapperRadio>
-));
+export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+const BaseRadio = React.forwardRef<HTMLInputElement, RadioProps>(
+  ({ css, className, ...restProps }, ref) => (
+    <WrapperRadio css={css} className={className}>
+      <RadioInput ref={ref} type="radio" {...restProps} />
+      <Checkmark>
+        <Centermark data-testid="radio-centermark" />
+      </Checkmark>
+    </WrapperRadio>
+  ),
+);
 
 interface FormRadioProps extends RadioProps {
   label?: React.ReactNode;
   description?: React.ReactNode;
-  css?: any;
 }
 const Radio = React.forwardRef<HTMLInputElement, FormRadioProps>(
-  ({ label, id, description, disabled, ...restProps }, ref) => {
-    return (
-      <React.Fragment>
-        <RadioLabel htmlFor={id} disabled={disabled} description={description}>
-          <BaseRadio ref={ref} id={id} disabled={disabled} {...restProps} />
-          {label}
-        </RadioLabel>
-      </React.Fragment>
-    );
-  },
+  ({ label, id, description, disabled, css, className, ...restProps }, ref) => (
+    <RadioLabel
+      htmlFor={id}
+      disabled={disabled}
+      css={css}
+      className={className}
+      description={description}
+    >
+      <BaseRadio ref={ref} id={id} disabled={disabled} {...restProps} />
+      {label}
+    </RadioLabel>
+  ),
 );
 
 export { BaseRadio, RadioLabel, Radio };

@@ -122,6 +122,23 @@ stories.add('Story', () => (
         <Checkbox id="checked-disabled" label="Checked Disabled" disabled checked />
       </Box>
     </TextContent>
+    <Heading2>Customizing using css props</Heading2>
+    <div>
+      <div>This checkbox wrapper should be customized with a border, padding and margin bottom</div>
+      <Checkbox
+        id="lol"
+        css={{ border: '3px solid hotpink', marginBottom: '24px', padding: '8px' }}
+      />
+      <div>I should be spaced from the checkox</div>
+    </div>
+    <Heading2>Customizing using classnames props</Heading2>
+    <div>
+      <div>The applied css class should have bumped the z-index</div>
+      <div css={{ position: 'relative' }}>
+        <Checkbox id="imHigher" className="zIndex-2" css={{ position: 'absolute' }} />
+        <div css={{ position: 'absolute', height: '50px', width: '50px', background: 'red' }} />
+      </div>
+    </div>
   </div>
 ));
 

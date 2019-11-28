@@ -8,10 +8,10 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .emotion-7 {
@@ -156,10 +156,10 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .emotion-7 {
@@ -300,10 +300,10 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .emotion-7 {
@@ -429,10 +429,10 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .emotion-7 {
@@ -557,10 +557,10 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .emotion-7 {
@@ -684,10 +684,10 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .emotion-9 {
@@ -828,10 +828,10 @@ exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .emotion-7 {

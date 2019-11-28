@@ -77,6 +77,20 @@ stories.add('Story', () => (
     <Box mb={3}>
       <Radio id="checked-disabled" label="Checked Disabled" checked onChange={() => {}} disabled />
     </Box>
+    <Heading2>Customizing using css props</Heading2>
+    <div>
+      <div>This checkbox wrapper should be customized with a border, padding and margin bottom</div>
+      <Radio id="lol" css={{ border: '3px solid hotpink', marginBottom: '24px', padding: '8px' }} />
+      <div>I should be spaced from the checkox</div>
+    </div>
+    <Heading2>Customizing using classnames props</Heading2>
+    <div>
+      <div>The applied css class should have bumped the z-index</div>
+      <div css={{ position: 'relative' }}>
+        <Radio id="imHigher" className="zIndex-2" css={{ position: 'absolute' }} />
+        <div css={{ position: 'absolute', height: '50px', width: '50px', background: 'red' }} />
+      </div>
+    </div>
   </div>
 ));
 

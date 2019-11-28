@@ -2,7 +2,7 @@
 
 Core has a simple task:
 
-Give access to the the most basic/elemetary components/functions you can freely use (like, Box and Text) that are connected to the token system.
+Give access to the the most basic/elementary components/functions you can freely use (like, Box and Text) that are connected to the token system.
 
 ### React Component
 

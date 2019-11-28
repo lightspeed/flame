@@ -3,6 +3,7 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
+
 import { IconCheckmark } from '../Icon/Checkmark';
 import { TextProps } from '../Text';
 import { RadioLabel } from '../Radio';
@@ -95,11 +96,10 @@ export type CheckboxDescriptionProps = Merge<React.HTMLProps<HTMLDivElement>, Te
 export interface BaseCheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   indeterminate?: boolean;
   checked?: boolean;
-  css?: any;
 }
 const BaseCheckbox = React.forwardRef<HTMLInputElement, BaseCheckboxProps>(
-  ({ indeterminate, checked, ...restProps }, ref) => (
-    <Wrapper>
+  ({ indeterminate, checked, css, className, ...restProps }, ref) => (
+    <Wrapper css={css} className={className}>
       <CheckboxInput
         ref={ref}
         type="checkbox"
@@ -118,19 +118,20 @@ const BaseCheckbox = React.forwardRef<HTMLInputElement, BaseCheckboxProps>(
 export interface CheckboxProps extends BaseCheckboxProps {
   label?: React.ReactNode;
   description?: React.ReactNode;
-  css?: any;
 }
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ label, id, description, disabled, ...restProps }, ref) => {
-    return (
-      <React.Fragment>
-        <CheckboxLabel htmlFor={id} description={description} disabled={disabled}>
-          <BaseCheckbox ref={ref} id={id} {...restProps} disabled={disabled} />
-          {label}
-        </CheckboxLabel>
-      </React.Fragment>
-    );
-  },
+  ({ label, id, description, disabled, css, className, ...restProps }, ref) => (
+    <CheckboxLabel
+      htmlFor={id}
+      description={description}
+      css={css}
+      className={className}
+      disabled={disabled}
+    >
+      <BaseCheckbox ref={ref} id={id} disabled={disabled} {...restProps} />
+      {label}
+    </CheckboxLabel>
+  ),
 );
 
 export { Checkbox, CheckboxLabel, BaseCheckbox };
