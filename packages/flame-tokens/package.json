@@ -17,8 +17,10 @@
     "polished": "^1.0.2"
   },
   "devDependencies": {
+    "@types/fs-extra": "^8.0.1",
     "@types/node": "^12.7.2",
     "concurrently": "^4.1.0",
+    "fs-extra": "^8.1.0",
     "nodemon": "^1.18.10",
     "rimraf": "^2.6.3",
     "ts-node": "^8.3.0"
@@ -28,7 +30,7 @@
     "build:cjs": "BABEL_ENV=cjs babel src --out-dir dist --config-file ../../babel.config.js --extensions .ts,.tsx,.js,.jsx",
     "build:esm": "BABEL_ENV=production babel src --out-dir dist/esm --config-file ../../babel.config.js --extensions .ts,.tsx,.js,.jsx",
     "build:types": "tsc --p ./tsconfig.types.json",
-    "clean": "rimraf dist && rimraf built-themes && rimraf partials",
+    "clean": "rimraf dist && rimraf built-themes && rimraf partials && rimraf css && rimraf sass",
     "prepublish": "yarn clean && yarn build && node ../../scripts/validate-build"
   },
   "publishConfig": {

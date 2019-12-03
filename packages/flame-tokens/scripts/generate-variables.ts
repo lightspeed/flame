@@ -1,9 +1,8 @@
 import { colors, typography, spacing, shadows, radii, transition } from '../src';
-import { namespace } from './config';
+import { theme as lsTheme } from '../src/theme-ui/lightspeed';
 
-const variables = Object.assign(
+const baseVariables = Object.assign(
   {},
-  colors.colors,
   typography.typeface,
   typography.fontSizes,
   typography.weights,
@@ -17,26 +16,35 @@ const variables = Object.assign(
   transition.durations,
 );
 
-const generate = {
-  css() {
-    return `:root {${Object.keys(variables).reduce(
-      (css, name) => `${css}\n  ${`--${namespace}${name}`}: ${variables[name]};`,
-      '',
-    )}\n}\n`;
-  },
-  scss() {
-    return Object.keys(variables).reduce(
-      (css, name) => `${css}${`$${namespace}${name}`}: ${variables[name]};\n`,
-      `$${namespace}namespace: '${namespace}';\n`,
-    );
-  },
-};
+const smooshColorsIntoTheme = (c: any) => ({ ...c, ...baseVariables });
 
-function generateTokensFile(type: 'css' | 'scss') {
-  return generate[type]();
+function generateCssVariables(themeObject: any, namespace = ['cr-', 'fl-']) {
+  const nextThemeObject = smooshColorsIntoTheme(themeObject);
+
+  return `:root {${Object.keys(nextThemeObject).reduce((css, name) => {
+    const nextRule = namespace
+      .map(n => `  ${`--${n}${name}`}: ${nextThemeObject[name]};`)
+      .join('\n');
+    return `${css}\n${nextRule}`;
+  }, '')}\n}\n`;
+}
+
+function generateSassVariables(themeObject: any, namespace = ['cr-', 'fl-']) {
+  const nextThemeObject = smooshColorsIntoTheme(themeObject);
+
+  const baseRule = namespace.map(n => `$${n}namespace: '${n}';\n`).join('\n');
+
+  return Object.keys(nextThemeObject).reduce((css, name) => {
+    const nextRule = namespace.map(n => `${`$${n}${name}`}: ${nextThemeObject[name]};`).join('\n');
+    return `${css}${nextRule}\n`;
+  }, baseRule);
 }
 
 export default [
-  ['index.css', generateTokensFile('css')],
-  ['index.scss', generateTokensFile('scss')],
+  ['index.css', generateCssVariables(colors.colors)],
+  ['index.scss', generateSassVariables(colors.colors)],
+  ['css/flame/index.css', `${generateCssVariables(lsTheme.colors)}`],
+  ['sass/flame/index.scss', generateSassVariables(lsTheme.colors)],
+  ['css/oldskool/index.css', generateCssVariables(colors.colors)],
+  ['sass/oldskool/index.scss', generateSassVariables(colors.colors)],
 ];

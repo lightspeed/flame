@@ -1,155 +1,287 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`generate-utilities _colors.scss should output the right CSS 1`] = `
+exports[`generate-utilities partials/_colors.scss.scss should output the right CSS 1`] = `
 "@import '../index.scss';
+
 .cr-maple { color: $cr-maple; }
+.fl-maple { color: $fl-maple; }
 .cr-maple-100 { color: $cr-maple-100; }
+.fl-maple-100 { color: $fl-maple-100; }
 .cr-maple-200 { color: $cr-maple-200; }
+.fl-maple-200 { color: $fl-maple-200; }
 .cr-maple-300 { color: $cr-maple-300; }
+.fl-maple-300 { color: $fl-maple-300; }
 .cr-dive { color: $cr-dive; }
+.fl-dive { color: $fl-dive; }
 .cr-dive-100 { color: $cr-dive-100; }
+.fl-dive-100 { color: $fl-dive-100; }
 .cr-dive-200 { color: $cr-dive-200; }
+.fl-dive-200 { color: $fl-dive-200; }
 .cr-dive-300 { color: $cr-dive-300; }
+.fl-dive-300 { color: $fl-dive-300; }
 .cr-night { color: $cr-night; }
+.fl-night { color: $fl-night; }
 .cr-night-100 { color: $cr-night-100; }
+.fl-night-100 { color: $fl-night-100; }
 .cr-night-200 { color: $cr-night-200; }
+.fl-night-200 { color: $fl-night-200; }
 .cr-night-300 { color: $cr-night-300; }
+.fl-night-300 { color: $fl-night-300; }
 .cr-snow { color: $cr-snow; }
+.fl-snow { color: $fl-snow; }
 .cr-snow-100 { color: $cr-snow-100; }
+.fl-snow-100 { color: $fl-snow-100; }
 .cr-snow-200 { color: $cr-snow-200; }
+.fl-snow-200 { color: $fl-snow-200; }
 .cr-snow-300 { color: $cr-snow-300; }
+.fl-snow-300 { color: $fl-snow-300; }
 .cr-blue { color: $cr-blue; }
+.fl-blue { color: $fl-blue; }
 .cr-blue-100 { color: $cr-blue-100; }
+.fl-blue-100 { color: $fl-blue-100; }
 .cr-blue-200 { color: $cr-blue-200; }
+.fl-blue-200 { color: $fl-blue-200; }
 .cr-blue-300 { color: $cr-blue-300; }
+.fl-blue-300 { color: $fl-blue-300; }
 .cr-green { color: $cr-green; }
+.fl-green { color: $fl-green; }
 .cr-green-100 { color: $cr-green-100; }
+.fl-green-100 { color: $fl-green-100; }
 .cr-green-200 { color: $cr-green-200; }
+.fl-green-200 { color: $fl-green-200; }
 .cr-green-300 { color: $cr-green-300; }
+.fl-green-300 { color: $fl-green-300; }
 .cr-orange { color: $cr-orange; }
+.fl-orange { color: $fl-orange; }
 .cr-orange-100 { color: $cr-orange-100; }
+.fl-orange-100 { color: $fl-orange-100; }
 .cr-orange-200 { color: $cr-orange-200; }
+.fl-orange-200 { color: $fl-orange-200; }
 .cr-orange-300 { color: $cr-orange-300; }
+.fl-orange-300 { color: $fl-orange-300; }
 .cr-yellow { color: $cr-yellow; }
+.fl-yellow { color: $fl-yellow; }
 .cr-yellow-100 { color: $cr-yellow-100; }
+.fl-yellow-100 { color: $fl-yellow-100; }
 .cr-yellow-200 { color: $cr-yellow-200; }
+.fl-yellow-200 { color: $fl-yellow-200; }
 .cr-yellow-300 { color: $cr-yellow-300; }
+.fl-yellow-300 { color: $fl-yellow-300; }
 .cr-gray { color: $cr-gray; }
+.fl-gray { color: $fl-gray; }
 .cr-gray-100 { color: $cr-gray-100; }
+.fl-gray-100 { color: $fl-gray-100; }
 .cr-gray-200 { color: $cr-gray-200; }
+.fl-gray-200 { color: $fl-gray-200; }
 .cr-gray-300 { color: $cr-gray-300; }
+.fl-gray-300 { color: $fl-gray-300; }
 .cr-seal { color: $cr-seal; }
+.fl-seal { color: $fl-seal; }
 .cr-seal-100 { color: $cr-seal-100; }
+.fl-seal-100 { color: $fl-seal-100; }
 .cr-seal-200 { color: $cr-seal-200; }
+.fl-seal-200 { color: $fl-seal-200; }
 .cr-seal-300 { color: $cr-seal-300; }
+.fl-seal-300 { color: $fl-seal-300; }
 
 .cr-bg-maple { background-color: $cr-maple; }
+.fl-bg-maple { background-color: $fl-maple; }
 .cr-bg-maple-100 { background-color: $cr-maple-100; }
+.fl-bg-maple-100 { background-color: $fl-maple-100; }
 .cr-bg-maple-200 { background-color: $cr-maple-200; }
+.fl-bg-maple-200 { background-color: $fl-maple-200; }
 .cr-bg-maple-300 { background-color: $cr-maple-300; }
+.fl-bg-maple-300 { background-color: $fl-maple-300; }
 .cr-bg-dive { background-color: $cr-dive; }
+.fl-bg-dive { background-color: $fl-dive; }
 .cr-bg-dive-100 { background-color: $cr-dive-100; }
+.fl-bg-dive-100 { background-color: $fl-dive-100; }
 .cr-bg-dive-200 { background-color: $cr-dive-200; }
+.fl-bg-dive-200 { background-color: $fl-dive-200; }
 .cr-bg-dive-300 { background-color: $cr-dive-300; }
+.fl-bg-dive-300 { background-color: $fl-dive-300; }
 .cr-bg-night { background-color: $cr-night; }
+.fl-bg-night { background-color: $fl-night; }
 .cr-bg-night-100 { background-color: $cr-night-100; }
+.fl-bg-night-100 { background-color: $fl-night-100; }
 .cr-bg-night-200 { background-color: $cr-night-200; }
+.fl-bg-night-200 { background-color: $fl-night-200; }
 .cr-bg-night-300 { background-color: $cr-night-300; }
+.fl-bg-night-300 { background-color: $fl-night-300; }
 .cr-bg-snow { background-color: $cr-snow; }
+.fl-bg-snow { background-color: $fl-snow; }
 .cr-bg-snow-100 { background-color: $cr-snow-100; }
+.fl-bg-snow-100 { background-color: $fl-snow-100; }
 .cr-bg-snow-200 { background-color: $cr-snow-200; }
+.fl-bg-snow-200 { background-color: $fl-snow-200; }
 .cr-bg-snow-300 { background-color: $cr-snow-300; }
+.fl-bg-snow-300 { background-color: $fl-snow-300; }
 .cr-bg-blue { background-color: $cr-blue; }
+.fl-bg-blue { background-color: $fl-blue; }
 .cr-bg-blue-100 { background-color: $cr-blue-100; }
+.fl-bg-blue-100 { background-color: $fl-blue-100; }
 .cr-bg-blue-200 { background-color: $cr-blue-200; }
+.fl-bg-blue-200 { background-color: $fl-blue-200; }
 .cr-bg-blue-300 { background-color: $cr-blue-300; }
+.fl-bg-blue-300 { background-color: $fl-blue-300; }
 .cr-bg-green { background-color: $cr-green; }
+.fl-bg-green { background-color: $fl-green; }
 .cr-bg-green-100 { background-color: $cr-green-100; }
+.fl-bg-green-100 { background-color: $fl-green-100; }
 .cr-bg-green-200 { background-color: $cr-green-200; }
+.fl-bg-green-200 { background-color: $fl-green-200; }
 .cr-bg-green-300 { background-color: $cr-green-300; }
+.fl-bg-green-300 { background-color: $fl-green-300; }
 .cr-bg-orange { background-color: $cr-orange; }
+.fl-bg-orange { background-color: $fl-orange; }
 .cr-bg-orange-100 { background-color: $cr-orange-100; }
+.fl-bg-orange-100 { background-color: $fl-orange-100; }
 .cr-bg-orange-200 { background-color: $cr-orange-200; }
+.fl-bg-orange-200 { background-color: $fl-orange-200; }
 .cr-bg-orange-300 { background-color: $cr-orange-300; }
+.fl-bg-orange-300 { background-color: $fl-orange-300; }
 .cr-bg-yellow { background-color: $cr-yellow; }
+.fl-bg-yellow { background-color: $fl-yellow; }
 .cr-bg-yellow-100 { background-color: $cr-yellow-100; }
+.fl-bg-yellow-100 { background-color: $fl-yellow-100; }
 .cr-bg-yellow-200 { background-color: $cr-yellow-200; }
+.fl-bg-yellow-200 { background-color: $fl-yellow-200; }
 .cr-bg-yellow-300 { background-color: $cr-yellow-300; }
+.fl-bg-yellow-300 { background-color: $fl-yellow-300; }
 .cr-bg-gray { background-color: $cr-gray; }
+.fl-bg-gray { background-color: $fl-gray; }
 .cr-bg-gray-100 { background-color: $cr-gray-100; }
+.fl-bg-gray-100 { background-color: $fl-gray-100; }
 .cr-bg-gray-200 { background-color: $cr-gray-200; }
+.fl-bg-gray-200 { background-color: $fl-gray-200; }
 .cr-bg-gray-300 { background-color: $cr-gray-300; }
+.fl-bg-gray-300 { background-color: $fl-gray-300; }
 .cr-bg-seal { background-color: $cr-seal; }
+.fl-bg-seal { background-color: $fl-seal; }
 .cr-bg-seal-100 { background-color: $cr-seal-100; }
+.fl-bg-seal-100 { background-color: $fl-seal-100; }
 .cr-bg-seal-200 { background-color: $cr-seal-200; }
+.fl-bg-seal-200 { background-color: $fl-seal-200; }
 .cr-bg-seal-300 { background-color: $cr-seal-300; }
+.fl-bg-seal-300 { background-color: $fl-seal-300; }
 
 .cr-border-maple { border-color: $cr-maple; }
+.fl-border-maple { border-color: $fl-maple; }
 .cr-border-maple-100 { border-color: $cr-maple-100; }
+.fl-border-maple-100 { border-color: $fl-maple-100; }
 .cr-border-maple-200 { border-color: $cr-maple-200; }
+.fl-border-maple-200 { border-color: $fl-maple-200; }
 .cr-border-maple-300 { border-color: $cr-maple-300; }
+.fl-border-maple-300 { border-color: $fl-maple-300; }
 .cr-border-dive { border-color: $cr-dive; }
+.fl-border-dive { border-color: $fl-dive; }
 .cr-border-dive-100 { border-color: $cr-dive-100; }
+.fl-border-dive-100 { border-color: $fl-dive-100; }
 .cr-border-dive-200 { border-color: $cr-dive-200; }
+.fl-border-dive-200 { border-color: $fl-dive-200; }
 .cr-border-dive-300 { border-color: $cr-dive-300; }
+.fl-border-dive-300 { border-color: $fl-dive-300; }
 .cr-border-night { border-color: $cr-night; }
+.fl-border-night { border-color: $fl-night; }
 .cr-border-night-100 { border-color: $cr-night-100; }
+.fl-border-night-100 { border-color: $fl-night-100; }
 .cr-border-night-200 { border-color: $cr-night-200; }
+.fl-border-night-200 { border-color: $fl-night-200; }
 .cr-border-night-300 { border-color: $cr-night-300; }
+.fl-border-night-300 { border-color: $fl-night-300; }
 .cr-border-snow { border-color: $cr-snow; }
+.fl-border-snow { border-color: $fl-snow; }
 .cr-border-snow-100 { border-color: $cr-snow-100; }
+.fl-border-snow-100 { border-color: $fl-snow-100; }
 .cr-border-snow-200 { border-color: $cr-snow-200; }
+.fl-border-snow-200 { border-color: $fl-snow-200; }
 .cr-border-snow-300 { border-color: $cr-snow-300; }
+.fl-border-snow-300 { border-color: $fl-snow-300; }
 .cr-border-blue { border-color: $cr-blue; }
+.fl-border-blue { border-color: $fl-blue; }
 .cr-border-blue-100 { border-color: $cr-blue-100; }
+.fl-border-blue-100 { border-color: $fl-blue-100; }
 .cr-border-blue-200 { border-color: $cr-blue-200; }
+.fl-border-blue-200 { border-color: $fl-blue-200; }
 .cr-border-blue-300 { border-color: $cr-blue-300; }
+.fl-border-blue-300 { border-color: $fl-blue-300; }
 .cr-border-green { border-color: $cr-green; }
+.fl-border-green { border-color: $fl-green; }
 .cr-border-green-100 { border-color: $cr-green-100; }
+.fl-border-green-100 { border-color: $fl-green-100; }
 .cr-border-green-200 { border-color: $cr-green-200; }
+.fl-border-green-200 { border-color: $fl-green-200; }
 .cr-border-green-300 { border-color: $cr-green-300; }
+.fl-border-green-300 { border-color: $fl-green-300; }
 .cr-border-orange { border-color: $cr-orange; }
+.fl-border-orange { border-color: $fl-orange; }
 .cr-border-orange-100 { border-color: $cr-orange-100; }
+.fl-border-orange-100 { border-color: $fl-orange-100; }
 .cr-border-orange-200 { border-color: $cr-orange-200; }
+.fl-border-orange-200 { border-color: $fl-orange-200; }
 .cr-border-orange-300 { border-color: $cr-orange-300; }
+.fl-border-orange-300 { border-color: $fl-orange-300; }
 .cr-border-yellow { border-color: $cr-yellow; }
+.fl-border-yellow { border-color: $fl-yellow; }
 .cr-border-yellow-100 { border-color: $cr-yellow-100; }
+.fl-border-yellow-100 { border-color: $fl-yellow-100; }
 .cr-border-yellow-200 { border-color: $cr-yellow-200; }
+.fl-border-yellow-200 { border-color: $fl-yellow-200; }
 .cr-border-yellow-300 { border-color: $cr-yellow-300; }
+.fl-border-yellow-300 { border-color: $fl-yellow-300; }
 .cr-border-gray { border-color: $cr-gray; }
+.fl-border-gray { border-color: $fl-gray; }
 .cr-border-gray-100 { border-color: $cr-gray-100; }
+.fl-border-gray-100 { border-color: $fl-gray-100; }
 .cr-border-gray-200 { border-color: $cr-gray-200; }
+.fl-border-gray-200 { border-color: $fl-gray-200; }
 .cr-border-gray-300 { border-color: $cr-gray-300; }
+.fl-border-gray-300 { border-color: $fl-gray-300; }
 .cr-border-seal { border-color: $cr-seal; }
+.fl-border-seal { border-color: $fl-seal; }
 .cr-border-seal-100 { border-color: $cr-seal-100; }
+.fl-border-seal-100 { border-color: $fl-seal-100; }
 .cr-border-seal-200 { border-color: $cr-seal-200; }
+.fl-border-seal-200 { border-color: $fl-seal-200; }
 .cr-border-seal-300 { border-color: $cr-seal-300; }
-"
+.fl-border-seal-300 { border-color: $fl-seal-300; }"
 `;
 
-exports[`generate-utilities _radii.scss should output the right CSS 1`] = `
+exports[`generate-utilities partials/_radii.scss.scss should output the right CSS 1`] = `
 "@import '../index.scss';
+
 .cr-radius-1 { border-radius: $cr-radius-1; }
+.fl-radius-1 { border-radius: $fl-radius-1; }
 .cr-radius-2 { border-radius: $cr-radius-2; }
+.fl-radius-2 { border-radius: $fl-radius-2; }
 .cr-radius-circle { border-radius: $cr-radius-circle; }
-"
+.fl-radius-circle { border-radius: $fl-radius-circle; }"
 `;
 
-exports[`generate-utilities _shadows.scss should output the right CSS 1`] = `
+exports[`generate-utilities partials/_shadows.scss.scss should output the right CSS 1`] = `
 "@import '../index.scss';
+
 .cr-shadow-1 { box-shadow: $cr-shadow-1; }
+.fl-shadow-1 { box-shadow: $fl-shadow-1; }
 .cr-shadow-2 { box-shadow: $cr-shadow-2; }
+.fl-shadow-2 { box-shadow: $fl-shadow-2; }
 .cr-shadow-3 { box-shadow: $cr-shadow-3; }
+.fl-shadow-3 { box-shadow: $fl-shadow-3; }
 .cr-shadow-4 { box-shadow: $cr-shadow-4; }
+.fl-shadow-4 { box-shadow: $fl-shadow-4; }
 .cr-shadow-5 { box-shadow: $cr-shadow-5; }
+.fl-shadow-5 { box-shadow: $fl-shadow-5; }
 .cr-inner-shadow-1 { box-shadow: $cr-inner-shadow-1; }
+.fl-inner-shadow-1 { box-shadow: $fl-inner-shadow-1; }
 .cr-inner-shadow-2 { box-shadow: $cr-inner-shadow-2; }
+.fl-inner-shadow-2 { box-shadow: $fl-inner-shadow-2; }
 .cr-inner-shadow-n1 { box-shadow: $cr-inner-shadow-n1; }
+.fl-inner-shadow-n1 { box-shadow: $fl-inner-shadow-n1; }
 .cr-border-shadow { box-shadow: $cr-border-shadow; }
-"
+.fl-border-shadow { box-shadow: $fl-border-shadow; }"
 `;
 
-exports[`generate-utilities _spacing.scss should output the right CSS 1`] = `
+exports[`generate-utilities partials/_spacing.scss.scss should output the right CSS 1`] = `
 "@import '../index.scss';
 .cr-m-0 { margin: $cr-spacing-0; }
 .cr-m-1 { margin: $cr-spacing-1; }
@@ -484,39 +616,1528 @@ exports[`generate-utilities _spacing.scss should output the right CSS 1`] = `
 "
 `;
 
-exports[`generate-utilities _transition.scss should output the right CSS 1`] = `
+exports[`generate-utilities partials/_transition.scss.scss should output the right CSS 1`] = `
 "@import '../index.scss';
+
 .cr-transition-duration-fast { transition-duration: $cr-transition-duration-fast; }
+.fl-transition-duration-fast { transition-duration: $fl-transition-duration-fast; }
 .cr-transition-duration-base { transition-duration: $cr-transition-duration-base; }
+.fl-transition-duration-base { transition-duration: $fl-transition-duration-base; }
 .cr-transition-duration-slow { transition-duration: $cr-transition-duration-slow; }
-"
+.fl-transition-duration-slow { transition-duration: $fl-transition-duration-slow; }"
 `;
 
-exports[`generate-utilities _typography.scss should output the right CSS 1`] = `
+exports[`generate-utilities partials/_typography.scss.scss should output the right CSS 1`] = `
 "@import '../index.scss';
+
 .cr-serif { font-family: $cr-serif; }
+.fl-serif { font-family: $fl-serif; }
 .cr-sans-serif { font-family: $cr-sans-serif; }
+.fl-sans-serif { font-family: $fl-sans-serif; }
 .cr-monospace { font-family: $cr-monospace; }
+.fl-monospace { font-family: $fl-monospace; }
 
 .cr-regular { font-weight: $cr-regular; }
+.fl-regular { font-weight: $fl-regular; }
 .cr-bold { font-weight: $cr-bold; }
+.fl-bold { font-weight: $fl-bold; }
 
 .cr-text-xxl { font-size: $cr-text-xxl; }
+.fl-text-xxl { font-size: $fl-text-xxl; }
 .cr-text-xl { font-size: $cr-text-xl; }
+.fl-text-xl { font-size: $fl-text-xl; }
 .cr-text-l { font-size: $cr-text-l; }
+.fl-text-l { font-size: $fl-text-l; }
 .cr-text { font-size: $cr-text; }
+.fl-text { font-size: $fl-text; }
 .cr-text-s { font-size: $cr-text-s; }
+.fl-text-s { font-size: $fl-text-s; }
 .cr-text-xs { font-size: $cr-text-xs; }
+.fl-text-xs { font-size: $fl-text-xs; }
 .cr-text-xxs { font-size: $cr-text-xxs; }
+.fl-text-xxs { font-size: $fl-text-xxs; }
 
 .cr-letter-spacing-normal { letter-spacing: $cr-letter-spacing-normal; }
+.fl-letter-spacing-normal { letter-spacing: $fl-letter-spacing-normal; }
 .cr-letter-spacing-1 { letter-spacing: $cr-letter-spacing-1; }
+.fl-letter-spacing-1 { letter-spacing: $fl-letter-spacing-1; }
 .cr-letter-spacing-2 { letter-spacing: $cr-letter-spacing-2; }
+.fl-letter-spacing-2 { letter-spacing: $fl-letter-spacing-2; }
 .cr-letter-spacing-3 { letter-spacing: $cr-letter-spacing-3; }
+.fl-letter-spacing-3 { letter-spacing: $fl-letter-spacing-3; }"
+`;
+
+exports[`generate-utilities partials/index.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+@import 'typography.scss';
+@import 'spacing.scss';
+@import 'colors.scss';
+@import 'shadows.scss';
+@import 'radii.scss';
+@import 'transition.scss';
 "
 `;
 
-exports[`generate-utilities index.scss should output the right CSS 1`] = `
+exports[`generate-utilities sass/flame/partials/_colors.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+
+.cr-white { color: $cr-white; }
+.fl-white { color: $fl-white; }
+.cr-black { color: $cr-black; }
+.fl-black { color: $fl-black; }
+.cr-maple-50 { color: $cr-maple-50; }
+.fl-maple-50 { color: $fl-maple-50; }
+.cr-maple-100 { color: $cr-maple-100; }
+.fl-maple-100 { color: $fl-maple-100; }
+.cr-maple-200 { color: $cr-maple-200; }
+.fl-maple-200 { color: $fl-maple-200; }
+.cr-maple-300 { color: $cr-maple-300; }
+.fl-maple-300 { color: $fl-maple-300; }
+.cr-maple-400 { color: $cr-maple-400; }
+.fl-maple-400 { color: $fl-maple-400; }
+.cr-maple-500 { color: $cr-maple-500; }
+.fl-maple-500 { color: $fl-maple-500; }
+.cr-maple-600 { color: $cr-maple-600; }
+.fl-maple-600 { color: $fl-maple-600; }
+.cr-maple-700 { color: $cr-maple-700; }
+.fl-maple-700 { color: $fl-maple-700; }
+.cr-maple-800 { color: $cr-maple-800; }
+.fl-maple-800 { color: $fl-maple-800; }
+.cr-maple-900 { color: $cr-maple-900; }
+.fl-maple-900 { color: $fl-maple-900; }
+.cr-maple-1000 { color: $cr-maple-1000; }
+.fl-maple-1000 { color: $fl-maple-1000; }
+.cr-blue-50 { color: $cr-blue-50; }
+.fl-blue-50 { color: $fl-blue-50; }
+.cr-blue-100 { color: $cr-blue-100; }
+.fl-blue-100 { color: $fl-blue-100; }
+.cr-blue-200 { color: $cr-blue-200; }
+.fl-blue-200 { color: $fl-blue-200; }
+.cr-blue-300 { color: $cr-blue-300; }
+.fl-blue-300 { color: $fl-blue-300; }
+.cr-blue-400 { color: $cr-blue-400; }
+.fl-blue-400 { color: $fl-blue-400; }
+.cr-blue-500 { color: $cr-blue-500; }
+.fl-blue-500 { color: $fl-blue-500; }
+.cr-blue-600 { color: $cr-blue-600; }
+.fl-blue-600 { color: $fl-blue-600; }
+.cr-blue-700 { color: $cr-blue-700; }
+.fl-blue-700 { color: $fl-blue-700; }
+.cr-blue-800 { color: $cr-blue-800; }
+.fl-blue-800 { color: $fl-blue-800; }
+.cr-blue-900 { color: $cr-blue-900; }
+.fl-blue-900 { color: $fl-blue-900; }
+.cr-blue-1000 { color: $cr-blue-1000; }
+.fl-blue-1000 { color: $fl-blue-1000; }
+.cr-green-50 { color: $cr-green-50; }
+.fl-green-50 { color: $fl-green-50; }
+.cr-green-100 { color: $cr-green-100; }
+.fl-green-100 { color: $fl-green-100; }
+.cr-green-200 { color: $cr-green-200; }
+.fl-green-200 { color: $fl-green-200; }
+.cr-green-300 { color: $cr-green-300; }
+.fl-green-300 { color: $fl-green-300; }
+.cr-green-400 { color: $cr-green-400; }
+.fl-green-400 { color: $fl-green-400; }
+.cr-green-500 { color: $cr-green-500; }
+.fl-green-500 { color: $fl-green-500; }
+.cr-green-600 { color: $cr-green-600; }
+.fl-green-600 { color: $fl-green-600; }
+.cr-green-700 { color: $cr-green-700; }
+.fl-green-700 { color: $fl-green-700; }
+.cr-green-800 { color: $cr-green-800; }
+.fl-green-800 { color: $fl-green-800; }
+.cr-green-900 { color: $cr-green-900; }
+.fl-green-900 { color: $fl-green-900; }
+.cr-green-1000 { color: $cr-green-1000; }
+.fl-green-1000 { color: $fl-green-1000; }
+.cr-orange-50 { color: $cr-orange-50; }
+.fl-orange-50 { color: $fl-orange-50; }
+.cr-orange-100 { color: $cr-orange-100; }
+.fl-orange-100 { color: $fl-orange-100; }
+.cr-orange-200 { color: $cr-orange-200; }
+.fl-orange-200 { color: $fl-orange-200; }
+.cr-orange-300 { color: $cr-orange-300; }
+.fl-orange-300 { color: $fl-orange-300; }
+.cr-orange-400 { color: $cr-orange-400; }
+.fl-orange-400 { color: $fl-orange-400; }
+.cr-orange-500 { color: $cr-orange-500; }
+.fl-orange-500 { color: $fl-orange-500; }
+.cr-orange-600 { color: $cr-orange-600; }
+.fl-orange-600 { color: $fl-orange-600; }
+.cr-orange-700 { color: $cr-orange-700; }
+.fl-orange-700 { color: $fl-orange-700; }
+.cr-orange-800 { color: $cr-orange-800; }
+.fl-orange-800 { color: $fl-orange-800; }
+.cr-orange-900 { color: $cr-orange-900; }
+.fl-orange-900 { color: $fl-orange-900; }
+.cr-orange-1000 { color: $cr-orange-1000; }
+.fl-orange-1000 { color: $fl-orange-1000; }
+.cr-gray-50 { color: $cr-gray-50; }
+.fl-gray-50 { color: $fl-gray-50; }
+.cr-gray-100 { color: $cr-gray-100; }
+.fl-gray-100 { color: $fl-gray-100; }
+.cr-gray-200 { color: $cr-gray-200; }
+.fl-gray-200 { color: $fl-gray-200; }
+.cr-gray-300 { color: $cr-gray-300; }
+.fl-gray-300 { color: $fl-gray-300; }
+.cr-gray-400 { color: $cr-gray-400; }
+.fl-gray-400 { color: $fl-gray-400; }
+.cr-gray-500 { color: $cr-gray-500; }
+.fl-gray-500 { color: $fl-gray-500; }
+.cr-gray-600 { color: $cr-gray-600; }
+.fl-gray-600 { color: $fl-gray-600; }
+.cr-gray-700 { color: $cr-gray-700; }
+.fl-gray-700 { color: $fl-gray-700; }
+.cr-gray-800 { color: $cr-gray-800; }
+.fl-gray-800 { color: $fl-gray-800; }
+.cr-gray-850 { color: $cr-gray-850; }
+.fl-gray-850 { color: $fl-gray-850; }
+.cr-gray-900 { color: $cr-gray-900; }
+.fl-gray-900 { color: $fl-gray-900; }
+.cr-gray-950 { color: $cr-gray-950; }
+.fl-gray-950 { color: $fl-gray-950; }
+.cr-gray-1000 { color: $cr-gray-1000; }
+.fl-gray-1000 { color: $fl-gray-1000; }
+
+.cr-bg-white { background-color: $cr-white; }
+.fl-bg-white { background-color: $fl-white; }
+.cr-bg-black { background-color: $cr-black; }
+.fl-bg-black { background-color: $fl-black; }
+.cr-bg-maple-50 { background-color: $cr-maple-50; }
+.fl-bg-maple-50 { background-color: $fl-maple-50; }
+.cr-bg-maple-100 { background-color: $cr-maple-100; }
+.fl-bg-maple-100 { background-color: $fl-maple-100; }
+.cr-bg-maple-200 { background-color: $cr-maple-200; }
+.fl-bg-maple-200 { background-color: $fl-maple-200; }
+.cr-bg-maple-300 { background-color: $cr-maple-300; }
+.fl-bg-maple-300 { background-color: $fl-maple-300; }
+.cr-bg-maple-400 { background-color: $cr-maple-400; }
+.fl-bg-maple-400 { background-color: $fl-maple-400; }
+.cr-bg-maple-500 { background-color: $cr-maple-500; }
+.fl-bg-maple-500 { background-color: $fl-maple-500; }
+.cr-bg-maple-600 { background-color: $cr-maple-600; }
+.fl-bg-maple-600 { background-color: $fl-maple-600; }
+.cr-bg-maple-700 { background-color: $cr-maple-700; }
+.fl-bg-maple-700 { background-color: $fl-maple-700; }
+.cr-bg-maple-800 { background-color: $cr-maple-800; }
+.fl-bg-maple-800 { background-color: $fl-maple-800; }
+.cr-bg-maple-900 { background-color: $cr-maple-900; }
+.fl-bg-maple-900 { background-color: $fl-maple-900; }
+.cr-bg-maple-1000 { background-color: $cr-maple-1000; }
+.fl-bg-maple-1000 { background-color: $fl-maple-1000; }
+.cr-bg-blue-50 { background-color: $cr-blue-50; }
+.fl-bg-blue-50 { background-color: $fl-blue-50; }
+.cr-bg-blue-100 { background-color: $cr-blue-100; }
+.fl-bg-blue-100 { background-color: $fl-blue-100; }
+.cr-bg-blue-200 { background-color: $cr-blue-200; }
+.fl-bg-blue-200 { background-color: $fl-blue-200; }
+.cr-bg-blue-300 { background-color: $cr-blue-300; }
+.fl-bg-blue-300 { background-color: $fl-blue-300; }
+.cr-bg-blue-400 { background-color: $cr-blue-400; }
+.fl-bg-blue-400 { background-color: $fl-blue-400; }
+.cr-bg-blue-500 { background-color: $cr-blue-500; }
+.fl-bg-blue-500 { background-color: $fl-blue-500; }
+.cr-bg-blue-600 { background-color: $cr-blue-600; }
+.fl-bg-blue-600 { background-color: $fl-blue-600; }
+.cr-bg-blue-700 { background-color: $cr-blue-700; }
+.fl-bg-blue-700 { background-color: $fl-blue-700; }
+.cr-bg-blue-800 { background-color: $cr-blue-800; }
+.fl-bg-blue-800 { background-color: $fl-blue-800; }
+.cr-bg-blue-900 { background-color: $cr-blue-900; }
+.fl-bg-blue-900 { background-color: $fl-blue-900; }
+.cr-bg-blue-1000 { background-color: $cr-blue-1000; }
+.fl-bg-blue-1000 { background-color: $fl-blue-1000; }
+.cr-bg-green-50 { background-color: $cr-green-50; }
+.fl-bg-green-50 { background-color: $fl-green-50; }
+.cr-bg-green-100 { background-color: $cr-green-100; }
+.fl-bg-green-100 { background-color: $fl-green-100; }
+.cr-bg-green-200 { background-color: $cr-green-200; }
+.fl-bg-green-200 { background-color: $fl-green-200; }
+.cr-bg-green-300 { background-color: $cr-green-300; }
+.fl-bg-green-300 { background-color: $fl-green-300; }
+.cr-bg-green-400 { background-color: $cr-green-400; }
+.fl-bg-green-400 { background-color: $fl-green-400; }
+.cr-bg-green-500 { background-color: $cr-green-500; }
+.fl-bg-green-500 { background-color: $fl-green-500; }
+.cr-bg-green-600 { background-color: $cr-green-600; }
+.fl-bg-green-600 { background-color: $fl-green-600; }
+.cr-bg-green-700 { background-color: $cr-green-700; }
+.fl-bg-green-700 { background-color: $fl-green-700; }
+.cr-bg-green-800 { background-color: $cr-green-800; }
+.fl-bg-green-800 { background-color: $fl-green-800; }
+.cr-bg-green-900 { background-color: $cr-green-900; }
+.fl-bg-green-900 { background-color: $fl-green-900; }
+.cr-bg-green-1000 { background-color: $cr-green-1000; }
+.fl-bg-green-1000 { background-color: $fl-green-1000; }
+.cr-bg-orange-50 { background-color: $cr-orange-50; }
+.fl-bg-orange-50 { background-color: $fl-orange-50; }
+.cr-bg-orange-100 { background-color: $cr-orange-100; }
+.fl-bg-orange-100 { background-color: $fl-orange-100; }
+.cr-bg-orange-200 { background-color: $cr-orange-200; }
+.fl-bg-orange-200 { background-color: $fl-orange-200; }
+.cr-bg-orange-300 { background-color: $cr-orange-300; }
+.fl-bg-orange-300 { background-color: $fl-orange-300; }
+.cr-bg-orange-400 { background-color: $cr-orange-400; }
+.fl-bg-orange-400 { background-color: $fl-orange-400; }
+.cr-bg-orange-500 { background-color: $cr-orange-500; }
+.fl-bg-orange-500 { background-color: $fl-orange-500; }
+.cr-bg-orange-600 { background-color: $cr-orange-600; }
+.fl-bg-orange-600 { background-color: $fl-orange-600; }
+.cr-bg-orange-700 { background-color: $cr-orange-700; }
+.fl-bg-orange-700 { background-color: $fl-orange-700; }
+.cr-bg-orange-800 { background-color: $cr-orange-800; }
+.fl-bg-orange-800 { background-color: $fl-orange-800; }
+.cr-bg-orange-900 { background-color: $cr-orange-900; }
+.fl-bg-orange-900 { background-color: $fl-orange-900; }
+.cr-bg-orange-1000 { background-color: $cr-orange-1000; }
+.fl-bg-orange-1000 { background-color: $fl-orange-1000; }
+.cr-bg-gray-50 { background-color: $cr-gray-50; }
+.fl-bg-gray-50 { background-color: $fl-gray-50; }
+.cr-bg-gray-100 { background-color: $cr-gray-100; }
+.fl-bg-gray-100 { background-color: $fl-gray-100; }
+.cr-bg-gray-200 { background-color: $cr-gray-200; }
+.fl-bg-gray-200 { background-color: $fl-gray-200; }
+.cr-bg-gray-300 { background-color: $cr-gray-300; }
+.fl-bg-gray-300 { background-color: $fl-gray-300; }
+.cr-bg-gray-400 { background-color: $cr-gray-400; }
+.fl-bg-gray-400 { background-color: $fl-gray-400; }
+.cr-bg-gray-500 { background-color: $cr-gray-500; }
+.fl-bg-gray-500 { background-color: $fl-gray-500; }
+.cr-bg-gray-600 { background-color: $cr-gray-600; }
+.fl-bg-gray-600 { background-color: $fl-gray-600; }
+.cr-bg-gray-700 { background-color: $cr-gray-700; }
+.fl-bg-gray-700 { background-color: $fl-gray-700; }
+.cr-bg-gray-800 { background-color: $cr-gray-800; }
+.fl-bg-gray-800 { background-color: $fl-gray-800; }
+.cr-bg-gray-850 { background-color: $cr-gray-850; }
+.fl-bg-gray-850 { background-color: $fl-gray-850; }
+.cr-bg-gray-900 { background-color: $cr-gray-900; }
+.fl-bg-gray-900 { background-color: $fl-gray-900; }
+.cr-bg-gray-950 { background-color: $cr-gray-950; }
+.fl-bg-gray-950 { background-color: $fl-gray-950; }
+.cr-bg-gray-1000 { background-color: $cr-gray-1000; }
+.fl-bg-gray-1000 { background-color: $fl-gray-1000; }
+
+.cr-border-white { border-color: $cr-white; }
+.fl-border-white { border-color: $fl-white; }
+.cr-border-black { border-color: $cr-black; }
+.fl-border-black { border-color: $fl-black; }
+.cr-border-maple-50 { border-color: $cr-maple-50; }
+.fl-border-maple-50 { border-color: $fl-maple-50; }
+.cr-border-maple-100 { border-color: $cr-maple-100; }
+.fl-border-maple-100 { border-color: $fl-maple-100; }
+.cr-border-maple-200 { border-color: $cr-maple-200; }
+.fl-border-maple-200 { border-color: $fl-maple-200; }
+.cr-border-maple-300 { border-color: $cr-maple-300; }
+.fl-border-maple-300 { border-color: $fl-maple-300; }
+.cr-border-maple-400 { border-color: $cr-maple-400; }
+.fl-border-maple-400 { border-color: $fl-maple-400; }
+.cr-border-maple-500 { border-color: $cr-maple-500; }
+.fl-border-maple-500 { border-color: $fl-maple-500; }
+.cr-border-maple-600 { border-color: $cr-maple-600; }
+.fl-border-maple-600 { border-color: $fl-maple-600; }
+.cr-border-maple-700 { border-color: $cr-maple-700; }
+.fl-border-maple-700 { border-color: $fl-maple-700; }
+.cr-border-maple-800 { border-color: $cr-maple-800; }
+.fl-border-maple-800 { border-color: $fl-maple-800; }
+.cr-border-maple-900 { border-color: $cr-maple-900; }
+.fl-border-maple-900 { border-color: $fl-maple-900; }
+.cr-border-maple-1000 { border-color: $cr-maple-1000; }
+.fl-border-maple-1000 { border-color: $fl-maple-1000; }
+.cr-border-blue-50 { border-color: $cr-blue-50; }
+.fl-border-blue-50 { border-color: $fl-blue-50; }
+.cr-border-blue-100 { border-color: $cr-blue-100; }
+.fl-border-blue-100 { border-color: $fl-blue-100; }
+.cr-border-blue-200 { border-color: $cr-blue-200; }
+.fl-border-blue-200 { border-color: $fl-blue-200; }
+.cr-border-blue-300 { border-color: $cr-blue-300; }
+.fl-border-blue-300 { border-color: $fl-blue-300; }
+.cr-border-blue-400 { border-color: $cr-blue-400; }
+.fl-border-blue-400 { border-color: $fl-blue-400; }
+.cr-border-blue-500 { border-color: $cr-blue-500; }
+.fl-border-blue-500 { border-color: $fl-blue-500; }
+.cr-border-blue-600 { border-color: $cr-blue-600; }
+.fl-border-blue-600 { border-color: $fl-blue-600; }
+.cr-border-blue-700 { border-color: $cr-blue-700; }
+.fl-border-blue-700 { border-color: $fl-blue-700; }
+.cr-border-blue-800 { border-color: $cr-blue-800; }
+.fl-border-blue-800 { border-color: $fl-blue-800; }
+.cr-border-blue-900 { border-color: $cr-blue-900; }
+.fl-border-blue-900 { border-color: $fl-blue-900; }
+.cr-border-blue-1000 { border-color: $cr-blue-1000; }
+.fl-border-blue-1000 { border-color: $fl-blue-1000; }
+.cr-border-green-50 { border-color: $cr-green-50; }
+.fl-border-green-50 { border-color: $fl-green-50; }
+.cr-border-green-100 { border-color: $cr-green-100; }
+.fl-border-green-100 { border-color: $fl-green-100; }
+.cr-border-green-200 { border-color: $cr-green-200; }
+.fl-border-green-200 { border-color: $fl-green-200; }
+.cr-border-green-300 { border-color: $cr-green-300; }
+.fl-border-green-300 { border-color: $fl-green-300; }
+.cr-border-green-400 { border-color: $cr-green-400; }
+.fl-border-green-400 { border-color: $fl-green-400; }
+.cr-border-green-500 { border-color: $cr-green-500; }
+.fl-border-green-500 { border-color: $fl-green-500; }
+.cr-border-green-600 { border-color: $cr-green-600; }
+.fl-border-green-600 { border-color: $fl-green-600; }
+.cr-border-green-700 { border-color: $cr-green-700; }
+.fl-border-green-700 { border-color: $fl-green-700; }
+.cr-border-green-800 { border-color: $cr-green-800; }
+.fl-border-green-800 { border-color: $fl-green-800; }
+.cr-border-green-900 { border-color: $cr-green-900; }
+.fl-border-green-900 { border-color: $fl-green-900; }
+.cr-border-green-1000 { border-color: $cr-green-1000; }
+.fl-border-green-1000 { border-color: $fl-green-1000; }
+.cr-border-orange-50 { border-color: $cr-orange-50; }
+.fl-border-orange-50 { border-color: $fl-orange-50; }
+.cr-border-orange-100 { border-color: $cr-orange-100; }
+.fl-border-orange-100 { border-color: $fl-orange-100; }
+.cr-border-orange-200 { border-color: $cr-orange-200; }
+.fl-border-orange-200 { border-color: $fl-orange-200; }
+.cr-border-orange-300 { border-color: $cr-orange-300; }
+.fl-border-orange-300 { border-color: $fl-orange-300; }
+.cr-border-orange-400 { border-color: $cr-orange-400; }
+.fl-border-orange-400 { border-color: $fl-orange-400; }
+.cr-border-orange-500 { border-color: $cr-orange-500; }
+.fl-border-orange-500 { border-color: $fl-orange-500; }
+.cr-border-orange-600 { border-color: $cr-orange-600; }
+.fl-border-orange-600 { border-color: $fl-orange-600; }
+.cr-border-orange-700 { border-color: $cr-orange-700; }
+.fl-border-orange-700 { border-color: $fl-orange-700; }
+.cr-border-orange-800 { border-color: $cr-orange-800; }
+.fl-border-orange-800 { border-color: $fl-orange-800; }
+.cr-border-orange-900 { border-color: $cr-orange-900; }
+.fl-border-orange-900 { border-color: $fl-orange-900; }
+.cr-border-orange-1000 { border-color: $cr-orange-1000; }
+.fl-border-orange-1000 { border-color: $fl-orange-1000; }
+.cr-border-gray-50 { border-color: $cr-gray-50; }
+.fl-border-gray-50 { border-color: $fl-gray-50; }
+.cr-border-gray-100 { border-color: $cr-gray-100; }
+.fl-border-gray-100 { border-color: $fl-gray-100; }
+.cr-border-gray-200 { border-color: $cr-gray-200; }
+.fl-border-gray-200 { border-color: $fl-gray-200; }
+.cr-border-gray-300 { border-color: $cr-gray-300; }
+.fl-border-gray-300 { border-color: $fl-gray-300; }
+.cr-border-gray-400 { border-color: $cr-gray-400; }
+.fl-border-gray-400 { border-color: $fl-gray-400; }
+.cr-border-gray-500 { border-color: $cr-gray-500; }
+.fl-border-gray-500 { border-color: $fl-gray-500; }
+.cr-border-gray-600 { border-color: $cr-gray-600; }
+.fl-border-gray-600 { border-color: $fl-gray-600; }
+.cr-border-gray-700 { border-color: $cr-gray-700; }
+.fl-border-gray-700 { border-color: $fl-gray-700; }
+.cr-border-gray-800 { border-color: $cr-gray-800; }
+.fl-border-gray-800 { border-color: $fl-gray-800; }
+.cr-border-gray-850 { border-color: $cr-gray-850; }
+.fl-border-gray-850 { border-color: $fl-gray-850; }
+.cr-border-gray-900 { border-color: $cr-gray-900; }
+.fl-border-gray-900 { border-color: $fl-gray-900; }
+.cr-border-gray-950 { border-color: $cr-gray-950; }
+.fl-border-gray-950 { border-color: $fl-gray-950; }
+.cr-border-gray-1000 { border-color: $cr-gray-1000; }
+.fl-border-gray-1000 { border-color: $fl-gray-1000; }"
+`;
+
+exports[`generate-utilities sass/flame/partials/_radii.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+
+.cr-radius-1 { border-radius: $cr-radius-1; }
+.fl-radius-1 { border-radius: $fl-radius-1; }
+.cr-radius-2 { border-radius: $cr-radius-2; }
+.fl-radius-2 { border-radius: $fl-radius-2; }
+.cr-radius-circle { border-radius: $cr-radius-circle; }
+.fl-radius-circle { border-radius: $fl-radius-circle; }"
+`;
+
+exports[`generate-utilities sass/flame/partials/_shadows.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+
+.cr-shadow-1 { box-shadow: $cr-shadow-1; }
+.fl-shadow-1 { box-shadow: $fl-shadow-1; }
+.cr-shadow-2 { box-shadow: $cr-shadow-2; }
+.fl-shadow-2 { box-shadow: $fl-shadow-2; }
+.cr-shadow-3 { box-shadow: $cr-shadow-3; }
+.fl-shadow-3 { box-shadow: $fl-shadow-3; }
+.cr-shadow-4 { box-shadow: $cr-shadow-4; }
+.fl-shadow-4 { box-shadow: $fl-shadow-4; }
+.cr-shadow-5 { box-shadow: $cr-shadow-5; }
+.fl-shadow-5 { box-shadow: $fl-shadow-5; }
+.cr-inner-shadow-1 { box-shadow: $cr-inner-shadow-1; }
+.fl-inner-shadow-1 { box-shadow: $fl-inner-shadow-1; }
+.cr-inner-shadow-2 { box-shadow: $cr-inner-shadow-2; }
+.fl-inner-shadow-2 { box-shadow: $fl-inner-shadow-2; }
+.cr-inner-shadow-n1 { box-shadow: $cr-inner-shadow-n1; }
+.fl-inner-shadow-n1 { box-shadow: $fl-inner-shadow-n1; }
+.cr-border-shadow { box-shadow: $cr-border-shadow; }
+.fl-border-shadow { box-shadow: $fl-border-shadow; }"
+`;
+
+exports[`generate-utilities sass/flame/partials/_spacing.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+.cr-m-0 { margin: $cr-spacing-0; }
+.cr-m-1 { margin: $cr-spacing-1; }
+.cr-m-2 { margin: $cr-spacing-2; }
+.cr-m-3 { margin: $cr-spacing-3; }
+.cr-m-4 { margin: $cr-spacing-4; }
+.cr-m-5 { margin: $cr-spacing-5; }
+.cr-m-6 { margin: $cr-spacing-6; }
+.cr-m-7 { margin: $cr-spacing-7; }
+.cr-m-8 { margin: $cr-spacing-8; }
+.cr-m-9 { margin: $cr-spacing-9; }
+.cr-m-10 { margin: $cr-spacing-10; }
+.cr-p-0 { padding: $cr-spacing-0; }
+.cr-p-1 { padding: $cr-spacing-1; }
+.cr-p-2 { padding: $cr-spacing-2; }
+.cr-p-3 { padding: $cr-spacing-3; }
+.cr-p-4 { padding: $cr-spacing-4; }
+.cr-p-5 { padding: $cr-spacing-5; }
+.cr-p-6 { padding: $cr-spacing-6; }
+.cr-p-7 { padding: $cr-spacing-7; }
+.cr-p-8 { padding: $cr-spacing-8; }
+.cr-p-9 { padding: $cr-spacing-9; }
+.cr-p-10 { padding: $cr-spacing-10; }
+.cr-mt-0 { margin-top: $cr-spacing-0; }
+.cr-mt-1 { margin-top: $cr-spacing-1; }
+.cr-mt-2 { margin-top: $cr-spacing-2; }
+.cr-mt-3 { margin-top: $cr-spacing-3; }
+.cr-mt-4 { margin-top: $cr-spacing-4; }
+.cr-mt-5 { margin-top: $cr-spacing-5; }
+.cr-mt-6 { margin-top: $cr-spacing-6; }
+.cr-mt-7 { margin-top: $cr-spacing-7; }
+.cr-mt-8 { margin-top: $cr-spacing-8; }
+.cr-mt-9 { margin-top: $cr-spacing-9; }
+.cr-mt-10 { margin-top: $cr-spacing-10; }
+.cr-ml-0 { margin-left: $cr-spacing-0; }
+.cr-ml-1 { margin-left: $cr-spacing-1; }
+.cr-ml-2 { margin-left: $cr-spacing-2; }
+.cr-ml-3 { margin-left: $cr-spacing-3; }
+.cr-ml-4 { margin-left: $cr-spacing-4; }
+.cr-ml-5 { margin-left: $cr-spacing-5; }
+.cr-ml-6 { margin-left: $cr-spacing-6; }
+.cr-ml-7 { margin-left: $cr-spacing-7; }
+.cr-ml-8 { margin-left: $cr-spacing-8; }
+.cr-ml-9 { margin-left: $cr-spacing-9; }
+.cr-ml-10 { margin-left: $cr-spacing-10; }
+.cr-mr-0 { margin-right: $cr-spacing-0; }
+.cr-mr-1 { margin-right: $cr-spacing-1; }
+.cr-mr-2 { margin-right: $cr-spacing-2; }
+.cr-mr-3 { margin-right: $cr-spacing-3; }
+.cr-mr-4 { margin-right: $cr-spacing-4; }
+.cr-mr-5 { margin-right: $cr-spacing-5; }
+.cr-mr-6 { margin-right: $cr-spacing-6; }
+.cr-mr-7 { margin-right: $cr-spacing-7; }
+.cr-mr-8 { margin-right: $cr-spacing-8; }
+.cr-mr-9 { margin-right: $cr-spacing-9; }
+.cr-mr-10 { margin-right: $cr-spacing-10; }
+.cr-mb-0 { margin-bottom: $cr-spacing-0; }
+.cr-mb-1 { margin-bottom: $cr-spacing-1; }
+.cr-mb-2 { margin-bottom: $cr-spacing-2; }
+.cr-mb-3 { margin-bottom: $cr-spacing-3; }
+.cr-mb-4 { margin-bottom: $cr-spacing-4; }
+.cr-mb-5 { margin-bottom: $cr-spacing-5; }
+.cr-mb-6 { margin-bottom: $cr-spacing-6; }
+.cr-mb-7 { margin-bottom: $cr-spacing-7; }
+.cr-mb-8 { margin-bottom: $cr-spacing-8; }
+.cr-mb-9 { margin-bottom: $cr-spacing-9; }
+.cr-mb-10 { margin-bottom: $cr-spacing-10; }
+.cr-pt-0 { padding-top: $cr-spacing-0; }
+.cr-pt-1 { padding-top: $cr-spacing-1; }
+.cr-pt-2 { padding-top: $cr-spacing-2; }
+.cr-pt-3 { padding-top: $cr-spacing-3; }
+.cr-pt-4 { padding-top: $cr-spacing-4; }
+.cr-pt-5 { padding-top: $cr-spacing-5; }
+.cr-pt-6 { padding-top: $cr-spacing-6; }
+.cr-pt-7 { padding-top: $cr-spacing-7; }
+.cr-pt-8 { padding-top: $cr-spacing-8; }
+.cr-pt-9 { padding-top: $cr-spacing-9; }
+.cr-pt-10 { padding-top: $cr-spacing-10; }
+.cr-pl-0 { padding-left: $cr-spacing-0; }
+.cr-pl-1 { padding-left: $cr-spacing-1; }
+.cr-pl-2 { padding-left: $cr-spacing-2; }
+.cr-pl-3 { padding-left: $cr-spacing-3; }
+.cr-pl-4 { padding-left: $cr-spacing-4; }
+.cr-pl-5 { padding-left: $cr-spacing-5; }
+.cr-pl-6 { padding-left: $cr-spacing-6; }
+.cr-pl-7 { padding-left: $cr-spacing-7; }
+.cr-pl-8 { padding-left: $cr-spacing-8; }
+.cr-pl-9 { padding-left: $cr-spacing-9; }
+.cr-pl-10 { padding-left: $cr-spacing-10; }
+.cr-pr-0 { padding-right: $cr-spacing-0; }
+.cr-pr-1 { padding-right: $cr-spacing-1; }
+.cr-pr-2 { padding-right: $cr-spacing-2; }
+.cr-pr-3 { padding-right: $cr-spacing-3; }
+.cr-pr-4 { padding-right: $cr-spacing-4; }
+.cr-pr-5 { padding-right: $cr-spacing-5; }
+.cr-pr-6 { padding-right: $cr-spacing-6; }
+.cr-pr-7 { padding-right: $cr-spacing-7; }
+.cr-pr-8 { padding-right: $cr-spacing-8; }
+.cr-pr-9 { padding-right: $cr-spacing-9; }
+.cr-pr-10 { padding-right: $cr-spacing-10; }
+.cr-pb-0 { padding-bottom: $cr-spacing-0; }
+.cr-pb-1 { padding-bottom: $cr-spacing-1; }
+.cr-pb-2 { padding-bottom: $cr-spacing-2; }
+.cr-pb-3 { padding-bottom: $cr-spacing-3; }
+.cr-pb-4 { padding-bottom: $cr-spacing-4; }
+.cr-pb-5 { padding-bottom: $cr-spacing-5; }
+.cr-pb-6 { padding-bottom: $cr-spacing-6; }
+.cr-pb-7 { padding-bottom: $cr-spacing-7; }
+.cr-pb-8 { padding-bottom: $cr-spacing-8; }
+.cr-pb-9 { padding-bottom: $cr-spacing-9; }
+.cr-pb-10 { padding-bottom: $cr-spacing-10; }
+
+.cr-mv-0 {
+  margin-top: $cr-spacing-0;
+  margin-bottom: $cr-spacing-0;
+}
+
+.cr-mv-1 {
+  margin-top: $cr-spacing-1;
+  margin-bottom: $cr-spacing-1;
+}
+
+.cr-mv-2 {
+  margin-top: $cr-spacing-2;
+  margin-bottom: $cr-spacing-2;
+}
+
+.cr-mv-3 {
+  margin-top: $cr-spacing-3;
+  margin-bottom: $cr-spacing-3;
+}
+
+.cr-mv-4 {
+  margin-top: $cr-spacing-4;
+  margin-bottom: $cr-spacing-4;
+}
+
+.cr-mv-5 {
+  margin-top: $cr-spacing-5;
+  margin-bottom: $cr-spacing-5;
+}
+
+.cr-mv-6 {
+  margin-top: $cr-spacing-6;
+  margin-bottom: $cr-spacing-6;
+}
+
+.cr-mv-7 {
+  margin-top: $cr-spacing-7;
+  margin-bottom: $cr-spacing-7;
+}
+
+.cr-mv-8 {
+  margin-top: $cr-spacing-8;
+  margin-bottom: $cr-spacing-8;
+}
+
+.cr-mv-9 {
+  margin-top: $cr-spacing-9;
+  margin-bottom: $cr-spacing-9;
+}
+
+.cr-mv-10 {
+  margin-top: $cr-spacing-10;
+  margin-bottom: $cr-spacing-10;
+}
+
+.cr-pv-0 {
+  padding-top: $cr-spacing-0;
+  padding-bottom: $cr-spacing-0;
+}
+
+.cr-pv-1 {
+  padding-top: $cr-spacing-1;
+  padding-bottom: $cr-spacing-1;
+}
+
+.cr-pv-2 {
+  padding-top: $cr-spacing-2;
+  padding-bottom: $cr-spacing-2;
+}
+
+.cr-pv-3 {
+  padding-top: $cr-spacing-3;
+  padding-bottom: $cr-spacing-3;
+}
+
+.cr-pv-4 {
+  padding-top: $cr-spacing-4;
+  padding-bottom: $cr-spacing-4;
+}
+
+.cr-pv-5 {
+  padding-top: $cr-spacing-5;
+  padding-bottom: $cr-spacing-5;
+}
+
+.cr-pv-6 {
+  padding-top: $cr-spacing-6;
+  padding-bottom: $cr-spacing-6;
+}
+
+.cr-pv-7 {
+  padding-top: $cr-spacing-7;
+  padding-bottom: $cr-spacing-7;
+}
+
+.cr-pv-8 {
+  padding-top: $cr-spacing-8;
+  padding-bottom: $cr-spacing-8;
+}
+
+.cr-pv-9 {
+  padding-top: $cr-spacing-9;
+  padding-bottom: $cr-spacing-9;
+}
+
+.cr-pv-10 {
+  padding-top: $cr-spacing-10;
+  padding-bottom: $cr-spacing-10;
+}
+
+.cr-mh-0 {
+  margin-left: $cr-spacing-0;
+  margin-right: $cr-spacing-0;
+}
+
+.cr-mh-1 {
+  margin-left: $cr-spacing-1;
+  margin-right: $cr-spacing-1;
+}
+
+.cr-mh-2 {
+  margin-left: $cr-spacing-2;
+  margin-right: $cr-spacing-2;
+}
+
+.cr-mh-3 {
+  margin-left: $cr-spacing-3;
+  margin-right: $cr-spacing-3;
+}
+
+.cr-mh-4 {
+  margin-left: $cr-spacing-4;
+  margin-right: $cr-spacing-4;
+}
+
+.cr-mh-5 {
+  margin-left: $cr-spacing-5;
+  margin-right: $cr-spacing-5;
+}
+
+.cr-mh-6 {
+  margin-left: $cr-spacing-6;
+  margin-right: $cr-spacing-6;
+}
+
+.cr-mh-7 {
+  margin-left: $cr-spacing-7;
+  margin-right: $cr-spacing-7;
+}
+
+.cr-mh-8 {
+  margin-left: $cr-spacing-8;
+  margin-right: $cr-spacing-8;
+}
+
+.cr-mh-9 {
+  margin-left: $cr-spacing-9;
+  margin-right: $cr-spacing-9;
+}
+
+.cr-mh-10 {
+  margin-left: $cr-spacing-10;
+  margin-right: $cr-spacing-10;
+}
+
+.cr-ph-0 {
+  padding-left: $cr-spacing-0;
+  padding-right: $cr-spacing-0;
+}
+
+.cr-ph-1 {
+  padding-left: $cr-spacing-1;
+  padding-right: $cr-spacing-1;
+}
+
+.cr-ph-2 {
+  padding-left: $cr-spacing-2;
+  padding-right: $cr-spacing-2;
+}
+
+.cr-ph-3 {
+  padding-left: $cr-spacing-3;
+  padding-right: $cr-spacing-3;
+}
+
+.cr-ph-4 {
+  padding-left: $cr-spacing-4;
+  padding-right: $cr-spacing-4;
+}
+
+.cr-ph-5 {
+  padding-left: $cr-spacing-5;
+  padding-right: $cr-spacing-5;
+}
+
+.cr-ph-6 {
+  padding-left: $cr-spacing-6;
+  padding-right: $cr-spacing-6;
+}
+
+.cr-ph-7 {
+  padding-left: $cr-spacing-7;
+  padding-right: $cr-spacing-7;
+}
+
+.cr-ph-8 {
+  padding-left: $cr-spacing-8;
+  padding-right: $cr-spacing-8;
+}
+
+.cr-ph-9 {
+  padding-left: $cr-spacing-9;
+  padding-right: $cr-spacing-9;
+}
+
+.cr-ph-10 {
+  padding-left: $cr-spacing-10;
+  padding-right: $cr-spacing-10;
+}
+"
+`;
+
+exports[`generate-utilities sass/flame/partials/_transition.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+
+.cr-transition-duration-fast { transition-duration: $cr-transition-duration-fast; }
+.fl-transition-duration-fast { transition-duration: $fl-transition-duration-fast; }
+.cr-transition-duration-base { transition-duration: $cr-transition-duration-base; }
+.fl-transition-duration-base { transition-duration: $fl-transition-duration-base; }
+.cr-transition-duration-slow { transition-duration: $cr-transition-duration-slow; }
+.fl-transition-duration-slow { transition-duration: $fl-transition-duration-slow; }"
+`;
+
+exports[`generate-utilities sass/flame/partials/_typography.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+
+.cr-serif { font-family: $cr-serif; }
+.fl-serif { font-family: $fl-serif; }
+.cr-sans-serif { font-family: $cr-sans-serif; }
+.fl-sans-serif { font-family: $fl-sans-serif; }
+.cr-monospace { font-family: $cr-monospace; }
+.fl-monospace { font-family: $fl-monospace; }
+
+.cr-regular { font-weight: $cr-regular; }
+.fl-regular { font-weight: $fl-regular; }
+.cr-bold { font-weight: $cr-bold; }
+.fl-bold { font-weight: $fl-bold; }
+
+.cr-text-xxl { font-size: $cr-text-xxl; }
+.fl-text-xxl { font-size: $fl-text-xxl; }
+.cr-text-xl { font-size: $cr-text-xl; }
+.fl-text-xl { font-size: $fl-text-xl; }
+.cr-text-l { font-size: $cr-text-l; }
+.fl-text-l { font-size: $fl-text-l; }
+.cr-text { font-size: $cr-text; }
+.fl-text { font-size: $fl-text; }
+.cr-text-s { font-size: $cr-text-s; }
+.fl-text-s { font-size: $fl-text-s; }
+.cr-text-xs { font-size: $cr-text-xs; }
+.fl-text-xs { font-size: $fl-text-xs; }
+.cr-text-xxs { font-size: $cr-text-xxs; }
+.fl-text-xxs { font-size: $fl-text-xxs; }
+
+.cr-letter-spacing-normal { letter-spacing: $cr-letter-spacing-normal; }
+.fl-letter-spacing-normal { letter-spacing: $fl-letter-spacing-normal; }
+.cr-letter-spacing-1 { letter-spacing: $cr-letter-spacing-1; }
+.fl-letter-spacing-1 { letter-spacing: $fl-letter-spacing-1; }
+.cr-letter-spacing-2 { letter-spacing: $cr-letter-spacing-2; }
+.fl-letter-spacing-2 { letter-spacing: $fl-letter-spacing-2; }
+.cr-letter-spacing-3 { letter-spacing: $cr-letter-spacing-3; }
+.fl-letter-spacing-3 { letter-spacing: $fl-letter-spacing-3; }"
+`;
+
+exports[`generate-utilities sass/flame/partials/index.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+@import 'typography.scss';
+@import 'spacing.scss';
+@import 'colors.scss';
+@import 'shadows.scss';
+@import 'radii.scss';
+@import 'transition.scss';
+"
+`;
+
+exports[`generate-utilities sass/oldskool/partials/_colors.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+
+.cr-maple { color: $cr-maple; }
+.fl-maple { color: $fl-maple; }
+.cr-maple-100 { color: $cr-maple-100; }
+.fl-maple-100 { color: $fl-maple-100; }
+.cr-maple-200 { color: $cr-maple-200; }
+.fl-maple-200 { color: $fl-maple-200; }
+.cr-maple-300 { color: $cr-maple-300; }
+.fl-maple-300 { color: $fl-maple-300; }
+.cr-dive { color: $cr-dive; }
+.fl-dive { color: $fl-dive; }
+.cr-dive-100 { color: $cr-dive-100; }
+.fl-dive-100 { color: $fl-dive-100; }
+.cr-dive-200 { color: $cr-dive-200; }
+.fl-dive-200 { color: $fl-dive-200; }
+.cr-dive-300 { color: $cr-dive-300; }
+.fl-dive-300 { color: $fl-dive-300; }
+.cr-night { color: $cr-night; }
+.fl-night { color: $fl-night; }
+.cr-night-100 { color: $cr-night-100; }
+.fl-night-100 { color: $fl-night-100; }
+.cr-night-200 { color: $cr-night-200; }
+.fl-night-200 { color: $fl-night-200; }
+.cr-night-300 { color: $cr-night-300; }
+.fl-night-300 { color: $fl-night-300; }
+.cr-snow { color: $cr-snow; }
+.fl-snow { color: $fl-snow; }
+.cr-snow-100 { color: $cr-snow-100; }
+.fl-snow-100 { color: $fl-snow-100; }
+.cr-snow-200 { color: $cr-snow-200; }
+.fl-snow-200 { color: $fl-snow-200; }
+.cr-snow-300 { color: $cr-snow-300; }
+.fl-snow-300 { color: $fl-snow-300; }
+.cr-blue { color: $cr-blue; }
+.fl-blue { color: $fl-blue; }
+.cr-blue-100 { color: $cr-blue-100; }
+.fl-blue-100 { color: $fl-blue-100; }
+.cr-blue-200 { color: $cr-blue-200; }
+.fl-blue-200 { color: $fl-blue-200; }
+.cr-blue-300 { color: $cr-blue-300; }
+.fl-blue-300 { color: $fl-blue-300; }
+.cr-green { color: $cr-green; }
+.fl-green { color: $fl-green; }
+.cr-green-100 { color: $cr-green-100; }
+.fl-green-100 { color: $fl-green-100; }
+.cr-green-200 { color: $cr-green-200; }
+.fl-green-200 { color: $fl-green-200; }
+.cr-green-300 { color: $cr-green-300; }
+.fl-green-300 { color: $fl-green-300; }
+.cr-orange { color: $cr-orange; }
+.fl-orange { color: $fl-orange; }
+.cr-orange-100 { color: $cr-orange-100; }
+.fl-orange-100 { color: $fl-orange-100; }
+.cr-orange-200 { color: $cr-orange-200; }
+.fl-orange-200 { color: $fl-orange-200; }
+.cr-orange-300 { color: $cr-orange-300; }
+.fl-orange-300 { color: $fl-orange-300; }
+.cr-yellow { color: $cr-yellow; }
+.fl-yellow { color: $fl-yellow; }
+.cr-yellow-100 { color: $cr-yellow-100; }
+.fl-yellow-100 { color: $fl-yellow-100; }
+.cr-yellow-200 { color: $cr-yellow-200; }
+.fl-yellow-200 { color: $fl-yellow-200; }
+.cr-yellow-300 { color: $cr-yellow-300; }
+.fl-yellow-300 { color: $fl-yellow-300; }
+.cr-gray { color: $cr-gray; }
+.fl-gray { color: $fl-gray; }
+.cr-gray-100 { color: $cr-gray-100; }
+.fl-gray-100 { color: $fl-gray-100; }
+.cr-gray-200 { color: $cr-gray-200; }
+.fl-gray-200 { color: $fl-gray-200; }
+.cr-gray-300 { color: $cr-gray-300; }
+.fl-gray-300 { color: $fl-gray-300; }
+.cr-seal { color: $cr-seal; }
+.fl-seal { color: $fl-seal; }
+.cr-seal-100 { color: $cr-seal-100; }
+.fl-seal-100 { color: $fl-seal-100; }
+.cr-seal-200 { color: $cr-seal-200; }
+.fl-seal-200 { color: $fl-seal-200; }
+.cr-seal-300 { color: $cr-seal-300; }
+.fl-seal-300 { color: $fl-seal-300; }
+
+.cr-bg-maple { background-color: $cr-maple; }
+.fl-bg-maple { background-color: $fl-maple; }
+.cr-bg-maple-100 { background-color: $cr-maple-100; }
+.fl-bg-maple-100 { background-color: $fl-maple-100; }
+.cr-bg-maple-200 { background-color: $cr-maple-200; }
+.fl-bg-maple-200 { background-color: $fl-maple-200; }
+.cr-bg-maple-300 { background-color: $cr-maple-300; }
+.fl-bg-maple-300 { background-color: $fl-maple-300; }
+.cr-bg-dive { background-color: $cr-dive; }
+.fl-bg-dive { background-color: $fl-dive; }
+.cr-bg-dive-100 { background-color: $cr-dive-100; }
+.fl-bg-dive-100 { background-color: $fl-dive-100; }
+.cr-bg-dive-200 { background-color: $cr-dive-200; }
+.fl-bg-dive-200 { background-color: $fl-dive-200; }
+.cr-bg-dive-300 { background-color: $cr-dive-300; }
+.fl-bg-dive-300 { background-color: $fl-dive-300; }
+.cr-bg-night { background-color: $cr-night; }
+.fl-bg-night { background-color: $fl-night; }
+.cr-bg-night-100 { background-color: $cr-night-100; }
+.fl-bg-night-100 { background-color: $fl-night-100; }
+.cr-bg-night-200 { background-color: $cr-night-200; }
+.fl-bg-night-200 { background-color: $fl-night-200; }
+.cr-bg-night-300 { background-color: $cr-night-300; }
+.fl-bg-night-300 { background-color: $fl-night-300; }
+.cr-bg-snow { background-color: $cr-snow; }
+.fl-bg-snow { background-color: $fl-snow; }
+.cr-bg-snow-100 { background-color: $cr-snow-100; }
+.fl-bg-snow-100 { background-color: $fl-snow-100; }
+.cr-bg-snow-200 { background-color: $cr-snow-200; }
+.fl-bg-snow-200 { background-color: $fl-snow-200; }
+.cr-bg-snow-300 { background-color: $cr-snow-300; }
+.fl-bg-snow-300 { background-color: $fl-snow-300; }
+.cr-bg-blue { background-color: $cr-blue; }
+.fl-bg-blue { background-color: $fl-blue; }
+.cr-bg-blue-100 { background-color: $cr-blue-100; }
+.fl-bg-blue-100 { background-color: $fl-blue-100; }
+.cr-bg-blue-200 { background-color: $cr-blue-200; }
+.fl-bg-blue-200 { background-color: $fl-blue-200; }
+.cr-bg-blue-300 { background-color: $cr-blue-300; }
+.fl-bg-blue-300 { background-color: $fl-blue-300; }
+.cr-bg-green { background-color: $cr-green; }
+.fl-bg-green { background-color: $fl-green; }
+.cr-bg-green-100 { background-color: $cr-green-100; }
+.fl-bg-green-100 { background-color: $fl-green-100; }
+.cr-bg-green-200 { background-color: $cr-green-200; }
+.fl-bg-green-200 { background-color: $fl-green-200; }
+.cr-bg-green-300 { background-color: $cr-green-300; }
+.fl-bg-green-300 { background-color: $fl-green-300; }
+.cr-bg-orange { background-color: $cr-orange; }
+.fl-bg-orange { background-color: $fl-orange; }
+.cr-bg-orange-100 { background-color: $cr-orange-100; }
+.fl-bg-orange-100 { background-color: $fl-orange-100; }
+.cr-bg-orange-200 { background-color: $cr-orange-200; }
+.fl-bg-orange-200 { background-color: $fl-orange-200; }
+.cr-bg-orange-300 { background-color: $cr-orange-300; }
+.fl-bg-orange-300 { background-color: $fl-orange-300; }
+.cr-bg-yellow { background-color: $cr-yellow; }
+.fl-bg-yellow { background-color: $fl-yellow; }
+.cr-bg-yellow-100 { background-color: $cr-yellow-100; }
+.fl-bg-yellow-100 { background-color: $fl-yellow-100; }
+.cr-bg-yellow-200 { background-color: $cr-yellow-200; }
+.fl-bg-yellow-200 { background-color: $fl-yellow-200; }
+.cr-bg-yellow-300 { background-color: $cr-yellow-300; }
+.fl-bg-yellow-300 { background-color: $fl-yellow-300; }
+.cr-bg-gray { background-color: $cr-gray; }
+.fl-bg-gray { background-color: $fl-gray; }
+.cr-bg-gray-100 { background-color: $cr-gray-100; }
+.fl-bg-gray-100 { background-color: $fl-gray-100; }
+.cr-bg-gray-200 { background-color: $cr-gray-200; }
+.fl-bg-gray-200 { background-color: $fl-gray-200; }
+.cr-bg-gray-300 { background-color: $cr-gray-300; }
+.fl-bg-gray-300 { background-color: $fl-gray-300; }
+.cr-bg-seal { background-color: $cr-seal; }
+.fl-bg-seal { background-color: $fl-seal; }
+.cr-bg-seal-100 { background-color: $cr-seal-100; }
+.fl-bg-seal-100 { background-color: $fl-seal-100; }
+.cr-bg-seal-200 { background-color: $cr-seal-200; }
+.fl-bg-seal-200 { background-color: $fl-seal-200; }
+.cr-bg-seal-300 { background-color: $cr-seal-300; }
+.fl-bg-seal-300 { background-color: $fl-seal-300; }
+
+.cr-border-maple { border-color: $cr-maple; }
+.fl-border-maple { border-color: $fl-maple; }
+.cr-border-maple-100 { border-color: $cr-maple-100; }
+.fl-border-maple-100 { border-color: $fl-maple-100; }
+.cr-border-maple-200 { border-color: $cr-maple-200; }
+.fl-border-maple-200 { border-color: $fl-maple-200; }
+.cr-border-maple-300 { border-color: $cr-maple-300; }
+.fl-border-maple-300 { border-color: $fl-maple-300; }
+.cr-border-dive { border-color: $cr-dive; }
+.fl-border-dive { border-color: $fl-dive; }
+.cr-border-dive-100 { border-color: $cr-dive-100; }
+.fl-border-dive-100 { border-color: $fl-dive-100; }
+.cr-border-dive-200 { border-color: $cr-dive-200; }
+.fl-border-dive-200 { border-color: $fl-dive-200; }
+.cr-border-dive-300 { border-color: $cr-dive-300; }
+.fl-border-dive-300 { border-color: $fl-dive-300; }
+.cr-border-night { border-color: $cr-night; }
+.fl-border-night { border-color: $fl-night; }
+.cr-border-night-100 { border-color: $cr-night-100; }
+.fl-border-night-100 { border-color: $fl-night-100; }
+.cr-border-night-200 { border-color: $cr-night-200; }
+.fl-border-night-200 { border-color: $fl-night-200; }
+.cr-border-night-300 { border-color: $cr-night-300; }
+.fl-border-night-300 { border-color: $fl-night-300; }
+.cr-border-snow { border-color: $cr-snow; }
+.fl-border-snow { border-color: $fl-snow; }
+.cr-border-snow-100 { border-color: $cr-snow-100; }
+.fl-border-snow-100 { border-color: $fl-snow-100; }
+.cr-border-snow-200 { border-color: $cr-snow-200; }
+.fl-border-snow-200 { border-color: $fl-snow-200; }
+.cr-border-snow-300 { border-color: $cr-snow-300; }
+.fl-border-snow-300 { border-color: $fl-snow-300; }
+.cr-border-blue { border-color: $cr-blue; }
+.fl-border-blue { border-color: $fl-blue; }
+.cr-border-blue-100 { border-color: $cr-blue-100; }
+.fl-border-blue-100 { border-color: $fl-blue-100; }
+.cr-border-blue-200 { border-color: $cr-blue-200; }
+.fl-border-blue-200 { border-color: $fl-blue-200; }
+.cr-border-blue-300 { border-color: $cr-blue-300; }
+.fl-border-blue-300 { border-color: $fl-blue-300; }
+.cr-border-green { border-color: $cr-green; }
+.fl-border-green { border-color: $fl-green; }
+.cr-border-green-100 { border-color: $cr-green-100; }
+.fl-border-green-100 { border-color: $fl-green-100; }
+.cr-border-green-200 { border-color: $cr-green-200; }
+.fl-border-green-200 { border-color: $fl-green-200; }
+.cr-border-green-300 { border-color: $cr-green-300; }
+.fl-border-green-300 { border-color: $fl-green-300; }
+.cr-border-orange { border-color: $cr-orange; }
+.fl-border-orange { border-color: $fl-orange; }
+.cr-border-orange-100 { border-color: $cr-orange-100; }
+.fl-border-orange-100 { border-color: $fl-orange-100; }
+.cr-border-orange-200 { border-color: $cr-orange-200; }
+.fl-border-orange-200 { border-color: $fl-orange-200; }
+.cr-border-orange-300 { border-color: $cr-orange-300; }
+.fl-border-orange-300 { border-color: $fl-orange-300; }
+.cr-border-yellow { border-color: $cr-yellow; }
+.fl-border-yellow { border-color: $fl-yellow; }
+.cr-border-yellow-100 { border-color: $cr-yellow-100; }
+.fl-border-yellow-100 { border-color: $fl-yellow-100; }
+.cr-border-yellow-200 { border-color: $cr-yellow-200; }
+.fl-border-yellow-200 { border-color: $fl-yellow-200; }
+.cr-border-yellow-300 { border-color: $cr-yellow-300; }
+.fl-border-yellow-300 { border-color: $fl-yellow-300; }
+.cr-border-gray { border-color: $cr-gray; }
+.fl-border-gray { border-color: $fl-gray; }
+.cr-border-gray-100 { border-color: $cr-gray-100; }
+.fl-border-gray-100 { border-color: $fl-gray-100; }
+.cr-border-gray-200 { border-color: $cr-gray-200; }
+.fl-border-gray-200 { border-color: $fl-gray-200; }
+.cr-border-gray-300 { border-color: $cr-gray-300; }
+.fl-border-gray-300 { border-color: $fl-gray-300; }
+.cr-border-seal { border-color: $cr-seal; }
+.fl-border-seal { border-color: $fl-seal; }
+.cr-border-seal-100 { border-color: $cr-seal-100; }
+.fl-border-seal-100 { border-color: $fl-seal-100; }
+.cr-border-seal-200 { border-color: $cr-seal-200; }
+.fl-border-seal-200 { border-color: $fl-seal-200; }
+.cr-border-seal-300 { border-color: $cr-seal-300; }
+.fl-border-seal-300 { border-color: $fl-seal-300; }"
+`;
+
+exports[`generate-utilities sass/oldskool/partials/_radii.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+
+.cr-radius-1 { border-radius: $cr-radius-1; }
+.fl-radius-1 { border-radius: $fl-radius-1; }
+.cr-radius-2 { border-radius: $cr-radius-2; }
+.fl-radius-2 { border-radius: $fl-radius-2; }
+.cr-radius-circle { border-radius: $cr-radius-circle; }
+.fl-radius-circle { border-radius: $fl-radius-circle; }"
+`;
+
+exports[`generate-utilities sass/oldskool/partials/_shadows.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+
+.cr-shadow-1 { box-shadow: $cr-shadow-1; }
+.fl-shadow-1 { box-shadow: $fl-shadow-1; }
+.cr-shadow-2 { box-shadow: $cr-shadow-2; }
+.fl-shadow-2 { box-shadow: $fl-shadow-2; }
+.cr-shadow-3 { box-shadow: $cr-shadow-3; }
+.fl-shadow-3 { box-shadow: $fl-shadow-3; }
+.cr-shadow-4 { box-shadow: $cr-shadow-4; }
+.fl-shadow-4 { box-shadow: $fl-shadow-4; }
+.cr-shadow-5 { box-shadow: $cr-shadow-5; }
+.fl-shadow-5 { box-shadow: $fl-shadow-5; }
+.cr-inner-shadow-1 { box-shadow: $cr-inner-shadow-1; }
+.fl-inner-shadow-1 { box-shadow: $fl-inner-shadow-1; }
+.cr-inner-shadow-2 { box-shadow: $cr-inner-shadow-2; }
+.fl-inner-shadow-2 { box-shadow: $fl-inner-shadow-2; }
+.cr-inner-shadow-n1 { box-shadow: $cr-inner-shadow-n1; }
+.fl-inner-shadow-n1 { box-shadow: $fl-inner-shadow-n1; }
+.cr-border-shadow { box-shadow: $cr-border-shadow; }
+.fl-border-shadow { box-shadow: $fl-border-shadow; }"
+`;
+
+exports[`generate-utilities sass/oldskool/partials/_spacing.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+.cr-m-0 { margin: $cr-spacing-0; }
+.cr-m-1 { margin: $cr-spacing-1; }
+.cr-m-2 { margin: $cr-spacing-2; }
+.cr-m-3 { margin: $cr-spacing-3; }
+.cr-m-4 { margin: $cr-spacing-4; }
+.cr-m-5 { margin: $cr-spacing-5; }
+.cr-m-6 { margin: $cr-spacing-6; }
+.cr-m-7 { margin: $cr-spacing-7; }
+.cr-m-8 { margin: $cr-spacing-8; }
+.cr-m-9 { margin: $cr-spacing-9; }
+.cr-m-10 { margin: $cr-spacing-10; }
+.cr-p-0 { padding: $cr-spacing-0; }
+.cr-p-1 { padding: $cr-spacing-1; }
+.cr-p-2 { padding: $cr-spacing-2; }
+.cr-p-3 { padding: $cr-spacing-3; }
+.cr-p-4 { padding: $cr-spacing-4; }
+.cr-p-5 { padding: $cr-spacing-5; }
+.cr-p-6 { padding: $cr-spacing-6; }
+.cr-p-7 { padding: $cr-spacing-7; }
+.cr-p-8 { padding: $cr-spacing-8; }
+.cr-p-9 { padding: $cr-spacing-9; }
+.cr-p-10 { padding: $cr-spacing-10; }
+.cr-mt-0 { margin-top: $cr-spacing-0; }
+.cr-mt-1 { margin-top: $cr-spacing-1; }
+.cr-mt-2 { margin-top: $cr-spacing-2; }
+.cr-mt-3 { margin-top: $cr-spacing-3; }
+.cr-mt-4 { margin-top: $cr-spacing-4; }
+.cr-mt-5 { margin-top: $cr-spacing-5; }
+.cr-mt-6 { margin-top: $cr-spacing-6; }
+.cr-mt-7 { margin-top: $cr-spacing-7; }
+.cr-mt-8 { margin-top: $cr-spacing-8; }
+.cr-mt-9 { margin-top: $cr-spacing-9; }
+.cr-mt-10 { margin-top: $cr-spacing-10; }
+.cr-ml-0 { margin-left: $cr-spacing-0; }
+.cr-ml-1 { margin-left: $cr-spacing-1; }
+.cr-ml-2 { margin-left: $cr-spacing-2; }
+.cr-ml-3 { margin-left: $cr-spacing-3; }
+.cr-ml-4 { margin-left: $cr-spacing-4; }
+.cr-ml-5 { margin-left: $cr-spacing-5; }
+.cr-ml-6 { margin-left: $cr-spacing-6; }
+.cr-ml-7 { margin-left: $cr-spacing-7; }
+.cr-ml-8 { margin-left: $cr-spacing-8; }
+.cr-ml-9 { margin-left: $cr-spacing-9; }
+.cr-ml-10 { margin-left: $cr-spacing-10; }
+.cr-mr-0 { margin-right: $cr-spacing-0; }
+.cr-mr-1 { margin-right: $cr-spacing-1; }
+.cr-mr-2 { margin-right: $cr-spacing-2; }
+.cr-mr-3 { margin-right: $cr-spacing-3; }
+.cr-mr-4 { margin-right: $cr-spacing-4; }
+.cr-mr-5 { margin-right: $cr-spacing-5; }
+.cr-mr-6 { margin-right: $cr-spacing-6; }
+.cr-mr-7 { margin-right: $cr-spacing-7; }
+.cr-mr-8 { margin-right: $cr-spacing-8; }
+.cr-mr-9 { margin-right: $cr-spacing-9; }
+.cr-mr-10 { margin-right: $cr-spacing-10; }
+.cr-mb-0 { margin-bottom: $cr-spacing-0; }
+.cr-mb-1 { margin-bottom: $cr-spacing-1; }
+.cr-mb-2 { margin-bottom: $cr-spacing-2; }
+.cr-mb-3 { margin-bottom: $cr-spacing-3; }
+.cr-mb-4 { margin-bottom: $cr-spacing-4; }
+.cr-mb-5 { margin-bottom: $cr-spacing-5; }
+.cr-mb-6 { margin-bottom: $cr-spacing-6; }
+.cr-mb-7 { margin-bottom: $cr-spacing-7; }
+.cr-mb-8 { margin-bottom: $cr-spacing-8; }
+.cr-mb-9 { margin-bottom: $cr-spacing-9; }
+.cr-mb-10 { margin-bottom: $cr-spacing-10; }
+.cr-pt-0 { padding-top: $cr-spacing-0; }
+.cr-pt-1 { padding-top: $cr-spacing-1; }
+.cr-pt-2 { padding-top: $cr-spacing-2; }
+.cr-pt-3 { padding-top: $cr-spacing-3; }
+.cr-pt-4 { padding-top: $cr-spacing-4; }
+.cr-pt-5 { padding-top: $cr-spacing-5; }
+.cr-pt-6 { padding-top: $cr-spacing-6; }
+.cr-pt-7 { padding-top: $cr-spacing-7; }
+.cr-pt-8 { padding-top: $cr-spacing-8; }
+.cr-pt-9 { padding-top: $cr-spacing-9; }
+.cr-pt-10 { padding-top: $cr-spacing-10; }
+.cr-pl-0 { padding-left: $cr-spacing-0; }
+.cr-pl-1 { padding-left: $cr-spacing-1; }
+.cr-pl-2 { padding-left: $cr-spacing-2; }
+.cr-pl-3 { padding-left: $cr-spacing-3; }
+.cr-pl-4 { padding-left: $cr-spacing-4; }
+.cr-pl-5 { padding-left: $cr-spacing-5; }
+.cr-pl-6 { padding-left: $cr-spacing-6; }
+.cr-pl-7 { padding-left: $cr-spacing-7; }
+.cr-pl-8 { padding-left: $cr-spacing-8; }
+.cr-pl-9 { padding-left: $cr-spacing-9; }
+.cr-pl-10 { padding-left: $cr-spacing-10; }
+.cr-pr-0 { padding-right: $cr-spacing-0; }
+.cr-pr-1 { padding-right: $cr-spacing-1; }
+.cr-pr-2 { padding-right: $cr-spacing-2; }
+.cr-pr-3 { padding-right: $cr-spacing-3; }
+.cr-pr-4 { padding-right: $cr-spacing-4; }
+.cr-pr-5 { padding-right: $cr-spacing-5; }
+.cr-pr-6 { padding-right: $cr-spacing-6; }
+.cr-pr-7 { padding-right: $cr-spacing-7; }
+.cr-pr-8 { padding-right: $cr-spacing-8; }
+.cr-pr-9 { padding-right: $cr-spacing-9; }
+.cr-pr-10 { padding-right: $cr-spacing-10; }
+.cr-pb-0 { padding-bottom: $cr-spacing-0; }
+.cr-pb-1 { padding-bottom: $cr-spacing-1; }
+.cr-pb-2 { padding-bottom: $cr-spacing-2; }
+.cr-pb-3 { padding-bottom: $cr-spacing-3; }
+.cr-pb-4 { padding-bottom: $cr-spacing-4; }
+.cr-pb-5 { padding-bottom: $cr-spacing-5; }
+.cr-pb-6 { padding-bottom: $cr-spacing-6; }
+.cr-pb-7 { padding-bottom: $cr-spacing-7; }
+.cr-pb-8 { padding-bottom: $cr-spacing-8; }
+.cr-pb-9 { padding-bottom: $cr-spacing-9; }
+.cr-pb-10 { padding-bottom: $cr-spacing-10; }
+
+.cr-mv-0 {
+  margin-top: $cr-spacing-0;
+  margin-bottom: $cr-spacing-0;
+}
+
+.cr-mv-1 {
+  margin-top: $cr-spacing-1;
+  margin-bottom: $cr-spacing-1;
+}
+
+.cr-mv-2 {
+  margin-top: $cr-spacing-2;
+  margin-bottom: $cr-spacing-2;
+}
+
+.cr-mv-3 {
+  margin-top: $cr-spacing-3;
+  margin-bottom: $cr-spacing-3;
+}
+
+.cr-mv-4 {
+  margin-top: $cr-spacing-4;
+  margin-bottom: $cr-spacing-4;
+}
+
+.cr-mv-5 {
+  margin-top: $cr-spacing-5;
+  margin-bottom: $cr-spacing-5;
+}
+
+.cr-mv-6 {
+  margin-top: $cr-spacing-6;
+  margin-bottom: $cr-spacing-6;
+}
+
+.cr-mv-7 {
+  margin-top: $cr-spacing-7;
+  margin-bottom: $cr-spacing-7;
+}
+
+.cr-mv-8 {
+  margin-top: $cr-spacing-8;
+  margin-bottom: $cr-spacing-8;
+}
+
+.cr-mv-9 {
+  margin-top: $cr-spacing-9;
+  margin-bottom: $cr-spacing-9;
+}
+
+.cr-mv-10 {
+  margin-top: $cr-spacing-10;
+  margin-bottom: $cr-spacing-10;
+}
+
+.cr-pv-0 {
+  padding-top: $cr-spacing-0;
+  padding-bottom: $cr-spacing-0;
+}
+
+.cr-pv-1 {
+  padding-top: $cr-spacing-1;
+  padding-bottom: $cr-spacing-1;
+}
+
+.cr-pv-2 {
+  padding-top: $cr-spacing-2;
+  padding-bottom: $cr-spacing-2;
+}
+
+.cr-pv-3 {
+  padding-top: $cr-spacing-3;
+  padding-bottom: $cr-spacing-3;
+}
+
+.cr-pv-4 {
+  padding-top: $cr-spacing-4;
+  padding-bottom: $cr-spacing-4;
+}
+
+.cr-pv-5 {
+  padding-top: $cr-spacing-5;
+  padding-bottom: $cr-spacing-5;
+}
+
+.cr-pv-6 {
+  padding-top: $cr-spacing-6;
+  padding-bottom: $cr-spacing-6;
+}
+
+.cr-pv-7 {
+  padding-top: $cr-spacing-7;
+  padding-bottom: $cr-spacing-7;
+}
+
+.cr-pv-8 {
+  padding-top: $cr-spacing-8;
+  padding-bottom: $cr-spacing-8;
+}
+
+.cr-pv-9 {
+  padding-top: $cr-spacing-9;
+  padding-bottom: $cr-spacing-9;
+}
+
+.cr-pv-10 {
+  padding-top: $cr-spacing-10;
+  padding-bottom: $cr-spacing-10;
+}
+
+.cr-mh-0 {
+  margin-left: $cr-spacing-0;
+  margin-right: $cr-spacing-0;
+}
+
+.cr-mh-1 {
+  margin-left: $cr-spacing-1;
+  margin-right: $cr-spacing-1;
+}
+
+.cr-mh-2 {
+  margin-left: $cr-spacing-2;
+  margin-right: $cr-spacing-2;
+}
+
+.cr-mh-3 {
+  margin-left: $cr-spacing-3;
+  margin-right: $cr-spacing-3;
+}
+
+.cr-mh-4 {
+  margin-left: $cr-spacing-4;
+  margin-right: $cr-spacing-4;
+}
+
+.cr-mh-5 {
+  margin-left: $cr-spacing-5;
+  margin-right: $cr-spacing-5;
+}
+
+.cr-mh-6 {
+  margin-left: $cr-spacing-6;
+  margin-right: $cr-spacing-6;
+}
+
+.cr-mh-7 {
+  margin-left: $cr-spacing-7;
+  margin-right: $cr-spacing-7;
+}
+
+.cr-mh-8 {
+  margin-left: $cr-spacing-8;
+  margin-right: $cr-spacing-8;
+}
+
+.cr-mh-9 {
+  margin-left: $cr-spacing-9;
+  margin-right: $cr-spacing-9;
+}
+
+.cr-mh-10 {
+  margin-left: $cr-spacing-10;
+  margin-right: $cr-spacing-10;
+}
+
+.cr-ph-0 {
+  padding-left: $cr-spacing-0;
+  padding-right: $cr-spacing-0;
+}
+
+.cr-ph-1 {
+  padding-left: $cr-spacing-1;
+  padding-right: $cr-spacing-1;
+}
+
+.cr-ph-2 {
+  padding-left: $cr-spacing-2;
+  padding-right: $cr-spacing-2;
+}
+
+.cr-ph-3 {
+  padding-left: $cr-spacing-3;
+  padding-right: $cr-spacing-3;
+}
+
+.cr-ph-4 {
+  padding-left: $cr-spacing-4;
+  padding-right: $cr-spacing-4;
+}
+
+.cr-ph-5 {
+  padding-left: $cr-spacing-5;
+  padding-right: $cr-spacing-5;
+}
+
+.cr-ph-6 {
+  padding-left: $cr-spacing-6;
+  padding-right: $cr-spacing-6;
+}
+
+.cr-ph-7 {
+  padding-left: $cr-spacing-7;
+  padding-right: $cr-spacing-7;
+}
+
+.cr-ph-8 {
+  padding-left: $cr-spacing-8;
+  padding-right: $cr-spacing-8;
+}
+
+.cr-ph-9 {
+  padding-left: $cr-spacing-9;
+  padding-right: $cr-spacing-9;
+}
+
+.cr-ph-10 {
+  padding-left: $cr-spacing-10;
+  padding-right: $cr-spacing-10;
+}
+"
+`;
+
+exports[`generate-utilities sass/oldskool/partials/_transition.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+
+.cr-transition-duration-fast { transition-duration: $cr-transition-duration-fast; }
+.fl-transition-duration-fast { transition-duration: $fl-transition-duration-fast; }
+.cr-transition-duration-base { transition-duration: $cr-transition-duration-base; }
+.fl-transition-duration-base { transition-duration: $fl-transition-duration-base; }
+.cr-transition-duration-slow { transition-duration: $cr-transition-duration-slow; }
+.fl-transition-duration-slow { transition-duration: $fl-transition-duration-slow; }"
+`;
+
+exports[`generate-utilities sass/oldskool/partials/_typography.scss.scss should output the right CSS 1`] = `
+"@import '../index.scss';
+
+.cr-serif { font-family: $cr-serif; }
+.fl-serif { font-family: $fl-serif; }
+.cr-sans-serif { font-family: $cr-sans-serif; }
+.fl-sans-serif { font-family: $fl-sans-serif; }
+.cr-monospace { font-family: $cr-monospace; }
+.fl-monospace { font-family: $fl-monospace; }
+
+.cr-regular { font-weight: $cr-regular; }
+.fl-regular { font-weight: $fl-regular; }
+.cr-bold { font-weight: $cr-bold; }
+.fl-bold { font-weight: $fl-bold; }
+
+.cr-text-xxl { font-size: $cr-text-xxl; }
+.fl-text-xxl { font-size: $fl-text-xxl; }
+.cr-text-xl { font-size: $cr-text-xl; }
+.fl-text-xl { font-size: $fl-text-xl; }
+.cr-text-l { font-size: $cr-text-l; }
+.fl-text-l { font-size: $fl-text-l; }
+.cr-text { font-size: $cr-text; }
+.fl-text { font-size: $fl-text; }
+.cr-text-s { font-size: $cr-text-s; }
+.fl-text-s { font-size: $fl-text-s; }
+.cr-text-xs { font-size: $cr-text-xs; }
+.fl-text-xs { font-size: $fl-text-xs; }
+.cr-text-xxs { font-size: $cr-text-xxs; }
+.fl-text-xxs { font-size: $fl-text-xxs; }
+
+.cr-letter-spacing-normal { letter-spacing: $cr-letter-spacing-normal; }
+.fl-letter-spacing-normal { letter-spacing: $fl-letter-spacing-normal; }
+.cr-letter-spacing-1 { letter-spacing: $cr-letter-spacing-1; }
+.fl-letter-spacing-1 { letter-spacing: $fl-letter-spacing-1; }
+.cr-letter-spacing-2 { letter-spacing: $cr-letter-spacing-2; }
+.fl-letter-spacing-2 { letter-spacing: $fl-letter-spacing-2; }
+.cr-letter-spacing-3 { letter-spacing: $cr-letter-spacing-3; }
+.fl-letter-spacing-3 { letter-spacing: $fl-letter-spacing-3; }"
+`;
+
+exports[`generate-utilities sass/oldskool/partials/index.scss.scss should output the right CSS 1`] = `
 "@import '../index.scss';
 @import 'typography.scss';
 @import 'spacing.scss';

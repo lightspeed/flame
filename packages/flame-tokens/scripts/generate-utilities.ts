@@ -1,24 +1,42 @@
 import { typography, spacing, colors, shadows, radii, transition } from '../src';
-import { namespace } from './config';
+import { theme } from '../src/theme-ui/lightspeed';
 
 const tokens = { typography, spacing, colors, shadows, radii, transition };
-function prefixName(name: string, prefix = namespace) {
+function prefixName(name: string, prefix = 'cr-') {
   return `${prefix}${name}`;
 }
+
+const boxShadows = Object.assign(
+  {},
+  tokens.shadows.outer,
+  tokens.shadows.inner,
+  tokens.shadows.innerN,
+  tokens.shadows.border,
+);
 
 interface GenerateClasses {
   separator?: string;
   property: string;
+  namespaces?: string[];
   data: any;
 }
-function generateClasses({ separator = '', property, data }: GenerateClasses) {
-  const selector = (name: string) =>
-    separator ? `.${namespace}${separator}-${name}` : `.${prefixName(name)}`;
+function generateClasses({
+  separator = '',
+  property,
+  data,
+  namespaces = ['cr-', 'fl-'],
+}: GenerateClasses) {
+  const selector = (name: string, namespace: string) =>
+    separator ? `.${namespace}${separator}-${name}` : `.${prefixName(name, namespace)}`;
 
-  return Object.keys(data).reduce(
-    (output, name) => `${output}${selector(name)} { ${property}: $${prefixName(name)}; }\n`,
-    '',
-  );
+  return Object.keys(data).reduce((output, name) => {
+    const nextRules = namespaces
+      .map(n => {
+        return `${selector(name, n)} { ${property}: $${prefixName(name, n)}; }`;
+      })
+      .join('\n');
+    return `${output}\n${nextRules}`;
+  }, '');
 }
 
 function generateSpacing() {
@@ -88,18 +106,18 @@ function generateSpacing() {
   return `${allSides}${perSides}${verticals}${horizontals}`;
 }
 
-function generateColorsFile() {
+function generateColorsFile(themeColors: any) {
   return [
-    generateClasses({ property: 'color', data: tokens.colors.colorsMap }),
+    generateClasses({ property: 'color', data: themeColors }),
     generateClasses({
       separator: 'bg',
       property: 'background-color',
-      data: tokens.colors.colorsMap,
+      data: themeColors,
     }),
     generateClasses({
       separator: 'border',
       property: 'border-color',
-      data: tokens.colors.colorsMap,
+      data: themeColors,
     }),
   ].join('\n');
 }
@@ -125,27 +143,32 @@ function addVariablesImport([fileName, css]: string[]) {
   return [fileName, generateVariablesImport(css)];
 }
 
+function generatePartials(path: string, colors: any) {
+  return [
+    [`${path}/_colors.scss`, generateColorsFile(colors)],
+    [`${path}/_typography.scss`, generateTypography()],
+    [
+      `${path}/_radii.scss`,
+      generateClasses({ property: 'border-radius', data: tokens.radii.values }),
+    ],
+    [
+      `${path}/_shadows.scss`,
+      generateClasses({
+        property: 'box-shadow',
+        data: boxShadows,
+      }),
+    ],
+    [`${path}/_spacing.scss`, generateSpacing()],
+    [
+      `${path}/_transition.scss`,
+      generateClasses({ property: 'transition-duration', data: tokens.transition.durations }),
+    ],
+    [`${path}/index.scss`, generateImports()],
+  ];
+}
+
 export default [
-  ['_colors', generateColorsFile()],
-  ['_typography', generateTypography()],
-  ['_radii', generateClasses({ property: 'border-radius', data: tokens.radii.values })],
-  [
-    '_shadows',
-    generateClasses({
-      property: 'box-shadow',
-      data: Object.assign(
-        {},
-        tokens.shadows.outer,
-        tokens.shadows.inner,
-        tokens.shadows.innerN,
-        tokens.shadows.border,
-      ),
-    }),
-  ],
-  ['_spacing', generateSpacing()],
-  [
-    '_transition',
-    generateClasses({ property: 'transition-duration', data: tokens.transition.durations }),
-  ],
-  ['index', generateImports()],
+  ...generatePartials('partials', tokens.colors.colorsMap),
+  ...generatePartials('sass/oldskool/partials', tokens.colors.colorsMap),
+  ...generatePartials('sass/flame/partials', theme.colors),
 ].map(addVariablesImport);
