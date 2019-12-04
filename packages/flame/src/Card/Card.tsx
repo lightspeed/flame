@@ -31,6 +31,10 @@ const setSectionSizingProp = (props: CardCommonProps) => {
 };
 
 export type CardSectionProps = CardCommonProps;
+
+/**
+ * Main content for a Card
+ */
 export const CardSection = styled('div')<CardSectionProps>`
   color: ${themeGet('colors.gray')};
   ${compose(
@@ -88,6 +92,9 @@ const setFooterSizingProp = (props: CardCommonProps) => {
 };
 
 export type CardFooterProps = CardCommonProps;
+/**
+ * Footer section for a Card
+ */
 export const CardFooter = styled(CardSection)<CardFooterProps>`
   line-height: ${themeGet('space.3')};
   border-top: 1px solid ${themeGet('cardStyles.footer.border')};
@@ -123,6 +130,9 @@ export type CardHeaderProps = React.HTMLAttributes<HTMLDivElement> &
     children?: React.ReactNode;
   };
 
+/**
+ * Header section of a Card
+ */
 export const CardHeader: React.FC<CardHeaderProps> = ({
   title,
   actions,
@@ -189,6 +199,9 @@ export type CardProps = BackgroundColorProps &
   }> &
   SpaceProps;
 
+/**
+ * A blank canvas, and wrapper for our user interfaces.
+ */
 export const Card = styled('div')<CardProps>`
   border-radius: ${themeGet('radii.radius-2')};
   font-family: ${themeGet('fontFamily.sans-serif')};

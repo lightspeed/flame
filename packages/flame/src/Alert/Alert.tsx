@@ -62,8 +62,7 @@ export interface AlertProps {
   title?: string;
 }
 /**
- * An alert is a message about the state of the system, the result of a user action or useful information about something on the page.
- * There are four types of alert and each has a different function.
+ * An alert can be a warning following an action, a helpful tip or an important update about a system issue. There are four types of alert and each has a different function.
  */
 const Alert: React.FC<AlertProps & SpaceProps> = ({
   children,

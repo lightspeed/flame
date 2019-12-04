@@ -85,6 +85,9 @@ const PopperWrapper: React.FC<PopperWrapper> = ({
 // To preserve the old behaviour, we need to put the usePopper in a seperate component
 // to trigger a full re-render, which in turns means the ref will be created in time.
 // This functionality should be removed in the future, since it's not good for a11y reasons.
+/**
+ * A small extension of an action taken, containing information, or more actions still.
+ */
 const Popover: React.FC<PopoverProps> = ({
   className,
   isOpen = false,

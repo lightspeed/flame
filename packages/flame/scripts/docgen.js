@@ -1,53 +1,93 @@
-const glob = require('glob');
-
 const styledSystemFileName = 'node_modules/@types/styled-system';
+const glob = require('glob');
+const docgen = require('react-docgen-typescript').withDefaultConfig({
+  propFilter: prop => {
+    if (prop.parent) {
+      if (prop.parent.fileName.includes(styledSystemFileName)) {
+        return true;
+      }
+
+      return !prop.parent.fileName.includes('node_modules');
+    }
+
+    return true;
+  },
+});
+
+const getStyledSystemDocsUrl = parentPropName => {
+  switch (parentPropName) {
+    case 'PositionProps':
+      return 'https://styled-system.com/api#position';
+    case 'BorderProps':
+      return 'https://styled-system.com/api#border';
+    case 'BackgroundProps':
+      return 'https://styled-system.com/api#background';
+    case 'FlexboxProps':
+      return 'https://styled-system.com/api#flexbox';
+    case 'LayoutProps':
+      return 'https://styled-system.com/api#layout';
+    case 'TypographyProps':
+      return 'https://styled-system.com/api#typography';
+    case 'SpaceProps':
+      return 'https://styled-system.com/api#space';
+    default:
+      return 'https://styled-system.com/api';
+  }
+};
 
 // We're gonna skip flag and icons since they are a bit funkier to type
 const filePaths = glob.sync('src/!(Flag|Icon)/!(*.test|story|index).tsx');
 
-const componentPropAST = require('react-docgen-typescript')
-  .withDefaultConfig({
-    propFilter: prop => {
-      if (prop.parent) {
-        if (prop.parent.fileName.includes(styledSystemFileName)) {
-          return true;
+const componentjsonStructure = filePaths.reduce((acc, file) => {
+  const namespace = file.split('/')[1];
+
+  const parsedFile = docgen
+    .parse(file)
+    .filter(component => component.description.length)
+    .map(component => {
+      const nextProps = Object.entries(component.props).reduce((acc2, [key, value]) => {
+        if (key === 'as' || key === 'theme') {
+          return acc2;
         }
 
-        return !prop.parent.fileName.includes('node_modules');
-      }
+        if (
+          value.parent &&
+          value.parent.fileName &&
+          value.parent.fileName.includes(styledSystemFileName)
+        ) {
+          return {
+            ...acc2,
+            [value.parent.name]: {
+              description: `Styled System Properties. Please consult the appropriate documentation on ${getStyledSystemDocsUrl(
+                value.parent.name,
+              )}`,
+              name: value.parent.name,
+            },
+          };
+        }
 
-      return true;
-    },
-  })
-  .parse(filePaths);
+        return { ...acc2, [key]: value };
+      }, {});
 
-const filteredProps = componentPropAST
-  .filter(component => component.description.length)
-  .map(component => {
-    const nextProps = Object.entries(component.props).reduce((acc, [key, value]) => {
-      if (key === 'as' || key === 'theme') {
-        return acc;
-      }
+      return { ...component, props: nextProps };
+    });
 
-      if (
-        value.parent &&
-        value.parent.fileName &&
-        value.parent.fileName.includes(styledSystemFileName)
-      ) {
-        return {
-          ...acc,
-          [value.parent.name]: {
-            description:
-              'Styled System Properties. Please consult the appropriate documentation on https://styled-system.com/api',
-            name: value.parent.name,
-          },
-        };
-      }
+  if (!parsedFile.length) {
+    return acc;
+  }
 
-      return { ...acc, [key]: value };
-    }, {});
-    return { ...component, props: nextProps };
-  });
+  const normalizedParsedFile = parsedFile.reduce((acc2, value) => {
+    return {
+      ...acc2,
+      [value.displayName]: value,
+    };
+  }, {});
 
-// TODO: fs out the results into a JSON or something that can be easily consumed by the DSD
-console.log(filteredProps);
+  if (acc[namespace]) {
+    return { ...acc, [namespace]: { ...acc[namespace], ...normalizedParsedFile } };
+  }
+
+  return { ...acc, [namespace]: { ...normalizedParsedFile } };
+}, {});
+
+console.log(JSON.stringify(componentjsonStructure));

@@ -103,6 +103,9 @@ const useDropdown = () => {
   return { closeDropdown };
 };
 
+/**
+ * When there is too much to show, place your precious UI in here.
+ */
 const Dropdown: React.FC<Props> = ({
   buttonContent,
   placement = 'start',

@@ -72,6 +72,9 @@ export type ModalProps = {
 export type ModalState = {
   isOpen: boolean;
 };
+/**
+ * An overlain window, interrupting user interactions for just a short while.
+ */
 class BaseModal extends React.Component<ModalProps, ModalState> {
   // eslint-disable-next-line react/sort-comp
   constructor(props: any) {

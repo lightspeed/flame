@@ -39,6 +39,9 @@ export type DialogProps = Partial<OptionalProps> & {
   /** Event handler for clicking Dialog's Confirm Button */
   onConfirm: (callback: Function) => void;
 };
+/**
+ * A simpler Modal, Dialogs present users with a simple question and require a simple answer.
+ */
 const Dialog: React.FC<DialogProps> = props => {
   const {
     type,

@@ -16,7 +16,7 @@ const boneStyles = system({
 
 export type BoneProps = WidthProps &
   Omit<ColorProps, 'color'> & {
-    /** Sets Bone pulsating */
+    /** Give the Bone component a pulsating animation */
     animated?: boolean;
     /** Height of the Bone (theme number, px, rem, em, vh) */
     height?: string | number;

@@ -57,7 +57,7 @@ export type BadgeProps = ColorProps & {
 };
 
 /**
- * A pill-shaped, glanceable bit of information meant to qualify that by which it stands.
+ * A glanceable bit of information meant to qualify that by which it stands.
  */
 export const Badge = styled('span')<React.HTMLAttributes<HTMLSpanElement> & Partial<BadgeProps>>`
   display: inline-flex;
