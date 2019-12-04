@@ -29,10 +29,10 @@
     "build:flags": "node ./scripts/generate-flags.js && yarn build:flags-utilities",
     "build:flags-utilities": "node ./scripts/generate-flags-css-utilities.js",
     "build:types": "tsc --p tsconfig.types.json",
+    "build:docgen": "node ./scripts/docgen.js",
     "build:private-to-public": "node ./scripts/private-to-public.js",
-    "build": "yarn build:icons && yarn build:flags && yarn build:themes && yarn build:cjs && yarn build:copy-files && yarn build:types && yarn build:private-to-public && node ../../scripts/validate-build",
+    "build": "yarn build:icons && yarn build:flags && yarn build:themes && yarn build:cjs && yarn build:copy-files && yarn build:types && yarn build:docgen && yarn build:private-to-public && node ../../scripts/validate-build",
     "release": "yarn build && npm publish dist --quiet",
-    "docgen": "node ./scripts/docgen.js",
     "release:dryrun": "npm publish dist --dry-run"
   },
   "dependencies": {
