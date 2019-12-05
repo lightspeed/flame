@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Docgen from components will be outputted to the final build. This is to properly sync the propsTable with the design system documentation website ([#58](https://github.com/lightspeed/flame/pull/58))
+
 ## 1.2.4 - 2019-11-22
 
 ### Deprecated
