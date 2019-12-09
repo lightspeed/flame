@@ -18,7 +18,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/.storybook/*.js', 'packages/**/story.js', '**/scripts/*.js'],
+      files: ['**/.storybook/*.js', 'packages/**/story.[jt]s?(x)', '**/scripts/*.js'],
       rules: {
         'import/no-extraneous-dependencies': 'off',
       },
