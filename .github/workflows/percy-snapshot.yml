@@ -33,6 +33,6 @@ jobs:
       - name: Percy
         uses: percy/storybook-action@v0.1.2
         with:
-          custom-command: 'yarn storybook:percy'
+          custom-command: 'yarn percy'
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
