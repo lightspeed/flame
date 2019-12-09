@@ -11,8 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Destructure css and className to the wrapper component for Checkbox
-- Destructure css and className to the wrapper component for Radio
+- Destructure `css` and `className` to the wrapper component for Checkbox and Radio ([#55](https://github.com/lightspeed/flame/pull/55))
 
 ## 1.2.4 - 2019-11-22
 
