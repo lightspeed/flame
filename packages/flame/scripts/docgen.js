@@ -43,6 +43,7 @@ const filePaths = glob.sync('src/!(Flag|Icon)/!(*.test|story|index).tsx');
 const componentjsonStructure = filePaths.reduce((acc, file) => {
   const namespace = file.split('/')[1];
 
+  // eslint-disable-next-line no-console
   console.log('Parsing the following file:', file);
   const parsedFile = docgen.parse(file).map(component => {
     const nextProps = Object.entries(component.props).reduce((acc2, [key, value]) => {
@@ -91,6 +92,7 @@ const componentjsonStructure = filePaths.reduce((acc, file) => {
 }, {});
 
 Object.entries(componentjsonStructure).forEach(([namespace, docs]) => {
-  console.log(`Writting ${namespace}.json`);
+  // eslint-disable-next-line no-console
+  console.log(`Writing ${namespace}.json`);
   fs.outputFileSync(`dist/docgen/${namespace}.json`, JSON.stringify(docs), { encoding: 'utf8' });
 });

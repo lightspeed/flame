@@ -127,7 +127,7 @@ export const Text = styled('p')<TextProps>(
 );
 
 /**
- * Pre-Styled H1 component
+ * Pre-styled h1 component
  */
 export const Heading1 = styled(BaseText)<TextProps>`
   font-size: ${themeGet('fontSizes.xxlarge')};
@@ -141,7 +141,7 @@ Heading1.defaultProps = {
 };
 
 /**
- * Pre-Styled H2 component
+ * Pre-styled h2 component
  */
 export const Heading2 = styled(BaseText)<TextProps>`
   font-size: ${themeGet('fontSizes.xlarge')};
@@ -155,7 +155,7 @@ Heading2.defaultProps = {
 };
 
 /**
- * Pre-Styled H3 component
+ * Pre-styled h3 component
  */
 export const Heading3 = styled(BaseText)<TextProps>`
   font-size: ${themeGet('fontSizes.large')};
@@ -169,7 +169,7 @@ Heading3.defaultProps = {
 };
 
 /**
- * Pre-Styled H4 component
+ * Pre-styled h4 component
  */
 export const Heading4 = styled(BaseText)<TextProps>`
   font-size: ${themeGet('fontSizes.xsmall')};
@@ -190,7 +190,7 @@ const textlinkColor = (props: any) =>
     : themeGet('textStyles.link.color')(props);
 
 /**
- * Pre-Styled anchor component
+ * Pre-styled anchor component
  */
 export const TextLink = styled(Text)<TextProps>`
   color: ${textlinkColor};
