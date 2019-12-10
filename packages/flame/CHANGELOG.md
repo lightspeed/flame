@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+- Force update to trigger new github action workflow
+
 ## 1.2.5 - 2019-12-10
 
 ### Fixed

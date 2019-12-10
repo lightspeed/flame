@@ -34,6 +34,6 @@ jobs:
       - name: Publish
         run: |
           cd packages/flame
-          node ./scripts/check-changed.js && yarn build && npm publish dist --quiet || exit 0
+          yarn release || exit 0
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
