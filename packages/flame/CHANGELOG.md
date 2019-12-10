@@ -13,6 +13,16 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 - Destructure `css` and `className` to the wrapper component for Checkbox and Radio ([#55](https://github.com/lightspeed/flame/pull/55))
 
+## 1.2.6 - 2019-12-10
+
+- Force update to trigger new github action workflow ([#62](https://github.com/lightspeed/flame/pull/62))
+
+## 1.2.5 - 2019-12-10
+
+### Fixed
+
+- Docgen from components will be outputted to the final build. This is to properly sync the propsTable with the design system documentation website ([#58](https://github.com/lightspeed/flame/pull/58))
+
 ## 1.2.4 - 2019-11-22
 
 ### Deprecated

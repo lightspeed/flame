@@ -55,6 +55,9 @@ export type ModalHeaderProps = React.HTMLProps<HTMLDivElement> & {
   /** Callback when Close button is clicked */
   onCloseClicked?: () => void;
 };
+/**
+ * Header of the Modal
+ */
 export const ModalHeader: React.FC<ModalHeaderProps> = ({
   children,
   showCloseButton,

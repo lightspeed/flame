@@ -161,7 +161,7 @@ export type ButtonProps = Merge<
     noSpacing?: boolean;
     /** Sets Button fill. Does not apply to default variant */
     fill?: boolean;
-    /** One of 'neutral', 'default', 'primary', 'secondary', 'danger' */
+    /** One of 'neutral', 'primary', 'secondary', 'danger' */
     variant?: ColorVariants;
     /** Forces cursor states onto Button */
     forcedState?: 'hover' | 'active';
@@ -169,11 +169,14 @@ export type ButtonProps = Merge<
     className?: string;
     /** Sets the disabled state */
     disabled?: boolean;
-    /** Href for navigation. Turns Button to a link. */
+    /** Href for navigation. Turns the Button into a link. */
     href?: string;
   }
 >;
 
+/**
+ * Buttons are used to take action or confirm a decision. They help merchants get things done.
+ */
 const Button: React.FunctionComponent<ButtonProps> = ({
   loading,
   children,

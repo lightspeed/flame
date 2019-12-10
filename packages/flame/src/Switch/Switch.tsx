@@ -119,6 +119,9 @@ export type SwitchProps = Merge<
     checked?: boolean;
   }
 >;
+/**
+ * A toggleable control which stays on (or off) until manually triggered once more.
+ */
 const Switch: React.FC<SwitchProps> = ({ className, checked, ...restProps }) => (
   <WrapperLabel role="presentation" className={className}>
     <SwitchInput type="checkbox" checked={checked} value={checked ? 1 : 0} {...restProps} />

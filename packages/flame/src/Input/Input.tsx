@@ -311,6 +311,10 @@ export interface InputProps extends Omit<BaseInputProps, 'status'> {
       };
   css?: any;
 }
+
+/**
+ * The Acceptor of User Information, Messenger of the Internet Gods.
+ */
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
     { label, id, status, description, statusMessage, textHelper, labelHelper, ...restProps },

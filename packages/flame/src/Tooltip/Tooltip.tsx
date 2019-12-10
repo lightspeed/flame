@@ -247,6 +247,9 @@ export interface TooltipProps extends TooltipWrapper {
 // To preserve the old behaviour, we need to put the usePopper in a seperate component
 // to trigger a full re-render, which in turns means the ref will be created in time.
 // This functionality should be removed in the future, since it's not good for a11y reasons.
+/**
+ * An extra bit of information, contextualized to a portion of a UI.
+ */
 const Tooltip: React.FC<TooltipProps> = ({
   active,
   light,

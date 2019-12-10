@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { transparentize } from 'polished';
 import { space, variant, SpaceProps } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
+
 import { Flex, Box } from '../Core';
 import { Text } from '../Text';
 
@@ -61,8 +62,10 @@ export interface AlertProps {
   /** Text for the alert's title */
   title?: string;
 }
-
-const Alert: React.FunctionComponent<AlertProps & SpaceProps> = ({
+/**
+ * An alert can be a warning following an action, a helpful tip or an important update about a system issue. There are four types of alert and each has a different function.
+ */
+const Alert: React.FC<AlertProps & SpaceProps> = ({
   children,
   type = 'info',
   title,

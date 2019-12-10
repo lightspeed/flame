@@ -26,6 +26,9 @@ const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
   )};
 `;
 
+/**
+ * A wrapper component used to combine other components into a single cohesive whole.
+ */
 const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps }) => {
   const nextChildren = React.Children.map(children, (child: any, index) => {
     if (!child) {

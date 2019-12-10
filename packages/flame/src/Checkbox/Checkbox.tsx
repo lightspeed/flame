@@ -119,6 +119,9 @@ export interface CheckboxProps extends BaseCheckboxProps {
   label?: React.ReactNode;
   description?: React.ReactNode;
 }
+/**
+ * Used to specify choices among large groups of options.
+ */
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   ({ label, id, description, disabled, css, className, ...restProps }, ref) => (
     <CheckboxLabel
