@@ -106,6 +106,10 @@ const setSizeLineHeight = (props: Partial<TextProps>) => {
   }
 };
 
+/**
+ * The essence of written communication, beautifully styled for all your legibility needs.
+ * Basic text component that contains utility properties to adjust typographic styling
+ */
 export const Text = styled('p')<TextProps>(
   {
     margin: 0,
@@ -122,6 +126,9 @@ export const Text = styled('p')<TextProps>(
   textTransform,
 );
 
+/**
+ * Pre-styled h1 component
+ */
 export const Heading1 = styled(BaseText)<TextProps>`
   font-size: ${themeGet('fontSizes.xxlarge')};
   line-height: ${themeGet('lineHeights.9')};
@@ -133,6 +140,9 @@ Heading1.defaultProps = {
   color: 'textHeading',
 };
 
+/**
+ * Pre-styled h2 component
+ */
 export const Heading2 = styled(BaseText)<TextProps>`
   font-size: ${themeGet('fontSizes.xlarge')};
   line-height: ${themeGet('lineHeights.6')};
@@ -144,6 +154,9 @@ Heading2.defaultProps = {
   color: 'textHeading',
 };
 
+/**
+ * Pre-styled h3 component
+ */
 export const Heading3 = styled(BaseText)<TextProps>`
   font-size: ${themeGet('fontSizes.large')};
   line-height: ${themeGet('lineHeights.5')};
@@ -155,6 +168,9 @@ Heading3.defaultProps = {
   color: 'textHeading',
 };
 
+/**
+ * Pre-styled h4 component
+ */
 export const Heading4 = styled(BaseText)<TextProps>`
   font-size: ${themeGet('fontSizes.xsmall')};
   line-height: ${themeGet('lineHeights.3')};
@@ -173,6 +189,9 @@ const textlinkColor = (props: any) =>
     ? themeGet(`colors.${props.color}`, props.color)(props)
     : themeGet('textStyles.link.color')(props);
 
+/**
+ * Pre-styled anchor component
+ */
 export const TextLink = styled(Text)<TextProps>`
   color: ${textlinkColor};
   text-decoration: none;

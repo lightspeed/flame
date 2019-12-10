@@ -59,6 +59,9 @@ export type ProgressProps = Merge<
     css?: any;
   }
 >;
+/**
+ * A linear indicator showing the progression of longstanding tasks.
+ */
 const Progress: React.FunctionComponent<ProgressProps> = ({
   type,
   current,

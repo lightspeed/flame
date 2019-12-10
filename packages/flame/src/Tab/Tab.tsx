@@ -8,6 +8,9 @@ import { Divider } from '../Divider';
 interface TabsProps {
   active?: boolean;
 }
+/**
+ * Top-level separation of related, but different sections.
+ */
 const Tab = styled(Flex)<TabsProps>`
   border-bottom: 3px solid transparent;
   cursor: pointer;

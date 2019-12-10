@@ -20,4 +20,7 @@ const StyledIcon = styled(IconSpinner)`
 `;
 
 export type SpinnerProps = Omit<IconProps, 'theme'>;
+/**
+ * Offers solace and mutual understanding that a task of unknowable duration (but usually short) is ongoing.
+ */
 export const Spinner: React.FC<SpinnerProps> = ({ ...restProps }) => <StyledIcon {...restProps} />;

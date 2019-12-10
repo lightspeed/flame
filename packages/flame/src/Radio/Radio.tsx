@@ -97,6 +97,9 @@ interface FormRadioProps extends RadioProps {
   description?: React.ReactNode;
   css?: any;
 }
+/**
+ * Offers users a single choice, among a small set.
+ */
 const Radio = React.forwardRef<HTMLInputElement, FormRadioProps>(
   ({ label, id, description, disabled, ...restProps }, ref) => {
     return (
