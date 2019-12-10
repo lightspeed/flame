@@ -5,6 +5,9 @@ import { border, BorderProps } from '../Core';
 
 export type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement>;
 
+/**
+ * Offers users a single choice, among a medium-sized set of options.
+ */
 export const Select = styled('select')<Omit<LayoutProps, 'size'> & BorderProps>`
   width: 100%;
   color: ${themeGet('selectStyles.color')};

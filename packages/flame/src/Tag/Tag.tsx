@@ -167,6 +167,9 @@ export type TagProps = Merge<
   }
 >;
 
+/**
+ * An organisational indicator specifying of a data point which part of a whole it belongs to.
+ */
 const Tag = ({ children, size, onClick, onRemove, ...rest }: TagProps) => (
   <StyledTag {...rest}>
     <StyledTagLabel type="button" onClick={onClick} hasSuffix={!!onRemove} size={size}>

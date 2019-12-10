@@ -60,6 +60,9 @@ const dividerVariants = (props: DividerProps) => {
   }
 };
 
+/**
+ * A simple line, used to divide content into manageable chunks.
+ */
 export const Divider = styled('div')<DividerProps>`
   background: none;
   display: flex;

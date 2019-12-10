@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 
+/**
+ * Footer of the Modal
+ */
 export const ModalFooter = styled('div')`
   padding: ${themeGet('space.3')} ${themeGet('space.4')};
   background-color: ${themeGet('modalStyles.footer.background')};
