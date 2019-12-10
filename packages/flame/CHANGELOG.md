@@ -9,7 +9,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## [Unreleased]
 
-- Force update to trigger new github action workflow
+- Force update to trigger new github action workflow ([#62](https://github.com/lightspeed/flame/pull/62))
 
 ## 1.2.5 - 2019-12-10
 
