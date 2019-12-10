@@ -9,6 +9,8 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## [Unreleased]
 
+All changes in this release done in [#56](https://github.com/lightspeed/flame/pull/56).
+
 ### Added
 
 - Created css and sass dist folders that contains a better namespaced location for css/sass tokens
@@ -16,7 +18,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 - Added the new `fl-` namespace for token utility files
 - Root level partials will also include the new namespaces
 
-### DEPRECATION WARNING
+### Deprecated
 
 - Root level css and sass files will be removed, prefer going through the appropriate namespaced folder to get your utility files
 - The `cr-` namespace will be removed in favour of the `fl-` namespace
