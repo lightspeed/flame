@@ -1,6 +1,10 @@
 ---
 name: Feature request
 about: Component/feature request for Flame
+title: "[Feature request]: "
+labels: enhancement
+assignees: ''
+
 ---
 
 ## Description

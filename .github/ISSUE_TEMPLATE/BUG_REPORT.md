@@ -1,6 +1,10 @@
 ---
 name: Bug report
 about: Help us improve Flame
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 ## Description
