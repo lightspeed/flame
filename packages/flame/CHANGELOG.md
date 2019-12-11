@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## 1.2.7 - 2019-12-10
+
+### Dependencies
+
+- Revert @types/react package update, use locked version ([#64](https://github.com/lightspeed/flame/pull/64))
+
 ## 1.2.6 - 2019-12-10
+
+### Fixed
 
 - Force update to trigger new github action workflow ([#62](https://github.com/lightspeed/flame/pull/62))
 
