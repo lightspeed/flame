@@ -1,10 +1,19 @@
 import * as React from 'react';
 import PopperJs, { PopperOptions, Data } from 'popper.js';
 
+const defaultOptions: PopperOptions = {
+  placement: 'bottom',
+  modifiers: {
+    offset: {
+      enabled: true,
+      offset: '0px, 8px',
+    },
+  },
+};
 export function usePopper(
   targetRef: React.RefObject<any>,
   popperRef: React.RefObject<any>,
-  options: PopperOptions = { placement: 'bottom' },
+  options: PopperOptions = {},
 ) {
   const [placement, setPlacement] = React.useState(options.placement);
 
@@ -12,6 +21,7 @@ export function usePopper(
     let popperInstance: PopperJs | null = null;
     if (targetRef.current && popperRef.current && !popperInstance) {
       popperInstance = new PopperJs(targetRef.current, popperRef.current, {
+        ...defaultOptions,
         ...options,
         onCreate: (data: Data) => {
           if (placement !== data.placement) {

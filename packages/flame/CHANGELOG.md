@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Set initial offset within the usePopper hook, instead of within the DropdownContainer to preserve old behavior. Offset should be handled via the hook anyways
+
 ## 1.2.7 - 2019-12-10
 
 ### Dependencies

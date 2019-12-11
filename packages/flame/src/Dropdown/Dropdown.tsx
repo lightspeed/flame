@@ -120,12 +120,6 @@ const Dropdown: React.FC<Props> = ({
 
   usePopper(targetRef, popperRef, {
     placement: (placementWhitelist[placement] as any) || placement || 'bottom-start',
-    modifiers: {
-      offset: {
-        enabled: true,
-        offset: '0px, 8px',
-      },
-    },
   });
 
   const { isActive, toggle, setInactive } = useToggle(!!initiallyOpen);
