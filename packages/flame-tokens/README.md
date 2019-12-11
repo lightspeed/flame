@@ -57,7 +57,7 @@ Note that this command will be run automatically when we publish to npm.
 ### Import SCSS variables
 
 ```scss
-@import '@lightspeed/flame-tokens/index.scss';
+@import '@lightspeed/flame-tokens/sass/index.scss';
 ```
 
 ### Use as utility classes
@@ -65,23 +65,27 @@ Note that this command will be run automatically when we publish to npm.
 You can also use tokens as utility classes by importing partials:
 
 ```scss
-@import '@lightspeed/flame-tokens/partials/_colors.scss';
-@import '@lightspeed/flame-tokens/partials/_typography.scss';
-@import '@lightspeed/flame-tokens/partials/_spacing.scss';
-@import '@lightspeed/flame-tokens/partials/_shadows.scss';
-@import '@lightspeed/flame-tokens/partials/_radii.scss';
-@import '@lightspeed/flame-tokens/partials/_transitions.scss';
+@import '@lightspeed/flame-tokens/sass/partials/_colors.scss';
+@import '@lightspeed/flame-tokens/sass/partials/_typography.scss';
+@import '@lightspeed/flame-tokens/sass/partials/_spacing.scss';
+@import '@lightspeed/flame-tokens/sass/partials/_shadows.scss';
+@import '@lightspeed/flame-tokens/sass/partials/_radii.scss';
+@import '@lightspeed/flame-tokens/sass/partials/_transitions.scss';
 ```
 
 Or include them all in one import:
 
 ```scss
-@import '@lightspeed/flame-tokens/partials/index.scss';
+@import '@lightspeed/flame-tokens/sass/partials/index.scss';
 ```
 
 Utility classes follow the same naming convention as variables, except for spacing. Here's a rundown:
 
 ---
+
+### Please Note
+
+Although the examples uses the `.fl-` namespace, the old `.cr-` namespace is still supported, but will be removed in a subsequent version. It is highly recommended to move to the new `.fl` namespace.
 
 ## Colors
 
@@ -89,9 +93,9 @@ Every color is structured in the following way: We have one base color (_e.g., *
 
 We name our colors by their original name except for our brand colors. It makes things more clear when you are using a brand color which is a good thing to take in mind.
 
-- Text colors: `.cr-{color}-{value}`
-- Background colors: `.cr-bg-{color}-{value}`
-- Border colors: `.cr-border-{color}-{value}`
+- Text colors: `.fl-{color}-{value}`
+- Background colors: `.fl-bg-{color}-{value}`
+- Border colors: `.fl-border-{color}-{value}`
 
 ---
 
@@ -107,10 +111,10 @@ So why do we use Lato over all the others? Simply put, we appreciate its rich ch
 
 The font scale consists of seven different font sizes. No other sizes are accepted. The `text-xxs` text style should only be used in uppercase because 8 is generally too small for text, by making it uppercase it has the same height as normal `text-xs` text.
 
-- Typefaces: `.cr-serif`, `.cr-sans-serif`, `.cr-monospace`
-- Weights: `.cr-regular`, `.cr-bold`
-- Sizes: `.cr-text-{size}`
-- Letter-spacing: `.cr-letter-spacing-{scale}`
+- Typefaces: `.fl-serif`, `.fl-sans-serif`, `.fl-monospace`
+- Weights: `.fl-regular`, `.fl-bold`
+- Sizes: `.fl-text-{size}`
+- Letter-spacing: `.fl-letter-spacing-{scale}`
 
 ---
 
@@ -118,13 +122,13 @@ The font scale consists of seven different font sizes. No other sizes are accept
 
 We use shorthand notation for spacing to keep things terse. `m` is for margin, `p` is for padding.
 
-- All sides: `.cr-m-{scale}`, `.cr-p-{scale}`
-- Top: `.cr-mt-{scale}`, `.cr-pt-{scale}`
-- Left: `.cr-ml-{scale}`, `.cr-pl-{scale}`
-- Bottom: `.cr-mb-{scale}`, `.cr-pb-{scale}`
-- Right: `.cr-mr-{scale}`, `.cr-pr-{scale}`
-- Vertical (Top/Bottom): `.cr-mv-{scale}`, `.cr-pv-{scale}`
-- Horizontal (Left/Right): `.cr-mh-{scale}`, `.cr-ph-{scale}`
+- All sides: `.fl-m-{scale}`, `.fl-p-{scale}`
+- Top: `.fl-mt-{scale}`, `.fl-pt-{scale}`
+- Left: `.fl-ml-{scale}`, `.fl-pl-{scale}`
+- Bottom: `.fl-mb-{scale}`, `.fl-pb-{scale}`
+- Right: `.fl-mr-{scale}`, `.fl-pr-{scale}`
+- Vertical (Top/Bottom): `.fl-mv-{scale}`, `.fl-pv-{scale}`
+- Horizontal (Left/Right): `.fl-mh-{scale}`, `.fl-ph-{scale}`
 
 ---
 
@@ -134,9 +138,9 @@ Shadows make things tangible on screen. It gives the illusion of things coming o
 
 Inputs become more recognizable when they have an inner shadow in place. Also, to provide more feeling to the pressed states of buttons we need to create the illusion that it is being pushed into the background, an inner shadow will help with that.
 
-- Outer: `.cr-shadow-{scale}`
-- Inner: `.cr-inner-shadow-{scale}`, `.cr-inner-shadow-n{scale}
-- Border: `.cr-border-shadow`
+- Outer: `.fl-shadow-{scale}`
+- Inner: `.fl-inner-shadow-{scale}`, `.fl-inner-shadow-n{scale}`
+- Border: `.fl-border-shadow`
 
 ---
 
@@ -144,14 +148,14 @@ Inputs become more recognizable when they have an inner shadow in place. Also, t
 
 Border radius applies to all corners. We use them to make our elements look friendlier and softer to the eye.
 
-- Scale: `.cr-radius-{scale}`
-- Circle: `.cr-radius-circle`
+- Scale: `.fl-radius-{scale}`
+- Circle: `.fl-radius-circle`
 
 ---
 
 #### Transitions
 
-- Durations: `.cr-transition-duration-{speed}`
+- Durations: `.fl-transition-duration-{speed}`
 
 #### Using tokens directly (Advanced)
 
