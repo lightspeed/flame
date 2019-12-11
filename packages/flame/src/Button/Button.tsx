@@ -177,7 +177,7 @@ export type ButtonProps = Merge<
 /**
  * Buttons are used to take action or confirm a decision. They help merchants get things done.
  */
-const Button: React.FunctionComponent<ButtonProps> = ({
+export const Button: React.FunctionComponent<ButtonProps> = ({
   loading,
   children,
   size,
@@ -230,5 +230,3 @@ Button.defaultProps = {
   variant: 'neutral',
   block: false,
 };
-
-export { Button };

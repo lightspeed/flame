@@ -57,7 +57,7 @@ const containerIsActive = (props: { isActive: boolean; placement?: Placement }) 
 
 const animSpeed = 'transition.transition-duration-fast';
 
-const DropdownContainer = styled(BasePopoverContainer)<{
+export const DropdownContainer = styled(BasePopoverContainer)<{
   isActive: boolean;
   placement?: Placement;
 }>`
@@ -86,7 +86,7 @@ const DropdownContainer = styled(BasePopoverContainer)<{
 )} ease-in-out, top ${themeGet(animSpeed, '100ms')} ease-in-out;
 `;
 
-const DropdownContent: React.FC<FlameBoxProps> = ({ children, ...restProps }) => (
+export const DropdownContent: React.FC<FlameBoxProps> = ({ children, ...restProps }) => (
   <Box my={2} mx={2} {...restProps}>
     {children}
   </Box>
@@ -98,7 +98,7 @@ const placementWhitelist: { [key: string]: string } = {
   end: 'bottom-end',
 };
 
-const useDropdown = () => {
+export const useDropdown = () => {
   const { closeDropdown } = React.useContext(Context);
   return { closeDropdown };
 };
@@ -106,7 +106,7 @@ const useDropdown = () => {
 /**
  * When there is too much to show, place your precious UI in here.
  */
-const Dropdown: React.FC<Props> = ({
+export const Dropdown: React.FC<Props> = ({
   buttonContent,
   placement = 'start',
   initiallyOpen = false,
@@ -176,5 +176,3 @@ const Dropdown: React.FC<Props> = ({
     </Context.Provider>
   );
 };
-
-export { Dropdown, DropdownContent, DropdownContainer, useDropdown };

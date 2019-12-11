@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react';
 import { Tag } from '../Tag';
 
 type Tags = {
-  size: string;
+  size: 'normal' | 'small';
   label: string;
 };
 

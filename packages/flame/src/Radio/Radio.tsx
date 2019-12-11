@@ -6,7 +6,7 @@ import { Box } from '../Core';
 import { BaseLabel, LabelProps, FormHelper } from '../FormField/FormField';
 
 export interface RadioLabelProps extends LabelProps {}
-const RadioLabel: React.FC<RadioLabelProps> = ({
+export const RadioLabel: React.FC<RadioLabelProps> = ({
   description,
   disabled,
   children,
@@ -80,10 +80,8 @@ const RadioInput = styled('input')`
   }
 `;
 
-export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  css?: any;
-}
-const BaseRadio = React.forwardRef<HTMLInputElement, RadioProps>(({ ...restProps }, ref) => (
+export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+export const BaseRadio = React.forwardRef<HTMLInputElement, RadioProps>(({ ...restProps }, ref) => (
   <WrapperRadio>
     <RadioInput ref={ref} type="radio" {...restProps} />
     <Checkmark>
@@ -93,14 +91,15 @@ const BaseRadio = React.forwardRef<HTMLInputElement, RadioProps>(({ ...restProps
 ));
 
 interface FormRadioProps extends RadioProps {
+  /** The label text that appears right besides the checkbox */
   label?: React.ReactNode;
+  /** Helper text that will be inserted below the checkbox */
   description?: React.ReactNode;
-  css?: any;
 }
 /**
  * Offers users a single choice, among a small set.
  */
-const Radio = React.forwardRef<HTMLInputElement, FormRadioProps>(
+export const Radio = React.forwardRef<HTMLInputElement, FormRadioProps>(
   ({ label, id, description, disabled, ...restProps }, ref) => {
     return (
       <React.Fragment>
@@ -112,5 +111,3 @@ const Radio = React.forwardRef<HTMLInputElement, FormRadioProps>(
     );
   },
 );
-
-export { BaseRadio, RadioLabel, Radio };

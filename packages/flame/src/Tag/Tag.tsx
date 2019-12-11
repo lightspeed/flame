@@ -15,8 +15,8 @@ const StyledTag = styled('div')`
 `;
 
 type SetTagLabelSizeProps = {
-  /** One of "normal", "small" */
-  size?: string | 'normal' | 'small';
+  /** Set the overall size of then component. By default, it is set to small. */
+  size?: 'normal' | 'small';
 };
 
 const setTagLabelSize = (props: SetTagLabelSizeProps): SerializedStyles => {
@@ -170,7 +170,13 @@ export type TagProps = Merge<
 /**
  * An organisational indicator specifying of a data point which part of a whole it belongs to.
  */
-const Tag = ({ children, size, onClick, onRemove, ...rest }: TagProps) => (
+export const Tag = ({
+  children,
+  size = 'normal',
+  onClick,
+  onRemove,
+  ...rest
+}: Omit<TagProps, 'hasSuffix'>) => (
   <StyledTag {...rest}>
     <StyledTagLabel type="button" onClick={onClick} hasSuffix={!!onRemove} size={size}>
       {children}
@@ -184,8 +190,5 @@ const Tag = ({ children, size, onClick, onRemove, ...rest }: TagProps) => (
 );
 
 Tag.defaultProps = {
-  size: 'normal',
   onClick: () => {},
 };
-
-export { Tag };

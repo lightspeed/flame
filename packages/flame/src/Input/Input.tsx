@@ -14,12 +14,13 @@ import { IconWarning } from '../Icon/Warning';
 import { IconDanger } from '../Icon/Danger';
 
 type StatusType = 'valid' | 'error' | 'warning';
-type InputSizes = 'small' | 'regular' | 'large';
 
 type StyledInputProps = {
-  inputSize?: InputSizes;
+  /** Set the size of the input */
+  inputSize?: 'small' | 'regular' | 'large';
   hasSuffix?: boolean;
   hasPrefix?: boolean;
+  /** Sets the element to read-only. The content will be selectable, but not editable */
   readOnly?: boolean;
 };
 const StyledInput = styled('input')<StyledInputProps>`
@@ -102,7 +103,7 @@ const StyledInput = styled('input')<StyledInputProps>`
 interface InputBackdropProps extends BorderProps {
   status?: StatusType;
 }
-const InputBackdrop = styled('div')<InputBackdropProps>`
+export const InputBackdrop = styled('div')<InputBackdropProps>`
   position: absolute;
   top: 0;
   bottom: 0;
@@ -213,15 +214,18 @@ export type BaseInputProps = Merge<
   Omit<StyledInputProps, 'inputSize'>
 > &
   InputBackdropProps & {
-    size?: InputSizes;
+    size?: 'small' | 'regular' | 'large';
     status?: StatusType;
     disabled?: boolean;
+    /** (Legacy) Was this element automatically filled by the browser? */
     isAutofilled?: boolean;
+    /** Element to show inside the input on the left hand side. Usually reserved for Icons */
     prefix?: React.ReactNode;
+    /** Element to show inside the input on the right hand side. Usually reserved for Icons */
     suffix?: React.ReactNode;
     css?: any;
   };
-const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
+export const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
   (
     {
       size,
@@ -297,12 +301,18 @@ const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
   },
 );
 
-export interface InputProps extends Omit<BaseInputProps, 'status'> {
+export interface InputProps extends Omit<BaseInputProps, 'status' | 'hasPrefix' | 'hasSuffix'> {
+  /** The text label that will appear above the Input */
   label?: React.ReactNode;
+  /** Helper element that will be positioned to the top right of the Input */
   labelHelper?: React.ReactNode;
+  /** Paragraph that will appear beneath the label */
   description?: React.ReactNode;
+  /** If a status is present, this content will appear on the bottom of the Input */
   statusMessage?: React.ReactNode;
+  /** Paragraph that will appear on the bottom of the Input */
   textHelper?: React.ReactNode;
+  /** Set the status of the Input */
   status?:
     | StatusType
     | {
@@ -315,7 +325,7 @@ export interface InputProps extends Omit<BaseInputProps, 'status'> {
 /**
  * The Acceptor of User Information, Messenger of the Internet Gods.
  */
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
     { label, id, status, description, statusMessage, textHelper, labelHelper, ...restProps },
     ref,
@@ -371,5 +381,3 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 // Keeping flameName for compat with Group & inputBlock prop. Will be deprecated.
 // @ts-ignore
 Input.flameName = 'Input';
-
-export { Input, InputBackdrop, BaseInput };

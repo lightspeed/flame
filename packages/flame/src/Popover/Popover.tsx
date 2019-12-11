@@ -88,7 +88,7 @@ const PopperWrapper: React.FC<PopperWrapper> = ({
 /**
  * A small extension of an action taken, containing information, or more actions still.
  */
-const Popover: React.FC<PopoverProps> = ({
+export const Popover: React.FC<PopoverProps> = ({
   className,
   isOpen = false,
   target,
@@ -165,4 +165,5 @@ const Popover: React.FC<PopoverProps> = ({
   );
 };
 
-export { Popover, PopoverPlacement };
+// TODO: This needs to be removed since it potentially breaks
+export { PopoverPlacement };

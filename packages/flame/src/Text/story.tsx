@@ -83,7 +83,7 @@ stories.add('Body', () => (
         <Text>
           <BodyContent />
         </Text>
-        <Heading4>Heading 4</Heading4>
+        <Heading4 textTransform="lowercase">Heading 4</Heading4>
         <Text size="small">
           <BodyContent />
         </Text>

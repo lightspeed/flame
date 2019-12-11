@@ -194,8 +194,9 @@ const TooltipContainer = styled('div')<TooltipContainerProps>`
 `;
 
 interface TooltipWrapper extends TooltipContainerProps {
+  /** Element that will have the tooltip hover event bound to */
   targetRef?: React.RefObject<HTMLSpanElement>;
-  /** CSS class name */
+  /** CSS class name to be applied to the wrapper of the tooltip */
   className?: string;
   /** Sets the wrapper tag for Tooltip */
   tag?: string;
@@ -237,7 +238,7 @@ export interface TooltipProps extends TooltipWrapper {
   children: React.ReactNode;
   /** Text content of Tooltip */
   content: string;
-  /** Sets Tooltip visibility */
+  /** Sets whether or not to display the tooltip */
   active?: boolean;
 }
 
@@ -250,7 +251,7 @@ export interface TooltipProps extends TooltipWrapper {
 /**
  * An extra bit of information, contextualized to a portion of a UI.
  */
-const Tooltip: React.FC<TooltipProps> = ({
+export const Tooltip: React.FC<TooltipProps> = ({
   active,
   light,
   className,
@@ -305,4 +306,4 @@ const Tooltip: React.FC<TooltipProps> = ({
   );
 };
 
-export { Tooltip, TooltipPlacement };
+export { TooltipPlacement };
