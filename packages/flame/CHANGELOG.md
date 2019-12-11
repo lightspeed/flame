@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Set initial offset within the usePopper hook, instead of within the DropdownContainer to preserve old behavior. Offset should be handled via the hook anyways
+- Set initial offset within the usePopper hook, instead of within the DropdownContainer to preserve old behavior. Offset should be handled via the hook anyways ([#65](https://github.com/lightspeed/flame/pull/65))
 
 ## 1.2.7 - 2019-12-10
 
