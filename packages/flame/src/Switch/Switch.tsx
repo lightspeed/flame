@@ -113,7 +113,7 @@ export type SwitchProps = Merge<
   React.HTMLProps<HTMLInputElement>,
   {
     css?: any;
-    /** CSS class name */
+    /** CSS class name to apply to the wrapper component */
     className?: string;
     /** Sets the checked state of Switch */
     checked?: boolean;
@@ -122,7 +122,7 @@ export type SwitchProps = Merge<
 /**
  * A toggleable control which stays on (or off) until manually triggered once more.
  */
-const Switch: React.FC<SwitchProps> = ({ className, checked, ...restProps }) => (
+export const Switch: React.FC<SwitchProps> = ({ className, checked, ...restProps }) => (
   <WrapperLabel role="presentation" className={className}>
     <SwitchInput type="checkbox" checked={checked} value={checked ? 1 : 0} {...restProps} />
     <SwitchWrapper>
@@ -136,5 +136,3 @@ const Switch: React.FC<SwitchProps> = ({ className, checked, ...restProps }) => 
     </SwitchWrapper>
   </WrapperLabel>
 );
-
-export { Switch };

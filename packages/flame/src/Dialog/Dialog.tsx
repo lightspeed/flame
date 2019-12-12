@@ -42,7 +42,7 @@ export type DialogProps = Partial<OptionalProps> & {
 /**
  * A simpler Modal, Dialogs present users with a simple question and require a simple answer.
  */
-const Dialog: React.FC<DialogProps> = props => {
+export const Dialog: React.FC<DialogProps> = props => {
   const {
     type,
     title,
@@ -95,5 +95,3 @@ Dialog.defaultProps = {
   isLoading: false,
   scroll: false,
 };
-
-export { Dialog };

@@ -6,12 +6,13 @@ import { Box, Flex, FlameBoxProps } from '../Core';
 import { Divider } from '../Divider';
 
 interface TabsProps {
+  /** Highlight the nav to show that it's currently selected */
   active?: boolean;
 }
 /**
  * Top-level separation of related, but different sections.
  */
-const Tab = styled(Flex)<TabsProps>`
+export const Tab = styled(Flex)<TabsProps>`
   border-bottom: 3px solid transparent;
   cursor: pointer;
   justify-content: center;
@@ -42,7 +43,7 @@ Wrapper.defaultProps = {
   mx: 2,
 };
 
-const TabContainer: React.FC<FlameBoxProps> = ({ children, ...restProps }) => {
+export const TabContainer: React.FC<FlameBoxProps> = ({ children, ...restProps }) => {
   return (
     <Box {...restProps}>
       <Wrapper>{children}</Wrapper>
@@ -50,5 +51,3 @@ const TabContainer: React.FC<FlameBoxProps> = ({ children, ...restProps }) => {
     </Box>
   );
 };
-
-export { TabContainer, Tab };

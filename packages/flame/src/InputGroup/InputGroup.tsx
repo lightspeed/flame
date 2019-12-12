@@ -10,7 +10,7 @@ export interface InputGroupAddonProps
     BorderProps,
     Partial<Omit<ColorProps, 'color'>>,
     ZIndexProps {}
-const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
+export const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
   padding-left: ${themeGet('space.2')};
   padding-right: ${themeGet('space.2')};
   text-align: center;
@@ -29,7 +29,7 @@ const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
 /**
  * A wrapper component used to combine other components into a single cohesive whole.
  */
-const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps }) => {
+export const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps }) => {
   const nextChildren = React.Children.map(children, (child: any, index) => {
     if (!child) {
       return null;
@@ -67,6 +67,4 @@ const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps }) => {
   return <Flex {...restProps}>{nextChildren}</Flex>;
 };
 
-const BeThereOrBeSquare = InputGroup;
-
-export { InputGroup, InputGroupAddon, BeThereOrBeSquare };
+export const BeThereOrBeSquare = InputGroup;

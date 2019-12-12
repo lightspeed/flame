@@ -67,9 +67,9 @@ exports[`Text Snapshots should render Heading4 with appropriate styles 1`] = `
   -ms-letter-spacing: 0.09375rem;
   letter-spacing: 0.09375rem;
   font-weight: 700;
-  text-transform: uppercase;
   font-size: 0.75rem;
   line-height: 1.125rem;
+  text-transform: uppercase;
 }
 
 <h4

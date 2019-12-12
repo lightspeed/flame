@@ -20,6 +20,8 @@ const getStyledSystemDocsUrl = parentPropName => {
   switch (parentPropName) {
     case 'PositionProps':
       return 'https://styled-system.com/api#position';
+    case 'ColorProps':
+      return 'https://styled-system.com/api#color';
     case 'BorderProps':
       return 'https://styled-system.com/api#border';
     case 'BackgroundProps':
@@ -34,6 +36,70 @@ const getStyledSystemDocsUrl = parentPropName => {
       return 'https://styled-system.com/api#space';
     default:
       return 'https://styled-system.com/api';
+  }
+};
+
+const namespaceType = parentName => {
+  switch (parentName) {
+    case 'WidthProps':
+    case 'HeightProps':
+    case 'MinWidthProps':
+    case 'MinHeightProps':
+    case 'MaxWidthProps':
+    case 'MaxHeightProps':
+    case 'DisplayProps':
+    case 'VerticalAlignProps':
+    case 'SizeProps':
+      return 'LayoutProps';
+    case 'FontFamilyProps':
+    case 'FontSizeProps':
+    case 'FontWeightProps':
+    case 'LineHeightProps':
+    case 'LetterSpacingProps':
+    case 'FontStyleProps':
+    case 'TextAlignProps':
+      return 'TypographyProps';
+    case 'AlignItemsProps':
+    case 'AlignContentProps':
+    case 'JustifyItemsProps':
+    case 'JustifyContentProps':
+    case 'FlexWrapProps':
+    case 'FlexDirectionProps':
+    case 'FlexProps':
+    case 'FlexGrowProps':
+    case 'FlexShrinkProps':
+    case 'FlexBasisProps':
+    case 'JustifySelfProps':
+    case 'AlignSelfProps':
+    case 'OrderProps':
+      return 'FlexboxProps';
+    case 'ZIndexProp':
+    case 'TopProps':
+    case 'RightProps':
+    case 'BottomProps':
+    case 'LeftProps':
+      return 'PositionProps';
+    case 'BorderWidthProps':
+    case 'BorderStyleProps':
+    case 'BorderColorProps':
+    case 'BorderRadiusProps':
+    case 'BorderTopProps':
+    case 'BorderRightProps':
+    case 'BorderBottomProps':
+    case 'BorderLeftProps':
+      return 'BorderProps';
+    case 'borderRadius':
+    case 'borderTopLeftRadius':
+    case 'borderTopRightRadius':
+    case 'borderBottomLeftRadius':
+    case 'borderBottomRightRadius':
+      return 'BorderRadiusProps';
+    case 'TextColorProps':
+    case 'BackgroundColorProps':
+    case 'OpacityProps':
+      return 'ColorProps';
+    default:
+      return parentName;
   }
 };
 
@@ -54,15 +120,17 @@ const componentjsonStructure = filePaths.reduce((acc, file) => {
       if (
         value.parent &&
         value.parent.fileName &&
-        value.parent.fileName.includes(styledSystemFileName)
+        (value.parent.fileName.includes(styledSystemFileName) ||
+          value.parent.fileName.includes('Core/index'))
       ) {
         return {
           ...acc2,
-          [value.parent.name]: {
+          [namespaceType(value.parent.name)]: {
             description: `Styled System Properties. Please consult the appropriate documentation on ${getStyledSystemDocsUrl(
-              value.parent.name,
+              namespaceType(value.parent.name),
             )}`,
-            name: value.parent.name,
+            documentationUrl: getStyledSystemDocsUrl(namespaceType(value.parent.name)),
+            name: namespaceType(value.parent.name),
           },
         };
       }

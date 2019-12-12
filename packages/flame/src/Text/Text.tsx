@@ -174,6 +174,7 @@ Heading3.defaultProps = {
 export const Heading4 = styled(BaseText)<TextProps>`
   font-size: ${themeGet('fontSizes.xsmall')};
   line-height: ${themeGet('lineHeights.3')};
+  text-transform: uppercase;
 `.withComponent('h4');
 
 Heading4.defaultProps = {
@@ -181,7 +182,6 @@ Heading4.defaultProps = {
   fontWeight: 'bold',
   color: 'textHeading',
   letterSpacing: 3,
-  textTransform: 'uppercase',
 };
 
 const textlinkColor = (props: any) =>

@@ -8,7 +8,7 @@ import { IconCheckmark } from '../Icon/Checkmark';
 import { TextProps } from '../Text';
 import { RadioLabel } from '../Radio';
 
-const CheckboxLabel = RadioLabel;
+export const CheckboxLabel = RadioLabel;
 
 const Wrapper = styled('div')`
   position: relative;
@@ -94,10 +94,12 @@ const CheckboxInput = styled('input')<{ indeterminate: boolean }>`
 
 export type CheckboxDescriptionProps = Merge<React.HTMLProps<HTMLDivElement>, TextProps>;
 export interface BaseCheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  /** Set the checkbox to an indeterminate state */
   indeterminate?: boolean;
+  /** Set the checkbox to a checked state */
   checked?: boolean;
 }
-const BaseCheckbox = React.forwardRef<HTMLInputElement, BaseCheckboxProps>(
+export const BaseCheckbox = React.forwardRef<HTMLInputElement, BaseCheckboxProps>(
   ({ indeterminate, checked, css, className, ...restProps }, ref) => (
     <Wrapper css={css} className={className}>
       <CheckboxInput
@@ -116,13 +118,15 @@ const BaseCheckbox = React.forwardRef<HTMLInputElement, BaseCheckboxProps>(
 );
 
 export interface CheckboxProps extends BaseCheckboxProps {
+  /** The label text that appears right besides the checkbox */
   label?: React.ReactNode;
+  /** Helper text that will be inserted below the checkbox */
   description?: React.ReactNode;
 }
 /**
  * Used to specify choices among large groups of options.
  */
-const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
+export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   ({ label, id, description, disabled, css, className, ...restProps }, ref) => (
     <CheckboxLabel
       htmlFor={id}
@@ -136,5 +140,3 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
     </CheckboxLabel>
   ),
 );
-
-export { Checkbox, CheckboxLabel, BaseCheckbox };

@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Merge more styled system props via the docgen script ([#67](https://github.com/lightspeed/flame/pull/67))
+- Leverage inlined named exports instead of an named export object to help the ts doc parser ([#67](https://github.com/lightspeed/flame/pull/67))
+
 ## 1.2.8 - 2019-12-11
 
 ### Fixed
