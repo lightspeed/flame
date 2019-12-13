@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Add esm builds and their associated esm types to final dist output
+- Add esm builds and their associated esm types to final dist output ([#67](https://github.com/lightspeed/flame/pull/67))
 
 ## 1.2.9 - 2019-12-12
 
