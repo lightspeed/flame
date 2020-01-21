@@ -89,4 +89,13 @@ describe('<Checkbox />', () => {
       getByText('my description');
     });
   });
+
+  describe('Behaviours', () => {
+    it('handles indeterminate state at the DOM level', () => {
+      const ref = React.createRef<HTMLInputElement>();
+      customRender(<Checkbox indeterminate ref={ref} />);
+
+      expect(ref.current.indeterminate).toBeTruthy();
+    });
+  });
 });
