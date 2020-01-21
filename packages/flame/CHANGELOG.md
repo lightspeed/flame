@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Add in indeterminate state at the DOM level for Checkbox component
+- Add in indeterminate state at the DOM level for Checkbox component ([#73](https://github.com/lightspeed/flame/pull/73))
 
 ## 1.2.10 - 2019-12-17
 
