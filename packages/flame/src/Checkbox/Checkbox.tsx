@@ -100,21 +100,33 @@ export interface BaseCheckboxProps extends React.InputHTMLAttributes<HTMLInputEl
   checked?: boolean;
 }
 export const BaseCheckbox = React.forwardRef<HTMLInputElement, BaseCheckboxProps>(
-  ({ indeterminate, checked, css, className, ...restProps }, ref) => (
-    <Wrapper css={css} className={className}>
-      <CheckboxInput
-        ref={ref}
-        type="checkbox"
-        indeterminate={indeterminate}
-        checked={checked}
-        {...restProps}
-      />
-      <CheckboxCheckmarkWrapper indeterminate={indeterminate}>
-        <StyledIcon size="0.65rem" />
-        {indeterminate && !checked && <CheckboxIndeterminate />}
-      </CheckboxCheckmarkWrapper>
-    </Wrapper>
-  ),
+  ({ indeterminate, checked, css, className, ...restProps }, ref) => {
+    return (
+      <Wrapper css={css} className={className}>
+        <CheckboxInput
+          ref={innerRef => {
+            if (innerRef) {
+              // eslint-disable-next-line no-param-reassign
+              innerRef.indeterminate = !checked && indeterminate;
+            }
+
+            if (ref) {
+              // @ts-ignore
+              typeof ref === 'function' ? ref(innerRef) : (ref.current = innerRef); // eslint-disable-line no-param-reassign
+            }
+          }}
+          type="checkbox"
+          indeterminate={indeterminate}
+          checked={checked}
+          {...restProps}
+        />
+        <CheckboxCheckmarkWrapper indeterminate={indeterminate}>
+          <StyledIcon size="0.65rem" />
+          {indeterminate && !checked && <CheckboxIndeterminate />}
+        </CheckboxCheckmarkWrapper>
+      </Wrapper>
+    );
+  },
 );
 
 export interface CheckboxProps extends BaseCheckboxProps {

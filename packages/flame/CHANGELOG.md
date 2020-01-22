@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Add in indeterminate state at the DOM level for Checkbox component ([#73](https://github.com/lightspeed/flame/pull/73))
+
 ## 1.2.10 - 2019-12-17
 
 ### Fixed
