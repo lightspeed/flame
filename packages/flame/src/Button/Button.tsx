@@ -177,53 +177,59 @@ export type ButtonProps = Merge<
 /**
  * Buttons are used to take action or confirm a decision. They help merchants get things done.
  */
-export const Button: React.FunctionComponent<ButtonProps> = ({
-  loading,
-  children,
-  size,
-  noSpacing,
-  fill,
-  variant,
-  forcedState,
-  className,
-  disabled,
-  ...restProps
-}) => {
-  const iconAdjustments = loneIconAdjustments(children, size);
+export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+  (
+    {
+      loading,
+      children,
+      size,
+      noSpacing,
+      fill,
+      variant,
+      forcedState,
+      className,
+      disabled,
+      ...restProps
+    },
+    ref,
+  ) => {
+    const iconAdjustments = loneIconAdjustments(children, size);
 
-  const nextChildren = React.Children.map(children, child => remapChild(child, size));
-  const LinkifiedButton = restProps.href
-    ? ExtendedBaseButton.withComponent('a')
-    : ExtendedBaseButton;
+    const nextChildren = React.Children.map(children, child => remapChild(child, size));
+    const LinkifiedButton = restProps.href
+      ? ExtendedBaseButton.withComponent('a')
+      : ExtendedBaseButton;
 
-  const nextForceState = forcedState && `cr-button--${forcedState}`;
-  const isDisabled = loading || disabled;
+    const nextForceState = forcedState && `cr-button--${forcedState}`;
+    const isDisabled = loading || disabled;
 
-  // TODO: Need to rework or split off the link buttons from the main component.
-  // It causes some gnarly typing errors and overloads the component with even
-  // more useless logic, since emotion supports the `as` prop anyways...
-  return (
-    // @ts-ignore
-    <LinkifiedButton
-      isFillButton={fill}
-      size={size}
-      disabled={isDisabled}
-      variant={variant === 'default' ? 'neutral' : variant}
-      className={[className, nextForceState].join(' ')}
-      {...iconAdjustments}
-      {...(restProps as any)}
-    >
-      {loading && (
-        <SpinnerWrapper title="Loading...">
-          <StyledSpinner fill={fill} variant={variant} size={size} />
-        </SpinnerWrapper>
-      )}
-      <ChildWrapper noSpacing={noSpacing} isLoading={loading}>
-        {nextChildren}
-      </ChildWrapper>
-    </LinkifiedButton>
-  );
-};
+    // TODO: Need to rework or split off the link buttons from the main component.
+    // It causes some gnarly typing errors and overloads the component with even
+    // more useless logic, since emotion supports the `as` prop anyways...
+    return (
+      // @ts-ignore
+      <LinkifiedButton
+        ref={ref}
+        isFillButton={fill}
+        size={size}
+        disabled={isDisabled}
+        variant={variant === 'default' ? 'neutral' : variant}
+        className={[className, nextForceState].join(' ')}
+        {...iconAdjustments}
+        {...(restProps as any)}
+      >
+        {loading && (
+          <SpinnerWrapper title="Loading...">
+            <StyledSpinner fill={fill} variant={variant} size={size} />
+          </SpinnerWrapper>
+        )}
+        <ChildWrapper noSpacing={noSpacing} isLoading={loading}>
+          {nextChildren}
+        </ChildWrapper>
+      </LinkifiedButton>
+    );
+  },
+);
 
 Button.defaultProps = {
   size: 'medium',
