@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Pin versions for `styled-system` and `@types/styled-system`
+- Pin versions for `styled-system` and `@types/styled-system` ([#76](https://github.com/lightspeed/flame/pull/76))
 
 ## 1.2.11 - 2020-01-23
 
