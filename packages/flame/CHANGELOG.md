@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Changed
 
-- Update `textDimmed` alias color to `gray-600` for flame theme ([#78](https://github.com/lightspeed/flame/pull/78))
+- Update `textDimmed` color alias to `gray-600` for flame theme ([#78](https://github.com/lightspeed/flame/pull/78))
 
 ## 1.2.12 - 2020-02-17
 
