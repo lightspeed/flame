@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Changed
+
+- Dimmed font to `gray-600` ([#78](https://github.com/lightspeed/flame/pull/78))
+
+
 ## 1.2.12 - 2020-02-17
 
 ### Fixed
