@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Added
+
+- `slice` and `money-sent` icons ([#80](https://github.com/lightspeed/flame/pull/80))
+
 ## 1.2.12 - 2020-02-17
 
 ### Fixed
