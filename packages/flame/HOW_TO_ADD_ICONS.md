@@ -11,6 +11,12 @@ yarn bootstrap
 
 This script will generate the React components and the Icon sprite.
 
+```sh
+yarn run-svgo
+```
+
+Will cleanup the added svg(s) and do the proper alignment
+
 Note that this command will be run automatically when in [local development](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md#launch-storybook-for-local-development) and when we publish to npm.
 
 ## Designing icons
