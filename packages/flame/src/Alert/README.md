@@ -46,3 +46,33 @@ const MyComponent = () => (
 
 export default MyComponent;
 ```
+
+## AlertInCard
+
+A specially stylized Alert meant to be used within the `<Card />` component.
+
+### Props
+
+| Prop                  | Type                                      | Description                                |
+| --------------------- | ----------------------------------------- | ------------------------------------------ |
+| `type`                | `info`, `warning`, `danger`, or `success` | default is `info`                          |
+| `onClose`             | `fn()`                                    | custom `fn(event)` passed the event object |
+| `noCloseBtn`          | `boolean`                                 |                                            |
+| `children` (required) | `any`                                     | The content of the alert                   |
+
+### Example
+
+```js
+import React from 'react';
+import { AlertInCard } from '@lightspeed/flame/Alert';
+
+const MyComponent = () => (
+  <Card>
+    <AlertInCard type="info">
+      Alert content
+    </Alert>
+  </Card>
+);
+
+export default MyComponent;
+```
