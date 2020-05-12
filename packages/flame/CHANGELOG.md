@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Added
+
+- New `<AlertInCard />` component
+
+### Fixed
+
+- Icons in `<Alert />` will now automatically assign the right color that matches the type of Alert
+
 ## 1.4.0 - 2020-05-04
 
 ### Added
