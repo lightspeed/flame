@@ -11,11 +11,12 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Added
 
-- New `<AlertInCard />` component
+- New `<AlertInCard />` component ([#82](https://github.com/lightspeed/flame/pull/82))
 
 ### Fixed
 
-- Icons in `<Alert />` will now automatically assign the right color that matches the type of Alert
+- Icons in `<Alert />` will now automatically assign the right color that matches the type of Alert ([#82](https://github.com/lightspeed/flame/pull/82))
+- Icons in `<Alert />` will now be properly centered ([#82](https://github.com/lightspeed/flame/pull/82))
 
 ## 1.4.0 - 2020-05-04
 
