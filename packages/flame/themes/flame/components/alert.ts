@@ -26,7 +26,7 @@ const alertVariants: AlertVariants = {
     background: colors['orange-50'],
     borderColor: colors['orange-500'],
     '.fl-alert__icon svg': {
-      fill: 'orange',
+      fill: 'warning',
     },
   },
 };
@@ -57,7 +57,7 @@ const alertInCardVariants = {
     bg: 'orange-50',
     borderColor: 'orange-100',
     '.fl-alert__icon svg': {
-      fill: 'orange',
+      fill: 'warning',
     },
   },
 };

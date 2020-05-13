@@ -39,7 +39,7 @@ const AlertInCard: React.FC<Props> = ({
       })}
       {...restProps}
     >
-      <Flex className="fl-alert__icon" flex={0}>
+      <Flex className="fl-alert__icon" flex={0} mt="-1px">
         <AlertIcons type={type} />
       </Flex>
       <div css={css({ flex: '1', pl: 2, fontSize: ['text', 'text-s'] })}>{children}</div>

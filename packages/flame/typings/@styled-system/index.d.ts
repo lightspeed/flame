@@ -17,5 +17,4 @@ declare module '@styled-system/theme-get';
 
 declare module '@styled-system/css' {
   export function css(input?: SystemStyleObject): InterpolationWithTheme<any>;
-  export default css;
 }
