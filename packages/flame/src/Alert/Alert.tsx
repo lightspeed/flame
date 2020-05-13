@@ -59,16 +59,16 @@ export const Alert: React.FC<AlertProps & SpaceProps> = ({
         alignItems: 'flex-start',
         boxShadow:
           '0 0 0 1px rgba(0, 0, 0, 0.06), 0 3px 6px 0 rgba(0, 0, 0, 0.03), 0 1px 2px 0 rgba(0, 0, 0, 0.1)',
-        borderTop: '4px solid',
+        borderTop: '3px solid',
         borderRadius: 'radius-2',
-        px: 2,
-        py: 3,
+        px: 3,
+        py: 2,
         variant: `alertVariants.${type}`,
       })}
       {...restProps}
     >
       <Flex flex="1">
-        <Box flex="1" css={css({ position: 'relative', pl: icon ? 4 : 1 })}>
+        <Box flex="1" css={css({ position: 'relative', pl: icon ? 5 : 1 })}>
           <Flex className="fl-alert__icon" css={{ position: 'absolute', left: '0px', top: '2px' }}>
             {icon}
           </Flex>
