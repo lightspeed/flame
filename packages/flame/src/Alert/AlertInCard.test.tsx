@@ -10,7 +10,7 @@ describe('AlertInCard ', () => {
 
   it('removes close button', () => {
     const { queryByText, getByRole } = customRender(
-      <AlertInCard type="info">Hello World</AlertInCard>,
+      <AlertInCard type="success">Hello World</AlertInCard>,
     );
     fireEvent.click(getByRole('button'));
     expect(queryByText('Hello World')).toBeFalsy();
@@ -18,7 +18,7 @@ describe('AlertInCard ', () => {
 
   it('does not render the close button', () => {
     const { queryByRole } = customRender(
-      <AlertInCard type="info" noCloseBtn>
+      <AlertInCard type="warning" noCloseBtn>
         Hello World
       </AlertInCard>,
     );
@@ -29,7 +29,9 @@ describe('AlertInCard ', () => {
   it('accepts a custom handleClose function', () => {
     const handleClose = jest.fn();
     const { getByRole } = customRender(
-      <AlertInCard onClose={handleClose}>Hello World</AlertInCard>,
+      <AlertInCard type="danger" onClose={handleClose}>
+        Hello World
+      </AlertInCard>,
     );
 
     expect(handleClose).not.toHaveBeenCalled();
