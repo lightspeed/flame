@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## 1.5.0 - 2020-05-13
+
+### Updated
+
+- `small-arrow-up`, `small-arrow-up-right`, `small-arrow-right`, `small-arrow-down-right`, `small-arrow-down`, `small-arrow-down-left`, `small-arrow-left`, `small-arrow-up-left`, and `external-link` icons ([#83](https://github.com/lightspeed/flame/pull/83))
+
 ## 1.4.0 - 2020-05-04
 
 ### Added
