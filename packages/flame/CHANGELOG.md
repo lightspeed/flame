@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Added
 
-- Add Subscription and Plan icons ([#XX](https://github.com/lightspeed/flame/pull/XX))
+- Add Subscription and Plan icons ([#85](https://github.com/lightspeed/flame/pull/85))
 
 ## 1.5.0 - 2020-05-20
 
