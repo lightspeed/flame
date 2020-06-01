@@ -19,6 +19,18 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 - Icons in `<Alert />` will now automatically assign the right color that matches the type of Alert ([#82](https://github.com/lightspeed/flame/pull/82))
 - Icons in `<Alert />` will now be properly centered ([#82](https://github.com/lightspeed/flame/pull/82))
 
+## 1.6.0 - 2020-05-25
+
+### Added
+
+- Add Subscription and Plan icons ([#85](https://github.com/lightspeed/flame/pull/85))
+
+## 1.5.0 - 2020-05-20
+
+### Updated
+
+- `small-arrow-up`, `small-arrow-up-right`, `small-arrow-right`, `small-arrow-down-right`, `small-arrow-down`, `small-arrow-down-left`, `small-arrow-left`, `small-arrow-up-left`, and `external-link` icons ([#83](https://github.com/lightspeed/flame/pull/83))
+
 ## 1.4.0 - 2020-05-04
 
 ### Added
