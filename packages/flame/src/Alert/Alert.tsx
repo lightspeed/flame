@@ -3,6 +3,7 @@ import { SpaceProps } from 'styled-system';
 import css from '@styled-system/css';
 
 import { CloseButton } from './CloseButton';
+import { AlertIcons } from './AlertIcons';
 
 import { Flex, Box } from '../Core';
 import { Text } from '../Text';
@@ -68,9 +69,9 @@ export const Alert: React.FC<AlertProps & SpaceProps> = ({
       {...restProps}
     >
       <Flex flex="1">
-        <Box flex="1" css={css({ position: 'relative', pl: icon ? 5 : 1 })}>
+        <Box flex="1" css={css({ position: 'relative', pl: 5 })}>
           <Flex className="fl-alert__icon" css={{ position: 'absolute', left: '0px', top: '2px' }}>
-            {icon}
+            {icon || <AlertIcons type={type} />}
           </Flex>
           {title && (
             <Text color="textHeading" fontWeight="bold" fontSize="text" mt={0} mr={0} mb={1} ml={0}>

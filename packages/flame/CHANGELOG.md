@@ -12,6 +12,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 ### Added
 
 - New `<AlertInCard />` component ([#82](https://github.com/lightspeed/flame/pull/82))
+- `<Alert />` component will now automatically inject the right icons as per DSD specs ([#82](https://github.com/lightspeed/flame/pull/82))
 
 ### Fixed
 

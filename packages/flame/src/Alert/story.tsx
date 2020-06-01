@@ -23,7 +23,6 @@ const Alerts = () => (
           key={type}
           type={type}
           title={`${type[0].toUpperCase().concat(type.slice(1))}`}
-          icon={<AlertIcons type={type} />}
           mb={2}
         >
           <Text as="p" m={0}>
