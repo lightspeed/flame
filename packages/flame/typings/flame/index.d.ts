@@ -16,18 +16,30 @@ declare interface AlertVariants {
   success: {
     background: string;
     borderColor: string;
+    '.fl-alert__icon svg'?: {
+      fill: string;
+    };
   };
   info: {
     background: string;
     borderColor: string;
+    '.fl-alert__icon svg'?: {
+      fill: string;
+    };
   };
   danger: {
     background: string;
     borderColor: string;
+    '.fl-alert__icon svg'?: {
+      fill: string;
+    };
   };
   warning: {
     background: string;
     borderColor: string;
+    '.fl-alert__icon svg'?: {
+      fill: string;
+    };
   };
 }
 
@@ -640,6 +652,7 @@ declare interface NpsStyles {
 declare interface FlameUI {
   colors: Record<any, any>;
   alertVariants: AlertVariants;
+  alertInCardVariants?: any;
   badgeVariants: BadgeVariants;
   buttonVariants: ButtonVariants;
   buttonIconVariants: ButtonIconVariants;
