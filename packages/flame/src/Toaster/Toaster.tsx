@@ -6,7 +6,6 @@ import {
   ToastProviderProps,
   ToastProps,
   useToasts as useReactToastNotifications,
-  AppearanceTypes,
   Options,
 } from 'react-toast-notifications';
 
@@ -17,7 +16,7 @@ import { Box, Flex } from '../Core';
 
 const toastStates = {
   entering: { transform: 'translate3d(0, 120%, 0)', opacity: 0 },
-  entered: { transform: 'translate3d(0,0,0.1%)', opacity: 1 },
+  entered: { transform: 'translate3d(0,0,0)', opacity: 1 },
   exiting: { transform: 'translate3d(0, 120%, 0)', opacity: 0 },
   exited: { transform: 'translate3d(0, 120%, 0)', opacity: 0 },
 };
@@ -29,13 +28,11 @@ interface CountdownProps {
   autoDismissTimeout: number;
   opacity: number;
   isRunning: boolean;
-  appearance?: AppearanceTypes;
 }
 const Countdown: React.FC<CountdownProps> = ({
   autoDismissTimeout,
   opacity,
   isRunning,
-  appearance = 'success',
   ...props
 }) => (
   <div
@@ -65,6 +62,9 @@ const Toaster: React.FC<ToastProps> = ({
 }) => {
   const [height, setHeight] = React.useState<string | number>('auto');
   const elementRef = React.useRef(null);
+  // Only allow success or error, since the DSD specs says that
+  // these are the only two possibilities
+  const nextAppearance = appearance !== 'success' ? 'error' : 'success';
 
   React.useEffect(() => {
     if (transitionState === 'entered') {
@@ -82,7 +82,8 @@ const Toaster: React.FC<ToastProps> = ({
       style={{ height }}
       css={css({
         transition: `height ${transitionDuration - 100}ms 100ms`,
-        variant: `toasterVariants.${appearance}`,
+        variant: `toasterVariants.${nextAppearance}`,
+        pointerEvents: 'all',
       })}
       className="fl-toaster"
     >
@@ -103,7 +104,7 @@ const Toaster: React.FC<ToastProps> = ({
       >
         <Flex role="alert" width="100%" alignItems="center" my={2} className="fl-toaster__wrapper">
           <Box ml={3} lineHeight={1} aria-hidden="true" className="fl-toaster__icon">
-            {appearance === 'error' ? (
+            {nextAppearance === 'error' ? (
               <IconDanger color="danger" />
             ) : (
               <IconVerified color="primary" />
@@ -146,7 +147,6 @@ const Toaster: React.FC<ToastProps> = ({
           opacity={autoDismiss ? 1 : 0}
           autoDismissTimeout={autoDismissTimeout}
           isRunning={isRunning}
-          appearance={appearance}
         />
       </div>
     </div>
@@ -168,6 +168,7 @@ const ToasterContainer: React.FC = ({ children }) => (
       zIndex: 1000,
       bottom: 0,
       flexDirection: 'column',
+      pointerEvents: 'none',
     }}
   >
     {children}
@@ -224,19 +225,26 @@ const ActionableToastContent: React.FC<ActionableToastContent> = ({
   </React.Fragment>
 );
 
-interface ActionableContent {
+type RestrictedOptions = Options & { appearance: 'success' | 'error' };
+type RestrictedAddToast = (
+  content: React.ReactNode,
+  options?: RestrictedOptions,
+  callback?: (id: string) => void,
+) => void;
+type ActionableContent = {
   content: React.ReactNode;
   actionTitle: string;
   actionCallback: () => void;
-}
+};
 // Augment the default `useToasts` hook with some of our stuff
+// Also, restrict the types a bit since the DSD only allows 2 types of
+// Toast styles
 function useToasts() {
-  const baseToast = useReactToastNotifications();
-  const addToast = baseToast.addToast;
+  const { addToast: baseAddToast, ...rest } = useReactToastNotifications();
 
   const addActionableToast = React.useCallback(
-    (params: ActionableContent, options?: Options, cb?: (id: string) => void) => {
-      addToast(
+    (params: ActionableContent, options?: RestrictedOptions, cb?: (id: string) => void) => {
+      baseAddToast(
         <ActionableToastContent
           actionTitle={params.actionTitle}
           actionCallback={params.actionCallback}
@@ -247,12 +255,15 @@ function useToasts() {
         cb,
       );
     },
-    [addToast],
+    [baseAddToast],
   );
 
+  const addToast = baseAddToast as RestrictedAddToast;
+
   return {
-    ...baseToast,
+    addToast,
     addActionableToast,
+    ...rest,
   };
 }
 
