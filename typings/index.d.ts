@@ -1,3 +1,5 @@
+import { CSSObject } from '@emotion/core';
+
 declare global {
   declare module '*.svg';
   declare module '*.json';
