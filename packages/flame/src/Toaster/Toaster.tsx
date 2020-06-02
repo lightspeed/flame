@@ -93,8 +93,8 @@ const Toaster: React.FC<ToastProps> = ({
           boxShadow: 0,
           marginBottom: `${gutter}px`,
           transition: `transform ${transitionDuration}ms cubic-bezier(0.2, 0, 0, 1), opacity ${transitionDuration}ms`,
-          minWidth: '345px',
-          maxWidth: '600px',
+          minWidth: ['300px', '345px'],
+          maxWidth: ['300px', '600px', '600px'],
           overflow: 'hidden',
           position: 'relative',
           ...toastStates[transitionState],
@@ -114,7 +114,7 @@ const Toaster: React.FC<ToastProps> = ({
             fontWeight="bold"
             ml={2}
             justifyContent="space-between"
-            fontSize="text-s"
+            fontSize={['text', 'text-s']}
             width="100%"
             className="fl-toaster__content"
           >
@@ -215,8 +215,8 @@ const ActionableToastContent: React.FC<ActionableToastContent> = ({
         padding: 0,
         cursor: 'pointer',
         fontWeight: 'bold',
-        color: '#2e61de',
-        fontSize: 'text-s',
+        ml: 2,
+        fontSize: ['text', 'text-s'],
       })}
     >
       {actionTitle}
