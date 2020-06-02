@@ -70,9 +70,9 @@ import { themeGet as baseThemeGet } from '@styled-system/theme-get';
 
 ${types}
 
-type ThemePath<T> = T | flameTheme;
+type ThemePath = flameTheme;
 
-function themeGet<T>(path: ThemePath<T>, defaultValue?: string) {
+function themeGet(path: ThemePath, defaultValue?: string) {
   return function drill(props: { theme? : any }) {
     return baseThemeGet(path, defaultValue)(props);
   };
