@@ -3,11 +3,13 @@ import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 import Readme from './README.md';
 import { ToasterProvider, useToasts } from './index';
+import { ActionableToastContent, Toaster } from './Toaster';
 import { Button } from '../Button';
 import { Heading2 } from '../Text';
 
 const stories = storiesOf('Components|Toaster', module).addDecorator(withReadme(Readme));
 
+const noop = () => {};
 const Spacer: React.FC = ({ children }) => {
   const nextChildren = React.Children.map(children, child => (
     <div css={{ margin: '8px' }}>{child}</div>
@@ -166,6 +168,65 @@ stories.add(
       </div>
     </ToasterProvider>
   ),
-
   { percy: { skip: true } },
 );
+
+stories.add('percy snapshots', () => {
+  const commonProps = {
+    autoDismiss: false,
+    autoDismissTimeout: 1000,
+    transitionDuration: 1000,
+    isRunning: false,
+    onDismiss: noop,
+    onMouseEnter: noop,
+    onMouseLeave: noop,
+    placement: 'bottom-center' as 'bottom-center',
+    transitionState: 'entered' as 'entered',
+  };
+
+  return (
+    <ToasterProvider>
+      <div>
+        <Toaster appearance="success" {...commonProps}>
+          This is a success toaster
+        </Toaster>
+
+        <Toaster appearance="error" {...commonProps}>
+          This is a failure toaster
+        </Toaster>
+
+        <Toaster appearance="success" {...commonProps} autoDismiss>
+          This is a success toaster
+        </Toaster>
+
+        <Toaster appearance="error" {...commonProps} autoDismiss>
+          This is a success toaster
+        </Toaster>
+
+        <Toaster appearance="success" {...commonProps}>
+          <ActionableToastContent actionCallback={noop} actionTitle="Undo">
+            This is a success toaster with action
+          </ActionableToastContent>
+        </Toaster>
+
+        <Toaster appearance="error" {...commonProps}>
+          <ActionableToastContent actionCallback={noop} actionTitle="Undo">
+            This is a success toaster with action
+          </ActionableToastContent>
+        </Toaster>
+
+        <Toaster appearance="success" {...commonProps} autoDismiss>
+          <ActionableToastContent actionCallback={noop} actionTitle="Undo">
+            This is a success toaster with action
+          </ActionableToastContent>
+        </Toaster>
+
+        <Toaster appearance="error" {...commonProps} autoDismiss>
+          <ActionableToastContent actionCallback={noop} actionTitle="Undo">
+            This is a success toaster with action
+          </ActionableToastContent>
+        </Toaster>
+      </div>
+    </ToasterProvider>
+  );
+});

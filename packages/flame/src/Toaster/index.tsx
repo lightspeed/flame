@@ -1,3 +1,3 @@
-import { Toaster, ToasterProvider, useToasts } from './Toaster';
+import { ToasterProvider, useToasts } from './Toaster';
 
-export { Toaster, ToasterProvider, useToasts };
+export { ToasterProvider, useToasts };

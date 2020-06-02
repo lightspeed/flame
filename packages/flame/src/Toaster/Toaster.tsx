@@ -94,6 +94,7 @@ const Toaster: React.FC<ToastProps> = ({
           marginBottom: `${gutter}px`,
           transition: `transform ${transitionDuration}ms cubic-bezier(0.2, 0, 0, 1), opacity ${transitionDuration}ms`,
           minWidth: '345px',
+          maxWidth: '600px',
           overflow: 'hidden',
           position: 'relative',
           ...toastStates[transitionState],
@@ -256,4 +257,4 @@ function useToasts() {
   };
 }
 
-export { Toaster, ToasterProvider, useToasts };
+export { Toaster, ToasterProvider, useToasts, ActionableToastContent };

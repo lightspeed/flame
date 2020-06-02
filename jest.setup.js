@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import 'jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
 import * as emotion from 'emotion';
 import { createSerializer, matchers as emotionMatchers } from 'jest-emotion';
