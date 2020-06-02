@@ -7,15 +7,25 @@ Toaster inform users on the outcome of an action. They appear temporarily, towar
 First, wrap your application with the `<ToasterProvider>` component.
 
 ```jsx
-import * as React from 'react';
+// App.js
+import React from 'react';
+import { FlameTheme, FlameGlobalStyles } from '@lightspeed/flame/Core';
 import { ToasterProvider } from '@lightspeed/flame/Toaster';
 
-const App = () => <ToasterProvider>{/* The rest of your app */}</ToasterProvider>;
+const App = () => (
+  <FlameTheme>
+    <FlameGlobalStyles />
+    <ToasterProvider>
+      <div>{/* The rest of your app */}</div>
+    </ToasterProvider>
+  </FlameTheme>
+);
 ```
 
 Once that is done, you may use the provided hooks to generate a toast notification.
 
 ```jsx
+// MyComponent.js
 import * as React from 'react';
 import { useToast } from '@lightspeed/flame/Toaster';
 
@@ -26,7 +36,7 @@ const MyComponent = () => {
       type="button"
       onClick={() =>
         addToast('This is a toast', {
-          appearance: 'success', // set to 'error' for a red toast
+          appearance: 'success', // set to 'error' for a red error toast
           autoDismiss: false, // set to true to have a timer that automatically closes it
         })
       }
@@ -37,13 +47,13 @@ const MyComponent = () => {
 };
 ```
 
-## React Components
+## Components
 
 ### `<ToasterProvider />`
 
 A pre-configured `ToastProvider` from the [react-toast-notifications](https://github.com/jossmac/react-toast-notifications) library.
 
-Please consult it's documentation for a full list of all the props available.
+Please consult its documentation for a full list of all the props available.
 
 ### `useToast()`
 
