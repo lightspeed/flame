@@ -4,6 +4,7 @@ import css from '@styled-system/css';
 import { AlertIcons } from './AlertIcons';
 import { CloseButton } from './CloseButton';
 import { Flex } from '../Core';
+import { Text } from '../Text';
 
 interface Props {
   type?: string;
@@ -42,9 +43,11 @@ const AlertInCard: React.FC<Props> = ({
       <Flex className="fl-alert__icon" flex={0} mt="-1px">
         <AlertIcons type={type} />
       </Flex>
-      <div css={css({ flex: '1', pl: 2, fontSize: ['text', 'text-s'] })}>{children}</div>
+      <Text css={css({ flex: '1' })} fontSize={['text', 'text-s']} lineHeight={[3, 2]} pl={2}>
+        {children}
+      </Text>
       {!noCloseBtn && (
-        <Flex css={css({ flex: '0' })}>
+        <Flex flex={0}>
           <CloseButton onClick={handleClose} />
         </Flex>
       )}

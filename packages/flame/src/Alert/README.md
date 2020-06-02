@@ -8,14 +8,14 @@ First, make sure you have been through the [Getting started](https://github.com/
 
 ### Props
 
-| Prop                  | Type                                      | Description                                                                                           |
-| --------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `type`                | `info`, `warning`, `danger`, or `success` | default is `info`                                                                                     |
-| `icon`                | `React.ReactNode`                         | An [icon](https://lightspeed-flame.netlify.com/?path=/story/icon--story) to place inside of the alert |
-| `title`               | `string`                                  |                                                                                                       |
-| `onClose`             | `fn()`                                    | custom `fn(event)` passed the event object                                                            |
-| `noCloseBtn`          | `boolean`                                 |                                                                                                       |
-| `children` (required) | `any`                                     | The content of the alert                                                                              |
+| Prop                  | Type                                      | Description                                                                                                                                                                                                 |
+| --------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`                | `info`, `warning`, `danger`, or `success` | default is `info`                                                                                                                                                                                           |
+| `icon`                | `React.ReactNode`                         | An [icon](https://lightspeed-flame.netlify.com/?path=/story/icon--story) to place inside of the alert. Will default to a preset icon if none is passed. This prop will be removed in the next major version |
+| `title`               | `string`                                  |                                                                                                                                                                                                             |
+| `onClose`             | `fn()`                                    | custom `fn(event)` passed the event object                                                                                                                                                                  |
+| `noCloseBtn`          | `boolean`                                 |                                                                                                                                                                                                             |
+| `children` (required) | `any`                                     | The content of the alert                                                                                                                                                                                    |
 
 ### Styled System props
 
@@ -38,7 +38,7 @@ const MyComponent = () => (
     <Alert type="info" title="My Title" mb={2}>
       Alert content with bottom margin
     </Alert>
-    <Alert type="warning" icon={<IconWarning color="orange" />} title="My Title" mb={2}>
+    <Alert type="warning" title="My Title" mb={2}>
       Alert content with icon
     </Alert>
   </div>

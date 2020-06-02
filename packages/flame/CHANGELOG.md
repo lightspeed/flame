@@ -9,15 +9,19 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## [Unreleased]
 
+### Deprecation Warning
+
+- Alert icon prop will be removed in the next major feature release. Icons will be automatically assigned to an alert based on the variant used ([#82](https://github.com/lightspeed/flame/pull/82))
+
 ### Added
 
-- New `<AlertInCard />` component ([#82](https://github.com/lightspeed/flame/pull/82))
-- `<Alert />` component will now automatically inject the right icons as per DSD specs ([#82](https://github.com/lightspeed/flame/pull/82))
+- New AlertInCard component ([#82](https://github.com/lightspeed/flame/pull/82))
+- Alert component will now automatically inject the right icons as per DSD specs ([#82](https://github.com/lightspeed/flame/pull/82))
 
 ### Fixed
 
-- Icons in `<Alert />` will now automatically assign the right color that matches the type of Alert ([#82](https://github.com/lightspeed/flame/pull/82))
-- Icons in `<Alert />` will now be properly centered ([#82](https://github.com/lightspeed/flame/pull/82))
+- Icons in Alert will now automatically assign the right color that matches the type of Alert ([#82](https://github.com/lightspeed/flame/pull/82))
+- Icons in Alert will now be properly centered ([#82](https://github.com/lightspeed/flame/pull/82))
 
 ## 1.6.0 - 2020-05-25
 

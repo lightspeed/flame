@@ -25,9 +25,7 @@ const Alerts = () => (
           title={`${type[0].toUpperCase().concat(type.slice(1))}`}
           mb={2}
         >
-          <Text as="p" m={0}>
-            Description of alert.
-          </Text>
+          Description of alert.
         </Alert>
       );
     })}
@@ -42,9 +40,7 @@ const Alerts = () => (
           mb={2}
           noCloseBtn
         >
-          <Text as="p" m={0}>
-            Description of alert with no close button.
-          </Text>
+          Description of alert with no close button.
         </Alert>
       );
     })}

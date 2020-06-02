@@ -8,7 +8,7 @@ import { AlertIcons } from './AlertIcons';
 import { Flex, Box } from '../Core';
 import { Text } from '../Text';
 
-type AlertTypes = 'info' | 'success' | 'warning' | 'danger' | string;
+export type AlertTypes = 'info' | 'success' | 'warning' | 'danger' | string;
 
 export interface AlertProps {
   /** CSS class name */
@@ -37,6 +37,7 @@ export const Alert: React.FC<AlertProps & SpaceProps> = ({
   ...restProps
 }) => {
   if (icon) {
+    // eslint-disable-next-line no-console
     console.warn(
       'Warning: Starting from next major version, you will no longer be able to add a prop icon.',
       'Icons will be automatically be injected based on the Alert type',
@@ -78,7 +79,9 @@ export const Alert: React.FC<AlertProps & SpaceProps> = ({
               {title}
             </Text>
           )}
-          <Box fontSize="text-s">{children}</Box>
+          <Text fontSize={['text', 'text-s']} lineHeight={[3, 2]}>
+            {children}
+          </Text>
         </Box>
       </Flex>
       {!noCloseBtn && <CloseButton onClick={handleClose} />}
