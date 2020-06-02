@@ -138,7 +138,6 @@ const Toaster: React.FC<ToastProps> = ({
             })}
             onClick={() => onDismiss()}
           >
-            {/* @TODO: Probably should use theming here? */}
             <IconMathMultiply size="24px" aria-hidden="true" />
           </button>
         </Flex>
