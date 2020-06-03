@@ -23,6 +23,18 @@ const toastStates = {
 
 const gutter = 8;
 const shrinkKeyframes = keyframes`from { width: 100%; } to { width: 0% }`;
+const TIMEOUT_MS = 4000;
+const AUTO_DISMISS = true;
+
+const ToastCountdownContext = React.createContext<{
+  autoDismiss: boolean | number;
+  autoDismissTimeout: number;
+  isRunning: boolean;
+}>({
+  autoDismiss: AUTO_DISMISS,
+  autoDismissTimeout: TIMEOUT_MS,
+  isRunning: true,
+});
 
 interface CountdownProps {
   autoDismissTimeout: number;
@@ -121,7 +133,9 @@ const Toaster: React.FC<ToastProps> = ({
             width="100%"
             className="fl-toaster__content"
           >
-            {children}
+            <ToastCountdownContext.Provider value={{ autoDismiss, autoDismissTimeout, isRunning }}>
+              {children}
+            </ToastCountdownContext.Provider>
           </Flex>
           <button
             type="button"
@@ -144,12 +158,6 @@ const Toaster: React.FC<ToastProps> = ({
             <IconMathMultiply size="24px" aria-hidden="true" />
           </button>
         </Flex>
-
-        <Countdown
-          opacity={autoDismiss ? 1 : 0}
-          autoDismissTimeout={autoDismissTimeout}
-          isRunning={isRunning}
-        />
       </div>
     </div>
   );
@@ -180,7 +188,8 @@ const ToasterContainer: React.FC = ({ children }) => (
 // Pre-bind some defaults to the base ToastProvider.
 const ToasterProvider: React.FC<ToastProviderProps> = ({
   children,
-  autoDismissTimeout = 5000,
+  autoDismiss = AUTO_DISMISS,
+  autoDismissTimeout = TIMEOUT_MS,
   ...restProps
 }) => (
   <ToastProvider
@@ -188,6 +197,7 @@ const ToasterProvider: React.FC<ToastProviderProps> = ({
     autoDismissTimeout={autoDismissTimeout}
     components={{ Toast: Toaster, ToastContainer: ToasterContainer }}
     transitionDuration={200}
+    autoDismiss={autoDismiss}
     {...restProps}
   >
     {children}
@@ -202,30 +212,40 @@ const ActionableToastContent: React.FC<ActionableToastContent> = ({
   children,
   actionCallback,
   actionTitle,
-}) => (
-  <React.Fragment>
-    {children}
-    <button
-      type="button"
-      aria-label={actionTitle}
-      onClick={actionCallback}
-      className="fl-toast__action-btn"
-      css={css({
-        appearance: 'none',
-        border: 'none',
-        background: 'none',
-        margin: 0,
-        padding: 0,
-        cursor: 'pointer',
-        fontWeight: 'bold',
-        ml: 2,
-        fontSize: ['text', 'text-s'],
-      })}
-    >
-      {actionTitle}
-    </button>
-  </React.Fragment>
-);
+}) => {
+  const { autoDismiss, isRunning, autoDismissTimeout } = React.useContext(ToastCountdownContext);
+
+  return (
+    <React.Fragment>
+      {children}
+      <button
+        type="button"
+        aria-label={actionTitle}
+        onClick={actionCallback}
+        className="fl-toast__action-btn"
+        css={css({
+          appearance: 'none',
+          border: 'none',
+          background: 'none',
+          margin: 0,
+          padding: 0,
+          cursor: 'pointer',
+          fontWeight: 'bold',
+          ml: 2,
+          fontSize: ['text', 'text-s'],
+        })}
+      >
+        {actionTitle}
+      </button>
+
+      <Countdown
+        opacity={autoDismiss ? 1 : 0}
+        autoDismissTimeout={autoDismissTimeout}
+        isRunning={isRunning}
+      />
+    </React.Fragment>
+  );
+};
 
 type RestrictedOptions = Options & { appearance: 'success' | 'error' };
 type RestrictedAddToast = (

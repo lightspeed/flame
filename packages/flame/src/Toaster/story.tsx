@@ -17,35 +17,6 @@ const Spacer: React.FC = ({ children }) => {
   return <div css={{ display: 'flex' }}>{nextChildren}</div>;
 };
 
-const ToastExample = () => {
-  const { addToast } = useToasts();
-
-  return (
-    <Spacer>
-      <Button
-        type="button"
-        onClick={() => {
-          addToast('This is a non-edible toast!', {
-            appearance: 'success',
-          });
-        }}
-      >
-        Generate success
-      </Button>
-      <Button
-        type="button"
-        onClick={() => {
-          addToast('This is a non-edible toast!', {
-            appearance: 'error',
-          });
-        }}
-      >
-        Generate error
-      </Button>
-    </Spacer>
-  );
-};
-
 const AutoDismissToastExample = () => {
   const { addToast } = useToasts();
 
@@ -54,8 +25,7 @@ const AutoDismissToastExample = () => {
       <Button
         type="button"
         onClick={() => {
-          addToast(`I'll disappear after 5 seconds`, {
-            autoDismiss: true,
+          addToast(`I'll disappear after 4 seconds`, {
             appearance: 'success',
           });
         }}
@@ -65,8 +35,7 @@ const AutoDismissToastExample = () => {
       <Button
         type="button"
         onClick={() => {
-          addToast(`I'll disappear after 5 seconds`, {
-            autoDismiss: true,
+          addToast(`I'll disappear after 4 seconds`, {
             appearance: 'error',
           });
         }}
@@ -151,15 +120,11 @@ stories.add(
   () => (
     <ToasterProvider>
       <div>
-        <Heading2>Create a toast without an auto timeout</Heading2>
-        <ToastExample />
-      </div>
-      <div>
-        <Heading2>Create a toast that closes itself after a few</Heading2>
+        <Heading2>A toast will auto dismiss itself</Heading2>
         <AutoDismissToastExample />
       </div>
       <div>
-        <Heading2>Create a toast with an action</Heading2>
+        <Heading2>A toast with an action will have a progress bar</Heading2>
         <ActionableToastExample />
       </div>
       <div>
@@ -193,26 +158,6 @@ stories.add('percy snapshots', () => {
 
         <Toaster appearance="error" {...commonProps}>
           This is a failure toaster
-        </Toaster>
-
-        <Toaster appearance="success" {...commonProps} autoDismiss>
-          This is a success toaster
-        </Toaster>
-
-        <Toaster appearance="error" {...commonProps} autoDismiss>
-          This is a success toaster
-        </Toaster>
-
-        <Toaster appearance="success" {...commonProps}>
-          <ActionableToastContent actionCallback={noop} actionTitle="Undo">
-            This is a success toaster with action
-          </ActionableToastContent>
-        </Toaster>
-
-        <Toaster appearance="error" {...commonProps}>
-          <ActionableToastContent actionCallback={noop} actionTitle="Undo">
-            This is a success toaster with action
-          </ActionableToastContent>
         </Toaster>
 
         <Toaster appearance="success" {...commonProps} autoDismiss>
