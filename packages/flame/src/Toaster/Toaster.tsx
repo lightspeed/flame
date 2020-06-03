@@ -59,6 +59,7 @@ const Toaster: React.FC<ToastProps> = ({
   isRunning,
   appearance = 'success',
   onDismiss,
+  ...rest
 }) => {
   const [height, setHeight] = React.useState<string | number>('auto');
   const elementRef = React.useRef(null);
@@ -86,6 +87,7 @@ const Toaster: React.FC<ToastProps> = ({
         pointerEvents: 'all',
       })}
       className="fl-toaster"
+      {...rest}
     >
       <div
         css={css({
