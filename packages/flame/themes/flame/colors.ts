@@ -10,7 +10,7 @@ const aliases: ColorAliases = {
   white: themeColors.white,
   textBody: themeColors['gray-700'],
   textHeading: themeColors['gray-1000'],
-  textDimmed: themeColors['gray-500'],
+  textDimmed: themeColors['gray-600'],
   dimmed: themeColors['gray-50'],
   disabled: themeColors['gray-100'],
   bodyBg: themeColors['gray-50'],
