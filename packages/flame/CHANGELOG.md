@@ -11,8 +11,8 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Update `textDimmed` color alias to `gray-600` for flame theme ([#78](https://github.com/lightspeed/flame/pull/78))
-- Use `textDimmed` alias for AnnotatedLayout description ([#78](https://github.com/lightspeed/flame/pull/78))
+- Update `textDimmed` color alias to `gray-600` for flame theme ([#90](https://github.com/lightspeed/flame/pull/90))
+- Use `textDimmed` alias for AnnotatedLayout description ([#90](https://github.com/lightspeed/flame/pull/90))
 
 ## 1.6.0 - 2020-05-25
 
