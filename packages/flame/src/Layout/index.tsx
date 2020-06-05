@@ -23,11 +23,11 @@ export const AnnotatedLayout: React.FunctionComponent<AnnotatedLayoutProps> = ({
 }) => (
   <Flex flexWrap="wrap" {...(restProps as any)}>
     <Box width={[1, 1 / 3, 1 / 4]} pr={[0, 2]}>
-      <Heading4 mb="1">{title}</Heading4>
-      <Text size="small" color="gray-300" mb={3}>
+      <Heading4 mb={1}>{title}</Heading4>
+      <Text size="small" color="textDimmed" pb={3}>
         {description}
       </Text>
-      {renderExtras && <Box mb={3}>{renderExtras}</Box>}
+      {renderExtras && <Box pb={3}>{renderExtras}</Box>}
     </Box>
     <Box width={[1, 2 / 3, 3 / 4]}>{children}</Box>
   </Flex>
