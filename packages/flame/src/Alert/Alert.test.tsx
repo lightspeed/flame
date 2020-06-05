@@ -1,11 +1,27 @@
 import * as React from 'react';
-import { customRender, fireEvent } from 'test-utils';
+import { createComponent, customRender, fireEvent } from 'test-utils';
 import { Alert } from './Alert';
 
 describe('Alert', () => {
   it('renders correctly', () => {
-    const { getByText } = customRender(<Alert>Hello World</Alert>);
-    expect(getByText('Hello World')).toBeTruthy();
+    const component = createComponent(<Alert>Hello World</Alert>);
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  ['success', 'info', 'warning', 'danger'].forEach(type => {
+    it(`renders type ${type} correctly`, () => {
+      const component = createComponent(
+        <Alert key={type} type={type}>
+          Hello World
+        </Alert>,
+      );
+      expect(component.toJSON()).toMatchSnapshot();
+    });
+  });
+
+  it('renders a number', () => {
+    const component = createComponent(<Alert>{300}</Alert>);
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('renders with an icon', () => {
@@ -16,18 +32,17 @@ describe('Alert', () => {
   });
 
   it('renders with a title', () => {
-    const { getByText } = customRender(<Alert title="My Title">Hello World</Alert>);
-    expect(getByText('My Title')).toBeTruthy();
-    expect(getByText('Hello World')).toBeTruthy();
+    const component = createComponent(<Alert title="My Title">Hello World</Alert>);
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('does not render the close button', () => {
-    const { queryByRole } = customRender(
+  it('Removes close button', () => {
+    const component = createComponent(
       <Alert title="My Title" noCloseBtn>
         Hello World
       </Alert>,
     );
-    expect(queryByRole('button')).toBeFalsy();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('accepts a custom handleClose function', () => {

@@ -1,7 +1,7 @@
 import { oldSkoolTheme } from '@lightspeed/flame-tokens';
 
 import { colors } from './colors';
-import { alertVariants, alertInCardVariants } from './components/alert';
+import { alertVariants } from './components/alert';
 import { badgeVariants } from './components/badge';
 import { buttonVariants, buttonIconVariants } from './components/button';
 import { cardStyles, cardVariants } from './components/card';
@@ -33,7 +33,6 @@ const themeUI = {
 const theme: FlameUI = {
   ...themeUI,
   alertVariants,
-  alertInCardVariants,
   badgeVariants,
   buttonVariants,
   buttonIconVariants,
