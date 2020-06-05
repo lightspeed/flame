@@ -9,9 +9,48 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## [Unreleased]
 
+### Deprecation Warning
+
+- Alert icon prop will be removed in the next major feature release. Icons will be automatically assigned to an alert based on the variant used ([#82](https://github.com/lightspeed/flame/pull/82))
+
+### Added
+
+- New AlertInCard component ([#82](https://github.com/lightspeed/flame/pull/82))
+- Alert component will now automatically inject the right icons as per DSD specs ([#82](https://github.com/lightspeed/flame/pull/82))
+
+### Fixed
+
+- Icons in Alert will now automatically assign the right color that matches the type of Alert ([#82](https://github.com/lightspeed/flame/pull/82))
+- Icons in Alert will now be properly centered ([#82](https://github.com/lightspeed/flame/pull/82))
+
 ### Changed
 
 - Update `textDimmed` color alias to `gray-600` for flame theme ([#78](https://github.com/lightspeed/flame/pull/78))
+
+## 1.6.0 - 2020-05-25
+
+### Added
+
+- Add Subscription and Plan icons ([#85](https://github.com/lightspeed/flame/pull/85))
+
+## 1.5.0 - 2020-05-20
+
+### Updated
+
+- `small-arrow-up`, `small-arrow-up-right`, `small-arrow-right`, `small-arrow-down-right`, `small-arrow-down`, `small-arrow-down-left`, `small-arrow-left`, `small-arrow-up-left`, and `external-link` icons ([#83](https://github.com/lightspeed/flame/pull/83))
+
+## 1.4.0 - 2020-05-04
+
+### Added
+
+- `note`, `receipt-printer`, `hardware`, `usb-plug`, `wifi`, `apple` and `windows` icons ([#81](https://github.com/lightspeed/flame/pull/81))
+
+## 1.3.0 - 2020-04-20
+
+### Added
+
+- `slice` and `money-sent` icons ([#80](https://github.com/lightspeed/flame/pull/80))
+
 
 ## 1.2.12 - 2020-02-17
 
