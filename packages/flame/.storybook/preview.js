@@ -1,8 +1,8 @@
 import React from 'react';
-import { configure, addDecorator, addParameters } from '@storybook/react';
+import { addDecorator, addParameters } from '@storybook/react';
 import { Global } from '@emotion/core';
-import { FlameTheme, FlameGlobalStyles, Box } from '../packages/flame/src/Core';
-import { Select } from '../packages/flame/src/Select';
+import { FlameTheme, FlameGlobalStyles, Box } from '../src/Core';
+import { Select } from '../src/Select';
 
 class FlameStyling extends React.Component {
   constructor(props) {
@@ -56,10 +56,3 @@ addParameters({
     panelPosition: 'right',
   },
 });
-
-function loadStories() {
-  /* eslint-disable global-require, import/no-unresolved, import/no-webpack-loader-syntax */
-  require('./require-stories!./empty');
-}
-
-configure(loadStories, module);
