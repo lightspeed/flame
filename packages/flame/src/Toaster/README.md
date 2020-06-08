@@ -19,7 +19,6 @@ const App = () => (
     <FlameGlobalStyles />
     <ToasterProvider>
       <div>{/* The rest of your app */}</div>
-      <div>{/* The rest of your app */}</div>
     </ToasterProvider>
   </FlameTheme>
 );

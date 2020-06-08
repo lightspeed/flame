@@ -58,6 +58,7 @@ const ActionableToastExample = () => {
             content: `I have an action!`,
             actionTitle: 'Undo',
             actionCallback: () => {
+              // eslint-disable-next-line no-console
               console.log('You clicked the undo button!');
             },
           });
@@ -73,6 +74,7 @@ const ActionableToastExample = () => {
               content: `I have an action!`,
               actionTitle: 'Undo',
               actionCallback: () => {
+                // eslint-disable-next-line no-console
                 console.log('You clicked the undo button!');
               },
             },
