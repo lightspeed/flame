@@ -1,14 +1,54 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-import cn from 'classnames';
+import { css } from '@styled-system/css';
 
 import { Tooltip, TooltipPlacement } from './Tooltip';
 import { Input } from '../Input';
 import Readme from './README.md';
-import styles from '../../../../stories/styles/stories.scss';
 
 const stories = storiesOf('Components|Tooltip', module).addDecorator(withReadme(Readme));
+
+const BoxColumn: React.FC = ({ ...restProps }) => (
+  <div
+    css={css({
+      display: 'inline-block',
+      width: '192px',
+      mr: 2,
+      mb: 2,
+      textAlign: 'center',
+    })}
+    {...restProps}
+  />
+);
+
+const BoxExample: React.FC = ({ ...restProps }) => (
+  <div
+    css={css({
+      p: 2,
+      borderTopLeftRadius: 'radius-1',
+      borderTopRightRadius: 'radius-1',
+      border: '1px solid #e1e4e5',
+      backgroundColor: '#f3f3f3',
+    })}
+    {...restProps}
+  />
+);
+
+const BoxCode: React.FC = ({ ...restProps }) => (
+  <div
+    css={css({
+      padding: '.75rem',
+      borderBottomLeftRadius: '.1875rem',
+      borderBottomRightRadius: '.1875rem',
+      borderLeft: '1px solid #e1e4e5',
+      borderRight: '1px solid #e1e4e5',
+      borderBottom: '1px solid #e1e4e5',
+      background: '#fff',
+    })}
+    {...restProps}
+  />
+);
 
 const placements: TooltipPlacement[] = [
   'top',
@@ -46,25 +86,25 @@ stories.add('Directions', () => (
   <div>
     <h3>Dark</h3>
     {placements.map(placement => (
-      <div key={placement} className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
+      <BoxColumn key={placement}>
+        <BoxExample>
           <Tooltip content="Tooltip" placement={placement} active>
             Trigger
           </Tooltip>
-        </div>
-        <div className={cn(styles.example__code, styles[`text-center`])}>{placement}</div>
-      </div>
+        </BoxExample>
+        <BoxCode>{placement}</BoxCode>
+      </BoxColumn>
     ))}
     <h3>Light</h3>
     {placements.map(placement => (
-      <div key={placement} className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
+      <BoxColumn key={placement}>
+        <BoxExample>
           <Tooltip content="Tooltip" placement={placement} light active>
             Trigger
           </Tooltip>
-        </div>
-        <div className={cn(styles.example__code, styles[`text-center`])}>{placement}</div>
-      </div>
+        </BoxExample>
+        <BoxCode>{placement}</BoxCode>
+      </BoxColumn>
     ))}
   </div>
 ));
