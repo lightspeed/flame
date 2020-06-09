@@ -46,7 +46,7 @@ module.exports = {
           loader: require.resolve('css-loader'),
           options: {
             sourceMap: false,
-            modules: true,
+
             importLoaders: 2,
           },
         },
