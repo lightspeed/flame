@@ -81,6 +81,7 @@ const Colours = withTheme(({ theme }) => {
   );
 });
 export const colours = () => <Colours />;
+colours.story = { percy: { skip: true } };
 
 const TypographyExample: React.FC<{ output: React.ReactNode; example: React.ReactNode }> = ({
   output,
@@ -194,6 +195,7 @@ const Typography = withTheme(({ theme }) => {
   );
 });
 export const typography = () => <Typography />;
+typography.story = { percy: { skip: true } };
 
 const BoxExample: React.FC<{ box: React.ReactNode; sample: React.ReactNode }> = ({
   box,
@@ -280,6 +282,7 @@ const Spacing = withTheme(({ theme }) => {
   );
 });
 export const spacing = () => <Spacing />;
+spacing.story = { percy: { skip: true } };
 
 const Shadows = withTheme(({ theme }) => {
   const { shadows, innerShadows, innerShadowsN, borderShadows } = theme;
@@ -404,6 +407,7 @@ const Shadows = withTheme(({ theme }) => {
 });
 
 export const shadows = () => <Shadows />;
+shadows.story = { percy: { skip: true } };
 
 const BorderRadii = withTheme(({ theme }) => {
   const { radii } = theme;
@@ -440,8 +444,8 @@ const BorderRadii = withTheme(({ theme }) => {
     </BoxExampleGrid>
   );
 });
-
 export const radii = () => <BorderRadii />;
+radii.story = { percy: { skip: true } };
 
 const Transitions = withTheme(({ theme }) => {
   const { transition } = theme;
@@ -485,5 +489,5 @@ const Transitions = withTheme(({ theme }) => {
     </div>
   );
 });
-
 export const transitions = () => <Transitions />;
+transitions.story = { percy: { skip: true } };
