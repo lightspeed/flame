@@ -15,8 +15,8 @@ import { IconMathMultiply } from '../Icon/MathMultiply';
 import { Box, Flex } from '../Core';
 
 const toastStates = {
-  entering: { transform: 'translate3d(0, 120%, 0)', opacity: 0 },
-  entered: { transform: 'translate3d(0,0,0)', opacity: 1 },
+  entering: { transform: 'translate3d(0, 120%, 0)', opacity: 0, height: 0 },
+  entered: { transform: 'translate3d(0,0,0)', opacity: 1, height: 'initial' },
   exiting: { transform: 'translate3d(0, 120%, 0)', opacity: 0 },
   exited: { transform: 'translate3d(0, 120%, 0)', opacity: 0 },
 };
@@ -106,8 +106,7 @@ const Toaster: React.FC<ToastProps> = ({
           display: 'flex',
           borderRadius: 'radius-2',
           boxShadow: 0,
-          marginBottom: `${gutter}px`,
-          transition: `transform ${transitionDuration}ms cubic-bezier(0.2, 0, 0, 1), opacity ${transitionDuration}ms`,
+          transition: `all ${transitionDuration}ms cubic-bezier(0.2, 0, 0, 1), opacity ${transitionDuration}ms`,
           minWidth: ['300px', '345px'],
           maxWidth: ['300px', '600px', '600px'],
           overflow: 'hidden',
