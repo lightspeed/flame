@@ -11,7 +11,7 @@ exports[`Text Snapshots should render Heading1 with appropriate styles 1`] = `
 }
 
 <h1
-  className="emotion-0 emotion-1"
+  className="fl-heading1 emotion-0 emotion-1"
   color="textHeading"
   fontWeight="bold"
 >
@@ -30,7 +30,7 @@ exports[`Text Snapshots should render Heading2 with appropriate styles 1`] = `
 }
 
 <h2
-  className="emotion-0 emotion-1"
+  className="fl-heading2 emotion-0 emotion-1"
   color="textHeading"
   fontWeight="bold"
 >
@@ -49,7 +49,7 @@ exports[`Text Snapshots should render Heading3 with appropriate styles 1`] = `
 }
 
 <h3
-  className="emotion-0 emotion-1"
+  className="fl-heading3 emotion-0 emotion-1"
   color="textHeading"
   fontWeight="bold"
 >
@@ -73,7 +73,7 @@ exports[`Text Snapshots should render Heading4 with appropriate styles 1`] = `
 }
 
 <h4
-  className="emotion-0 emotion-1"
+  className="fl-heading4 emotion-0 emotion-1"
   color="textHeading"
   fontWeight="bold"
   letterSpacing={3}
@@ -98,7 +98,7 @@ exports[`Text Snapshots should render TextLink with appropriate styles 1`] = `
 }
 
 <a
-  className="emotion-0 emotion-1"
+  className="fl-textlink emotion-0 emotion-1"
   href="www.google.com"
 >
   My Heading
