@@ -31,13 +31,12 @@
     "release-and-publish": "yarn release && yarn lerna:publish && lerna run --scope @lightspeed/flame release",
     "generate": "plop",
     "docgen": "node ./scripts/docgen",
-    "percy": "build-storybook -c .storybook && percy-storybook --widths=1280"
+    "percy": "lerna exec --scope \"@lightspeed/flame\" yarn percy'"
   },
   "dependencies": {
     "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
     "@styled-system/theme-get": "5.0.16",
-    "classnames": "^2.2.5",
     "emotion-theming": "^10.0.7",
     "polished": "^2.3.0",
     "prop-types": "^15.6.0",
@@ -61,7 +60,6 @@
     "@testing-library/react": "^8.0.1",
     "@types/classnames": "^2.2.7",
     "@types/jest": "^24.0.15",
-    "@types/luxon": "^1.15.2",
     "@types/react": "^16.8.23",
     "@types/react-test-renderer": "^16.8.3",
     "@types/storybook-readme": "^5.0.3",
@@ -94,7 +92,6 @@
     "prettier": "^1.16.1",
     "react-test-renderer": "^16.8.6",
     "typescript": "^3.5.3",
-    "typescript-eslint-parser": "^22.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^2.1.3",
     "yargs": "^11.0.0"

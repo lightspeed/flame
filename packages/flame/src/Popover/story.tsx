@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 import { css } from '@styled-system/css';
 
+import { ExampleBox } from '../../.storybook/components/ExampleBox';
 import { Popover, PopoverProps, PopoverPlacement } from './Popover';
 import { Text } from '../Text';
 import { Input } from '../Input';
@@ -60,47 +61,6 @@ const sharedTarget = ({ targetProps, targetEvents, active }: any = {}) => (
   >
     &#10010;
   </Box>
-);
-
-const BoxColumn: React.FC = ({ ...restProps }) => (
-  <div
-    css={css({
-      display: 'inline-block',
-      width: '192px',
-      mr: 2,
-      mb: 2,
-      textAlign: 'center',
-    })}
-    {...restProps}
-  />
-);
-
-const BoxExample: React.FC = ({ ...restProps }) => (
-  <div
-    css={css({
-      p: 2,
-      borderTopLeftRadius: 'radius-1',
-      borderTopRightRadius: 'radius-1',
-      border: '1px solid #e1e4e5',
-      backgroundColor: '#f3f3f3',
-    })}
-    {...restProps}
-  />
-);
-
-const BoxCode: React.FC = ({ ...restProps }) => (
-  <div
-    css={css({
-      padding: '.75rem',
-      borderBottomLeftRadius: '.1875rem',
-      borderBottomRightRadius: '.1875rem',
-      borderLeft: '1px solid #e1e4e5',
-      borderRight: '1px solid #e1e4e5',
-      borderBottom: '1px solid #e1e4e5',
-      background: '#fff',
-    })}
-    {...restProps}
-  />
 );
 
 type PopoverExamplesProp = Partial<PopoverProps> & { content?: string; isOpen?: boolean };
@@ -215,42 +175,35 @@ stories.add(
       <h3>Story</h3>
       <h4>Themes</h4>
       <div>
-        <BoxColumn>
-          <BoxExample>
-            <PopoverSimple content="Popover content, you can put anything in here." />
-          </BoxExample>
-          <BoxCode>Default</BoxCode>
-        </BoxColumn>
-        <BoxColumn>
-          <BoxExample>
-            <PopoverSimple content="Popover content, you can put anything in here." light />
-          </BoxExample>
-          <BoxCode>Light</BoxCode>
-        </BoxColumn>
+        <ExampleBox
+          example={<PopoverSimple content="Popover content, you can put anything in here." />}
+          content="Default"
+        />
+        <ExampleBox
+          example={<PopoverSimple content="Popover content, you can put anything in here." light />}
+          content="Light"
+        />
       </div>
-
       <h4>Options</h4>
-      <BoxColumn>
-        <BoxExample>
-          <PopoverSimple content="Popover content, you can put anything in here." noArrow />
-        </BoxExample>
-        <BoxCode>No Arrow</BoxCode>
-      </BoxColumn>
-      <BoxColumn>
-        <BoxExample>
+      <ExampleBox
+        example={<PopoverSimple content="Popover content, you can put anything in here." noArrow />}
+        content="No Arrow"
+      />
+      <ExampleBox
+        example={
           <PopoverSimple
             content="Popover content, you can put anything in here."
             isFlipEnabled={false}
           />
-        </BoxExample>
-        <BoxCode>Flip disabled</BoxCode>
-      </BoxColumn>
-      <BoxColumn>
-        <BoxExample>
+        }
+        content="Flip Disabled"
+      />
+      <ExampleBox
+        example={
           <PopoverWithCloseButton content="Clicking outside will not close it" autoClose={false} />
-        </BoxExample>
-        <BoxCode>autoClose off</BoxCode>
-      </BoxColumn>
+        }
+        content="autoClose off"
+      />
     </div>
   ),
   { percy: { skip: true } },
@@ -263,23 +216,21 @@ stories.add(
       <h3>Dark</h3>
       <div>
         {placements.map(placement => (
-          <BoxColumn key={placement}>
-            <BoxExample>
-              <PopoverSimple content={placement} placement={placement} />
-            </BoxExample>
-            <BoxCode>{placement}</BoxCode>
-          </BoxColumn>
+          <ExampleBox
+            key={placement}
+            example={<PopoverSimple content={placement} placement={placement} />}
+            content={placement}
+          />
         ))}
       </div>
       <h3>Light</h3>
       <div>
         {placements.map(placement => (
-          <BoxColumn key={placement}>
-            <BoxExample>
-              <PopoverSimple content={placement} placement={placement} light />
-            </BoxExample>
-            <BoxCode>{placement}</BoxCode>
-          </BoxColumn>
+          <ExampleBox
+            key={placement}
+            example={<PopoverSimple content={placement} placement={placement} light />}
+            content={placement}
+          />
         ))}
       </div>
     </div>
@@ -293,12 +244,12 @@ stories.add(
     <div>
       <h3>Events (see Action Logger)</h3>
       <div>
-        <BoxColumn>
-          <BoxExample>
+        <ExampleBox
+          example={
             <PopoverWithCloseButton content="Click the button to close the popover:" light />
-          </BoxExample>
-          <BoxCode>State controlled from outside</BoxCode>
-        </BoxColumn>
+          }
+          content="State controlled from outside"
+        />
       </div>
     </div>
   ),
@@ -364,23 +315,21 @@ stories.add('Percy Placement', () => (
     <h3>Dark</h3>
     <div>
       {placements.map(placement => (
-        <BoxColumn key={placement}>
-          <BoxExample>
-            <PopoverSimple isOpen content={placement} placement={placement} />
-          </BoxExample>
-          <BoxCode>{placement}</BoxCode>
-        </BoxColumn>
+        <ExampleBox
+          key={placement}
+          example={<PopoverSimple isOpen content={placement} placement={placement} />}
+          content={placement}
+        />
       ))}
     </div>
     <h3>Light</h3>
     <div>
       {placements.map(placement => (
-        <BoxColumn key={placement}>
-          <BoxExample>
-            <PopoverSimple isOpen content={placement} placement={placement} light />
-          </BoxExample>
-          <BoxCode>{placement}</BoxCode>
-        </BoxColumn>
+        <ExampleBox
+          key={placement}
+          example={<PopoverSimple isOpen content={placement} placement={placement} light />}
+          content={placement}
+        />
       ))}
     </div>
   </div>

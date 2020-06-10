@@ -6,12 +6,7 @@ const packageInfo = require('../package.json');
 
 module.exports = {
   stories: ['../src/**/story.tsx'],
-  addons: [
-    '@storybook/addon-options/register',
-    'storybook-readme/register',
-    '@storybook/addon-actions/register',
-    '@storybook/addon-knobs/register',
-  ],
+  addons: ['storybook-readme/register', '@storybook/addon-actions/register'],
   webpackFinal: config => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
