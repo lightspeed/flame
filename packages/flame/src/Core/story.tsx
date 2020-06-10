@@ -66,14 +66,19 @@ const Colours = withTheme(({ theme }) => {
               border: '1px solid rgba(12,13,13,0.1)',
             }}
           />
-          <div>
-            <code>.cr-{value}</code>
-          </div>
           <Box mt={1}>
-            <code>{colors[value]}</code>
+            <code>
+              {colors[value]} | {hex2rgba(colors[value])}
+            </code>
           </Box>
           <Box mt={1}>
-            <code>{hex2rgba(colors[value])}</code>
+            <code>{`themeGet('colors.${value}')`}</code>
+          </Box>
+          <Box mt={1}>
+            <code>{`css({ bg: '${value}' })`}</code>
+          </Box>
+          <Box mt={1}>
+            <code>{`css({ color: '${value}' })`}</code>
           </Box>
         </Box>
       ))}
