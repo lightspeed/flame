@@ -31,7 +31,7 @@
     "release-and-publish": "yarn release && yarn lerna:publish && lerna run --scope @lightspeed/flame release",
     "generate": "plop",
     "docgen": "node ./scripts/docgen",
-    "percy": "lerna exec --scope \"@lightspeed/flame\" yarn percy'"
+    "percy": "lerna exec --scope \"@lightspeed/flame\" yarn percy"
   },
   "dependencies": {
     "@emotion/core": "^10.0.9",
