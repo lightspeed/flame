@@ -6,7 +6,6 @@
     "declaration": false,
     "noEmit": true,
     "baseUrl": ".",
-    "types": ["@emotion/core"],
     "paths": {
       "test-utils": ["tests/test-utils"]
     }

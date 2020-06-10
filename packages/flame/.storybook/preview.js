@@ -3,6 +3,8 @@ import { addDecorator, addParameters } from '@storybook/react';
 import { Global } from '@emotion/core';
 import { FlameTheme, FlameGlobalStyles, Box } from '../src/Core';
 import { Select } from '../src/Select';
+// @TODO: Fix stories that are still using css classes and flush this
+import './stories.scss';
 
 class FlameStyling extends React.Component {
   constructor(props) {
