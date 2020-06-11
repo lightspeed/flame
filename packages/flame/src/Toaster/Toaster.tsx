@@ -128,9 +128,10 @@ const Toaster: React.FC<ToastProps> = ({
             fontWeight="bold"
             ml={2}
             justifyContent="space-between"
-            fontSize={['text', 'text-s']}
+            fontSize={['text', 'text']}
             width="100%"
             className="fl-toaster__content"
+            marginTop="-1px"
           >
             <ToastCountdownContext.Provider value={{ autoDismiss, autoDismissTimeout, isRunning }}>
               {children}
