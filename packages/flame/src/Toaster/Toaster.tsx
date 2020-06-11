@@ -25,6 +25,7 @@ const gutter = 8;
 const shrinkKeyframes = keyframes`from { width: 100%; } to { width: 0% }`;
 const TIMEOUT_MS = 4000;
 const AUTO_DISMISS = true;
+const COMPONENT_CONTAINER_HEIGHT = 60;
 
 const ToastCountdownContext = React.createContext<{
   autoDismiss: boolean | number;
@@ -73,7 +74,7 @@ const Toaster: React.FC<ToastProps> = ({
   onDismiss,
   ...rest
 }) => {
-  const [height, setHeight] = React.useState<string | number>('auto');
+  const [minHeight, setMinHeight] = React.useState<string | number>('auto');
   const elementRef = React.useRef(null);
   // Only allow success or error, since the DSD specs says that
   // these are the only two possibilities
@@ -82,17 +83,17 @@ const Toaster: React.FC<ToastProps> = ({
   React.useEffect(() => {
     if (transitionState === 'entered') {
       const el = elementRef.current;
-      setHeight(el.offsetHeight + gutter);
+      setMinHeight(el.offsetHeight + gutter);
     }
     if (transitionState === 'exiting') {
-      setHeight(0);
+      setMinHeight(0);
     }
   }, [transitionState]);
 
   return (
     <div
       ref={elementRef}
-      style={{ height }}
+      style={{ minHeight }}
       css={css({
         transition: `height ${transitionDuration - 100}ms 100ms`,
         variant: `toasterVariants.${nextAppearance}`,
@@ -109,6 +110,7 @@ const Toaster: React.FC<ToastProps> = ({
           transition: `all ${transitionDuration}ms cubic-bezier(0.2, 0, 0, 1), opacity ${transitionDuration}ms`,
           minWidth: ['300px', '345px'],
           maxWidth: ['300px', '600px', '600px'],
+          minHeight: COMPONENT_CONTAINER_HEIGHT,
           overflow: 'hidden',
           position: 'relative',
           ...toastStates[transitionState],
@@ -131,6 +133,7 @@ const Toaster: React.FC<ToastProps> = ({
             fontSize={['text', 'text']}
             width="100%"
             className="fl-toaster__content"
+            // Needs to be visually centered with icons
             marginTop="-1px"
           >
             <ToastCountdownContext.Provider value={{ autoDismiss, autoDismissTimeout, isRunning }}>
