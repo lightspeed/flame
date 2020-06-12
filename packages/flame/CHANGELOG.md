@@ -9,6 +9,10 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## [Unreleased]
 
+### Breaking
+
+- Use React.forwardRef on `<Button>` and `<Switch>` components ([#75](https://github.com/lightspeed/flame/pull/75))
+
 ### Deprecation Warning
 
 - Alert icon prop will be removed in the next major feature release. Icons will be automatically assigned to an alert based on the variant used ([#82](https://github.com/lightspeed/flame/pull/82))
