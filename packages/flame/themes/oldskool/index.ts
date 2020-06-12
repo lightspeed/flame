@@ -24,6 +24,7 @@ import { wordmarkStyles } from './components/wordmark';
 import { tableStyles } from './components/table';
 import { sidebarStyles } from './components/sidebar';
 import { npsStyles } from './components/nps';
+import { toasterVariants } from './components/toaster';
 
 const themeUI = {
   ...oldSkoolTheme,
@@ -58,6 +59,7 @@ const theme: FlameUI = {
   tableStyles,
   sidebarStyles,
   npsStyles,
+  toasterVariants,
 };
 
 export { themeUI, theme };

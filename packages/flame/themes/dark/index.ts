@@ -57,6 +57,7 @@ const theme: FlameUI = {
   tableStyles,
   sidebarStyles,
   npsStyles,
+  toasterVariants: {},
 };
 
 export { themeUI, theme };
