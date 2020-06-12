@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Box, Flex } from '../../src/Core';
 
 const SpacedGroup = ({ flexDirection = 'row', children, ...restProps }) => {
-  const nextChildren = React.Children.map(children, (child: any, index) => {
+  const nextChildren = React.Children.map(children, (child, index) => {
     if (flexDirection && flexDirection === 'column') {
       return <Box mt={index !== 0 ? 2 : undefined}>{child}</Box>;
     }
