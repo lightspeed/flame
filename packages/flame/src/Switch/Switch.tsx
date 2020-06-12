@@ -122,17 +122,25 @@ export type SwitchProps = Merge<
 /**
  * A toggleable control which stays on (or off) until manually triggered once more.
  */
-export const Switch: React.FC<SwitchProps> = ({ className, checked, ...restProps }) => (
-  <WrapperLabel role="presentation" className={className}>
-    <SwitchInput type="checkbox" checked={checked} value={checked ? 1 : 0} {...restProps} />
-    <SwitchWrapper>
-      <SwitchSlider>
-        <SwitchSliderIcon />
-      </SwitchSlider>
-      <IconWrapper>
-        <Checkmark size="0.75rem" />
-        <Cross size="0.75rem" />
-      </IconWrapper>
-    </SwitchWrapper>
-  </WrapperLabel>
+export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
+  ({ className, checked, ...restProps }, ref) => (
+    <WrapperLabel role="presentation" className={className}>
+      <SwitchInput
+        type="checkbox"
+        checked={checked}
+        value={checked ? 1 : 0}
+        ref={ref}
+        {...restProps}
+      />
+      <SwitchWrapper>
+        <SwitchSlider>
+          <SwitchSliderIcon />
+        </SwitchSlider>
+        <IconWrapper>
+          <Checkmark size="0.75rem" />
+          <Cross size="0.75rem" />
+        </IconWrapper>
+      </SwitchWrapper>
+    </WrapperLabel>
+  ),
 );
