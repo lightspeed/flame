@@ -677,4 +677,5 @@ declare interface FlameUI {
   tableStyles: TableStyles;
   sidebarStyles: SidebarStyles;
   npsStyles: NpsStyles;
+  toasterVariants: any;
 }
