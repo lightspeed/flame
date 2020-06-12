@@ -103,4 +103,10 @@ describe('Button Component', () => {
     getByTitle('Loading...');
     expect(domNode).not.toBeVisible();
   });
+
+  it('should forward the ref properly', () => {
+    const ref = React.createRef<HTMLButtonElement>();
+    customRender(<Button ref={ref}>Button with a ref attached to it</Button>);
+    expect(ref.current.type).toBe('button');
+  });
 });
