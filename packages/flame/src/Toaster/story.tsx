@@ -142,8 +142,8 @@ stories.add('percy snapshots', () => {
   const commonProps = {
     autoDismiss: false,
     autoDismissTimeout: 1000,
-    transitionDuration: 1000,
-    isRunning: false,
+    transitionDuration: 4000,
+    isRunning: true,
     onDismiss: noop,
     onMouseEnter: noop,
     onMouseLeave: noop,
