@@ -42,11 +42,13 @@
   "dependencies": {
     "@styled-system/css": "^5.1.5",
     "@styled-system/theme-get": "5.0.16",
+    "@types/react-toast-notifications": "^2.4.0",
     "@types/styled-system": "^5.1.9",
     "polished": "^2.3.0",
     "popper.js": "^1.15.0",
     "react-modal": "^3.5.1",
     "react-select": "^2.0.0",
+    "react-toast-notifications": "^2.4.0",
     "styled-system": "5.1.4",
     "type-fest": "^0.3.0"
   },
