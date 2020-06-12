@@ -60,38 +60,30 @@ const FakeContent = () => (
   </React.Fragment>
 );
 
-stories.add(
-  'Annotated Layout',
-  () => (
-    <div style={{ maxWidth: '66rem' }}>
-      <AnnotatedLayout
-        title="Settlement Summary"
-        description="Main information of the money you collected through card payments."
-      >
-        <FakeContent />
-      </AnnotatedLayout>
-    </div>
-  ),
-  { percy: { skip: true } },
-);
+stories.add('Annotated Layout', () => (
+  <div style={{ maxWidth: '66rem' }}>
+    <AnnotatedLayout
+      title="Settlement Summary"
+      description="Main information of the money you collected through card payments."
+    >
+      <FakeContent />
+    </AnnotatedLayout>
+  </div>
+));
 
-stories.add(
-  'Annotated Layout - with actions',
-  () => (
-    <div style={{ maxWidth: '66rem' }}>
-      <AnnotatedLayout
-        title="Settlement Summary"
-        description="Main information of the money you collected through card payments."
-        renderExtras={
-          <Box>
-            <Button>Export</Button>
-          </Box>
-        }
-        mb={5}
-      >
-        <FakeContent />
-      </AnnotatedLayout>
-    </div>
-  ),
-  { percy: { skip: true } },
-);
+stories.add('Annotated Layout - with actions', () => (
+  <div style={{ maxWidth: '66rem' }}>
+    <AnnotatedLayout
+      title="Settlement Summary"
+      description="Main information of the money you collected through card payments."
+      renderExtras={
+        <Box>
+          <Button>Export</Button>
+        </Box>
+      }
+      mb={5}
+    >
+      <FakeContent />
+    </AnnotatedLayout>
+  </div>
+));

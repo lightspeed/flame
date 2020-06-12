@@ -23,6 +23,13 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 - Icons in Alert will now automatically assign the right color that matches the type of Alert ([#82](https://github.com/lightspeed/flame/pull/82))
 - Icons in Alert will now be properly centered ([#82](https://github.com/lightspeed/flame/pull/82))
 
+## 1.6.1 - 2020-06-05
+
+### Fixed
+
+- Update `textDimmed` color alias to `gray-600` for flame theme ([#90](https://github.com/lightspeed/flame/pull/90))
+- Use `textDimmed` alias for AnnotatedLayout description ([#90](https://github.com/lightspeed/flame/pull/90))
+
 ## 1.6.0 - 2020-05-25
 
 ### Added

@@ -1,8 +1,10 @@
 # Release workflow
 
-We follow [semver (Semantic Versioning)](https://semver.org/) for Flame releases. Releases are handled by Flame maintainers manually when changes merged to `master` are deemed ready for publishing.
+We follow [semver (Semantic Versioning)](https://semver.org/) for Flame releases. Main releases are handled by Flame maintainers manually when changes merged to `master` are deemed ready for publishing.
 
-## Versioning and publishing
+We use the `next` (canary) branch as our main working branch. All major change sets should go through `next` as they will be batched for changes. Minor and patches can be fast tracked into master, depending on how big the change is.
+
+## Versioning and publishing the mainline branch
 
 1. Make sure your local `master` branch is up to date including tags
 2. Run `yarn release`
@@ -14,7 +16,7 @@ We follow [semver (Semantic Versioning)](https://semver.org/) for Flame releases
 
 ## Pre-releases
 
-We use release candidates (`x.x.x-rc.x`) over `alpha`/`beta` for pre-releases.
+We leverage the `next` branch to prepare for release candidates (`x.x.x-rc.x`).
 
 In order to publish `rc` pre-releases on npm with dist-tags, you need to add a [`publishConfig.tag`](https://github.com/lerna/lerna/tree/master/commands/publish#publishconfigtag) inside the packages' `package.json` for Lerna:
 
