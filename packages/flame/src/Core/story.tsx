@@ -85,8 +85,8 @@ const Colours = withTheme(({ theme }) => {
     </div>
   );
 });
-export const colours = () => <Colours />;
-colours.story = { percy: { skip: true } };
+export const colors = () => <Colours />;
+colors.story = { percy: { skip: true } };
 
 const TypographyExample: React.FC<{ output: React.ReactNode; example: React.ReactNode }> = ({
   output,
