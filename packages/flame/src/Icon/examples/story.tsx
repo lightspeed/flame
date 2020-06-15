@@ -14,7 +14,7 @@ import { Box } from '../../Core';
 import Readme from '../README.md';
 import IconList from '../../../svg/Icon.list.json';
 import '../../../svg/Icons/icon.scss';
-import { Ul } from '../../../../../stories/components/Ul';
+import { Ul } from '../../../.storybook/components/Ul';
 
 const stories = storiesOf('Components|Icon', module).addDecorator(withReadme(Readme));
 

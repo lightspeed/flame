@@ -1,15 +1,9 @@
 import * as React from 'react';
 
-import { Box, Flex, FlameFlexProps } from '../../packages/flame/src/Core';
+import { Box, Flex } from '../../src/Core';
 
-export interface SpacedGroupProps extends FlameFlexProps {}
-const SpacedGroup: React.FC<SpacedGroupProps> = ({
-  flexDirection = 'row',
-  alignItems = 'center',
-  children,
-  ...restProps
-}) => {
-  const nextChildren = React.Children.map(children, (child: any, index) => {
+const SpacedGroup = ({ flexDirection = 'row', children, ...restProps }) => {
+  const nextChildren = React.Children.map(children, (child, index) => {
     if (flexDirection && flexDirection === 'column') {
       return <Box mt={index !== 0 ? 2 : undefined}>{child}</Box>;
     }
