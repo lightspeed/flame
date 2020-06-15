@@ -7,7 +7,7 @@ import Readme from './README.md';
 import { Box, Flex } from '../Core';
 import { Text } from '../Text';
 
-import { SpacedGroup } from '../../../../stories/components/SpacedGroup';
+import { SpacedGroup } from '../../.storybook/components/SpacedGroup';
 
 const stories = storiesOf('Components|Spinner', module).addDecorator(withReadme(Readme));
 
