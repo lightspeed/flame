@@ -118,7 +118,7 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
     Label
   </label>
   <div
-    className="emotion-10 emotion-11"
+    className="fl-text emotion-10 emotion-11"
     size="small"
   >
     Description

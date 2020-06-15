@@ -1,8 +1,10 @@
 import React from 'react';
-import { configure, addDecorator, addParameters } from '@storybook/react';
+import { addDecorator, addParameters } from '@storybook/react';
 import { Global } from '@emotion/core';
-import { FlameTheme, FlameGlobalStyles, Box } from '../packages/flame/src/Core';
-import { Select } from '../packages/flame/src/Select';
+import { FlameTheme, FlameGlobalStyles, Box } from '../src/Core';
+import { Select } from '../src/Select';
+// @TODO: Fix stories that are still using css classes and flush this
+import './stories.scss';
 
 class FlameStyling extends React.Component {
   constructor(props) {
@@ -48,18 +50,35 @@ class FlameStyling extends React.Component {
 
 const FlameStylingDecorator = storyFn => <FlameStyling>{storyFn()}</FlameStyling>;
 
+const headers = ['Theme', 'Components'];
+
+// https://github.com/storybookjs/storybook/issues/6327#issuecomment-613122487
+const storySort = (a, b) => {
+  // a[1].kind is something like: Components|Accordion. Using "Components" for the headers array.
+  // Using Components from ^^^
+  const aHeader = a[1].kind.substr(0, a[1].kind.indexOf('|'));
+  const bHeader = b[1].kind.substr(0, b[1].kind.indexOf('|'));
+
+  if (aHeader !== bHeader) {
+    // Comparing something like "components-accordion--main" to "getting-started-app--main".
+    const aHeaderIndex = headers.findIndex(h => h === aHeader);
+    const bHeaderIndex = headers.findIndex(h => h === bHeader);
+    return aHeaderIndex - bHeaderIndex;
+  }
+
+  return 0;
+  /* Or instead of `return 0` compare something like "components-accordion--small" to "components-accordion--large"
+   * and sort the stories inside each component...
+   */
+  // return a[1].id.localeCompare(b[1].id, undefined, { numeric: true });
+};
+
 addDecorator(FlameStylingDecorator);
 
 addParameters({
   options: {
     name: 'Lightspeed Flame',
     panelPosition: 'right',
+    storySort,
   },
 });
-
-function loadStories() {
-  /* eslint-disable global-require, import/no-unresolved, import/no-webpack-loader-syntax */
-  require('./require-stories!./empty');
-}
-
-configure(loadStories, module);
