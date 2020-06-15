@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
-import cn from 'classnames';
+import { css } from '@styled-system/css';
 
+import { ExampleBox } from '../../.storybook/components/ExampleBox';
 import { Popover, PopoverProps, PopoverPlacement } from './Popover';
 import { Text } from '../Text';
 import { Input } from '../Input';
 import { Button } from '../Button';
 import { Box } from '../Core';
 import Readme from './README.md';
-import styles from '../../../../stories/styles/stories.scss';
 
 const stories = storiesOf('Components|Popover', module).addDecorator(withReadme(Readme));
 
@@ -31,9 +31,29 @@ const placements: PopoverPlacement[] = [
 
 const sharedTarget = ({ targetProps, targetEvents, active }: any = {}) => (
   <Box
-    py={5}
-    className={cn(styles['example__block--dashed'], {
-      [styles['example__block--dashed-active']]: active,
+    css={css({
+      border: '2px dashed #e1e4e5',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: '.75rem 0',
+      py: 5,
+      color: '#ed5153',
+      '::before': {
+        borderRight: '2px dashed #ed5153',
+        content: `""`,
+        padding: '.75rem .375rem',
+      },
+      '::after': {
+        borderLeft: '2px dashed #ed5153',
+        content: `""`,
+        padding: '.75rem .375rem',
+      },
+      ...(active
+        ? {
+            borderColor: '#ed5153',
+          }
+        : {}),
     })}
     style={{ cursor: 'pointer' }}
     {...targetProps}
@@ -155,42 +175,35 @@ stories.add(
       <h3>Story</h3>
       <h4>Themes</h4>
       <div>
-        <div className={cn(styles.example, styles[`example--col`])}>
-          <div className={styles.example__block}>
-            <PopoverSimple content="Popover content, you can put anything in here." />
-          </div>
-          <div className={cn(styles.example__code, styles[`text-center`])}>Default</div>
-        </div>
-        <div className={cn(styles.example, styles[`example--col`])}>
-          <div className={styles.example__block}>
-            <PopoverSimple content="Popover content, you can put anything in here." light />
-          </div>
-          <div className={cn(styles.example__code, styles[`text-center`])}>Light</div>
-        </div>
+        <ExampleBox
+          example={<PopoverSimple content="Popover content, you can put anything in here." />}
+          content="Default"
+        />
+        <ExampleBox
+          example={<PopoverSimple content="Popover content, you can put anything in here." light />}
+          content="Light"
+        />
       </div>
-
       <h4>Options</h4>
-      <div className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
-          <PopoverSimple content="Popover content, you can put anything in here." noArrow />
-        </div>
-        <div className={cn(styles.example__code, styles[`text-center`])}>No Arrow</div>
-      </div>
-      <div className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
+      <ExampleBox
+        example={<PopoverSimple content="Popover content, you can put anything in here." noArrow />}
+        content="No Arrow"
+      />
+      <ExampleBox
+        example={
           <PopoverSimple
             content="Popover content, you can put anything in here."
             isFlipEnabled={false}
           />
-        </div>
-        <div className={cn(styles.example__code, styles[`text-center`])}>Flip disabled</div>
-      </div>
-      <div className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
+        }
+        content="Flip Disabled"
+      />
+      <ExampleBox
+        example={
           <PopoverWithCloseButton content="Clicking outside will not close it" autoClose={false} />
-        </div>
-        <div className={cn(styles.example__code, styles[`text-center`])}>autoClose off</div>
-      </div>
+        }
+        content="autoClose off"
+      />
     </div>
   ),
   { percy: { skip: true } },
@@ -203,23 +216,21 @@ stories.add(
       <h3>Dark</h3>
       <div>
         {placements.map(placement => (
-          <div key={placement} className={cn(styles.example, styles[`example--col`])}>
-            <div className={styles.example__block}>
-              <PopoverSimple content={placement} placement={placement} />
-            </div>
-            <div className={cn(styles.example__code, styles[`text-center`])}>{placement}</div>
-          </div>
+          <ExampleBox
+            key={placement}
+            example={<PopoverSimple content={placement} placement={placement} />}
+            content={placement}
+          />
         ))}
       </div>
       <h3>Light</h3>
       <div>
         {placements.map(placement => (
-          <div key={placement} className={cn(styles.example, styles[`example--col`])}>
-            <div className={styles.example__block}>
-              <PopoverSimple content={placement} placement={placement} light />
-            </div>
-            <div className={cn(styles.example__code, styles[`text-center`])}>{placement}</div>
-          </div>
+          <ExampleBox
+            key={placement}
+            example={<PopoverSimple content={placement} placement={placement} light />}
+            content={placement}
+          />
         ))}
       </div>
     </div>
@@ -233,14 +244,12 @@ stories.add(
     <div>
       <h3>Events (see Action Logger)</h3>
       <div>
-        <div className={cn(styles.example, styles[`example--col`])}>
-          <div className={styles.example__block}>
+        <ExampleBox
+          example={
             <PopoverWithCloseButton content="Click the button to close the popover:" light />
-          </div>
-          <div className={cn(styles.example__code, styles[`text-center`])}>
-            State controlled from outside
-          </div>
-        </div>
+          }
+          content="State controlled from outside"
+        />
       </div>
     </div>
   ),
@@ -306,23 +315,21 @@ stories.add('Percy Placement', () => (
     <h3>Dark</h3>
     <div>
       {placements.map(placement => (
-        <div key={placement} className={cn(styles.example, styles[`example--col`])}>
-          <div className={styles.example__block}>
-            <PopoverSimple isOpen content={placement} placement={placement} />
-          </div>
-          <div className={cn(styles.example__code, styles[`text-center`])}>{placement}</div>
-        </div>
+        <ExampleBox
+          key={placement}
+          example={<PopoverSimple isOpen content={placement} placement={placement} />}
+          content={placement}
+        />
       ))}
     </div>
     <h3>Light</h3>
     <div>
       {placements.map(placement => (
-        <div key={placement} className={cn(styles.example, styles[`example--col`])}>
-          <div className={styles.example__block}>
-            <PopoverSimple isOpen content={placement} placement={placement} light />
-          </div>
-          <div className={cn(styles.example__code, styles[`text-center`])}>{placement}</div>
-        </div>
+        <ExampleBox
+          key={placement}
+          example={<PopoverSimple isOpen content={placement} placement={placement} light />}
+          content={placement}
+        />
       ))}
     </div>
   </div>
