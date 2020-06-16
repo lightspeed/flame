@@ -8,7 +8,6 @@ import { Text } from '../Text';
 
 interface Props {
   type?: string;
-  isHidden?: string;
   noCloseBtn?: boolean;
   /** Function called when Close button is tapped */
   onClose?: Function;
