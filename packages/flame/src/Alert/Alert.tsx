@@ -22,7 +22,7 @@ export interface AlertProps {
   /** Icon for the alert */
   icon?: React.ReactNode;
   /** Text for the alert's title */
-  title?: string;
+  title: string;
 }
 /**
  * An alert can be a warning following an action, a helpful tip or an important update about a system issue. There are four types of alert and each has a different function.
