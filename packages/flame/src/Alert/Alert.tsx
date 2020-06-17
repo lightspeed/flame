@@ -10,7 +10,7 @@ import { Text } from '../Text';
 
 export type AlertTypes = 'info' | 'success' | 'warning' | 'danger' | string;
 
-export interface AlertProps {
+export interface AlertProps extends SpaceProps, React.ComponentPropsWithRef<'div'> {
   /** CSS class name */
   className?: string;
   /** Enum for preset Alert types */
@@ -22,12 +22,12 @@ export interface AlertProps {
   /** Icon for the alert */
   icon?: React.ReactNode;
   /** Text for the alert's title */
-  title: string;
+  title?: string;
 }
 /**
  * An alert can be a warning following an action, a helpful tip or an important update about a system issue. There are four types of alert and each has a different function.
  */
-export const Alert: React.FC<AlertProps & SpaceProps> = ({
+export const Alert: React.FC<AlertProps> = ({
   children,
   type = 'info',
   title,
@@ -72,7 +72,10 @@ export const Alert: React.FC<AlertProps & SpaceProps> = ({
     >
       <Flex flex="1">
         <Box flex="1" css={css({ position: 'relative', pl: 5 })}>
-          <Flex className="fl-alert__icon" css={{ position: 'absolute', left: '0px', top: '2px' }}>
+          <Flex
+            className="fl-alert__icon"
+            css={{ position: 'absolute', left: '0px', top: title ? '2px' : '1px' }}
+          >
             {icon || <AlertIcons type={type} />}
           </Flex>
           {title && (
