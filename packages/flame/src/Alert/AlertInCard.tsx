@@ -36,13 +36,14 @@ const AlertInCard: React.FC<Props> = ({
         borderRadius: 'radius-2',
         border: '1px solid',
         variant: `alertInCardVariants.${type}`,
+        lineHeight: 'normal',
       })}
       {...restProps}
     >
       <Flex className="fl-alert__icon" flex={0} mt="-1px">
         <AlertIcons type={type} />
       </Flex>
-      <Text css={css({ flex: '1' })} fontSize={['text', 'text-s']} lineHeight={[3, 2]} pl={2}>
+      <Text css={css({ flex: '1' })} fontSize={['text', 'text-s']} px={2}>
         {children}
       </Text>
       {!noCloseBtn && (

@@ -32,6 +32,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 - Icons in Alert will now automatically assign the right color that matches the type of Alert ([#82](https://github.com/lightspeed/flame/pull/82))
 - Icons in Alert will now be properly centered ([#82](https://github.com/lightspeed/flame/pull/82))
 - Tweak css selectors for TextContent to adapt to how emotion handles specificities ([#92](https://github.com/lightspeed/flame/pull/92))
+- Normalize line-height for Alert and AlertInCard ([#101](https://github.com/lightspeed/flame/pull/101))
 
 ## 1.6.2 - 2020-07-06
 
