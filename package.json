@@ -109,8 +109,5 @@
   },
   "browserslist": [
     "extends @lightspeed/browserslist-config"
-  ],
-  "publishConfig": {
-    "tag": "next"
-  }
+  ]
 }
