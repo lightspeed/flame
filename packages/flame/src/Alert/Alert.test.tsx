@@ -4,13 +4,15 @@ import { Alert } from './Alert';
 
 describe('Alert', () => {
   it('renders correctly', () => {
-    const { getByText } = customRender(<Alert>Hello World</Alert>);
+    const { getByText } = customRender(<Alert title="title">Hello World</Alert>);
     expect(getByText('Hello World')).toBeTruthy();
   });
 
   it('renders with an icon', () => {
     const { getByTestId } = customRender(
-      <Alert icon={<i data-testid="icon" />}>Hello World</Alert>,
+      <Alert title="title" icon={<i data-testid="icon" />}>
+        Hello World
+      </Alert>,
     );
     expect(getByTestId('icon')).toBeInTheDocument();
   });
@@ -32,7 +34,11 @@ describe('Alert', () => {
 
   it('accepts a custom handleClose function', () => {
     const handleClose = jest.fn();
-    const { container } = customRender(<Alert onClose={handleClose}>Hello World</Alert>);
+    const { container } = customRender(
+      <Alert title="title" onClose={handleClose}>
+        Hello World
+      </Alert>,
+    );
 
     expect(handleClose).not.toHaveBeenCalled();
 
