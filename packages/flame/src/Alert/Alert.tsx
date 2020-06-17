@@ -40,7 +40,7 @@ export const Alert: React.FC<AlertProps & SpaceProps> = ({
     // eslint-disable-next-line no-console
     console.warn(
       'Warning: Starting from next major version, you will no longer be able to add a prop icon.',
-      'Icons will be automatically be injected based on the Alert type',
+      'Icons will be automatically be injected based on the Alert type.',
     );
   }
 
