@@ -11,8 +11,8 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Fix typing for Alert and AlertInCard
-- Allow empty Alert title and adjust positioning if its the case
+- Fix typing for Alert and AlertInCard ([#102](https://github.com/lightspeed/flame/pull/102)
+- Allow empty Alert title and adjust positioning if its the case ([#102](https://github.com/lightspeed/flame/pull/102)
 
 ## 2.0.0-rc.3 - 2020-06-17
 
