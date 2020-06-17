@@ -2,7 +2,6 @@
   "name": "@lightspeed/flame",
   "version": "1.6.2",
   "private": true,
-  "version": "1.6.0",
   "description": "Lightspeed's React UI components library",
   "author": "Lightspeed",
   "license": "SEE LICENSE IN LICENSE",
