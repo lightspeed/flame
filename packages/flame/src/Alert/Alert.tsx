@@ -65,6 +65,7 @@ export const Alert: React.FC<AlertProps & SpaceProps> = ({
         borderRadius: 'radius-2',
         px: 3,
         py: 2,
+        lineHeight: 'normal',
         variant: `alertVariants.${type}`,
       })}
       {...restProps}
@@ -79,9 +80,7 @@ export const Alert: React.FC<AlertProps & SpaceProps> = ({
               {title}
             </Text>
           )}
-          <Text fontSize={['text', 'text-s']} lineHeight={[3, 2]}>
-            {children}
-          </Text>
+          <Text fontSize={['text', 'text-s']}>{children}</Text>
         </Box>
       </Flex>
       {!noCloseBtn && <CloseButton onClick={handleClose} />}
