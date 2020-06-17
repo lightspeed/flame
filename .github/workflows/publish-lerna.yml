@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - master
+      - next
 name: Publish lerna
 jobs:
   publish:
