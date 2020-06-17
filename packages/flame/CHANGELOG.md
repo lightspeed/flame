@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Fix typing for Alert and AlertInCard
+- Allow empty Alert title and adjust positioning if its the case
+
 ## 2.0.0-rc.3 - 2020-06-17
 
 - Version bump because lerna

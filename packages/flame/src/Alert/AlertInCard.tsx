@@ -1,12 +1,13 @@
 import * as React from 'react';
 import css from '@styled-system/css';
 
+import { SpaceProps } from 'styled-system';
 import { AlertIcons } from './AlertIcons';
 import { CloseButton } from './CloseButton';
 import { Flex } from '../Core';
 import { Text } from '../Text';
 
-interface Props {
+interface Props extends SpaceProps, React.ComponentPropsWithRef<'div'> {
   type?: string;
   noCloseBtn?: boolean;
   /** Function called when Close button is tapped */
