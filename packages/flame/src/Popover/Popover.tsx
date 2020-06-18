@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Placement as PopoverPlacement } from 'popper.js';
+import { Placement as PopoverPlacement } from '@popperjs/core';
 import { PopoverArrow, PopoverContainer, PopoverContainerProps } from './PopoverContainer';
 import { usePopper, useToggle, useOnClickOutside, useEventListener } from '../hooks';
 

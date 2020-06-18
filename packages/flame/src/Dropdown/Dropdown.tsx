@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
-import { Placement as PopperPlacement } from 'popper.js';
+import { Placement as PopperPlacement } from '@popperjs/core';
 
 import { Box, FlameBoxProps } from '../Core';
 import { Button, ButtonProps } from '../Button';
