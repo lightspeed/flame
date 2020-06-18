@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { position } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
-import { Placement as TooltipPlacement } from 'popper.js';
+import { Placement as TooltipPlacement } from '@popperjs/core';
 import { usePopper, useToggle } from '../hooks';
 
 const tooltipOffset = 'space.1';
@@ -205,34 +205,6 @@ interface TooltipWrapper extends TooltipContainerProps {
   /** Sets a light color on Tooltip */
   light?: boolean;
 }
-const TooltipWrapper: React.FC<TooltipWrapper> = ({
-  light,
-  zIndex,
-  as,
-  tag,
-  targetRef,
-  children,
-  placement,
-  className,
-}) => {
-  const popperRef = React.createRef<HTMLDivElement>();
-  const { placement: nextPlacement } = usePopper(targetRef, popperRef, {
-    placement: placement as any,
-  });
-
-  return (
-    <TooltipContainer
-      as={as || tag || 'div'}
-      className={className}
-      data-placement={nextPlacement}
-      light={light}
-      ref={popperRef}
-      zIndex={zIndex}
-    >
-      {children}
-    </TooltipContainer>
-  );
-};
 
 export interface TooltipProps extends TooltipWrapper {
   children: React.ReactNode;
@@ -262,8 +234,13 @@ export const Tooltip: React.FC<TooltipProps> = ({
   placement = 'top' as TooltipPlacement,
   children,
 }) => {
-  const targetRef = React.createRef<HTMLSpanElement>();
   const { isActive, setActive, setInactive } = useToggle(active);
+  const [referenceElement, setReferenceElement] = React.useState(null);
+  const [popperElement, setPopperElement] = React.useState(null);
+
+  const { attributes, styles } = usePopper(referenceElement, popperElement, {
+    placement,
+  });
 
   const onFocus = () => {
     !active && setActive();
@@ -281,7 +258,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
   return (
     <React.Fragment>
       <span
-        ref={targetRef}
+        ref={setReferenceElement}
         onFocus={onFocus}
         onBlur={onBlur}
         onMouseEnter={onMouseEnter}
@@ -290,17 +267,20 @@ export const Tooltip: React.FC<TooltipProps> = ({
         {children}
       </span>
       {isActive && (
-        <TooltipWrapper
+        <TooltipContainer
           as={as || tag || 'div'}
           className={className}
+          style={styles.popper}
+          data-placement={
+            attributes && attributes.popper && attributes.popper['data-popper-placement']
+          }
           light={light}
-          targetRef={targetRef}
+          ref={setPopperElement}
           zIndex={zIndex}
-          placement={placement}
         >
           {content}
           <TooltipArrow />
-        </TooltipWrapper>
+        </TooltipContainer>
       )}
     </React.Fragment>
   );

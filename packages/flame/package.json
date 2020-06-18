@@ -46,9 +46,11 @@
     "@types/styled-system": "^5.1.9",
     "polished": "^2.3.0",
     "popper.js": "^1.15.0",
+    "@popperjs/core": "^2.4.2",
     "react-modal": "^3.5.1",
     "react-select": "^2.0.0",
     "react-toast-notifications": "^2.4.0",
+    "react-popper": "^2.2.3",
     "styled-system": "5.1.4",
     "type-fest": "^0.3.0"
   },

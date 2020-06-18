@@ -7,6 +7,84 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Breaking
+
+- Swap out internal `usePopper` hook with the one provided by `react-popper`. While the the underlying components API have not changed, if you are using the hook directly, you'll need to swap out a couple of things to fit the `react-popper`'s hook. Namely, the target and popper refs need to come from the `React.useState` hook. Additionally, the styles need to be manually applied.
+
+```jsx
+// Before
+const Component = () => {
+  const targetRef = React.createRef(null);
+  const popperRef = React.createRef(null);
+  // placement contains the positioning of the popper
+  const { placement } = usePopper(targetRef, popperRef);
+
+  return (
+    <div>
+      <div ref={targetRef}>target</div>
+      <div ref={popperRef}>popper content</div>
+    </div>
+  );
+};
+
+// After
+import { usePopper } from '@lightspeed/flame/hooks';
+
+const Example = () => {
+  const [targetRef, setTargetRef] = React.useState(null);
+  const [popperRef, setPopperRef] = React.useState(null);
+  // attributes.popper['data-popper-placement'] effectively fills the same role as
+  // the previously provided placement return value.
+  // long story short: attributes.popper['data-popper-placement'] === placement
+  const { styles, attributes } = usePopper(targetRef, popperRef);
+
+  return (
+    <div>
+      <div ref={setTargetRef}>target</div>
+      <div ref={setPopperRef} style={styles.popper}>
+        popper content
+      </div>
+    </div>
+  );
+};
+```
+
+Additionally, should you leverage the `useOnClickOutside` hook in conjunction with `usePopper`, you'll need to also forward a separate ref.
+
+```jsx
+import { usePopper, useOnClickOutside } from '@lightspeed/flame/hooks';
+
+const Example = () => {
+  const clickOutsideRef = React.createRef(null);
+  const [targetRef, setTargetRef] = React.useState(null);
+  const [popperRef, setPopperRef] = React.useState(null);
+  const { styles } = usePopper(targetRef, popperRef);
+
+  useOnClickOutside(clickOutsideRef, () => console.log('clicked outside!'));
+
+  return (
+    <div>
+      <div ref={setTargetRef}>target</div>
+      <div
+        ref={ref => {
+          setPopperRef(ref);
+          clickOutsideRef.current = ref;
+        }}
+        style={styles.popper}
+      >
+        popper content
+      </div>
+    </div>
+  );
+};
+```
+
+### Fixed
+
+- Components leveraging usePopper should now update appropriately should the layout change around the popper change.
+
 ## 2.0.0-rc.4 - 2020-06-17
 
 ### Fixed
