@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Breaking
 
-- Swap out internal `usePopper` hook with the one provided by `react-popper`. While the the underlying components API have not changed, if you are using the hook directly, you'll need to swap out a couple of things to fit the `react-popper`'s hook. Namely, the target and popper refs need to come from the `React.useState` hook. Additionally, the styles need to be manually applied.
+- Swap out internal `usePopper` hook with the one provided by `react-popper`. While the the underlying components API have not changed, if you are using the hook directly, you'll need to swap out a couple of things to fit the `react-popper`'s hook. Namely, the target and popper refs need to come from the `React.useState` hook. Additionally, the styles need to be manually applied.([#104](https://github.com/lightspeed/flame/pull/104)
 
 ```jsx
 // Before
