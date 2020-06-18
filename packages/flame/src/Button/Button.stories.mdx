@@ -1,221 +1,45 @@
-import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
-import { Button } from './.';
-import { Box } from '../Core';
-import { IconApple } from '../Icon/Apple';
-import { DocsContainer } from '../../.storybook/preview';
-import { SpacedGroup } from '../../.storybook/components/SpacedGroup';
+import { Story, Props } from '@storybook/addon-docs/blocks';
+import { Button } from './Button';
 
 <Meta title="Components/Button" component={Button} />
 
 # Button
 
-The most essential element of a user interface.
-
-## Types, styles and sizes
-
-Each buttons have multiple set of types to denote the user a visual
-intent of an action associated to a button button. To change the color, simply use the `variant` prop.
-
-Adding a `fill` prop will fill the color of the button. Please note that in the future, this will be the default option.
-
-<Story name="Button canvas">
-  <div>
-    <h2>Types and styles</h2>
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <div style={{ marginRight: '24px' }}>
-        <h3>Outline</h3>
-        <SpacedGroup>
-          <Button>Default</Button>
-          <Button variant="primary">Primary</Button>
-          <Button variant="secondary">Secondary</Button>
-          <Button variant="danger">Danger</Button>
-        </SpacedGroup>
-      </div>
-      <div>
-        <h3>Fill</h3>
-        <SpacedGroup>
-          <Button fill>Default</Button>
-          <Button fill variant="primary">
-            Primary
-          </Button>
-          <Button fill variant="secondary">
-            Secondary
-          </Button>
-          <Button fill variant="danger">
-            Danger
-          </Button>
-        </SpacedGroup>
-      </div>
-    </div>
-    <h2>Sizing, blocks and multiline behaviour</h2>
-    <div>
-      <Box mb={3}>
-        <h3>Sizes</h3>
-        <SpacedGroup>
-          <Button size="small">Small</Button>
-          <Button variant="primary">Medium</Button>
-          <Button variant="secondary" size="large">
-            Large
-          </Button>
-          <Button variant="danger" size="xlarge">
-            Extra Large
-          </Button>
-        </SpacedGroup>
-      </Box>
-      <Box mb={3}>
-        <h3>Block</h3>
-        <SpacedGroup flexDirection="column">
-          <Button size="small" block>
-            Small Block
-          </Button>
-          <Button variant="primary" block>
-            Medium Block
-          </Button>
-          <Button variant="secondary" size="large" block>
-            Large Block
-          </Button>
-          <Button variant="danger" size="xlarge" block>
-            Extra Large Block
-          </Button>
-        </SpacedGroup>
-      </Box>
-      <Divider mt={3} />
-      <h3>Multiline</h3>
-      <SpacedGroup flexDirection="column" style={{ width: '180px' }}>
-        <Button size="small">
-          This is a small button with a very long text, even longer for small
-        </Button>
-        <Button variant="primary">
-          This is a normal button with a very long text, even longer
-        </Button>
-        <Button variant="secondary" size="large">
-          This is a large button with a very long text
-        </Button>
-        <Button variant="danger" size="xlarge">
-          This is a extra large button with a very long text
-        </Button>
-      </SpacedGroup>
-    </div>
-  </div>
-</Story>
-
-## Forcing state and behaviour
-
-Button can also have forced state and behaviour. This is particularly handy when dealing
-with dropdowns, where you would want to have the button in a "active" state while the
-popover component is being displayed.
-
-To do so, you may leverage the `forcedState` prop to set the state of the buttons.
-
-<Story name="Forcing state and behaviour">
-  <div>
-    <div>
-      <h3>Forced State - Active</h3>
-      <SpacedGroup>
-        <Button forcedState="active">Default</Button>
-        <Button variant="primary" forcedState="active">
-          Primary
-        </Button>
-        <Button variant="secondary" forcedState="active">
-          Secondary
-        </Button>
-        <Button variant="danger" forcedState="active">
-          Danger
-        </Button>
-      </SpacedGroup>
-      <br />
-      <SpacedGroup>
-        <Button variant="primary" fill forcedState="active">
-          Primary
-        </Button>
-        <Button variant="secondary" fill forcedState="active">
-          Secondary
-        </Button>
-        <Button variant="danger" fill forcedState="active">
-          Danger
-        </Button>
-      </SpacedGroup>
-    </div>
-    <div>
-      <h3>Forced State - Hover</h3>
-      <SpacedGroup>
-        <Button forcedState="hover">Default</Button>
-        <Button variant="primary" forcedState="hover">
-          Primary
-        </Button>
-        <Button variant="secondary" forcedState="hover">
-          Secondary
-        </Button>
-        <Button variant="danger" forcedState="hover">
-          Danger
-        </Button>
-      </SpacedGroup>
-      <br />
-      <SpacedGroup>
-        <Button variant="primary" fill forcedState="hover">
-          Primary
-        </Button>
-        <Button variant="secondary" fill forcedState="hover">
-          Secondary
-        </Button>
-        <Button variant="danger" fill forcedState="hover">
-          Danger
-        </Button>
-      </SpacedGroup>
-    </div>
-  </div>
-</Story>
-
-## Disabling a button
-
-Unsurprisingly, you can disable a button by passing in the `disabled` prop.
-
-<Button
-  disabled
-  onClick={() => {
-    alert('if you see me, something went wrong');
-  }}
->
-  Disabled Button
-</Button>
-
-## Loading button
-
-A button can be set to a loading state by simply setting the `loading` prop to true.
-
-When the button is set to loading, it is automatically disabled.
-
-<Button
-  loading
-  onClick={() => {
-    alert('if you see me, something went wrong');
-  }}
->
-  Default
-</Button>
-
-## Button as a link
-
-The button will automatically be converted into an `<a>` tag if a `href` is specified.
-
-<Button href="www.google.com">Visit Google</Button>
-
-## Icons within a button
-
-Adding an Icon to a button will cause it to automatically position the Icon to an optimal position.
-
-We highly recommend to never add more than 1 icon to a button.
-
-<Button>
-  <IconApple /> This is an apple
-</Button>
-
-## Playground
-
 <Preview>
-  <Story name="basic">{props => <Button {...props}>This is a button!</Button>}</Story>
+  <Story name="Playground">{args => <Button {...args}>Button</Button>}</Story>
 </Preview>
 
 ## Props
 
-<Props story="basic" />
+<Props story="Playground" />
+
+## Sizes
+
+Our buttons come in four different sizes: Small, Medium, Large & Extra Large. All buttons have a fixed height and padding unless stated differently inside the type
+
+| Size     | Usage                                                                                                                                                                                                             |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `small`  | These little buttons are used in compact little spaces, e.g. inside the header of a card.                                                                                                                         |
+| `medium` | Default size of the Button                                                                                                                                                                                        |
+| `large`  | The large button is mainly used inside an open but content-rich page with multiple actions. This large button also provides a large touchable area for use on touch screens.                                      |
+| `xlarge` | When a single page has nothing going on but to promote a single thing with just one button, you should use the extra large button. This button is also great for fast pacing flows with a focus on touch screens. |
+
+## Styles
+
+These are all the styles that are included in all button types (unless stated differently in the types section).
+
+| Style               | Usage                                                                                                   |
+| ------------------- | ------------------------------------------------------------------------------------------------------- |
+| `default`/`neutral` | The neutral button is used for all generic actions.                                                     |
+| `primary`           | There should only be one main action on the page. This action should always be a primary styled button. |
+| `secondary`         | For subsequent actions that encourage our users to fill data like selecting a product.                  |
+| `danger`            | For all actions that can be destructive, we use the danger styled button.                               |
+
+## Types
+
+These are all the styles that are included in all button types (unless stated differently in the types section).
+
+| Type        | Usage                                                                                                                                       |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Outline** | Our standard button is for all non-default styles the outline button can transform into a fill button to start encouraging interaction.     |
+| **Fill**    | When taking action is promoted/encouraged we use the fill button. The main CTA should always be a fill. **Not available in default style.** |

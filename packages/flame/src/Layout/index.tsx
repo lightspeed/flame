@@ -14,6 +14,10 @@ export type AnnotatedLayoutProps = {
 } & FlameFlexProps &
   React.HTMLAttributes<HTMLBaseElement>;
 
+/**
+ * A 2 column layout where the left hand side contains information and descriptions
+ * for what is being presented in the right hand column.
+ */
 export const AnnotatedLayout: React.FunctionComponent<AnnotatedLayoutProps> = ({
   title,
   description,

@@ -87,6 +87,8 @@ const PopperWrapper: React.FC<PopperWrapper> = ({
 // This functionality should be removed in the future, since it's not good for a11y reasons.
 /**
  * A small extension of an action taken, containing information, or more actions still.
+ *
+ * This component uses the react-popper and @popper/core library.
  */
 export const Popover: React.FC<PopoverProps> = ({
   className,

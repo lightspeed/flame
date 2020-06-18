@@ -1,3 +1,3 @@
-import { InputGroup, InputGroupAddon, BeThereOrBeSquare } from './InputGroup';
+import { InputGroup, InputGroupAddon } from './InputGroup';
 
-export { InputGroup, InputGroupAddon, BeThereOrBeSquare };
+export { InputGroup, InputGroupAddon };

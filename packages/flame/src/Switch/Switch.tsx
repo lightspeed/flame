@@ -112,7 +112,6 @@ const Cross = styled(IconCross)`
 export type SwitchProps = Merge<
   React.HTMLProps<HTMLInputElement>,
   {
-    css?: any;
     /** CSS class name to apply to the wrapper component */
     className?: string;
     /** Sets the checked state of Switch */
@@ -121,6 +120,10 @@ export type SwitchProps = Merge<
 >;
 /**
  * A toggleable control which stays on (or off) until manually triggered once more.
+ *
+ * Switches are only for turning settings on or off, NOT for opting in or out of something
+ *
+ * Just like the checkbox and radio component, the switch is stateless by default.
  */
 export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
   ({ className, checked, ...restProps }, ref) => (

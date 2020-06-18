@@ -229,6 +229,9 @@ export type GroupProps = Merge<
     inputBlock?: boolean;
   }
 >;
+/**
+ * Group component bundles other components.
+ */
 export const Group: React.FunctionComponent<GroupProps> = ({
   children,
   block,

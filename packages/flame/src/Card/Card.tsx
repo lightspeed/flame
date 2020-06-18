@@ -37,10 +37,7 @@ export type CardSectionProps = CardCommonProps;
  */
 export const CardSection = styled('div')<CardSectionProps>`
   color: ${themeGet('colors.gray')};
-  ${compose(
-    color,
-    space,
-  )};
+  ${compose(color, space)};
   ${setSectionSizingProp};
 `;
 
@@ -200,7 +197,12 @@ export type CardProps = BackgroundColorProps &
   SpaceProps;
 
 /**
- * A blank canvas, and wrapper for our user interfaces.
+ * Cards shape our interfaces into easily readable screens.
+ *
+ * This module exposes many small helper components to properly create
+ * the right look and feel. Simply add the sub-components into the card.
+ * Check the examples below for how to build out some common use-cases.
+ *
  */
 export const Card = styled('div')<CardProps>`
   border-radius: ${themeGet('radii.radius-2')};
@@ -218,9 +220,6 @@ export const Card = styled('div')<CardProps>`
   }
 
   ${setCardVariant};
-  ${compose(
-    color,
-    space,
-  )};
+  ${compose(color, space)};
   ${setCardSizingProp};
 `;

@@ -1,0 +1,54 @@
+import { Story, Props } from '@storybook/addon-docs/blocks';
+import { Icon } from '../index';
+import * as stories from './Icon.stories';
+
+<Meta title="Components/Icon" component={Icon} />
+
+# Icon
+
+Adding new icons is done automatically when a new svg file is detected within `svg/Icons` and when `yarn bootstrap` is executed.
+
+For detailled information and guidelines on how to add a new icon please consult the following readme file: [How to add Icons](https://github.com/lightspeed/flame/blob/master/packages/flame/HOW_TO_ADD_ICONS.md
+
+#### Example
+
+If using all Icons:
+
+```js
+import React from 'react';
+import { Icon } from '@lightspeed/flame/Icon';
+
+const MyComponent = () => (
+  <div>
+    <Icon name="add" />
+    <Icon name="checkmark" />
+  </div>
+);
+
+export default MyComponent;
+```
+
+Or if using some Icons, use import them directly instead of the `<Icon>` component which will include **all** components in your app bundle:
+
+```js
+import React from 'react';
+import { IconAdd } from '@lightspeed/flame/Icon/Add';
+import { IconCheckmark } from '@lightspeed/flame/Icon/Checkmark';
+
+const MyComponent = () => (
+  <div>
+    <Add />
+    <Checkmark />
+  </div>
+);
+
+export default MyComponent;
+```
+
+<Preview>
+  <Story name="story">{stories.story()}</Story>
+</Preview>
+
+### Props
+
+<Props of={Icon} />

@@ -62,6 +62,7 @@
     "@emotion/styled": "^10.0.9",
     "@lightspeed/flame-tokens": "^1.0.0",
     "@percy/storybook": "^3.2.0",
+    "@storybook/addon-actions": "6.0.0-beta.28",
     "@storybook/addon-docs": "6.0.0-beta.28",
     "@storybook/react": "6.0.0-beta.28",
     "@styled-system/theme-get": "5.0.16",

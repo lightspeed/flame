@@ -7,6 +7,8 @@ export type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement>;
 
 /**
  * Offers users a single choice, among a medium-sized set of options.
+ *
+ * Select is simply a stylized native `<select />` component.
  */
 export const Select = styled('select')<Omit<LayoutProps, 'size'> & BorderProps>`
   width: 100%;
@@ -52,8 +54,5 @@ export const Select = styled('select')<Omit<LayoutProps, 'size'> & BorderProps>`
     color: transparent;
     text-shadow: 0 0 0 ${themeGet('selectStyles.color')};
   }
-  ${compose(
-    layout,
-    border,
-  )}
+  ${compose(layout, border)}
 `;

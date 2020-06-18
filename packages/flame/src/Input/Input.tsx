@@ -139,11 +139,7 @@ const Wrapper = styled('div')<WrapperProps>`
   transition: all ${themeGet('transition.transition-duration-fast')} ease-in-out;
   width: 100%;
 
-  ${compose(
-    layout,
-    border,
-    zIndex,
-  )}
+  ${compose(layout, border, zIndex)}
 
   ${props =>
     props.disabled &&
@@ -323,7 +319,11 @@ export interface InputProps extends Omit<BaseInputProps, 'status' | 'hasPrefix' 
 }
 
 /**
- * The Acceptor of User Information, Messenger of the Internet Gods.
+ * The most generic form of them all is the input form.
+ * The input enables our users to fill in their data or content within our software.
+ *
+ * Each input can have an input Label, description, a required mark & a regular label.
+ * Input component includes a wide variety of options to quickly create accessible forms.
  */
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (

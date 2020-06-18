@@ -100,6 +100,10 @@ interface FormRadioProps extends RadioProps {
 }
 /**
  * Offers users a single choice, among a small set.
+ *
+ * By default, the radio input is stateless.
+ *
+ * Should the need arise, Flame provides the base 2 components for label and description that you can forward into the Radio.
  */
 export const Radio = React.forwardRef<HTMLInputElement, FormRadioProps>(
   ({ label, id, description, disabled, css, className, ...restProps }, ref) => (

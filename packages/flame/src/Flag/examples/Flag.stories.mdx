@@ -1,0 +1,42 @@
+import { Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { FlagCA_QC } from '../CA_QC';
+import * as stories from './Flag.stories';
+import { Flag } from '../index';
+
+<Meta title="Components/Flag" component={Flag} />
+
+# Flag
+
+A set of small and readable flags.
+
+<Preview>
+  <Story name="Playground">{args => <Flag code="CA" />}</Story>
+</Preview>
+
+### Props
+
+<Props of={Flag} />
+
+You can import a vast number of flags by simply changing the code or name prop.
+
+**Do note that by using this component, you will be including every flag SVG within your app,
+significantly increasing it's end bundle size.**
+
+## Managing bundle size
+
+Typically, flags should be imported directly:
+
+```js
+import React from 'react';
+import { FlagCA } from '@lightspeed/flame/Flag/CA';
+import { FlagCA_QC } from '@lightspeed/flame/Flag/CA_QC';
+
+const MyComponent = () => (
+  <div>
+    <CA />
+    <CA_QC />
+  </div>
+);
+
+export default MyComponent;
+```

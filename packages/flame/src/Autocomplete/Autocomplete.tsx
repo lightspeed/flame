@@ -168,7 +168,19 @@ const Select = (props: AutocompleteProps) => {
   );
 };
 
+/**
+ * Select/Autocomplete component built on top of [react-select](https://react-select.com).
+ *
+ * Be aware that this component is using an older version or react-select (v2).
+ *
+ * For a complete listing of all its props, please consult `react-select`'s [documentation](https://react-select.com/props).
+ *
+ * This particular component is subject to future change, as we're too tightly coupled to
+ * react-select and its integration. Not to mention that this is not actually a "real autocomplete"
+ * solution. Using this as a "search autocomplete" à la google is not recommended.
+ */
 const StyledSelect = withTheme(Select);
+
 const AsyncWithTheme = withTheme(Async);
 const AsyncCreatableWithTheme = withTheme(AsyncCreatable);
 const CreatableWithTheme = withTheme(Creatable);

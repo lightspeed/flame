@@ -18,16 +18,15 @@ export const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
   border: solid 1px ${themeGet('groupStyles.addon.borderColor')};
   border-radius: ${themeGet('radii.radius-1')};
   align-items: center;
-  ${compose(
-    border,
-    color,
-    space,
-    zIndex,
-  )};
+  ${compose(border, color, space, zIndex)};
 `;
 
 /**
- * A wrapper component used to combine other components into a single cohesive whole.
+ * If you need to regroup Input components together (namely `Button` and `Input`), you may wrap them with `InputGroup`.
+ * This component will essentially attempt to forward values to the underlying children Styled System border and border radius props.
+ *
+ * Concretely, this also means that, as long as a component has the appropriate Styled System props, it too can be smooshed within the `InputGroup`.
+ * Please be aware that this functionality will only apply to first level children and will not recursively check for components that have the border or border radius prop.
  */
 export const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps }) => {
   const nextChildren = React.Children.map(children, (child: any, index) => {
@@ -66,5 +65,3 @@ export const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps })
 
   return <Flex {...restProps}>{nextChildren}</Flex>;
 };
-
-export const BeThereOrBeSquare = InputGroup;

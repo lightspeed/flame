@@ -12,6 +12,12 @@ const cardsContent =
 
 export default {
   title: 'Components/Card',
+  component: Card,
+  subcomponents: {
+    CardHeader,
+    CardFooter,
+    CardSection,
+  },
 };
 
 export const types = () => (

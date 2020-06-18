@@ -8,11 +8,15 @@ import { Flex } from '../Core';
 import { Text } from '../Text';
 
 interface Props extends SpaceProps, React.ComponentPropsWithRef<'div'> {
+  /** Change the overall look and feel of an AlertInCard */
   type?: 'info' | 'success' | 'warning' | 'danger';
   noCloseBtn?: boolean;
   /** Function called when Close button is tapped */
   onClose?: Function;
 }
+/**
+ * A specially stylized Alert meant to be used within the `<Card />` component.
+ */
 const AlertInCard: React.FC<Props> = ({
   type = 'info',
   noCloseBtn = false,

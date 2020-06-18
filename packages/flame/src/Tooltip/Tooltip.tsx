@@ -249,7 +249,8 @@ export interface TooltipProps extends TooltipWrapper {
 // to trigger a full re-render, which in turns means the ref will be created in time.
 // This functionality should be removed in the future, since it's not good for a11y reasons.
 /**
- * An extra bit of information, contextualized to a portion of a UI.
+ * Tooltips are visual helpers when users hover or focus an element. They can also be activated without interaction to give extra information.
+ * **Note that tooltips won't be triggered on touch devices.**
  */
 export const Tooltip: React.FC<TooltipProps> = ({
   active,

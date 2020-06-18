@@ -22,6 +22,9 @@ export type BoneProps = WidthProps &
     height?: string | number;
   };
 
+/**
+ * Used to build the skeleton preview of a component while loading data.
+ */
 export const Bone = styled('span')<BoneProps>`
   @keyframes boneAnimation {
     0% {

@@ -1,0 +1,40 @@
+import { Story, Props } from '@storybook/addon-docs/blocks';
+import { Dialog } from './Dialog';
+import * as stories from './Dialog.stories';
+
+<Meta title="Components/Dialog" component={Dialog} />
+
+# Dialog
+
+A simpler Modal, Dialogs present users with a simple question and require a simple answer.
+
+<Preview>
+  <Story name="story">{stories.story()}</Story>
+</Preview>
+
+### Props
+
+<Props of={Dialog} />
+
+### Example
+
+```js
+import React from 'react';
+import { Dialog } from '@lightspeed/flame/Dialog';
+
+const MyComponent = () => (
+  <Dialog
+    title="Title"
+    message="Messsage"
+    isOpen={this.state.isOpen}
+    isLoading={this.state.isLoading}
+    onCancel={this.onCancel}
+    onConfirm={this.onConfirm}
+    cancelText="No"
+    confirmText="Yes"
+    type="danger"
+  />
+);
+
+export default MyComponent;
+```

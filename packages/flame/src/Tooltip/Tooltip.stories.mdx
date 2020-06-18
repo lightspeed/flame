@@ -1,0 +1,25 @@
+import { Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { Tooltip } from './Tooltip';
+import * as stories from './Tooltip.stories';
+
+<Meta title="Components/Tooltip" component={Tooltip} />
+
+# Tooltip
+
+Tooltip inform users on the outcome of an action. They appear temporarily, towards the bottom of the screen. They shouldn’t interrupt the user experience, and they don’t require user input to disappear.
+
+<Preview>
+  <Story name="Types">{stories.types()}</Story>
+</Preview>
+
+### Content
+
+The content inside of tooltips should NEVER be crucial information. As their discoverability isn’t that great and you don’t have hovers on touchscreen devices.
+
+### Directions
+
+The tooltip comes in two styles with multiple directions. The direction indicates the position of the content _(e.g. "top" means the content appears above the element)_
+
+## Props
+
+<Props of={Tooltip} />

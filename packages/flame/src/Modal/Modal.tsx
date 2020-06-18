@@ -245,6 +245,11 @@ class BaseModal extends React.Component<ModalProps, ModalState> {
   contentLabel: 'Modal',
 };
 
+/**
+ * Flame component for displaying Modals.
+ *
+ * This component uses the "react-modal" library
+ */
 export const Modal = withTheme(BaseModal);
 export type ModalSlideInProps = ModalProps;
 export type ModalSlideInState = ModalState;

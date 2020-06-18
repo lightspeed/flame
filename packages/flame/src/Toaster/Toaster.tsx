@@ -63,6 +63,12 @@ const Countdown: React.FC<CountdownProps> = ({
   />
 );
 
+/**
+ *
+ * Toaster inform users on the outcome of an action. They appear temporarily, towards the bottom of the screen. They shouldn’t interrupt the user experience, and they don’t require user input to disappear.
+ * This component uses the [react-toast-notifications](https://github.com/jossmac/react-toast-notifications) library.
+ *
+ */
 const Toaster: React.FC<ToastProps> = ({
   children,
   transitionDuration,
