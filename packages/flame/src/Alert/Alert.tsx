@@ -8,7 +8,7 @@ import { AlertIcons } from './AlertIcons';
 import { Flex, Box } from '../Core';
 import { Text } from '../Text';
 
-export type AlertTypes = 'info' | 'success' | 'warning' | 'danger' | string;
+export type AlertTypes = 'info' | 'success' | 'warning' | 'danger';
 
 export interface AlertProps extends SpaceProps, React.ComponentPropsWithRef<'div'> {
   /** CSS class name */

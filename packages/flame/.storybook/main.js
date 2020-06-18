@@ -5,8 +5,12 @@ const sass = require('sass');
 const packageInfo = require('../package.json');
 
 module.exports = {
-  stories: ['../src/**/story.tsx'],
-  addons: ['storybook-readme/register', '@storybook/addon-actions/register'],
+  stories: ['../src/**/*.stories.@(tsx|mdx)'],
+  addons: [
+    {
+      name: '@storybook/addon-docs',
+    },
+  ],
   webpackFinal: config => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,

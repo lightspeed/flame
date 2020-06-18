@@ -8,7 +8,7 @@ import { Flex } from '../Core';
 import { Text } from '../Text';
 
 interface Props extends SpaceProps, React.ComponentPropsWithRef<'div'> {
-  type?: string;
+  type?: 'info' | 'success' | 'warning' | 'danger';
   noCloseBtn?: boolean;
   /** Function called when Close button is tapped */
   onClose?: Function;

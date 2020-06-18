@@ -1,0 +1,221 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Button } from './.';
+import { Box } from '../Core';
+import { IconApple } from '../Icon/Apple';
+import { DocsContainer } from '../../.storybook/preview';
+import { SpacedGroup } from '../../.storybook/components/SpacedGroup';
+
+<Meta title="Components/Button" component={Button} />
+
+# Button
+
+The most essential element of a user interface.
+
+## Types, styles and sizes
+
+Each buttons have multiple set of types to denote the user a visual
+intent of an action associated to a button button. To change the color, simply use the `variant` prop.
+
+Adding a `fill` prop will fill the color of the button. Please note that in the future, this will be the default option.
+
+<Story name="Button canvas">
+  <div>
+    <h2>Types and styles</h2>
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
+      <div style={{ marginRight: '24px' }}>
+        <h3>Outline</h3>
+        <SpacedGroup>
+          <Button>Default</Button>
+          <Button variant="primary">Primary</Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="danger">Danger</Button>
+        </SpacedGroup>
+      </div>
+      <div>
+        <h3>Fill</h3>
+        <SpacedGroup>
+          <Button fill>Default</Button>
+          <Button fill variant="primary">
+            Primary
+          </Button>
+          <Button fill variant="secondary">
+            Secondary
+          </Button>
+          <Button fill variant="danger">
+            Danger
+          </Button>
+        </SpacedGroup>
+      </div>
+    </div>
+    <h2>Sizing, blocks and multiline behaviour</h2>
+    <div>
+      <Box mb={3}>
+        <h3>Sizes</h3>
+        <SpacedGroup>
+          <Button size="small">Small</Button>
+          <Button variant="primary">Medium</Button>
+          <Button variant="secondary" size="large">
+            Large
+          </Button>
+          <Button variant="danger" size="xlarge">
+            Extra Large
+          </Button>
+        </SpacedGroup>
+      </Box>
+      <Box mb={3}>
+        <h3>Block</h3>
+        <SpacedGroup flexDirection="column">
+          <Button size="small" block>
+            Small Block
+          </Button>
+          <Button variant="primary" block>
+            Medium Block
+          </Button>
+          <Button variant="secondary" size="large" block>
+            Large Block
+          </Button>
+          <Button variant="danger" size="xlarge" block>
+            Extra Large Block
+          </Button>
+        </SpacedGroup>
+      </Box>
+      <Divider mt={3} />
+      <h3>Multiline</h3>
+      <SpacedGroup flexDirection="column" style={{ width: '180px' }}>
+        <Button size="small">
+          This is a small button with a very long text, even longer for small
+        </Button>
+        <Button variant="primary">
+          This is a normal button with a very long text, even longer
+        </Button>
+        <Button variant="secondary" size="large">
+          This is a large button with a very long text
+        </Button>
+        <Button variant="danger" size="xlarge">
+          This is a extra large button with a very long text
+        </Button>
+      </SpacedGroup>
+    </div>
+  </div>
+</Story>
+
+## Forcing state and behaviour
+
+Button can also have forced state and behaviour. This is particularly handy when dealing
+with dropdowns, where you would want to have the button in a "active" state while the
+popover component is being displayed.
+
+To do so, you may leverage the `forcedState` prop to set the state of the buttons.
+
+<Story name="Forcing state and behaviour">
+  <div>
+    <div>
+      <h3>Forced State - Active</h3>
+      <SpacedGroup>
+        <Button forcedState="active">Default</Button>
+        <Button variant="primary" forcedState="active">
+          Primary
+        </Button>
+        <Button variant="secondary" forcedState="active">
+          Secondary
+        </Button>
+        <Button variant="danger" forcedState="active">
+          Danger
+        </Button>
+      </SpacedGroup>
+      <br />
+      <SpacedGroup>
+        <Button variant="primary" fill forcedState="active">
+          Primary
+        </Button>
+        <Button variant="secondary" fill forcedState="active">
+          Secondary
+        </Button>
+        <Button variant="danger" fill forcedState="active">
+          Danger
+        </Button>
+      </SpacedGroup>
+    </div>
+    <div>
+      <h3>Forced State - Hover</h3>
+      <SpacedGroup>
+        <Button forcedState="hover">Default</Button>
+        <Button variant="primary" forcedState="hover">
+          Primary
+        </Button>
+        <Button variant="secondary" forcedState="hover">
+          Secondary
+        </Button>
+        <Button variant="danger" forcedState="hover">
+          Danger
+        </Button>
+      </SpacedGroup>
+      <br />
+      <SpacedGroup>
+        <Button variant="primary" fill forcedState="hover">
+          Primary
+        </Button>
+        <Button variant="secondary" fill forcedState="hover">
+          Secondary
+        </Button>
+        <Button variant="danger" fill forcedState="hover">
+          Danger
+        </Button>
+      </SpacedGroup>
+    </div>
+  </div>
+</Story>
+
+## Disabling a button
+
+Unsurprisingly, you can disable a button by passing in the `disabled` prop.
+
+<Button
+  disabled
+  onClick={() => {
+    alert('if you see me, something went wrong');
+  }}
+>
+  Disabled Button
+</Button>
+
+## Loading button
+
+A button can be set to a loading state by simply setting the `loading` prop to true.
+
+When the button is set to loading, it is automatically disabled.
+
+<Button
+  loading
+  onClick={() => {
+    alert('if you see me, something went wrong');
+  }}
+>
+  Default
+</Button>
+
+## Button as a link
+
+The button will automatically be converted into an `<a>` tag if a `href` is specified.
+
+<Button href="www.google.com">Visit Google</Button>
+
+## Icons within a button
+
+Adding an Icon to a button will cause it to automatically position the Icon to an optimal position.
+
+We highly recommend to never add more than 1 icon to a button.
+
+<Button>
+  <IconApple /> This is an apple
+</Button>
+
+## Playground
+
+<Preview>
+  <Story name="basic">{props => <Button {...props}>This is a button!</Button>}</Story>
+</Preview>
+
+## Props
+
+<Props story="basic" />

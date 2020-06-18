@@ -1,0 +1,59 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { Alert } from './.';
+import { DocsContainer } from '../../.storybook/preview';
+
+<Meta
+  title="Components/Alert"
+  component={Alert}
+  argTypes={{
+    onClose: {
+      type: null,
+    },
+    icon: {
+      type: null,
+    },
+  }}
+/>
+
+# Alert
+
+Use an alert when you want to signal that something is going on.
+
+## Types
+
+<Story name="types">
+  <div>
+    <h3>Info (default)</h3>
+    <Alert title="Info Card" noCloseBtn>
+      This is a Card
+    </Alert>
+    <h3>Danger</h3>
+    <Alert title="Danger Card" type="danger" noCloseBtn>
+      This is a Card
+    </Alert>
+    <h3>Success</h3>
+    <Alert title="Success Card" type="success" noCloseBtn>
+      This is a Card
+    </Alert>
+    <h3>Warning</h3>
+    <Alert title="Warning Card" type="warning" noCloseBtn>
+      This is a Card
+    </Alert>
+  </div>
+</Story>
+
+## Playground
+
+<Preview>
+  <Story name="basic">
+    {props => (
+      <Alert {...props} title={props.title || 'Title'}>
+        This is an Alert component of type "{props.type}"
+      </Alert>
+    )}
+  </Story>
+</Preview>
+
+## Props
+
+<Props story="basic" />

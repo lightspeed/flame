@@ -1,5 +1,6 @@
 import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
+import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import { Global } from '@emotion/core';
 import { FlameTheme, FlameGlobalStyles, Box } from '../src/Core';
 import { Select } from '../src/Select';
@@ -80,5 +81,14 @@ addParameters({
     name: 'Lightspeed Flame',
     panelPosition: 'right',
     storySort,
+  },
+  docs: {
+    container: props => {
+      return (
+        <FlameTheme>
+          <DocsContainer {...props} />
+        </FlameTheme>
+      );
+    },
   },
 });
