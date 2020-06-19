@@ -6,6 +6,7 @@ import { ToasterProvider, useToasts } from './index';
 import { ActionableToastContent, Toaster } from './Toaster';
 import { Button } from '../Button';
 import { Heading2 } from '../Text';
+import { Modal } from '../Modal';
 
 const stories = storiesOf('Components|Toaster', module).addDecorator(withReadme(Readme));
 
@@ -177,3 +178,28 @@ stories.add('percy snapshots', () => {
     </ToasterProvider>
   );
 });
+
+stories.add(
+  'Toaster in a modal',
+  () => (
+    <ToasterProvider>
+      <Modal isOpen={true}>
+        <div css={{ padding: '8px' }}>
+          <div>
+            <Heading2>A toast will auto dismiss itself</Heading2>
+            <AutoDismissToastExample />
+          </div>
+          <div>
+            <Heading2>A toast with an action will have a progress bar</Heading2>
+            <ActionableToastExample />
+          </div>
+          <div>
+            <Heading2>Create a toast with a long message</Heading2>
+            <LongToastExample />
+          </div>
+        </div>
+      </Modal>
+    </ToasterProvider>
+  ),
+  { percy: { skip: true } },
+);

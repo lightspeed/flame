@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Adjust z-index of PopoverContainer to go above the Modal overlay
+
 ## 2.0.0-rc.5 - 2020-06-19
 
 ### Breaking
