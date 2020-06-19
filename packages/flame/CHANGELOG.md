@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Adjust z-index of PopoverContainer to go above the Modal overlay
+- Adjust z-index of PopoverContainer to go above the Modal overlay ([#107](https://github.com/lightspeed/flame/pull/107)
 
 ## 2.0.0-rc.5 - 2020-06-19
 
