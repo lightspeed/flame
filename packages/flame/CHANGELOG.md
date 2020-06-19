@@ -11,8 +11,8 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Leverage `update` hook to re-compute popper positioning in components that have popper still visible.
-- In `useOnClickOutside`, use a ref for handler callback to avoid destroying the event listener too early.
+- Leverage `update` hook to re-compute popper positioning in components that have popper still visible. ([#105](https://github.com/lightspeed/flame/pull/105)
+- In `useOnClickOutside`, use a ref for handler callback to avoid destroying the event listener too early. ([#105](https://github.com/lightspeed/flame/pull/105)
 
 ## 2.0.0-rc.5 - 2020-06-19
 
