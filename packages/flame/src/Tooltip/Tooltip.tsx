@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { position } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
 import { Placement as TooltipPlacement } from '@popperjs/core';
-import { usePopper, useToggle } from '../hooks';
+import { usePopper, useToggle, useOnClickOutside } from '../hooks';
 
 const tooltipOffset = 'space.1';
 const tooltipArrowSize = '5px';
@@ -237,21 +237,31 @@ export const Tooltip: React.FC<TooltipProps> = ({
   const { isActive, setActive, setInactive } = useToggle(active);
   const [referenceElement, setReferenceElement] = React.useState(null);
   const [popperElement, setPopperElement] = React.useState(null);
+  const clickOutsideRef = React.useRef();
+  clickOutsideRef.current = popperElement;
 
-  const { attributes, styles } = usePopper(referenceElement, popperElement, {
+  const { attributes, styles, update } = usePopper(referenceElement, popperElement, {
     placement,
   });
 
+  useOnClickOutside(clickOutsideRef, () => {
+    isActive && update && update();
+  });
+
   const onFocus = () => {
+    isActive && update && update();
     !active && setActive();
   };
   const onBlur = () => {
+    isActive && update && update();
     !active && setInactive();
   };
   const onMouseEnter = () => {
+    isActive && update && update();
     !active && setActive();
   };
   const onMouseLeave = () => {
+    isActive && update && update();
     !active && setInactive();
   };
 
@@ -268,6 +278,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
       </span>
       {isActive && (
         <TooltipContainer
+          ref={setPopperElement}
           as={as || tag || 'div'}
           className={className}
           style={styles.popper}
@@ -275,7 +286,6 @@ export const Tooltip: React.FC<TooltipProps> = ({
             attributes && attributes.popper && attributes.popper['data-popper-placement']
           }
           light={light}
-          ref={setPopperElement}
           zIndex={zIndex}
         >
           {content}

@@ -11,7 +11,8 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Leverage `forceUpdate` to re-compute popper positioning in components that have popper still visible.
+- Leverage `update` hook to re-compute popper positioning in components that have popper still visible.
+- In `useOnClickOutside`, use a ref for handler callback to avoid destroying the event listener too early.
 
 ## 2.0.0-rc.5 - 2020-06-19
 
@@ -63,9 +64,10 @@ Additionally, should you leverage the `useOnClickOutside` hook in conjunction wi
 import { usePopper, useOnClickOutside } from '@lightspeed/flame/hooks';
 
 const Example = () => {
-  const clickOutsideRef = React.createRef(null);
   const [targetRef, setTargetRef] = React.useState(null);
   const [popperRef, setPopperRef] = React.useState(null);
+  const clickOutsideRef = React.useRef();
+  clickOutsideRef.current = popperRef;
   const { styles } = usePopper(targetRef, popperRef);
 
   useOnClickOutside(clickOutsideRef, () => console.log('clicked outside!'));
@@ -73,13 +75,7 @@ const Example = () => {
   return (
     <div>
       <div ref={setTargetRef}>target</div>
-      <div
-        ref={ref => {
-          setPopperRef(ref);
-          clickOutsideRef.current = ref;
-        }}
-        style={styles.popper}
-      >
+      <div ref={setPopperRef} style={styles.popper}>
         popper content
       </div>
     </div>

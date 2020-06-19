@@ -117,9 +117,10 @@ export const Dropdown: React.FC<Props> = ({
 }) => {
   const [targetRef, setTargetRef] = React.useState(null);
   const [popperRef, setPopperRef] = React.useState(null);
-  const popperComponentRef = React.createRef();
+  const clickOutsideRef = React.useRef();
+  clickOutsideRef.current = popperRef;
 
-  const { styles, forceUpdate } = usePopper(targetRef, popperRef, {
+  const { styles, update } = usePopper(targetRef, popperRef, {
     placement: (placementWhitelist[placement] as any) || placement || 'bottom-start',
     modifiers: [
       {
@@ -145,8 +146,8 @@ export const Dropdown: React.FC<Props> = ({
     }
   });
 
-  useOnClickOutside(popperComponentRef, () => {
-    forceUpdate && forceUpdate();
+  useOnClickOutside(clickOutsideRef, () => {
+    isActive && update && update();
     isActive && setInactive();
   });
 
@@ -176,11 +177,7 @@ export const Dropdown: React.FC<Props> = ({
       </Box>
 
       <DropdownContainer
-        ref={ref => {
-          setPopperRef(ref);
-          // @ts-ignore
-          popperComponentRef.current = ref;
-        }}
+        ref={setPopperRef}
         light
         zIndex={zIndex}
         isActive={isActive}
