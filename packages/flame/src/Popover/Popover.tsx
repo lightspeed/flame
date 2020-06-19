@@ -68,7 +68,7 @@ export const Popover: React.FC<PopoverProps> = ({
 
   const { isActive, setInactive, setActive } = useToggle(isOpen);
 
-  const { styles, attributes } = usePopper(targetRef, popperRef, {
+  const { styles, attributes, forceUpdate } = usePopper(targetRef, popperRef, {
     placement: placement || 'bottom-start',
     strategy: positionFixed ? 'fixed' : 'absolute',
     modifiers: [
@@ -81,6 +81,7 @@ export const Popover: React.FC<PopoverProps> = ({
 
   useOnClickOutside(clickOutsideRef, () => {
     isActive && autoClose && onClose();
+    forceUpdate && forceUpdate();
   });
 
   useEventListener<KeyboardEvent>('keyup', event => {

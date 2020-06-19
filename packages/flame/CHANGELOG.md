@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+### [Unreleased]
+
+### Fixed
+
+- Leverage `forceUpdate` to re-compute popper positioning in components that have popper still visible.
+
 ## 2.0.0-rc.5 - 2020-06-19
 
 ### Breaking
