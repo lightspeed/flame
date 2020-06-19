@@ -121,7 +121,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="top"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     Tooltip Content
     <span
@@ -307,7 +313,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="top"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     Tooltip Content
     <span
