@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
-import { Placement as PopperPlacement } from 'popper.js';
+import { Placement as PopperPlacement } from '@popperjs/core';
 
 import { Box, FlameBoxProps } from '../Core';
 import { Button, ButtonProps } from '../Button';
@@ -115,17 +115,27 @@ export const Dropdown: React.FC<Props> = ({
   onClick,
   ...restProps
 }) => {
-  const targetRef = React.createRef<HTMLDivElement>();
-  const popperRef = React.createRef<HTMLDivElement>();
+  const [targetRef, setTargetRef] = React.useState(null);
+  const [popperRef, setPopperRef] = React.useState(null);
+  const popperComponentRef = React.createRef();
 
-  usePopper(targetRef, popperRef, {
+  const { styles } = usePopper(targetRef, popperRef, {
     placement: (placementWhitelist[placement] as any) || placement || 'bottom-start',
-    modifiers: {
-      offset: {
-        enabled: true,
-        offset: '0px, 8px',
+    modifiers: [
+      {
+        name: 'computeStyles',
+        options: {
+          adaptive: false, // true by default
+        },
       },
-    },
+      {
+        name: 'offset',
+        enabled: true,
+        options: {
+          offset: [0, 8],
+        },
+      },
+    ],
   });
 
   const { isActive, toggle, setInactive } = useToggle(!!initiallyOpen);
@@ -135,7 +145,7 @@ export const Dropdown: React.FC<Props> = ({
     }
   });
 
-  useOnClickOutside(popperRef, () => {
+  useOnClickOutside(popperComponentRef, () => {
     isActive && setInactive();
   });
 
@@ -145,7 +155,7 @@ export const Dropdown: React.FC<Props> = ({
         closeDropdown: setInactive,
       }}
     >
-      <Box display="inline-block" ref={targetRef}>
+      <Box display="inline-block" ref={setTargetRef}>
         <Button
           pr={2}
           pl={2}
@@ -165,11 +175,16 @@ export const Dropdown: React.FC<Props> = ({
       </Box>
 
       <DropdownContainer
-        ref={popperRef}
+        ref={ref => {
+          setPopperRef(ref);
+          // @ts-ignore
+          popperComponentRef.current = ref;
+        }}
         light
         zIndex={zIndex}
         isActive={isActive}
         placement={placement}
+        style={styles.popper}
       >
         {typeof children === 'function' ? children(setInactive) : children}
       </DropdownContainer>

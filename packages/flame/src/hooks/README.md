@@ -28,7 +28,7 @@ const Example = () => {
 };
 ```
 
-## useClickOutside()
+## useOnClickOutside()
 
 Trigger a callback whenever we click outside a given target
 
@@ -40,7 +40,7 @@ Trigger a callback whenever we click outside a given target
 ### Example
 
 ```jsx
-import { useClickOutside } from '@lightspeed/flame/hooks';
+import { useOnClickOutside } from '@lightspeed/flame/hooks';
 
 const myCallbackFunction = () => {
   console.log('do something');
@@ -48,7 +48,7 @@ const myCallbackFunction = () => {
 
 const Example = () => {
   const targetRef = React.createRef();
-  useClickOutside(targetRef, myCallbackFunction);
+  useOnClickOutside(targetRef, myCallbackFunction);
 
   return (
     <div>
@@ -87,19 +87,13 @@ const Example = () => {
 
 ## usePopper()
 
-Wrapper hook over the `popper.js` library that manages the instantiation and destruction of popper, as well as sending back relevant data of popper.js internals
+Since we're already using `popper` internally, we are simply re-exporting the related hook.
 
 ### Arguments
 
-- `targetRef: React.ref`: DOM node reference that will be used as an anchor point for the popperRef node
-- `popperRef: React.ref`: DOM node reference that will be placed to the targetRef anchor point.
-- `options: PopperOptions`: See [the official documentation](https://popper.js.org/popper-documentation.html#Popper) for further details. By default, only the placement is set.
-
-### Returns
-
-| Return Value | Type     | description                   |
-| ------------ | -------- | ----------------------------- |
-| `placement`  | `string` | Popper.js computed placement. |
+- `targetRef: Element`: DOM node reference that will be used as an anchor point for the popperRef node
+- `popperRef: Element`: DOM node reference that will be placed to the targetRef anchor point.
+- `options: PopperOptions`: See [the official documentation](https://popper.js.org/react-popper/) for further details. By default, only the placement is set.
 
 ### Example
 
@@ -107,14 +101,16 @@ Wrapper hook over the `popper.js` library that manages the instantiation and des
 import { usePopper } from '@lightspeed/flame/hooks';
 
 const Example = () => {
-  const targetRef = React.createRef();
-  const popperRef = React.createRef();
-  const { placement } = usePopper(targetRef, popperRef);
+  const [targetRef, setTargetRef] = React.useState(null);
+  const [popperRef, setTargetRef] = React.useState(null);
+  const { styles } = usePopper(targetRef, popperRef);
 
   return (
     <div>
-      <div ref={targetRef}>target</div>
-      <div ref={popperRef}>popper content</div>
+      <div ref={setTargetRef}>target</div>
+      <div ref={setPopperRef} style={styles.popper}>
+        popper content
+      </div>
     </div>
   );
 };

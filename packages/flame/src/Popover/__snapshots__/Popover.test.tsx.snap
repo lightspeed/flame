@@ -198,7 +198,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="bottom-start"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     <span>
       Some content
@@ -439,7 +445,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="bottom-start"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     <span>
       Some content
@@ -641,7 +653,13 @@ Array [
 
 <div
     className="emotion-0 emotion-1"
-    data-placement="bottom-start"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     <span>
       Some content
@@ -858,7 +876,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="bottom"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     <span>
       Some content
@@ -1078,7 +1102,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="bottom-end"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     <span>
       Some content
@@ -1298,7 +1328,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="bottom-start"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     <span>
       Some content
@@ -1518,7 +1554,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="left"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     <span>
       Some content
@@ -1738,7 +1780,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="right"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     <span>
       Some content
@@ -1958,7 +2006,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="top"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     <span>
       Some content
@@ -2178,7 +2232,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="top-end"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     <span>
       Some content
@@ -2398,7 +2458,13 @@ Array [
 
 <div
     className="emotion-2 emotion-3"
-    data-placement="top-start"
+    style={
+      Object {
+        "left": "0",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
   >
     <span>
       Some content
