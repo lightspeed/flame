@@ -178,7 +178,9 @@ const ToasterContainer: React.FC = ({ children }) => (
       overflowX: 'hidden',
       overflowY: 'auto',
       position: 'fixed',
-      zIndex: 1000,
+      // @TODO: z-index values NEED to be in the theme
+      // Or else we end up with fun scenarios like these.
+      zIndex: 10001,
       bottom: 0,
       flexDirection: 'column',
       pointerEvents: 'none',
