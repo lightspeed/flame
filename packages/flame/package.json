@@ -1,6 +1,6 @@
 {
   "name": "@lightspeed/flame",
-  "version": "2.0.0-rc.4",
+  "version": "2.0.0-rc.5",
   "private": true,
   "description": "Lightspeed's React UI components library",
   "author": "Lightspeed",
@@ -40,16 +40,16 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.4.2",
     "@styled-system/css": "^5.1.5",
     "@styled-system/theme-get": "5.0.16",
     "@types/react-toast-notifications": "^2.4.0",
     "@types/styled-system": "^5.1.9",
     "polished": "^2.3.0",
-    "@popperjs/core": "^2.4.2",
     "react-modal": "^3.5.1",
+    "react-popper": "^2.2.3",
     "react-select": "^2.0.0",
     "react-toast-notifications": "^2.4.0",
-    "react-popper": "^2.2.3",
     "styled-system": "5.1.4",
     "type-fest": "^0.3.0"
   },
