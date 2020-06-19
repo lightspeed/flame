@@ -59,7 +59,7 @@ stories.add('Styles', () => (
 ));
 
 stories.add(
-  'Next Styles',
+  'next/Styles',
   () => (
     <div>
       <div className="sibling-spacing">

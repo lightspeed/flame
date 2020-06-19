@@ -30,23 +30,23 @@ const badgeVariants: BadgeVariants = {
 const nextBadgeVariants = {
   danger: {
     bg: 'maple-100',
-    borderColor: 'maple-300',
+    borderColor: 'maple',
   },
   default: {
     bg: 'gray-100',
-    borderColor: 'gray-300',
+    borderColor: 'gray',
   },
   primary: {
     bg: 'blue-100',
-    borderColor: 'blue-300',
+    borderColor: 'blue',
   },
   success: {
     bg: 'green-100',
-    borderColor: 'green-300',
+    borderColor: 'green',
   },
   warning: {
     bg: 'orange-100',
-    borderColor: 'orange-300',
+    borderColor: 'orange',
   },
 };
 
