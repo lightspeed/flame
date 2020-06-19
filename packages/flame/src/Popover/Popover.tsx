@@ -63,12 +63,13 @@ export const Popover: React.FC<PopoverProps> = ({
 }) => {
   const [targetRef, setTargetRef] = React.useState(null);
   const [popperRef, setPopperRef] = React.useState(null);
-  const clickOutsideRef = React.createRef();
+  const clickOutsideRef = React.useRef();
+  clickOutsideRef.current = popperRef;
   const isFirstPass = React.useRef(true);
 
   const { isActive, setInactive, setActive } = useToggle(isOpen);
 
-  const { styles, attributes } = usePopper(targetRef, popperRef, {
+  const { styles, attributes, update } = usePopper(targetRef, popperRef, {
     placement: placement || 'bottom-start',
     strategy: positionFixed ? 'fixed' : 'absolute',
     modifiers: [
@@ -81,6 +82,7 @@ export const Popover: React.FC<PopoverProps> = ({
 
   useOnClickOutside(clickOutsideRef, () => {
     isActive && autoClose && onClose();
+    isActive && update && update();
   });
 
   useEventListener<KeyboardEvent>('keyup', event => {
@@ -122,11 +124,7 @@ export const Popover: React.FC<PopoverProps> = ({
       {isActive && (
         <PopoverContainer
           light={light}
-          ref={ref => {
-            setPopperRef(ref);
-            // @ts-ignore
-            clickOutsideRef.current = ref; // eslint-disable-line
-          }}
+          ref={setPopperRef}
           className={className}
           zIndex={zIndex as any}
           isActive={isActive}
