@@ -3,11 +3,14 @@ import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 
 import { Badge, PillBadge, BadgeTypes } from './Badge';
+import { Badge as NextBadge } from './next';
+
 import Readme from './README.md';
 
 const stories = storiesOf('Components|Badge', module).addDecorator(withReadme(Readme));
 
 const statuses: BadgeTypes[] = ['success', 'danger', 'info', 'important', 'warning', 'default'];
+const nextStatuses = ['danger', 'default', 'primary', 'success', 'warning'] as const;
 
 stories.add('Styles', () => (
   <div>
@@ -54,3 +57,19 @@ stories.add('Styles', () => (
     </div>
   </div>
 ));
+
+stories.add(
+  'Next Styles',
+  () => (
+    <div>
+      <div className="sibling-spacing">
+        {nextStatuses.map(status => (
+          <NextBadge key={status} type={status}>
+            {`${status[0].toUpperCase()}${status.slice(1)}`}
+          </NextBadge>
+        ))}
+      </div>
+    </div>
+  ),
+  { percy: { skip: true } },
+);

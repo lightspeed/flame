@@ -27,4 +27,27 @@ const badgeVariants: BadgeVariants = {
   },
 };
 
-export { badgeVariants };
+const nextBadgeVariants = {
+  danger: {
+    bg: 'maple-200',
+    borderColor: 'maple-300',
+  },
+  default: {
+    bg: 'gray-100',
+    borderColor: 'gray-200',
+  },
+  primary: {
+    bg: 'blue-100',
+    borderColor: 'blue-200',
+  },
+  success: {
+    bg: 'green-200',
+    borderColor: 'green-400',
+  },
+  warning: {
+    bg: 'orange-200',
+    borderColor: 'orange-300',
+  },
+};
+
+export { badgeVariants, nextBadgeVariants };
