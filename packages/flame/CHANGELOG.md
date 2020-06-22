@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Smoothed out border-radius for next/Badge
+- Smoothed out border-radius for next/Badge ([#108](https://github.com/lightspeed/flame/pull/#108)
 
 ## 2.0.0-rc.7 - 2020-06-22
 
