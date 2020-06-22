@@ -59,7 +59,7 @@ class CheckBoxWrapper extends React.Component<{}, { checked: boolean; indetermin
 }
 
 export default {
-  title: 'Components/Checkbox',
+  title: 'Components|Checkbox',
   component: Checkbox,
 };
 

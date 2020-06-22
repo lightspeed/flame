@@ -4,7 +4,7 @@ import { Badge, PillBadge } from './Badge';
 import { skipPercy } from '../../.storybook/utils/skip-percy';
 
 export default {
-  title: 'Components/Badge',
+  title: 'Components|Badge',
   component: Badge,
   subcomponents: { PillBadge },
 };

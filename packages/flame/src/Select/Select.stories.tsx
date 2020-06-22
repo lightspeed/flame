@@ -6,7 +6,7 @@ import { Box } from '../Core';
 import { Select } from './index';
 
 export default {
-  title: 'Components/Select',
+  title: 'Components|Select',
   component: Select,
 };
 

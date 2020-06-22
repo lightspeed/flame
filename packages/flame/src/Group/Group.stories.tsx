@@ -31,7 +31,7 @@ const DeprecationWarning: React.FC = () => (
 );
 
 export default {
-  title: 'Components/Group',
+  title: 'Components|Group',
   component: Group,
   subcomponents: {
     GroupAddon,

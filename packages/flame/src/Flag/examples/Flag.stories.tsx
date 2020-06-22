@@ -84,7 +84,7 @@ class FlagPresenter extends React.Component<FlagPresenterProps, FlagPresenterSta
 }
 
 export default {
-  title: 'Components/Flag',
+  title: 'Components|Flag',
 };
 
 export const story = () => (

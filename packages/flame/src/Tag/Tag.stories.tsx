@@ -9,7 +9,7 @@ import { Icon } from '../Icon';
 import { skipPercy } from '../../.storybook/utils/skip-percy';
 
 export default {
-  title: 'Components/Tag',
+  title: 'Components|Tag',
   component: Tag,
 };
 

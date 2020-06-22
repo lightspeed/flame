@@ -165,7 +165,7 @@ class PopoverWithCloseButton extends Component<PopoverExamplesProp, { isOpen?: b
 }
 
 export default {
-  title: 'Components/Popover',
+  title: 'Components|Popover',
   component: Popover,
 };
 

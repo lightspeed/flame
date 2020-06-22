@@ -11,7 +11,7 @@ import { SpacedGroup } from '../../.storybook/components/SpacedGroup';
 import { skipPercy } from '../../.storybook/utils/skip-percy';
 
 export default {
-  title: 'Components/Switch',
+  title: 'Components|Switch',
   component: Switch,
 };
 

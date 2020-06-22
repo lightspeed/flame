@@ -9,7 +9,7 @@ import { Heading2, Heading3, TextContent } from '../Text';
 import { Box } from '../Core';
 
 export default {
-  title: 'Components/Progress',
+  title: 'Components|Progress',
   component: Progress,
 };
 

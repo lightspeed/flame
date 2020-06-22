@@ -26,7 +26,7 @@ const SampleDropdownContent = () => (
 );
 
 export default {
-  title: 'Components/InputGroup',
+  title: 'Components|InputGroup',
   component: InputGroup,
 };
 

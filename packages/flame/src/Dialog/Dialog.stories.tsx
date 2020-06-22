@@ -124,7 +124,7 @@ class DialogStoryHelper extends React.Component<{}, State> {
 }
 
 export default {
-  title: 'Components/Dialog',
+  title: 'Components|Dialog',
   component: Dialog,
 };
 

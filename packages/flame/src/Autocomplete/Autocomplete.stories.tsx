@@ -8,7 +8,7 @@ import { Box } from '../Core';
 import { Text } from '../Text';
 
 export default {
-  title: 'Components/Autocomplete',
+  title: 'Components|Autocomplete',
   component: Autocomplete,
 };
 

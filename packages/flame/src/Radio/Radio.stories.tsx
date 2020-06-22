@@ -8,7 +8,7 @@ import { Box } from '../Core';
 import { skipPercy } from '../../.storybook/utils/skip-percy';
 
 export default {
-  title: 'Components/Radio',
+  title: 'Components|Radio',
   component: Radio,
   subcomponents: { BaseRadio, RadioLabel },
 };

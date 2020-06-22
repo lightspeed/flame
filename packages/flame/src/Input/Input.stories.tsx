@@ -65,7 +65,7 @@ class InputWrapper extends React.Component<any, State> {
 }
 
 export default {
-  title: 'Components/Input',
+  title: 'Components|Input',
   component: Input,
 };
 

@@ -8,7 +8,7 @@ import { Button } from '../../Button';
 import { Text } from '../../Text';
 
 export default {
-  title: 'Components/Layout',
+  title: 'Components|Layout',
   component: AnnotatedLayout,
 };
 

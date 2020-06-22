@@ -10,7 +10,7 @@ const cardsStyles = { maxWidth: '640px' };
 const cardsContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
 
 export default {
-  title: 'Components/Divider',
+  title: 'Components|Divider',
   component: Divider,
 };
 

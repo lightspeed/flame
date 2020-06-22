@@ -7,7 +7,7 @@ import { Text } from '../Text';
 import { SpacedGroup } from '../../.storybook/components/SpacedGroup';
 
 export default {
-  title: 'Components/Spinner',
+  title: 'Components|Spinner',
   component: Spinner,
 };
 

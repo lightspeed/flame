@@ -267,7 +267,7 @@ class ModalStoryHelper extends React.Component<Props, State> {
 }
 
 export default {
-  title: 'Components/Modal',
+  title: 'Components|Modal',
   component: Modal,
   subcomponents: {
     ModalHeader,

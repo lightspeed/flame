@@ -4,7 +4,7 @@ import { Tab, TabContainer } from './Tab';
 import { Card, CardSection } from '../Card';
 
 export default {
-  title: 'Components/Tab',
+  title: 'Components|Tab',
   component: Tab,
   subcomponents: { TabContainer },
 };

@@ -22,7 +22,7 @@ const BodyContent = () => (
 );
 
 export default {
-  title: 'Components/Text',
+  title: 'Components|Text',
   component: Text,
   subcomponents: {
     Heading1,

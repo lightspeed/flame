@@ -8,7 +8,7 @@ import { Divider } from '../Divider';
 import { skipPercy } from '../../.storybook/utils/skip-percy';
 
 export default {
-  title: 'Components/Bone',
+  title: 'Components|Bone',
   component: Bone,
 };
 

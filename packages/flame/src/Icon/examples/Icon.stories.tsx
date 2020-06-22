@@ -15,7 +15,7 @@ import { Ul } from '../../../.storybook/components/Ul';
 import { skipPercy } from '../../../.storybook/utils/skip-percy';
 
 export default {
-  title: 'Components/Icon',
+  title: 'Components|Icon',
   component: Icon,
 };
 

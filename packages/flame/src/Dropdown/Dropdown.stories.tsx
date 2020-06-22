@@ -37,7 +37,7 @@ const DropdownContentWithHook = () => {
 };
 
 export default {
-  title: 'Components/Dropdown',
+  title: 'Components|Dropdown',
   component: Dropdown,
 };
 

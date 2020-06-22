@@ -17,7 +17,7 @@ const placements = [
 ] as const;
 
 export default {
-  title: 'Components/Tooltip',
+  title: 'Components|Tooltip',
   component: Tooltip,
 };
 

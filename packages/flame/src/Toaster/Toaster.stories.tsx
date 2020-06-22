@@ -114,7 +114,7 @@ const LongToastExample = () => {
 };
 
 export default {
-  title: 'Components/Toaster',
+  title: 'Components|Toaster',
   component: Toaster,
 };
 

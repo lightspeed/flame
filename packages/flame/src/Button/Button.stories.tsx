@@ -50,7 +50,7 @@ class ButtonPresenter extends PureComponent<{}, ButtonPresenterState> {
   }
 }
 export default {
-  title: 'Components/Button',
+  title: 'Components|Button',
   component: Button,
 };
 

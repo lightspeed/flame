@@ -11,7 +11,7 @@ const cardsContent =
   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quasi, sapiente ducimus maiores accusantium rem architecto eveniet, ut ratione ipsa saepe dolore voluptatem delectus natus totam laudantium quod quia sed necessitatibus culpa sit cupiditate ipsum aliquam quisquam. Delectus debitis!';
 
 export default {
-  title: 'Components/Card',
+  title: 'Components|Card',
   component: Card,
   subcomponents: {
     CardHeader,
