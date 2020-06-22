@@ -10,11 +10,9 @@ export default {
   component: Alert,
 };
 
-export const Playground = (args: any) => <Alert {...args}>This is an alert</Alert>;
-
 const alertTypes = ['info', 'warning', 'success', 'danger'] as const;
 
-export const alerts = () => {
+export const types = () => {
   return (
     <div>
       <h2>Alert Types</h2>
@@ -49,7 +47,7 @@ export const alerts = () => {
   );
 };
 
-alerts.story = {
+types.story = {
   name: 'Alert',
 };
 

@@ -19,7 +19,7 @@ import {
 } from '@lightspeed/flame/Autocomplete';
 ```
 
-#### Props
+### Props
 
 See `react-select`'s [documentation](https://react-select.com/props).
 
