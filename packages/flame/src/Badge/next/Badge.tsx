@@ -20,7 +20,7 @@ const Badge: React.FC<Props> = ({ variant = 'default', ...restProps }) => (
       px: 2,
       lineHeight: 4,
       border: '1px solid',
-      borderRadius: '12px',
+      borderRadius: '28px',
       fontSize: 'text-s',
       fontWeight: 'bold',
       textAlign: 'center',
