@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Added
+
+- Introducing the concept of the "next" folder. Whenever we are about to introduce breaking changes to existing components, we will introduce the future component into the corresponding folder. Please note that components within this folder are usually experimental and are subject to changes that might not be documented ([#106](https://github.com/lightspeed/flame/pull/106)
+- Add next/Badge. Should you wish to already leverage and test out the newer Badge component, simply `import { Badge } from '@lightspeed/flame/Badge/next';` ([#106](https://github.com/lightspeed/flame/pull/106)
+
 ## 2.0.0-rc.6 - 2020-06-19
 
 ### Fixed

@@ -654,6 +654,7 @@ declare interface FlameUI {
   alertVariants: AlertVariants;
   alertInCardVariants?: any;
   badgeVariants: BadgeVariants;
+  nextBadgeVariants: any;
   buttonVariants: ButtonVariants;
   buttonIconVariants: ButtonIconVariants;
   cardStyles: CardStyles;

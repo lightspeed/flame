@@ -22,7 +22,7 @@
     "dev": "yarn && concurrently --kill-others 'yarn dev:tokens' 'yarn dev:themes' 'lerna exec --scope \"@lightspeed/flame\" yarn storybook'",
     "dev:themes": "chokidar './packages/flame/themes/**/*.ts' -c 'lerna run --scope @lightspeed/flame build:themes'",
     "dev:tokens": "chokidar './packages/flame-tokens/src/*.ts' -c 'lerna run --scope @lightspeed/flame-tokens prepublish'",
-    "build:storybook": "yarn bootstrap && build-storybook -c .storybook",
+    "build:storybook": "yarn bootstrap && lerna exec --scope \"@lightspeed/flame\" yarn build-storybook",
     "lerna:version": "lerna version --no-push",
     "lerna:version:revert": "./scripts/revert-lerna-version",
     "version": "node ./scripts/prepare-release",
