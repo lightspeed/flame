@@ -62,7 +62,7 @@ stories.add('next/Styles', () => (
   <div>
     <div className="sibling-spacing">
       {nextStatuses.map(status => (
-        <NextBadge key={status} type={status}>
+        <NextBadge key={status} variant={status}>
           {`${status[0].toUpperCase()}${status.slice(1)}`}
         </NextBadge>
       ))}

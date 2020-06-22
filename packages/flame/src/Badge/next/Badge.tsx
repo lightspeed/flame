@@ -5,13 +5,13 @@ interface Props extends React.ComponentPropsWithRef<'span'> {
   /**
    * Adjust the overall look and feel of a badge.
    */
-  type?: 'default' | 'danger' | 'primary' | 'success' | 'warning';
+  variant?: 'default' | 'danger' | 'primary' | 'success' | 'warning';
 }
 /**
  * A badge communicates the status of an item or event when placed beside it.
  * It uses bold colors to quickly signal the intent of an item or event.
  */
-const Badge: React.FC<Props> = ({ type = 'default', ...restProps }) => (
+const Badge: React.FC<Props> = ({ variant = 'default', ...restProps }) => (
   <span
     className="fl-badge"
     css={css({
@@ -24,7 +24,7 @@ const Badge: React.FC<Props> = ({ type = 'default', ...restProps }) => (
       fontSize: 'text-s',
       fontWeight: 'bold',
       textAlign: 'center',
-      variant: `nextBadgeVariants.${type}`,
+      variant: `nextBadgeVariants.${variant}`,
     })}
     {...restProps}
   />
