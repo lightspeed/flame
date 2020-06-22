@@ -17,7 +17,7 @@ const Badge: React.FC<Props> = ({ variant = 'default', ...restProps }) => (
     css={css({
       display: 'inline-flex',
       color: 'textHeading',
-      px: 3,
+      px: 2,
       lineHeight: 4,
       border: '1px solid',
       borderRadius: '12px',
