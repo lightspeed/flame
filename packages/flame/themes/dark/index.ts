@@ -2,7 +2,7 @@ import { lightspeedTheme } from '@lightspeed/flame-tokens';
 
 import { colors } from './colors';
 import { alertVariants } from './components/alert';
-import { badgeVariants } from './components/badge';
+import { badgeVariants, nextBadgeVariants } from './components/badge';
 import { buttonVariants, buttonIconVariants } from './components/button';
 import { cardStyles, cardVariants } from './components/card';
 import { checkboxStyles } from './components/checkbox';
@@ -34,6 +34,7 @@ const theme: FlameUI = {
   ...themeUI,
   alertVariants,
   badgeVariants,
+  nextBadgeVariants,
   buttonVariants,
   buttonIconVariants,
   cardStyles,
