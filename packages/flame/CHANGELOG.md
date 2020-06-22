@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Smoothed out border-radius for next/Badge ([#108](https://github.com/lightspeed/flame/pull/#108)
+
 ## 2.0.0-rc.7 - 2020-06-22
 
 ### Added
