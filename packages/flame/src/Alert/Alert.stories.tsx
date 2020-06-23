@@ -8,6 +8,7 @@ import { IconApple } from '../Icon/Apple';
 export default {
   title: 'Components|Alert',
   component: Alert,
+  includeStories: ['ToBeDeprecatedFeature', 'types'],
 };
 
 const alertTypes = ['info', 'warning', 'success', 'danger'] as const;

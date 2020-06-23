@@ -1,9 +1,10 @@
 import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
-import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
+import { DocsContainer } from '@storybook/addon-docs/blocks';
 import { Global } from '@emotion/core';
 import { FlameTheme, FlameGlobalStyles, Box } from '../src/Core';
 import { Select } from '../src/Select';
+
 // @TODO: Fix stories that are still using css classes and flush this
 import './stories.scss';
 
@@ -27,8 +28,8 @@ class FlameStyling extends React.Component {
           }}
         />
         <FlameTheme themeName={this.state.selectedTheme}>
-          <Box p={3}>
-            <Box mb={2} width="200px" className="hide-in-percy">
+          <Box p={3} className="theme-container">
+            <Box mb={2} width="200px" className="hide-in-percy theme-container__select-wrapper">
               <Select
                 value={this.state.selectedTheme}
                 onChange={e => {
@@ -51,8 +52,6 @@ class FlameStyling extends React.Component {
 
 const FlameStylingDecorator = storyFn => <FlameStyling>{storyFn()}</FlameStyling>;
 
-const headers = ['Theme', 'Components'];
-
 addDecorator(FlameStylingDecorator);
 
 addParameters({
@@ -64,6 +63,20 @@ addParameters({
     container: props => {
       return (
         <FlameTheme>
+          <Global
+            styles={{
+              '.theme-container': {
+                padding: '0 !important',
+              },
+              '.theme-container__select-wrapper': {
+                display: 'none',
+              },
+              '.sbdocs.sbdocs-preview': {
+                // TODO: leverage useTheme to get BG value
+                backgroundColor: '#F2F5F8',
+              },
+            }}
+          />
           <DocsContainer {...props} />
         </FlameTheme>
       );
