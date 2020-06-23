@@ -1,0 +1,11 @@
+/*
+  Select
+  ======
+  Offers users a single choice, among a medium-sized set of options.
+
+  Documentation: https://design.lightspeedhq.com/components/Select/
+*/
+
+.#{$fl-namespace}select {
+  @include fl-select;
+}

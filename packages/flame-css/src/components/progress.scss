@@ -1,0 +1,26 @@
+/*
+  Progress
+  ======
+  A linear indicator showing the progression of longstanding tasks.
+
+  Documentation: https://design.lightspeedhq.com/components/Progress/
+*/
+
+.#{$fl-namespace}progress-bar {
+  @include fl-progress-bar;
+
+  &-wrapper {
+    @include fl-progress-bar-wrapper;
+  }
+
+  // Types
+  &-static {
+    @include fl-progress-bar-static;
+  }
+  &-determinate {
+    @include fl-progress-bar-determinate;
+  }
+  &-indeterminate {
+    @include fl-progress-bar-indeterminate;
+  }
+}

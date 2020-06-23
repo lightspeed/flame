@@ -1,0 +1,27 @@
+/*
+  Input Group
+  ======
+  Group a series of inputs and addons together on a single line.
+*/
+
+.#{$fl-namespace}input-group {
+  display: flex;
+  & > :first-child:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  & > :first-child {
+    margin-left: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  & > :not(:last-child):not(:first-child) {
+    border-left: none;
+    border-radius: 0;
+  }
+  & > :last-child:not(:first-child) {
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

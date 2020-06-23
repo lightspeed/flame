@@ -1,0 +1,82 @@
+/*
+  Checkbox
+  ========
+  Used to specify choices among large groups of options.
+
+  Documentation: https://design.lightspeedhq.com/components/Checkbox/
+*/
+
+.#{$fl-namespace}checkbox {
+  &-wrapper {
+    position: relative;
+    line-height: $fl-text;
+  }
+  &-input {
+    position: absolute;
+    width: $fl-text;
+    height: $fl-text;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    z-index: 1;
+    padding: 0px;
+    margin: 0px;
+
+    &:checked {
+      & + .#{$fl-namespace}checkbox-checkmark {
+        background: linear-gradient($fl-blue-400, $fl-blue-500);
+        border-color: $fl-blue-600;
+      }
+
+      & + .#{$fl-namespace}checkbox-checkmark:after {
+        display: block;
+      }
+    }
+
+    &:not(:checked) {
+      & + .#{$fl-namespace}checkbox-checkmark:after {
+        display: none;
+      }
+    }
+
+    &:focus {
+      & + .#{$fl-namespace}checkbox-checkmark {
+        box-shadow: $fl-white 0px 0px 0px 1px, $fl-blue-500 0px 0px 0px 3px;
+      }
+    }
+
+    &[disabled] {
+      & + .#{$fl-namespace}checkbox-checkmark {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-checkmark {
+    position: relative;
+    width: $fl-text;
+    height: $fl-text;
+    box-sizing: border-box;
+    cursor: default;
+    margin-right: $fl-spacing-2;
+    flex: 0 0 auto;
+    border-radius: $fl-radius-1;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $fl-gray-200;
+    border-image: initial;
+    overflow: hidden;
+    background: linear-gradient($fl-white, $fl-gray-50);
+
+    &:after {
+      content: '';
+      width: 0.65rem;
+      height: 0.65rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-54%, -50%);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3E%3Cpath d='M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z'%3E%3C/path%3E%3C/svg%3E");
+    }
+  }
+}

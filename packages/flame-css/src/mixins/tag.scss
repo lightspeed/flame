@@ -1,0 +1,38 @@
+/*
+  Card
+  ======
+  An organisational indicator specifying of a data point which part of a whole it belongs to.
+
+  Documentation: https://design.lightspeedhq.com/components/Tag/
+*/
+
+@mixin fl-tag-base {
+  display: inline-flex;
+  align-items: center;
+  padding: $fl-spacing-1 $fl-spacing-2;
+  border-radius: $fl-radius-1;
+  font-size: $fl-text-s;
+  line-height: $fl-text-l;
+}
+
+@mixin fl-tag-color-default {
+  @include fl-tag-color-variant($fl-white, $fl-blue-500);
+}
+
+@mixin fl-tag-color-variant($color, $background) {
+  color: $color;
+  background-color: $background;
+}
+
+@mixin fl-tag-remove {
+  padding: $fl-spacing-1;
+  margin: -$fl-spacing-1;
+  margin-left: $fl-spacing-1;
+  font-size: $fl-text-xs;
+  color: $fl-gray-900;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-red;
+  }
+}
