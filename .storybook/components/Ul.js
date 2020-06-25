@@ -1,9 +1,14 @@
-import styled from '@emotion/styled';
+import React from 'react';
 
-const Ul = styled('ul')`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`;
+const Ul = (...restProps) => (
+  <ul
+    style={{
+      listStyle: 'none',
+      margin: 'none',
+      padding: 'none',
+    }}
+    {...restProps}
+  />
+);
 
 export { Ul };
