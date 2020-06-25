@@ -1,0 +1,52 @@
+@import '../index.scss';
+.fl-serif {
+  font-family: $fl-serif;
+}
+.fl-sans-serif {
+  font-family: $fl-sans-serif;
+}
+.fl-monospace {
+  font-family: $fl-monospace;
+}
+
+.fl-regular {
+  font-weight: $fl-regular;
+}
+.fl-bold {
+  font-weight: $fl-bold;
+}
+
+.fl-text-xxl {
+  font-size: $fl-text-xxl;
+}
+.fl-text-xl {
+  font-size: $fl-text-xl;
+}
+.fl-text-l {
+  font-size: $fl-text-l;
+}
+.fl-text {
+  font-size: $fl-text;
+}
+.fl-text-s {
+  font-size: $fl-text-s;
+}
+.fl-text-xs {
+  font-size: $fl-text-xs;
+}
+.fl-text-xxs {
+  font-size: $fl-text-xxs;
+}
+
+.fl-letter-spacing-normal {
+  letter-spacing: $fl-letter-spacing-normal;
+}
+.fl-letter-spacing-1 {
+  letter-spacing: $fl-letter-spacing-1;
+}
+.fl-letter-spacing-2 {
+  letter-spacing: $fl-letter-spacing-2;
+}
+.fl-letter-spacing-3 {
+  letter-spacing: $fl-letter-spacing-3;
+}

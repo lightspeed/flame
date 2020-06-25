@@ -1,0 +1,59 @@
+/*
+  Card
+  ======
+  A blank canvas, and wrapper for our user interfaces.
+
+  Documentation: https://design.lightspeedhq.com/components/Card/
+*/
+
+$fl-card-shadow-neutral: rgba(0, 0, 0, 0.03) 0 0.1875rem 0.375rem 0,
+  rgba(0, 0, 0, 0.1) 0 0.0625rem 0.125rem 0;
+$fl-card-shadow-top: 0 0.375rem 0.75rem 0 rgba(0, 0, 0, 0.03),
+  0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.08);
+
+@mixin fl-card(
+  $background-color: $fl-white,
+  $border-color: $fl-gray-100,
+  $shadow: $fl-card-shadow-neutral,
+  $flex-direction: column
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  background-color: $background-color;
+  box-shadow: $border-color 0 0 0 0.0625rem, $shadow;
+  border-radius: $fl-radius-2;
+
+  & > :last-child {
+    border-bottom-left-radius: calc(#{$fl-radius-2} - 1px);
+    border-bottom-right-radius: calc(#{$fl-radius-2} - 1px);
+  }
+
+  & > :first-of-type {
+    border-top-left-radius: calc(#{$fl-radius-2} - 1px);
+    border-top-right-radius: calc(#{$fl-radius-2} - 1px);
+  }
+}
+
+@mixin fl-card-section($padding: $fl-spacing-2) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin fl-card-divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1px;
+  width: 100%;
+  background: none;
+
+  &::after,
+  &::before {
+    content: '';
+    height: 1px;
+    flex: 1 1 auto;
+    background-color: $fl-gray-100;
+  }
+}

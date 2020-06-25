@@ -1,0 +1,12 @@
+/*
+  Tag
+  ======
+  An organisational indicator specifying of a data point which part of a whole it belongs to.
+
+  Documentation: https://design.lightspeedhq.com/components/Tag/
+*/
+
+.#{$fl-namespace}tag {
+  @include fl-tag-base;
+  @include fl-tag-color-default;
+}

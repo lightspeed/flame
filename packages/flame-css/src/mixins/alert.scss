@@ -1,0 +1,34 @@
+@mixin fl-alert {
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 3px 6px 0 rgba(0, 0, 0, 0.03),
+    0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  border-top: 4px solid;
+  border-radius: $fl-radius-2;
+  padding: $fl-spacing-2 $fl-spacing-3;
+}
+
+@mixin fl-alert-success {
+  @include _fl-alert-color-variant($fl-green-50, $fl-green-700);
+}
+
+@mixin fl-alert-info {
+  @include _fl-alert-color-variant($fl-blue-50, $fl-blue-500);
+}
+
+@mixin fl-alert-danger {
+  @include _fl-alert-color-variant($fl-maple-50, $fl-maple-500);
+}
+
+@mixin fl-alert-warning {
+  @include _fl-alert-color-variant($fl-orange-50, $fl-orange-500);
+}
+
+//
+//  Private
+//
+
+@mixin _fl-alert-color-variant($background, $border-color) {
+  background: $background;
+  border-color: $border-color;
+}

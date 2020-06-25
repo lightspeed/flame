@@ -1,0 +1,56 @@
+@mixin fl-badge {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  font-weight: $fl-bold;
+  color: $fl-gray-900;
+  padding-left: $fl-spacing-1;
+  padding-right: $fl-spacing-1;
+  font-size: $fl-text-s;
+  line-height: $fl-spacing-4;
+  background-color: $fl-gray-100;
+  border-radius: $fl-radius-1;
+}
+
+@mixin fl-badge-pill($border-radius: 10rem, $padding: $fl-spacing-2) {
+  padding-left: $padding;
+  padding-right: $padding;
+  border-radius: $border-radius;
+}
+
+@mixin fl-badge-small {
+  font-size: $fl-text-xs;
+  line-height: $fl-spacing-3;
+}
+
+@mixin fl-badge-success {
+  @include _fl-badge-color-variant($background-color: $fl-green-700);
+}
+
+@mixin fl-badge-info {
+  @include _fl-badge-color-variant($background-color: $fl-blue-500);
+}
+
+@mixin fl-badge-warning {
+  @include _fl-badge-color-variant($background-color: $fl-orange-500);
+}
+
+@mixin fl-badge-danger {
+  @include _fl-badge-color-variant($background-color: $fl-maple-500);
+}
+
+@mixin fl-badge-block {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+//
+//  Private
+//
+
+@mixin _fl-badge-color-variant($background-color, $color: $fl-white) {
+  background-color: $background-color;
+  color: $color;
+}

@@ -1,0 +1,51 @@
+/*
+  Buttons Group
+  ======
+  Group a series of buttons together on a single line with the button group
+*/
+
+$fl-dropdown-toggle-selector: 'dropdown-toggle';
+
+.#{$fl-namespace}button-group {
+  display: inline-flex;
+
+  & > .#{$fl-namespace}button:first-child:not(:last-child):not(.#{$fl-dropdown-toggle-selector}) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & > .#{$fl-namespace}button:first-child {
+    margin-left: 0;
+  }
+
+  & > .#{$fl-namespace}button:last-child:not(:first-child),
+  & > .#{$fl-dropdown-toggle-selector}:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &
+    > .#{$fl-namespace}button:not(:first-child):not(:last-child):not(.#{$fl-dropdown-toggle-selector}) {
+    border-radius: 0;
+  }
+
+  .#{$fl-namespace}button + .#{$fl-namespace}button,
+  .#{$fl-namespace}button + .#{$fl-namespace}button-group,
+  .#{$fl-namespace}button-group + .#{$fl-namespace}button,
+  .#{$fl-namespace}button-group + .#{$fl-namespace}button-group {
+    margin-left: -1px;
+  }
+
+  & > .#{$fl-namespace}button + .#{$fl-dropdown-toggle-selector} {
+    padding-right: $fl-spacing-2;
+    padding-left: $fl-spacing-2;
+  }
+
+  &-block {
+    display: flex;
+    width: 100%;
+    .#{$fl-namespace}button {
+      width: 100%;
+    }
+  }
+}

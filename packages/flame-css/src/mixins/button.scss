@@ -1,0 +1,257 @@
+@mixin fl-button-base {
+  appearance: none;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  line-height: 1;
+  user-select: none;
+  text-decoration: none;
+  text-align: center;
+  font-family: $fl-sans-serif;
+  font-weight: $fl-bold;
+  transition-property: background, border, box-shadow, color;
+  transition-duration: $fl-transition-duration-fast;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &:disabled {
+    @include fl-button-disabled;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 3px rgba($fl-blue-500, 0.2);
+  }
+}
+
+// Sizes
+
+@mixin fl-button-size-default {
+  @include fl-button-size-medium;
+}
+
+@mixin fl-button-size-small {
+  @include _fl-button-size-variant(
+    $height: $fl-spacing-5,
+    $side-spacing: $fl-spacing-2,
+    $font-size: $fl-text-xs,
+    $border-radius: $fl-radius-1
+  );
+}
+
+@mixin fl-button-size-medium {
+  @include _fl-button-size-variant(
+    $height: $fl-spacing-6,
+    $side-spacing: $fl-spacing-3,
+    $font-size: $fl-text-s,
+    $border-radius: $fl-radius-1
+  );
+}
+
+@mixin fl-button-size-large {
+  @include _fl-button-size-variant(
+    $height: $fl-spacing-7,
+    $side-spacing: $fl-spacing-4,
+    $font-size: $fl-text,
+    $border-radius: $fl-radius-1
+  );
+}
+
+@mixin fl-button-size-xlarge {
+  @include _fl-button-size-variant(
+    $height: $fl-spacing-9,
+    $side-spacing: $fl-spacing-6,
+    $font-size: $fl-text-l,
+    $border-radius: $fl-radius-2
+  );
+}
+
+// Colors
+
+@mixin fl-button-color-fill-primary {
+  @include _fl-button-color-fill-variant;
+}
+
+@mixin fl-button-color-fill-secondary {
+  @include _fl-button-color-fill-variant(
+    $colorGradient1: $fl-blue-400,
+    $colorGradient2: $fl-blue-500,
+    $colorBorder: $fl-blue-600,
+    $colorActiveBorder: $fl-blue-600,
+    $colorActiveText: $fl-blue-500
+  );
+}
+
+@mixin fl-button-color-fill-danger {
+  @include _fl-button-color-fill-variant(
+    $colorGradient1: $fl-maple-400,
+    $colorGradient2: $fl-maple-500,
+    $colorBorder: $fl-maple-600,
+    $colorActiveBorder: $fl-maple-600,
+    $colorActiveText: $fl-maple-500
+  );
+}
+
+@mixin fl-button-color-fill-neutral {
+  @include _fl-button-color-fill-variant(
+    $colorText: $fl-gray-800,
+    $colorGradient1: $fl-white,
+    $colorGradient2: $fl-gray-50,
+    $colorBorder: $fl-gray-200,
+    // neutral.active become Secondary - Mostly used in .fl-button-group
+      $colorActiveGradient1: $fl-blue-400,
+    $colorActiveGradient2: $fl-blue-500,
+    $colorActiveText: $fl-white,
+    $colorActiveBorder: $fl-blue-600
+  );
+}
+
+@mixin fl-button-color-transparent {
+  border-color: transparent;
+  background: transparent;
+}
+
+@mixin fl-button-color-link {
+  color: $fl-blue-600;
+  border-color: transparent;
+  background: transparent;
+  &:hover {
+    color: $fl-green-800;
+  }
+}
+
+@mixin fl-button-color-outline-primary {
+  @include _fl-button-color-outline-variant;
+}
+
+@mixin fl-button-color-outline-secondary {
+  @include _fl-button-color-outline-variant(
+    $colorText: $fl-blue-500,
+    $colorBg: $fl-white,
+    $colorBgHover: $fl-blue-50,
+    $colorBorder: $fl-blue-500,
+    $colorActiveBg: $fl-blue-400
+  );
+}
+
+@mixin fl-button-color-outline-danger {
+  @include _fl-button-color-outline-variant(
+    $colorText: $fl-maple-500,
+    $colorBg: $fl-white,
+    $colorBgHover: $fl-maple-50,
+    $colorBorder: $fl-maple-500,
+    $colorActiveBg: $fl-maple-400
+  );
+}
+
+// Modifiers
+
+@mixin fl-button-block {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+@mixin fl-button-wide {
+  padding-left: $fl-spacing-8;
+  padding-right: $fl-spacing-8;
+}
+
+@mixin fl-button-narrow {
+  padding-left: $fl-spacing-1;
+  padding-right: $fl-spacing-1;
+}
+
+// States
+
+@mixin fl-button-disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+@mixin fl-button-loading {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+//
+//  Private
+//
+
+@mixin _fl-button-size-variant($height, $side-spacing, $font-size, $border-radius) {
+  min-height: $height;
+  padding-top: $fl-spacing-1;
+  padding-bottom: $fl-spacing-1;
+  padding-left: $side-spacing;
+  padding-right: $side-spacing;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}
+
+@mixin _fl-button-color-fill-variant(
+  $colorText: $fl-white,
+  $colorGradient1: $fl-green-700,
+  $colorGradient2: $fl-green-800,
+  $colorBorder: $fl-green-900,
+  $colorActiveGradient1: $fl-white,
+  $colorActiveGradient2: $fl-white,
+  $colorActiveText: $fl-green-800,
+  $colorActiveBorder: $fl-green-800
+) {
+  background-image: linear-gradient(180deg, $colorGradient1, $colorGradient2);
+  background-color: $colorGradient1;
+  border-color: $colorBorder;
+  color: $colorText;
+  &:hover {
+    color: $colorText;
+    background-color: $colorGradient2;
+    background-image: linear-gradient(180deg, $colorGradient2, $colorGradient2);
+  }
+  &:active {
+    box-shadow: inset 0 2px 3px 0 rgba($fl-gray-900, 0.3);
+  }
+  &.active {
+    color: $colorActiveText;
+    background-color: $colorActiveGradient2;
+    background-image: linear-gradient(180deg, $colorActiveGradient1, $colorActiveGradient2);
+    border-color: $colorActiveBorder;
+    z-index: 1;
+  }
+  &:focus {
+    box-shadow: 0 0 3px rgba($colorGradient1, 0.2);
+  }
+}
+
+@mixin _fl-button-color-outline-variant(
+  $colorText: $fl-green-800,
+  $colorBg: $fl-white,
+  $colorBgHover: $fl-green-50,
+  $colorBorder: $fl-green-800,
+  $colorActiveBg: $fl-green-700
+) {
+  background-color: $colorBg;
+  border-color: $colorBorder;
+  color: $colorText;
+  &:hover {
+    color: $colorText;
+    background-color: $colorBgHover;
+  }
+  &:active {
+    box-shadow: inset 0 2px 3px 0 rgba($fl-gray-900, 0.3);
+  }
+  &.active {
+    color: $fl-white;
+    background-color: $colorActiveBg;
+    z-index: 1;
+  }
+  &:focus {
+    box-shadow: 0 0 3px rgba($colorBorder, 0.2);
+  }
+}

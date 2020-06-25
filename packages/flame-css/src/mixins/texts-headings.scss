@@ -1,0 +1,43 @@
+/*
+  Text, Heading
+  ========
+  The essence of written communication, beautifully styled for all your legibility needs.
+
+  Documentation: https://design.lightspeedhq.com/components/Text/
+*/
+
+@mixin fl-heading1 {
+  @include _fl-heading-base($font-size: $fl-text-xxl);
+}
+
+@mixin fl-heading2 {
+  @include _fl-heading-base($font-size: $fl-text-xl);
+}
+
+@mixin fl-heading3 {
+  @include _fl-heading-base($font-size: $fl-text-l);
+}
+
+@mixin fl-heading4 {
+  @include _fl-heading-base($font-size: $fl-text-xs);
+  letter-spacing: 0.09375rem;
+  text-transform: uppercase;
+}
+
+@mixin fl-caption {
+  color: $fl-gray-600;
+  font-size: $fl-text-s;
+  line-height: $fl-spacing-3;
+}
+
+//
+//  Private
+//
+
+@mixin _fl-heading-base($font-size) {
+  color: $fl-gray-1000;
+  font-weight: $fl-bold;
+  font-size: $font-size;
+  line-height: $font-size * 1.5;
+  margin: 0px;
+}
