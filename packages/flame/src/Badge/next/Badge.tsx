@@ -1,17 +1,20 @@
 import * as React from 'react';
 import { css } from '@styled-system/css';
 
-interface Props extends React.ComponentPropsWithRef<'span'> {
+export type BadgeVariants = 'default' | 'danger' | 'primary' | 'success' | 'warning';
+export interface BadgeProps extends React.ComponentPropsWithRef<'span'> {
   /**
    * Adjust the overall look and feel of a badge.
+   * Possible variants are:
+   * 'default' | 'danger' | 'primary' | 'success' | 'warning'
    */
-  variant?: 'default' | 'danger' | 'primary' | 'success' | 'warning';
+  variant?: BadgeVariants;
 }
 /**
  * A badge communicates the status of an item or event when placed beside it.
  * It uses bold colors to quickly signal the intent of an item or event.
  */
-const Badge: React.FC<Props> = ({ variant = 'default', ...restProps }) => (
+export const Badge: React.FC<BadgeProps> = ({ variant = 'default', ...restProps }) => (
   <span
     className="fl-badge"
     css={css({
@@ -29,5 +32,3 @@ const Badge: React.FC<Props> = ({ variant = 'default', ...restProps }) => (
     {...restProps}
   />
 );
-
-export { Badge };
