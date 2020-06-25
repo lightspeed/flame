@@ -1,6 +1,6 @@
 # Flame css
 
-`flame-css` is an alternative offering to `flame`.
+A pure CSS alternative offering to [Flame React](https://github.com/lightspeed/flame#readme).
 
 It offers a sass codebase and an easy to consume css file.
 

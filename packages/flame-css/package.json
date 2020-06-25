@@ -2,7 +2,7 @@
   "name": "@lightspeed/flame-css",
   "version": "0.0.0",
   "private": true,
-  "description": "Base lightspeed components, but in css!",
+  "description": "Base Lightspeed helpers and components CSS",
   "author": "Lightspeed",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/lightspeed/flame#readme",
