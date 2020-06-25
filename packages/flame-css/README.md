@@ -40,6 +40,17 @@ Add this `<link>` tag to your `<head>` to load the required fonts:
 />
 ```
 
+Additionally, you will need to set your application html/body to use these fonts.
+
+The following is the recommended font-stack to use:
+
+```css
+html,
+body {
+  font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+```
+
 ## Caveat
 
 Although we are bundling the sass source code, for the most part, you should only be using the generated css file.
@@ -47,5 +58,4 @@ Although we are bundling the sass source code, for the most part, you should onl
 `flame-css` is not meant to be a complete replacement to `flame`, as it lacks many more complex functionalities
 that just are not possible without some front-end framework.
 
-However, `flame-css` provides all the necessary basic components and utility functions to build out the complex
-functionalities in whatever framework you choose.
+However, `flame-css` provides all the necessary basic components and basic utility functions to build out the complex functionalities in whatever framework you choose.
