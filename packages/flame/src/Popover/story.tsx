@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withReadme } from 'storybook-readme';
 import { css } from '@styled-system/css';
 
-import { ExampleBox } from '../../.storybook/components/ExampleBox';
+import { ExampleBox } from '../../../../.storybook/components/ExampleBox';
 import { Popover, PopoverProps, PopoverPlacement } from './Popover';
 import { Text } from '../Text';
 import { Input } from '../Input';

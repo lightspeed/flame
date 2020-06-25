@@ -18,8 +18,8 @@ import { Box, Flex } from '../../Core';
 import { Button } from '../../Button';
 import { Input } from '../../Input';
 import { Text } from '../../Text';
-import { Ul } from '../../../.storybook/components/Ul';
-import { SpacedGroup } from '../../../.storybook/components/SpacedGroup';
+import { Ul } from '../../../../../.storybook/components/Ul';
+import { SpacedGroup } from '../../../../../.storybook/components/SpacedGroup';
 
 const stories = storiesOf('Components|Flag', module).addDecorator(withReadme(Readme));
 
