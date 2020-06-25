@@ -1,0 +1,141 @@
+@mixin fl-input-base($height: $fl-spacing-6, $padding-h: $fl-spacing-2, $padding-v: 0) {
+  width: 100%;
+  flex: 1 1 0%;
+  box-sizing: border-box;
+  height: $height;
+  line-height: $fl-spacing-6;
+  font-family: $fl-sans-serif;
+  font-size: $fl-text-s;
+  padding-top: $padding-v;
+  padding-bottom: $padding-v;
+  padding-left: $padding-h;
+  padding-right: $padding-h;
+  border: solid 1px transparent;
+  background: $fl-white;
+  color: $fl-gray-700;
+  min-width: 0;
+  transition: all $fl-transition-duration-fast ease-in-out;
+
+  border-radius: $fl-radius-1;
+  box-shadow: $fl-inner-shadow-1;
+  border: solid 1px $fl-gray-200;
+  transition: border-color $fl-transition-duration-fast ease-in-out;
+
+  &:disabled {
+    @include fl-input-disabled;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:not([disabled]):not([readonly]):hover {
+    border-color: $fl-gray-300;
+  }
+
+  &:not([disabled]):not([readonly]):focus {
+    border-color: $fl-blue-500;
+  }
+
+  &:not([disabled]):not([readonly]):active {
+    border-color: $fl-blue-500;
+  }
+}
+
+@mixin fl-input-textarea {
+  min-height: $fl-spacing-10;
+  padding-top: $fl-spacing-2;
+  padding-bottom: $fl-spacing-2;
+  line-height: 1.2;
+  resize: vertical;
+}
+
+@mixin fl-input-label {
+  display: flex;
+  font-size: $fl-text-s;
+  line-height: $fl-spacing-3;
+  font-weight: $fl-bold;
+  margin: 0px 0px $fl-spacing-1;
+}
+
+@mixin fl-input-description {
+  display: block;
+  font-size: $fl-text-s;
+  line-height: $fl-spacing-3;
+  margin: 0px 0px $fl-spacing-1;
+}
+
+@mixin fl-input-caption {
+  @include fl-caption;
+  display: block;
+  margin: $fl-spacing-1 0px 0px;
+}
+
+// Sizes
+
+@mixin fl-input-size-small {
+  font-size: $fl-text-xs;
+  height: $fl-spacing-5;
+  line-height: $fl-spacing-5;
+}
+
+@mixin fl-input-size-large {
+  font-size: $fl-text;
+  height: $fl-spacing-7;
+  line-height: $fl-spacing-7;
+}
+
+// Modifiers
+
+@mixin fl-input-readonly {
+  color: $fl-gray-700;
+}
+
+@mixin fl-input-has-prefix {
+  padding-left: 0;
+}
+
+@mixin fl-input-has-suffix {
+  padding-right: 0;
+}
+
+// Statuses
+
+@mixin fl-input-error {
+  border-color: $fl-maple-500;
+}
+
+@mixin fl-input-valid {
+  fill: $fl-green-700;
+}
+
+@mixin fl-input-warning {
+  fill: $fl-orange-500;
+}
+
+// States
+
+@mixin fl-input-placeholder {
+  color: $fl-gray-400;
+}
+
+@mixin fl-input-disabled {
+  opacity: 1;
+  color: $fl-gray-400;
+  background: $fl-gray-50;
+  -webkit-text-fill-color: currentColor;
+}
+
+@mixin fl-input-active {
+  outline: none;
+}
+
+@mixin fl-input-focus {
+  outline: none;
+}
+
+@mixin fl-input-is-autofilled {
+  background: $fl-white;
+  background-image: none;
+}

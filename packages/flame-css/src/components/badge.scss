@@ -1,0 +1,51 @@
+/*
+  Badge
+  ======
+  A badge communicates the status of an item or event when placed beside it.
+
+  Base:       fl-badge
+  Types:      fl-badge-pill
+  Sizes:      fl-badge-small
+  Colors:     fl-badge-success | fl-badge-info | fl-badge-danger
+  Modifiers:   fl-badge-block
+
+  Documentation: https://design.lightspeedhq.com/components/Button/
+*/
+
+.#{$fl-namespace}badge {
+  @include fl-badge;
+
+  // Sizes
+  &-small {
+    @include fl-badge-small;
+  }
+
+  // Types
+  &-pill {
+    @include fl-badge-pill;
+
+    &.#{$fl-namespace}badge-small {
+      @include fl-badge-pill($padding: $fl-spacing-1);
+      @include fl-badge-small;
+    }
+  }
+
+  // Colors
+  &-success {
+    @include fl-badge-success;
+  }
+  &-warning {
+    @include fl-badge-warning;
+  }
+  &-info {
+    @include fl-badge-info;
+  }
+  &-danger {
+    @include fl-badge-danger;
+  }
+
+  // Modifiers
+  &-block {
+    @include fl-badge-block;
+  }
+}

@@ -1,0 +1,21 @@
+/*
+  Input Group Addon
+  ======
+  These addons are used inside Input Groups alongside Inputs
+*/
+
+.#{$fl-namespace}input-group-addon {
+  display: flex;
+  padding-left: $fl-spacing-2;
+  padding-right: $fl-spacing-2;
+  text-align: center;
+  font-size: $fl-text-s;
+  background-color: $fl-gray-50;
+  border: solid 1px $fl-gray-200;
+  border-radius: $fl-radius-1;
+  align-items: center;
+
+  & > label {
+    margin: 0;
+  }
+}

@@ -1,0 +1,551 @@
+@import '../index.scss';
+.fl-m-0 {
+  margin: $fl-spacing-0;
+}
+.fl-m-1 {
+  margin: $fl-spacing-1;
+}
+.fl-m-2 {
+  margin: $fl-spacing-2;
+}
+.fl-m-3 {
+  margin: $fl-spacing-3;
+}
+.fl-m-4 {
+  margin: $fl-spacing-4;
+}
+.fl-m-5 {
+  margin: $fl-spacing-5;
+}
+.fl-m-6 {
+  margin: $fl-spacing-6;
+}
+.fl-m-7 {
+  margin: $fl-spacing-7;
+}
+.fl-m-8 {
+  margin: $fl-spacing-8;
+}
+.fl-m-9 {
+  margin: $fl-spacing-9;
+}
+.fl-m-10 {
+  margin: $fl-spacing-10;
+}
+.fl-p-0 {
+  padding: $fl-spacing-0;
+}
+.fl-p-1 {
+  padding: $fl-spacing-1;
+}
+.fl-p-2 {
+  padding: $fl-spacing-2;
+}
+.fl-p-3 {
+  padding: $fl-spacing-3;
+}
+.fl-p-4 {
+  padding: $fl-spacing-4;
+}
+.fl-p-5 {
+  padding: $fl-spacing-5;
+}
+.fl-p-6 {
+  padding: $fl-spacing-6;
+}
+.fl-p-7 {
+  padding: $fl-spacing-7;
+}
+.fl-p-8 {
+  padding: $fl-spacing-8;
+}
+.fl-p-9 {
+  padding: $fl-spacing-9;
+}
+.fl-p-10 {
+  padding: $fl-spacing-10;
+}
+.fl-mt-0 {
+  margin-top: $fl-spacing-0;
+}
+.fl-mt-1 {
+  margin-top: $fl-spacing-1;
+}
+.fl-mt-2 {
+  margin-top: $fl-spacing-2;
+}
+.fl-mt-3 {
+  margin-top: $fl-spacing-3;
+}
+.fl-mt-4 {
+  margin-top: $fl-spacing-4;
+}
+.fl-mt-5 {
+  margin-top: $fl-spacing-5;
+}
+.fl-mt-6 {
+  margin-top: $fl-spacing-6;
+}
+.fl-mt-7 {
+  margin-top: $fl-spacing-7;
+}
+.fl-mt-8 {
+  margin-top: $fl-spacing-8;
+}
+.fl-mt-9 {
+  margin-top: $fl-spacing-9;
+}
+.fl-mt-10 {
+  margin-top: $fl-spacing-10;
+}
+.fl-ml-0 {
+  margin-left: $fl-spacing-0;
+}
+.fl-ml-1 {
+  margin-left: $fl-spacing-1;
+}
+.fl-ml-2 {
+  margin-left: $fl-spacing-2;
+}
+.fl-ml-3 {
+  margin-left: $fl-spacing-3;
+}
+.fl-ml-4 {
+  margin-left: $fl-spacing-4;
+}
+.fl-ml-5 {
+  margin-left: $fl-spacing-5;
+}
+.fl-ml-6 {
+  margin-left: $fl-spacing-6;
+}
+.fl-ml-7 {
+  margin-left: $fl-spacing-7;
+}
+.fl-ml-8 {
+  margin-left: $fl-spacing-8;
+}
+.fl-ml-9 {
+  margin-left: $fl-spacing-9;
+}
+.fl-ml-10 {
+  margin-left: $fl-spacing-10;
+}
+.fl-mr-0 {
+  margin-right: $fl-spacing-0;
+}
+.fl-mr-1 {
+  margin-right: $fl-spacing-1;
+}
+.fl-mr-2 {
+  margin-right: $fl-spacing-2;
+}
+.fl-mr-3 {
+  margin-right: $fl-spacing-3;
+}
+.fl-mr-4 {
+  margin-right: $fl-spacing-4;
+}
+.fl-mr-5 {
+  margin-right: $fl-spacing-5;
+}
+.fl-mr-6 {
+  margin-right: $fl-spacing-6;
+}
+.fl-mr-7 {
+  margin-right: $fl-spacing-7;
+}
+.fl-mr-8 {
+  margin-right: $fl-spacing-8;
+}
+.fl-mr-9 {
+  margin-right: $fl-spacing-9;
+}
+.fl-mr-10 {
+  margin-right: $fl-spacing-10;
+}
+.fl-mb-0 {
+  margin-bottom: $fl-spacing-0;
+}
+.fl-mb-1 {
+  margin-bottom: $fl-spacing-1;
+}
+.fl-mb-2 {
+  margin-bottom: $fl-spacing-2;
+}
+.fl-mb-3 {
+  margin-bottom: $fl-spacing-3;
+}
+.fl-mb-4 {
+  margin-bottom: $fl-spacing-4;
+}
+.fl-mb-5 {
+  margin-bottom: $fl-spacing-5;
+}
+.fl-mb-6 {
+  margin-bottom: $fl-spacing-6;
+}
+.fl-mb-7 {
+  margin-bottom: $fl-spacing-7;
+}
+.fl-mb-8 {
+  margin-bottom: $fl-spacing-8;
+}
+.fl-mb-9 {
+  margin-bottom: $fl-spacing-9;
+}
+.fl-mb-10 {
+  margin-bottom: $fl-spacing-10;
+}
+.fl-pt-0 {
+  padding-top: $fl-spacing-0;
+}
+.fl-pt-1 {
+  padding-top: $fl-spacing-1;
+}
+.fl-pt-2 {
+  padding-top: $fl-spacing-2;
+}
+.fl-pt-3 {
+  padding-top: $fl-spacing-3;
+}
+.fl-pt-4 {
+  padding-top: $fl-spacing-4;
+}
+.fl-pt-5 {
+  padding-top: $fl-spacing-5;
+}
+.fl-pt-6 {
+  padding-top: $fl-spacing-6;
+}
+.fl-pt-7 {
+  padding-top: $fl-spacing-7;
+}
+.fl-pt-8 {
+  padding-top: $fl-spacing-8;
+}
+.fl-pt-9 {
+  padding-top: $fl-spacing-9;
+}
+.fl-pt-10 {
+  padding-top: $fl-spacing-10;
+}
+.fl-pl-0 {
+  padding-left: $fl-spacing-0;
+}
+.fl-pl-1 {
+  padding-left: $fl-spacing-1;
+}
+.fl-pl-2 {
+  padding-left: $fl-spacing-2;
+}
+.fl-pl-3 {
+  padding-left: $fl-spacing-3;
+}
+.fl-pl-4 {
+  padding-left: $fl-spacing-4;
+}
+.fl-pl-5 {
+  padding-left: $fl-spacing-5;
+}
+.fl-pl-6 {
+  padding-left: $fl-spacing-6;
+}
+.fl-pl-7 {
+  padding-left: $fl-spacing-7;
+}
+.fl-pl-8 {
+  padding-left: $fl-spacing-8;
+}
+.fl-pl-9 {
+  padding-left: $fl-spacing-9;
+}
+.fl-pl-10 {
+  padding-left: $fl-spacing-10;
+}
+.fl-pr-0 {
+  padding-right: $fl-spacing-0;
+}
+.fl-pr-1 {
+  padding-right: $fl-spacing-1;
+}
+.fl-pr-2 {
+  padding-right: $fl-spacing-2;
+}
+.fl-pr-3 {
+  padding-right: $fl-spacing-3;
+}
+.fl-pr-4 {
+  padding-right: $fl-spacing-4;
+}
+.fl-pr-5 {
+  padding-right: $fl-spacing-5;
+}
+.fl-pr-6 {
+  padding-right: $fl-spacing-6;
+}
+.fl-pr-7 {
+  padding-right: $fl-spacing-7;
+}
+.fl-pr-8 {
+  padding-right: $fl-spacing-8;
+}
+.fl-pr-9 {
+  padding-right: $fl-spacing-9;
+}
+.fl-pr-10 {
+  padding-right: $fl-spacing-10;
+}
+.fl-pb-0 {
+  padding-bottom: $fl-spacing-0;
+}
+.fl-pb-1 {
+  padding-bottom: $fl-spacing-1;
+}
+.fl-pb-2 {
+  padding-bottom: $fl-spacing-2;
+}
+.fl-pb-3 {
+  padding-bottom: $fl-spacing-3;
+}
+.fl-pb-4 {
+  padding-bottom: $fl-spacing-4;
+}
+.fl-pb-5 {
+  padding-bottom: $fl-spacing-5;
+}
+.fl-pb-6 {
+  padding-bottom: $fl-spacing-6;
+}
+.fl-pb-7 {
+  padding-bottom: $fl-spacing-7;
+}
+.fl-pb-8 {
+  padding-bottom: $fl-spacing-8;
+}
+.fl-pb-9 {
+  padding-bottom: $fl-spacing-9;
+}
+.fl-pb-10 {
+  padding-bottom: $fl-spacing-10;
+}
+
+.fl-mv-0 {
+  margin-top: $fl-spacing-0;
+  margin-bottom: $fl-spacing-0;
+}
+
+.fl-mv-1 {
+  margin-top: $fl-spacing-1;
+  margin-bottom: $fl-spacing-1;
+}
+
+.fl-mv-2 {
+  margin-top: $fl-spacing-2;
+  margin-bottom: $fl-spacing-2;
+}
+
+.fl-mv-3 {
+  margin-top: $fl-spacing-3;
+  margin-bottom: $fl-spacing-3;
+}
+
+.fl-mv-4 {
+  margin-top: $fl-spacing-4;
+  margin-bottom: $fl-spacing-4;
+}
+
+.fl-mv-5 {
+  margin-top: $fl-spacing-5;
+  margin-bottom: $fl-spacing-5;
+}
+
+.fl-mv-6 {
+  margin-top: $fl-spacing-6;
+  margin-bottom: $fl-spacing-6;
+}
+
+.fl-mv-7 {
+  margin-top: $fl-spacing-7;
+  margin-bottom: $fl-spacing-7;
+}
+
+.fl-mv-8 {
+  margin-top: $fl-spacing-8;
+  margin-bottom: $fl-spacing-8;
+}
+
+.fl-mv-9 {
+  margin-top: $fl-spacing-9;
+  margin-bottom: $fl-spacing-9;
+}
+
+.fl-mv-10 {
+  margin-top: $fl-spacing-10;
+  margin-bottom: $fl-spacing-10;
+}
+
+.fl-pv-0 {
+  padding-top: $fl-spacing-0;
+  padding-bottom: $fl-spacing-0;
+}
+
+.fl-pv-1 {
+  padding-top: $fl-spacing-1;
+  padding-bottom: $fl-spacing-1;
+}
+
+.fl-pv-2 {
+  padding-top: $fl-spacing-2;
+  padding-bottom: $fl-spacing-2;
+}
+
+.fl-pv-3 {
+  padding-top: $fl-spacing-3;
+  padding-bottom: $fl-spacing-3;
+}
+
+.fl-pv-4 {
+  padding-top: $fl-spacing-4;
+  padding-bottom: $fl-spacing-4;
+}
+
+.fl-pv-5 {
+  padding-top: $fl-spacing-5;
+  padding-bottom: $fl-spacing-5;
+}
+
+.fl-pv-6 {
+  padding-top: $fl-spacing-6;
+  padding-bottom: $fl-spacing-6;
+}
+
+.fl-pv-7 {
+  padding-top: $fl-spacing-7;
+  padding-bottom: $fl-spacing-7;
+}
+
+.fl-pv-8 {
+  padding-top: $fl-spacing-8;
+  padding-bottom: $fl-spacing-8;
+}
+
+.fl-pv-9 {
+  padding-top: $fl-spacing-9;
+  padding-bottom: $fl-spacing-9;
+}
+
+.fl-pv-10 {
+  padding-top: $fl-spacing-10;
+  padding-bottom: $fl-spacing-10;
+}
+
+.fl-mh-0 {
+  margin-left: $fl-spacing-0;
+  margin-right: $fl-spacing-0;
+}
+
+.fl-mh-1 {
+  margin-left: $fl-spacing-1;
+  margin-right: $fl-spacing-1;
+}
+
+.fl-mh-2 {
+  margin-left: $fl-spacing-2;
+  margin-right: $fl-spacing-2;
+}
+
+.fl-mh-3 {
+  margin-left: $fl-spacing-3;
+  margin-right: $fl-spacing-3;
+}
+
+.fl-mh-4 {
+  margin-left: $fl-spacing-4;
+  margin-right: $fl-spacing-4;
+}
+
+.fl-mh-5 {
+  margin-left: $fl-spacing-5;
+  margin-right: $fl-spacing-5;
+}
+
+.fl-mh-6 {
+  margin-left: $fl-spacing-6;
+  margin-right: $fl-spacing-6;
+}
+
+.fl-mh-7 {
+  margin-left: $fl-spacing-7;
+  margin-right: $fl-spacing-7;
+}
+
+.fl-mh-8 {
+  margin-left: $fl-spacing-8;
+  margin-right: $fl-spacing-8;
+}
+
+.fl-mh-9 {
+  margin-left: $fl-spacing-9;
+  margin-right: $fl-spacing-9;
+}
+
+.fl-mh-10 {
+  margin-left: $fl-spacing-10;
+  margin-right: $fl-spacing-10;
+}
+
+.fl-ph-0 {
+  padding-left: $fl-spacing-0;
+  padding-right: $fl-spacing-0;
+}
+
+.fl-ph-1 {
+  padding-left: $fl-spacing-1;
+  padding-right: $fl-spacing-1;
+}
+
+.fl-ph-2 {
+  padding-left: $fl-spacing-2;
+  padding-right: $fl-spacing-2;
+}
+
+.fl-ph-3 {
+  padding-left: $fl-spacing-3;
+  padding-right: $fl-spacing-3;
+}
+
+.fl-ph-4 {
+  padding-left: $fl-spacing-4;
+  padding-right: $fl-spacing-4;
+}
+
+.fl-ph-5 {
+  padding-left: $fl-spacing-5;
+  padding-right: $fl-spacing-5;
+}
+
+.fl-ph-6 {
+  padding-left: $fl-spacing-6;
+  padding-right: $fl-spacing-6;
+}
+
+.fl-ph-7 {
+  padding-left: $fl-spacing-7;
+  padding-right: $fl-spacing-7;
+}
+
+.fl-ph-8 {
+  padding-left: $fl-spacing-8;
+  padding-right: $fl-spacing-8;
+}
+
+.fl-ph-9 {
+  padding-left: $fl-spacing-9;
+  padding-right: $fl-spacing-9;
+}
+
+.fl-ph-10 {
+  padding-left: $fl-spacing-10;
+  padding-right: $fl-spacing-10;
+}

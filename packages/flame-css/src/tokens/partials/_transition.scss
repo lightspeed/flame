@@ -1,0 +1,10 @@
+@import '../index.scss';
+.fl-transition-duration-fast {
+  transition-duration: $fl-transition-duration-fast;
+}
+.fl-transition-duration-base {
+  transition-duration: $fl-transition-duration-base;
+}
+.fl-transition-duration-slow {
+  transition-duration: $fl-transition-duration-slow;
+}

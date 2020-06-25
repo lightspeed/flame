@@ -1,0 +1,83 @@
+/*
+  Radio
+  =====
+  Offers users a single choice, among a small set.
+
+  Documentation: https://design.lightspeedhq.com/components/Radio/
+*/
+
+.#{$fl-namespace}radio {
+  &-wrapper {
+    position: relative;
+    line-height: $fl-text;
+  }
+  &-input {
+    position: absolute;
+    width: $fl-text;
+    height: $fl-text;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    z-index: 1;
+    padding: 0px;
+    margin: 0px;
+
+    &:checked {
+      & + .#{$fl-namespace}radio-checkmark {
+        background: linear-gradient($fl-blue-400, $fl-blue-500);
+        border-color: $fl-blue-600;
+      }
+
+      & + .#{$fl-namespace}radio-checkmark:after {
+        display: block;
+      }
+    }
+
+    &:not(:checked) {
+      & + .#{$fl-namespace}radio-checkmark:after {
+        display: none;
+      }
+    }
+
+    &:focus {
+      & + .#{$fl-namespace}radio-checkmark {
+        box-shadow: $fl-white 0px 0px 0px 1px, $fl-blue-500 0px 0px 0px 3px;
+      }
+    }
+
+    &[disabled] {
+      & + .#{$fl-namespace}radio-checkmark {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-checkmark {
+    position: relative;
+    width: $fl-text;
+    height: $fl-text;
+    box-sizing: border-box;
+    cursor: default;
+    margin-right: $fl-spacing-2;
+    flex: 0 0 auto;
+    border-radius: $fl-radius-circle;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $fl-gray-200;
+    border-image: initial;
+    overflow: hidden;
+    background: linear-gradient($fl-white, $fl-gray-50);
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0.375rem;
+      height: 0.375rem;
+      border-radius: 50%;
+      background: linear-gradient($fl-white, $fl-gray-50);
+    }
+  }
+}
