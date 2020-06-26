@@ -1,0 +1,5 @@
+__tests__
+scripts
+node_modules
+*.test.js
+story.js
