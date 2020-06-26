@@ -6,7 +6,7 @@
  * outline-color, fill, stroke
  */
 
-const colors: any = {
+const colors: Record<string, any> = {
   white: '#fff',
   black: '#000',
   'maple-50': '#FFF5F5',

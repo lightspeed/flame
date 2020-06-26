@@ -3,7 +3,7 @@
   "private": true,
   "main": "dist/index.js",
   "version": "0.1.0",
-  "description": "Foundational values for the Flame design system. Heavily based on theme-ui.",
+  "description": "Foundational values for the Flame design system. Based on system-ui spec.",
   "author": "Lightspeed",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/lightspeed/flame#readme",
@@ -11,19 +11,19 @@
   "bugs": {
     "url": "https://github.com/lightspeed/flame/issues"
   },
-  "dependencies": {
-    "polished": "^1.0.2"
-  },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.1",
     "@types/node": "^12.7.2",
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10",
     "rimraf": "^2.6.3",
     "ts-node": "^8.3.0",
+    "fs-extra": "^9.0.1",
     "typescript": "^3.9.5"
   },
   "scripts": {
-    "build": "tsc src/index.js"
+    "build": "ts-node ./scripts/build.ts",
+    "prepublish": "yarn build"
   },
   "publishConfig": {
     "access": "public"
