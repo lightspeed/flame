@@ -49,9 +49,10 @@ class FlameStyling extends React.Component {
 }
 
 const FlameStylingDecorator = (storyFn, context) => {
-  if (context.parameters.fileName.includes('packages/flame')) {
+  if (!context.id.includes('flame-css')) {
     return <FlameStyling>{storyFn()}</FlameStyling>;
   }
+
   return storyFn();
 };
 
