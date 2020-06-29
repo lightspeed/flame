@@ -144,5 +144,5 @@ stories.add(
       </Box>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );

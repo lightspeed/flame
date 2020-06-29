@@ -114,7 +114,7 @@ stories.add(
       </Divider>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -153,7 +153,7 @@ stories.add(
       </Box>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -166,5 +166,5 @@ stories.add(
       <Divider color="#F42069" />
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );

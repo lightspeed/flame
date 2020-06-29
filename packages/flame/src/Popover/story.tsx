@@ -206,7 +206,7 @@ stories.add(
       />
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -235,7 +235,7 @@ stories.add(
       </div>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -253,7 +253,7 @@ stories.add(
       </div>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -274,7 +274,7 @@ stories.add(
       <Input label="I should be behind the popover" />
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 const RerenderingPopover = () => {
@@ -307,7 +307,7 @@ stories.add(
       </div>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add('Percy Placement', () => (

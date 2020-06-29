@@ -127,7 +127,7 @@ class DialogStoryHelper extends React.Component<{}, State> {
   }
 }
 
-stories.add('Story', () => <DialogStoryHelper />, { percy: { skip: true } });
+stories.add('Story', () => <DialogStoryHelper />, { chromatic: { disable: true } });
 
 stories.add('Percy story', () => (
   <Dialog

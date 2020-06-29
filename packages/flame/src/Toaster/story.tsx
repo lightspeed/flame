@@ -136,7 +136,7 @@ stories.add(
       </div>
     </ToasterProvider>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add('percy snapshots', () => {
@@ -201,5 +201,5 @@ stories.add(
       </Modal>
     </ToasterProvider>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
