@@ -1,8 +1,8 @@
 import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
 import { Global } from '@emotion/core';
-import { FlameTheme, FlameGlobalStyles, Box } from '../src/Core';
-import { Select } from '../src/Select';
+import { FlameTheme, FlameGlobalStyles, Box } from '../packages/flame/src/Core';
+import { Select } from '../packages/flame/src/Select';
 // @TODO: Fix stories that are still using css classes and flush this
 import './stories.scss';
 
@@ -48,7 +48,13 @@ class FlameStyling extends React.Component {
   }
 }
 
-const FlameStylingDecorator = storyFn => <FlameStyling>{storyFn()}</FlameStyling>;
+const FlameStylingDecorator = (storyFn, context) => {
+  if (!context.id.includes('flame-css')) {
+    return <FlameStyling>{storyFn()}</FlameStyling>;
+  }
+
+  return storyFn();
+};
 
 const headers = ['Theme', 'Components'];
 

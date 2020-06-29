@@ -10,7 +10,7 @@ import Readme from './README.md';
 import { Button } from '../Button';
 import { Box } from '../Core';
 
-import { SpacedGroup } from '../../.storybook/components/SpacedGroup';
+import { SpacedGroup } from '../../../../.storybook/components/SpacedGroup';
 
 const stories = storiesOf('Components|Switch', module).addDecorator(withReadme(Readme));
 

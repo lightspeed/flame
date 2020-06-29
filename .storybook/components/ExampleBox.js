@@ -1,36 +1,33 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { css } from '@styled-system/css';
+import React from 'react';
 
 const BoxColumn = ({ ...restProps }) => (
   <div
-    css={css({
+    style={{
       display: 'inline-block',
       width: '192px',
-      mr: 2,
-      mb: 2,
       textAlign: 'center',
-    })}
+    }}
+    className="fl-mb-2 fl-mr-2"
     {...restProps}
   />
 );
 
 const BoxExample = ({ ...restProps }) => (
   <div
-    css={css({
-      p: 2,
-      borderTopLeftRadius: 'radius-1',
-      borderTopRightRadius: 'radius-1',
+    style={{
       border: '1px solid #e1e4e5',
       backgroundColor: '#f3f3f3',
-    })}
+      borderTopLeftRadius: '.1875rem',
+      borderTopRightRadius: '.1875rem',
+    }}
+    className="fl-p-2"
     {...restProps}
   />
 );
 
 const BoxCode = ({ ...restProps }) => (
   <div
-    css={css({
+    style={{
       padding: '.75rem',
       borderBottomLeftRadius: '.1875rem',
       borderBottomRightRadius: '.1875rem',
@@ -38,7 +35,7 @@ const BoxCode = ({ ...restProps }) => (
       borderRight: '1px solid #e1e4e5',
       borderBottom: '1px solid #e1e4e5',
       background: '#fff',
-    })}
+    }}
     {...restProps}
   />
 );
