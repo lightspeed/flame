@@ -4550,13 +4550,6 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
 
-"@types/storybook-readme@^5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@types/storybook-readme/-/storybook-readme-5.0.3.tgz#f6f08ccdd1837ea33fd81e3519d83bc1f3ecb14d"
-  integrity sha512-RyI7o95VBbAL99SaqpTUna10TRgCbdIHYdHuNjOeWFNSzDLlQTgxVc/oMu5wFs1tGGM38qNxgcujBG5TGKP0Fw==
-  dependencies:
-    "@types/react" "*"
-
 "@types/styled-system@^5.1.9":
   version "5.1.9"
   resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.9.tgz#8baac8f6eca9e0bd5768c175ca5ce1f2d6f61ade"
