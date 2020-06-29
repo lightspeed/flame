@@ -27,7 +27,7 @@ class FlameStyling extends React.Component {
         />
         <FlameTheme themeName={this.state.selectedTheme}>
           <Box p={3}>
-            <Box mb={2} width="200px" className="hide-in-percy">
+            <Box mb={2} width="200px" className="hide-in-percy chromatic-ignore">
               <Select
                 value={this.state.selectedTheme}
                 onChange={e => {

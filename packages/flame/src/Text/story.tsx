@@ -144,7 +144,7 @@ stories.add(
       ))}
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -157,7 +157,7 @@ stories.add(
       <Heading4>Heading 4</Heading4>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -178,7 +178,7 @@ stories.add(
       </Text>
     </TextContent>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -208,7 +208,7 @@ stories.add(
       </TextContent>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -219,7 +219,7 @@ stories.add(
       <Text fontFamily="monospace">Monospaced fonts</Text>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -253,5 +253,5 @@ stories.add(
       </tbody>
     </table>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
