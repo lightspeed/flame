@@ -1,8 +1,8 @@
 on:
   push:
-    branches:
-      - master
-      - next
+    tags:
+      - '@lightspeed*'
+
 name: Publish lerna
 jobs:
   publish:

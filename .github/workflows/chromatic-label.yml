@@ -1,17 +1,15 @@
-name: Test
+name: Chromatic on label
+on: [pull_request]
 
-on:
-  push:
-    branches:
-      - '**'
-    tags-ignore:
-      - '**'
 jobs:
-  build:
-    name: Test, lint, typecheck
+  snapshot:
+    name: Run visual regression tests with chromatic (label triggered)
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'snapshot') }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Read .nvmrc
         run: echo ::set-output name=nvmrc::$(cat .nvmrc)
         id: nvm
@@ -26,14 +24,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-cache-v1-
       - name: Install
-        run: yarn install --frozen-lockfile
-      - name: Bootstrap
-        run: yarn bootstrap
-      - name: Test
-        run: yarn test:ci
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      - name: Lint
-        run: yarn lint
-      - name: Typecheck
-        run: yarn typecheck
+        run: yarn install --frozen-lockfile && yarn bootstrap
+      - uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
