@@ -1,14 +1,10 @@
-name: Chromatic
-on:
-  pull_request:
-    branches:
-      - master
-  push:
-    branches:
-      - master
+name: Chromatic on label
+on: [pull_request]
+
 jobs:
   snapshot:
-    name: Run visual regression tests with chromatic
+    name: Run visual regression tests with chromatic (label triggered)
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'snapshot') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
