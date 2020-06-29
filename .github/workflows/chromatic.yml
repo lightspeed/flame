@@ -28,5 +28,5 @@ jobs:
         run: yarn install --frozen-lockfile && yarn bootstrap
       - uses: chromaui/action@v1
         with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
