@@ -1,4 +1,5 @@
-@import '../../packages/flame-tokens/partials/index.scss';
+@import '../packages/flame-tokens/partials/index.scss';
+@import '../packages/flame-css/src/index.scss';
 
 // Required imports for state placeholders use
 
@@ -11,27 +12,27 @@
 }
 
 .example {
-  margin-bottom: $cr-spacing-2;
+  margin-bottom: $fl-spacing-2;
 }
 
 .example--col {
   display: inline-block;
   width: 192px;
-  margin-right: $cr-spacing-2;
+  margin-right: $fl-spacing-2;
   text-align: center;
 }
 
 .example__block {
-  padding: $cr-spacing-2;
-  border-top-left-radius: $cr-radius-1;
-  border-top-right-radius: $cr-radius-1;
+  padding: $fl-spacing-2;
+  border-top-left-radius: $fl-radius-1;
+  border-top-right-radius: $fl-radius-1;
   border: 1px solid $cr-snow-300;
   background-color: $cr-snow-200;
 }
 
 .example__block--full-rounded {
-  border-bottom-left-radius: $cr-radius-1;
-  border-bottom-right-radius: $cr-radius-1;
+  border-bottom-left-radius: $fl-radius-1;
+  border-bottom-right-radius: $fl-radius-1;
 }
 
 .example__block--gray {
@@ -49,7 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: $cr-spacing-2 0;
+  padding: $fl-spacing-2 0;
   color: $cr-maple;
 }
 
@@ -60,17 +61,17 @@
 .example__block--dashed::after {
   border-left: 2px dashed $cr-maple;
   content: '';
-  padding: $cr-spacing-2 $cr-spacing-1;
+  padding: $fl-spacing-2 $fl-spacing-1;
 }
 
 .example__block--dashed::before {
   border-right: 2px dashed $cr-maple;
   content: '';
-  padding: $cr-spacing-2 $cr-spacing-1;
+  padding: $fl-spacing-2 $fl-spacing-1;
 }
 
 .example__code {
-  padding: $cr-spacing-2;
+  padding: $fl-spacing-2;
   border-bottom-left-radius: $cr-radius-1;
   border-bottom-right-radius: $cr-radius-1;
   border-left: 1px solid $cr-snow-300;
@@ -119,7 +120,7 @@
 .sibling-spacing {
   > *:first-child,
   > * + * {
-    margin-right: $cr-spacing-2;
+    margin-right: $fl-spacing-2;
   }
 }
 
@@ -133,14 +134,14 @@
 
 .flag-wrapper {
   display: inline-block;
-  padding: $cr-spacing-1;
+  padding: $fl-spacing-1;
 
   span {
     display: block;
   }
 
   svg {
-    padding: $cr-spacing-1;
+    padding: $fl-spacing-1;
 
     &:hover {
       background: rgba(255, 192, 203, 0.5);
@@ -150,7 +151,7 @@
 
 .flag-sprite-listing {
   svg {
-    padding: $cr-spacing-1;
+    padding: $fl-spacing-1;
   }
 }
 
@@ -180,7 +181,7 @@
 
   td,
   th {
-    padding: $cr-spacing-1;
+    padding: $fl-spacing-1;
     border-bottom: 1px solid $cr-snow-300;
 
     &:not(:first-child) {
@@ -189,7 +190,7 @@
   }
 
   th {
-    padding: $cr-spacing-2 $cr-spacing-1;
+    padding: $fl-spacing-2 $fl-spacing-1;
   }
 }
 

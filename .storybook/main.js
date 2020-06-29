@@ -5,8 +5,15 @@ const sass = require('sass');
 const packageInfo = require('../package.json');
 
 module.exports = {
-  stories: ['../src/**/story.tsx'],
-  addons: ['storybook-readme/register', '@storybook/addon-actions/register'],
+  stories: [
+    '../packages/flame/src/**/story.tsx',
+    '../packages/flame-css/stories/*.stories.@(mdx|tsx)',
+  ],
+  addons: [
+    'storybook-readme/register',
+    '@storybook/addon-actions/register',
+    '@storybook/addon-docs',
+  ],
   webpackFinal: config => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
@@ -49,7 +56,10 @@ module.exports = {
           loader: require.resolve('postcss-loader'),
           options: {
             ident: 'postcss',
-            plugins: () => [atImport(), autoprefixer({ browsers: packageInfo.browserslist })],
+            plugins: () => [
+              atImport(),
+              autoprefixer({ overrideBrowserslist: packageInfo.browserslist }),
+            ],
           },
         },
         {

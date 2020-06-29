@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Box, Flex } from '../../src/Core';
+import { Box, Flex } from '../../packages/flame/src/Core';
 
 const SpacedGroup = ({ flexDirection = 'row', children, ...restProps }) => {
   const nextChildren = React.Children.map(children, (child, index) => {
