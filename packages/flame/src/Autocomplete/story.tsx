@@ -117,7 +117,7 @@ stories.add(
       />
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add('States', () => (
@@ -210,5 +210,5 @@ stories.add(
       />
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );

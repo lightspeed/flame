@@ -66,7 +66,7 @@ stories.add(
       </Box>
     </TextContent>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -90,7 +90,7 @@ stories.add(
       <Text size="small">(See action logger)</Text>
     </TextContent>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add(
@@ -105,5 +105,5 @@ stories.add(
       <Text size="small">(Click label or remove icon)</Text>
     </TextContent>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );

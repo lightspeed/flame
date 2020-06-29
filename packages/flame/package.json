@@ -28,8 +28,7 @@
     "build:private-to-public": "node ./scripts/private-to-public.js",
     "build": "yarn build:icons && yarn build:flags && yarn build:themes && yarn build:cjs && yarn build:esm && yarn build:copy-files && yarn build:types && yarn build:types:esm && yarn build:private-to-public && node ../../scripts/validate-build",
     "release": "yarn build && yarn build:docgen && npm publish dist --quiet",
-    "release:dryrun": "npm publish dist --dry-run",
-    "percy": "build-storybook -c .storybook && percy-storybook --widths=1280"
+    "release:dryrun": "npm publish dist --dry-run"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.0",

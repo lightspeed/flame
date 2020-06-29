@@ -38,7 +38,7 @@ stories.add(
       </Tooltip>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add('Directions', () => (

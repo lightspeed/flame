@@ -168,7 +168,7 @@ stories.add(
       </div>
     );
   },
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add('Story for Percy', () => {

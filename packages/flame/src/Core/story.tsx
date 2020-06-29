@@ -86,7 +86,7 @@ const Colours = withTheme(({ theme }) => {
   );
 });
 export const colors = () => <Colours />;
-colors.story = { percy: { skip: true } };
+colors.story = { chromatic: { disable: true } };
 
 const TypographyExample: React.FC<{ output: React.ReactNode; example: React.ReactNode }> = ({
   output,
@@ -200,7 +200,7 @@ const Typography = withTheme(({ theme }) => {
   );
 });
 export const typography = () => <Typography />;
-typography.story = { percy: { skip: true } };
+typography.story = { chromatic: { disable: true } };
 
 const BoxExample: React.FC<{ box: React.ReactNode; sample: React.ReactNode }> = ({
   box,
@@ -287,7 +287,7 @@ const Spacing = withTheme(({ theme }) => {
   );
 });
 export const spacing = () => <Spacing />;
-spacing.story = { percy: { skip: true } };
+spacing.story = { chromatic: { disable: true } };
 
 const Shadows = withTheme(({ theme }) => {
   const { shadows, innerShadows, innerShadowsN, borderShadows } = theme;
@@ -412,7 +412,7 @@ const Shadows = withTheme(({ theme }) => {
 });
 
 export const shadows = () => <Shadows />;
-shadows.story = { percy: { skip: true } };
+shadows.story = { chromatic: { disable: true } };
 
 const BorderRadii = withTheme(({ theme }) => {
   const { radii } = theme;
@@ -450,7 +450,7 @@ const BorderRadii = withTheme(({ theme }) => {
   );
 });
 export const radii = () => <BorderRadii />;
-radii.story = { percy: { skip: true } };
+radii.story = { chromatic: { disable: true } };
 
 const Transitions = withTheme(({ theme }) => {
   const { transition } = theme;
@@ -495,4 +495,4 @@ const Transitions = withTheme(({ theme }) => {
   );
 });
 export const transitions = () => <Transitions />;
-transitions.story = { percy: { skip: true } };
+transitions.story = { chromatic: { disable: true } };

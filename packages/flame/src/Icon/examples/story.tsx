@@ -367,7 +367,7 @@ stories.add(
       </div>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add('Sprite', () => (
