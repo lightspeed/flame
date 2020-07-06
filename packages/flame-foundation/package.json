@@ -2,6 +2,7 @@
   "name": "@lightspeed/flame-foundation",
   "private": true,
   "main": "dist/index.js",
+  "browser": "dist/index.mjs",
   "version": "0.1.0",
   "description": "Foundational values for the Flame design system. Based on system-ui spec.",
   "author": "Lightspeed",
@@ -14,7 +15,7 @@
   "devDependencies": {
     "@types/fs-extra": "^9.0.1",
     "@types/node": "^12.7.2",
-    "concurrently": "^4.1.0",
+    "esbuild": "^0.5.23",
     "nodemon": "^1.18.10",
     "rimraf": "^2.6.3",
     "ts-node": "^8.3.0",
@@ -22,8 +23,12 @@
     "typescript": "^3.9.5"
   },
   "scripts": {
-    "build": "ts-node ./scripts/build.ts",
-    "prepublish": "yarn build"
+    "prepublish": "yarn build",
+    "build": "yarn clean && yarn build:types && yarn build:cjs && yarn build:esm",
+    "build:cjs": "esbuild --bundle --outfile=dist/index.js --format=cjs --minify ./src/index.ts",
+    "build:esm": "esbuild --bundle --outfile=dist/index.mjs --format=esm --minify ./src/index.ts",
+    "build:types": "tsc --p tsconfig.json && rimraf \"dist/!(index)*\"",
+    "clean": "rimraf dist"
   },
   "publishConfig": {
     "access": "public"

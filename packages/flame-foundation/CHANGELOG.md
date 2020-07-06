@@ -9,4 +9,5 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## [Unreleased]
 
+- Map token values to match `system-ui` specs
 - Port over tokens from `flame-css` into `flame-foundation`
