@@ -73,7 +73,7 @@ ${types}
 type ThemePath<T> = T | flameTheme;
 
 function themeGet<T>(path: ThemePath<T>, defaultValue?: string) {
-  return function drill(props: { theme : any }) {
+  return function drill(props: { theme? : any }) {
     return baseThemeGet(path, defaultValue)(props);
   };
 }
