@@ -6,7 +6,8 @@
     "noEmit": false,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "lib": ["es2017", "dom"]
+    "lib": ["es2017", "dom"],
+    "types": ["node"]
   },
   "include": ["./typings", "./src/**/*.ts", "./src/**/*.tsx"],
   "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/story.tsx"]
