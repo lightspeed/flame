@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Loosen typing for `themeGet`
+- Loosen typing for `themeGet` ([#116](https://github.com/lightspeed/flame/pull/116))
 
 ## 1.6.1 - 2020-06-05
 
