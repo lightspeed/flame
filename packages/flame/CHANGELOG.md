@@ -7,33 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Input now has `type="text"` automatically applied for convenience ([#117](https://github.com/lightspeed/flame/pull/#117))
+
 ## 2.0.0-rc.8 - 2020-06-25
 
 ### Fixed
 
-- Smoothed out border-radius for next/Badge ([#108](https://github.com/lightspeed/flame/pull/#108)
-- Export next/Badge prop typing and variant types ([#110](https://github.com/lightspeed/flame/pull/#110)
+- Smoothed out border-radius for next/Badge ([#108](https://github.com/lightspeed/flame/pull/#108))
+- Export next/Badge prop typing and variant types ([#110](https://github.com/lightspeed/flame/pull/#110))
 
 ## 2.0.0-rc.7 - 2020-06-22
 
 ### Added
 
-- Introducing the concept of the "next" folder. Whenever we are about to introduce breaking changes to existing components, we will introduce the future component into the corresponding folder. Please note that components within this folder are usually experimental and are subject to changes that might not be documented ([#106](https://github.com/lightspeed/flame/pull/106)
-- Add next/Badge. Should you wish to already leverage and test out the newer Badge component, simply `import { Badge } from '@lightspeed/flame/Badge/next';` ([#106](https://github.com/lightspeed/flame/pull/106)
+- Introducing the concept of the "next" folder. Whenever we are about to introduce breaking changes to existing components, we will introduce the future component into the corresponding folder. Please note that components within this folder are usually experimental and are subject to changes that might not be documented ([#106](https://github.com/lightspeed/flame/pull/106))
+- Add next/Badge. Should you wish to already leverage and test out the newer Badge component, simply `import { Badge } from '@lightspeed/flame/Badge/next';` ([#106](https://github.com/lightspeed/flame/pull/106))
 
 ## 2.0.0-rc.6 - 2020-06-19
 
 ### Fixed
 
-- Adjust z-index of PopoverContainer to go above the Modal overlay ([#107](https://github.com/lightspeed/flame/pull/107)
-- Leverage `update` hook to re-compute popper positioning in components that have popper still visible. ([#105](https://github.com/lightspeed/flame/pull/105)
-- In `useOnClickOutside`, use a ref for handler callback to avoid destroying the event listener too early. ([#105](https://github.com/lightspeed/flame/pull/105)
+- Adjust z-index of PopoverContainer to go above the Modal overlay ([#107](https://github.com/lightspeed/flame/pull/107))
+- Leverage `update` hook to re-compute popper positioning in components that have popper still visible. ([#105](https://github.com/lightspeed/flame/pull/105))
+- In `useOnClickOutside`, use a ref for handler callback to avoid destroying the event listener too early. ([#105](https://github.com/lightspeed/flame/pull/105))
 
 ## 2.0.0-rc.5 - 2020-06-19
 
 ### Breaking
 
-- Swap out internal `usePopper` hook with the one provided by `react-popper`. While the the underlying components API have not changed, if you are using the hook directly, you'll need to swap out a couple of things to fit the `react-popper`'s hook. Namely, the target and popper refs need to come from the `React.useState` hook. Additionally, the styles need to be manually applied.([#104](https://github.com/lightspeed/flame/pull/104)
+- Swap out internal `usePopper` hook with the one provided by `react-popper`. While the the underlying components API have not changed, if you are using the hook directly, you'll need to swap out a couple of things to fit the `react-popper`'s hook. Namely, the target and popper refs need to come from the `React.useState` hook. Additionally, the styles need to be manually applied.([#104](https://github.com/lightspeed/flame/pull/104))
 
 ```jsx
 // Before
@@ -106,8 +112,8 @@ const Example = () => {
 
 ### Fixed
 
-- Fix typing for Alert and AlertInCard ([#102](https://github.com/lightspeed/flame/pull/102)
-- Allow empty Alert title and adjust positioning if its the case ([#102](https://github.com/lightspeed/flame/pull/102)
+- Fix typing for Alert and AlertInCard ([#102](https://github.com/lightspeed/flame/pull/102))
+- Allow empty Alert title and adjust positioning if its the case ([#102](https://github.com/lightspeed/flame/pull/102))
 
 ## 2.0.0-rc.3 - 2020-06-17
 

@@ -97,6 +97,7 @@ exports[`<Input /> Snapshot should match snapshot 1`] = `
     id="username"
     name="username"
     placeholder="Placeholder text"
+    type="text"
   />
   <div
     className="emotion-2 emotion-3"

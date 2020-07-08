@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createComponent, customRender, fireEvent } from 'test-utils';
+import { screen, createComponent, customRender, fireEvent } from 'test-utils';
 import { Input } from './Input';
 
 type BaseProps = {
@@ -22,12 +22,18 @@ describe('<Input />', () => {
     });
   });
 
-  it('should have rendered an input of type text', () => {
+  it('should render an input of type text by default', () => {
     const { getByPlaceholderText } = customRender(
       <Input {...baseProps} placeholder="test-input" size="large" />,
     );
     const element: any = getByPlaceholderText('test-input');
     expect(element.type).toBe('text');
+  });
+
+  it('should render an input of other type when provided', () => {
+    customRender(<Input {...baseProps} type="email" placeholder="test-input" size="large" />);
+    const element: any = screen.getByPlaceholderText('test-input');
+    expect(element.type).toBe('email');
   });
 
   it('should not crash on null status', () => {
