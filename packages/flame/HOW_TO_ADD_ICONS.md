@@ -12,7 +12,7 @@ yarn bootstrap
 This script will generate the React components and the Icon sprite.
 
 ```sh
-yarn run-svgo
+yarn run svgo
 ```
 
 Will cleanup the added svg(s) and do the proper alignment
