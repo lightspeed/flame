@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Ul = (...restProps) => (
+const Ul = ({ ...restProps }) => (
   <ul
     style={{
       listStyle: 'none',
-      margin: 'none',
-      padding: 'none',
+      margin: '0',
+      padding: '0',
     }}
     {...restProps}
   />
