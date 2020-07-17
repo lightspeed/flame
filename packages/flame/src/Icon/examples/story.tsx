@@ -81,7 +81,10 @@ class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresente
           </Box>
         </div>
         <div>
-          <Ul className="cr-text-xs cr-gray-300" style={{ cursor: 'pointer', textAlign: 'right' }}>
+          <Ul
+            className="cr-text-xs cr-gray-300"
+            style={{ cursor: 'pointer', textAlign: 'right', listStyle: 'none' }}
+          >
             {(iconList[name as string] as any).map((iconName: string) => (
               <li
                 key={iconName}
