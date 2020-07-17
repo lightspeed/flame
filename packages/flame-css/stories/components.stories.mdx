@@ -1,0 +1,254 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="Flame-CSS|Components" />
+
+# Components
+
+## Badge
+
+<Preview>
+  <Story name="Badge">
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className="fl-mb-2">
+        <span className="fl-badge fl-badge-success">Success</span>
+        &nbsp;
+        <span className="fl-badge fl-badge-small fl-badge-success">success</span>
+      </div>
+      <div className="fl-mb-2">
+        <span className="fl-badge fl-badge-warning">Warning</span>
+        &nbsp;
+        <span className="fl-badge fl-badge-small fl-badge-warning">Warning</span>
+      </div>
+      <div className="fl-mb-2">
+        <span className="fl-badge fl-badge-info">Info</span>
+        &nbsp;
+        <span className="fl-badge fl-badge-small fl-badge-info">Info</span>
+      </div>
+      <div className="fl-mb-2">
+        <span className="fl-badge fl-badge-danger">Danger</span>
+        &nbsp;
+        <span className="fl-badge fl-badge-small fl-badge-danger">Danger</span>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+## Badge Pill
+
+**WARNING**
+
+This component variation will be deprecated!
+
+You may wish to stick exclusively to the `fl-badge` component.
+
+Reasoning behind the deprecation is to reduce the amount of variations a badge can have
+in order to streamline the whole design and development process
+
+<Preview>
+  <Story name="Badge (pill variant)">
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className="fl-mb-2">
+        <span className="fl-badge fl-badge-pill fl-badge-success">success</span>
+        &nbsp;
+        <span className="fl-badge fl-badge-small fl-badge-pill fl-badge-success">success</span>
+      </div>
+      <div className="fl-mb-2">
+        <span className="fl-badge fl-badge-pill fl-badge-warning">warning</span>
+        &nbsp;
+        <span className="fl-badge fl-badge-small fl-badge-pill fl-badge-success">success</span>
+      </div>
+      <div className="fl-mb-2">
+        <span className="fl-badge fl-badge-pill fl-badge-info">info</span>
+        &nbsp;
+        <span className="fl-badge fl-badge-small fl-badge-pill fl-badge-info">info</span>
+      </div>
+      <div className="fl-mb-2">
+        <span className="fl-badge fl-badge-pill fl-badge-danger">danger</span>
+        &nbsp;
+        <span className="fl-badge fl-badge-small fl-badge-pill fl-badge-danger">danger</span>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+## Button Fill
+
+<Preview>
+  <Story name="Button">
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className="fl-mb-2">
+        <button className="fl-button fl-button-neutral">Neutral</button>
+      </div>
+      <div className="fl-mb-2">
+        <button className="fl-button fl-button-primary">Primary</button>
+      </div>
+      <div className="fl-mb-2">
+        <button className="fl-button fl-button-secondary">Secondary</button>
+      </div>
+      <div className="fl-mb-2">
+        <button className="fl-button fl-button-danger">Danger</button>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+## Button Outline
+
+**WARNING**
+
+This component variation will be deprecated!
+
+You may wish to stick exclusively to the `fl-button` component.
+
+Reasoning behind the deprecation is to reduce the amount of variations a button can have
+in order to streamline the whole design and development process
+
+<Preview>
+  <Story name="Buttons (outline variant)">
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className="fl-mb-2">
+        <button className="fl-button fl-button-neutral">Neutral</button>
+      </div>
+      <div className="fl-mb-2">
+        <button className="fl-button fl-button-outline-primary">Primary</button>
+      </div>
+      <div className="fl-mb-2">
+        <button className="fl-button fl-button-outline-secondary">Secondary</button>
+      </div>
+      <div className="fl-mb-2">
+        <button className="fl-button fl-button-outline-danger">Danger</button>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+## Button Group
+
+<Preview>
+  <Story name="Button group">
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div class="fl-button-group">
+        <button className="fl-button fl-button-neutral">Button 1</button>
+        <button className="fl-button fl-button-neutral">Button 2</button>
+        <button className="fl-button fl-button-neutral">Button 3</button>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+## Checkbox
+
+<Preview>
+  <Story name="Checkbox">
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div class="fl-checkbox-wrapper">
+        <input type="checkbox" class="fl-checkbox-input" />
+        <div class="fl-checkbox-checkmark" />
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+## Radio
+
+<Preview>
+  <Story name="Radio">
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div class="fl-radio-wrapper">
+        <input type="radio" name="radio-example" class="fl-radio-input" />
+        <div class="fl-radio-checkmark" />
+      </div>
+      <br />
+      <div class="fl-radio-wrapper">
+        <input type="radio" name="radio-example" class="fl-radio-input" />
+        <div class="fl-radio-checkmark" />
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+## Input
+
+<Preview>
+  <Story name="Input">
+    <div>
+      <label className="fl-input-label">Label</label>
+      <div className="fl-input-description">This is a description of an input</div>
+      <input type="text" class="fl-input" />
+      <div class="fl-input-caption">This is a caption</div>
+    </div>
+  </Story>
+</Preview>
+
+## Input Group & Addon
+
+<Preview>
+  <Story name="Input group & addon">
+    <div>
+      <div className="fl-mb-2">
+        <div class="fl-input-group">
+          <div class="fl-input-group-addon">$</div>
+          <input type="text" class="fl-input" />
+        </div>
+      </div>
+      <div>
+        <div class="fl-input-group">
+          <input type="text" class="fl-input" />
+          <div class="fl-input-group-addon">$</div>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+## Progress
+
+<Preview>
+  <Story name="Progress">
+    <div className="fl-progress-bar-wrapper">
+      <div className="fl-progress-bar fl-progress-bar-determinate" style={{ width: '30%' }} />
+    </div>
+  </Story>
+</Preview>
+
+## Select
+
+<Preview>
+  <Story name="Select">
+    <select className="fl-select">
+      <option>Lions</option>
+      <option>Tigers</option>
+      <option>Bears</option>
+    </select>
+  </Story>
+</Preview>
+
+## Spinner
+
+<Preview>
+  <Story name="Spinner">
+    <span className="fl-spinner" />
+  </Story>
+</Preview>
+
+## Tag
+
+<Preview>
+  <Story name="Tag">
+    <div className="fl-tag">Tag</div>
+  </Story>
+</Preview>
+
+## Headings
+
+<Preview>
+  <Story name="Headings">
+    <div>
+      <div className="fl-h1">Heading 1</div>
+      <div className="fl-h2">Heading 2</div>
+      <div className="fl-h3">Heading 3</div>
+      <div className="fl-h4">Heading 4</div>
+      <div className="fl-caption">Caption</div>
+    </div>
+  </Story>
+</Preview>

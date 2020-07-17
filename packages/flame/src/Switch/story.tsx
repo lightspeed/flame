@@ -10,7 +10,7 @@ import Readme from './README.md';
 import { Button } from '../Button';
 import { Box } from '../Core';
 
-import { SpacedGroup } from '../../../../stories/components/SpacedGroup';
+import { SpacedGroup } from '../../../../.storybook/components/SpacedGroup';
 
 const stories = storiesOf('Components|Switch', module).addDecorator(withReadme(Readme));
 
@@ -144,5 +144,5 @@ stories.add(
       </Box>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );

@@ -107,7 +107,7 @@ class DialogStoryHelper extends React.Component<{}, State> {
           </div>
         </div>
         <div className="cr-mt-2">
-          <Alert noCloseBtn type={alerttypeMap}>
+          <Alert title="Status" noCloseBtn type={alerttypeMap}>
             <pre>Status =&gt; {this.state.feedback}</pre>
           </Alert>
         </div>
@@ -127,7 +127,7 @@ class DialogStoryHelper extends React.Component<{}, State> {
   }
 }
 
-stories.add('Story', () => <DialogStoryHelper />, { percy: { skip: true } });
+stories.add('Story', () => <DialogStoryHelper />, { chromatic: { disable: true } });
 
 stories.add('Percy story', () => (
   <Dialog

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Placement as PopoverPlacement } from 'popper.js';
+import { Placement as PopoverPlacement } from '@popperjs/core';
 import { PopoverArrow, PopoverContainer, PopoverContainerProps } from './PopoverContainer';
 import { usePopper, useToggle, useOnClickOutside, useEventListener } from '../hooks';
 
@@ -37,48 +37,6 @@ export interface PopoverProps extends PopoverContainerProps, PopperWrapper {
   onOpen?(): void;
 }
 
-const PopperWrapper: React.FC<PopperWrapper> = ({
-  targetRef,
-  placement,
-  isFlipEnabled,
-  positionFixed,
-  isActive,
-  light,
-  className,
-  zIndex,
-  children,
-  autoClose,
-  onClose,
-}) => {
-  const popperRef = React.createRef<HTMLDivElement>();
-  const { placement: nextPlacement } = usePopper(targetRef, popperRef, {
-    placement: placement || 'bottom-start',
-    positionFixed,
-    modifiers: {
-      flip: {
-        enabled: isFlipEnabled,
-      },
-    },
-  });
-
-  useOnClickOutside(popperRef, () => {
-    isActive && autoClose && onClose();
-  });
-
-  return (
-    <PopoverContainer
-      light={light}
-      ref={popperRef}
-      className={className}
-      zIndex={zIndex as any}
-      isActive={isActive}
-      data-placement={nextPlacement}
-    >
-      {children}
-    </PopoverContainer>
-  );
-};
-
 // The current behaviour of Popover is that the PopoverContainer is not rendered if
 // not open. This is somwhat problematic with refs + usePopper as it cannot recompute fast
 // enough the new position, which leads to the popover container jump locations.
@@ -103,10 +61,29 @@ export const Popover: React.FC<PopoverProps> = ({
   zIndex,
   children,
 }) => {
-  const targetRef = React.createRef<any>();
+  const [targetRef, setTargetRef] = React.useState(null);
+  const [popperRef, setPopperRef] = React.useState(null);
+  const clickOutsideRef = React.useRef();
+  clickOutsideRef.current = popperRef;
   const isFirstPass = React.useRef(true);
 
   const { isActive, setInactive, setActive } = useToggle(isOpen);
+
+  const { styles, attributes, update } = usePopper(targetRef, popperRef, {
+    placement: placement || 'bottom-start',
+    strategy: positionFixed ? 'fixed' : 'absolute',
+    modifiers: [
+      {
+        name: 'flip',
+        enabled: isFlipEnabled,
+      },
+    ],
+  });
+
+  useOnClickOutside(clickOutsideRef, () => {
+    isActive && autoClose && onClose();
+    isActive && update && update();
+  });
 
   useEventListener<KeyboardEvent>('keyup', event => {
     if (event.key === 'Escape') {
@@ -135,7 +112,7 @@ export const Popover: React.FC<PopoverProps> = ({
     }
   }, [isOpen, isFirstPass.current]);
 
-  const targetProps = { ref: targetRef };
+  const targetProps = { ref: setTargetRef };
 
   const targetEvents = {
     onClick: handleTriggerClick,
@@ -145,21 +122,20 @@ export const Popover: React.FC<PopoverProps> = ({
     <React.Fragment>
       {target({ targetProps, targetEvents, active: isOpen })}
       {isActive && (
-        <PopperWrapper
-          targetRef={targetRef}
+        <PopoverContainer
           light={light}
+          ref={setPopperRef}
           className={className}
-          zIndex={zIndex}
+          zIndex={zIndex as any}
           isActive={isActive}
-          onClose={onClose}
-          placement={placement}
-          positionFixed={positionFixed}
-          autoClose={autoClose}
-          isFlipEnabled={isFlipEnabled}
+          style={styles.popper}
+          data-placement={
+            attributes && attributes.popper && attributes.popper['data-popper-placement']
+          }
         >
           {children}
           {!noArrow && <PopoverArrow />}
-        </PopperWrapper>
+        </PopoverContainer>
       )}
     </React.Fragment>
   );

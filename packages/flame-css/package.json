@@ -1,0 +1,20 @@
+{
+  "name": "@lightspeed/flame-css",
+  "version": "0.1.1",
+  "description": "Base Lightspeed helpers and components CSS",
+  "author": "Lightspeed",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/lightspeed/flame#readme",
+  "repository": "https://github.com/lightspeed/flame",
+  "bugs": {
+    "url": "https://github.com/lightspeed/flame/issues"
+  },
+  "scripts": {
+    "build": "node ./scripts/src-to-css.js",
+    "prepublish": "yarn build"
+  },
+  "devDependencies": {
+    "fs-extra": "9.0.1",
+    "sass": "^1.26.9"
+  }
+}

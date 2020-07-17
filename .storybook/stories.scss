@@ -1,0 +1,217 @@
+@import '../packages/flame-tokens/partials/index.scss';
+@import '../packages/flame-css/src/index.scss';
+
+// Required imports for state placeholders use
+
+.list-50 {
+  > li {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+  }
+}
+
+.example {
+  margin-bottom: $fl-spacing-2;
+}
+
+.example--col {
+  display: inline-block;
+  width: 192px;
+  margin-right: $fl-spacing-2;
+  text-align: center;
+}
+
+.example__block {
+  padding: $fl-spacing-2;
+  border-top-left-radius: $fl-radius-1;
+  border-top-right-radius: $fl-radius-1;
+  border: 1px solid $cr-snow-300;
+  background-color: $cr-snow-200;
+}
+
+.example__block--full-rounded {
+  border-bottom-left-radius: $fl-radius-1;
+  border-bottom-right-radius: $fl-radius-1;
+}
+
+.example__block--gray {
+  background-color: $cr-gray-100;
+  border-color: $cr-gray-100;
+}
+
+.example__block--dark {
+  background-color: $cr-night-100;
+  border-color: $cr-night-100;
+}
+
+.example__block--dashed {
+  border: 2px dashed $cr-snow-300;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $fl-spacing-2 0;
+  color: $cr-maple;
+}
+
+.example__block--dashed-active {
+  border-color: $cr-maple;
+}
+
+.example__block--dashed::after {
+  border-left: 2px dashed $cr-maple;
+  content: '';
+  padding: $fl-spacing-2 $fl-spacing-1;
+}
+
+.example__block--dashed::before {
+  border-right: 2px dashed $cr-maple;
+  content: '';
+  padding: $fl-spacing-2 $fl-spacing-1;
+}
+
+.example__code {
+  padding: $fl-spacing-2;
+  border-bottom-left-radius: $cr-radius-1;
+  border-bottom-right-radius: $cr-radius-1;
+  border-left: 1px solid $cr-snow-300;
+  border-right: 1px solid $cr-snow-300;
+  border-bottom: 1px solid $cr-snow-300;
+  background: white;
+}
+
+.box {
+  background-color: $cr-snow;
+  border: 1px solid $cr-gray-100;
+  border-radius: $cr-radius-2;
+}
+
+.box--fixed {
+  box-sizing: border-box;
+  width: 130px;
+  height: 130px;
+}
+
+.box--borderless {
+  border: 0;
+}
+
+.box--animate {
+  transition-property: background border;
+
+  &:hover {
+    background-color: $cr-gray-100;
+    border-color: $cr-gray-200;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block-center {
+  margin: 0 auto;
+}
+
+.sibling-spacing {
+  > *:first-child,
+  > * + * {
+    margin-right: $fl-spacing-2;
+  }
+}
+
+.bg-snow {
+  background-color: $cr-snow;
+}
+
+.bg-blue-100 {
+  background-color: $cr-blue-100;
+}
+
+.flag-wrapper {
+  display: inline-block;
+  padding: $fl-spacing-1;
+
+  span {
+    display: block;
+  }
+
+  svg {
+    padding: $fl-spacing-1;
+
+    &:hover {
+      background: rgba(255, 192, 203, 0.5);
+    }
+  }
+}
+
+.flag-sprite-listing {
+  svg {
+    padding: $fl-spacing-1;
+  }
+}
+
+// Icon CSS Variables example
+.icons-css-vars .cr-icon {
+  --cr-icon-base-1-fill: #{$cr-maple};
+  --cr-icon-base-2-fill: #{$cr-maple};
+  --cr-icon-details-1-fill: #{$cr-maple-300};
+  --cr-icon-details-2-fill: #{$cr-maple-300};
+}
+
+.table-bordered {
+  border: 1px solid $cr-gray-100;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-collapse: collapse;
+
+  tr:nth-child(odd) {
+    background-color: $cr-snow-100;
+  }
+
+  tr:hover {
+    background-color: $cr-snow-200;
+  }
+
+  td,
+  th {
+    padding: $fl-spacing-1;
+    border-bottom: 1px solid $cr-snow-300;
+
+    &:not(:first-child) {
+      border-left: solid 1px $cr-snow-300;
+    }
+  }
+
+  th {
+    padding: $fl-spacing-2 $fl-spacing-1;
+  }
+}
+
+.width-200px {
+  width: 200px;
+}
+
+.height-100px {
+  height: 100px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.zIndex-2 {
+  z-index: 2;
+}

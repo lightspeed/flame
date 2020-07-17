@@ -1,0 +1,42 @@
+@mixin fl-progress-bar-wrapper {
+  width: 100%;
+  height: $fl-spacing-1;
+  background: $fl-gray-100;
+  border-radius: $fl-radius-2;
+}
+
+@mixin fl-progress-bar {
+  width: 0%;
+  height: 100%;
+  border-radius: $fl-radius-2;
+  animation: flProgressBarAnimation 3s linear infinite;
+  transition: width 500ms ease-in-out;
+}
+
+@mixin fl-progress-bar-determinate {
+  @include fl-progress-bar-animated;
+}
+
+@mixin fl-progress-bar-indeterminate {
+  @include fl-progress-bar-animated;
+  width: 100%;
+}
+
+@mixin fl-progress-bar-static {
+  background: $fl-blue-500;
+}
+
+@mixin fl-progress-bar-animated {
+  background: $fl-gray-100
+    linear-gradient(45deg, $fl-blue-500 0%, $fl-blue-300 25%, $fl-blue-500 75%, $fl-blue-300 100%);
+  background-size: 400% 400%;
+
+  @keyframes flProgressBarAnimation {
+    0% {
+      background-position: 0 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}

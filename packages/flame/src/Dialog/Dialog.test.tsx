@@ -115,7 +115,7 @@ describe('<Dialog />', () => {
     const { getByRole } = customRender(
       <Dialog title={title} message={message} isOpen onCancel={onCancel} onConfirm={onConfirm} />,
     );
-    const modalEl = getByRole('dialog');
+    const modalEl = getByRole('dialog', { hidden: true });
     const modalStyles = window.getComputedStyle(modalEl);
 
     expect(modalStyles.getPropertyValue('max-width')).toEqual('500px');
@@ -124,7 +124,7 @@ describe('<Dialog />', () => {
   it('should allow to override the defaults', () => {
     const maxWidth = '6969px';
     const { getByRole } = customRender(<DialogWithSize maximumWidth={maxWidth} />);
-    const modalEl = getByRole('dialog');
+    const modalEl = getByRole('dialog', { hidden: true });
     const modalStyles = window.getComputedStyle(modalEl);
 
     expect(modalStyles.getPropertyValue('max-width')).toEqual(maxWidth);

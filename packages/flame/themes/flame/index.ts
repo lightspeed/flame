@@ -2,8 +2,8 @@ import { lightspeedTheme } from '@lightspeed/flame-tokens';
 
 import { colors } from './colors';
 
-import { alertVariants } from './components/alert';
-import { badgeVariants } from './components/badge';
+import { alertVariants, alertInCardVariants } from './components/alert';
+import { badgeVariants, nextBadgeVariants } from './components/badge';
 import { buttonVariants, buttonIconVariants } from './components/button';
 import { cardStyles, cardVariants } from './components/card';
 import { checkboxStyles } from './components/checkbox';
@@ -25,6 +25,7 @@ import { wordmarkStyles } from './components/wordmark';
 import { tableStyles } from './components/table';
 import { sidebarStyles } from './components/sidebar';
 import { npsStyles } from './components/nps';
+import { toasterVariants } from './components/toaster';
 
 const themeUI = {
   ...lightspeedTheme,
@@ -34,7 +35,9 @@ const themeUI = {
 const theme: FlameUI = {
   ...themeUI,
   alertVariants,
+  alertInCardVariants,
   badgeVariants,
+  nextBadgeVariants,
   buttonVariants,
   buttonIconVariants,
   cardStyles,
@@ -58,6 +61,7 @@ const theme: FlameUI = {
   tableStyles,
   sidebarStyles,
   npsStyles,
+  toasterVariants,
 };
 
 export { themeUI, theme };

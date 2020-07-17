@@ -1,0 +1,15 @@
+.fl-h1 {
+  @include fl-heading1;
+}
+.fl-h2 {
+  @include fl-heading2;
+}
+.fl-h3 {
+  @include fl-heading3;
+}
+.fl-h4 {
+  @include fl-heading4;
+}
+.fl-caption {
+  @include fl-caption;
+}

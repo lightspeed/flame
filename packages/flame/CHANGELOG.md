@@ -7,6 +7,154 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## 2.0.0-rc.10 - 2020-07-08
+
+- Version bump because lerna
+
+## 2.0.0-rc.9 - 2020-07-08
+
+### Fixed
+
+- Input now has `type="text"` automatically applied for convenience ([#117](https://github.com/lightspeed/flame/pull/#117))
+
+## 2.0.0-rc.8 - 2020-06-25
+
+### Fixed
+
+- Smoothed out border-radius for next/Badge ([#108](https://github.com/lightspeed/flame/pull/#108))
+- Export next/Badge prop typing and variant types ([#110](https://github.com/lightspeed/flame/pull/#110))
+
+## 2.0.0-rc.7 - 2020-06-22
+
+### Added
+
+- Introducing the concept of the "next" folder. Whenever we are about to introduce breaking changes to existing components, we will introduce the future component into the corresponding folder. Please note that components within this folder are usually experimental and are subject to changes that might not be documented ([#106](https://github.com/lightspeed/flame/pull/106))
+- Add next/Badge. Should you wish to already leverage and test out the newer Badge component, simply `import { Badge } from '@lightspeed/flame/Badge/next';` ([#106](https://github.com/lightspeed/flame/pull/106))
+
+## 2.0.0-rc.6 - 2020-06-19
+
+### Fixed
+
+- Adjust z-index of PopoverContainer to go above the Modal overlay ([#107](https://github.com/lightspeed/flame/pull/107))
+- Leverage `update` hook to re-compute popper positioning in components that have popper still visible. ([#105](https://github.com/lightspeed/flame/pull/105))
+- In `useOnClickOutside`, use a ref for handler callback to avoid destroying the event listener too early. ([#105](https://github.com/lightspeed/flame/pull/105))
+
+## 2.0.0-rc.5 - 2020-06-19
+
+### Breaking
+
+- Swap out internal `usePopper` hook with the one provided by `react-popper`. While the the underlying components API have not changed, if you are using the hook directly, you'll need to swap out a couple of things to fit the `react-popper`'s hook. Namely, the target and popper refs need to come from the `React.useState` hook. Additionally, the styles need to be manually applied.([#104](https://github.com/lightspeed/flame/pull/104))
+
+```jsx
+// Before
+const Component = () => {
+  const targetRef = React.createRef(null);
+  const popperRef = React.createRef(null);
+  // placement contains the positioning of the popper
+  const { placement } = usePopper(targetRef, popperRef);
+
+  return (
+    <div>
+      <div ref={targetRef}>target</div>
+      <div ref={popperRef}>popper content</div>
+    </div>
+  );
+};
+
+// After
+import { usePopper } from '@lightspeed/flame/hooks';
+
+const Example = () => {
+  const [targetRef, setTargetRef] = React.useState(null);
+  const [popperRef, setPopperRef] = React.useState(null);
+  // attributes.popper['data-popper-placement'] effectively fills the same role as
+  // the previously provided placement return value.
+  // long story short: attributes.popper['data-popper-placement'] === placement
+  const { styles, attributes } = usePopper(targetRef, popperRef);
+
+  return (
+    <div>
+      <div ref={setTargetRef}>target</div>
+      <div ref={setPopperRef} style={styles.popper}>
+        popper content
+      </div>
+    </div>
+  );
+};
+```
+
+Additionally, should you leverage the `useOnClickOutside` hook in conjunction with `usePopper`, you'll need to also forward a separate ref.
+
+```jsx
+import { usePopper, useOnClickOutside } from '@lightspeed/flame/hooks';
+
+const Example = () => {
+  const [targetRef, setTargetRef] = React.useState(null);
+  const [popperRef, setPopperRef] = React.useState(null);
+  const clickOutsideRef = React.useRef();
+  clickOutsideRef.current = popperRef;
+  const { styles } = usePopper(targetRef, popperRef);
+
+  useOnClickOutside(clickOutsideRef, () => console.log('clicked outside!'));
+
+  return (
+    <div>
+      <div ref={setTargetRef}>target</div>
+      <div ref={setPopperRef} style={styles.popper}>
+        popper content
+      </div>
+    </div>
+  );
+};
+```
+
+### Fixed
+
+- Components leveraging usePopper should now update appropriately should the layout change around the popper change.
+
+## 2.0.0-rc.4 - 2020-06-17
+
+### Fixed
+
+- Fix typing for Alert and AlertInCard ([#102](https://github.com/lightspeed/flame/pull/102))
+- Allow empty Alert title and adjust positioning if its the case ([#102](https://github.com/lightspeed/flame/pull/102))
+
+## 2.0.0-rc.3 - 2020-06-17
+
+- Version bump because lerna
+
+## 2.0.0-rc.2 - 2020-06-17
+
+### Fixed
+
+- Normalize line-height for Alert and AlertInCard ([#101](https://github.com/lightspeed/flame/pull/101))
+
+## 2.0.0-rc.1 - 2020-06-17
+
+- Version bump because lerna
+
+## 2.0.0-rc.0 - 2020-06-17
+
+### Breaking
+
+- Use React.forwardRef on `<Button>` and `<Switch>` components ([#75](https://github.com/lightspeed/flame/pull/75))
+
+### Deprecation Warning
+
+- Alert icon prop will be removed in the next major feature release. Icons will be automatically assigned to an alert based on the variant used ([#82](https://github.com/lightspeed/flame/pull/82))
+
+### Added
+
+- New AlertInCard component ([#82](https://github.com/lightspeed/flame/pull/82))
+- Alert component will now automatically inject the right icons as per DSD specs ([#82](https://github.com/lightspeed/flame/pull/82))
+- New Toaster component ([#86](https://github.com/lightspeed/flame/pull/86))
+
+### Fixed
+
+- Icons in Alert will now automatically assign the right color that matches the type of Alert ([#82](https://github.com/lightspeed/flame/pull/82))
+- Icons in Alert will now be properly centered ([#82](https://github.com/lightspeed/flame/pull/82))
+- Tweak css selectors for TextContent to adapt to how emotion handles specificities ([#92](https://github.com/lightspeed/flame/pull/92))
+
 ## 1.6.2 - 2020-07-06
 
 ### Fixed

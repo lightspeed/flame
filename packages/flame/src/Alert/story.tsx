@@ -3,50 +3,116 @@ import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
 
 import { Alert } from './Alert';
-import { Text } from '../Text';
-import { IconWarning } from '../Icon/Warning';
+import { AlertInCard } from './AlertInCard';
+import { AlertIcons } from './AlertIcons';
+import { Card, CardSection } from '../Card';
+import { Text, Heading2, Heading3 } from '../Text';
+import { Box } from '../Core';
+import { IconApple } from '../Icon/Apple';
 import Readme from './README.md';
 
 const stories = storiesOf('Components|Alert', module).addDecorator(withReadme(Readme));
 
-stories.add('Story', () => {
-  const alerts = ['info', 'warning', 'success', 'danger'].map(type => {
-    // @ts-ignore
-    const [letter, ...rest] = type;
-    return (
-      <Alert key={type} type={type} title={`${letter.toUpperCase().concat(rest.join(''))}`} mb={2}>
-        <Text as="p" m={0}>
+const alertTypes = ['info', 'warning', 'success', 'danger'];
+const Alerts = () => (
+  <React.Fragment>
+    <Heading2 mb={2}>Alert Types</Heading2>
+    {alertTypes.map(type => {
+      return (
+        <Alert
+          key={type}
+          type={type}
+          title={`${type[0].toUpperCase().concat(type.slice(1))}`}
+          mb={2}
+        >
           Description of alert.
-        </Text>
-      </Alert>
-    );
-  });
+        </Alert>
+      );
+    })}
+    <Heading2 mb={2}>Alert Types (no close button)</Heading2>
+    {alertTypes.map(type => {
+      return (
+        <Alert
+          key={type}
+          type={type}
+          title={`${type[0].toUpperCase().concat(type.slice(1))}`}
+          icon={<AlertIcons type={type} />}
+          mb={2}
+          noCloseBtn
+        >
+          Description of alert with no close button.
+        </Alert>
+      );
+    })}
+  </React.Fragment>
+);
 
+const AlertsInCard = () => (
+  <React.Fragment>
+    <Heading2 mb={2}>Alert in card types</Heading2>
+    {alertTypes.map(type => {
+      return (
+        <Box mb={2}>
+          <Card>
+            <CardSection>
+              <Heading3>This is a card</Heading3>
+              <AlertInCard key={type} type={type}>
+                This is an alert of type {`"${type}"`} within in a card
+              </AlertInCard>
+            </CardSection>
+          </Card>
+        </Box>
+      );
+    })}
+    <Heading2 mb={2}>Alert in card types (no close button)</Heading2>
+    {alertTypes.map(type => {
+      return (
+        <Box mb={2}>
+          <Card>
+            <CardSection>
+              <Heading3>This is a card</Heading3>
+              <AlertInCard key={type} type={type} noCloseBtn>
+                This is an alert of type {`"${type}"`} within in a card, without a button
+              </AlertInCard>
+            </CardSection>
+          </Card>
+        </Box>
+      );
+    })}
+  </React.Fragment>
+);
+
+stories.add('Story', () => {
   return (
     <div>
-      {alerts}
-      <Alert
-        title="Some Title"
-        onClose={() => {
-          // eslint-disable-next-line no-alert
-          alert('custom handler');
-        }}
-        mb={2}
-      >
-        <Text as="p" m={0}>
-          This alert uses a custom handler on the close button
-        </Text>
-      </Alert>
-      <Alert title="Some Title" mb={2} noCloseBtn>
-        <Text as="p" m={0}>
-          This alert uses has no close button
-        </Text>
-      </Alert>
-      <Alert type="warning" icon={<IconWarning color="orange" />} title="Some Title" mb={2}>
-        <Text as="p" m={0}>
-          With icon
-        </Text>
-      </Alert>
+      <Alerts />
+      <AlertsInCard />
+    </div>
+  );
+});
+
+stories.add('to be deprecated feature', () => {
+  return (
+    <div>
+      <Box mb={2}>
+        Custom icons will be deprecated. Instead, we will automatically assign icons (regardless of
+        the presence of the icon prop) to an alert starting from next major version.
+      </Box>
+      {alertTypes.map(type => {
+        return (
+          <Alert
+            key={type}
+            type={type}
+            title={`${type[0].toUpperCase().concat(type.slice(1))}`}
+            icon={<IconApple />}
+            mb={2}
+          >
+            <Text as="p" m={0}>
+              Description of alert.
+            </Text>
+          </Alert>
+        );
+      })}
     </div>
   );
 });

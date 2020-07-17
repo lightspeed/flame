@@ -274,6 +274,7 @@ export const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
           hasPrefix={!!prefix}
           hasSuffix={!!status || !!suffix}
           readOnly={readOnly}
+          type="text"
           {...restProps}
         />
         <InputBackdrop

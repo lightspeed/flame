@@ -1,6 +1,7 @@
 {
   "name": "@lightspeed/flame",
-  "version": "1.6.2",
+  "version": "2.0.0-rc.10",
+  "private": true,
   "description": "Lightspeed's React UI components library",
   "author": "Lightspeed",
   "license": "SEE LICENSE IN LICENSE",
@@ -8,14 +9,6 @@
   "repository": "https://github.com/lightspeed/flame",
   "bugs": {
     "url": "https://github.com/lightspeed/flame/issues"
-  },
-  "private": true,
-  "peerDependencies": {
-    "@emotion/core": "^10.0.0",
-    "@emotion/styled": "^10.0.0",
-    "emotion-theming": "^10.0.0",
-    "react": "^16.8.0-0",
-    "react-dom": "^16.8.0"
   },
   "scripts": {
     "bootstrap": "yarn build:icons && yarn build:flags && yarn build:themes",
@@ -37,29 +30,43 @@
     "release": "yarn build && yarn build:docgen && npm publish dist --quiet",
     "release:dryrun": "npm publish dist --dry-run"
   },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.0",
+    "@emotion/styled": "^10.0.0",
+    "emotion-theming": "^10.0.0",
+    "react": "^16.8.0-0",
+    "react-dom": "^16.8.0"
+  },
   "dependencies": {
+    "@popperjs/core": "^2.4.2",
+    "@styled-system/css": "^5.1.5",
     "@styled-system/theme-get": "5.0.16",
-    "@types/styled-system": "5.1.6",
+    "@types/react-toast-notifications": "^2.4.0",
+    "@types/styled-system": "^5.1.9",
     "polished": "^2.3.0",
-    "popper.js": "^1.15.0",
     "react-modal": "^3.5.1",
+    "react-popper": "^2.2.3",
     "react-select": "^2.0.0",
+    "react-toast-notifications": "^2.4.0",
     "styled-system": "5.1.4",
     "type-fest": "^0.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.6",
     "@lightspeed/flame-tokens": "^1.0.0",
-    "@types/react": "^16.8.23",
-    "@types/storybook-readme": "^4.0.0",
-    "concurrently": "^3.5.1",
+    "@types/lodash": "^4.14.123",
+    "@types/react-modal": "^3.8.1",
+    "@types/react-select": "^2.0.15",
+    "@types/styled-system__css": "^5.0.11",
+    "@types/styled-system__theme-get": "^5.0.0",
     "fs-extra": "7.0.1",
     "glob": "7.1.3",
     "htmltojsx": "^0.3.0",
-    "nodemon": "1.19.1",
-    "prettier": "^1.16.1",
+    "lodash": "^4.17.11",
     "react-docgen-typescript": "^1.15.1",
     "rimraf": "2.6.2",
     "ts-node": "8.3.0"
+  },
+  "publishConfig": {
+    "tag": "next"
   }
 }

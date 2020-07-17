@@ -1,0 +1,53 @@
+/*
+  Spinner
+  =======
+  Offers solace and mutual understanding that a task of unknowable duration (but usually short) is ongoing.
+
+  Documentation: https://design.lightspeedhq.com/components/Spinner/
+*/
+
+.#{$fl-namespace}spinner {
+  display: inline-flex;
+  width: $fl-text;
+  height: $fl-text;
+  vertical-align: text-bottom;
+  animation: 1s cubic-bezier(0.35, 0.3, 0.3, 0.35) 0s infinite normal none running flSpinnerRotation;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23667080'%3E%3Cpath d='M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zm0-3A5 5 0 1 0 8 3a5 5 0 0 0 0 10z' opacity='.3'%3E%3C/path%3E%3Cpath d='M8 13a1.5 1.5 0 0 1 0 3A8 8 0 0 1 .323 5.742a1.5 1.5 0 1 1 2.879.846A5 5 0 0 0 8 13z'%3E%3C/path%3E%3C/svg%3E");
+
+  @keyframes flSpinnerRotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  // Colors
+
+  &-white {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3E%3Cpath d='M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zm0-3A5 5 0 1 0 8 3a5 5 0 0 0 0 10z' opacity='.3'%3E%3C/path%3E%3Cpath d='M8 13a1.5 1.5 0 0 1 0 3A8 8 0 0 1 .323 5.742a1.5 1.5 0 1 1 2.879.846A5 5 0 0 0 8 13z'%3E%3C/path%3E%3C/svg%3E");
+  }
+
+  // Sizes
+
+  &-small {
+    width: $fl-text-s;
+    height: $fl-text-s;
+  }
+
+  &-large {
+    width: $fl-text-l;
+    height: $fl-text-l;
+  }
+
+  &-xlarge {
+    width: $fl-text-xl;
+    height: $fl-text-xl;
+  }
+
+  &-xxlarge {
+    width: $fl-text-xxl;
+    height: $fl-text-xxl;
+  }
+}

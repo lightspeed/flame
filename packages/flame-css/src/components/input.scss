@@ -1,0 +1,85 @@
+/*
+  Input
+  ======
+  The Acceptor of User Information, Messenger of the Internet Gods.
+
+  Label
+  Description
+  -----------------------------
+  | Group                     |
+  | ------------------------- |
+  | | Addon | Input         | |
+  | ------------------------- |
+  -----------------------------
+  Caption
+
+  Base:       fl-input
+  Sizes:      fl-input-small | fl-input-large
+  Modifiers:   has-prefix | has-suffix | readonly
+  States:     disabled | focus | active
+  Status:     valid | error | warning
+
+  Documentation: https://design.lightspeedhq.com/components/Button/
+*/
+
+.#{$fl-namespace}input {
+  @include fl-input-base;
+
+  &-label {
+    @include fl-input-label;
+  }
+  &-description {
+    @include fl-input-description;
+  }
+  &-caption {
+    @include fl-input-caption;
+  }
+
+  // Sizes
+  &-small {
+    @include fl-input-size-small;
+  }
+  &-large {
+    @include fl-input-size-large;
+  }
+
+  // Modifiers
+  &.readonly {
+    @include fl-input-readonly;
+  }
+  &.has-prefix {
+    @include fl-input-has-prefix;
+  }
+  &.has-suffix {
+    @include fl-input-has-suffix;
+  }
+  &.placeholder {
+    @include fl-input-placeholder;
+  }
+
+  // States
+  &.active {
+    @include fl-input-active;
+  }
+  &.disabled {
+    @include fl-input-disabled;
+  }
+  &.focus {
+    @include fl-input-focus;
+  }
+
+  // Status
+  &.valid {
+    @include fl-input-valid;
+  }
+  &.error {
+    @include fl-input-error;
+  }
+  &.warning {
+    @include fl-input-warning;
+  }
+
+  @at-root textarea.#{$fl-namespace}input {
+    @include fl-input-textarea;
+  }
+}

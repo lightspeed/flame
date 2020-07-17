@@ -10,7 +10,7 @@ import { Divider } from '../Divider';
 import { InputGroup } from '../InputGroup';
 import { Icon } from '../Icon';
 
-import { SpacedGroup } from '../../../../stories/components/SpacedGroup';
+import { SpacedGroup } from '../../../../.storybook/components/SpacedGroup';
 
 const stories = storiesOf('Components|Button', module).addDecorator(withReadme(Readme));
 

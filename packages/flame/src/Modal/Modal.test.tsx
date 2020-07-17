@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { customRender, createComponent, fireEvent } from 'test-utils';
+import { customRender, fireEvent } from 'test-utils';
 
 import { Modal } from './Modal';
 import { ModalHeader } from './ModalHeader';
@@ -15,21 +15,6 @@ jest.mock('react-dom', () => ({
 describe('Modal', () => {
   beforeEach(() => {
     jest.resetAllMocks();
-  });
-
-  it('should match with snapshot', () => {
-    const component = createComponent(
-      <Modal isOpen title="Test Modal">
-        <ModalHeader showCloseButton={false}>Modal Title</ModalHeader>
-        <ModalBody>Hello World</ModalBody>
-        <ModalFooter>
-          <button type="button">Action1</button>
-          <button type="button">Action2</button>
-        </ModalFooter>
-      </Modal>,
-    );
-
-    expect(component).toMatchSnapshot();
   });
 
   it('should render the children correctly', () => {
@@ -84,7 +69,7 @@ describe('Modal', () => {
 
   it('should invoke the onAfterOpen method when the modal has been opened', () => {
     const onOpen = jest.fn();
-    createComponent(
+    customRender(
       <Modal isOpen title="Test Modal" onAfterOpen={onOpen}>
         Test Modal
       </Modal>,

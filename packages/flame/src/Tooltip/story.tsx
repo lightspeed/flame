@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withReadme } from 'storybook-readme';
-import cn from 'classnames';
 
 import { Tooltip, TooltipPlacement } from './Tooltip';
 import { Input } from '../Input';
+import { ExampleBox } from '../../../../.storybook/components/ExampleBox';
 import Readme from './README.md';
-import styles from '../../../../stories/styles/stories.scss';
 
 const stories = storiesOf('Components|Tooltip', module).addDecorator(withReadme(Readme));
 
@@ -39,32 +38,34 @@ stories.add(
       </Tooltip>
     </div>
   ),
-  { percy: { skip: true } },
+  { chromatic: { disable: true } },
 );
 
 stories.add('Directions', () => (
   <div>
     <h3>Dark</h3>
     {placements.map(placement => (
-      <div key={placement} className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
+      <ExampleBox
+        key={placement}
+        example={
           <Tooltip content="Tooltip" placement={placement} active>
             Trigger
           </Tooltip>
-        </div>
-        <div className={cn(styles.example__code, styles[`text-center`])}>{placement}</div>
-      </div>
+        }
+        content={placement}
+      />
     ))}
     <h3>Light</h3>
     {placements.map(placement => (
-      <div key={placement} className={cn(styles.example, styles[`example--col`])}>
-        <div className={styles.example__block}>
+      <ExampleBox
+        key={placement}
+        example={
           <Tooltip content="Tooltip" placement={placement} light active>
             Trigger
           </Tooltip>
-        </div>
-        <div className={cn(styles.example__code, styles[`text-center`])}>{placement}</div>
-      </div>
+        }
+        content={placement}
+      />
     ))}
   </div>
 ));

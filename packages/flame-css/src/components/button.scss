@@ -1,0 +1,86 @@
+/*
+  Button
+  ======
+  Buttons are used to take action or confirm a decision. They help merchants get things done.
+
+  Base:       fl-button
+  Sizes:      fl-button-small | fl-button-medium | fl-button-large | fl-button-xlarge
+  Colors:
+    Fill:     fl-button-primary | fl-button-secondary | fl-button-danger | fl-button-neutral
+    Outline:  fl-button-outline-primary | fl-button-outline-secondary | fl-button-outline-danger
+  Modifiers:  fl-button-block | fl-button-wide | fl-button-narrow
+  States:     disabled | loading | active
+
+  Documentation: https://design.lightspeedhq.com/components/Button/
+*/
+.#{$fl-namespace}button {
+  @include fl-button-base;
+  @include fl-button-size-default;
+
+  // Sizes
+  &-small {
+    @include fl-button-size-small;
+  }
+  &-medium {
+    @include fl-button-size-medium;
+  }
+  &-large {
+    @include fl-button-size-large;
+  }
+  &-xlarge {
+    @include fl-button-size-xlarge;
+  }
+
+  // Colors
+  &-primary {
+    @include fl-button-color-fill-primary;
+  }
+  &-secondary {
+    @include fl-button-color-fill-secondary;
+  }
+  &-danger {
+    @include fl-button-color-fill-danger;
+  }
+  &-neutral {
+    @include fl-button-color-fill-neutral;
+  }
+
+  &-outline {
+    &-primary {
+      @include fl-button-color-outline-primary;
+    }
+    &-secondary {
+      @include fl-button-color-outline-secondary;
+    }
+    &-danger {
+      @include fl-button-color-outline-danger;
+    }
+  }
+
+  &-transparent {
+    @include fl-button-color-transparent;
+  }
+  &-link {
+    @include fl-button-color-link;
+  }
+
+  // Modifiers
+  &-block {
+    @include fl-button-block;
+  }
+  &-wide {
+    @include fl-button-wide;
+  }
+  &-narrow {
+    @include fl-button-narrow;
+  }
+
+  // States
+  &.disabled,
+  &:disabled {
+    @include fl-button-disabled;
+  }
+  &.loading {
+    @include fl-button-loading;
+  }
+}

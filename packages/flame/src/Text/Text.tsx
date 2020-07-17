@@ -125,6 +125,9 @@ export const Text = styled('p')<TextProps>(
   fontWeight,
   textTransform,
 );
+Text.defaultProps = {
+  className: 'fl-text',
+};
 
 /**
  * Pre-styled h1 component
@@ -138,6 +141,7 @@ Heading1.defaultProps = {
   ...BaseText.defaultProps,
   fontWeight: 'bold',
   color: 'textHeading',
+  className: 'fl-heading1',
 };
 
 /**
@@ -152,6 +156,7 @@ Heading2.defaultProps = {
   ...BaseText.defaultProps,
   fontWeight: 'bold',
   color: 'textHeading',
+  className: 'fl-heading2',
 };
 
 /**
@@ -166,6 +171,7 @@ Heading3.defaultProps = {
   ...BaseText.defaultProps,
   fontWeight: 'bold',
   color: 'textHeading',
+  className: 'fl-heading3',
 };
 
 /**
@@ -182,6 +188,7 @@ Heading4.defaultProps = {
   fontWeight: 'bold',
   color: 'textHeading',
   letterSpacing: 3,
+  className: 'fl-heading4',
 };
 
 const textlinkColor = (props: any) =>
@@ -202,29 +209,32 @@ export const TextLink = styled(Text)<TextProps>`
   }
   ${color};
 `.withComponent('a');
+TextLink.defaultProps = {
+  className: 'fl-textlink',
+};
 
 export const TextContent = styled('div')`
-  ${Text}:not(:last-child),
-  ${TextLink}:not(:last-child) {
+  .fl-text:not(:last-child),
+  .fl-textlink:not(:last-child) {
     margin-bottom: ${themeGet('space.3')};
   }
 
-  ${Heading1}:not(:last-child),
-  ${Heading2}:not(:last-child) {
+  .fl-heading1:not(:last-child),
+  .fl-heading2:not(:last-child) {
     margin-bottom: ${themeGet('space.2')};
   }
 
-  ${Heading3}:not(:last-child),
-  ${Heading4}:not(:last-child) {
+  .fl-heading3:not(:last-child),
+  .fl-heading4:not(:last-child) {
     margin-bottom: ${themeGet('space.1')};
   }
 
-  ${Text}:not(:first-of-type),
-  ${TextLink}:not(:first-of-type),
-  ${Heading1}:not(:first-of-type),
-  ${Heading2}:not(:first-of-type),
-  ${Heading3}:not(:first-of-type),
-  ${Heading4}:not(:first-of-type) {
+  .fl-text:not(:first-of-type),
+  .fl-textlink:not(:first-of-type),
+  .fl-heading1:not(:first-of-type),
+  .fl-heading2:not(:first-of-type),
+  .fl-heading3:not(:first-of-type),
+  .fl-heading4:not(:first-of-type) {
     padding-top: ${themeGet('space.1')};
   }
 `;
