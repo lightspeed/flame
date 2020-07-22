@@ -1,27 +1,25 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
+import * as React from 'react';
 
 // We load the flag-sprite through the raw-loader and through SVGInline for the story
 // @ts-ignore
 import flagSprite from '!raw-loader!../../../svg/flag-sprite.svg'; // eslint-disable-line
-
 import '../../../svg/Flags/flag.scss';
+
 import { Flag } from '../index';
 import { FlagCA } from '../CA';
 import { FlagNL } from '../NL';
-
-import flagList from '../../../svg/flag.list.json';
-import Readme from '../README.md';
 
 import { Box, Flex } from '../../Core';
 import { Button } from '../../Button';
 import { Input } from '../../Input';
 import { Text } from '../../Text';
+import flagList from '../../../svg/flag.list.json';
 import { Ul } from '../../../../../.storybook/components/Ul';
 import { SpacedGroup } from '../../../../../.storybook/components/SpacedGroup';
 
-const stories = storiesOf('Components|Flag', module).addDecorator(withReadme(Readme));
+export default {
+  title: 'Components/Flag',
+};
 
 const Description: React.FC = ({ children }) => (
   <Text fontSize="text-s" mb={1}>
@@ -29,64 +27,48 @@ const Description: React.FC = ({ children }) => (
   </Text>
 );
 
-type FlagPresenterProps = {};
-type FlagPresenterState = {
-  selectedName: string;
-};
-
-class FlagPresenter extends React.Component<FlagPresenterProps, FlagPresenterState> {
-  constructor(props: FlagPresenterProps) {
-    super(props);
-
-    this.state = {
-      selectedName: 'Select a flag',
-    };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(name: string) {
-    this.setState({
+const FlagPresenter = () => {
+  const [state, setState] = React.useState({
+    selectedName: 'Select a flag',
+  });
+  const handleClick = (name: string) => {
+    setState({
       selectedName: name,
     });
-  }
+  };
 
-  render() {
-    const { selectedName } = this.state;
+  return (
+    <div>
+      <Box mb={1}>
+        <Input readOnly size="small" value={state.selectedName} onFocus={e => e.target.select()} />
+      </Box>
 
-    return (
-      <div>
-        <Box mb={1}>
-          <Input readOnly size="small" value={selectedName} onFocus={e => e.target.select()} />
-        </Box>
-
-        {flagList.map((flag: { code: string; name: string }) => (
-          <span
-            key={flag.code}
-            onClick={() => {
-              this.handleClick(
-                `<svg class="cr-flag cr-flag-${flag.code}" viewBox="0 0 16 16"><use xlink:href="#cr-flag-${flag.code}"></use></svg>`,
-              );
-            }}
-            style={{ padding: '0.75rem' }}
-            onKeyDown={() => {}}
-            role="presentation"
+      {flagList.map((flag: { code: string; name: string }) => (
+        <span
+          key={flag.code}
+          onClick={() => {
+            handleClick(
+              `<svg class="cr-flag cr-flag-${flag.code}" viewBox="0 0 16 16"><use xlink:href="#cr-flag-${flag.code}"></use></svg>`,
+            );
+          }}
+          style={{ padding: '0.75rem' }}
+          onKeyDown={() => {}}
+          role="presentation"
+        >
+          <svg
+            className={`cr-flag cr-flag-${flag.code}`}
+            viewBox="0 0 16 16"
+            style={{ width: '2rem', height: '2rem' }}
           >
-            <svg
-              className={`cr-flag cr-flag-${flag.code}`}
-              viewBox="0 0 16 16"
-              style={{ width: '2rem', height: '2rem' }}
-            >
-              <use xlinkHref={`#cr-flag-${flag.code}`} />
-            </svg>
-          </span>
-        ))}
-      </div>
-    );
-  }
-}
+            <use xlinkHref={`#cr-flag-${flag.code}`} />
+          </svg>
+        </span>
+      ))}
+    </div>
+  );
+};
 
-stories.add('Story', () => (
+export const story = () => (
   <div>
     <table className="table-bordered" style={{ tableLayout: 'fixed', textAlign: 'left' }}>
       <thead>
@@ -109,9 +91,9 @@ stories.add('Story', () => (
       </tbody>
     </table>
   </div>
-));
+);
 
-stories.add('Size', () => (
+export const size = () => (
   <Ul>
     {['0.875rem', '1rem', '1.125rem', '1.5rem', '2.25rem', '4rem'].map(size => (
       <Box as="li" mb={2} key={size}>
@@ -122,9 +104,9 @@ stories.add('Size', () => (
       </Box>
     ))}
   </Ul>
-));
+);
 
-stories.add('Integration', () => (
+export const integration = () => (
   <div>
     <h3>Using the Icon component</h3>
     <Description>
@@ -169,9 +151,9 @@ stories.add('Integration', () => (
       </Button>
     </Box>
   </div>
-));
+);
 
-stories.add('Sprite', () => (
+export const sprite = () => (
   <div>
     <div>
       <p className="cr-text cr-gray">
@@ -190,4 +172,4 @@ stories.add('Sprite', () => (
       />
     </div>
   </div>
-));
+);

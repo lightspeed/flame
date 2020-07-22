@@ -1,18 +1,19 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
+// eslint-disable-next-line
 import { action } from '@storybook/addon-actions';
-import { withReadme } from 'storybook-readme';
 
-import { Text, Heading2, Heading3, TextContent } from '../Text';
 import RadioWrapper from './examples';
 import { Radio, BaseRadio, RadioLabel } from './Radio';
 import { Box } from '../Core';
+import { Text, Heading2, Heading3, TextContent } from '../Text';
 
-import Readme from './README.md';
+export default {
+  title: 'Components/Radio',
+  component: Radio,
+  subcomponents: { BaseRadio, RadioLabel },
+};
 
-const stories = storiesOf('Components|Radio', module).addDecorator(withReadme(Readme));
-
-stories.add('Story', () => (
+export const story = () => (
   <div>
     <Heading3 mb={2}>Form Radio</Heading3>
     <Box mb={1}>
@@ -92,9 +93,9 @@ stories.add('Story', () => (
       </div>
     </div>
   </div>
-));
+);
 
-stories.add('Rebuilding using the base components', () => (
+export const rebuildingUsingTheBaseComponents = () => (
   <div>
     <TextContent>
       <Heading2>Using BaseRadio</Heading2>
@@ -146,75 +147,67 @@ stories.add('Rebuilding using the base components', () => (
       </Box>
     </TextContent>
   </div>
-));
-
-stories.add(
-  'Uncontrolled state',
-  () => (
-    <TextContent>
-      <Heading2>Uncontrolled Radio states</Heading2>
-      <Box mb={3}>
-        <Radio id="option_1" name="test" label="Lion" />
-      </Box>
-      <Box mb={3}>
-        <Radio id="option_2" name="test" label="Tiger" />
-      </Box>
-      <Box mb={3}>
-        <Radio id="option_3" name="test" label="Bear" />
-      </Box>
-    </TextContent>
-  ),
-  { chromatic: { disable: true } },
 );
 
-stories.add(
-  'Events',
-  () => (
-    <TextContent>
-      <Heading2>Radio events</Heading2>
-      <Box mb={3}>
-        <Text as="div" fontWeight="bold" mb={1}>
-          Input with onChange event
-        </Text>
-        <Radio
-          id="onChange"
-          label="Click me"
-          onChange={action('onChange')}
-          checked={false}
-          className="cr-mb-1"
-        />
-        <Text as="div" size="small" color="gray-300">
-          (See action logger)
-        </Text>
-      </Box>
-      <Box mb={3}>
-        <Text as="div" size="small" fontWeight="bold" mb={1}>
-          Input with onFocus & onBlur events
-        </Text>
-        <Radio
-          id="onFocusOnBlur"
-          label="Click me"
-          value="Test"
-          onFocus={action('onFocus')}
-          onBlur={action('onBlur')}
-          onChange={() => {}}
-          checked
-          className="cr-mb-1"
-        />
-        <Text as="div" size="small" color="gray-300">
-          (See action logger)
-        </Text>
-      </Box>
-      <Box mb={3}>
-        <Text as="div" size="small" fontWeight="bold" mb={1}>
-          Input with state management
-        </Text>
-        <RadioWrapper action={action('onChange')} />
-        <Text as="div" size="small" color="gray-300">
-          (See action logger)
-        </Text>
-      </Box>
-    </TextContent>
-  ),
-  { chromatic: { disable: true } },
+export const uncontrolledState = () => (
+  <TextContent>
+    <Heading2>Uncontrolled Radio states</Heading2>
+    <Box mb={3}>
+      <Radio id="option_1" name="test" label="Lion" />
+    </Box>
+    <Box mb={3}>
+      <Radio id="option_2" name="test" label="Tiger" />
+    </Box>
+    <Box mb={3}>
+      <Radio id="option_3" name="test" label="Bear" />
+    </Box>
+  </TextContent>
+);
+
+export const events = () => (
+  <TextContent>
+    <Heading2>Radio events</Heading2>
+    <Box mb={3}>
+      <Text as="div" fontWeight="bold" mb={1}>
+        Input with onChange event
+      </Text>
+      <Radio
+        id="onChange"
+        label="Click me"
+        onChange={action('onChange')}
+        checked={false}
+        className="cr-mb-1"
+      />
+      <Text as="div" size="small" color="gray-300">
+        (See action logger)
+      </Text>
+    </Box>
+    <Box mb={3}>
+      <Text as="div" size="small" fontWeight="bold" mb={1}>
+        Input with onFocus & onBlur events
+      </Text>
+      <Radio
+        id="onFocusOnBlur"
+        label="Click me"
+        value="Test"
+        onFocus={action('onFocus')}
+        onBlur={action('onBlur')}
+        onChange={() => {}}
+        checked
+        className="cr-mb-1"
+      />
+      <Text as="div" size="small" color="gray-300">
+        (See action logger)
+      </Text>
+    </Box>
+    <Box mb={3}>
+      <Text as="div" size="small" fontWeight="bold" mb={1}>
+        Input with state management
+      </Text>
+      <RadioWrapper action={action('onChange')} />
+      <Text as="div" size="small" color="gray-300">
+        (See action logger)
+      </Text>
+    </Box>
+  </TextContent>
 );

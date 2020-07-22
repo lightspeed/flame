@@ -1,53 +1,46 @@
 import React from 'react';
-import { addDecorator, addParameters } from '@storybook/react';
 import { Global } from '@emotion/core';
-import { FlameTheme, FlameGlobalStyles, Box } from '../packages/flame/src/Core';
-import { Select } from '../packages/flame/src/Select';
-// @TODO: Fix stories that are still using css classes and flush this
+import { addDecorator, addParameters } from '@storybook/react';
+import { FlameGlobalStyles, FlameTheme, Box } from '../packages/flame/src/Core/index.tsx';
+import { Select } from '../packages/flame/src/Select/index.tsx';
 import './stories.scss';
 
-class FlameStyling extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedTheme: localStorage.getItem('theme') || 'flame',
-    };
-  }
+const FlameStyling = ({ children }) => {
+  const [state, setState] = React.useState({
+    selectedTheme: localStorage.getItem('theme') || 'flame',
+  });
 
-  render() {
-    return (
-      <React.Fragment>
-        <FlameGlobalStyles themeName={this.state.selectedTheme} />
-        <Global
-          styles={{
-            'a:hover': {
-              color: '#4078c0',
-            },
-          }}
-        />
-        <FlameTheme themeName={this.state.selectedTheme}>
-          <Box p={3}>
-            <Box mb={2} width="200px" className="hide-in-percy chromatic-ignore">
-              <Select
-                value={this.state.selectedTheme}
-                onChange={e => {
-                  this.setState({ selectedTheme: e.target.value });
-                  window.localStorage.setItem('theme', e.target.value);
-                }}
-              >
-                <option value="flame">Flame (Default theme)</option>
-                <option value="light">Lightspeed (Old theme)</option>
-                <option value="experimentaldark">Dark (Experimental)</option>
-              </Select>
-            </Box>
-            {this.props.children}
+  return (
+    <React.Fragment>
+      <FlameGlobalStyles themeName={state.selectedTheme} />
+      <Global
+        styles={{
+          'a:hover': {
+            color: '#4078c0',
+          },
+        }}
+      />
+      <FlameTheme themeName={state.selectedTheme}>
+        <Box p={3}>
+          <Box mb={2} width="200px" className="hide-in-percy chromatic-ignore">
+            <Select
+              value={state.selectedTheme}
+              onChange={e => {
+                setState({ selectedTheme: e.target.value });
+                window.localStorage.setItem('theme', e.target.value);
+              }}
+            >
+              <option value="flame">Flame (Default theme)</option>
+              <option value="light">Lightspeed (Old theme)</option>
+              <option value="experimentaldark">Dark (Experimental)</option>
+            </Select>
           </Box>
-        </FlameTheme>
-      </React.Fragment>
-    );
-  }
-}
-
+          {children}
+        </Box>
+      </FlameTheme>
+    </React.Fragment>
+  );
+};
 const FlameStylingDecorator = (storyFn, context) => {
   if (!context.id.includes('flame-css')) {
     return <FlameStyling>{storyFn()}</FlameStyling>;
@@ -55,9 +48,7 @@ const FlameStylingDecorator = (storyFn, context) => {
 
   return storyFn();
 };
-
 const headers = ['Theme', 'Components'];
-
 // https://github.com/storybookjs/storybook/issues/6327#issuecomment-613122487
 const storySort = (a, b) => {
   // a[1].kind is something like: Components|Accordion. Using "Components" for the headers array.

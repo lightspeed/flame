@@ -2,7 +2,7 @@ import * as React from 'react';
 import { css } from '@styled-system/css';
 
 export type BadgeVariants = 'default' | 'danger' | 'primary' | 'success' | 'warning';
-export interface BadgeProps extends React.ComponentPropsWithRef<'span'> {
+export interface BadgeProps extends React.ComponentPropsWithoutRef<'span'> {
   /**
    * Adjust the overall look and feel of a badge.
    * Possible variants are:

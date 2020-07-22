@@ -1,16 +1,17 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
+
+import SelectExample from './examples';
+import { Select } from './Select';
 
 import { TextContent, Heading3 } from '../Text';
 import { Box } from '../Core';
 
-import SelectExample from './examples';
-import Readme from './README.md';
+export default {
+  title: 'Components/Select',
+  component: Select,
+};
 
-const stories = storiesOf('Components|Select', module).addDecorator(withReadme(Readme));
-
-stories.add('Story', () => (
+export const story = () => (
   <TextContent>
     <Heading3>Default</Heading3>
     <Box mb={1}>
@@ -44,4 +45,4 @@ stories.add('Story', () => (
       </SelectExample>
     </Box>
   </TextContent>
-));
+);

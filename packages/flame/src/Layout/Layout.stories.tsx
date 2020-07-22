@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
-import { AnnotatedLayout } from '../index';
-import Readme from '../README.md';
+import { AnnotatedLayout } from './index';
 
-import { Card, CardSection } from '../../Card';
-import { Divider } from '../../Divider';
-import { Box, Flex } from '../../Core';
-import { Button } from '../../Button';
-import { Text } from '../../Text';
+import { Card, CardSection } from '../Card';
+import { Divider } from '../Divider';
+import { Box, Flex } from '../Core';
+import { Button } from '../Button';
+import { Text } from '../Text';
 
-const stories = storiesOf('Components|Layout', module).addDecorator(withReadme(Readme));
+export default {
+  title: 'Components/Layout',
+  component: AnnotatedLayout,
+};
 
 const FakeContent = () => (
   <React.Fragment>
@@ -60,7 +60,7 @@ const FakeContent = () => (
   </React.Fragment>
 );
 
-stories.add('Annotated Layout', () => (
+export const annotatedLayout = () => (
   <div style={{ maxWidth: '66rem' }}>
     <AnnotatedLayout
       title="Settlement Summary"
@@ -69,9 +69,9 @@ stories.add('Annotated Layout', () => (
       <FakeContent />
     </AnnotatedLayout>
   </div>
-));
+);
 
-stories.add('Annotated Layout - with actions', () => (
+export const annotatedLayoutWithActions = () => (
   <div style={{ maxWidth: '66rem' }}>
     <AnnotatedLayout
       title="Settlement Summary"
@@ -86,4 +86,4 @@ stories.add('Annotated Layout - with actions', () => (
       <FakeContent />
     </AnnotatedLayout>
   </div>
-));
+);

@@ -1,68 +1,62 @@
-import React, { ChangeEvent } from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { withReadme } from 'storybook-readme';
+import * as React from 'react';
+
+import { Checkbox } from './Checkbox';
 
 import { Text, Heading2, Heading3, TextContent } from '../Text';
 import { Box } from '../Core';
 
-import { Checkbox } from './Checkbox';
-import Readme from './README.md';
+const StatefulCheckbox = () => {
+  const [state, setState] = React.useState({
+    checked: false,
+    indeterminate: false,
+  });
 
-const stories = storiesOf('Components|Checkbox', module).addDecorator(withReadme(Readme));
+  return (
+    <div>
+      <Checkbox
+        id="simple"
+        label="Input with parent shared state"
+        description="(click the buttons below to change state)"
+        checked={state.checked}
+        indeterminate={state.indeterminate}
+        onChange={event => {
+          setState({ checked: event.target.checked, indeterminate: false });
+        }}
+      />
+      <br />
+      <button
+        type="button"
+        onClick={() => {
+          setState(prevState => ({ checked: !prevState.checked, indeterminate: false }));
+        }}
+      >
+        {state.checked && <span>Uncheck</span>}
+        {!state.checked && <span>Check</span>}
+      </button>
+      &nbsp;
+      <button
+        type="button"
+        onClick={() => {
+          setState({ checked: false, indeterminate: true });
+        }}
+      >
+        Set indeterminate
+      </button>
+    </div>
+  );
+};
 
-const noop = () => {};
+export default {
+  title: 'Components/Checkbox',
+  component: Checkbox,
+  argTypes: {
+    onChange: { action: 'on change' },
+    onFocus: { action: 'on focus' },
+    onBlur: { action: 'on blur' },
+  },
+};
 
-// eslint-disable-next-line react/no-multi-comp
-class CheckBoxWrapper extends React.Component<{}, { checked: boolean; indeterminate: boolean }> {
-  constructor(props: any) {
-    super(props);
-    this.state = {
-      checked: false,
-      indeterminate: false,
-    };
-    this.handleClick = this.handleClick.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClickIndeterminate = this.handleClickIndeterminate.bind(this);
-  }
-
-  handleClick() {
-    this.setState(prevState => ({ checked: !prevState.checked, indeterminate: false }));
-  }
-
-  handleClickIndeterminate() {
-    this.setState({ checked: false, indeterminate: true });
-  }
-
-  handleChange(event: ChangeEvent<HTMLInputElement>) {
-    this.setState({ checked: event.target.checked });
-  }
-
-  render() {
-    return (
-      <div>
-        <Checkbox
-          id="simple"
-          label="Input with parent shared state"
-          description="(click the buttons below to change state)"
-          checked={this.state.checked}
-          indeterminate={this.state.indeterminate}
-          onChange={this.handleChange}
-        />
-        <br />
-        <button type="button" onClick={this.handleClick}>
-          {this.state.checked && <span>Uncheck</span>}
-          {!this.state.checked && <span>Check</span>}
-        </button>
-        &nbsp;
-        <button type="button" onClick={this.handleClickIndeterminate}>
-          Set indeterminate
-        </button>
-      </div>
-    );
-  }
-}
-stories.add('Story', () => (
+export const story = () => (
   <div>
     <TextContent>
       <Heading2>Checkbox types</Heading2>
@@ -140,39 +134,39 @@ stories.add('Story', () => (
       </div>
     </div>
   </div>
-));
+);
 
-stories.add(
-  'Events',
-  () => (
-    <div>
-      <TextContent>
-        <Heading2>Checkbox events</Heading2>
-        <Box mb={3}>
-          <Checkbox
-            id="onChange"
-            label="Input with onChange event"
-            description="(see Action Logger)"
-            onChange={action('onChange')}
-          />
-        </Box>
-        <Box mb={3}>
-          <Checkbox
-            id="onFocusOnBlur"
-            label="Input with onFocus & onBlur events"
-            description="(see Action Logger)"
-            value="Test"
-            onFocus={action('onFocus')}
-            onBlur={action('onBlur')}
-            checked
-            onChange={noop}
-          />
-        </Box>
-        <Box mb={3}>
-          <CheckBoxWrapper />
-        </Box>
-      </TextContent>
-    </div>
-  ),
-  { chromatic: { disable: true } },
+export const events: React.FC<{
+  onChange: () => void;
+  onFocus: () => void;
+  onBlur: () => void;
+}> = ({ onChange, onFocus, onBlur }) => (
+  <div>
+    <TextContent>
+      <Heading2>Checkbox events</Heading2>
+      <Box mb={3}>
+        <Checkbox
+          id="onChange"
+          label="Input with onChange event"
+          description="(see Action Logger)"
+          onChange={onChange}
+        />
+      </Box>
+      <Box mb={3}>
+        <Checkbox
+          id="onFocusOnBlur"
+          label="Input with onFocus & onBlur events"
+          description="(see Action Logger)"
+          value="Test"
+          onFocus={onFocus}
+          onBlur={onBlur}
+          checked
+          onChange={() => {}}
+        />
+      </Box>
+      <Box mb={3}>
+        <StatefulCheckbox />
+      </Box>
+    </TextContent>
+  </div>
 );

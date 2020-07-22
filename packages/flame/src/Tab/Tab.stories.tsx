@@ -1,12 +1,13 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
-import Readme from './README.md';
 import { Tab, TabContainer } from './Tab';
 import { Card, CardSection } from '../Card';
 
-const stories = storiesOf('Components|Tab', module).addDecorator(withReadme(Readme));
+export default {
+  title: 'Components/Tab',
+  component: Tab,
+  subcomponents: { TabContainer },
+};
 
 const StoryTab = () => {
   const [state, setState] = React.useState(0);
@@ -33,9 +34,10 @@ const StoryTab = () => {
     </Card>
   );
 };
-stories.add('Story', () => (
+
+export const story = () => (
   <div>
     <h3>Tab</h3>
     <StoryTab />
   </div>
-));
+);

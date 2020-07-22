@@ -52,10 +52,7 @@ const borderRadii = system({
   },
 });
 
-const border = compose(
-  borderRadii,
-  styledSystemBorder,
-);
+export const border = compose(borderRadii, styledSystemBorder);
 
 type AsProps = { as?: string };
 export type FlameBoxProps = SpaceProps &
@@ -64,22 +61,14 @@ export type FlameBoxProps = SpaceProps &
   TypographyProps &
   Partial<Omit<ColorProps, 'color'>> & // Fun clashing between native color prop & styled-system color prop
   AsProps;
-export const Box = styled('div')<FlameBoxProps>(
-  compose(
-    space,
-    layout,
-    typography,
-    color,
-    flexbox,
-  ),
-);
+export const Box = styled('div')<FlameBoxProps>(compose(space, layout, typography, color, flexbox));
 
 export type FlameFlexProps = FlameBoxProps & FlexboxProps;
 export const Flex = styled(Box)<FlameFlexProps>({
   display: 'flex',
 });
 
-const themePicker = (themeName?: string) => {
+export const themePicker = (themeName?: string) => {
   switch (themeName) {
     case 'experimentaldark':
       return darkTheme;
@@ -97,7 +86,7 @@ export type FlameThemeProps = {
   themeName?: string;
   themeOverrides?: any;
 };
-const FlameTheme: React.FunctionComponent<FlameThemeProps> = ({
+export const FlameTheme: React.FunctionComponent<FlameThemeProps> = ({
   children,
   themeName,
   themeOverrides,
@@ -109,14 +98,16 @@ const FlameTheme: React.FunctionComponent<FlameThemeProps> = ({
 // WARNING!
 // This component will be deprecated in v2. Instead, use the link tag directly:
 // https://github.com/lightspeed/flame#link-fonts
-const FlameFonts: React.FunctionComponent = () => (
+export const FlameFonts: React.FunctionComponent = () => (
   <link
     href="https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin-ext"
     rel="stylesheet"
   />
 );
 
-const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = ({ themeName }) => {
+export const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = ({
+  themeName,
+}) => {
   const selectedTheme = themePicker(themeName);
 
   return (
@@ -145,13 +136,4 @@ const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = ({ th
   );
 };
 
-export {
-  lightTheme,
-  flameTheme,
-  FlameFonts,
-  FlameTheme,
-  FlameGlobalStyles,
-  themeGet,
-  ThemeUIFlame,
-  border,
-};
+export { lightTheme, flameTheme, themeGet, ThemeUIFlame };

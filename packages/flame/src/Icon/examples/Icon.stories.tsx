@@ -1,6 +1,4 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
+import * as React from 'react';
 import camelCase from 'lodash/camelCase';
 
 // We load the icon-sprite through the raw-loader and through SVGInline for the story
@@ -10,13 +8,16 @@ import IconSprite from '!raw-loader!../icon-sprite.svg'; // eslint-disable-line 
 import { Icon } from '../index';
 import { IconAdd } from '../Add';
 import { IconArrowDown } from '../ArrowDown';
+
 import { Box } from '../../Core';
-import Readme from '../README.md';
 import IconList from '../../../svg/Icon.list.json';
 import '../../../svg/Icons/icon.scss';
 import { Ul } from '../../../../../.storybook/components/Ul';
 
-const stories = storiesOf('Components|Icon', module).addDecorator(withReadme(Readme));
+export default {
+  title: 'Components/Icon',
+  component: Icon,
+};
 
 const iconList: any = IconList;
 
@@ -102,7 +103,7 @@ class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresente
   }
 }
 
-stories.add('Story', () => (
+export const story = () => (
   <Ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(iconList).map(name => {
       const SingleIcon = () => (
@@ -117,9 +118,9 @@ stories.add('Story', () => (
       return <SingleIcon />;
     })}
   </Ul>
-));
+);
 
-stories.add('Size', () => (
+export const size = () => (
   <Ul>
     {['0.875rem', '1rem', '1.125rem', '1.5rem', '2.25rem', '4rem'].map(size => (
       <Box as="li" mb={2} key={size}>
@@ -130,7 +131,7 @@ stories.add('Size', () => (
       </Box>
     ))}
   </Ul>
-));
+);
 
 const whiteBackgroundIcons = {
   download: [
@@ -288,7 +289,7 @@ const darkBackgroundIcons = {
   ],
 };
 
-stories.add('Colors', () => (
+export const colors = () => (
   <div>
     <Ul className="list-50" style={{ display: 'flex', flexWrap: 'wrap' }}>
       {Object.keys(whiteBackgroundIcons).map(name =>
@@ -337,43 +338,39 @@ stories.add('Colors', () => (
       </Ul>
     </div>
   </div>
-));
+);
 
-stories.add(
-  'Using Individual Icons',
-  () => (
-    <div className="icon-sprite-listing">
-      <p className="cr-text cr-gray">
-        In order to reduce bundle size, you may want to import each Icon individually. Doing so will
-        enable proper treeshaking.
-      </p>
+export const usingIndividualIcons = () => (
+  <div className="icon-sprite-listing">
+    <p className="cr-text cr-gray">
+      In order to reduce bundle size, you may want to import each Icon individually. Doing so will
+      enable proper treeshaking.
+    </p>
+    <div>
+      <p>Each icons have the exact same api as the regular `Icon`, minus the name prop.</p>
       <div>
-        <p>Each icons have the exact same api as the regular `Icon`, minus the name prop.</p>
+        <code>
+          <div>import Add from &#39;@lightspeed/flame-icon/icons/Add&#39;;</div>
+          <div>&lt;Add size=&#34;2rem&#34; /&gt;</div>
+        </code>
         <div>
-          <code>
-            <div>import Add from &#39;@lightspeed/flame-icon/icons/Add&#39;;</div>
-            <div>&lt;Add size=&#34;2rem&#34; /&gt;</div>
-          </code>
-          <div>
-            <IconAdd size="2rem" />
-          </div>
+          <IconAdd size="2rem" />
         </div>
+      </div>
+      <div>
+        <code>
+          <div>import ArrowDown from &#39;@lightspeed/flame-icon/icons/ArrowDown&#39;;</div>
+          <div>&lt;ArrowDown size=&#34;2rem&#34; color=&#34;blue&#34; /&gt;</div>
+        </code>
         <div>
-          <code>
-            <div>import ArrowDown from &#39;@lightspeed/flame-icon/icons/ArrowDown&#39;;</div>
-            <div>&lt;ArrowDown size=&#34;2rem&#34; color=&#34;blue&#34; /&gt;</div>
-          </code>
-          <div>
-            <IconArrowDown size="2rem" color="blue" />
-          </div>
+          <IconArrowDown size="2rem" color="blue" />
         </div>
       </div>
     </div>
-  ),
-  { chromatic: { disable: true } },
+  </div>
 );
 
-stories.add('Sprite', () => (
+export const sprite = () => (
   <div className="icon-sprite-listing">
     <p className="cr-text cr-gray">
       The svg icon sprite needs to be inlined (IE doesn&apos;t support external svg) in the page for
@@ -419,4 +416,4 @@ stories.add('Sprite', () => (
       dangerouslySetInnerHTML={{ __html: IconSprite }}
     />
   </div>
-));
+);

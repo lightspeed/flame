@@ -72,6 +72,7 @@ export type ModalProps = {
 export type ModalState = {
   isOpen: boolean;
 };
+
 /**
  * An overlain window, interrupting user interactions for just a short while.
  */

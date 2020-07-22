@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { customRender, fireEvent } from 'test-utils';
+import { customRender, fireEvent, act } from 'test-utils';
 
 import { Dropdown, DropdownContent, useDropdown } from './Dropdown';
 
@@ -23,7 +23,9 @@ describe('<Dropdown />', () => {
     expect(queryByText('My Dropdown')).toBeTruthy();
     expect(queryByText('Some dropdown content')).not.toBeVisible();
 
-    fireEvent.click(queryByText('My Dropdown'));
+    act(() => {
+      fireEvent.click(queryByText('My Dropdown'));
+    });
 
     expect(queryByText('Some dropdown content')).toBeVisible();
   });
@@ -39,10 +41,14 @@ describe('<Dropdown />', () => {
     expect(queryByText('My Dropdown')).toBeTruthy();
     expect(queryByText('Some dropdown content')).not.toBeVisible();
 
-    fireEvent.click(queryByText('My Dropdown'));
+    act(() => {
+      fireEvent.click(queryByText('My Dropdown'));
+    });
     expect(queryByText('Some dropdown content')).toBeVisible();
 
-    fireEvent.click(queryByText('I am outside the dropdown'));
+    act(() => {
+      fireEvent.click(queryByText('I am outside the dropdown'));
+    });
     expect(queryByText('Some dropdown content')).not.toBeVisible();
   });
 
@@ -66,12 +72,16 @@ describe('<Dropdown />', () => {
     expect(queryByText('My Dropdown')).toBeTruthy();
     expect(queryByText('Some dropdown content')).not.toBeVisible();
 
-    fireEvent.click(queryByText('My Dropdown'));
+    act(() => {
+      fireEvent.click(queryByText('My Dropdown'));
+    });
     expect(queryByText('Some dropdown content')).toBeVisible();
 
     expect(mockFn).toHaveBeenCalledTimes(1);
 
-    fireEvent.click(queryByText('I am outside the dropdown'));
+    act(() => {
+      fireEvent.click(queryByText('I am outside the dropdown'));
+    });
     expect(queryByText('Some dropdown content')).not.toBeVisible();
 
     expect(mockFn).toHaveBeenCalledTimes(1);
@@ -88,10 +98,14 @@ describe('<Dropdown />', () => {
     expect(queryByText('My Dropdown')).toBeTruthy();
     expect(queryByText('Some dropdown content')).not.toBeVisible();
 
-    fireEvent.click(queryByText('My Dropdown'));
+    act(() => {
+      fireEvent.click(queryByText('My Dropdown'));
+    });
     expect(queryByText('Some dropdown content')).toBeVisible();
 
-    fireEvent.keyUp(container, { key: 'Escape', code: 'Escape' });
+    act(() => {
+      fireEvent.keyUp(container, { key: 'Escape', code: 'Escape' });
+    });
     expect(queryByText('Some dropdown content')).not.toBeVisible();
   });
 
@@ -109,10 +123,14 @@ describe('<Dropdown />', () => {
     expect(queryByText('My Dropdown')).toBeTruthy();
     expect(queryByText('Close Button')).not.toBeVisible();
 
-    fireEvent.click(queryByText('My Dropdown'));
+    act(() => {
+      fireEvent.click(queryByText('My Dropdown'));
+    });
     expect(queryByText('Close Button')).toBeVisible();
 
-    fireEvent.click(queryByText('Close Button'));
+    act(() => {
+      fireEvent.click(queryByText('Close Button'));
+    });
     expect(queryByText('Close Button')).not.toBeVisible();
   });
 
@@ -134,10 +152,14 @@ describe('<Dropdown />', () => {
     expect(queryByText('My Dropdown')).toBeTruthy();
     expect(queryByText('Close Button')).not.toBeVisible();
 
-    fireEvent.click(queryByText('My Dropdown'));
+    act(() => {
+      fireEvent.click(queryByText('My Dropdown'));
+    });
     expect(queryByText('Close Button')).toBeVisible();
 
-    fireEvent.click(queryByText('Close Button'));
+    act(() => {
+      fireEvent.click(queryByText('Close Button'));
+    });
     expect(queryByText('Close Button')).not.toBeVisible();
   });
 });

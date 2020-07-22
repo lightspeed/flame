@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
 import { InputGroup, InputGroupAddon } from './index';
-import Readme from './README.md';
+
 import { Input } from '../Input';
 import { Box } from '../Core';
 import { Button } from '../Button';
@@ -28,9 +26,13 @@ const SampleDropdownContent = () => (
   </DropdownContent>
 );
 
-const stories = storiesOf('Components|InputGroup', module).addDecorator(withReadme(Readme));
+export default {
+  title: 'Components/InputGroup',
+  component: InputGroup,
+  subcomponents: { InputGroupAddon },
+};
 
-stories.add('Story', () => (
+export const story = () => (
   <div>
     <h3>Input Group</h3>
 
@@ -115,9 +117,9 @@ stories.add('Story', () => (
       </InputGroup>
     </Box>
   </div>
-));
+);
 
-stories.add('Input Group Addon', () => (
+export const inputGroupAddon = () => (
   <div>
     <h3>Input Group Addon</h3>
 
@@ -188,4 +190,4 @@ stories.add('Input Group Addon', () => (
       </InputGroup>
     </Box>
   </div>
-));
+);

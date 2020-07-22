@@ -1,17 +1,17 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
 import { Spinner } from './Spinner';
-import Readme from './README.md';
 import { Box, Flex } from '../Core';
 import { Text } from '../Text';
 
 import { SpacedGroup } from '../../../../.storybook/components/SpacedGroup';
 
-const stories = storiesOf('Components|Spinner', module).addDecorator(withReadme(Readme));
+export default {
+  title: 'Components/Spinner',
+  component: Spinner,
+};
 
-stories.add('Story', () => (
+export const story = () => (
   <div>
     <Box mb={3}>
       <Text fontSize="small" mb={1}>
@@ -69,4 +69,4 @@ stories.add('Story', () => (
       </SpacedGroup>
     </Box>
   </div>
-));
+);

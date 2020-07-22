@@ -4,37 +4,59 @@ const autoprefixer = require('autoprefixer');
 const sass = require('sass');
 const packageInfo = require('../package.json');
 
+const babelOptions = {
+  presets: [
+    '@babel/preset-typescript',
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          browsers: ['>0.25%', 'not op_mini all', 'not ie <= 10'],
+        },
+        debug: false,
+      },
+    ],
+    '@babel/preset-react',
+    '@emotion/babel-preset-css-prop',
+  ],
+  plugins: [
+    '@babel/plugin-proposal-object-rest-spread',
+    'emotion',
+    [
+      'module-resolver',
+      {
+        root: ['../packages'],
+        alias: {
+          'react-popper': 'react-popper/lib/cjs',
+        },
+      },
+    ],
+  ],
+};
 module.exports = {
   stories: [
-    '../packages/flame/src/**/story.tsx',
+    '../packages/flame/src/**/*.stories.@(mdx|tsx)',
     '../packages/flame-css/stories/*.stories.@(mdx|tsx)',
   ],
   addons: [
-    'storybook-readme/register',
-    '@storybook/addon-actions/register',
-    '@storybook/addon-docs',
+    '@storybook/addon-actions',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        configureJSX: false,
+        babelOptions,
+        sourceLoaderOptions: {
+          test: /\.(stories|story)\.[tj]sx?$/,
+        },
+      },
+    },
   ],
+
   webpackFinal: config => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       loader: require.resolve('babel-loader'),
-      options: {
-        presets: [
-          '@babel/preset-typescript',
-          [
-            '@babel/preset-env',
-            {
-              targets: {
-                browsers: ['>0.25%', 'not op_mini all', 'not ie <= 10'],
-              },
-              debug: false,
-            },
-          ],
-          '@babel/preset-react',
-          '@emotion/babel-preset-css-prop',
-        ],
-        plugins: ['@babel/plugin-proposal-object-rest-spread', 'emotion'],
-      },
+      options: babelOptions,
     });
     config.resolve.extensions.push('.ts', '.tsx');
 
@@ -77,14 +99,6 @@ module.exports = {
       loader: require.resolve('file-loader'),
     });
 
-    // @TODO: Remove this hack to suppress verbose build output when upgrading to Storybook v5.
-    // Use `--silent` option instead for `build-storybook` and `start-storybook`:
-    // https://storybook.js.org/docs/configurations/cli-options/
-    //
-    // eslint-disable-next-line no-param-reassign
-    config.plugins = config.plugins.filter(
-      ({ constructor }) => constructor.name !== 'ProgressPlugin',
-    );
     return config;
   },
 };

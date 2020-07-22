@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { withReadme } from 'storybook-readme';
 import { css } from '@styled-system/css';
+// eslint-disable-next-line
+import { action } from '@storybook/addon-actions';
 
-import { ExampleBox } from '../../../../.storybook/components/ExampleBox';
 import { Popover, PopoverProps, PopoverPlacement } from './Popover';
+
 import { Text } from '../Text';
 import { Input } from '../Input';
 import { Button } from '../Button';
 import { Box } from '../Core';
-import Readme from './README.md';
 
-const stories = storiesOf('Components|Popover', module).addDecorator(withReadme(Readme));
+import { ExampleBox } from '../../../../.storybook/components/ExampleBox';
+
+export default {
+  title: 'Components/Popover',
+  component: Popover,
+};
 
 const placements: PopoverPlacement[] = [
   'top-start',
@@ -168,113 +171,95 @@ class PopoverWithCloseButton extends Component<PopoverExamplesProp, { isOpen?: b
   }
 }
 
-stories.add(
-  'Story',
-  () => (
+export const story = () => (
+  <div>
+    <h3>Story</h3>
+    <h4>Themes</h4>
     <div>
-      <h3>Story</h3>
-      <h4>Themes</h4>
-      <div>
-        <ExampleBox
-          example={<PopoverSimple content="Popover content, you can put anything in here." />}
-          content="Default"
-        />
-        <ExampleBox
-          example={<PopoverSimple content="Popover content, you can put anything in here." light />}
-          content="Light"
-        />
-      </div>
-      <h4>Options</h4>
       <ExampleBox
-        example={<PopoverSimple content="Popover content, you can put anything in here." noArrow />}
-        content="No Arrow"
+        example={<PopoverSimple content="Popover content, you can put anything in here." />}
+        content="Default"
       />
       <ExampleBox
-        example={
-          <PopoverSimple
-            content="Popover content, you can put anything in here."
-            isFlipEnabled={false}
-          />
-        }
-        content="Flip Disabled"
-      />
-      <ExampleBox
-        example={
-          <PopoverWithCloseButton content="Clicking outside will not close it" autoClose={false} />
-        }
-        content="autoClose off"
+        example={<PopoverSimple content="Popover content, you can put anything in here." light />}
+        content="Light"
       />
     </div>
-  ),
-  { chromatic: { disable: true } },
-);
-
-stories.add(
-  'Placement',
-  () => (
-    <div>
-      <h3>Dark</h3>
-      <div>
-        {placements.map(placement => (
-          <ExampleBox
-            key={placement}
-            example={<PopoverSimple content={placement} placement={placement} />}
-            content={placement}
-          />
-        ))}
-      </div>
-      <h3>Light</h3>
-      <div>
-        {placements.map(placement => (
-          <ExampleBox
-            key={placement}
-            example={<PopoverSimple content={placement} placement={placement} light />}
-            content={placement}
-          />
-        ))}
-      </div>
-    </div>
-  ),
-  { chromatic: { disable: true } },
-);
-
-stories.add(
-  'Events',
-  () => (
-    <div>
-      <h3>Events (see Action Logger)</h3>
-      <div>
-        <ExampleBox
-          example={
-            <PopoverWithCloseButton content="Click the button to close the popover:" light />
-          }
-          content="State controlled from outside"
+    <h4>Options</h4>
+    <ExampleBox
+      example={<PopoverSimple content="Popover content, you can put anything in here." noArrow />}
+      content="No Arrow"
+    />
+    <ExampleBox
+      example={
+        <PopoverSimple
+          content="Popover content, you can put anything in here."
+          isFlipEnabled={false}
         />
-      </div>
-    </div>
-  ),
-  { chromatic: { disable: true } },
+      }
+      content="Flip Disabled"
+    />
+    <ExampleBox
+      example={
+        <PopoverWithCloseButton content="Clicking outside will not close it" autoClose={false} />
+      }
+      content="autoClose off"
+    />
+  </div>
 );
 
-stories.add(
-  'Overlaying Popover Test',
-  () => (
+export const placement = () => (
+  <div>
+    <h3>Dark</h3>
     <div>
-      <Popover
-        target={({ targetProps, targetEvents }) => (
-          <div {...targetProps} {...targetEvents}>
-            <Button>Button with Popover attached</Button>
-          </div>
-        )}
-        isOpen
-        zIndex={2}
-      >
-        <Box p={2}>I should be above the input</Box>
-      </Popover>
-      <Input label="I should be behind the popover" />
+      {placements.map(placement => (
+        <ExampleBox
+          key={placement}
+          example={<PopoverSimple content={placement} placement={placement} />}
+          content={placement}
+        />
+      ))}
     </div>
-  ),
-  { chromatic: { disable: true } },
+    <h3>Light</h3>
+    <div>
+      {placements.map(placement => (
+        <ExampleBox
+          key={placement}
+          example={<PopoverSimple content={placement} placement={placement} light />}
+          content={placement}
+        />
+      ))}
+    </div>
+  </div>
+);
+
+export const events = () => (
+  <div>
+    <h3>Events (see Action Logger)</h3>
+    <div>
+      <ExampleBox
+        example={<PopoverWithCloseButton content="Click the button to close the popover:" light />}
+        content="State controlled from outside"
+      />
+    </div>
+  </div>
+);
+
+export const overlayingPopoverTest = () => (
+  <div>
+    <Popover
+      target={({ targetProps, targetEvents }) => (
+        <div {...targetProps} {...targetEvents}>
+          <Button>Button with Popover attached</Button>
+        </div>
+      )}
+      isOpen
+      zIndex={2}
+    >
+      <Box p={2}>I should be above the input</Box>
+    </Popover>
+    <Input label="I should be behind the popover" />
+  </div>
 );
 
 const RerenderingPopover = () => {
@@ -297,20 +282,16 @@ const RerenderingPopover = () => {
   );
 };
 
-stories.add(
-  'Stress test',
-  () => (
+export const stressTest = () => (
+  <div>
+    <h3>Re-rendering content within the popover (should count up)</h3>
     <div>
-      <h3>Re-rendering content within the popover (should count up)</h3>
-      <div>
-        <RerenderingPopover />
-      </div>
+      <RerenderingPopover />
     </div>
-  ),
-  { chromatic: { disable: true } },
+  </div>
 );
 
-stories.add('Percy Placement', () => (
+export const percyPlacement = () => (
   <div style={{ height: '1000px' }}>
     <h3>Dark</h3>
     <div>
@@ -333,4 +314,4 @@ stories.add('Percy Placement', () => (
       ))}
     </div>
   </div>
-));
+);

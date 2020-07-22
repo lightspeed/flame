@@ -1,61 +1,56 @@
-import React, { PureComponent } from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { withReadme } from 'storybook-readme';
+import * as React from 'react';
 
 import { Button } from './Button';
-import Readme from './README.md';
-import { Flex, Box } from '../Core';
+import { Box, Flex } from '../Core';
 import { Divider } from '../Divider';
-import { InputGroup } from '../InputGroup';
 import { Icon } from '../Icon';
+import { InputGroup } from '../InputGroup';
 
 import { SpacedGroup } from '../../../../.storybook/components/SpacedGroup';
 
-const stories = storiesOf('Components|Button', module).addDecorator(withReadme(Readme));
+const variations = ['primary', 'secondary', 'danger', 'neutral'] as const;
 
-type ButtonPresenterState = {
-  isDisabled?: boolean;
-  isLoading?: boolean;
-};
-class ButtonPresenter extends PureComponent<{}, ButtonPresenterState> {
-  constructor(props: any) {
-    super(props);
+const ButtonPresenter = () => {
+  const [state, setState] = React.useState({
+    isDisabled: false,
+    isLoading: false,
+  });
 
-    this.state = {
-      isDisabled: false,
-      isLoading: false,
-    };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState({
+  const handleClick = () => {
+    setState({
       isDisabled: true,
       isLoading: true,
     });
 
     setTimeout(() => {
-      this.setState({
+      setState({
         isDisabled: false,
         isLoading: false,
       });
     }, 2000);
-  }
+  };
 
-  render() {
-    const { isDisabled, isLoading } = this.state;
+  const { isDisabled, isLoading } = state;
 
-    return (
-      <Button size="large" disabled={isDisabled} loading={isLoading} onClick={this.handleClick}>
-        Click Me
-      </Button>
-    );
-  }
-}
+  return (
+    <Button size="large" disabled={isDisabled} loading={isLoading} onClick={handleClick}>
+      Click Me
+    </Button>
+  );
+};
 
-stories.add('Styles', () => (
+export default {
+  title: 'Components/Button',
+  component: Button,
+  argTypes: {
+    onChange: { action: 'on change' },
+    onClick: { action: 'on click' },
+    onFocus: { action: 'on focus' },
+    onBlur: { action: 'on blur' },
+  },
+};
+
+export const styles = () => (
   <div>
     <h3>Outline</h3>
     <SpacedGroup>
@@ -132,9 +127,9 @@ stories.add('Styles', () => (
       </Button>
     </SpacedGroup>
   </div>
-));
+);
 
-stories.add('Sizes', () => (
+export const sizes = () => (
   <div>
     <Box mb={3}>
       <SpacedGroup>
@@ -181,49 +176,49 @@ stories.add('Sizes', () => (
       </Button>
     </div>
   </div>
-));
+);
 
-stories.add('Button as Links', () => (
+export const buttonAsLinks = () => (
   <Flex flexDirection="column">
-    {['primary', 'secondary', 'danger', 'neutral'].map(variation => (
+    {variations.map(variation => (
       <Button href="http://www.lightspeedhq.com" variant={variation} mb="1">
         Button with link
       </Button>
     ))}
-    {['primary', 'secondary', 'danger', 'neutral'].map(variation => (
+    {variations.map(variation => (
       <Button href="http://www.lightspeedhq.com" variant={variation} fill mb="1">
         Button with link
       </Button>
     ))}
-    {['primary', 'secondary', 'danger', 'neutral'].map(variation => (
+    {variations.map(variation => (
       <Button href="http://www.lightspeedhq.com" variant={variation} mb="1">
         <Icon name="orders" /> Button with link
       </Button>
     ))}
-    {['primary', 'secondary', 'danger', 'neutral'].map(variation => (
+    {variations.map(variation => (
       <Button href="http://www.lightspeedhq.com" variant={variation} fill mb="1">
         <Icon name="orders" /> Button with link
       </Button>
     ))}
   </Flex>
-));
-stories.add('Events', () => (
+);
+
+export const events: React.FC<{
+  onClick: () => void;
+  onFocus: () => void;
+  onBlur: () => void;
+}> = ({ onClick, onFocus, onBlur }) => (
   <div>
     <Box mb={3}>
       <SpacedGroup flexDirection="column">
-        <Button onClick={action('Clicked')}>Button with onClick event (see Action Logger)</Button>
-        <Button onFocus={action('Focused')}>Button with onFocus event (see Action Logger)</Button>
-        <Button onBlur={action('Blured')}>Button with onBlur event (see Action Logger)</Button>
+        <Button onClick={onClick}>Button with onClick event (see Action Logger)</Button>
+        <Button onFocus={onFocus}>Button with onFocus event (see Action Logger)</Button>
+        <Button onBlur={onBlur}>Button with onBlur event (see Action Logger)</Button>
         <Button href="http://www.lightspeedhq.com">Button with link</Button>
         <Button href="http://www.google.com" target="_blank">
           Button with external link
         </Button>
-        <Button
-          onClick={action('Clicked')}
-          onFocus={action('Focused')}
-          onBlur={action('Blured')}
-          disabled
-        >
+        <Button onClick={onClick} onFocus={onFocus} onBlur={onBlur} disabled>
           Disabled button nullifies all events
         </Button>
         <Button href="http://google.com" target="_blank" disabled>
@@ -232,9 +227,9 @@ stories.add('Events', () => (
       </SpacedGroup>
     </Box>
   </div>
-));
+);
 
-stories.add('With Children', () => (
+export const withChildren = () => (
   <div>
     <Box mb={3}>
       <SpacedGroup>
@@ -350,9 +345,9 @@ stories.add('With Children', () => (
       </SpacedGroup>
     </Box>
   </div>
-));
+);
 
-stories.add('Loading', () => (
+export const loading = () => (
   <div>
     <Box mb={3}>
       <SpacedGroup>
@@ -401,4 +396,4 @@ stories.add('Loading', () => (
       </Button>
     </div>
   </div>
-));
+);

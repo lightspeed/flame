@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
-import Readme from './README.md';
 import { Group, GroupAddon } from './index';
+
 import { Input } from '../Input';
 import { Box } from '../Core';
 import { Alert } from '../Alert';
@@ -12,7 +10,10 @@ import { Icon } from '../Icon';
 import { Text } from '../Text';
 import { Badge, PillBadge } from '../Badge';
 
-const stories = storiesOf('Components|Group', module).addDecorator(withReadme(Readme));
+export default {
+  title: 'Components/Group',
+  component: Group,
+};
 
 const Description: React.FC = ({ children }) => (
   <Text fontSize="text-s" mb={1}>
@@ -34,7 +35,7 @@ const DeprecationWarning: React.FC = () => (
   </div>
 );
 
-stories.add('Types', () => (
+export const types = () => (
   <div>
     <DeprecationWarning />
     <div>
@@ -80,9 +81,9 @@ stories.add('Types', () => (
       </Box>
     </div>
   </div>
-));
+);
 
-stories.add('Spacing', () => (
+export const spacing = () => (
   <div>
     <DeprecationWarning />
     <div>
@@ -181,9 +182,9 @@ stories.add('Spacing', () => (
       </Group>
     </div>
   </div>
-));
+);
 
-stories.add('Addon', () => (
+export const addon = () => (
   <div>
     <DeprecationWarning />
     <div>
@@ -443,4 +444,4 @@ stories.add('Addon', () => (
       </Box>
     </div>
   </div>
-));
+);

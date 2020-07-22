@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
 import { Modal } from './Modal';
 import { ModalHeader } from './ModalHeader';
@@ -8,9 +6,10 @@ import { ModalBody } from './ModalBody';
 import { ModalFooter } from './ModalFooter';
 
 import { Button } from '../Button';
-import Readme from './README.md';
 
-const stories = storiesOf('Components|Modal', module).addDecorator(withReadme(Readme));
+export default {
+  title: 'Components/Modal',
+};
 
 type Props = {
   header?: boolean;
@@ -271,8 +270,6 @@ class ModalStoryHelper extends React.Component<Props, State> {
   }
 }
 
-stories.add('Header', () => <ModalStoryHelper header />, { chromatic: { disable: true } });
-
-stories.add('Footer', () => <ModalStoryHelper footer />, { chromatic: { disable: true } });
-
-stories.add('Options', () => <ModalStoryHelper options />, { chromatic: { disable: true } });
+export const header = () => <ModalStoryHelper header />;
+export const footer = () => <ModalStoryHelper footer />;
+export const options = () => <ModalStoryHelper options />;

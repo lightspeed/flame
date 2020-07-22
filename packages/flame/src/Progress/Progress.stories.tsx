@@ -1,18 +1,19 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
+import { Progress } from './Progress';
 import DeterminateProgress from './examples/Determinate';
 import IndeterminateProgress from './examples/Indeterminate';
 import StaticProgress from './examples/Static';
 
 import { Heading2, Heading3, TextContent } from '../Text';
 import { Box } from '../Core';
-import Readme from './README.md';
 
-const stories = storiesOf('Components|Progress', module).addDecorator(withReadme(Readme));
+export default {
+  title: 'Components/Progress',
+  component: Progress,
+};
 
-stories.add('Linear', () => (
+export const linear = () => (
   <TextContent>
     <Heading2>Progress - linear</Heading2>
     <Heading3>Determinate</Heading3>
@@ -28,4 +29,4 @@ stories.add('Linear', () => (
       <StaticProgress />
     </Box>
   </TextContent>
-));
+);

@@ -177,7 +177,10 @@ export type ButtonProps = Merge<
 /**
  * Buttons are used to take action or confirm a decision. They help merchants get things done.
  */
-export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+export const Button = React.forwardRef<
+  React.ComponentPropsWithRef<'button'> | React.ComponentPropsWithRef<'a'>,
+  ButtonProps
+>(
   (
     {
       loading,

@@ -1,74 +1,80 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action, decorateAction } from '@storybook/addon-actions';
-import { withReadme } from 'storybook-readme';
 
 import { Input } from './Input';
-import Readme from './README.md';
+
 import { Box } from '../Core';
 import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
 
-const stories = storiesOf('Components|Input', module).addDecorator(withReadme(Readme));
-
-const firstArgAction = decorateAction([(args: any) => [args[0].target.value]]);
-
-type State = {
-  status: {
-    type?: 'error' | 'valid' | 'warning';
-    message?: string;
-  };
-  input: any;
+export default {
+  title: 'Components/Input',
+  component: Input,
+  argTypes: {
+    onChange: { action: 'on change' },
+    onFocus: { action: 'on focus' },
+    onBlur: { action: 'on blur' },
+  },
 };
-class InputWrapper extends React.Component<any, State> {
-  constructor(props: any) {
-    super(props);
-    this.state = {
-      status: {},
-      input: '',
+
+const InputWrapper = () => {
+  const [state, setState] = React.useState<{
+    status: {
+      type?: 'error' | 'valid' | 'warning';
+      message?: string;
     };
-  }
+    input: any;
+  }>({
+    status: {},
+    input: '',
+  });
 
-  handleClick() {
-    if (!this.state.input || Number.isNaN(parseFloat(this.state.input))) {
-      this.setState({ status: { type: 'error', message: 'Please enter a valid number' } });
-    } else if (this.state.input < 10) {
-      this.setState({ status: { type: 'warning', message: 'You can do more than 10!' } });
+  const handleClick = () => {
+    if (
+      !state.input ||
+      (typeof state.input === 'string' && Number.isNaN(parseFloat(state.input)))
+    ) {
+      setState(prevState => ({
+        ...prevState,
+        status: { type: 'error', message: 'Please enter a valid number' },
+      }));
+    } else if (state.input < 10) {
+      setState(prevState => ({
+        ...prevState,
+        status: { type: 'warning', message: 'You can do more than 10!' },
+      }));
     } else {
-      this.setState({ status: { type: 'valid', message: 'Good job!' } });
+      setState(prevState => ({ ...prevState, status: { type: 'valid', message: 'Good job!' } }));
     }
-  }
+  };
 
-  handleChange(e: React.FormEvent<HTMLInputElement>) {
-    const target = e.target as HTMLInputElement;
-    this.setState({ input: target.value });
-  }
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const target = e.target;
+    setState(prevState => ({ ...prevState, input: target.value }));
+  };
 
-  handleFocus() {
-    this.setState({ status: {} });
-  }
+  const handleFocus = () => {
+    setState(prevState => ({ ...prevState, status: {} }));
+  };
 
-  render() {
-    return (
-      <div>
-        <Input
-          placeholder="Input with error message..."
-          id="error"
-          onChange={e => this.handleChange(e)}
-          onFocus={() => this.handleFocus()}
-          label="Enter a number"
-          status={this.state.status.type as any}
-          statusMessage={this.state.status.message}
-        />
-        <br />
-        <Button onClick={() => this.handleClick()}>Submit</Button>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <Input
+        placeholder="Input with error message..."
+        id="error"
+        onChange={handleChange}
+        onFocus={handleFocus}
+        label="Enter a number"
+        status={state.status.type as any}
+        statusMessage={state.status.message}
+      />
+      <br />
+      <Button onClick={() => handleClick()}>Submit</Button>
+    </div>
+  );
+};
 
-stories.add('Story', () => (
+export const story = () => (
   <div>
     <Box mb={3}>
       <h3>Simple text input</h3>
@@ -155,29 +161,26 @@ stories.add('Story', () => (
       </Box>
     </div>
   </div>
-));
+);
 
-stories.add(
-  'Events',
-  () => (
-    <div>
-      <Box mb={3}>
-        <Input
-          placeholder="Input with onChange event (see Action Logger)"
-          onChange={firstArgAction('onChange')}
-        />
-      </Box>
-      <Box mb={3}>
-        <Input
-          placeholder="Input with onFocus & onBlur events (see Action Logger)"
-          onFocus={action('onFocus')}
-          onBlur={action('onBlur')}
-        />
-      </Box>
-      <Box mb={3}>
-        <InputWrapper />
-      </Box>
-    </div>
-  ),
-  { chromatic: { disable: true } },
+export const events: React.FC<{
+  onChange: () => void;
+  onFocus: () => void;
+  onBlur: () => void;
+}> = ({ onChange, onFocus, onBlur }) => (
+  <div>
+    <Box mb={3}>
+      <Input placeholder="Input with onChange event (see Action Logger)" onChange={onChange} />
+    </Box>
+    <Box mb={3}>
+      <Input
+        placeholder="Input with onFocus & onBlur events (see Action Logger)"
+        onFocus={onFocus}
+        onBlur={onBlur}
+      />
+    </Box>
+    <Box mb={3}>
+      <InputWrapper />
+    </Box>
+  </div>
 );

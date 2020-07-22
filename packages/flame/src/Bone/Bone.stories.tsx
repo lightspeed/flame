@@ -1,17 +1,17 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
 import { Bone } from './Bone';
-import { Text, Heading2 } from '../Text';
 
-import Readme from './README.md';
+import { Text, Heading2 } from '../Text';
 import { Card, CardSection } from '../Card';
 import { Divider } from '../Divider';
 
-const stories = storiesOf('Components|Bone', module).addDecorator(withReadme(Readme));
+export default {
+  title: 'Components/Bone',
+  component: Bone,
+};
 
-stories.add('Styles', () => (
+export const styles = () => (
   <div>
     <div className="cr-p-3">
       <Heading2>Skeleton</Heading2>
@@ -99,34 +99,30 @@ stories.add('Styles', () => (
       </div>
     </div>
   </div>
-));
+);
 
-stories.add(
-  'Types',
-  () => (
-    <div className="cr-p-3">
-      <Heading2>Bone</Heading2>
-      <Text color="gray-300">Types</Text>
+export const types = () => (
+  <div className="cr-p-3">
+    <Heading2>Bone</Heading2>
+    <Text color="gray-300">Types</Text>
 
-      <div style={{ display: 'inline-flex' }} className="cr-mt-4">
-        <div className="cr-pr-4" style={{ alignSelf: 'flex-end' }}>
-          <Text className="cr-pb-2">
-            <Bone width="5rem" height="1.125rem" />
-          </Text>
-          <Text size="small" color="gray-300">
-            Default
-          </Text>
-        </div>
-        <div className="cr-pr-4" style={{ alignSelf: 'flex-end' }}>
-          <Text className="cr-pb-2">
-            <Bone width="5rem" height="1.125rem" animated={false} />
-          </Text>
-          <Text size="small" color="gray-300">
-            Not animated
-          </Text>
-        </div>
+    <div style={{ display: 'inline-flex' }} className="cr-mt-4">
+      <div className="cr-pr-4" style={{ alignSelf: 'flex-end' }}>
+        <Text className="cr-pb-2">
+          <Bone width="5rem" height="1.125rem" />
+        </Text>
+        <Text size="small" color="gray-300">
+          Default
+        </Text>
+      </div>
+      <div className="cr-pr-4" style={{ alignSelf: 'flex-end' }}>
+        <Text className="cr-pb-2">
+          <Bone width="5rem" height="1.125rem" animated={false} />
+        </Text>
+        <Text size="small" color="gray-300">
+          Not animated
+        </Text>
       </div>
     </div>
-  ),
-  { chromatic: { disable: true } },
+  </div>
 );

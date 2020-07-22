@@ -33,7 +33,7 @@ const BoxExampleGrid: React.FC = ({ ...rest }) => (
 );
 
 export default {
-  title: 'Theme|Tokens',
+  title: 'Theme/Tokens',
 };
 
 const Colours = withTheme(({ theme }) => {

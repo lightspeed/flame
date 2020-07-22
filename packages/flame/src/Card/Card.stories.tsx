@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
 import { Card, CardHeader, CardFooter, CardSection } from './Card';
 import { TextLink } from '../Text';
@@ -8,19 +6,16 @@ import { Divider } from '../Divider/index';
 import { Button } from '../Button';
 import { Box } from '../Core';
 
-import Readme from './README.md';
-
-const stories = storiesOf('Components|Card', module)
-  .addDecorator(withReadme(Readme))
-  .addDecorator(storyFn => {
-    return <React.Fragment>{storyFn()}</React.Fragment>;
-  });
-
 const cardsStyles = { maxWidth: '640px' };
 const cardsContent =
   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quasi, sapiente ducimus maiores accusantium rem architecto eveniet, ut ratione ipsa saepe dolore voluptatem delectus natus totam laudantium quod quia sed necessitatibus culpa sit cupiditate ipsum aliquam quisquam. Delectus debitis!';
 
-stories.add('Types', () => (
+export default {
+  title: 'Components/Card',
+  component: Card,
+};
+
+export const types = () => (
   <div style={{ display: 'flex' }}>
     <Box textAlign="center" mr={2}>
       <Card>
@@ -33,9 +28,9 @@ stories.add('Types', () => (
       </Card>
     </Box>
   </div>
-));
+);
 
-stories.add('Spacing', () => (
+export const spacing = () => (
   <div>
     <h3>Card spacing</h3>
     <Box mb={2} style={{ display: 'flex' }}>
@@ -119,9 +114,9 @@ stories.add('Spacing', () => (
       </Box>
     </Box>
   </div>
-));
+);
 
-stories.add('Header & Footer', () => (
+export const headerAndFooter = () => (
   <div>
     <h3>Default</h3>
     <Box mb={1} style={cardsStyles}>
@@ -180,9 +175,9 @@ stories.add('Header & Footer', () => (
       </Card>
     </Box>
   </div>
-));
+);
 
-stories.add('Card with Divider', () => (
+export const cardAndDivider = () => (
   <div>
     <h3>Card divider</h3>
     <Box mb={2} style={cardsStyles}>
@@ -205,9 +200,9 @@ stories.add('Card with Divider', () => (
       </Card>
     </Box>
   </div>
-));
+);
 
-stories.add('Custom colors', () => (
+export const customColors = () => (
   <div>
     <h3>Custom colors</h3>
     <Box mb={2} style={cardsStyles}>
@@ -220,4 +215,4 @@ stories.add('Custom colors', () => (
       </Card>
     </Box>
   </div>
-));
+);

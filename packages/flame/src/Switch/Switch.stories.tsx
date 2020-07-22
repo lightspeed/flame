@@ -1,18 +1,19 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
+// eslint-disable-next-line
 import { action } from '@storybook/addon-actions';
-import { withReadme } from 'storybook-readme';
-
-import { Text, Heading2 } from '../Text';
 
 import { Switch } from './Switch';
-import Readme from './README.md';
+
 import { Button } from '../Button';
 import { Box } from '../Core';
+import { Text, Heading2 } from '../Text';
 
 import { SpacedGroup } from '../../../../.storybook/components/SpacedGroup';
 
-const stories = storiesOf('Components|Switch', module).addDecorator(withReadme(Readme));
+export default {
+  title: 'Components/Switch',
+  component: Switch,
+};
 
 const Description: React.FC = ({ children }) => (
   <Text fontSize="text-s" mb={1}>
@@ -70,7 +71,7 @@ class SwitchWrapper extends React.Component<{}, State> {
   }
 }
 
-stories.add('States', () => (
+export const states = () => (
   <div>
     <Heading2 mb={2}>Switch States</Heading2>
     <Description>Toggle On / Off</Description>
@@ -85,7 +86,7 @@ stories.add('States', () => (
       </SpacedGroup>
     </Box>
   </div>
-));
+);
 
 // eslint-disable-next-line react/no-multi-comp
 class ToggleEventsWrapper extends React.Component<{}, { checked?: boolean }> {
@@ -130,19 +131,15 @@ class ToggleEventsWrapper extends React.Component<{}, { checked?: boolean }> {
   }
 }
 
-stories.add(
-  'Events',
-  () => (
-    <div>
-      <Heading2 mb={2}>Switch Events</Heading2>
-      <Text>
-        These examples are using <strong>controlled</strong> components.
-      </Text>
-      <ToggleEventsWrapper />
-      <Box mb={3}>
-        <SwitchWrapper />
-      </Box>
-    </div>
-  ),
-  { chromatic: { disable: true } },
+export const events = () => (
+  <div>
+    <Heading2 mb={2}>Switch Events</Heading2>
+    <Text>
+      These examples are using <strong>controlled</strong> components.
+    </Text>
+    <ToggleEventsWrapper />
+    <Box mb={3}>
+      <SwitchWrapper />
+    </Box>
+  </div>
 );
