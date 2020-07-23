@@ -7,6 +7,11 @@ import { Radio, BaseRadio, RadioLabel } from './Radio';
 import { Box } from '../Core';
 import { Text, Heading2, Heading3, TextContent } from '../Text';
 
+import {
+  disableChromaticSnapshots,
+  disableDocsStory,
+} from '../../../../.storybook/story-modifiers';
+
 export default {
   title: 'Components/Radio',
   component: Radio,
@@ -163,6 +168,8 @@ export const uncontrolledState = () => (
     </Box>
   </TextContent>
 );
+disableChromaticSnapshots(uncontrolledState);
+disableDocsStory(uncontrolledState);
 
 export const events = () => (
   <TextContent>
@@ -211,3 +218,5 @@ export const events = () => (
     </Box>
   </TextContent>
 );
+disableChromaticSnapshots(events);
+disableDocsStory(events);

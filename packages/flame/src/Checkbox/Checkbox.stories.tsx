@@ -5,6 +5,11 @@ import { Checkbox } from './Checkbox';
 import { Text, Heading2, Heading3, TextContent } from '../Text';
 import { Box } from '../Core';
 
+import {
+  disableDocsStory,
+  disableChromaticSnapshots,
+} from '../../../../.storybook/story-modifiers';
+
 const StatefulCheckbox = () => {
   const [state, setState] = React.useState({
     checked: false,
@@ -170,3 +175,5 @@ export const events: React.FC<{
     </TextContent>
   </div>
 );
+disableDocsStory(events);
+disableChromaticSnapshots(events);

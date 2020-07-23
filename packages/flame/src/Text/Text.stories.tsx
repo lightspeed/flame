@@ -4,6 +4,10 @@ import { Text, Heading1, Heading2, Heading3, Heading4, TextLink, TextContent } f
 
 import { Divider } from '../Divider';
 import { Box } from '../Core';
+import {
+  disableChromaticSnapshots,
+  disableDocsStory,
+} from '../../../../.storybook/story-modifiers';
 
 export default {
   title: 'Components/Text',
@@ -144,6 +148,8 @@ export const bodyVariants = () => (
     ))}
   </div>
 );
+disableChromaticSnapshots(bodyVariants);
+disableDocsStory(bodyVariants);
 
 export const headings = () => (
   <div>
@@ -153,6 +159,8 @@ export const headings = () => (
     <Heading4>Heading 4</Heading4>
   </div>
 );
+disableChromaticSnapshots(headings);
+disableDocsStory(headings);
 
 export const link = () => (
   <TextContent>
@@ -170,6 +178,8 @@ export const link = () => (
     </Text>
   </TextContent>
 );
+disableChromaticSnapshots(link);
+disableDocsStory(link);
 
 export const content = () => (
   <div>
@@ -196,6 +206,8 @@ export const content = () => (
     </TextContent>
   </div>
 );
+disableChromaticSnapshots(content);
+disableDocsStory(content);
 
 export const fontFamilyVariants = () => (
   <div>
@@ -203,6 +215,8 @@ export const fontFamilyVariants = () => (
     <Text fontFamily="monospace">Monospaced fonts</Text>
   </div>
 );
+disableChromaticSnapshots(fontFamilyVariants);
+disableDocsStory(fontFamilyVariants);
 
 export const colorVariants = () => (
   <table>
@@ -233,3 +247,5 @@ export const colorVariants = () => (
     </tbody>
   </table>
 );
+disableChromaticSnapshots(colorVariants);
+disableDocsStory(colorVariants);

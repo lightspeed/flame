@@ -7,6 +7,8 @@ import { ModalFooter } from './ModalFooter';
 
 import { Button } from '../Button';
 
+import { disableChromaticSnapshots } from '../../../../.storybook/story-modifiers';
+
 export default {
   title: 'Components/Modal',
 };
@@ -271,5 +273,10 @@ class ModalStoryHelper extends React.Component<Props, State> {
 }
 
 export const header = () => <ModalStoryHelper header />;
+disableChromaticSnapshots(header);
+
 export const footer = () => <ModalStoryHelper footer />;
+disableChromaticSnapshots(footer);
+
 export const options = () => <ModalStoryHelper options />;
+disableChromaticSnapshots(options);

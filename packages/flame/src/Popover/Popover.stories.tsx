@@ -5,6 +5,11 @@ import { action } from '@storybook/addon-actions';
 
 import { Popover, PopoverProps, PopoverPlacement } from './Popover';
 
+import {
+  disableChromaticSnapshots,
+  disableDocsStory,
+} from '../../../../.storybook/story-modifiers';
+
 import { Text } from '../Text';
 import { Input } from '../Input';
 import { Button } from '../Button';
@@ -207,6 +212,7 @@ export const story = () => (
     />
   </div>
 );
+disableChromaticSnapshots(story);
 
 export const placement = () => (
   <div>
@@ -232,6 +238,7 @@ export const placement = () => (
     </div>
   </div>
 );
+disableChromaticSnapshots(placement);
 
 export const events = () => (
   <div>
@@ -244,6 +251,8 @@ export const events = () => (
     </div>
   </div>
 );
+disableChromaticSnapshots(events);
+disableDocsStory(events);
 
 export const overlayingPopoverTest = () => (
   <div>
@@ -261,6 +270,8 @@ export const overlayingPopoverTest = () => (
     <Input label="I should be behind the popover" />
   </div>
 );
+disableChromaticSnapshots(overlayingPopoverTest);
+disableDocsStory(overlayingPopoverTest);
 
 const RerenderingPopover = () => {
   const [state, setState] = React.useState(0);
@@ -290,6 +301,8 @@ export const stressTest = () => (
     </div>
   </div>
 );
+disableChromaticSnapshots(stressTest);
+disableDocsStory(stressTest);
 
 export const percyPlacement = () => (
   <div style={{ height: '1000px' }}>
@@ -315,3 +328,4 @@ export const percyPlacement = () => (
     </div>
   </div>
 );
+disableDocsStory(percyPlacement);

@@ -7,6 +7,7 @@ import { Icon } from '../Icon';
 import { InputGroup } from '../InputGroup';
 
 import { SpacedGroup } from '../../../../.storybook/components/SpacedGroup';
+import { disableDocsStory } from '../../../../.storybook/story-modifiers';
 
 const variations = ['primary', 'secondary', 'danger', 'neutral'] as const;
 
@@ -177,6 +178,7 @@ export const sizes = () => (
     </div>
   </div>
 );
+disableDocsStory(sizes);
 
 export const buttonAsLinks = () => (
   <Flex flexDirection="column">
@@ -202,6 +204,7 @@ export const buttonAsLinks = () => (
     ))}
   </Flex>
 );
+disableDocsStory(buttonAsLinks);
 
 export const events: React.FC<{
   onClick: () => void;
@@ -228,6 +231,7 @@ export const events: React.FC<{
     </Box>
   </div>
 );
+disableDocsStory(events);
 
 export const withChildren = () => (
   <div>
@@ -346,6 +350,7 @@ export const withChildren = () => (
     </Box>
   </div>
 );
+disableDocsStory(withChildren);
 
 export const loading = () => (
   <div>
@@ -397,3 +402,4 @@ export const loading = () => (
     </div>
   </div>
 );
+disableDocsStory(loading);

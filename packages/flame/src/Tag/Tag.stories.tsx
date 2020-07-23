@@ -9,6 +9,11 @@ import { Text, TextContent, Heading2, Heading3 } from '../Text';
 import { Box } from '../Core';
 import { Icon } from '../Icon';
 
+import {
+  disableChromaticSnapshots,
+  disableDocsStory,
+} from '../../../../.storybook/story-modifiers';
+
 export default {
   title: 'Components/Tag',
   component: Tag,
@@ -66,6 +71,8 @@ export const sizes = () => (
     </Box>
   </TextContent>
 );
+disableChromaticSnapshots(sizes);
+disableDocsStory(sizes);
 
 export const events = () => (
   <TextContent>
@@ -86,6 +93,8 @@ export const events = () => (
     <Text size="small">(See action logger)</Text>
   </TextContent>
 );
+disableChromaticSnapshots(events);
+disableDocsStory(events);
 
 export const functionality = () => (
   <TextContent>
@@ -97,3 +106,5 @@ export const functionality = () => (
     <Text size="small">(Click label or remove icon)</Text>
   </TextContent>
 );
+disableChromaticSnapshots(functionality);
+disableDocsStory(functionality);

@@ -13,6 +13,10 @@ import { Box } from '../../Core';
 import IconList from '../../../svg/Icon.list.json';
 import '../../../svg/Icons/icon.scss';
 import { Ul } from '../../../../../.storybook/components/Ul';
+import {
+  disableDocsStory,
+  disableChromaticSnapshots,
+} from '../../../../../.storybook/story-modifiers';
 
 export default {
   title: 'Components/Icon',
@@ -339,6 +343,7 @@ export const colors = () => (
     </div>
   </div>
 );
+disableDocsStory(colors);
 
 export const usingIndividualIcons = () => (
   <div className="icon-sprite-listing">
@@ -369,6 +374,8 @@ export const usingIndividualIcons = () => (
     </div>
   </div>
 );
+disableDocsStory(usingIndividualIcons);
+disableChromaticSnapshots(usingIndividualIcons);
 
 export const sprite = () => (
   <div className="icon-sprite-listing">

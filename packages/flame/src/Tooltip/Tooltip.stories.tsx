@@ -4,6 +4,11 @@ import { Tooltip, TooltipPlacement } from './Tooltip';
 
 import { Input } from '../Input';
 import { ExampleBox } from '../../../../.storybook/components/ExampleBox';
+import {
+  disableChromaticSnapshots,
+  disableDocsStory,
+} from '../../../../.storybook/story-modifiers';
+import { overlayingPopoverTest } from '../Popover/Popover.stories';
 
 export default {
   title: 'Components/Tooltip',
@@ -37,6 +42,7 @@ export const types = () => (
     </Tooltip>
   </div>
 );
+disableChromaticSnapshots(types);
 
 export const directions = () => (
   <div>
@@ -66,6 +72,7 @@ export const directions = () => (
     ))}
   </div>
 );
+disableDocsStory(directions);
 
 export const overlayingTooltipTest = () => (
   <div>
@@ -77,6 +84,7 @@ export const overlayingTooltipTest = () => (
     <Input label="I should be behind the tooltip" />
   </div>
 );
+disableDocsStory(overlayingPopoverTest);
 
 export const tooltipWithinAParagraph = () => (
   <p>
@@ -93,3 +101,4 @@ export const tooltipWithinAParagraph = () => (
     </Tooltip>
   </p>
 );
+disableDocsStory(tooltipWithinAParagraph);

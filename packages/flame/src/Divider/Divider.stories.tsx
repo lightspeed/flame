@@ -6,6 +6,8 @@ import { Box } from '../Core';
 import { Card, CardHeader, CardSection, CardFooter } from '../Card';
 import { Icon } from '../Icon';
 
+import { disableChromaticSnapshots } from '../../../../.storybook/story-modifiers';
+
 const cardsStyles = { maxWidth: '640px' };
 const cardsContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
 
@@ -113,6 +115,7 @@ export const variant = () => (
     </Divider>
   </div>
 );
+disableChromaticSnapshots(variant);
 
 export const spacing = () => (
   <div>
@@ -148,6 +151,7 @@ export const spacing = () => (
     </Box>
   </div>
 );
+disableChromaticSnapshots(spacing);
 
 export const customColors = () => (
   <div>
@@ -157,3 +161,4 @@ export const customColors = () => (
     <Divider color="#F42069" />
   </div>
 );
+disableChromaticSnapshots(customColors);

@@ -5,6 +5,11 @@ import { Dialog } from './Dialog';
 import { Alert } from '../Alert';
 import { Button } from '../Button';
 
+import {
+  disableDocsStory,
+  disableChromaticSnapshots,
+} from '../../../../.storybook/story-modifiers';
+
 const title = 'Dialog Prompt';
 const message = `It seems you're about to do this action. It might be destructive or not, but anyways, a heads up about what's going to happen. Are you really sure you want to proceed?`;
 const Potato = () => <div>potato</div>;
@@ -117,6 +122,7 @@ export default {
 };
 
 export const story = () => <DialogHelper />;
+disableChromaticSnapshots(story);
 
 export const percyStory = () => (
   <Dialog
@@ -131,3 +137,4 @@ export const percyStory = () => (
     type="default"
   />
 );
+disableDocsStory(percyStory);

@@ -1,10 +1,15 @@
 import * as React from 'react';
 
 import { ToasterProvider, useToasts } from './index';
+
 import { ActionableToastContent, Toaster } from './Toaster';
 import { Button } from '../Button';
 import { Heading2 } from '../Text';
 import { Modal } from '../Modal';
+import {
+  disableChromaticSnapshots,
+  disableDocsStory,
+} from '../../../../.storybook/story-modifiers';
 
 export default {
   title: 'Components/Toaster',
@@ -134,6 +139,7 @@ export const toaster = () => (
     </div>
   </ToasterProvider>
 );
+disableChromaticSnapshots(toaster);
 
 export const percySnapshots = () => {
   const commonProps = {
@@ -174,6 +180,7 @@ export const percySnapshots = () => {
     </ToasterProvider>
   );
 };
+disableDocsStory(percySnapshots);
 
 export const toasterInAModal = () => (
   <ToasterProvider>
@@ -195,3 +202,5 @@ export const toasterInAModal = () => (
     </Modal>
   </ToasterProvider>
 );
+disableDocsStory(toasterInAModal);
+disableChromaticSnapshots(toasterInAModal);

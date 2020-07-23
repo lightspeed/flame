@@ -7,6 +7,11 @@ import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
 
+import {
+  disableDocsStory,
+  disableChromaticSnapshots,
+} from '../../../../.storybook/story-modifiers';
+
 export default {
   title: 'Components/Input',
   component: Input,
@@ -184,3 +189,5 @@ export const events: React.FC<{
     </Box>
   </div>
 );
+disableDocsStory(events);
+disableChromaticSnapshots(events);

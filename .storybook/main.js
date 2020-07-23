@@ -22,6 +22,10 @@ const babelOptions = {
   plugins: [
     '@babel/plugin-proposal-object-rest-spread',
     'emotion',
+    // need to resolve the dependency differently in storybook.
+    // It's an issue on their side where they use an old version of
+    // react-popper which magically clashes with ours
+    // for the this reason, we alias react-popper differently.
     [
       'module-resolver',
       {

@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { Autocomplete } from './index';
+
 import AutocompleteExample, { exampleProps, exampleItems } from './examples';
 
 import { Box } from '../Core';
 import { Text } from '../Text';
+import { disableChromaticSnapshots } from '../../../../.storybook/story-modifiers';
 
 export default {
   title: 'Components/Autocomplete',
@@ -112,6 +114,7 @@ export const autocomplete = () => (
     />
   </div>
 );
+disableChromaticSnapshots(autocomplete);
 
 export const states = () => (
   <div>
@@ -209,3 +212,4 @@ export const events: React.FC<{
     />
   </div>
 );
+disableChromaticSnapshots(events);

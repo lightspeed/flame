@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Dropdown, DropdownContent, useDropdown } from './Dropdown';
+
 import { Box, Flex } from '../Core';
 import { Icon } from '../Icon';
 import { Input } from '../Input';
@@ -8,6 +9,11 @@ import { Divider } from '../Divider';
 import { Button } from '../Button';
 import { Select } from '../Select';
 import { Heading3, TextLink } from '../Text';
+
+import {
+  disableDocsStory,
+  disableChromaticSnapshots,
+} from '../../../../.storybook/story-modifiers';
 
 export default {
   title: 'Components/Dropdown',
@@ -164,8 +170,9 @@ export const story = () => (
     </Flex>
   </div>
 );
+disableChromaticSnapshots(story);
 
-export const storyForpercy = () => (
+export const storyForPercy = () => (
   <div>
     <Flex justifyContent="flex-start">
       <Dropdown buttonContent="Menu" placement="left-start" initiallyOpen>
@@ -227,3 +234,4 @@ export const storyForpercy = () => (
     </Flex>
   </div>
 );
+disableDocsStory(storyForPercy);

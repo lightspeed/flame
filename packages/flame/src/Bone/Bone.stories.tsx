@@ -6,6 +6,8 @@ import { Text, Heading2 } from '../Text';
 import { Card, CardSection } from '../Card';
 import { Divider } from '../Divider';
 
+import { disableChromaticSnapshots } from '../../../../.storybook/story-modifiers';
+
 export default {
   title: 'Components/Bone',
   component: Bone,
@@ -126,3 +128,4 @@ export const types = () => (
     </div>
   </div>
 );
+disableChromaticSnapshots(types);
