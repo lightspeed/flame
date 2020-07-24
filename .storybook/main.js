@@ -43,6 +43,7 @@ module.exports = {
     '../packages/flame-css/stories/*.stories.@(mdx|tsx)',
   ],
   addons: [
+    './addons/theme-switcher/register',
     '@storybook/addon-actions',
     {
       name: '@storybook/addon-docs',

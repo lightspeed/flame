@@ -1,14 +1,31 @@
 import React from 'react';
 import { Global } from '@emotion/core';
 import { addDecorator, addParameters } from '@storybook/react';
-import { FlameGlobalStyles, FlameTheme, Box } from '../packages/flame/src/Core/index.tsx';
-import { Select } from '../packages/flame/src/Select/index.tsx';
+import { FlameGlobalStyles, FlameTheme, themePicker } from '../packages/flame/src/Core/index.tsx';
 import './stories.scss';
 
 const FlameStyling = ({ children }) => {
   const [state, setState] = React.useState({
     selectedTheme: localStorage.getItem('theme') || 'flame',
   });
+
+  React.useEffect(() => {
+    function checkFlameTheme() {
+      const item = localStorage.getItem('theme');
+
+      if (item) {
+        setState({ selectedTheme: localStorage.getItem('theme') });
+      }
+    }
+
+    window.addEventListener('storage', checkFlameTheme);
+
+    return () => {
+      window.removeEventListener('storage', checkFlameTheme);
+    };
+  }, []);
+
+  const theme = themePicker(state.selectedTheme);
 
   return (
     <React.Fragment>
@@ -18,26 +35,13 @@ const FlameStyling = ({ children }) => {
           'a:hover': {
             color: '#4078c0',
           },
+          '.sbdocs.sbdocs-preview': {
+            backgroundColor: theme?.colors?.bodyBg,
+            color: theme?.colors?.textBody,
+          },
         }}
       />
-      <FlameTheme themeName={state.selectedTheme}>
-        <Box p={3}>
-          <Box mb={2} width="200px" className="hide-in-percy chromatic-ignore">
-            <Select
-              value={state.selectedTheme}
-              onChange={e => {
-                setState({ selectedTheme: e.target.value });
-                window.localStorage.setItem('theme', e.target.value);
-              }}
-            >
-              <option value="flame">Flame (Default theme)</option>
-              <option value="light">Lightspeed (Old theme)</option>
-              <option value="experimentaldark">Dark (Experimental)</option>
-            </Select>
-          </Box>
-          {children}
-        </Box>
-      </FlameTheme>
+      <FlameTheme themeName={state.selectedTheme}>{children}</FlameTheme>
     </React.Fragment>
   );
 };
