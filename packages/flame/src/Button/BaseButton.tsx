@@ -10,10 +10,9 @@ import {
   compose,
 } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
-import { Merge } from 'type-fest';
 import { border, BorderProps } from '../Core';
+import { ButtonProps } from '.';
 
-export type ButtonHTML = React.HTMLProps<HTMLButtonElement> & React.HTMLProps<HTMLAnchorElement>;
 export type ButtonSizes = 'small' | 'large' | 'xlarge' | 'medium';
 export type BaseButtonProps = {
   theme?: any;
@@ -71,7 +70,7 @@ const setDisabled = (props: BaseButtonProps) =>
     box-shadow: none;
   `;
 
-export const BaseButton = styled('button')<Merge<ButtonHTML, BaseButtonProps>>`
+export const BaseButton = styled('button')`
   appearance: none;
   box-sizing: border-box;
   position: relative;
@@ -102,13 +101,10 @@ export const BaseButton = styled('button')<Merge<ButtonHTML, BaseButtonProps>>`
 
   ${setDisabled};
 
-  ${compose(
-    space,
-    border,
-    layout,
-    zIndex,
-  )};
-`;
+  ${compose(space, border, layout, zIndex)};
+` as React.FC<
+  (React.ComponentPropsWithRef<'button'> | React.ComponentPropsWithRef<'a'>) & ButtonProps
+>;
 
 BaseButton.defaultProps = {
   type: 'button',

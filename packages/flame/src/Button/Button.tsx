@@ -3,9 +3,8 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { variant as styledVariant } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
-import { Merge } from 'type-fest';
 import { Spinner } from '../Spinner';
-import { BaseButton, ButtonHTML, ButtonSizes, BaseButtonProps } from './BaseButton';
+import { BaseButton, ButtonSizes, BaseButtonProps } from './BaseButton';
 
 type ColorVariants = 'neutral' | 'default' | 'primary' | 'secondary' | 'danger' | string;
 
@@ -152,35 +151,29 @@ const ChildWrapper = styled('span')<ChildWrapperProps>`
     `};
 `;
 
-export type ButtonProps = Merge<
-  ButtonHTML,
-  BaseButtonProps & {
-    /** Sets the Button loading state */
-    loading?: boolean;
-    /** Disables space between a Button's children */
-    noSpacing?: boolean;
-    /** Sets Button fill. Does not apply to default variant */
-    fill?: boolean;
-    /** One of 'neutral', 'primary', 'secondary', 'danger' */
-    variant?: ColorVariants;
-    /** Forces cursor states onto Button */
-    forcedState?: 'hover' | 'active';
-    /** CSS class name */
-    className?: string;
-    /** Sets the disabled state */
-    disabled?: boolean;
-    /** Href for navigation. Turns the Button into a link. */
-    href?: string;
-  }
->;
+export type ButtonProps = BaseButtonProps & {
+  /** Sets the Button loading state */
+  loading?: boolean;
+  /** Disables space between a Button's children */
+  noSpacing?: boolean;
+  /** Sets Button fill. Does not apply to default variant */
+  fill?: boolean;
+  /** One of 'neutral', 'primary', 'secondary', 'danger' */
+  variant?: ColorVariants;
+  /** Forces cursor states onto Button */
+  forcedState?: 'hover' | 'active';
+  /** CSS class name */
+  className?: string;
+  /** Sets the disabled state */
+  disabled?: boolean;
+  /** Href for navigation. Turns the Button into a link. */
+  href?: string;
+};
 
 /**
  * Buttons are used to take action or confirm a decision. They help merchants get things done.
  */
-export const Button = React.forwardRef<
-  React.ComponentPropsWithRef<'button'> | React.ComponentPropsWithRef<'a'>,
-  ButtonProps
->(
+export const Button = React.forwardRef<any, ButtonProps>(
   (
     {
       loading,
@@ -232,7 +225,9 @@ export const Button = React.forwardRef<
       </LinkifiedButton>
     );
   },
-);
+) as React.FC<
+  (React.ComponentPropsWithRef<'button'> | React.ComponentPropsWithRef<'a'>) & ButtonProps
+>;
 
 Button.defaultProps = {
   size: 'medium',

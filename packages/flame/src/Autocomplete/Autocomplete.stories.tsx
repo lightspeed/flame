@@ -35,7 +35,7 @@ function onCreateOption(value: any, currentItems: any) {
   });
 }
 
-function onCreateOptionError(value: any) {
+function onCreateOptionError() {
   return new Promise((_, reject) =>
     setTimeout(() => {
       return reject();
