@@ -80,7 +80,7 @@
     "child-process-promise": "^2.2.1",
     "chokidar-cli": "^1.2.0",
     "chromatic": "^5.0.0",
-    "codecov": "^3.6.1",
+    "codecov": "^3.7.2",
     "concurrently": "^3.5.1",
     "eslint": "^5.14.1",
     "eslint-import-resolver-alias": "^1.1.1",
