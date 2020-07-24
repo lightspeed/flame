@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Typecast Button to bypass weird automatic type generation shenanigans
+- Typecast Button to bypass weird automatic type generation shenanigans ([#125](https://github.com/lightspeed/flame/pull/125))
 
 ## 2.0.0 - 2020-07-17
 
