@@ -18,7 +18,10 @@ const outer = outerValues.reduce((obj: Record<string, string>, { y, blur }, inde
   return obj;
 }, {});
 
-const innerValues = [{ y: 1, blur: 2, r: 56, g: 61, b: 61, alpha: '0.1' }, { y: 0, blur: 6 }];
+const innerValues = [
+  { y: 1, blur: 2, r: 56, g: 61, b: 61, alpha: '0.1' },
+  { y: 0, blur: 6 },
+];
 const inner = innerValues.reduce(
   (obj: Record<string, string>, { y, blur, r, g, b, alpha }, index) => {
     const scale = index + 1;

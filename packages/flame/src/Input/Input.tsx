@@ -139,11 +139,7 @@ const Wrapper = styled('div')<WrapperProps>`
   transition: all ${themeGet('transition.transition-duration-fast')} ease-in-out;
   width: 100%;
 
-  ${compose(
-    layout,
-    border,
-    zIndex,
-  )}
+  ${compose(layout, border, zIndex)}
 
   ${props =>
     props.disabled &&

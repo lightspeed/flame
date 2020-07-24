@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import * as React from 'react';
 
 import { Group, GroupAddon } from './index';
@@ -171,7 +172,7 @@ export const spacing = () => (
       <h3>noSpacing Vertical Group</h3>
       <p>
         Note when using the vertical group, you will probably need to pass{' '}
-        {<code>align={'"center"'}</code>} yourself to make sure {"it's"} aligned correctly
+        <code>align="center"</code> yourself to make sure it's aligned correctly
       </p>
       <Group type="vertical" noSpacing>
         <GroupAddon align="center">Header Addon</GroupAddon>
@@ -213,8 +214,7 @@ export const addon = () => (
 
       <h4>Addon horizontal positioning</h4>
       <Text as="h5" mb={1}>
-        align={'"left"'}
-        (Default)
+        align="left" (Default)
       </Text>
       <Box mb={3}>
         <div>
@@ -228,7 +228,7 @@ export const addon = () => (
       </Box>
 
       <Text as="h5" mb={1}>
-        align={'"center"'}
+        align="center"
       </Text>
       <Box mb={3}>
         <div>
@@ -242,7 +242,7 @@ export const addon = () => (
       </Box>
 
       <Text as="h5" mb={1}>
-        align={'"right"'}
+        align="right"
       </Text>
       <Box mb={3}>
         <div>
@@ -257,7 +257,7 @@ export const addon = () => (
 
       <h4>Addon vertically positioning</h4>
       <Text as="h5" mb={1}>
-        verticalAlign={'"top"'}
+        verticalAlign="top"
       </Text>
       <Box mb={3}>
         <div>
@@ -272,7 +272,7 @@ export const addon = () => (
       </Box>
 
       <Text as="h5" mb={1}>
-        verticalAlign={'"middle"'} (default)
+        verticalAlign="middle" (default)
       </Text>
       <Box mb={3}>
         <div>
@@ -287,7 +287,7 @@ export const addon = () => (
       </Box>
 
       <Text as="h5" mb={1}>
-        verticalAlign={'"bottom"'}
+        verticalAlign="bottom"
       </Text>
       <Box mb={3}>
         <div>
@@ -320,7 +320,7 @@ export const addon = () => (
         </Group>
       </Box>
 
-      <h4>Fixed width and {'align="center"'}</h4>
+      <h4>Fixed width and align="center"</h4>
       <Box mb={3}>
         <div>
           <Group noSpacing block>
@@ -337,7 +337,7 @@ export const addon = () => (
       <h3>Vertical Group Addon</h3>
       <p>
         Note when using the vertical group, you will probably need to pass{' '}
-        {<code>align={'"center"'}</code>} yourself to make sure {"it's"} aligned correctly
+        <code>align="center"</code> yourself to make sure it's aligned correctly
       </p>
       <Box mb={3}>
         <Box mb={3}>
@@ -359,7 +359,7 @@ export const addon = () => (
 
       <h4>Addon horizontal positioning</h4>
       <Text as="h5" mb={1}>
-        align={'"left"'} (Default)
+        align="left" (Default)
       </Text>
       <Box mb={3}>
         <div>
@@ -372,7 +372,7 @@ export const addon = () => (
       </Box>
 
       <Text as="h5" mb={1}>
-        align={'"center"'}
+        align="center"
       </Text>
       <Box mb={3}>
         <div>
@@ -385,7 +385,7 @@ export const addon = () => (
       </Box>
 
       <Text as="h5" mb={1}>
-        align={'"right"'}
+        align="right"
       </Text>
       <Box mb={3}>
         <div>
@@ -399,7 +399,7 @@ export const addon = () => (
 
       <h4>Addon vertically positioning</h4>
       <Text as="h5" mb={1}>
-        verticalAlign={'"top"'}
+        verticalAlign="top"
       </Text>
       <Box mb={3}>
         <div>
@@ -414,7 +414,7 @@ export const addon = () => (
       </Box>
 
       <Text as="h5" mb={1}>
-        verticalAlign={'"middle"'} (default)
+        verticalAlign="middle" (default)
       </Text>
       <Box mb={3}>
         <div>
@@ -429,7 +429,7 @@ export const addon = () => (
       </Box>
 
       <Text as="h5" mb={1}>
-        verticalAlign={'"bottom"'}
+        verticalAlign="bottom"
       </Text>
       <Box mb={3}>
         <div>
