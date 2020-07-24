@@ -1,4 +1,4 @@
-import utilitiesMap from '../generate-utilities.ts';
+import utilitiesMap from '../generate-utilities';
 
 describe('generate-utilities', () => {
   utilitiesMap.forEach(([fileName, cssOutput]) => {
