@@ -52,7 +52,7 @@ const borderRadii = system({
   },
 });
 
-export const border = compose(borderRadii, styledSystemBorder);
+const border = compose(borderRadii, styledSystemBorder);
 
 type AsProps = { as?: string };
 export type FlameBoxProps = SpaceProps &
@@ -86,7 +86,7 @@ export type FlameThemeProps = {
   themeName?: string;
   themeOverrides?: any;
 };
-export const FlameTheme: React.FunctionComponent<FlameThemeProps> = ({
+const FlameTheme: React.FunctionComponent<FlameThemeProps> = ({
   children,
   themeName,
   themeOverrides,
@@ -96,18 +96,16 @@ export const FlameTheme: React.FunctionComponent<FlameThemeProps> = ({
 };
 
 // WARNING!
-// This component will be deprecated in v2. Instead, use the link tag directly:
+// This component will be deprecated in v3. Instead, use the link tag directly:
 // https://github.com/lightspeed/flame#link-fonts
-export const FlameFonts: React.FunctionComponent = () => (
+const FlameFonts: React.FunctionComponent = () => (
   <link
     href="https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin-ext"
     rel="stylesheet"
   />
 );
 
-export const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = ({
-  themeName,
-}) => {
+const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = ({ themeName }) => {
   const selectedTheme = themePicker(themeName);
 
   return (
@@ -136,4 +134,13 @@ export const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> 
   );
 };
 
-export { lightTheme, flameTheme, themeGet, ThemeUIFlame };
+export {
+  lightTheme,
+  flameTheme,
+  FlameFonts,
+  FlameTheme,
+  FlameGlobalStyles,
+  themeGet,
+  ThemeUIFlame,
+  border,
+};
