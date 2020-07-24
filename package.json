@@ -83,7 +83,7 @@
     "child-process-promise": "^2.2.1",
     "chokidar-cli": "^1.2.0",
     "chromatic": "^5.0.0",
-    "codecov": "^3.6.1",
+    "codecov": "^3.7.2",
     "concurrently": "^3.5.1",
     "css-loader": "^3.6.0",
     "eslint": "^5.14.1",
