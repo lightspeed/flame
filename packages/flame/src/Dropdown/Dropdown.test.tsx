@@ -4,7 +4,7 @@ import { customRender, fireEvent, act, screen } from 'test-utils';
 import { Dropdown, DropdownContent, useDropdown } from './Dropdown';
 
 describe('<Dropdown />', () => {
-  it('should render a button with out text content', async () => {
+  it('should render a button without text content', async () => {
     await act(async () => {
       customRender(
         <Dropdown buttonContent="My Dropdown">
