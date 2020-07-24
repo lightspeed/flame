@@ -113,6 +113,7 @@ export const Dropdown: React.FC<Props> = ({
   zIndex = 1,
   children,
   onClick,
+  ...restProps
 }) => {
   const [targetRef, setTargetRef] = React.useState(null);
   const [popperRef, setPopperRef] = React.useState(null);
@@ -168,6 +169,7 @@ export const Dropdown: React.FC<Props> = ({
             }
           }}
           forcedState={isActive ? 'active' : null}
+          {...(restProps as any)}
         >
           <React.Fragment>{buttonContent}&nbsp;</React.Fragment>
           <IconSmallChevronDown />
