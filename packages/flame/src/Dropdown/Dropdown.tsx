@@ -9,8 +9,8 @@ import { Box, FlameBoxProps } from '../Core';
 import { Button, ButtonProps } from '../Button';
 import { IconSmallChevronDown } from '../Icon/SmallChevronDown';
 import { BasePopoverContainer, PopoverContainerProps } from '../Popover/PopoverContainer';
-import { usePopper } from '../hooks/usePopper';
 import { useToggle } from '../hooks/useToggle';
+import { usePopper } from '../hooks/usePopper';
 import { useEventListener } from '../hooks/useEventListener';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
 
@@ -161,9 +161,9 @@ export const Dropdown: React.FC<Props> = ({
         <Button
           pr={2}
           pl={2}
-          onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+          onClick={(event: any) => {
             if (typeof onClick === 'function') {
-              onClick(toggle, event);
+              onClick(toggle, event as React.MouseEvent<HTMLButtonElement, MouseEvent>);
             } else {
               toggle();
             }

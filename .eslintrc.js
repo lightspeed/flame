@@ -15,6 +15,7 @@ module.exports = {
     // Enabling this here for now but it should eventually be done in our @lightspeed/eslint-config
     // See https://github.com/lightspeedretail/web-tools/issues/65
     '@typescript-eslint/ban-types': 'error',
+    'jest/valid-describe': 'off',
   },
   overrides: [
     {

@@ -18,12 +18,7 @@ export const InputGroupAddon = styled(Flex)<InputGroupAddonProps>`
   border: solid 1px ${themeGet('groupStyles.addon.borderColor')};
   border-radius: ${themeGet('radii.radius-1')};
   align-items: center;
-  ${compose(
-    border,
-    color,
-    space,
-    zIndex,
-  )};
+  ${compose(border, color, space, zIndex)};
 `;
 
 /**

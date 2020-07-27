@@ -37,10 +37,7 @@ export type CardSectionProps = CardCommonProps;
  */
 export const CardSection = styled('div')<CardSectionProps>`
   color: ${themeGet('colors.gray')};
-  ${compose(
-    color,
-    space,
-  )};
+  ${compose(color, space)};
   ${setSectionSizingProp};
 `;
 
@@ -218,9 +215,6 @@ export const Card = styled('div')<CardProps>`
   }
 
   ${setCardVariant};
-  ${compose(
-    color,
-    space,
-  )};
+  ${compose(color, space)};
   ${setCardSizingProp};
 `;
