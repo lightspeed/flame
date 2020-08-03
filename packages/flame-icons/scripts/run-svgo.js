@@ -2,7 +2,7 @@ const fs = require('fs');
 const Svgo = require('svgo');
 const { argv } = require('yargs');
 
-const svgDirPath = `./svg/Icons/`;
+const svgDirPath = `./src/`;
 
 const svgoconfig = {
   multipass: true,

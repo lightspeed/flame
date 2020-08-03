@@ -1,9 +1,9 @@
 import * as React from 'react';
 
+import flagList from '@lightspeed/flame-flags/src/flag-iso.list.json';
 // We load the flag-sprite through the raw-loader and through SVGInline for the story
 // @ts-ignore
-import flagSprite from '!raw-loader!../../../svg/flag-sprite.svg'; // eslint-disable-line
-import '../../../svg/Flags/flag.scss';
+import flagSprite from '!raw-loader!@lightspeed/flame-flags/src/spritesheet.svg'; // eslint-disable-line
 
 import { Flag } from '../index';
 import { FlagCA } from '../CA';
@@ -13,7 +13,6 @@ import { Box, Flex } from '../../Core';
 import { Button } from '../../Button';
 import { Input } from '../../Input';
 import { Text } from '../../Text';
-import flagList from '../../../svg/flag.list.json';
 import { Ul } from '../../../../../.storybook/components/Ul';
 import { SpacedGroup } from '../../../../../.storybook/components/SpacedGroup';
 

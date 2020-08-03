@@ -1,0 +1,27 @@
+{
+  "name": "@lightspeed/flame-flags",
+  "version": "1.0.0",
+  "description": "Flag icons used by the Flame design system",
+  "author": "Lightspeed",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/lightspeed/flame#readme",
+  "repository": "https://github.com/lightspeed/flame",
+  "bugs": {
+    "url": "https://github.com/lightspeed/flame/issues"
+  },
+  "private": false,
+  "devDependencies": {
+    "fs-extra": "^9.0.1",
+    "lodash": "^4.17.19",
+    "prettier": "^1.16.1",
+    "yargs": "^15.4.1"
+  },
+  "scripts": {
+    "build": "yarn build:flag-sprite",
+    "build:flag-sprite": "node ./scripts/generate-flags.js",
+    "prepublish": "yarn build"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

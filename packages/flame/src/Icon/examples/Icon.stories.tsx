@@ -1,17 +1,17 @@
 import * as React from 'react';
 import camelCase from 'lodash/camelCase';
 
+import IconList from '@lightspeed/flame-icons/src/Icon.list.json';
+
 // We load the icon-sprite through the raw-loader and through SVGInline for the story
 // @ts-ignore
-import IconSprite from '!raw-loader!../icon-sprite.svg'; // eslint-disable-line import/no-webpack-loader-syntax, import/no-unresolved
-
+import IconSprite from '!raw-loader!@lightspeed/flame-icons/src/spritesheet.svg'; // eslint-disable-line
 import { Icon } from '../index';
 import { IconAdd } from '../Add';
 import { IconArrowDown } from '../ArrowDown';
 
 import { Box } from '../../Core';
-import IconList from '../../../svg/Icon.list.json';
-import '../../../svg/Icons/icon.scss';
+// import '../../../svg/Icons/icon.scss';
 import { Ul } from '../../../../../.storybook/components/Ul';
 import {
   disableDocsStory,
@@ -90,7 +90,7 @@ class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresente
             className="cr-text-xs cr-gray-300"
             style={{ cursor: 'pointer', textAlign: 'right', listStyle: 'none' }}
           >
-            {(iconList[name as string] as any).map((iconName: string) => (
+            {(iconList[name as string] as any).modifiers.map((iconName: string) => (
               <li
                 key={iconName}
                 onMouseEnter={this.handleOnMouseEnter}

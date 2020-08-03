@@ -8,5 +8,5 @@ const baseCssClass = `
 }
 `;
 
-fs.writeFileSync(`./svg/Flags/flag.scss`, baseCssClass, 'utf8');
-fs.writeFileSync(`./svg/Flags/flag.css`, baseCssClass, 'utf8');
+fs.writeFileSync(`./src/Flag/flag.scss`, baseCssClass, 'utf8');
+fs.writeFileSync(`./src/Flag/flag.css`, baseCssClass, 'utf8');

@@ -49,7 +49,7 @@ const sass = Object.keys(classToProperty)
 
 // Write as sass
 const sassOutput = `@import '@lightspeed/flame-tokens/index.scss';\n${sass}${baseCssClass}`;
-fs.writeFileSync(`./svg/Icons/icon.scss`, sassOutput, 'utf8');
+fs.writeFileSync(`./src/Icon/icon.scss`, sassOutput, 'utf8');
 
 // Write as css...
 const css = Object.keys(classToProperty)
@@ -64,4 +64,4 @@ const css = Object.keys(classToProperty)
   .join('\n');
 
 const cssOutput = `${css}${baseCssClass}`;
-fs.writeFileSync(`./svg/Icons/icon.css`, cssOutput, 'utf8');
+fs.writeFileSync(`./src/Icon/icon.css`, cssOutput, 'utf8');

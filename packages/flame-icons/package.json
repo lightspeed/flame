@@ -1,0 +1,29 @@
+{
+  "name": "@lightspeed/flame-icons",
+  "version": "1.0.0",
+  "description": "Icons used by the Flame design system",
+  "author": "Lightspeed",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/lightspeed/flame#readme",
+  "repository": "https://github.com/lightspeed/flame",
+  "bugs": {
+    "url": "https://github.com/lightspeed/flame/issues"
+  },
+  "private": false,
+  "devDependencies": {
+    "fs-extra": "^9.0.1",
+    "lodash": "^4.17.19",
+    "prettier": "^1.16.1",
+    "svgo": "^1.3.2",
+    "yargs": "^15.4.1"
+  },
+  "scripts": {
+    "build": "yarn run-svgo && yarn build:icon-sprite",
+    "build:icon-sprite": "node ./scripts/generate-icons.js",
+    "prepublish": "yarn build",
+    "run-svgo": "node ./scripts/run-svgo.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
