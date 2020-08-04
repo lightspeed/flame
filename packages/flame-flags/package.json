@@ -17,8 +17,7 @@
     "yargs": "^15.4.1"
   },
   "scripts": {
-    "build": "yarn build:flag-sprite",
-    "build:flag-sprite": "node ./scripts/generate-flags.js",
+    "build": "node ./scripts/generate-flags.js && node ./scripts/generate-flags-css-utilities.js",
     "regenerate-readme": "node ./scripts/build-readme-flag-table",
     "prepublish": "yarn build"
   },

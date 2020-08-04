@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const prettier = require('prettier');
 const _ = require('lodash');
-const icons = require('@lightspeed/flame-icons/src/Icon.list.json');
+const icons = require('@lightspeed/flame-icons/dist/Icon.list.json');
 
 const prettierConfig = require('../../../prettier.config');
 

@@ -1,23 +1,23 @@
-const fs = require('fs');
+const fs = require('fs-extra');
 const tokens = require('@lightspeed/flame-tokens');
 
 // @TODO: export this from global helper functions
-const namespace = 'cr-';
+const namespace = 'fl-';
 const classToProperty = {
-  'icon-base-1': '--cr-icon-base-1-fill',
-  'icon-base-2': '--cr-icon-base-2-fill',
-  'icon-details-1': '--cr-icon-details-1-fill',
-  'icon-details-2': '--cr-icon-details-2-fill',
+  'icon-base-1': '--fl-icon-base-1-fill',
+  'icon-base-2': '--fl-icon-base-2-fill',
+  'icon-details-1': '--fl-icon-details-1-fill',
+  'icon-details-2': '--fl-icon-details-2-fill',
 };
 
 const baseCssClass = `
-.cr-icon {
+.fl-icon {
   width: 1rem;
   height: 1rem;
   vertical-align: text-bottom;
 
-  --cr-icon-details-1-fill: none;
-  --cr-icon-details-2-fill: #fff;
+  --fl-icon-details-1-fill: none;
+  --fl-icon-details-2-fill: #fff;
 }
 `;
 
@@ -37,6 +37,8 @@ function generateClasses({ separator = '', property, data, noSassVars = false })
   }, '');
 }
 
+fs.ensureDirSync('./dist/');
+
 const sass = Object.keys(classToProperty)
   .map(name =>
     generateClasses({
@@ -49,7 +51,7 @@ const sass = Object.keys(classToProperty)
 
 // Write as sass
 const sassOutput = `@import '@lightspeed/flame-tokens/index.scss';\n${sass}${baseCssClass}`;
-fs.writeFileSync(`./src/Icon/icon.scss`, sassOutput, 'utf8');
+fs.writeFileSync(`./dist/icon.scss`, sassOutput, 'utf8');
 
 // Write as css...
 const css = Object.keys(classToProperty)
@@ -64,4 +66,4 @@ const css = Object.keys(classToProperty)
   .join('\n');
 
 const cssOutput = `${css}${baseCssClass}`;
-fs.writeFileSync(`./src/Icon/icon.css`, cssOutput, 'utf8');
+fs.writeFileSync(`./dist/icon.css`, cssOutput, 'utf8');

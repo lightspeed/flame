@@ -11,6 +11,7 @@
   },
   "private": false,
   "devDependencies": {
+    "@lightspeed/flame-tokens": "^1.0.0",
     "fs-extra": "^9.0.1",
     "lodash": "^4.17.19",
     "prettier": "^1.16.1",
@@ -18,11 +19,9 @@
     "yargs": "^15.4.1"
   },
   "scripts": {
-    "build": "yarn run-svgo && yarn build:icon-sprite",
+    "build": "node ./scripts/run-svgo.js && node ./scripts/generate-icons.js && node ./scripts/generate-icon-css-utilities.js",
     "regenerate-readme": "node ./scripts/build-readme-icon-table.js",
-    "build:icon-sprite": "node ./scripts/generate-icons.js",
-    "prepublish": "yarn build",
-    "run-svgo": "node ./scripts/run-svgo.js"
+    "prepublish": "yarn build"
   },
   "publishConfig": {
     "access": "public"

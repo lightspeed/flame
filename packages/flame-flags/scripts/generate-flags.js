@@ -10,8 +10,6 @@ delete prettierConfig.overrides;
 prettierConfig.parser = 'babel';
 
 const svgDirPath = `./src/`;
-const sourceDirPath = './src/';
-const flagsDirPath = `${sourceDirPath}`;
 const componentFlagISOs = [];
 const spriteSvg = [];
 
@@ -24,9 +22,7 @@ const flagList = flagIsoList.reduce((acc, value) => {
   return acc;
 }, {});
 
-if (!fs.existsSync(flagsDirPath)) {
-  fs.mkdirSync(flagsDirPath);
-}
+fs.ensureDirSync('./dist/');
 
 fs.readdir(svgDirPath, (err, svgPaths) => {
   if (err) throw err;
@@ -45,7 +41,7 @@ fs.readdir(svgDirPath, (err, svgPaths) => {
             const componentFlagISO = flagISO.replace('-', '_');
 
             const flagSVG = svg
-              .replace(/<svg(?:\s.+?)?>/, `<symbol id="cr-flag-${flagISO}">`)
+              .replace(/<svg(?:\s.+?)?>/, `<symbol id="fl-flag-${flagISO}">`)
               .replace(/<\/svg>/, `</symbol>`)
               .trim();
             spriteSvg.push({
@@ -62,9 +58,9 @@ fs.readdir(svgDirPath, (err, svgPaths) => {
         }),
     ),
   ).then(() => {
-    fs.writeFile(`src/Flag.list.json`, JSON.stringify(flagList));
+    fs.writeFile(`dist/Flag.list.json`, JSON.stringify(flagList));
     fs.writeFile(
-      `src/spritesheet.svg`,
+      `dist/spritemap.svg`,
       prettier
         .format(
           `<svg style="display: none">${_.sortBy(spriteSvg, 'sortKey')

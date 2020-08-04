@@ -3,7 +3,7 @@ import * as React from 'react';
 import flagList from '@lightspeed/flame-flags/src/flag-iso.list.json';
 // We load the flag-sprite through the raw-loader and through SVGInline for the story
 // @ts-ignore
-import flagSprite from '!raw-loader!@lightspeed/flame-flags/src/spritesheet.svg'; // eslint-disable-line
+import flagSprite from '!raw-loader!@lightspeed/flame-flags/dist/spritemap.svg'; // eslint-disable-line
 
 import { Flag } from '../index';
 import { FlagCA } from '../CA';

@@ -1,5 +1,4 @@
 const fs = require('fs-extra');
-const path = require('path');
 const _ = require('lodash');
 const prettier = require('prettier');
 const prettierConfig = require('../../../prettier.config');
@@ -9,14 +8,11 @@ delete prettierConfig.overrides;
 prettierConfig.parser = 'typescript';
 
 const svgDirPath = `./src/`;
-const iconsDirPath = `./src/`;
 const iconList = {};
 const componentIconNames = [];
 const spriteSvg = [];
 
-if (!fs.existsSync(iconsDirPath)) {
-  fs.mkdirSync(path.resolve(iconsDirPath));
-}
+fs.ensureDirSync('./dist/');
 
 fs.readdir(svgDirPath, (err, svgPaths) => {
   if (err) throw err;
@@ -35,9 +31,9 @@ fs.readdir(svgDirPath, (err, svgPaths) => {
             spriteSvg.push(
               svg
                 .replace(/<\/?svg(?:\s.+?)?>/g, '')
-                .replace(/id="((base|details)-\d)"/g, 'style="fill: var(--cr-icon-$1-fill)"')
+                .replace(/id="((base|details)-\d)"/g, 'style="fill: var(--fl-icon-$1-fill)"')
                 .replace(/fill-rule=/g, 'fillRule=')
-                .replace(/<g.*?>/, `<symbol id="cr-icon-${iconName}">`)
+                .replace(/<g.*?>/, `<symbol id="fl-icon-${iconName}">`)
                 .replace(/<\/g>(?!.*<\/g>)/, '</symbol>')
                 .trim(),
             );
@@ -58,7 +54,7 @@ fs.readdir(svgDirPath, (err, svgPaths) => {
   ).then(() => {
     try {
       fs.writeFileSync(
-        `${iconsDirPath}spritesheet.svg`,
+        `./dist/spritemap.svg`,
         prettier
           .format(`<svg style="display: none">${spriteSvg.sort().join('')}</svg>`)
           .replace(/;/, '')
@@ -71,7 +67,7 @@ fs.readdir(svgDirPath, (err, svgPaths) => {
     }
 
     fs.writeFileSync(
-      `${iconsDirPath}Icon.list.json`,
+      `./dist/Icon.list.json`,
       JSON.stringify(
         _(iconList)
           .toPairs()

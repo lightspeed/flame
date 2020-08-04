@@ -12,7 +12,7 @@
     "packages/*"
   ],
   "scripts": {
-    "bootstrap": "lerna run prepublish --scope @lightspeed/flame-tokens && lerna run bootstrap --scope @lightspeed/flame && lerna run build --scope @lightspeed/flame && lerna run prepublish --ignore @lightspeed/flame-tokens",
+    "bootstrap": "lerna run prepublish --scope=@lightspeed/{flame-tokens,flame-icons,flame-flags} && lerna run bootstrap --scope @lightspeed/flame && lerna run build --scope @lightspeed/flame && lerna run prepublish --ignore @lightspeed/flame-tokens",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,json,css,md}'",
     "test": "jest",
