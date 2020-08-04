@@ -19,6 +19,7 @@
   },
   "scripts": {
     "build": "yarn run-svgo && yarn build:icon-sprite",
+    "regenerate-readme": "node ./scripts/build-readme-icon-table.js",
     "build:icon-sprite": "node ./scripts/generate-icons.js",
     "prepublish": "yarn build",
     "run-svgo": "node ./scripts/run-svgo.js"

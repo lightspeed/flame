@@ -19,6 +19,7 @@
   "scripts": {
     "build": "yarn build:flag-sprite",
     "build:flag-sprite": "node ./scripts/generate-flags.js",
+    "regenerate-readme": "node ./scripts/build-readme-flag-table",
     "prepublish": "yarn build"
   },
   "publishConfig": {

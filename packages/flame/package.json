@@ -36,6 +36,8 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
+    "@lightspeed/flame-icons": "^1.0.0",
+    "@lightspeed/flame-flags": "^1.0.0",
     "@popperjs/core": "^2.4.2",
     "@styled-system/css": "^5.1.5",
     "@styled-system/theme-get": "5.0.16",
@@ -51,8 +53,6 @@
   },
   "devDependencies": {
     "@lightspeed/flame-tokens": "^1.0.0",
-    "@lightspeed/flame-icons": "^1.0.0",
-    "@lightspeed/flame-flags": "^1.0.0",
     "@types/lodash": "^4.14.123",
     "@types/react-modal": "^3.8.1",
     "@types/react-select": "^2.0.15",
