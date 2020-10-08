@@ -11,4 +11,4 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Added
 
-- New Flags package
+- Flame Flags now has its own package ([#126](https://github.com/lightspeed/flame/pull/126))

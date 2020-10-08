@@ -62,6 +62,7 @@ export { NextIcon as Icon${componentIconName} };
 
   componentIconNames.push(componentIconName);
 
+  // eslint-disable-next-line no-console
   console.log(`Building icon "${key}"...`);
   fs.writeFileSync(
     `src/Icon/${componentIconName}.tsx`,

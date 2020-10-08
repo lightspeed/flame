@@ -43,6 +43,7 @@ StyledFlag.displayName = 'Flag${componentFlagISO}';
 export type Flag${componentFlagISO}Props = FlagStyleProps;
 export { StyledFlag as Flag${componentFlagISO} };`;
 
+  // eslint-disable-next-line no-console
   console.log(`Building out flag "${value.code} (${value.name})"...`);
   fs.writeFile(
     `${flagsDirPath}/${componentFlagISO}.tsx`,
@@ -53,6 +54,7 @@ export { StyledFlag as Flag${componentFlagISO} };`;
   componentFlagISOs.push(componentFlagISO);
 });
 
+// eslint-disable-next-line no-console
 console.log(`Building out index helper file`);
 
 fs.writeFile(

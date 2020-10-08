@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## Breaking
 
-- Remove SVGs from the mainline repo. Split of icons/flags into their own package.
+- Remove SVGs from the mainline repo. Split of icons/flags into their own package ([#126](https://github.com/lightspeed/flame/pull/126))
 
 ### Fixed
 
