@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Typecast Button to bypass weird automatic type generation shenanigans ([#125](https://github.com/lightspeed/flame/pull/125))
+
 ## 2.0.0 - 2020-07-17
 
 See the full changeset on ([#99](https://github.com/lightspeed/flame/pull/99)).
@@ -105,7 +111,6 @@ const Example = () => {
   );
 };
 ```
-
 
 ## 2.0.0-rc.10 - 2020-07-08
 

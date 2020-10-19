@@ -27,8 +27,8 @@ const FormHelper: React.FC<FormHelperProps> = ({ status, children, ...restProps 
   );
 };
 
-export type BaseLabelProps = React.HTMLAttributes<HTMLLabelElement> & TextProps & { css?: any };
-const BaseLabel = styled(Text)<BaseLabelProps>`
+export type BaseLabelProps = React.ComponentPropsWithRef<'label'> & TextProps & { css?: any };
+const BaseLabel = styled(Text as any)<BaseLabelProps>`
   display: flex;
 `.withComponent('label');
 

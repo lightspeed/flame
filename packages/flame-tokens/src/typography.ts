@@ -6,7 +6,10 @@ const typeface = {
   monospace: 'monospace',
 };
 
-const weightsValues = [{ name: 'regular', value: 400 }, { name: 'bold', value: 700 }];
+const weightsValues = [
+  { name: 'regular', value: 400 },
+  { name: 'bold', value: 700 },
+];
 const weights = weightsValues.reduce((obj: Record<string, string>, { name, value }) => {
   // eslint-disable-next-line no-param-reassign
   obj[`${name}`] = `${value}`;

@@ -52,10 +52,7 @@ const borderRadii = system({
   },
 });
 
-const border = compose(
-  borderRadii,
-  styledSystemBorder,
-);
+const border = compose(borderRadii, styledSystemBorder);
 
 type AsProps = { as?: string };
 export type FlameBoxProps = SpaceProps &
@@ -64,22 +61,14 @@ export type FlameBoxProps = SpaceProps &
   TypographyProps &
   Partial<Omit<ColorProps, 'color'>> & // Fun clashing between native color prop & styled-system color prop
   AsProps;
-export const Box = styled('div')<FlameBoxProps>(
-  compose(
-    space,
-    layout,
-    typography,
-    color,
-    flexbox,
-  ),
-);
+export const Box = styled('div')<FlameBoxProps>(compose(space, layout, typography, color, flexbox));
 
 export type FlameFlexProps = FlameBoxProps & FlexboxProps;
 export const Flex = styled(Box)<FlameFlexProps>({
   display: 'flex',
 });
 
-const themePicker = (themeName?: string) => {
+export const themePicker = (themeName?: string) => {
   switch (themeName) {
     case 'experimentaldark':
       return darkTheme;
@@ -107,7 +96,7 @@ const FlameTheme: React.FunctionComponent<FlameThemeProps> = ({
 };
 
 // WARNING!
-// This component will be deprecated in v2. Instead, use the link tag directly:
+// This component will be deprecated in v3. Instead, use the link tag directly:
 // https://github.com/lightspeed/flame#link-fonts
 const FlameFonts: React.FunctionComponent = () => (
   <link

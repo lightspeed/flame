@@ -20,7 +20,10 @@ class RadioWrapper extends React.Component<{ action: Function }, { checked: bool
     const { action } = this.props;
     const value = event.target.value;
 
-    this.setState(() => ({ checked: value === 'yes' }), () => action(value));
+    this.setState(
+      () => ({ checked: value === 'yes' }),
+      () => action(value),
+    );
   }
 
   render() {
