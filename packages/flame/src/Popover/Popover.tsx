@@ -110,7 +110,7 @@ export const Popover: React.FC<PopoverProps> = ({
     } else {
       isFirstPass.current = false;
     }
-  }, [isOpen, isFirstPass.current]);
+  }, [isOpen, setActive, setInactive]);
 
   const targetProps = { ref: setTargetRef };
 

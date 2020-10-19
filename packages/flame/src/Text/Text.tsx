@@ -45,12 +45,7 @@ const BaseText = styled('div')<TextProps>(
   {
     margin: 0,
   },
-  compose(
-    space,
-    width,
-    color,
-    typography,
-  ),
+  compose(space, width, color, typography),
   fontWeight,
   textTransform,
 );
@@ -114,12 +109,7 @@ export const Text = styled('p')<TextProps>(
   {
     margin: 0,
   },
-  compose(
-    space,
-    width,
-    color,
-    typography,
-  ),
+  compose(space, width, color, typography),
   setSizeFonts,
   setSizeLineHeight,
   fontWeight,

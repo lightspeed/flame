@@ -8,6 +8,7 @@ export type FlagProps = {
   /** Width of Flag. Height set automatically.  */
   size?: string;
   theme?: string;
+  className?: string;
 };
 
 export default function FlagFactory(Flags: any, flagList: any) {

@@ -52,8 +52,5 @@ export const Select = styled('select')<Omit<LayoutProps, 'size'> & BorderProps>`
     color: transparent;
     text-shadow: 0 0 0 ${themeGet('selectStyles.color')};
   }
-  ${compose(
-    layout,
-    border,
-  )}
+  ${compose(layout, border)}
 `;
