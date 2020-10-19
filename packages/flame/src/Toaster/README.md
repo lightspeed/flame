@@ -32,7 +32,7 @@ import * as React from 'react';
 import { useToast } from '@lightspeed/flame/Toaster';
 
 const MyComponent = () => {
-  const { addToast } = useToasts();
+  const { addToast } = useToast();
   return (
     <button
       type="button"
