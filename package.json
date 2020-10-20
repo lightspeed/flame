@@ -122,6 +122,14 @@
     "*.{ts,tsx,js,jsx,json,css,scss,md}": [
       "prettier --write",
       "git add"
+    ],
+    "packages/flame/svg/Icons/*.svg": [
+      "lerna run --scope @lightspeed/flame build:icons",
+      "git add"
+    ],
+    "packages/flame/svg/Flags/*.svg": [
+      "lerna run --scope @lightspeed/flame build:flags",
+      "git add"
     ]
   },
   "browserslist": [
