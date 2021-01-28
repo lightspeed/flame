@@ -13,6 +13,10 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 - Typecast Button to bypass weird automatic type generation shenanigans ([#125](https://github.com/lightspeed/flame/pull/125))
 
+### Fixed
+
+- Upgrade react-popper 2.2.4 ([#520](https://github.com/lightspeed/flame/pull/133))
+
 ## 2.0.0 - 2020-07-17
 
 See the full changeset on ([#99](https://github.com/lightspeed/flame/pull/99)).
