@@ -1,6 +1,6 @@
 {
   "name": "@lightspeed/flame",
-  "version": "2.0.0",
+  "version": "2.0.1-alpha.0",
   "private": true,
   "description": "Lightspeed's React UI components library",
   "author": "Lightspeed",
@@ -52,7 +52,7 @@
     "type-fest": "^0.3.0"
   },
   "devDependencies": {
-    "@lightspeed/flame-tokens": "^1.0.0",
+    "@lightspeed/flame-tokens": "^1.0.1",
     "@types/lodash": "^4.14.123",
     "@types/react-modal": "^3.8.1",
     "@types/react-select": "^2.0.15",
