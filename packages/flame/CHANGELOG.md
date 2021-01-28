@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## 2.0.1-alpha.1 - 2021-01-28
+
+- Dummy changes to force a publish
+
 ## 2.0.1-alpha.0 - 2021-01-28
 
 ### Fixed

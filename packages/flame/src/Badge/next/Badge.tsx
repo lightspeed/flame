@@ -5,7 +5,7 @@ export type BadgeVariants = 'default' | 'danger' | 'primary' | 'success' | 'warn
 export interface BadgeProps extends React.ComponentPropsWithRef<'span'> {
   /**
    * Adjust the overall look and feel of a badge.
-   * Possible variants are:
+   * The possible variants are:
    * 'default' | 'danger' | 'primary' | 'success' | 'warning'
    */
   variant?: BadgeVariants;
