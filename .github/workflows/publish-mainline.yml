@@ -19,7 +19,7 @@ jobs:
         run: echo ::set-output name=nvmrc::$(cat .nvmrc)
         id: nvm
       - name: Setup node
-        uses: actions/setup-node@v1.1.1
+        uses: actions/setup-node@v2
         with:
           node-version: '${{ steps.nvm.outputs.nvmrc }}'
           registry-url: https://registry.npmjs.org/
