@@ -59,12 +59,12 @@
     "@lightspeed/config-typescript": "^0.2.0",
     "@lightspeed/eslint-config": "^1.1.1",
     "@percy/storybook": "^3.3.0",
-    "@storybook/addon-actions": "6.0.0",
-    "@storybook/addon-docs": "6.0.0",
-    "@storybook/addons": "6.0.0",
-    "@storybook/api": "^6.0.0",
-    "@storybook/components": "^6.0.0",
-    "@storybook/react": "6.0.0",
+    "@storybook/addon-actions": "6.1.15",
+    "@storybook/addon-docs": "6.1.15",
+    "@storybook/addons": "6.1.15",
+    "@storybook/api": "^6.1.15",
+    "@storybook/components": "6.1.15",
+    "@storybook/react": "6.1.15",
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/react": "^10.0.5",
     "@types/classnames": "^2.2.7",
@@ -104,6 +104,7 @@
     "postcss-loader": "^2.1.5",
     "prettier": "^1.16.1",
     "react-test-renderer": "^16.8.6",
+    "raw-loader": "4.0.1",
     "sass": "^1.14.3",
     "sass-loader": "^7.1.0",
     "storybook-readme": "^5.0.8",
@@ -115,8 +116,7 @@
   },
   "resolutions": {
     "@types/react": "16.8.23",
-    "react-docgen-typescript": "1.18.0",
-    "react-popper": "^2.2.1"
+    "react-docgen-typescript": "1.18.0"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,css,scss,md}": [
