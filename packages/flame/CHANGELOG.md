@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Added
+
+- Tipping Icon ([#136](https://github.com/lightspeed/flame/pull/136))
+
 ## 2.0.1-alpha.2 - 2021-01-28
 
 - Version bump because lerna
