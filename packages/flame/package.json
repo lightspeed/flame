@@ -1,6 +1,6 @@
 {
   "name": "@lightspeed/flame",
-  "version": "2.1.0-alpha.0",
+  "version": "2.1.0-alpha.1",
   "private": true,
   "description": "Lightspeed's React UI components library",
   "author": "Lightspeed",
