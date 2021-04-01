@@ -3,8 +3,8 @@
 exports[`<Radio /> Snapshots renders a Radio with a label and description correctly 1`] = `
 .emotion-8 {
   margin: 0;
-  font-weight: 700;
   color: #0c0d0d;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
@@ -129,8 +129,8 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
 exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
 .emotion-8 {
   margin: 0;
-  font-weight: 700;
   color: #0c0d0d;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
@@ -239,19 +239,6 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
 `;
 
 exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
-.emotion-8 {
-  margin: 0;
-  font-weight: 700;
-  color: #0c0d0d;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .emotion-6 {
   position: relative;
   line-height: 1rem;
@@ -316,12 +303,25 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
   background: #fff linear-gradient(180deg,#fff,#f3f3f3);
 }
 
+.emotion-8 {
+  margin: 0;
+  color: #e1e4e5;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
   className="emotion-10 emotion-11"
 >
   <label
     className="emotion-8 emotion-9"
-    color="textHeading"
+    color="disabled"
     fontSize="text-s"
     fontWeight="bold"
     htmlFor="Radio"
@@ -354,8 +354,8 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
 exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
 .emotion-8 {
   margin: 0;
-  font-weight: 700;
   color: #0c0d0d;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;

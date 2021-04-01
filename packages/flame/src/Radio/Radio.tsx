@@ -14,7 +14,9 @@ export const RadioLabel: React.FC<RadioLabelProps> = ({
 }) => {
   return (
     <Box>
-      <BaseLabel {...restProps}>{children}</BaseLabel>
+      <BaseLabel color={disabled ? 'disabled' : undefined} {...restProps}>
+        {children}
+      </BaseLabel>
       {description && <FormHelper ml="1.75rem">{description}</FormHelper>}
     </Box>
   );
