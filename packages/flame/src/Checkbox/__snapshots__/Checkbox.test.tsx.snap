@@ -3,8 +3,8 @@
 exports[`<Checkbox /> Snapshots when all props and label/description with html should render correctly 1`] = `
 .emotion-9 {
   margin: 0;
-  font-weight: 700;
   color: #0c0d0d;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
@@ -151,8 +151,8 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
 exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 .emotion-9 {
   margin: 0;
-  font-weight: 700;
   color: #0c0d0d;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
@@ -295,8 +295,8 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
 .emotion-9 {
   margin: 0;
-  font-weight: 700;
   color: #0c0d0d;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
@@ -422,19 +422,6 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
 `;
 
 exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
-.emotion-9 {
-  margin: 0;
-  font-weight: 700;
-  color: #0c0d0d;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .emotion-7 {
   position: relative;
   line-height: 1rem;
@@ -507,12 +494,25 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
   fill: #fff;
 }
 
+.emotion-9 {
+  margin: 0;
+  color: #e1e4e5;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
   className="emotion-11 emotion-12"
 >
   <label
     className="emotion-9 emotion-10"
-    color="textHeading"
+    color="disabled"
     fontSize="text-s"
     fontWeight="bold"
   >
@@ -552,8 +552,8 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
 exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
 .emotion-9 {
   margin: 0;
-  font-weight: 700;
   color: #0c0d0d;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
@@ -679,8 +679,8 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
 exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] = `
 .emotion-11 {
   margin: 0;
-  font-weight: 700;
   color: #0c0d0d;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
@@ -823,8 +823,8 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
 exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
 .emotion-9 {
   margin: 0;
-  font-weight: 700;
   color: #0c0d0d;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 700;
