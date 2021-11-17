@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 
 import { Text, TextProps } from '../Text';
+import { FieldLabel as HoustonFieldLabel } from '@lightspeed/design-system-react';
 
 type StatusTypes = 'error' | 'valid' | 'warning';
 
@@ -55,16 +56,12 @@ const Label: React.FC<LabelProps> = ({
   ...restProps
 }) => {
   return (
-    <React.Fragment>
-      <BaseLabel mb={description ? 0 : 1} color={disabled ? 'disabled' : undefined} {...restProps}>
-        {children}
-      </BaseLabel>
-      {description && (
-        <FormHelper mb={1} {...descriptionProps}>
-          {description}
-        </FormHelper>
-      )}
-    </React.Fragment>
+    <HoustonFieldLabel
+      label={children as any}
+      supplementaryLabel={description as any}
+      {...(restProps as any)}
+      style={{ flex: 1 }}
+    />
   );
 };
 

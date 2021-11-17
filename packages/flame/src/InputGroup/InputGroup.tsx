@@ -4,6 +4,7 @@ import { themeGet } from '@styled-system/theme-get';
 import { color, ColorProps, zIndex, ZIndexProps, compose, space } from 'styled-system';
 
 import { Flex, border, FlameFlexProps, BorderProps } from '../Core';
+import css from '@emotion/css';
 
 export interface InputGroupAddonProps
   extends FlameFlexProps,
@@ -32,30 +33,38 @@ export const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps })
 
     if (index === 0) {
       return React.cloneElement(child, {
+        width: 'inherit',
         borderTopRightRadius: 0,
         borderBottomRightRadius: 0,
+        variant: 'segment',
       });
     }
 
     if (index === React.Children.count(children) - 1 && React.Children.count(children) === 2) {
       return React.cloneElement(child, {
+        width: 'inherit',
         borderLeft: 0,
         borderTopLeftRadius: 0,
         borderBottomLeftRadius: 0,
+        variant: 'segment',
       });
     }
 
     if (index === React.Children.count(children) - 1) {
       return React.cloneElement(child, {
+        width: 'inherit',
         borderTopLeftRadius: 0,
         borderBottomLeftRadius: 0,
+        variant: 'segment',
       });
     }
 
     return React.cloneElement(child, {
+      width: 'inherit',
       borderLeft: 0,
       borderRight: 0,
       borderRadius: 0,
+      variant: 'segment',
     });
   });
 

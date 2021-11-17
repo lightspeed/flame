@@ -24,6 +24,7 @@ import { themeGet, flameTheme as ThemeUIFlame } from './theme-get';
 
 import { theme as lightTheme } from './themes/oldskool';
 import { theme as flameTheme } from './themes/flame';
+import { theme as houstonTheme } from './themes/houston';
 import { theme as darkTheme } from './themes/dark';
 
 export interface BorderProps extends StyledSystemBorderProps {
@@ -76,8 +77,9 @@ export const themePicker = (themeName?: string) => {
     case 'light':
       return lightTheme;
     case 'flame':
-    default:
       return flameTheme;
+    default:
+      return houstonTheme;
   }
 };
 
@@ -99,15 +101,10 @@ const FlameTheme: React.FunctionComponent<FlameThemeProps> = ({
 // This component will be deprecated in v3. Instead, use the link tag directly:
 // https://github.com/lightspeed/flame#link-fonts
 const FlameFonts: React.FunctionComponent = () => (
-  <link
-    href="https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin-ext"
-    rel="stylesheet"
-  />
+  <link href="//vendfrontendassets.freetls.fastly.net/fonts/fonts-v2.css" rel="stylesheet" />
 );
 
-const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = ({ themeName }) => {
-  const selectedTheme = themePicker(themeName);
-
+const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = () => {
   return (
     <Global
       styles={css`
@@ -118,16 +115,6 @@ const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = ({ th
         *:before,
         *:after {
           box-sizing: inherit;
-        }
-        body {
-          font-family: ${themeGet(
-            'fontFamily.sans-serif',
-            'Lato, Helvetica Neue, Helvetica, Arial, sans-serif',
-          )({ theme: selectedTheme })};
-          padding: 0;
-          margin: 0;
-          background-color: ${selectedTheme.colors.bodyBg};
-          color: ${selectedTheme.colors.textBody};
         }
       `}
     />

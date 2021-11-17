@@ -152,7 +152,7 @@ const setCardVariant = (props: { top?: boolean }) => {
     `;
   }
   return css`
-    box-shadow: ${themeGet('cardVariants.neutral.boxShadow')(props)};
+    border: 2px solid ${themeGet('cardStyles.footer.border')(props)};
   `;
 };
 

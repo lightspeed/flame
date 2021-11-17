@@ -2,6 +2,8 @@ import * as React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
+import { TextInput as HoustonTextInput } from '@lightspeed/design-system-react';
+
 import { themeGet } from '@styled-system/theme-get';
 import { layout, LayoutProps, zIndex, ZIndexProps, compose } from 'styled-system';
 import { Merge } from 'type-fest';
@@ -12,6 +14,7 @@ import { Label, FormHelper } from '../FormField';
 import { IconVerified } from '../Icon/Verified';
 import { IconWarning } from '../Icon/Warning';
 import { IconDanger } from '../Icon/Danger';
+import classNames from 'classnames';
 
 type StatusType = 'valid' | 'error' | 'warning';
 
@@ -23,145 +26,17 @@ type StyledInputProps = {
   /** Sets the element to read-only. The content will be selectable, but not editable */
   readOnly?: boolean;
 };
-const StyledInput = styled('input')<StyledInputProps>`
-  width: 100%;
-  flex: 1 1 0%;
-  box-sizing: border-box;
-  height: ${themeGet('space.6')};
-  font-family: ${themeGet('fontFamily.sans-serif')};
-  font-size: ${themeGet('fontSizes.text-s')};
-  padding-left: ${themeGet('space.2')};
-  padding-right: ${themeGet('space.2')};
-  border: solid 1px transparent;
-  background: transparent;
-  color: ${themeGet('inputStyles.color')};
-  min-width: 0;
-  transition: all ${themeGet('transition.transition-duration-fast')} ease-in-out;
 
-  &:disabled {
-    opacity: 1;
-  }
-
-  ${props => {
-    switch (props.inputSize) {
-      case 'small':
-        return css`
-          font-size: ${themeGet('fontSizes.text-xs')(props)};
-          height: ${themeGet('space.5')(props)};
-        `;
-      case 'large':
-        return css`
-          height: ${themeGet('space.7')(props)};
-        `;
-      case 'regular':
-      default:
-        return css``;
-    }
-  }}
-
-  ${props =>
-    props.hasPrefix &&
-    css`
-      padding-left: 0;
-    `};
-
-  ${props =>
-    props.hasSuffix &&
-    css`
-      padding-right: 0;
-    `};
-
-  &::placeholder {
-    color: ${themeGet('inputStyles.placeholder.color')};
-  }
-
-  &:focus,
-  &:active {
-    outline: none;
-  }
-
-  ${props =>
-    props.readOnly &&
-    css`
-      color: ${themeGet('inputStyles.readonly.color')(props)};
-    `};
-
-  &:not([disabled]):not([readonly]):hover + div {
-    border-color: ${themeGet('inputStyles.hover.border')};
-  }
-
-  /* Prettier does some nasty things if we merge both selectors... */
-  &:not([disabled]):not([readonly]):focus + div {
-    border-color: ${themeGet('inputStyles.focus.border')};
-  }
-
-  &:not([disabled]):not([readonly]):active + div {
-    border-color: ${themeGet('inputStyles.active.border')};
-  }
-`;
-
-interface InputBackdropProps extends BorderProps {
-  status?: StatusType;
-}
-export const InputBackdrop = styled('div')<InputBackdropProps>`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  pointer-events: none;
-  border-radius: ${themeGet('radii.radius-1')};
-  background: transparent;
-  box-shadow: ${themeGet('inputStyles.boxShadow')};
-  border: solid 1px ${themeGet('inputStyles.border')};
-  transition: border-color ${themeGet('transition.transition-duration-fast')} ease-in-out;
-
-  ${props =>
-    props.status === 'error' &&
-    css`
-      border-color: ${themeGet('inputStyles.error.border')(props)} !important;
-    `};
-  ${border}
-`;
-
-interface WrapperProps extends BorderProps, LayoutProps, ZIndexProps {
-  disabled: boolean;
-  readOnly: boolean;
-  isAutofilled: boolean;
+interface WrapperProps {
   status?: StatusType;
 }
 const Wrapper = styled('div')<WrapperProps>`
   position: relative;
   display: flex;
   align-items: center;
-  border-radius: ${themeGet('radii.radius-2')};
-  background: ${themeGet('inputStyles.background')};
-  transition: all ${themeGet('transition.transition-duration-fast')} ease-in-out;
   width: 100%;
 
   ${compose(layout, border, zIndex)}
-
-  ${props =>
-    props.disabled &&
-    css`
-      color: ${themeGet('inputStyles.disabled.color')(props)};
-      background: ${themeGet('inputStyles.disabled.background')(props)};
-      -webkit-text-fill-color: currentColor;
-    `};
-
-  ${props =>
-    props.readOnly &&
-    css`
-      background: ${themeGet('inputStyles.readonly.background')(props)};
-    `};
-
-  ${props =>
-    props.isAutofilled &&
-    css`
-      background: ${themeGet('inputStyles.autofilled.background')(props)};
-      background-image: none;
-      color: ${themeGet('inputStyles.autofilled.color')(props)};
-    `};
 
   ${props => {
     switch (props.status) {
@@ -239,59 +114,56 @@ export const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
       borderBottomLeftRadius,
       borderBottomRightRadius,
       width,
+      css,
       ...restProps
     },
     ref,
   ) => {
+    const TextInputPrefix = styled(Flex)`
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 12px;
+      align-items: center;
+    `;
+
+    const TextInputSuffix = styled(Flex)`
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 12px;
+      align-items: center;
+    `;
+
     return (
-      <Wrapper
-        disabled={disabled}
-        readOnly={readOnly}
-        isAutofilled={isAutofilled}
-        status={status}
-        width={width}
-        borderLeft={borderLeft}
-        borderRight={borderRight}
-        borderRadius={borderRadius}
-        borderTopLeftRadius={borderTopLeftRadius}
-        borderTopRightRadius={borderTopRightRadius}
-        borderBottomLeftRadius={borderBottomLeftRadius}
-        borderBottomRightRadius={borderBottomRightRadius}
-      >
-        {prefix && (
-          <Flex flex={0} pl={2} pr={1} fontSize="text-s">
-            {prefix}
-          </Flex>
-        )}
-        <StyledInput
+      <Wrapper status={status}>
+        {prefix && <TextInputPrefix>{prefix}</TextInputPrefix>}
+        <HoustonTextInput
           ref={ref}
+          hasError={status === 'error'}
           disabled={disabled}
-          inputSize={size}
-          hasPrefix={!!prefix}
-          hasSuffix={!!status || !!suffix}
           readOnly={readOnly}
-          type="text"
+          className={classNames(prefix && 'vd-input--icon-left', suffix && 'vd-input--icon-right')}
+          css={{
+            borderLeft,
+            borderRight,
+            borderRadius,
+            borderTopLeftRadius,
+            borderTopRightRadius,
+            borderBottomLeftRadius,
+            borderBottomRightRadius,
+          }}
           {...restProps}
         />
-        <InputBackdrop
-          status={status}
-          borderLeft={borderLeft}
-          borderRight={borderRight}
-          borderRadius={borderRadius}
-          borderTopLeftRadius={borderTopLeftRadius}
-          borderTopRightRadius={borderTopRightRadius}
-          borderBottomLeftRadius={borderBottomLeftRadius}
-          borderBottomRightRadius={borderBottomRightRadius}
-        />
         {(status || suffix) && (
-          <Flex flex={0} pr={2} fontSize="text-s">
+          <TextInputSuffix>
             {suffix}
             {status && (
               <Box ml={2}>
                 <StatusIcon status={status} />
               </Box>
             )}
-          </Flex>
+          </TextInputSuffix>
         )}
       </Wrapper>
     );
@@ -335,26 +207,17 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <React.Fragment>
         {label && (
-          <Label
-            id={labelId}
-            htmlFor={id}
-            description={description}
-            descriptionProps={{ id: descriptionId }}
-          >
-            {labelHelper ? (
-              <Flex
-                width="100%"
-                flexDirection="row"
-                justifyContent="space-between"
-                alignItems="center"
-              >
-                <div>{label}</div>
-                <div>{labelHelper}</div>
-              </Flex>
-            ) : (
+          <Flex width="100%" flexDirection="row" justifyContent="space-between" alignItems="center">
+            <Label
+              id={labelId}
+              htmlFor={id}
+              description={description}
+              descriptionProps={{ id: descriptionId }}
+            >
               label
-            )}
-          </Label>
+            </Label>
+            {labelHelper}
+          </Flex>
         )}
         <BaseInput
           ref={ref}

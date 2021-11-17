@@ -60,37 +60,10 @@ export const styles = () => (
       <Button variant="secondary">Secondary</Button>
       <Button variant="danger">Danger</Button>
     </SpacedGroup>
-
-    <h3>Forced State - Active</h3>
-    <SpacedGroup>
-      <Button forcedState="active">Default</Button>
-      <Button variant="primary" forcedState="active">
-        Primary
-      </Button>
-      <Button variant="secondary" forcedState="active">
-        Secondary
-      </Button>
-      <Button variant="danger" forcedState="active">
-        Danger
-      </Button>
-    </SpacedGroup>
-
-    <h3>Forced State - Hover</h3>
-    <SpacedGroup>
-      <Button forcedState="hover">Default</Button>
-      <Button variant="primary" forcedState="hover">
-        Primary
-      </Button>
-      <Button variant="secondary" forcedState="hover">
-        Secondary
-      </Button>
-      <Button variant="danger" forcedState="hover">
-        Danger
-      </Button>
-    </SpacedGroup>
     <hr />
     <h3>Fill</h3>
     <SpacedGroup>
+      <Button fill>Default</Button>
       <Button variant="primary" fill>
         Primary
       </Button>
@@ -101,31 +74,15 @@ export const styles = () => (
         Danger
       </Button>
     </SpacedGroup>
-
-    <h3>Forced State - Active</h3>
+    <hr />
+    <h3>Segment</h3>
     <SpacedGroup>
-      <Button variant="primary" fill forcedState="active">
-        Primary
-      </Button>
-      <Button variant="secondary" fill forcedState="active">
-        Secondary
-      </Button>
-      <Button variant="danger" fill forcedState="active">
-        Danger
-      </Button>
-    </SpacedGroup>
-
-    <h3>Forced State - Hover</h3>
-    <SpacedGroup>
-      <Button variant="primary" fill forcedState="hover">
-        Primary
-      </Button>
-      <Button variant="secondary" fill forcedState="hover">
-        Secondary
-      </Button>
-      <Button variant="danger" fill forcedState="hover">
-        Danger
-      </Button>
+      <Button variant="segment">Segment</Button>
+      <InputGroup>
+        <Button>Action 1</Button>
+        <Button>Action 2</Button>
+        <Button>Action 3</Button>
+      </InputGroup>
     </SpacedGroup>
   </div>
 );

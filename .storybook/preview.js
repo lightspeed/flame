@@ -6,7 +6,7 @@ import './stories.scss';
 
 const FlameStyling = ({ children }) => {
   const [state, setState] = React.useState({
-    selectedTheme: localStorage.getItem('theme') || 'flame',
+    selectedTheme: localStorage.getItem('theme') || 'houston',
   });
 
   React.useEffect(() => {

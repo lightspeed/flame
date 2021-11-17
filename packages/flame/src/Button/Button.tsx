@@ -3,10 +3,16 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { variant as styledVariant } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
+import { Merge } from 'type-fest';
+import {
+  Button as HoustonButton,
+  ButtonLink as HoustonButtonLink,
+  ButtonVariant as HoustonButtonVariant,
+} from '@lightspeed/design-system-react';
 import { Spinner } from '../Spinner';
 import { BaseButton, ButtonSizes, BaseButtonProps } from './BaseButton';
 
-type ColorVariants = 'neutral' | 'default' | 'primary' | 'secondary' | 'danger' | string;
+type ColorVariants = 'neutral' | 'default' | 'primary' | 'secondary' | 'danger' | 'segment';
 
 const fillButtonVariants = styledVariant({
   key: 'buttonVariants.fill',
@@ -30,25 +36,15 @@ const isIconChild = (child: React.ReactElement<any>) =>
 const isIconOnly = (children: React.ReactElement<any>) =>
   React.Children.count(children) === 1 && isIconChild(children);
 
-type StyledSpinnerProps = {
-  fill?: boolean;
-  variant?: ColorVariants;
-  size?: any;
-};
-const StyledSpinner = styled(Spinner)<StyledSpinnerProps>`
-  ${props => props.fill && fillButtonIconVariants(props)};
-  ${props => !props.fill && outlineButtonIconVariants(props)};
-`;
-
 type ExtendedBaseButtonProps = {
   isFillButton?: boolean;
   variant?: ColorVariants;
 };
 const ExtendedBaseButton = styled(BaseButton)<ExtendedBaseButtonProps>`
-  &:focus {
+  /* &:focus {
     outline: thin dotted;
     box-shadow: none;
-  }
+  } */
 
   svg {
     ${props =>
@@ -57,7 +53,7 @@ const ExtendedBaseButton = styled(BaseButton)<ExtendedBaseButtonProps>`
         : css(outlineButtonIconVariants(props))};
   }
 
-  ${props =>
+  /* ${props =>
     props.isFillButton || props.variant === 'neutral'
       ? css`
           ${fillButtonVariants(props)};
@@ -80,7 +76,7 @@ const ExtendedBaseButton = styled(BaseButton)<ExtendedBaseButtonProps>`
           &.cr-button--active {
             ${css(themeGet(`buttonVariants.outline.${props.variant}.&:active`)(props))}
           }
-        `}
+        `} */
 `;
 
 const loneIconAdjustments = (children: any, size: ButtonSizes) => {
@@ -151,78 +147,145 @@ const ChildWrapper = styled('span')<ChildWrapperProps>`
     `};
 `;
 
-export type ButtonProps = BaseButtonProps & {
-  /** Sets the Button loading state */
-  loading?: boolean;
-  /** Disables space between a Button's children */
-  noSpacing?: boolean;
-  /** Sets Button fill. Does not apply to default variant */
-  fill?: boolean;
-  /** One of 'neutral', 'primary', 'secondary', 'danger' */
-  variant?: ColorVariants;
-  /** Forces cursor states onto Button */
-  forcedState?: 'hover' | 'active';
-  /** CSS class name */
-  className?: string;
-  /** Sets the disabled state */
-  disabled?: boolean;
-  /** Href for navigation. Turns the Button into a link. */
-  href?: string;
+export type ButtonProps = Merge<
+  ButtonHTML,
+  BaseButtonProps & {
+    /** Sets the Button loading state */
+    loading?: boolean;
+    /** Disables space between a Button's children */
+    noSpacing?: boolean;
+    /** Sets Button fill. Does not apply to default variant */
+    fill?: boolean;
+    /** One of 'neutral', 'primary', 'secondary', 'danger' */
+    variant?: ColorVariants;
+    /** @deprecated Forces cursor states onto Button */
+    forcedState?: 'hover' | 'active';
+    /** CSS class name */
+    className?: string;
+    /** Sets the disabled state */
+    disabled?: boolean;
+    /** Href for navigation. Turns the Button into a link. */
+    href?: string;
+  }
+>;
+
+const mapVariantProp = (variant: ColorVariants): HoustonButtonVariant => {
+  const DEFAULT_VARIANT = 'do';
+  switch (variant) {
+    case 'secondary':
+      return 'supplementary';
+    case 'danger':
+      return 'no';
+    default:
+      return DEFAULT_VARIANT;
+  }
 };
 
-/**
- * Buttons are used to take action or confirm a decision. They help merchants get things done.
- */
-export const Button = React.forwardRef<any, ButtonProps>(
-  (
-    {
+const mapSizeProp = (size: ButtonSizes): boolean => {
+  return ['large', 'xlarge'].includes(size);
+};
+
+export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+  (props, ref) => {
+    const {
       loading,
       children,
       size,
-      noSpacing,
       fill,
       variant,
-      forcedState,
-      className,
+      href,
+      block,
       disabled,
+      borderLeft,
+      borderRight,
+      borderRadius,
+      borderTopLeftRadius,
+      borderTopRightRadius,
+      borderBottomLeftRadius,
+      borderBottomRightRadius,
       ...restProps
-    },
-    ref,
-  ) => {
-    const iconAdjustments = loneIconAdjustments(children, size);
+    } = props;
 
-    const nextChildren = React.Children.map(children, child => remapChild(child, size));
-    const LinkifiedButton = restProps.href
-      ? ExtendedBaseButton.withComponent('a')
-      : ExtendedBaseButton;
+    const BaseButton = styled(href ? HoustonButtonLink : HoustonButton)`
+      /* svg {
+        fill: white;
+        color: white;
+        .cr-icon__details-2 {
+          color: #3f32f5;
+          fill: #3f32f5;
+        }
+      } */
+    `;
 
-    const nextForceState = forcedState && `cr-button--${forcedState}`;
-    const isDisabled = loading || disabled;
+    let modifier;
+    if (isIconOnly(children)) {
+      modifier = 'icon';
+    }
+    if (!fill) {
+      modifier = 'text';
+    }
 
-    // TODO: Need to rework or split off the link buttons from the main component.
-    // It causes some gnarly typing errors and overloads the component with even
-    // more useless logic, since emotion supports the `as` prop anyways...
+    let extraCSS = {};
+    if (variant === 'segment') {
+      extraCSS = {
+        ...extraCSS,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        backgroundColor: 'var(--vd-colour--box)',
+        padding: '12px 20px',
+        border: '2px solid var(--vd-colour--framing)',
+        color: 'var(--vd-colour--text)',
+        transitionDuration: '0.2s',
+        transitionProperty: 'background, border',
+        wordBreak: 'normal',
+        '&:hover': {
+          zIndex: '2',
+          backgroundColor: 'var(--vd-colour--box)',
+          borderColor: 'var(--vd-colour--keyline)',
+          color: 'var(--vd-colour--text)',
+        },
+        '&:focus': {
+          zIndex: '2',
+          backgroundColor: 'var(--vd-colour--box)',
+          borderColor: 'var(--vd-colour--go)',
+          color: 'var(--vd-colour--text)',
+          boxShadow: '0 0 3px var(--vd-colour--go)',
+        },
+        '&:active': {
+          zIndex: '2',
+          backgroundColor: 'var(--vd-colour--background)',
+          borderColor: 'var(--vd-colour--keyline)',
+          color: 'var(--vd-colour--text)',
+          boxShadow: 'none',
+        },
+      };
+    }
+
     return (
-      // @ts-ignore
-      <LinkifiedButton
+      <BaseButton
         ref={ref}
-        isFillButton={fill}
-        size={size}
-        disabled={isDisabled}
-        variant={variant === 'default' ? 'neutral' : variant}
-        className={[className, nextForceState].join(' ')}
-        {...iconAdjustments}
+        modifier={modifier}
+        variant={mapVariantProp(variant)}
+        jumbo={mapSizeProp(size)}
+        block={block}
+        loading={loading}
+        disabled={disabled}
+        css={{
+          ...extraCSS,
+          borderLeft,
+          borderRight,
+          borderRadius,
+          borderTopLeftRadius,
+          borderTopRightRadius,
+          borderBottomLeftRadius,
+          borderBottomRightRadius,
+        }}
         {...(restProps as any)}
       >
-        {loading && (
-          <SpinnerWrapper title="Loading...">
-            <StyledSpinner fill={fill} variant={variant} size={size} />
-          </SpinnerWrapper>
-        )}
-        <ChildWrapper noSpacing={noSpacing} isLoading={loading}>
-          {nextChildren}
-        </ChildWrapper>
-      </LinkifiedButton>
+        {children}
+      </BaseButton>
     );
   },
 ) as React.FC<

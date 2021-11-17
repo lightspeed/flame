@@ -78,6 +78,14 @@ export const Divider = styled('div')<DividerProps>`
     content: '';
   }
 
+  ${Card} & {
+    height: 1px;
+    &::after,
+    &::before {
+      height: 1px;
+    }
+  }
+
   &::before {
     margin-right: ${themeGet('space.2')};
   }

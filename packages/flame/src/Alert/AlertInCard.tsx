@@ -35,7 +35,7 @@ const AlertInCard: React.FC<Props> = ({
         p: 3,
         alignItems: 'center',
         borderRadius: 'radius-2',
-        border: '1px solid',
+        border: '2px solid',
         variant: `alertInCardVariants.${type}`,
         lineHeight: 'normal',
       })}
