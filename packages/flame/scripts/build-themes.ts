@@ -1,3 +1,4 @@
+import { theme as houstonTheme, themeUI as houstonThemeUI } from '../themes/houston';
 import { theme as flameTheme, themeUI as flameThemeUI } from '../themes/flame';
 import { theme as oldSkoolTheme } from '../themes/oldskool';
 import { theme as darkTheme } from '../themes/dark';
@@ -86,6 +87,10 @@ export { themeGet };
 type ThemeList = { filename: string; themeObject: any }[];
 const themeList: ThemeList = [
   {
+    filename: 'houston',
+    themeObject: houstonTheme,
+  },
+  {
     filename: 'flame',
     themeObject: flameTheme,
   },
@@ -115,6 +120,10 @@ themeList.forEach(theme => {
 });
 
 const themeGetFile = generateTypedThemeGet([
+  {
+    filename: 'houston',
+    themeObject: houstonThemeUI,
+  },
   {
     filename: 'flame',
     themeObject: flameThemeUI,
