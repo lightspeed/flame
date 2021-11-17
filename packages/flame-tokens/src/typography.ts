@@ -17,10 +17,11 @@ const weights = weightsValues.reduce((obj: Record<string, string>, { name, value
 }, {});
 
 const fontSizesValues = [
-  { name: 'xxl', alias: 'xxlarge', value: 36 },
+  { name: 'xxxl', alias: 'xxlarge', value: 48 },
+  { name: 'xxl', alias: 'xxlarge', value: 32 },
   { name: 'xl', alias: 'xlarge', value: 24 },
   { name: 'l', alias: 'large', value: 18 },
-  { name: '', alias: '', value: 16 },
+  { name: '', alias: '', value: 15 },
   { name: 's', alias: 'small', value: 14 },
   { name: 'xs', alias: 'xsmall', value: 12 },
   { name: 'xxs', alias: 'xxsmall', value: 8 },

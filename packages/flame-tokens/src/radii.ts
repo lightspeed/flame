@@ -1,8 +1,8 @@
 import { pxToRem } from './utils';
 
 const values = {
-  'radius-1': pxToRem(3),
-  'radius-2': pxToRem(6),
+  'radius-1': pxToRem(4),
+  'radius-2': pxToRem(5),
   'radius-circle': '50%',
 };
 

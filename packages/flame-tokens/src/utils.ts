@@ -1,4 +1,4 @@
-const pxToRem = (value: number, { base = 16, decimals = 5 } = {}) => {
+const pxToRem = (value: number, { base = 15, decimals = 5 } = {}) => {
   if (value === 0) {
     return '0';
   }

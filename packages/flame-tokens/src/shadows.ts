@@ -5,16 +5,16 @@ import { colorsMap } from './colors';
 const { red, green, blue } = parseToRgb(colorsMap.night);
 
 const outerValues = [
-  { y: 1, blur: 2 },
-  { y: 2, blur: 4 },
-  { y: 3, blur: 6 },
-  { y: 6, blur: 12 },
-  { y: 12, blur: 24 },
+  { y: 0, blur: 0 },
+  { y: 0, blur: 2 },
+  { y: 10, blur: 12 },
+  { y: 4, blur: 10 },
+  { y: 4, blur: 64 },
 ];
 const outer = outerValues.reduce((obj: Record<string, string>, { y, blur }, index) => {
   const scale = index + 1;
   // eslint-disable-next-line no-param-reassign
-  obj[`shadow-${scale}`] = `0 ${pxToRem(y)} ${pxToRem(blur)} rgba(${red}, ${green}, ${blue}, 0.15)`;
+  obj[`shadow-${scale}`] = `0 ${pxToRem(y)} ${pxToRem(blur)} rgba(0, 0, 0, 0.35)`;
   return obj;
 }, {});
 
