@@ -34,10 +34,7 @@ The Flame design system uses Lato as it's primary font.
 Add this `<link>` tag to your `<head>` to load the required fonts:
 
 ```html
-<link
-  href="https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin-ext"
-  rel="stylesheet"
-/>
+<link href="//vendfrontendassets.freetls.fastly.net/fonts/fonts-v2.css" rel="stylesheet" />
 ```
 
 Additionally, you will need to set your application html/body to use these fonts.
