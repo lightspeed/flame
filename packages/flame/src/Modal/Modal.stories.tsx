@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { times } from 'lodash';
 
 import { Modal } from './Modal';
 import { ModalHeader } from './ModalHeader';
@@ -252,7 +253,14 @@ class ModalStoryHelper extends React.Component<Props, State> {
           <ModalHeader>This modal is scrollable</ModalHeader>
 
           <ModalBody scroll>
-            <div>1</div>
+            {times(100, () => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.').map(
+              (t, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <p key={index} className="vd-p">
+                  {t}
+                </p>
+              ),
+            )}
           </ModalBody>
         </Modal>
       </div>

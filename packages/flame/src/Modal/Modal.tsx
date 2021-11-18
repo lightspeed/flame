@@ -2,30 +2,11 @@ import * as React from 'react';
 import ReactModal from 'react-modal';
 import { Global, keyframes, ClassNames } from '@emotion/core';
 import { withTheme } from 'emotion-theming';
+import { ModalSize } from '@lightspeed/design-system-react';
 import { themeGet } from '@styled-system/theme-get';
 import { Provider } from './ModalContext';
 
 ReactModal.setAppElement('body');
-
-const showKeyframe = keyframes`
- from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`;
-
-const hideKeyframe = keyframes`
- from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-`;
 
 const asideShowKeyframe = keyframes`
  from {
@@ -48,6 +29,8 @@ const asideHideKeyframe = keyframes`
 `;
 
 export type ModalProps = {
+  /** Sets the open state of Modal */
+  size?: ModalSize;
   /** Sets the open state of Modal */
   isOpen?: boolean;
   /** Sets whether ESC key closes Modal */
@@ -114,6 +97,7 @@ class BaseModal extends React.Component<ModalProps, ModalState> {
   render() {
     const {
       children,
+      size,
       className,
       shouldCloseOnOverlayClick,
       closeOnEsc,
@@ -129,17 +113,6 @@ class BaseModal extends React.Component<ModalProps, ModalState> {
     return (
       <ClassNames>
         {({ css, cx }) => {
-          const setModalAnimation = (props: ModalProps) => css`
-            &.ReactModal__Content--after-open {
-              animation: ${showKeyframe} ${themeGet('transition.transition-duration-base')(props)}
-                cubic-bezier(0, 0, 0.2, 1) forwards;
-            }
-            &.ReactModal__Content--before-close {
-              animation: ${hideKeyframe} ${themeGet('transition.transition-duration-base')(props)}
-                cubic-bezier(0.4, 0, 0.6, 1) forwards;
-            }
-          `;
-
           const setAsideAnimation = (props: ModalProps) => css`
             &.ReactModal__Content--after-open {
               animation: ${asideShowKeyframe}
@@ -153,39 +126,8 @@ class BaseModal extends React.Component<ModalProps, ModalState> {
             }
           `;
 
-          const crModal = (props: ModalProps) => css`
-            display: flex;
-            flex-direction: column;
-            color: ${themeGet('modalStyles.modal.color')(props)};
-            background: ${themeGet('modalStyles.modal.background')(props)};
-            border-radius: ${themeGet('radii.radius-2')(props)};
-            font-size: ${themeGet('fontSizes.text')(props)};
-            max-height: 80%;
-            max-width: 100%;
-            margin: ${themeGet('space.5')(props)};
-
-            &:focus {
-              outline: 0;
-            }
-
-            ${setModalAnimation(props)};
-          `;
-
-          const crModalOverlay = (props: ModalProps) => css`
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: ${themeGet('modalStyles.overlay.background')(props)};
+          const crModalOverlay = () => css`
             z-index: 10000;
-            will-change: opacity;
-
-            ${setModalAnimation(props)};
           `;
 
           const crModalAside = (props: ModalProps) => css`
@@ -215,8 +157,16 @@ class BaseModal extends React.Component<ModalProps, ModalState> {
               <Provider onCancel={this.handleClose}>
                 <ReactModal
                   isOpen={this.state.isOpen}
-                  className={cx(crModal({ theme }), aside && crModalAside({ theme }), className)}
-                  overlayClassName={cx(crModalOverlay({ theme }), aside && crModalOverlayAside)}
+                  className={cx(
+                    `vd-modal-container vd-modal--size-${size} vd-modal--with-close-button`,
+                    aside && crModalAside({ theme }),
+                    className,
+                  )}
+                  overlayClassName={cx(
+                    'vd-overlay vd-overlay--visible vd-dialog',
+                    crModalOverlay(),
+                    aside && crModalOverlayAside,
+                  )}
                   onAfterOpen={this.handleOpen}
                   // @ts-ignore
                   onRequestClose={this.handleClose}
@@ -226,7 +176,7 @@ class BaseModal extends React.Component<ModalProps, ModalState> {
                   contentLabel={contentLabel}
                   {...rest}
                 >
-                  {children}
+                  <div className="vd-modal-inner-container">{children}</div>
                 </ReactModal>
               </Provider>
             </>
@@ -238,6 +188,7 @@ class BaseModal extends React.Component<ModalProps, ModalState> {
 }
 
 (BaseModal as any).defaultProps = {
+  size: 'medium',
   onAfterOpen: null,
   onRequestClose: null,
   closeOnEsc: true,

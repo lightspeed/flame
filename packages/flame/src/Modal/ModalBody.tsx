@@ -1,6 +1,5 @@
-import { css } from '@emotion/core';
-import styled from '@emotion/styled';
-import { themeGet } from '@styled-system/theme-get';
+import * as React from 'react';
+import { ModalContent } from '@lightspeed/design-system-react';
 
 export type ModalBodyProps = {
   /** Sets overflowY: scroll on Modal's content  */
@@ -9,17 +8,9 @@ export type ModalBodyProps = {
 /**
  * Body of the Modal
  */
-export const ModalBody = styled('div')<ModalBodyProps>`
-  flex-grow: 1;
-  padding: ${themeGet('space.4')};
-  overflow-wrap: break-word;
-  ${props =>
-    props.scroll &&
-    css`
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    `};
-`;
+export const ModalBody: React.FC<ModalBodyProps> = ({ scroll, ...restProps }) => (
+  <ModalContent scrollable={scroll} {...restProps} />
+);
 
 ModalBody.defaultProps = {
   scroll: false,
