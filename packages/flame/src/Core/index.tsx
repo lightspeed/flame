@@ -116,6 +116,9 @@ const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = () =>
         *:after {
           box-sizing: inherit;
         }
+        html {
+          font-size: 15px;
+        }
       `}
     />
   );
