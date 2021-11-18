@@ -93,12 +93,10 @@ type TooltipContainerProps = {
   as?: string;
 };
 const TooltipContainer = styled('div')<TooltipContainerProps>`
-  padding: ${themeGet('space.1')};
-  font-size: ${themeGet('fontSizes.text-xs')};
-  font-weight: ${themeGet('fontWeights.bold')};
+  padding: 8px;
   line-height: 1;
   color: ${themeGet('tooltipStyles.dark.color')};
-  background: ${themeGet(tooltipDarkBg)};
+  background: var(--vd-colour--framing-inverse);
   letter-spacing: ${themeGet('letterSpacings.1')};
   border-radius: ${themeGet('radii.radius-1')};
   box-shadow: ${themeGet('shadows.1')};
