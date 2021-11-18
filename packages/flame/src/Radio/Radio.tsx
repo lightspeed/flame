@@ -113,7 +113,7 @@ export const Radio = React.forwardRef<HTMLInputElement, FormRadioProps>(
         label={label as any}
         description={description as any}
         disabled={disabled}
-        modifier="default"
+        modifier="large"
         {...restProps}
       />
     </Box>
