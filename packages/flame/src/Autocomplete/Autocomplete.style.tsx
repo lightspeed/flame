@@ -12,18 +12,22 @@ const flameStyle = (theme: any): FlameStyle => {
   const style: FlameStyle = {
     control: (styles, { isDisabled, isFocused }) => ({
       ...styles,
+      cursor: 'text',
+      color: 'var(--vd-colour--text)',
+      wordBreak: 'normal',
+      width: '100%',
+      margin: '0',
+      padding: '0.3666666667rem 12px',
+      boxSizing: 'border-box',
+      outline: 'none',
+      boxShadow: isFocused ? '0 0 3px var(--vd-colour--go)' : 'none',
       backgroundColor: isDisabled
         ? get('inputStyles.disabled.background')
-        : get('inputStyles.background'),
-      borderColor: isFocused
-        ? get('inputStyles.focus.border')
-        : get('inputStyles.autocomplete.border'),
-      borderRadius: get('radii.radius-1'),
-      fontFamily: get('fontFamily.sans-serif'),
-      fontSize: get('fontSizes.text-s'),
-      color: get('inputStyles.color'),
-      minHeight: get('fontSizes.text-xxl'),
-      boxShadow: get('innerShadows.0'),
+        : 'var(--vd-colour--box)',
+      border: isFocused ? '2px solid var(--vd-colour--go)' : '2px solid var(--vd-colour--framing)',
+      borderRadius: '4px',
+      transition: 'all 0.2s',
+      transitionProperty: 'border-color, box-shadow',
       ':hover': {
         borderColor: isFocused
           ? get('inputStyles.focus.border')
@@ -126,25 +130,29 @@ const flameStyle = (theme: any): FlameStyle => {
       ...styles,
       padding: 0,
     }),
-    multiValue: (styles, { isDisabled }) => ({
-      ...styles,
-      color: get('inputStyles.autocomplete.multiValue.color'),
-      backgroundColor: isDisabled
-        ? get('inputStyles.autocomplete.multiValue.backgroundDisabled')
-        : get('inputStyles.autocomplete.multiValue.background'),
-      border: isDisabled
-        ? `1px solid ${get('inputStyles.autocomplete.multiValue.borderDisabled')}`
-        : `1px solid ${get('inputStyles.autocomplete.multiValue.border')}`,
-      minHeight: get('fontSizes.text-xl'),
+    multiValue: (_styles, { isDisabled }) => ({
+      display: 'flex',
+      wordBreak: 'break-word',
+      margin: '0',
+      fontSize: '15px',
+      lineHeight: '1.33333',
+      fontWeight: '400',
+      padding: '6px 10px',
+      color: 'var(--vd-colour--text-action)',
+      backgroundColor: isDisabled ? 'var(--vd-colour--keyline)' : 'var(--vd-colour--supplementary)',
+      borderRadius: '4px',
+      marginRight: '5px',
+      marginTop: '2px',
+      marginBottom: '1px',
       ':hover': {
         cursor: 'pointer',
       },
     }),
     multiValueLabel: (styles, { isDisabled }) => ({
-      ...styles,
+      // ...styles,
       color: isDisabled
         ? get('inputStyles.autocomplete.multiValueLabel.colorDisabled')
-        : get('inputStyles.autocomplete.multiValueLabel.color'),
+        : 'var(--vd-colour--text-action)',
       whiteSpace: 'normal',
     }),
     multiValueRemove: (styles, { isDisabled }) => ({
@@ -155,6 +163,10 @@ const flameStyle = (theme: any): FlameStyle => {
       ':hover': {
         background: 'none',
       },
+    }),
+    valueContainer: styles => ({
+      ...styles,
+      padding: '0',
     }),
   };
 
