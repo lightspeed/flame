@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
+import { Radio as HoustonRadio } from '@lightspeed/design-system-react';
 
 import { Box } from '../Core';
 import { BaseLabel, LabelProps, FormHelper } from '../FormField/FormField';
@@ -105,15 +106,16 @@ interface FormRadioProps extends RadioProps {
  */
 export const Radio = React.forwardRef<HTMLInputElement, FormRadioProps>(
   ({ label, id, description, disabled, css, className, ...restProps }, ref) => (
-    <RadioLabel
-      htmlFor={id}
-      disabled={disabled}
-      css={css}
-      className={className}
-      description={description}
-    >
-      <BaseRadio ref={ref} id={id} disabled={disabled} {...restProps} />
-      {label}
-    </RadioLabel>
+    <Box css={css} className={className}>
+      <HoustonRadio
+        ref={ref}
+        id={id}
+        label={label as any}
+        description={description as any}
+        disabled={disabled}
+        modifier="default"
+        {...restProps}
+      />
+    </Box>
   ),
 );
