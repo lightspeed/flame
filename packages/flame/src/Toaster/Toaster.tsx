@@ -106,7 +106,8 @@ const Toaster: React.FC<ToastProps> = ({
         css={css({
           display: 'flex',
           borderRadius: 'radius-2',
-          boxShadow: 0,
+          boxShadow:
+            '0 0 0 1px rgb(0 0 0 / 6%), 0 6px 12px 0 rgb(0 0 0 / 3%), 0 4px 8px 0 rgb(0 0 0 / 8%)',
           transition: `all ${transitionDuration}ms cubic-bezier(0.2, 0, 0, 1), opacity ${transitionDuration}ms`,
           minWidth: ['300px', '345px'],
           maxWidth: ['300px', '600px', '600px'],
