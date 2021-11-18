@@ -1,26 +1,25 @@
 import * as React from 'react';
-import { keyframes } from '@emotion/core';
-import styled from '@emotion/styled';
 import { Omit } from 'type-fest';
-import { IconSpinner } from '../Icon/Spinner';
+import { LoaderSpinner } from '@lightspeed/design-system-react';
 import { IconProps } from '../Icon/utils/iconFactory';
 
-const spinnerSpin = keyframes`
- 0% {
-    transform: rotate(0deg);
+const sizePropMap = (size: string) => {
+  switch (size) {
+    case 'small':
+      return { width: '0.875rem', height: '0.875rem' };
+    case 'xlarge':
+      return { width: '1.75rem', height: '1.75rem' };
+    case 'xxlarge':
+      return { width: '2.25rem', height: '2.25rem' };
+    default:
+      return size ? { width: size, height: size } : {};
   }
-
-  100% {
-    transform: rotate(360deg);
-  }
-`;
-
-const StyledIcon = styled(IconSpinner)`
-  animation: ${spinnerSpin} 1s infinite cubic-bezier(0.35, 0.3, 0.3, 0.35);
-`;
+};
 
 export type SpinnerProps = Omit<IconProps, 'theme'>;
 /**
  * Offers solace and mutual understanding that a task of unknowable duration (but usually short) is ongoing.
  */
-export const Spinner: React.FC<SpinnerProps> = ({ ...restProps }) => <StyledIcon {...restProps} />;
+export const Spinner: React.FC<SpinnerProps> = ({ size, ...restProps }) => (
+  <LoaderSpinner css={{ ...sizePropMap(size) }} {...restProps} />
+);
