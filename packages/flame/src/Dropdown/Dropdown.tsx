@@ -5,9 +5,8 @@ import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
 import { Placement as PopperPlacement } from '@popperjs/core';
 
-import { Box, FlameBoxProps } from '../Core';
-import { Button, ButtonProps } from '../Button';
-import { IconSmallChevronDown } from '../Icon/SmallChevronDown';
+import { Flex, Box, FlameBoxProps } from '../Core';
+import { ButtonProps } from '../Button';
 import { BasePopoverContainer, PopoverContainerProps } from '../Popover/PopoverContainer';
 import { useToggle } from '../hooks/useToggle';
 import { usePopper } from '../hooks/usePopper';
@@ -158,22 +157,34 @@ export const Dropdown: React.FC<Props> = ({
       }}
     >
       <Box display="inline-block" ref={setTargetRef}>
-        <Button
-          pr={2}
-          pl={2}
-          onClick={(event: any) => {
-            if (typeof onClick === 'function') {
-              onClick(toggle, event as React.MouseEvent<HTMLButtonElement, MouseEvent>);
-            } else {
-              toggle();
-            }
-          }}
-          forcedState={isActive ? 'active' : null}
-          {...(restProps as any)}
-        >
-          <React.Fragment>{buttonContent}&nbsp;</React.Fragment>
-          <IconSmallChevronDown />
-        </Button>
+        <div className="vd-autocomplete-input-container vd-flex--column">
+          <input
+            readOnly
+            type="text"
+            className="vd-select vd-dropdown-input"
+            onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+              if (typeof onClick === 'function') {
+                onClick(toggle, event);
+              } else {
+                toggle();
+              }
+            }}
+            {...(restProps as any)}
+          />
+          <Flex
+            alignItems="center"
+            css={{
+              position: 'absolute',
+              top: 0,
+              left: '12px',
+              right: '36px',
+              bottom: 0,
+              pointerEvents: 'none',
+            }}
+          >
+            {buttonContent}
+          </Flex>
+        </div>
       </Box>
 
       <DropdownContainer
