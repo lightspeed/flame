@@ -236,6 +236,11 @@ export const Group: React.FunctionComponent<GroupProps> = ({
   ...restProps
 }) => {
   const wrappedChildren = React.Children.map(children, (child: any) => {
+    if (!child.variant) {
+      // eslint-disable-next-line no-param-reassign
+      child = React.cloneElement(child, { variant: 'input' });
+    }
+
     if (
       child &&
       child.type &&

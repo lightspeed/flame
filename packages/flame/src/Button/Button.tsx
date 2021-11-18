@@ -9,10 +9,9 @@ import {
   ButtonLink as HoustonButtonLink,
   ButtonVariant as HoustonButtonVariant,
 } from '@lightspeed/design-system-react';
-import { Spinner } from '../Spinner';
-import { BaseButton, ButtonSizes, BaseButtonProps } from './BaseButton';
+import { BaseButton, ButtonHTML, ButtonSizes, BaseButtonProps } from './BaseButton';
 
-type ColorVariants = 'neutral' | 'default' | 'primary' | 'secondary' | 'danger' | 'segment';
+type ColorVariants = 'neutral' | 'default' | 'primary' | 'secondary' | 'danger' | 'input';
 
 const fillButtonVariants = styledVariant({
   key: 'buttonVariants.fill',
@@ -206,15 +205,41 @@ export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Bu
       ...restProps
     } = props;
 
-    const BaseButton = styled(href ? HoustonButtonLink : HoustonButton)`
-      /* svg {
-        fill: white;
-        color: white;
-        .cr-icon__details-2 {
-          color: #3f32f5;
-          fill: #3f32f5;
+    const BaseButton = styled(href ? HoustonButtonLink : HoustonButton)<ButtonProps>`
+      svg {
+        ${props =>
+          props.fill
+            ? {
+                fill: 'white',
+                color: 'white',
+                '.cr-icon__details-2': {
+                  color: `var(--vd-colour--${props.variant})`,
+                  fill: `var(--vd-colour--${props.variant})`,
+                },
+              }
+            : variant !== 'input' && {
+                fill: `var(--vd-colour--${props.variant})`,
+                color: `var(--vd-colour--${props.variant})`,
+                '.cr-icon__details-2': {
+                  color: `var(--vd-colour--${props.variant})`,
+                  fill: `var(--vd-colour--${props.variant})`,
+                },
+              }}
+      }
+      &:hover {
+        svg {
+          ${props =>
+            !props.fill &&
+            variant !== 'input' && {
+              fill: 'white',
+              color: 'white',
+              '.cr-icon__details-2': {
+                color: `var(--vd-colour--${props.variant})`,
+                fill: `var(--vd-colour--${props.variant})`,
+              },
+            }}
         }
-      } */
+      }
     `;
 
     let modifier;
@@ -226,7 +251,7 @@ export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Bu
     }
 
     let extraCSS = {};
-    if (variant === 'segment') {
+    if (variant === 'input') {
       extraCSS = {
         ...extraCSS,
         display: 'flex',
@@ -266,6 +291,7 @@ export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Bu
     return (
       <BaseButton
         ref={ref}
+        fill={fill}
         modifier={modifier}
         variant={mapVariantProp(variant)}
         jumbo={mapSizeProp(size)}

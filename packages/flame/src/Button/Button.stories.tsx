@@ -75,9 +75,9 @@ export const styles = () => (
       </Button>
     </SpacedGroup>
     <hr />
-    <h3>Segment</h3>
+    <h3>Input</h3>
     <SpacedGroup>
-      <Button variant="segment">Segment</Button>
+      <Button variant="input">Segment</Button>
       <InputGroup>
         <Button>Action 1</Button>
         <Button>Action 2</Button>
