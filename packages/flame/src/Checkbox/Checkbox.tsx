@@ -2,11 +2,13 @@ import * as React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
+import { Checkbox as HoustonCheckbox } from '@lightspeed/design-system-react';
 import { Merge } from 'type-fest';
 
 import { IconCheckmark } from '../Icon/Checkmark';
 import { TextProps } from '../Text';
 import { RadioLabel } from '../Radio';
+import { Box } from '../Core';
 
 export const CheckboxLabel = RadioLabel;
 
@@ -140,15 +142,15 @@ export interface CheckboxProps extends BaseCheckboxProps {
  */
 export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   ({ label, id, description, disabled, css, className, ...restProps }, ref) => (
-    <CheckboxLabel
-      htmlFor={id}
-      description={description}
-      css={css}
-      className={className}
-      disabled={disabled}
-    >
-      <BaseCheckbox ref={ref} id={id} disabled={disabled} {...restProps} />
-      {label}
-    </CheckboxLabel>
+    <Box className={className} css={css}>
+      <HoustonCheckbox
+        ref={ref}
+        id={id}
+        label={label}
+        description={description as any}
+        disabled={disabled}
+        {...restProps}
+      />
+    </Box>
   ),
 );
