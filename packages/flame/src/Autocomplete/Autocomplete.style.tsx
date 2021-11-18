@@ -136,7 +136,7 @@ const flameStyle = (theme: any): FlameStyle => {
       margin: '0',
       fontSize: '15px',
       lineHeight: '1.33333',
-      fontWeight: '400',
+      fontWeight: 400,
       padding: '6px 10px',
       color: 'var(--vd-colour--text-action)',
       backgroundColor: isDisabled ? 'var(--vd-colour--keyline)' : 'var(--vd-colour--supplementary)',
@@ -148,8 +148,7 @@ const flameStyle = (theme: any): FlameStyle => {
         cursor: 'pointer',
       },
     }),
-    multiValueLabel: (styles, { isDisabled }) => ({
-      // ...styles,
+    multiValueLabel: (_styles, { isDisabled }) => ({
       color: isDisabled
         ? get('inputStyles.autocomplete.multiValueLabel.colorDisabled')
         : 'var(--vd-colour--text-action)',

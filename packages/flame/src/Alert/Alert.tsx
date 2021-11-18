@@ -59,7 +59,6 @@ export const Alert: React.FC<AlertProps> = ({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
-
         border: '2px solid',
         borderRadius: 'radius-2',
         px: 3,

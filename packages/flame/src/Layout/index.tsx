@@ -23,9 +23,7 @@ export const AnnotatedLayout: React.FunctionComponent<AnnotatedLayoutProps> = ({
 }) => (
   <Flex flexWrap="wrap" {...(restProps as any)}>
     <Box width={[1, 1 / 3, 1 / 4]} pr={[0, 4]}>
-      <h2 className="vd-text-sub-heading vd-mb4" aria-level="2">
-        {title}
-      </h2>
+      <h2 className="vd-text-sub-heading vd-mb4">{title}</h2>
       <Text mb={3}>{description}</Text>
       {renderExtras && <Box mb={3}>{renderExtras}</Box>}
     </Box>

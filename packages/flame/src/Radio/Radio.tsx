@@ -106,9 +106,8 @@ interface FormRadioProps extends RadioProps {
  */
 export const Radio = React.forwardRef<HTMLInputElement, FormRadioProps>(
   ({ label, id, description, disabled, css, className, ...restProps }, ref) => (
-    <Box css={css} className={className}>
+    <Box ref={ref} css={css} className={className}>
       <HoustonRadio
-        ref={ref}
         id={id}
         label={label as any}
         description={description as any}

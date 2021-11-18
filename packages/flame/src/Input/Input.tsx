@@ -6,7 +6,7 @@ import { themeGet } from '@styled-system/theme-get';
 import { layout, zIndex, compose } from 'styled-system';
 import { Merge } from 'type-fest';
 
-import { Flex, Box, border } from '../Core';
+import { Flex, Box, border, BorderProps } from '../Core';
 import { Label, FormHelper } from '../FormField';
 
 import { IconVerified } from '../Icon/Verified';
@@ -76,7 +76,9 @@ const StatusIcon: React.FC<StatusIconProps> = ({ status }) => {
       return null;
   }
 };
-
+interface InputBackdropProps extends BorderProps {
+  status?: StatusType;
+}
 export type BaseInputProps = Merge<
   Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'>,
   Omit<StyledInputProps, 'inputSize'>
@@ -143,6 +145,7 @@ export const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
           className={[prefix && 'vd-input--icon-left', suffix && 'vd-input--icon-right']
             .filter(Boolean)
             .join(' ')}
+          // @ts-ignore
           css={{
             borderLeft,
             borderRight,

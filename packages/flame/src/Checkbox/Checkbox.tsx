@@ -142,9 +142,8 @@ export interface CheckboxProps extends BaseCheckboxProps {
  */
 export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   ({ label, id, description, disabled, css, className, ...restProps }, ref) => (
-    <Box className={className} css={css}>
+    <Box ref={ref} className={className} css={css}>
       <HoustonCheckbox
-        ref={ref}
         id={id}
         label={label}
         description={description as any}
