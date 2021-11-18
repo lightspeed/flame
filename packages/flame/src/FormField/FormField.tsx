@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import { FieldLabel as HoustonFieldLabel } from '@lightspeed/design-system-react';
 
 import { Text, TextProps } from '../Text';
-import { FieldLabel as HoustonFieldLabel } from '@lightspeed/design-system-react';
 
 type StatusTypes = 'error' | 'valid' | 'warning';
 

@@ -1,20 +1,17 @@
 import * as React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-
 import { TextInput as HoustonTextInput } from '@lightspeed/design-system-react';
-
 import { themeGet } from '@styled-system/theme-get';
-import { layout, LayoutProps, zIndex, ZIndexProps, compose } from 'styled-system';
+import { layout, zIndex, compose } from 'styled-system';
 import { Merge } from 'type-fest';
 
-import { Flex, Box, border, BorderProps } from '../Core';
+import { Flex, Box, border } from '../Core';
 import { Label, FormHelper } from '../FormField';
 
 import { IconVerified } from '../Icon/Verified';
 import { IconWarning } from '../Icon/Warning';
 import { IconDanger } from '../Icon/Danger';
-import classNames from 'classnames';
 
 type StatusType = 'valid' | 'error' | 'warning';
 
@@ -143,7 +140,9 @@ export const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
           hasError={status === 'error'}
           disabled={disabled}
           readOnly={readOnly}
-          className={classNames(prefix && 'vd-input--icon-left', suffix && 'vd-input--icon-right')}
+          className={[prefix && 'vd-input--icon-left', suffix && 'vd-input--icon-right']
+            .filter(Boolean)
+            .join(' ')}
           css={{
             borderLeft,
             borderRight,

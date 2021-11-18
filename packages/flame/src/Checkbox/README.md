@@ -140,9 +140,9 @@ This component has the exact same props as the native HTML checkbox.
 
 Specially styled label to be used in conjunction with the BaseCheckbox component. Use this component to properly align the description.
 
-| Prop            | Type                         | Default   | Description                                                    |
-| --------------- | ---------------------------- | --------- | -------------------------------------------------------------- |
-| `description`   | `string` or `child function` | undefined | Description's text                                             |
+| Prop            | Type                         | Default   | Description                                                                                   |
+| --------------- | ---------------------------- | --------- | --------------------------------------------------------------------------------------------- |
+| `description`   | `string` or `child function` | undefined | Description's text                                                                            |
 | `html property` | `string`                     | undefined | Any extra properties passed will be added to the `<label>` tag, for example `id`, `for`, etc. |
 
 ##### Example
