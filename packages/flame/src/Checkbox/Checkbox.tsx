@@ -148,7 +148,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
         label={label}
         description={description as any}
         disabled={disabled}
-        {...restProps}
+        {...(restProps as any)}
       />
     </Box>
   ),

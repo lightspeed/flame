@@ -19,7 +19,7 @@ export type SwitchProps = Merge<
 export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
   ({ css, className, checked, ...restProps }, ref) => (
     <Box css={css} className={className}>
-      <HoustonSwitch ref={ref} small={true} checked={checked} {...restProps} />
+      <HoustonSwitch ref={ref} small={true} checked={checked} {...(restProps as any)} />
     </Box>
   ),
 );
