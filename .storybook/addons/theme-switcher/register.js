@@ -9,7 +9,7 @@ const PANEL_TITLE = 'Theme Switcher';
 
 const ThemeSwitcher = () => {
   const [state, setState] = React.useState({
-    selectedTheme: localStorage.getItem('theme') || 'flame',
+    selectedTheme: localStorage.getItem('theme') || 'houston',
   });
 
   const onChange = value => {
@@ -21,6 +21,18 @@ const ThemeSwitcher = () => {
     <div>
       <fieldset>
         <legend>Select your theme</legend>
+        <label htmlFor="houstoncolors">
+          <input
+            type="radio"
+            value="houston"
+            id="houstoncolors"
+            name="houston-theme"
+            onChange={() => onChange('houston')}
+            checked={state.selectedTheme === 'houston'}
+          />
+          Houston (Default theme)
+        </label>
+        <br />
         <label htmlFor="flamecolors">
           <input
             type="radio"
@@ -30,7 +42,7 @@ const ThemeSwitcher = () => {
             onChange={() => onChange('flame')}
             checked={state.selectedTheme === 'flame'}
           />
-          Flame (Default theme)
+          Flame
         </label>
         <br />
         <label htmlFor="lscolors">
