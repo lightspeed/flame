@@ -1,6 +1,6 @@
 {
   "name": "@lightspeed/flame",
-  "version": "2.1.0",
+  "version": "3.0.0-houston.0",
   "private": true,
   "description": "Lightspeed's React UI components library",
   "author": "Lightspeed",
@@ -69,6 +69,6 @@
     "ts-node": "8.3.0"
   },
   "publishConfig": {
-    "tag": "next"
+    "tag": "houston"
   }
 }
