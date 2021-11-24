@@ -28,9 +28,22 @@ const asideHideKeyframe = keyframes`
   }
 `;
 
+const mapSizeProp = (size: string): string => {
+  const DEFAULT_SIZE = 'medium';
+  const houstonSizes = [
+    'small',
+    'small-with-sidebar',
+    'medium',
+    'medium-with-sidebar',
+    'large',
+    'full-screen',
+  ];
+  return houstonSizes.includes(size) ? size : DEFAULT_SIZE;
+};
+
 export type ModalProps = {
   /** Sets the open state of Modal */
-  size?: ModalSize;
+  size?: ModalSize | string;
   /** Sets the open state of Modal */
   isOpen?: boolean;
   /** Sets whether ESC key closes Modal */
@@ -158,7 +171,9 @@ class BaseModal extends React.Component<ModalProps, ModalState> {
                 <ReactModal
                   isOpen={this.state.isOpen}
                   className={cx(
-                    `vd-modal-container vd-modal--size-${size} vd-modal--with-close-button`,
+                    `vd-modal-container vd-modal--size-${mapSizeProp(
+                      size,
+                    )} vd-modal--with-close-button`,
                     aside && crModalAside({ theme }),
                     className,
                   )}

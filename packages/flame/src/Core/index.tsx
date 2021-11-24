@@ -126,6 +126,7 @@ const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = () =>
 
 export {
   lightTheme,
+  houstonTheme,
   flameTheme,
   FlameFonts,
   FlameTheme,

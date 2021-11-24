@@ -62,6 +62,34 @@ const mapSizeProp = (size: ButtonSizes): boolean => {
   return ['large', 'xlarge'].includes(size);
 };
 
+const ButtonContent = styled('span')`
+  display: inline-flex;
+  align-items: center;
+`;
+
+const ChildWrapper = styled('span')`
+  display: inline-flex;
+
+  ${ButtonContent}:not(:first-of-type) {
+    margin-left: 0.5rem;
+  }
+`;
+
+const remapChild = (child: any, size: ButtonSizes) => {
+  // This is no bueno. We need to have additional logic
+  // to handle buttons with a single Icon which have completely different styling.
+  // We should probably extract this out into a seperate component instead as we're
+  // adding a bit too much complexity on an already loaded component.
+  if (isIconOnly(child)) {
+    const clone = React.cloneElement(child, {
+      size: child.props.size || size,
+    });
+    return <ButtonContent>{clone}</ButtonContent>;
+  }
+
+  return <ButtonContent>{child}</ButtonContent>;
+};
+
 export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
   const {
     loading,
@@ -81,6 +109,8 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
     borderBottomRightRadius,
     ...restProps
   } = props;
+
+  const nextChildren = React.Children.map(children, child => remapChild(child, size));
 
   const BaseButton = styled(href ? HoustonButtonLink : HoustonButton)<any, ButtonProps>`
     svg {
@@ -119,15 +149,15 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
     }
   `;
 
+  let extraCSS = {};
   let modifier;
+
   if (isIconOnly(children as any)) {
     modifier = 'icon';
-  }
-  if (!fill) {
+  } else if (!fill) {
     modifier = 'text';
   }
 
-  let extraCSS = {};
   if (variant === 'input') {
     extraCSS = {
       ...extraCSS,
@@ -136,7 +166,7 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
       justifyContent: 'flex-start',
       alignItems: 'center',
       backgroundColor: 'var(--vd-colour--box)',
-      padding: '12px 20px',
+      padding: modifier !== 'icon' ? '12px 20px' : undefined,
       border: '2px solid var(--vd-colour--framing)',
       color: 'var(--vd-colour--text)',
       transitionDuration: '0.2s',
@@ -165,6 +195,14 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
     };
   }
 
+  if (size === 'small') {
+    extraCSS = {
+      ...extraCSS,
+      fontSize: '13px',
+      padding: '8px 16px',
+    };
+  }
+
   return (
     <BaseButton
       ref={ref}
@@ -187,7 +225,7 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
       }}
       {...(restProps as any)}
     >
-      {children}
+      <ChildWrapper>{nextChildren}</ChildWrapper>
     </BaseButton>
   );
 }) as React.FC<

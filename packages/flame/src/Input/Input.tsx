@@ -216,7 +216,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
               description={description}
               descriptionProps={{ id: descriptionId }}
             >
-              label
+              {label}
             </Label>
             {labelHelper}
           </Flex>

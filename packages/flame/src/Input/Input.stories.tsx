@@ -83,7 +83,7 @@ export const story = () => (
   <div>
     <Box mb={3}>
       <h3>Simple text input</h3>
-      <Input id="simple" label="Label" placeholder="Placeholder text..." />
+      <Input id="simple" label="Simple label" placeholder="Placeholder text..." />
     </Box>
     <Box mb={3}>
       <h3>Advanced text input</h3>

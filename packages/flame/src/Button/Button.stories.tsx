@@ -90,6 +90,20 @@ export const styles = () => (
 export const sizes = () => (
   <div>
     <Box mb={3}>
+      <SpacedGroup mb={1}>
+        <Button fill size="small">
+          Small
+        </Button>
+        <Button fill variant="primary">
+          Medium
+        </Button>
+        <Button fill variant="secondary" size="large">
+          Large
+        </Button>
+        <Button fill variant="danger" size="xlarge">
+          Extra Large
+        </Button>
+      </SpacedGroup>
       <SpacedGroup>
         <Button size="small">Small</Button>
         <Button variant="primary">Medium</Button>
@@ -103,16 +117,16 @@ export const sizes = () => (
     </Box>
     <Box mb={3}>
       <SpacedGroup flexDirection="column">
-        <Button size="small" block>
+        <Button fill size="small" block>
           Small Block
         </Button>
-        <Button variant="primary" block>
+        <Button fill variant="primary" block>
           Medium Block
         </Button>
-        <Button variant="secondary" size="large" block>
+        <Button fill variant="secondary" size="large" block>
           Large Block
         </Button>
-        <Button variant="danger" size="xlarge" block>
+        <Button fill variant="danger" size="xlarge" block>
           Extra Large Block
         </Button>
       </SpacedGroup>
@@ -120,16 +134,16 @@ export const sizes = () => (
     <Divider mt={3} />
     <h3>Multiline</h3>
     <div style={{ width: '180px' }}>
-      <Button mb={2} size="small">
+      <Button fill mb={2} size="small">
         This is a small button with a very long text, even longer for small
       </Button>
-      <Button mb={2} variant="primary">
+      <Button fill mb={2} variant="primary">
         This is a normal button with a very long text, even longer
       </Button>
-      <Button mb={2} variant="secondary" size="large">
+      <Button fill mb={2} variant="secondary" size="large">
         This is a large button with a very long text
       </Button>
-      <Button variant="danger" size="xlarge">
+      <Button fill variant="danger" size="xlarge">
         This is a extra large button with a very long text
       </Button>
     </div>
