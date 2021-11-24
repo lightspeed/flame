@@ -1,6 +1,6 @@
 {
   "name": "@lightspeed/flame",
-  "version": "3.0.0-houston.0",
+  "version": "3.0.0-houston.1",
   "private": true,
   "description": "Lightspeed's React UI components library",
   "author": "Lightspeed",
