@@ -62,7 +62,7 @@ export const story = () => (
     <Box mb={3}>
       <InputGroup>
         <Input defaultValue="this is some value" />
-        <Select width="inherit">
+        <Select>
           <option>cm</option>
           <option>m</option>
           <option>km</option>
