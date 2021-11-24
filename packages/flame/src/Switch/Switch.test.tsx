@@ -39,7 +39,7 @@ describe('<Switch />', () => {
     });
   });
 
-  xit('should forward the ref properly', () => {
+  it.skip('should forward the ref properly', () => {
     const ref = React.createRef<HTMLInputElement>();
     customRender(<Switch ref={ref} />);
     expect(ref.current.type).toBe('checkbox');

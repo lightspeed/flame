@@ -103,7 +103,7 @@ describe('Button Component', () => {
     expect(domNode).toBeVisible();
   });
 
-  xit('should forward the ref properly', () => {
+  it.skip('should forward the ref properly', () => {
     const ref = React.createRef<HTMLButtonElement>();
     customRender(<Button ref={ref}>Button with a ref attached to it</Button>);
     expect(ref.current.type).toBe('button');
