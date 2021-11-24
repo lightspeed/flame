@@ -4,7 +4,7 @@
   "private": true,
   "description": "Lightspeed's React UI components library",
   "author": "Lightspeed",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "SEE LICENSE IN LICENSE.md",
   "homepage": "https://github.com/lightspeed/flame#readme",
   "repository": "https://github.com/lightspeed/flame",
   "bugs": {

@@ -21,5 +21,5 @@ fs.copySync('./src/', './dist/esm', {
 fs.copySync('./package.json', './dist/package.json');
 fs.copySync('./CHANGELOG.md', './dist/CHANGELOG.md');
 fs.copySync('./README.md', './dist/README.md');
-fs.copySync('./LICENSE', './dist/LICENSE');
+fs.copySync('./LICENSE.md', './dist/LICENSE.md');
 fs.copySync('./.npmignore', './dist/.npmignore');

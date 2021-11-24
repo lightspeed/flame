@@ -1,4 +1,4 @@
-Copyright (c) 2019-present Lightspeed POS Inc.
+Copyright (c) 2019-present Lightspeed Commerce Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -11,15 +11,10 @@ The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
 The rights granted above may only be exercised to develop, test, distribute and
-provide network access to applications (i) that integrate or interoperate with
-Lightspeed products or services; or (ii) in the case of external, stand-alone
-applications that do not integrate or interoperate with Lightspeed, the rights
-granted above may only be exercised to develop, test, distribute and provide
-network access to applications that are dissimilar and visually distinct from
-Lightspeed products and services, as determined by Lightspeed in its sole discretion.
-The rights granted above may under no circumstances be exercised to develop, test,
-distribute or provide network access to applications that compete with Lightspeed
-products or services.
+provide network access to applications that integrate or interoperate with
+Lightspeed products or services. The rights granted above may under no circumstances
+be exercised to develop, test, distribute or provide network access to applications
+that compete with Lightspeed products or services.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
 INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
