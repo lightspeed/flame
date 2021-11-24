@@ -3,23 +3,24 @@
 exports[`fontSizeAliases returns list of rem value by alias size 1`] = `
 Object {
   "": "1rem",
-  "large": "1.125rem",
-  "small": "0.875rem",
-  "xlarge": "1.5rem",
-  "xsmall": "0.75rem",
-  "xxlarge": "2.25rem",
-  "xxsmall": "0.5rem",
+  "large": "1.2rem",
+  "small": "0.93333rem",
+  "xlarge": "1.6rem",
+  "xsmall": "0.8rem",
+  "xxlarge": "2.13333rem",
+  "xxsmall": "0.53333rem",
 }
 `;
 
 exports[`fontSizes returns list of rem value by size 1`] = `
 Object {
   "text": "1rem",
-  "text-l": "1.125rem",
-  "text-s": "0.875rem",
-  "text-xl": "1.5rem",
-  "text-xs": "0.75rem",
-  "text-xxl": "2.25rem",
-  "text-xxs": "0.5rem",
+  "text-l": "1.2rem",
+  "text-s": "0.93333rem",
+  "text-xl": "1.6rem",
+  "text-xs": "0.8rem",
+  "text-xxl": "2.13333rem",
+  "text-xxs": "0.53333rem",
+  "text-xxxl": "3.2rem",
 }
 `;

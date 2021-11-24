@@ -12,17 +12,17 @@ exports[`<Badge /> renders correctly 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #abb3b3;
   color: #0c0d0d;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  -webkit-letter-spacing: 0.1rem;
+  -moz-letter-spacing: 0.1rem;
+  -ms-letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
 }
 
 <span
@@ -46,17 +46,17 @@ exports[`<Badge /> renders correctly with danger type 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #b93435;
   color: #fff;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  -webkit-letter-spacing: 0.1rem;
+  -moz-letter-spacing: 0.1rem;
+  -ms-letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
 }
 
 <span
@@ -80,17 +80,17 @@ exports[`<Badge /> renders correctly with default type 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #abb3b3;
   color: #0c0d0d;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  -webkit-letter-spacing: 0.1rem;
+  -moz-letter-spacing: 0.1rem;
+  -ms-letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
 }
 
 <span
@@ -114,17 +114,17 @@ exports[`<Badge /> renders correctly with important type 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #2875c6;
   color: #fff;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  -webkit-letter-spacing: 0.1rem;
+  -moz-letter-spacing: 0.1rem;
+  -ms-letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
 }
 
 <span
@@ -148,17 +148,17 @@ exports[`<Badge /> renders correctly with info type 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #5187e0;
   color: #fff;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  -webkit-letter-spacing: 0.1rem;
+  -moz-letter-spacing: 0.1rem;
+  -ms-letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
 }
 
 <span
@@ -182,17 +182,17 @@ exports[`<Badge /> renders correctly with success type 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #35b858;
   color: #fff;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  -webkit-letter-spacing: 0.1rem;
+  -moz-letter-spacing: 0.1rem;
+  -ms-letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
 }
 
 <span
@@ -216,17 +216,17 @@ exports[`<Badge /> renders correctly with warning type 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #f39c26;
   color: #494c4c;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  -webkit-letter-spacing: 0.1rem;
+  -moz-letter-spacing: 0.1rem;
+  -ms-letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
 }
 
 <span
@@ -250,19 +250,19 @@ exports[`<Badge /> renders pill variant 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #abb3b3;
   color: #0c0d0d;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  -webkit-letter-spacing: 0.1rem;
+  -moz-letter-spacing: 0.1rem;
+  -ms-letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
   border-radius: 10rem;
 }
 
@@ -287,17 +287,17 @@ exports[`<Badge /> renders small variant 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #abb3b3;
   color: #0c0d0d;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.5rem;
-  line-height: 1.125rem;
-  -webkit-letter-spacing: 0.0625rem;
-  -moz-letter-spacing: 0.0625rem;
-  -ms-letter-spacing: 0.0625rem;
-  letter-spacing: 0.0625rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.53333rem;
+  line-height: 1.2rem;
+  -webkit-letter-spacing: 0.06667rem;
+  -moz-letter-spacing: 0.06667rem;
+  -ms-letter-spacing: 0.06667rem;
+  letter-spacing: 0.06667rem;
 }
 
 <span
@@ -321,17 +321,17 @@ exports[`<Badge /> renders with custom background and text color 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #abb3b3;
   color: #0c0d0d;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  -webkit-letter-spacing: 0.1rem;
+  -moz-letter-spacing: 0.1rem;
+  -ms-letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
   background-color: #ddd;
   color: #222;
 }
@@ -358,17 +358,17 @@ exports[`<Badge /> renders with custom background only 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #abb3b3;
   color: #0c0d0d;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  -webkit-letter-spacing: 0.1rem;
+  -moz-letter-spacing: 0.1rem;
+  -ms-letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
   background-color: #ddd;
 }
 
@@ -393,17 +393,17 @@ exports[`<Badge /> renders with custom text color only 1`] = `
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   background-color: #abb3b3;
   color: #0c0d0d;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  -webkit-letter-spacing: 0.1rem;
+  -moz-letter-spacing: 0.1rem;
+  -ms-letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
   color: #222;
 }
 

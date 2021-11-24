@@ -22,8 +22,8 @@ Array [
 .emotion-2 {
   position: absolute;
   background: #f3f3f3;
-  border-radius: 0.375rem;
-  box-shadow: 0 0 0 0.0625rem rgba(12,13,13,0.15),0 0.1875rem 0.375rem rgba(12,13,13,0.15);
+  border-radius: 0.33333rem;
+  box-shadow: 0 0 0 0.06667rem rgba(12,13,13,0.15),0 0.66667rem 0.8rem rgba(0,0,0,0.35);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -33,19 +33,19 @@ Array [
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.75rem;
+  margin-right: 0.8rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-2::after,
@@ -266,8 +266,8 @@ Array [
 .emotion-2 {
   position: absolute;
   background: #f3f3f3;
-  border-radius: 0.375rem;
-  box-shadow: 0 0 0 0.0625rem rgba(12,13,13,0.15),0 0.1875rem 0.375rem rgba(12,13,13,0.15);
+  border-radius: 0.33333rem;
+  box-shadow: 0 0 0 0.06667rem rgba(12,13,13,0.15),0 0.66667rem 0.8rem rgba(0,0,0,0.35);
   background-color: #fff;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -278,19 +278,19 @@ Array [
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.75rem;
+  margin-right: 0.8rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-2::after,
@@ -495,8 +495,8 @@ Array [
 .emotion-0 {
   position: absolute;
   background: #f3f3f3;
-  border-radius: 0.375rem;
-  box-shadow: 0 0 0 0.0625rem rgba(12,13,13,0.15),0 0.1875rem 0.375rem rgba(12,13,13,0.15);
+  border-radius: 0.33333rem;
+  box-shadow: 0 0 0 0.06667rem rgba(12,13,13,0.15),0 0.66667rem 0.8rem rgba(0,0,0,0.35);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -506,19 +506,19 @@ Array [
 }
 
 .emotion-0[data-placement^='top'] {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .emotion-0[data-placement^='bottom'] {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 .emotion-0[data-placement^='left'] {
-  margin-right: 0.75rem;
+  margin-right: 0.8rem;
 }
 
 .emotion-0[data-placement^='right'] {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-0::after,
@@ -700,8 +700,8 @@ Array [
 .emotion-2 {
   position: absolute;
   background: #f3f3f3;
-  border-radius: 0.375rem;
-  box-shadow: 0 0 0 0.0625rem rgba(12,13,13,0.15),0 0.1875rem 0.375rem rgba(12,13,13,0.15);
+  border-radius: 0.33333rem;
+  box-shadow: 0 0 0 0.06667rem rgba(12,13,13,0.15),0 0.66667rem 0.8rem rgba(0,0,0,0.35);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -711,19 +711,19 @@ Array [
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.75rem;
+  margin-right: 0.8rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-2::after,
@@ -926,8 +926,8 @@ Array [
 .emotion-2 {
   position: absolute;
   background: #f3f3f3;
-  border-radius: 0.375rem;
-  box-shadow: 0 0 0 0.0625rem rgba(12,13,13,0.15),0 0.1875rem 0.375rem rgba(12,13,13,0.15);
+  border-radius: 0.33333rem;
+  box-shadow: 0 0 0 0.06667rem rgba(12,13,13,0.15),0 0.66667rem 0.8rem rgba(0,0,0,0.35);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -937,19 +937,19 @@ Array [
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.75rem;
+  margin-right: 0.8rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-2::after,
@@ -1152,8 +1152,8 @@ Array [
 .emotion-2 {
   position: absolute;
   background: #f3f3f3;
-  border-radius: 0.375rem;
-  box-shadow: 0 0 0 0.0625rem rgba(12,13,13,0.15),0 0.1875rem 0.375rem rgba(12,13,13,0.15);
+  border-radius: 0.33333rem;
+  box-shadow: 0 0 0 0.06667rem rgba(12,13,13,0.15),0 0.66667rem 0.8rem rgba(0,0,0,0.35);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -1163,19 +1163,19 @@ Array [
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.75rem;
+  margin-right: 0.8rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-2::after,
@@ -1378,8 +1378,8 @@ Array [
 .emotion-2 {
   position: absolute;
   background: #f3f3f3;
-  border-radius: 0.375rem;
-  box-shadow: 0 0 0 0.0625rem rgba(12,13,13,0.15),0 0.1875rem 0.375rem rgba(12,13,13,0.15);
+  border-radius: 0.33333rem;
+  box-shadow: 0 0 0 0.06667rem rgba(12,13,13,0.15),0 0.66667rem 0.8rem rgba(0,0,0,0.35);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -1389,19 +1389,19 @@ Array [
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.75rem;
+  margin-right: 0.8rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-2::after,
@@ -1604,8 +1604,8 @@ Array [
 .emotion-2 {
   position: absolute;
   background: #f3f3f3;
-  border-radius: 0.375rem;
-  box-shadow: 0 0 0 0.0625rem rgba(12,13,13,0.15),0 0.1875rem 0.375rem rgba(12,13,13,0.15);
+  border-radius: 0.33333rem;
+  box-shadow: 0 0 0 0.06667rem rgba(12,13,13,0.15),0 0.66667rem 0.8rem rgba(0,0,0,0.35);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -1615,19 +1615,19 @@ Array [
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.75rem;
+  margin-right: 0.8rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-2::after,
@@ -1830,8 +1830,8 @@ Array [
 .emotion-2 {
   position: absolute;
   background: #f3f3f3;
-  border-radius: 0.375rem;
-  box-shadow: 0 0 0 0.0625rem rgba(12,13,13,0.15),0 0.1875rem 0.375rem rgba(12,13,13,0.15);
+  border-radius: 0.33333rem;
+  box-shadow: 0 0 0 0.06667rem rgba(12,13,13,0.15),0 0.66667rem 0.8rem rgba(0,0,0,0.35);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -1841,19 +1841,19 @@ Array [
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.75rem;
+  margin-right: 0.8rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-2::after,
@@ -2056,8 +2056,8 @@ Array [
 .emotion-2 {
   position: absolute;
   background: #f3f3f3;
-  border-radius: 0.375rem;
-  box-shadow: 0 0 0 0.0625rem rgba(12,13,13,0.15),0 0.1875rem 0.375rem rgba(12,13,13,0.15);
+  border-radius: 0.33333rem;
+  box-shadow: 0 0 0 0.06667rem rgba(12,13,13,0.15),0 0.66667rem 0.8rem rgba(0,0,0,0.35);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -2067,19 +2067,19 @@ Array [
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.75rem;
+  margin-right: 0.8rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-2::after,
@@ -2282,8 +2282,8 @@ Array [
 .emotion-2 {
   position: absolute;
   background: #f3f3f3;
-  border-radius: 0.375rem;
-  box-shadow: 0 0 0 0.0625rem rgba(12,13,13,0.15),0 0.1875rem 0.375rem rgba(12,13,13,0.15);
+  border-radius: 0.33333rem;
+  box-shadow: 0 0 0 0.06667rem rgba(12,13,13,0.15),0 0.66667rem 0.8rem rgba(0,0,0,0.35);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -2293,19 +2293,19 @@ Array [
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.75rem;
+  margin-right: 0.8rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-2::after,

@@ -501,6 +501,7 @@ exports[`generate-utilities _typography.scss should output the right CSS 1`] = `
 .cr-regular { font-weight: $cr-regular; }
 .cr-bold { font-weight: $cr-bold; }
 
+.cr-text-xxxl { font-size: $cr-text-xxxl; }
 .cr-text-xxl { font-size: $cr-text-xxl; }
 .cr-text-xl { font-size: $cr-text-xl; }
 .cr-text-l { font-size: $cr-text-l; }

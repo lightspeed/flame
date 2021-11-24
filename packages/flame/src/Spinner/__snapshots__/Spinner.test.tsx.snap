@@ -1,140 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Spinner /> Snapshots when color is cr-blue should render correctly 1`] = `
-@keyframes animation-0 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.emotion-1 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  -webkit-animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-  animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-}
-
-<svg
-  className="emotion-0 cr-icon emotion-1 emotion-2"
-  fill="#2875c6"
-  style={
-    Object {
-      "height": "1rem",
-      "width": "1rem",
-    }
-  }
-  viewBox="0 0 16 16"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    className="cr-icon__base cr-icon__base-2"
-    d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zm0-3A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"
-    opacity=".3"
-  />
-  <path
-    className="cr-icon__base cr-icon__base-1"
-    d="M8 13a1.5 1.5 0 0 1 0 3A8 8 0 0 1 .323 5.742a1.5 1.5 0 1 1 2.879.846A5 5 0 0 0 8 13z"
-  />
-</svg>
+<div
+  className="vd-loader emotion-0"
+  data-testid="loading-spinner"
+/>
 `;
 
 exports[`<Spinner /> Snapshots when empty props should render correctly 1`] = `
-@keyframes animation-0 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.emotion-1 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  -webkit-animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-  animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-}
-
-<svg
-  className="emotion-0 cr-icon emotion-1 emotion-2"
-  style={
-    Object {
-      "height": "1rem",
-      "width": "1rem",
-    }
-  }
-  viewBox="0 0 16 16"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    className="cr-icon__base cr-icon__base-2"
-    d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zm0-3A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"
-    opacity=".3"
-  />
-  <path
-    className="cr-icon__base cr-icon__base-1"
-    d="M8 13a1.5 1.5 0 0 1 0 3A8 8 0 0 1 .323 5.742a1.5 1.5 0 1 1 2.879.846A5 5 0 0 0 8 13z"
-  />
-</svg>
+<div
+  className="vd-loader css-btry7x-Spinner"
+  data-testid="loading-spinner"
+/>
 `;
 
 exports[`<Spinner /> Snapshots when size is xlarge should render correctly 1`] = `
-@keyframes animation-0 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+.emotion-0 {
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
-.emotion-1 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  -webkit-animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-  animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-}
-
-<svg
-  className="emotion-0 cr-icon emotion-1 emotion-2"
-  style={
-    Object {
-      "height": "1.5rem",
-      "width": "1.5rem",
-    }
-  }
-  viewBox="0 0 16 16"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    className="cr-icon__base cr-icon__base-2"
-    d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zm0-3A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"
-    opacity=".3"
-  />
-  <path
-    className="cr-icon__base cr-icon__base-1"
-    d="M8 13a1.5 1.5 0 0 1 0 3A8 8 0 0 1 .323 5.742a1.5 1.5 0 1 1 2.879.846A5 5 0 0 0 8 13z"
-  />
-</svg>
+<div
+  className="vd-loader emotion-0"
+  data-testid="loading-spinner"
+/>
 `;

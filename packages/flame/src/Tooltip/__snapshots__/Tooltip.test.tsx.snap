@@ -11,18 +11,16 @@ Array [
     Hello World
   </span>,
   .emotion-2 {
-  padding: 0.375rem;
-  font-size: 0.75rem;
-  font-weight: 700;
+  padding: 8px;
   line-height: 1;
   color: #fff;
-  background: #494c4c;
-  -webkit-letter-spacing: 0.03125rem;
-  -moz-letter-spacing: 0.03125rem;
-  -ms-letter-spacing: 0.03125rem;
-  letter-spacing: 0.03125rem;
-  border-radius: 0.1875rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(12,13,13,0.15);
+  background: var(--vd-colour--framing-inverse);
+  -webkit-letter-spacing: 0.03333rem;
+  -moz-letter-spacing: 0.03333rem;
+  -ms-letter-spacing: 0.03333rem;
+  letter-spacing: 0.03333rem;
+  border-radius: 0.26667rem;
+  box-shadow: 0 0 0.13333rem rgba(0,0,0,0.35);
   border: 1px solid #494c4c;
   -webkit-transition-property: opacity;
   transition-property: opacity;
@@ -31,19 +29,19 @@ Array [
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.375rem;
+  margin-bottom: 0.4rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.375rem;
+  margin-top: 0.4rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.375rem;
+  margin-right: 0.4rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.375rem;
+  margin-left: 0.4rem;
 }
 
 .emotion-2[data-placement^='top'] .emotion-1::after,
@@ -177,43 +175,41 @@ Array [
 }
 
 .emotion-2 {
-  padding: 0.375rem;
-  font-size: 0.75rem;
-  font-weight: 700;
+  padding: 8px;
   line-height: 1;
   color: #fff;
-  background: #494c4c;
-  -webkit-letter-spacing: 0.03125rem;
-  -moz-letter-spacing: 0.03125rem;
-  -ms-letter-spacing: 0.03125rem;
-  letter-spacing: 0.03125rem;
-  border-radius: 0.1875rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(12,13,13,0.15);
+  background: var(--vd-colour--framing-inverse);
+  -webkit-letter-spacing: 0.03333rem;
+  -moz-letter-spacing: 0.03333rem;
+  -ms-letter-spacing: 0.03333rem;
+  letter-spacing: 0.03333rem;
+  border-radius: 0.26667rem;
+  box-shadow: 0 0 0.13333rem rgba(0,0,0,0.35);
   border: 1px solid #494c4c;
   -webkit-transition-property: opacity;
   transition-property: opacity;
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
-  padding: calc(0.375rem - 1);
+  padding: calc(0.4rem - 1);
   background-color: #f3f3f3;
   border-color: #abb3b3;
   color: #494c4c;
 }
 
 .emotion-2[data-placement^='top'] {
-  margin-bottom: 0.375rem;
+  margin-bottom: 0.4rem;
 }
 
 .emotion-2[data-placement^='bottom'] {
-  margin-top: 0.375rem;
+  margin-top: 0.4rem;
 }
 
 .emotion-2[data-placement^='left'] {
-  margin-right: 0.375rem;
+  margin-right: 0.4rem;
 }
 
 .emotion-2[data-placement^='right'] {
-  margin-left: 0.375rem;
+  margin-left: 0.4rem;
 }
 
 .emotion-2[data-placement^='top'] .emotion-1::after,

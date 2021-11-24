@@ -1,949 +1,244 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Checkbox /> Snapshots when all props and label/description with html should render correctly 1`] = `
-.emotion-9 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
-.emotion-11 {
-  margin: 0;
-  margin-left: 1.75rem;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-}
-
 <div
-  className="emotion-13 emotion-14"
+  className="css-1efsrtw-Box emotion-0"
 >
-  <label
-    className="emotion-9 emotion-10"
-    color="textHeading"
-    fontSize="text-s"
-    fontWeight="bold"
-    htmlFor="id"
+  <div
+    className="vd-label-only-checkbox vd-checkbox--primary"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="vd-label-only-checkbox-container"
     >
-      <input
-        className="emotion-0 emotion-1"
-        id="id"
-        type="checkbox"
-        value="value"
-      />
-      <div
-        className="emotion-5 emotion-6"
+      <label
+        className="vd-label-only-checkbox-input-container vd-checkbox--unselected"
       >
-        <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="vd-checkbox-input-container"
         >
-          <path
-            className="cr-icon__base cr-icon__base-1"
-            d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          <input
+            className="vd-checkbox-input"
+            id="id"
+            type="checkbox"
+            value="value"
           />
-        </svg>
+          <div
+            className="vd-checkbox-tick"
+          />
+          <div
+            className="vd-label-only-checkbox-label"
+          >
+            <div>
+              Label
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+    <div
+      className="vd-checkbox-description"
+    >
+      <div>
+        Description
       </div>
-    </div>
-    <div>
-      Label
-    </div>
-  </label>
-  <div
-    className="fl-text emotion-11 emotion-12"
-    size="small"
-  >
-    <div>
-      Description
     </div>
   </div>
 </div>
 `;
 
 exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
-.emotion-9 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
-.emotion-11 {
-  margin: 0;
-  margin-left: 1.75rem;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-}
-
 <div
-  className="emotion-13 emotion-14"
+  className="css-1efsrtw-Box emotion-0"
 >
-  <label
-    className="emotion-9 emotion-10"
-    color="textHeading"
-    fontSize="text-s"
-    fontWeight="bold"
-    htmlFor="id"
+  <div
+    className="vd-label-only-checkbox vd-checkbox--primary"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="vd-label-only-checkbox-container"
     >
-      <input
-        className="emotion-0 emotion-1"
-        id="id"
-        type="checkbox"
-        value="value"
-      />
-      <div
-        className="emotion-5 emotion-6"
+      <label
+        className="vd-label-only-checkbox-input-container vd-checkbox--unselected"
       >
-        <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="vd-checkbox-input-container"
         >
-          <path
-            className="cr-icon__base cr-icon__base-1"
-            d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          <input
+            className="vd-checkbox-input"
+            id="id"
+            type="checkbox"
+            value="value"
           />
-        </svg>
-      </div>
+          <div
+            className="vd-checkbox-tick"
+          />
+          <div
+            className="vd-label-only-checkbox-label"
+          >
+            Label
+          </div>
+        </div>
+      </label>
     </div>
-    Label
-  </label>
-  <div
-    className="fl-text emotion-11 emotion-12"
-    size="small"
-  >
-    Description
+    <div
+      className="vd-checkbox-description"
+    >
+      Description
+    </div>
   </div>
 </div>
 `;
 
 exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
-.emotion-9 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
 <div
-  className="emotion-11 emotion-12"
+  className="css-1efsrtw-Box emotion-0"
 >
-  <label
-    className="emotion-9 emotion-10"
-    color="textHeading"
-    fontSize="text-s"
-    fontWeight="bold"
+  <div
+    className="vd-label-only-checkbox vd-checkbox--primary"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="vd-label-only-checkbox-container"
     >
-      <input
-        checked={true}
-        className="emotion-0 emotion-1"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="emotion-5 emotion-6"
+      <label
+        className="vd-label-only-checkbox-input-container"
       >
-        <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="vd-checkbox-input-container"
         >
-          <path
-            className="cr-icon__base cr-icon__base-1"
-            d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          <input
+            checked={true}
+            className="vd-checkbox-input"
+            onChange={[Function]}
+            type="checkbox"
           />
-        </svg>
-      </div>
+          <div
+            className="vd-checkbox-tick"
+          />
+        </div>
+      </label>
     </div>
-  </label>
+  </div>
 </div>
 `;
 
 exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
-.emotion-9 {
-  margin: 0;
-  color: #e1e4e5;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  className="emotion-11 emotion-12"
+  className="css-1efsrtw-Box emotion-0"
 >
-  <label
-    className="emotion-9 emotion-10"
-    color="disabled"
-    fontSize="text-s"
-    fontWeight="bold"
+  <div
+    className="vd-label-only-checkbox vd-checkbox--primary"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="vd-label-only-checkbox-container"
     >
-      <input
-        className="emotion-0 emotion-1"
-        disabled={true}
-        type="checkbox"
-      />
-      <div
-        className="emotion-5 emotion-6"
+      <label
+        className="vd-label-only-checkbox-input-container vd-checkbox--unselected"
       >
-        <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="vd-checkbox-input-container"
         >
-          <path
-            className="cr-icon__base cr-icon__base-1"
-            d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          <input
+            className="vd-checkbox-input"
+            disabled={true}
+            type="checkbox"
           />
-        </svg>
-      </div>
+          <div
+            className="vd-checkbox-tick"
+          />
+        </div>
+      </label>
     </div>
-  </label>
+  </div>
 </div>
 `;
 
 exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
-.emotion-9 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
 <div
-  className="emotion-11 emotion-12"
+  className="css-1efsrtw-Box emotion-0"
 >
-  <label
-    className="emotion-9 emotion-10"
-    color="textHeading"
-    fontSize="text-s"
-    fontWeight="bold"
+  <div
+    className="vd-label-only-checkbox vd-checkbox--primary"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="vd-label-only-checkbox-container"
     >
-      <input
-        className="emotion-0 emotion-1"
-        type="checkbox"
-      />
-      <div
-        className="emotion-5 emotion-6"
+      <label
+        className="vd-label-only-checkbox-input-container vd-checkbox--unselected"
       >
-        <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="vd-checkbox-input-container"
         >
-          <path
-            className="cr-icon__base cr-icon__base-1"
-            d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          <input
+            className="vd-checkbox-input"
+            type="checkbox"
           />
-        </svg>
-      </div>
+          <div
+            className="vd-checkbox-tick"
+          />
+        </div>
+      </label>
     </div>
-  </label>
+  </div>
 </div>
 `;
 
 exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] = `
-.emotion-11 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-8 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-8 .emotion-6 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-8 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-8 {
-  opacity: 0.5;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
-.emotion-7 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-  border-color: #2875c6;
-}
-
-.emotion-5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5rem;
-  height: 0.125rem;
-  border-radius: 0.1875rem;
-  background: #1d5794;
-}
-
 <div
-  className="emotion-13 emotion-14"
+  className="css-1efsrtw-Box emotion-0"
 >
-  <label
-    className="emotion-11 emotion-12"
-    color="textHeading"
-    fontSize="text-s"
-    fontWeight="bold"
+  <div
+    className="vd-label-only-checkbox vd-checkbox--primary"
   >
     <div
-      className="emotion-9 emotion-10"
+      className="vd-label-only-checkbox-container"
     >
-      <input
-        className="emotion-0 emotion-1"
-        type="checkbox"
-      />
-      <div
-        className="emotion-7 emotion-8"
+      <label
+        className="vd-label-only-checkbox-input-container vd-checkbox--unselected"
       >
-        <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            className="cr-icon__base cr-icon__base-1"
-            d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
-          />
-        </svg>
         <div
-          className="emotion-5 emotion-6"
-        />
-      </div>
+          className="vd-checkbox-input-container"
+        >
+          <input
+            className="vd-checkbox-input"
+            indeterminate={true}
+            type="checkbox"
+          />
+          <div
+            className="vd-checkbox-tick"
+          />
+        </div>
+      </label>
     </div>
-  </label>
+  </div>
 </div>
 `;
 
 exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
-.emotion-9 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
 <div
-  className="emotion-11 emotion-12"
+  className="css-1efsrtw-Box emotion-0"
 >
-  <label
-    className="emotion-9 emotion-10"
-    color="textHeading"
-    fontSize="text-s"
-    fontWeight="bold"
+  <div
+    className="vd-label-only-checkbox vd-checkbox--primary"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="vd-label-only-checkbox-container"
     >
-      <input
-        checked={false}
-        className="emotion-0 emotion-1"
-        type="checkbox"
-      />
-      <div
-        className="emotion-5 emotion-6"
+      <label
+        className="vd-label-only-checkbox-input-container vd-checkbox--unselected"
       >
-        <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
-          style={
-            Object {
-              "height": "0.65rem",
-              "width": "0.65rem",
-            }
-          }
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="vd-checkbox-input-container"
         >
-          <path
-            className="cr-icon__base cr-icon__base-1"
-            d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          <input
+            checked={false}
+            className="vd-checkbox-input"
+            type="checkbox"
           />
-        </svg>
-      </div>
+          <div
+            className="vd-checkbox-tick"
+          />
+        </div>
+      </label>
     </div>
-  </label>
+  </div>
 </div>
 `;

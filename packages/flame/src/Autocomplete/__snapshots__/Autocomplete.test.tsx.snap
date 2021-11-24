@@ -11,13 +11,13 @@ exports[`Autocomplete renders as disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fff;
-  border-color: #abb3b3;
-  border-radius: 0.1875rem;
+  background-color: var(--vd-colour--box);
+  border-color: hsl(0,0%,80%);
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
-  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
-  cursor: default;
+  box-shadow: none;
+  cursor: text;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,15 +29,20 @@ exports[`Autocomplete renders as disabled 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 2.25rem;
-  outline: 0 !important;
+  min-height: 38px;
+  outline: none;
   position: relative;
-  -webkit-transition: all 100ms;
-  transition: all 100ms;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   box-sizing: border-box;
-  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 0.875rem;
-  color: #494c4c;
+  color: var(--vd-colour--text);
+  word-break: normal;
+  width: 100%;
+  margin: 0px;
+  padding: 0.3666666667rem 12px;
+  border: 2px solid var(--vd-colour--framing);
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
 }
 
 .emotion-6:hover {
@@ -71,7 +76,7 @@ exports[`Autocomplete renders as disabled 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
+  padding: 0px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
@@ -265,13 +270,13 @@ exports[`Autocomplete renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fff;
-  border-color: #abb3b3;
-  border-radius: 0.1875rem;
+  background-color: var(--vd-colour--box);
+  border-color: hsl(0,0%,80%);
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
-  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
-  cursor: default;
+  box-shadow: none;
+  cursor: text;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -283,15 +288,20 @@ exports[`Autocomplete renders correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 2.25rem;
-  outline: 0 !important;
+  min-height: 38px;
+  outline: none;
   position: relative;
-  -webkit-transition: all 100ms;
-  transition: all 100ms;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   box-sizing: border-box;
-  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 0.875rem;
-  color: #494c4c;
+  color: var(--vd-colour--text);
+  word-break: normal;
+  width: 100%;
+  margin: 0px;
+  padding: 0.3666666667rem 12px;
+  border: 2px solid var(--vd-colour--framing);
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
 }
 
 .emotion-6:hover {
@@ -325,7 +335,7 @@ exports[`Autocomplete renders correctly 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
+  padding: 0px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
@@ -509,37 +519,23 @@ exports[`Autocomplete renders correctly 1`] = `
 `;
 
 exports[`Autocomplete renders in loading mode 1`] = `
-@keyframes animation-0 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.emotion-10 {
+.emotion-8 {
   position: relative;
   box-sizing: border-box;
 }
 
-.emotion-9 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fff;
-  border-color: #abb3b3;
-  border-radius: 0.1875rem;
+  background-color: var(--vd-colour--box);
+  border-color: hsl(0,0%,80%);
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
-  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
-  cursor: default;
+  box-shadow: none;
+  cursor: text;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -551,30 +547,35 @@ exports[`Autocomplete renders in loading mode 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 2.25rem;
-  outline: 0 !important;
+  min-height: 38px;
+  outline: none;
   position: relative;
-  -webkit-transition: all 100ms;
-  transition: all 100ms;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   box-sizing: border-box;
-  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 0.875rem;
-  color: #494c4c;
+  color: var(--vd-colour--text);
+  word-break: normal;
+  width: 100%;
+  margin: 0px;
+  padding: 0.3666666667rem 12px;
+  border: 2px solid var(--vd-colour--framing);
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
 }
 
-.emotion-9:hover {
+.emotion-7:hover {
   border-color: hsl(0,0%,70%);
 }
 
-.emotion-9:hover {
+.emotion-7:hover {
   border-color: #848a8a;
 }
 
-.cr-autocomplete--error .emotion-9 {
+.cr-autocomplete--error .emotion-7 {
   border-color: #b93435;
 }
 
-.cr-autocomplete--error .emotion-9 .cr-autocomplete__dropdownIndicator {
+.cr-autocomplete--error .emotion-7 .cr-autocomplete__dropdownIndicator {
   fill: #b93435;
 }
 
@@ -593,7 +594,7 @@ exports[`Autocomplete renders in loading mode 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
+  padding: 0px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
@@ -621,7 +622,7 @@ exports[`Autocomplete renders in loading mode 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -642,30 +643,27 @@ exports[`Autocomplete renders in loading mode 1`] = `
   color: #848a8a;
 }
 
-.emotion-8 div:hover .cr-autocomplete__clearIndicator {
+.emotion-6 div:hover .cr-autocomplete__clearIndicator {
   fill: #b93435;
-}
-
-.emotion-6 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
 }
 
 .emotion-4 {
   width: 1rem;
   height: 1rem;
   vertical-align: text-bottom;
-  -webkit-animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-  animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
+}
+
+.emotion-3 {
+  width: large;
+  height: large;
 }
 
 <div
-  className="emotion-10 cr-autocomplete"
+  className="emotion-8 cr-autocomplete"
   onKeyDown={[Function]}
 >
   <div
-    className="emotion-9 cr-autocomplete__control"
+    className="emotion-7 cr-autocomplete__control"
     onMouseDown={[Function]}
     onTouchEnd={[Function]}
   >
@@ -736,31 +734,12 @@ exports[`Autocomplete renders in loading mode 1`] = `
       </div>
     </div>
     <div
-      className="emotion-8 cr-autocomplete__indicators"
+      className="emotion-6 cr-autocomplete__indicators"
     >
-      <svg
-        className="emotion-3 cr-icon emotion-4 emotion-5"
-        fill="#abb3b3"
-        style={
-          Object {
-            "height": "1.125rem",
-            "width": "1.125rem",
-          }
-        }
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          className="cr-icon__base cr-icon__base-2"
-          d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zm0-3A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"
-          fill="#848a8a"
-          opacity=".3"
-        />
-        <path
-          className="cr-icon__base cr-icon__base-1"
-          d="M8 13a1.5 1.5 0 0 1 0 3A8 8 0 0 1 .323 5.742a1.5 1.5 0 1 1 2.879.846A5 5 0 0 0 8 13z"
-        />
-      </svg>
+      <div
+        className="vd-loader emotion-3"
+        data-testid="loading-spinner"
+      />
       <div
         aria-hidden="true"
         onMouseDown={[Function]}
@@ -780,7 +759,7 @@ exports[`Autocomplete renders in loading mode 1`] = `
         }
       >
         <svg
-          className="cr-autocomplete__dropdownIndicator cr-icon emotion-6 emotion-5"
+          className="cr-autocomplete__dropdownIndicator cr-icon emotion-4 emotion-5"
           fill="#848a8a"
           style={
             Object {
@@ -818,13 +797,13 @@ exports[`Autocomplete renders with an initial value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fff;
-  border-color: #abb3b3;
-  border-radius: 0.1875rem;
+  background-color: var(--vd-colour--box);
+  border-color: hsl(0,0%,80%);
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
-  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
-  cursor: default;
+  box-shadow: none;
+  cursor: text;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -836,15 +815,20 @@ exports[`Autocomplete renders with an initial value 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 2.25rem;
-  outline: 0 !important;
+  min-height: 38px;
+  outline: none;
   position: relative;
-  -webkit-transition: all 100ms;
-  transition: all 100ms;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   box-sizing: border-box;
-  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 0.875rem;
-  color: #494c4c;
+  color: var(--vd-colour--text);
+  word-break: normal;
+  width: 100%;
+  margin: 0px;
+  padding: 0.3666666667rem 12px;
+  border: 2px solid var(--vd-colour--framing);
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
 }
 
 .emotion-8:hover {
@@ -878,7 +862,7 @@ exports[`Autocomplete renders with an initial value 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
+  padding: 0px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;

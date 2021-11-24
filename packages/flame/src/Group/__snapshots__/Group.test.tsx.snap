@@ -18,7 +18,7 @@ exports[`<Group /> Snapshots renders a group 1`] = `
 
 .emotion-8 > .emotion-9:not(:first-of-type),
 .emotion-8 .emotion-1:not(:first-of-type) {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-0 {
@@ -26,11 +26,11 @@ exports[`<Group /> Snapshots renders a group 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.375rem 0.75rem;
+  padding: 0.4rem 0.8rem;
   text-align: center;
   background-color: #f3f3f3;
   border: solid 1px #abb3b3;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -60,7 +60,7 @@ exports[`<Group /> Snapshots renders a group 1`] = `
 }
 
 .emotion-2:not(:first-of-type) {
-  margin-left: 0.75rem;
+  margin-left: 0.8rem;
 }
 
 .emotion-2 > * {
@@ -87,6 +87,7 @@ exports[`<Group /> Snapshots renders a group 1`] = `
   >
     <input
       type="text"
+      variant="input"
     />
   </div>
   <div
@@ -94,6 +95,7 @@ exports[`<Group /> Snapshots renders a group 1`] = `
   >
     <button
       type="button"
+      variant="input"
     >
       My button
     </button>

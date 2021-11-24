@@ -25,7 +25,7 @@ describe('<Dropdown />', () => {
     expect(screen.queryByText('My Dropdown')).toBeTruthy();
     expect(screen.queryByText('Some dropdown content')).not.toBeVisible();
 
-    fireEvent.click(screen.queryByText('My Dropdown'));
+    fireEvent.click(screen.queryByText('My Dropdown').previousSibling);
 
     expect(screen.queryByText('Some dropdown content')).toBeVisible();
   });
@@ -44,7 +44,7 @@ describe('<Dropdown />', () => {
     expect(screen.queryByText('Some dropdown content')).not.toBeVisible();
 
     await act(async () => {
-      fireEvent.click(screen.queryByText('My Dropdown'));
+      fireEvent.click(screen.queryByText('My Dropdown').previousSibling);
     });
     expect(screen.queryByText('Some dropdown content')).toBeVisible();
 
@@ -77,7 +77,7 @@ describe('<Dropdown />', () => {
     expect(screen.queryByText('Some dropdown content')).not.toBeVisible();
 
     await act(async () => {
-      fireEvent.click(screen.queryByText('My Dropdown'));
+      fireEvent.click(screen.queryByText('My Dropdown').previousSibling);
     });
     expect(screen.queryByText('Some dropdown content')).toBeVisible();
 
@@ -107,7 +107,7 @@ describe('<Dropdown />', () => {
     expect(screen.queryByText('Some dropdown content')).not.toBeVisible();
 
     await act(async () => {
-      fireEvent.click(screen.queryByText('My Dropdown'));
+      fireEvent.click(screen.queryByText('My Dropdown').previousSibling);
     });
     expect(screen.queryByText('Some dropdown content')).toBeVisible();
 
@@ -134,7 +134,7 @@ describe('<Dropdown />', () => {
     expect(screen.queryByText('Close Button')).not.toBeVisible();
 
     await act(async () => {
-      fireEvent.click(screen.queryByText('My Dropdown'));
+      fireEvent.click(screen.queryByText('My Dropdown').previousSibling);
     });
     expect(screen.queryByText('Close Button')).toBeVisible();
 
@@ -165,7 +165,7 @@ describe('<Dropdown />', () => {
     expect(screen.queryByText('Close Button')).not.toBeVisible();
 
     await act(async () => {
-      fireEvent.click(screen.queryByText('My Dropdown'));
+      fireEvent.click(screen.queryByText('My Dropdown').previousSibling);
     });
     expect(screen.queryByText('Close Button')).toBeVisible();
 

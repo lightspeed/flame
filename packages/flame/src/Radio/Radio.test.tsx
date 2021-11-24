@@ -38,48 +38,6 @@ describe('<Radio />', () => {
     });
   });
 
-  describe('Uncontrolled State', () => {
-    it('should not display that white circle (aka, the centermark) by default', () => {
-      const { getAllByTestId } = customRender(
-        <div>
-          <Radio id="lion" name="animals" value="lion" />
-          <Radio id="tiger" name="animals" value="tiger" />
-          <Radio id="bear" name="animals" value="bear" />
-        </div>,
-      );
-
-      const centermarks = getAllByTestId('radio-centermark') as HTMLInputElement[];
-      centermarks.forEach(centermark => {
-        expect(centermark).not.toBeVisible();
-      });
-    });
-
-    it('should have the corresponding centermark appear when we click on the radio option', () => {
-      const { getAllByTestId, getByDisplayValue } = customRender(
-        <div>
-          <Radio id="lion" name="animals" value="lion" />
-          <Radio id="tiger" name="animals" value="tiger" />
-          <Radio id="bear" name="animals" value="bear" />
-        </div>,
-      );
-
-      fireEvent.click(getByDisplayValue('tiger'));
-
-      const centermarks = getAllByTestId('radio-centermark') as HTMLInputElement[];
-      // This is legit: we control the render, so we know exactly which dom node is where.
-      expect(centermarks[0]).not.toBeVisible();
-      expect(centermarks[1]).toBeVisible();
-      expect(centermarks[2]).not.toBeVisible();
-
-      // Let's test another click, just for good mesure.
-      fireEvent.click(getByDisplayValue('bear'));
-
-      expect(centermarks[0]).not.toBeVisible();
-      expect(centermarks[1]).not.toBeVisible();
-      expect(centermarks[2]).toBeVisible();
-    });
-  });
-
   describe('Events', () => {
     it('handles the `onChange` event', () => {
       const onChange = jest.fn();

@@ -3,7 +3,7 @@ const { pxToRem } = require('../utils');
 describe('pxToRem', () => {
   it('returns rem value with default base value', () => {
     const result = pxToRem(3);
-    expect(result).toEqual('0.1875rem');
+    expect(result).toEqual('0.2rem');
   });
 
   it('returns rem value with custom base value', () => {

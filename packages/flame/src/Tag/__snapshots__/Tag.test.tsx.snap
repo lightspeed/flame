@@ -14,7 +14,7 @@ exports[`<Tag /> Snapshots when default should render correctly 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
 }
 
 .emotion-0 {
@@ -29,8 +29,8 @@ exports[`<Tag /> Snapshots when default should render correctly 1`] = `
   outline: none;
   cursor: pointer;
   color: #fff;
-  border-radius: 0.1875rem;
-  padding: 0.375rem;
+  border-radius: 0.26667rem;
+  padding: 0.4rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,21 +48,21 @@ exports[`<Tag /> Snapshots when default should render correctly 1`] = `
   -ms-user-select: none;
   user-select: none;
   text-align: left;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+  font-size: 0.93333rem;
+  line-height: 1.2rem;
 }
 
 .emotion-0::after {
   content: ' ';
   position: absolute;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   box-sizing: border-box;
   z-index: -1;
-  box-shadow: 0.1875rem;
+  box-shadow: 0.26667rem;
 }
 
 .emotion-0:hover {
@@ -74,7 +74,7 @@ exports[`<Tag /> Snapshots when default should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  box-shadow: 0 0 0 0.0625rem #fff,0 0 0 0.1875rem #2875c6,inset 0 0 0.375rem rgba(12,13,13,0.18);
+  box-shadow: 0 0 0 0.0625rem #fff,0 0 0 0.1875rem #2875c6,inset 0 0 0.4rem rgba(12,13,13,0.18);
 }
 
 .emotion-0::-moz-focus-inner {
@@ -113,7 +113,7 @@ exports[`<Tag /> Snapshots when dismissible should render correctly 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
 }
 
 .emotion-0 {
@@ -128,8 +128,8 @@ exports[`<Tag /> Snapshots when dismissible should render correctly 1`] = `
   outline: none;
   cursor: pointer;
   color: #fff;
-  border-radius: 0.1875rem;
-  padding: 0.375rem;
+  border-radius: 0.26667rem;
+  padding: 0.4rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,21 +149,21 @@ exports[`<Tag /> Snapshots when dismissible should render correctly 1`] = `
   text-align: left;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+  font-size: 0.93333rem;
+  line-height: 1.2rem;
 }
 
 .emotion-0::after {
   content: ' ';
   position: absolute;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   box-sizing: border-box;
   z-index: -1;
-  box-shadow: 0.1875rem;
+  box-shadow: 0.26667rem;
 }
 
 .emotion-0:hover {
@@ -175,7 +175,7 @@ exports[`<Tag /> Snapshots when dismissible should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  box-shadow: 0 0 0 0.0625rem #fff,0 0 0 0.1875rem #2875c6,inset 0 0 0.375rem rgba(12,13,13,0.18);
+  box-shadow: 0 0 0 0.0625rem #fff,0 0 0 0.1875rem #2875c6,inset 0 0 0.4rem rgba(12,13,13,0.18);
 }
 
 .emotion-0::-moz-focus-inner {
@@ -201,8 +201,8 @@ exports[`<Tag /> Snapshots when dismissible should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-top-right-radius: 0.1875rem;
-  border-bottom-right-radius: 0.1875rem;
+  border-top-right-radius: 0.26667rem;
+  border-bottom-right-radius: 0.26667rem;
   background-color: #2875c6;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -245,7 +245,7 @@ exports[`<Tag /> Snapshots when dismissible should render correctly 1`] = `
   width: 1rem;
   height: 1rem;
   vertical-align: text-bottom;
-  margin: 0 0.375rem;
+  margin: 0 0.4rem;
   border-radius: 50%;
   z-index: 1;
 }
@@ -307,7 +307,7 @@ exports[`<Tag /> Snapshots when small should render correctly 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
 }
 
 .emotion-5 {
@@ -325,8 +325,8 @@ exports[`<Tag /> Snapshots when small should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-top-right-radius: 0.1875rem;
-  border-bottom-right-radius: 0.1875rem;
+  border-top-right-radius: 0.26667rem;
+  border-bottom-right-radius: 0.26667rem;
   background-color: #2875c6;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -369,7 +369,7 @@ exports[`<Tag /> Snapshots when small should render correctly 1`] = `
   width: 1rem;
   height: 1rem;
   vertical-align: text-bottom;
-  margin: 0 0.375rem;
+  margin: 0 0.4rem;
   border-radius: 50%;
   z-index: 1;
 }
@@ -386,8 +386,8 @@ exports[`<Tag /> Snapshots when small should render correctly 1`] = `
   outline: none;
   cursor: pointer;
   color: #fff;
-  border-radius: 0.1875rem;
-  padding: 0.375rem;
+  border-radius: 0.26667rem;
+  padding: 0.4rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -407,21 +407,21 @@ exports[`<Tag /> Snapshots when small should render correctly 1`] = `
   text-align: left;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  font-size: 0.75rem;
-  line-height: 0.75rem;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
 }
 
 .emotion-0::after {
   content: ' ';
   position: absolute;
-  border-radius: 0.1875rem;
+  border-radius: 0.26667rem;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   box-sizing: border-box;
   z-index: -1;
-  box-shadow: 0.1875rem;
+  box-shadow: 0.26667rem;
 }
 
 .emotion-0:hover {
@@ -433,7 +433,7 @@ exports[`<Tag /> Snapshots when small should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  box-shadow: 0 0 0 0.0625rem #fff,0 0 0 0.1875rem #2875c6,inset 0 0 0.375rem rgba(12,13,13,0.18);
+  box-shadow: 0 0 0 0.0625rem #fff,0 0 0 0.1875rem #2875c6,inset 0 0 0.4rem rgba(12,13,13,0.18);
 }
 
 .emotion-0::-moz-focus-inner {

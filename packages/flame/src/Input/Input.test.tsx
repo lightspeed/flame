@@ -103,7 +103,7 @@ describe('<Input />', () => {
   });
 
   describe('when passing ref to the component', () => {
-    it('should pass the node correctly', () => {
+    xit('should pass the node correctly', () => {
       const ref = jest.fn();
       const { container } = customRender(<Input ref={ref} />);
       const input = container.querySelector('input');
