@@ -225,7 +225,7 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
       }}
       {...(restProps as any)}
     >
-      {React.Children.count(children) === 1 && !isIconOnly(children) ? (
+      {React.Children.count(children) === 1 && !isIconOnly(children as any) ? (
         children
       ) : (
         <ChildWrapper>{nextChildren}</ChildWrapper>
