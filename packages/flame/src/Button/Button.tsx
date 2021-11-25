@@ -74,6 +74,7 @@ const remapChild = (child: any, size: ButtonSizes) => {
 
 export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
   const {
+    className,
     loading,
     children,
     size,
@@ -118,18 +119,6 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
   };
 
   const houstonVariant = mapVariantProp(variant);
-
-  const mapPropsToAttributes = ({ block, className, size, loading, href }: ButtonProps) => {
-    return houstonMapPropsToAttributes({
-      block,
-      className,
-      jumbo: mapJumboProp(size),
-      modifier,
-      loading,
-      variant: houstonVariant,
-      ...{ href },
-    });
-  };
 
   if (variant === 'input') {
     extraCSS = {
@@ -212,8 +201,15 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
 
   return (
     <BaseButton
-      {...(restProps as any)}
-      {...mapPropsToAttributes(props)}
+      {...houstonMapPropsToAttributes({
+        block,
+        className,
+        jumbo: mapJumboProp(size),
+        modifier,
+        loading,
+        variant: houstonVariant,
+        ...{ href },
+      })}
       disabled={disabled || loading}
       ref={ref}
       css={{
@@ -226,6 +222,7 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
         borderBottomLeftRadius,
         borderBottomRightRadius,
       }}
+      {...(restProps as any)}
     >
       {React.Children.count(children) === 1 && !isIconOnly(children as any) ? (
         children
