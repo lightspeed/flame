@@ -17,7 +17,7 @@ const setBadgeSizing = (props: { size?: BadgeSizes }) => {
       return css`
         padding-left: ${themeGet('space.1')(props)};
         padding-right: ${themeGet('space.1')(props)};
-        font-size: ${themeGet('fontSizes.text-xxs')(props)};
+        font-size: ${themeGet('fontSizes.text-xs')(props)};
         line-height: ${themeGet('lineHeights.3')(props)};
         letter-spacing: ${themeGet('letterSpacings.2')(props)};
       `;
@@ -26,7 +26,7 @@ const setBadgeSizing = (props: { size?: BadgeSizes }) => {
       return css`
         padding-left: ${themeGet('space.1')(props)};
         padding-right: ${themeGet('space.1')(props)};
-        font-size: ${themeGet('fontSizes.text-xs')(props)};
+        font-size: ${themeGet('fontSizes.text-s')(props)};
         line-height: ${themeGet('lineHeights.4')(props)};
         letter-spacing: ${themeGet('letterSpacings.3')(props)};
       `;
