@@ -1,4 +1,4 @@
-import { darken, setLightness, saturate, rgba } from 'polished';
+import { darken, saturate, rgba } from 'polished';
 import { colors } from '../colors';
 
 const blue = colors['blue-500'];
