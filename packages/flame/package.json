@@ -1,6 +1,6 @@
 {
   "name": "@lightspeed/flame",
-  "version": "3.0.0-houston.2",
+  "version": "3.0.0-houston.3",
   "private": true,
   "description": "Lightspeed's React UI components library",
   "author": "Lightspeed",
@@ -33,12 +33,13 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.0",
     "@emotion/styled": "^10.0.0",
+    "@lightspeed/design-system-css": "^0.2.0",
+    "@lightspeed/design-system-react": "^0.2.0",
     "emotion-theming": "^10.0.0",
     "react": "^16.8.0-0",
     "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "@lightspeed/design-system-react": "^0.2.1",
     "@popperjs/core": "^2.4.2",
     "@styled-system/css": "^5.1.5",
     "@styled-system/theme-get": "5.0.16",

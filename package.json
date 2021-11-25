@@ -58,6 +58,7 @@
     "@lightspeed/config-prettier": "^0.1.2",
     "@lightspeed/config-typescript": "^0.2.0",
     "@lightspeed/design-system-css": "^0.2.0",
+    "@lightspeed/design-system-react": "^0.2.1",
     "@lightspeed/eslint-config": "^1.1.1",
     "@percy/storybook": "^3.3.0",
     "@storybook/addon-actions": "6.1.15",
