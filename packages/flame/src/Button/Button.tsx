@@ -185,6 +185,8 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
           },
         },
     '&:hover': {
+      // @ts-ignore
+      ...extraCSS['&:hover'],
       svg: !fill &&
         variant !== 'input' && {
           fill: 'white',
