@@ -2,10 +2,10 @@ import * as React from 'react';
 import { SpaceProps, LayoutProps, ZIndexProps } from 'styled-system';
 import styled from '@emotion/styled';
 import {
-  Button as HoustonButton,
-  ButtonLink as HoustonButtonLink,
+  ButtonModifier as HoustonButtonModifier,
   ButtonVariant as HoustonButtonVariant,
-} from '@lightspeed/design-system-react';
+  mapPropsToAttributes as houstonMapPropsToAttributes,
+} from '@lightspeed/design-system-react/dist/components/button/Button';
 import { BorderProps } from '../Core';
 
 export type ButtonProps = {
@@ -43,24 +43,6 @@ const isIconChild = (child: React.ReactElement<any>) =>
   child && child.type && (child.type as any).flameName === 'Icon';
 const isIconOnly = (children: React.ReactElement<any>) =>
   React.Children.count(children) === 1 && isIconChild(children);
-
-// Map Flame variants to Houston's
-const mapVariantProp = (variant: ButtonVariants): HoustonButtonVariant => {
-  const DEFAULT_VARIANT = 'do';
-  switch (variant) {
-    case 'secondary':
-      return 'supplementary';
-    case 'danger':
-      return 'no';
-    default:
-      return DEFAULT_VARIANT;
-  }
-};
-
-// Map Flame sizes to Houston's
-const mapSizeProp = (size: ButtonSizes): boolean => {
-  return ['large', 'xlarge'].includes(size);
-};
 
 const ButtonContent = styled('span')`
   display: inline-flex;
@@ -110,53 +92,44 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
     ...restProps
   } = props;
 
-  const nextChildren = React.Children.map(children, child => remapChild(child, size));
-
-  const BaseButton = styled(href ? HoustonButtonLink : HoustonButton)<any, ButtonProps>`
-    svg {
-      ${props =>
-        props.fill
-          ? {
-              fill: 'white',
-              color: 'white',
-              '.cr-icon__details-2': {
-                color: `var(--vd-colour--${props.variant})`,
-                fill: `var(--vd-colour--${props.variant})`,
-              },
-            }
-          : variant !== 'input' && {
-              fill: `var(--vd-colour--${props.variant})`,
-              color: `var(--vd-colour--${props.variant})`,
-              '.cr-icon__details-2': {
-                color: `var(--vd-colour--${props.variant})`,
-                fill: `var(--vd-colour--${props.variant})`,
-              },
-            }}
-    }
-    &:hover {
-      svg {
-        ${props =>
-          !props.fill &&
-          variant !== 'input' && {
-            fill: 'white',
-            color: 'white',
-            '.cr-icon__details-2': {
-              color: `var(--vd-colour--${props.variant})`,
-              fill: `var(--vd-colour--${props.variant})`,
-            },
-          }}
-      }
-    }
-  `;
-
   let extraCSS = {};
-  let modifier;
+  let modifier: HoustonButtonModifier;
 
   if (isIconOnly(children as any)) {
     modifier = 'icon';
   } else if (!fill) {
     modifier = 'text';
   }
+
+  const mapVariantProp = (variant: ButtonVariants): HoustonButtonVariant => {
+    const DEFAULT_VARIANT = 'do';
+    switch (variant) {
+      case 'secondary':
+        return 'supplementary';
+      case 'danger':
+        return 'no';
+      default:
+        return DEFAULT_VARIANT;
+    }
+  };
+
+  const mapJumboProp = (size: ButtonSizes): boolean => {
+    return ['large', 'xlarge'].includes(size);
+  };
+
+  const houstonVariant = mapVariantProp(variant);
+
+  const mapPropsToAttributes = ({ block, className, size, loading, href }: ButtonProps) => {
+    return houstonMapPropsToAttributes({
+      block,
+      className,
+      jumbo: mapJumboProp(size),
+      modifier,
+      loading,
+      variant: houstonVariant,
+      ...{ href },
+    });
+  };
 
   if (variant === 'input') {
     extraCSS = {
@@ -203,16 +176,46 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
     };
   }
 
+  extraCSS = {
+    ...extraCSS,
+    svg: fill
+      ? {
+          fill: 'white',
+          color: 'white',
+          '.cr-icon__details-2': {
+            color: `var(--vd-colour--${houstonVariant})`,
+            fill: `var(--vd-colour--${houstonVariant})`,
+          },
+        }
+      : variant !== 'input' && {
+          fill: `var(--vd-colour--${houstonVariant})`,
+          color: `var(--vd-colour--${houstonVariant})`,
+          '.cr-icon__details-2': {
+            fill: 'white',
+            color: 'white',
+          },
+        },
+    '&:hover': {
+      svg: !fill &&
+        variant !== 'input' && {
+          fill: 'white',
+          color: 'white',
+          '.cr-icon__details-2': {
+            color: `var(--vd-colour--${houstonVariant})`,
+            fill: `var(--vd-colour--${houstonVariant})`,
+          },
+        },
+    },
+  };
+
+  const BaseButton = href && !disabled ? 'a' : 'button';
+
   return (
     <BaseButton
+      {...(restProps as any)}
+      {...mapPropsToAttributes(props)}
+      disabled={disabled || loading}
       ref={ref}
-      fill={fill}
-      modifier={modifier}
-      variant={mapVariantProp(variant)}
-      jumbo={mapSizeProp(size)}
-      block={block}
-      loading={loading}
-      disabled={disabled}
       css={{
         ...extraCSS,
         borderLeft,
@@ -223,13 +226,15 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
         borderBottomLeftRadius,
         borderBottomRightRadius,
       }}
-      {...(restProps as any)}
     >
       {React.Children.count(children) === 1 && !isIconOnly(children as any) ? (
         children
       ) : (
-        <ChildWrapper>{nextChildren}</ChildWrapper>
+        <ChildWrapper>
+          {React.Children.map(children, child => remapChild(child, size))}
+        </ChildWrapper>
       )}
+      {loading && <i className="vd-loader vd-loader--small" />}
     </BaseButton>
   );
 }) as React.FC<
