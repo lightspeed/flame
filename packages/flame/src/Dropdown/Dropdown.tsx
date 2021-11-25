@@ -16,6 +16,7 @@ import { useOnClickOutside } from '../hooks/useOnClickOutside';
 type Placement = 'start' | 'center' | 'end' | PopperPlacement;
 
 interface Props extends Merge<PopoverContainerProps, Omit<ButtonProps, 'onClick'>> {
+  block?: boolean;
   buttonContent: React.ReactNode;
   initiallyOpen?: boolean;
   placement?: Placement;
@@ -106,12 +107,20 @@ export const useDropdown = () => {
  * When there is too much to show, place your precious UI in here.
  */
 export const Dropdown: React.FC<Props> = ({
+  block,
   buttonContent,
   placement = 'start',
   initiallyOpen = false,
   zIndex = 1,
   children,
   onClick,
+  borderLeft,
+  borderRight,
+  borderRadius,
+  borderTopLeftRadius,
+  borderTopRightRadius,
+  borderBottomLeftRadius,
+  borderBottomRightRadius,
   ...restProps
 }) => {
   const [targetRef, setTargetRef] = React.useState(null);
@@ -156,35 +165,57 @@ export const Dropdown: React.FC<Props> = ({
         closeDropdown: setInactive,
       }}
     >
-      <Box display="inline-block" ref={setTargetRef}>
-        <div className="vd-autocomplete-input-container vd-flex--column">
-          <input
-            readOnly
-            type="text"
-            className="vd-select vd-dropdown-input"
-            onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-              if (typeof onClick === 'function') {
-                onClick(toggle, event);
-              } else {
-                toggle();
-              }
-            }}
-            {...(restProps as any)}
-          />
-          <Flex
-            alignItems="center"
-            css={{
-              position: 'absolute',
-              top: 0,
-              left: '12px',
-              right: '36px',
-              bottom: 0,
-              pointerEvents: 'none',
-            }}
-          >
-            {buttonContent}
-          </Flex>
-        </div>
+      <Box
+        display={block ? 'block' : 'inline-block'}
+        className="vd-autocomplete-input-container vd-flex--column"
+      >
+        <input
+          ref={setTargetRef}
+          readOnly
+          type="text"
+          className="vd-select vd-dropdown-input"
+          onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+            if (typeof onClick === 'function') {
+              onClick(toggle, event);
+            } else {
+              toggle();
+            }
+          }}
+          css={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'transparent',
+            borderLeft,
+            borderRight,
+            borderRadius,
+            borderTopLeftRadius,
+            borderTopRightRadius,
+            borderBottomLeftRadius,
+            borderBottomRightRadius,
+          }}
+          {...(restProps as any)}
+        />
+        <Flex
+          alignItems="center"
+          className="vd-select vd-input--icon-left"
+          css={{
+            paddingLeft: '12px',
+            pointerEvents: 'none',
+            borderLeft,
+            borderRight,
+            borderRadius,
+            borderTopLeftRadius,
+            borderTopRightRadius,
+            borderBottomLeftRadius,
+            borderBottomRightRadius,
+          }}
+          {...(restProps as any)}
+        >
+          {buttonContent}
+        </Flex>
       </Box>
 
       <DropdownContainer
