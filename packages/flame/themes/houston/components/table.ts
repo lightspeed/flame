@@ -20,9 +20,9 @@ const tableStyles: TableStyles = {
   },
   tr: {
     hover: {
-      background: setLightness(0.99, colors['blue-50']),
+      background: 'var(--vd-colour--go-highlight)',
     },
-    borderColor: colors['gray-100'],
+    borderColor: 'var(--vd-colour--framing)',
   },
   dropdown: {
     hover: {
