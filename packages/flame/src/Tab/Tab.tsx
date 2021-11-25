@@ -16,7 +16,7 @@ export const Tab = styled(Flex)<TabsProps>`
   border-bottom: 3px solid transparent;
   cursor: pointer;
   justify-content: center;
-  font-size: ${themeGet('fontSizes.text-s')};
+  font-size: ${themeGet('fontSizes.text')};
   transition: border-bottom-color ease-in-out ${themeGet('transition.transition-duration-fast')};
 
   ${props =>
