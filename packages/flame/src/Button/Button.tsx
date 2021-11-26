@@ -4,8 +4,9 @@ import styled from '@emotion/styled';
 import {
   ButtonModifier as HoustonButtonModifier,
   ButtonVariant as HoustonButtonVariant,
-  mapPropsToAttributes as houstonMapPropsToAttributes,
 } from '@lightspeed/design-system-react/dist/components/button/Button';
+// @ts-ignore
+import { mapPropsToAttributes as houstonMapPropsToAttributes } from '@lightspeed/design-system-react/dist/cjs/components/button/Button';
 import { BorderProps } from '../Core';
 
 export type ButtonProps = {
@@ -18,6 +19,8 @@ export type ButtonProps = {
   loading?: boolean;
   /** Disables space between a Button's children */
   noSpacing?: boolean;
+  /** Disables multiline of text */
+  noMultiline?: boolean;
   /** Sets Button fill. Does not apply to default variant */
   fill?: boolean;
   /** One of 'neutral', 'primary', 'secondary', 'danger' */
@@ -82,6 +85,7 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
     variant,
     href,
     block,
+    noMultiline,
     disabled,
     borderLeft,
     borderRight,
@@ -93,7 +97,7 @@ export const Button = React.forwardRef<any, ButtonProps>((props, ref) => {
     ...restProps
   } = props;
 
-  let extraCSS = {};
+  let extraCSS = { whiteSpace: noMultiline && 'nowrap' } as any;
   let modifier: HoustonButtonModifier;
 
   if (isIconOnly(children as any)) {

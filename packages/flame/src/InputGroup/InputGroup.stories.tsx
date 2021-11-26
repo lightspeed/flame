@@ -54,7 +54,9 @@ export const story = () => (
     <Box mb={3}>
       <InputGroup>
         <Input defaultValue="Some arbitrary value" />
-        <Button>Submit</Button>
+        <Button fill variant="primary">
+          Submit
+        </Button>
       </InputGroup>
     </Box>
 

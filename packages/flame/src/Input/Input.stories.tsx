@@ -123,7 +123,7 @@ export const story = () => (
       <Input
         status="valid"
         placeholder="Valid input..."
-        prefix={<Icon name="customers" />}
+        prefix={<Icon name="customers" color="supplementary" />}
         suffix={<Icon name="info" color="secondary" />}
       />
     </Box>

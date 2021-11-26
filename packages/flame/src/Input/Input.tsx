@@ -124,6 +124,7 @@ export const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
       bottom: 0;
       left: 12px;
       align-items: center;
+      z-index: 2;
     `;
 
     const TextInputSuffix = styled(Flex)`
@@ -132,6 +133,7 @@ export const BaseInput = React.forwardRef<HTMLInputElement, BaseInputProps>(
       bottom: 0;
       right: 12px;
       align-items: center;
+      z-index: 2;
     `;
 
     return (

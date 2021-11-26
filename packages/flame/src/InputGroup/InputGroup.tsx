@@ -35,7 +35,8 @@ export const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps })
         borderTopRightRadius: 0,
         borderBottomRightRadius: 0,
         width: 'inherit',
-        variant: 'input',
+        noMultiline: true,
+        variant: child.props.variant === 'neutral' ? 'input' : child.props.variant,
       });
     }
 
@@ -45,7 +46,8 @@ export const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps })
         borderTopLeftRadius: 0,
         borderBottomLeftRadius: 0,
         width: 'inherit',
-        variant: 'input',
+        noMultiline: true,
+        variant: child.props.variant === 'neutral' ? 'input' : child.props.variant,
       });
     }
 
@@ -54,7 +56,8 @@ export const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps })
         borderTopLeftRadius: 0,
         borderBottomLeftRadius: 0,
         width: 'inherit',
-        variant: 'input',
+        noMultiline: true,
+        variant: child.props.variant === 'neutral' ? 'input' : child.props.variant,
       });
     }
 
@@ -63,7 +66,8 @@ export const InputGroup: React.FC<FlameFlexProps> = ({ children, ...restProps })
       borderRight: 0,
       borderRadius: 0,
       width: 'inherit',
-      variant: 'input',
+      noMultiline: true,
+      variant: child.props.variant === 'neutral' ? 'input' : child.props.variant,
     });
   });
 
