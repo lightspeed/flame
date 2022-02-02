@@ -129,6 +129,7 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+            fill="#232429"
           />
         </svg>
       </div>
@@ -277,6 +278,7 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+            fill="#232429"
           />
         </svg>
       </div>
@@ -413,6 +415,7 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+            fill="#232429"
           />
         </svg>
       </div>
@@ -541,6 +544,7 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+            fill="#232429"
           />
         </svg>
       </div>
@@ -668,6 +672,7 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+            fill="#232429"
           />
         </svg>
       </div>
@@ -809,6 +814,7 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+            fill="#232429"
           />
         </svg>
         <div
@@ -940,6 +946,7 @@ exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+            fill="#232429"
           />
         </svg>
       </div>
