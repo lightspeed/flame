@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Added
+
+- `align-left`, `align-center`, `align-right`, `rotate-left` and `rotate-right` icons ([#81](https://github.com/lightspeed/flame/pull/153))
+
 ## 2.1.0 - 2021-05-19
 
 ### Changed
