@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Added
 
-- `align-left`, `align-center`, `align-right`, `rotate-left` and `rotate-right` icons ([#81](https://github.com/lightspeed/flame/pull/153))
+- `align-left`, `align-center`, `align-right`, `rotate-left` and `rotate-right` icons ([#153](https://github.com/lightspeed/flame/pull/153))
 
 ## 2.1.0 - 2021-05-19
 
