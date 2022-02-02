@@ -178,6 +178,7 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          fill="#232429"
         />
       </svg>
       <svg
@@ -194,6 +195,7 @@ exports[`<Switch /> when autoFocus should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M10.216 8l3.325-3.325a1.567 1.567 0 1 0-2.216-2.216L8 5.784 4.675 2.459A1.567 1.567 0 0 0 2.46 4.675L5.784 8l-3.325 3.325a1.567 1.567 0 1 0 2.216 2.216L8 10.216l3.325 3.325a1.567 1.567 0 1 0 2.216-2.216L10.216 8z"
+          fill="#232429"
         />
       </svg>
     </span>
@@ -379,6 +381,7 @@ exports[`<Switch /> when checked should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          fill="#232429"
         />
       </svg>
       <svg
@@ -395,6 +398,7 @@ exports[`<Switch /> when checked should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M10.216 8l3.325-3.325a1.567 1.567 0 1 0-2.216-2.216L8 5.784 4.675 2.459A1.567 1.567 0 0 0 2.46 4.675L5.784 8l-3.325 3.325a1.567 1.567 0 1 0 2.216 2.216L8 10.216l3.325 3.325a1.567 1.567 0 1 0 2.216-2.216L10.216 8z"
+          fill="#232429"
         />
       </svg>
     </span>
@@ -580,6 +584,7 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          fill="#232429"
         />
       </svg>
       <svg
@@ -596,6 +601,7 @@ exports[`<Switch /> when disabled should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M10.216 8l3.325-3.325a1.567 1.567 0 1 0-2.216-2.216L8 5.784 4.675 2.459A1.567 1.567 0 0 0 2.46 4.675L5.784 8l-3.325 3.325a1.567 1.567 0 1 0 2.216 2.216L8 10.216l3.325 3.325a1.567 1.567 0 1 0 2.216-2.216L10.216 8z"
+          fill="#232429"
         />
       </svg>
     </span>
@@ -780,6 +786,7 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          fill="#232429"
         />
       </svg>
       <svg
@@ -796,6 +803,7 @@ exports[`<Switch /> when empty props should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M10.216 8l3.325-3.325a1.567 1.567 0 1 0-2.216-2.216L8 5.784 4.675 2.459A1.567 1.567 0 0 0 2.46 4.675L5.784 8l-3.325 3.325a1.567 1.567 0 1 0 2.216 2.216L8 10.216l3.325 3.325a1.567 1.567 0 1 0 2.216-2.216L10.216 8z"
+          fill="#232429"
         />
       </svg>
     </span>
@@ -982,6 +990,7 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          fill="#232429"
         />
       </svg>
       <svg
@@ -998,6 +1007,7 @@ exports[`<Switch /> when id, name should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M10.216 8l3.325-3.325a1.567 1.567 0 1 0-2.216-2.216L8 5.784 4.675 2.459A1.567 1.567 0 0 0 2.46 4.675L5.784 8l-3.325 3.325a1.567 1.567 0 1 0 2.216 2.216L8 10.216l3.325 3.325a1.567 1.567 0 1 0 2.216-2.216L10.216 8z"
+          fill="#232429"
         />
       </svg>
     </span>
@@ -1183,6 +1193,7 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M5.662 12.508c.656.686 1.735.65 2.345-.079l5.6-6.68c.58-.692.51-1.74-.157-2.342a1.561 1.561 0 0 0-2.259.164L6.802 8.81 4.738 6.822a1.56 1.56 0 0 0-2.264-.01 1.704 1.704 0 0 0-.01 2.347l3.198 3.348z"
+          fill="#232429"
         />
       </svg>
       <svg
@@ -1199,6 +1210,7 @@ exports[`<Switch /> when passing data-props should render correctly 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M10.216 8l3.325-3.325a1.567 1.567 0 1 0-2.216-2.216L8 5.784 4.675 2.459A1.567 1.567 0 0 0 2.46 4.675L5.784 8l-3.325 3.325a1.567 1.567 0 1 0 2.216 2.216L8 10.216l3.325 3.325a1.567 1.567 0 1 0 2.216-2.216L10.216 8z"
+          fill="#232429"
         />
       </svg>
     </span>
