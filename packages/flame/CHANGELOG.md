@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Added
+
+- Add Rocket icon ([#156](https://github.com/lightspeed/flame/pull/156))
+
 ## 2.2.0 - 2022-02-02
 
 ### Added
