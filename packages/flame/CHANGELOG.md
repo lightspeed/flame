@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Added
+
+- Update `info` & `help` icons ([#159](https://github.com/lightspeed/flame/pull/159))
+
 ## 2.3.0 - 2022-02-28
 
 ### Added
