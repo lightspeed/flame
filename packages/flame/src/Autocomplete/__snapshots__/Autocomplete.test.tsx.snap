@@ -241,7 +241,6 @@ exports[`Autocomplete renders as disabled 1`] = `
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M7.299 10.641c.388.475 1.012.482 1.406 0L11.8 6.86c.389-.475.194-.86-.418-.86H4.623c-.62 0-.812.378-.418.86l3.094 3.781z"
-            fill="#232429"
           />
         </svg>
       </div>
@@ -496,7 +495,6 @@ exports[`Autocomplete renders correctly 1`] = `
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M7.299 10.641c.388.475 1.012.482 1.406 0L11.8 6.86c.389-.475.194-.86-.418-.86H4.623c-.62 0-.812.378-.418.86l3.094 3.781z"
-            fill="#232429"
           />
         </svg>
       </div>
@@ -761,7 +759,6 @@ exports[`Autocomplete renders in loading mode 1`] = `
         <path
           className="cr-icon__base cr-icon__base-1"
           d="M8 13a1.5 1.5 0 0 1 0 3A8 8 0 0 1 .323 5.742a1.5 1.5 0 1 1 2.879.846A5 5 0 0 0 8 13z"
-          fill="#232429"
         />
       </svg>
       <div
@@ -797,7 +794,6 @@ exports[`Autocomplete renders in loading mode 1`] = `
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M7.299 10.641c.388.475 1.012.482 1.406 0L11.8 6.86c.389-.475.194-.86-.418-.86H4.623c-.62 0-.812.378-.418.86l3.094 3.781z"
-            fill="#232429"
           />
         </svg>
       </div>
@@ -1056,7 +1052,6 @@ exports[`Autocomplete renders with an initial value 1`] = `
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M10.216 8l3.325-3.325a1.567 1.567 0 1 0-2.216-2.216L8 5.784 4.675 2.459A1.567 1.567 0 0 0 2.46 4.675L5.784 8l-3.325 3.325a1.567 1.567 0 1 0 2.216 2.216L8 10.216l3.325 3.325a1.567 1.567 0 1 0 2.216-2.216L10.216 8z"
-            fill="#232429"
           />
         </svg>
       </div>
@@ -1093,7 +1088,6 @@ exports[`Autocomplete renders with an initial value 1`] = `
           <path
             className="cr-icon__base cr-icon__base-1"
             d="M7.299 10.641c.388.475 1.012.482 1.406 0L11.8 6.86c.389-.475.194-.86-.418-.86H4.623c-.62 0-.812.378-.418.86l3.094 3.781z"
-            fill="#232429"
           />
         </svg>
       </div>

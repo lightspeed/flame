@@ -13,7 +13,6 @@ const iconsDirPath = `./src/Icon/`;
 const iconList = {};
 const componentIconNames = [];
 const spriteSvg = [];
-const fills = {};
 const colors = [
   'baseColor',
   'baseColor1',
@@ -39,6 +38,7 @@ fs.readdir(svgDirPath, (err, svgPaths) => {
       svgPath =>
         new Promise(resolve => {
           fs.readFile(svgPath, 'utf8', (moduleErr, svg) => {
+            const fills = {};
             const iconName = svgPath.replace(/.+?\/icon-(.+?)\.svg/, '$1');
             const componentIconName = _.upperFirst(_.camelCase(iconName));
 
