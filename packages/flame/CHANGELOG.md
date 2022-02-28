@@ -13,6 +13,10 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 - Add Rocket icon ([#156](https://github.com/lightspeed/flame/pull/156))
 
+### Fixed
+
+- Reset fills object when generating icons, which fixes the `Checkbox` icon baseColor being set to a dark color instead of white ([#157](https://github.com/lightspeed/flame/pull/157))
+
 ## 2.2.0 - 2022-02-02
 
 ### Added
