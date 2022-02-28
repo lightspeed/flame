@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Reset fills object when generating icons, which fixes the `Checkbox` icon baseColor being set to a dark color instead of white ([#157](https://github.com/lightspeed/flame/pull/157))
+
 ## 2.2.0 - 2022-02-02
 
 ### Added
