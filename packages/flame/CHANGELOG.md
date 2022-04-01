@@ -9,7 +9,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ## [Unreleased]
 
-### Added
+### Fixed
 
 - Fix clip-rule warning by converting the svg property into a React format of clipRule ([#161](https://github.com/lightspeed/flame/pull/161))
 
