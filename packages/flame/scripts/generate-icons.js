@@ -89,6 +89,7 @@ export { NextIcon as Icon${componentIconName} };`;
                 .replace(/<\/?svg(?:\s.+?)?>/g, '')
                 .replace(/id="((base|details)-\d)"/g, 'style="fill: var(--cr-icon-$1-fill)"')
                 .replace(/fill-rule=/g, 'fillRule=')
+                .replace(/clip-rule=/g, 'clipRule=')
                 .replace(/<g.*?>/, `<symbol id="cr-icon-${iconName}">`)
                 .replace(/<\/g>(?!.*<\/g>)/, '</symbol>')
                 .trim(),
