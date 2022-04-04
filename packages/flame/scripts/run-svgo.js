@@ -65,6 +65,7 @@ const flameIcon = {
       if (item.isElem('g') && item.hasAttr('id')) {
         if (/^symbols/i.test(item.attr('id').value)) {
           item.removeAttr('fill-rule');
+          item.removeAttr('clip-rule');
           item.removeAttr('id');
         }
       }
