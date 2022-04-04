@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Fix clip-rule warning by converting the svg property into a React format of clipRule ([#161](https://github.com/lightspeed/flame/pull/161))
+
 ## 2.3.1 - 2022-03-04
 
 ### Added
