@@ -62,6 +62,7 @@ fs.readdir(svgDirPath, (err, svgPaths) => {
                 'className="cr-icon__$2 cr-icon__$1" fill={$2Color || $2Color$3}',
               )
               .replace(/fill-rule=/g, 'fillRule=')
+              .replace(/clip-rule=/g, 'clipRule=')
               .replace(/<\/?g(?:\s.+?)?>/g, '');
 
             const component = `
