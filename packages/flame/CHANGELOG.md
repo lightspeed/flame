@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Fixed
 
-- Fix `shield`, `info` and `copy` icons ([#165](https://github.com/lightspeed/flame/pull/165))
+- Remove fill on `<path>` for `shield`, `info` and `copy` icons ([#165](https://github.com/lightspeed/flame/pull/165))
 
 ## 2.4.0 - 2022-04-12
 
