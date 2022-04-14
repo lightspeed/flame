@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## [Unreleased]
+
+### Fixed
+
+- Remove fill on `<path>` for `shield`, `info` and `copy` icons ([#165](https://github.com/lightspeed/flame/pull/165))
+
 ## 2.4.0 - 2022-04-12
 
 ### Added
