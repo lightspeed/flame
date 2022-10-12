@@ -18,6 +18,7 @@ type Placement = 'start' | 'center' | 'end' | PopperPlacement;
 
 interface Props extends Merge<PopoverContainerProps, Omit<ButtonProps, 'onClick'>> {
   buttonContent: React.ReactNode;
+  children: React.ReactNode;
   initiallyOpen?: boolean;
   placement?: Placement;
   onClick?: (toggle: () => void, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
