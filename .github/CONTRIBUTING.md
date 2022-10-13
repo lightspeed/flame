@@ -84,7 +84,7 @@ cd /path/to/your/project
 yarn link "@lightspeed/flame"
 ```
 
-Note that in the above example you need to run `yarn link` inside the `dist` folder of a given package. If you're not seeing local changes reflected in your project, you may need to run `yarn build` inside the `packages/flame` folder and then restart your project's web/typescript server.
+Note that in the above example you need to run `yarn link` inside the `dist` folder of a given package. If you're not seeing local changes reflected in your project, you may need to run `yarn build` inside the `packages/flame` folder and then restart your project's web server or [typescript server](https://tinytip.co/tips/vscode-restart-ts).
 
 #### Run tests
 
