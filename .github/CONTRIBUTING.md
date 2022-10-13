@@ -72,6 +72,20 @@ yarn dev
 
 This will install/update dependencies, including `packages/` ones, and launch Storybook on [http://localhost:6006/](http://localhost:6006/).
 
+#### Link a local version of @lightspeed/flame to your project
+
+If you want to test your changes in a local project, you can link your local version of `@lightspeed/flame` using [yarn link](https://classic.yarnpkg.com/en/docs/cli/link/), e.g.
+
+```sh
+# Link the react package
+cd packages/flame/dist
+yarn link
+cd /path/to/your/project
+yarn link "@lightspeed/flame"
+```
+
+Note that in the above example you need to run `yarn link` inside the `dist` folder of a given package. If you're not seeing local changes reflected in your project, you may need to run `yarn build` inside the `packages/flame` folder and then restart your project's web server or [typescript server](https://tinytip.co/tips/vscode-restart-ts).
+
 #### Run tests
 
 ```sh
