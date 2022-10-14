@@ -93,7 +93,7 @@ yarn unlink "@lightspeed/flame" # unlink your local flame
 yarn install --force # reinstall published flame
 ```
 
-You may also have to restart your TS server again as well.
+You may also have to restart your TypeScript server again.
 
 #### Run tests
 
