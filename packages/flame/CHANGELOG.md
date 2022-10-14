@@ -12,13 +12,15 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 ### Added
 
 - Enable any children type inside Dropdown ([#172](https://github.com/lightspeed/flame/pull/172))
+- Add more `yarn link` notes to docs ([#172](https://github.com/lightspeed/flame/pull/172))
+- Update release docs about using `next` branch ([#172](https://github.com/lightspeed/flame/pull/172))
 
 ## 2.4.3 - 2022-10-13
 
 ### Added
 
 - Add children to Dropdown props interface ([#171](https://github.com/lightspeed/flame/pull/171))
-- Update CONTRIBUTING.md about using `yarn link` ([#172](https://github.com/lightspeed/flame/pull/171))
+- Update CONTRIBUTING.md about using `yarn link` ([#171](https://github.com/lightspeed/flame/pull/171))
 
 ## 2.4.2 - 2022-10-12
 

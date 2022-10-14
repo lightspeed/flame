@@ -6,11 +6,13 @@ We use the `next` (canary) branch as our main working branch. All major change s
 
 ## Versioning and publishing the mainline branch
 
-1. Make sure your local `master` branch is up to date including tags
-2. Run `yarn release`
+1. Make sure your local `next` branch is up to date including tags
+2. Run `yarn release` from inside the root of the project
 3. Choose versions for updated packages (including version bumps for packages with dependencies)
-4. Confirm changes, which will automatically update packages, create tags, push to remote `master` and publish packages to npm through [GitHub Actions](https://github.com/lightspeed/flame/tree/master/.github/workflows/)
+4. Confirm changes, which will automatically update packages, create tags, push to remote `next` and publish packages to npm through [GitHub Actions](https://github.com/lightspeed/flame/tree/master/.github/workflows/)
 5. Go to [GitHub releases](https://github.com/lightspeed/flame/releases) and edit the newly created tags. Copy the section of the updated CHANGELOGs in the description (_This is a manual step for now that we'll enventually automate with the [GitHub Releases API](https://developer.github.com/v3/repos/releases/)_)
+
+The newly release will be visible at https://www.npmjs.com/package/@lightspeed/flame under the `next` tag.
 
 **Note:** local manual publishing can still be done with `yarn release-and-publish` in case it's needed.
 
