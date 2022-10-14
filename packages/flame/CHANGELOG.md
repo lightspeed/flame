@@ -11,7 +11,7 @@ Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/maste
 
 ### Added
 
-- Enable any children type inside Dropdown ([#172](https://github.com/lightspeed/flame/pull/172))
+- Revert 2.4.3: remove children from Dropdown type ([#172](https://github.com/lightspeed/flame/pull/172))
 - Add more `yarn link` notes to docs ([#172](https://github.com/lightspeed/flame/pull/172))
 - Update release docs about using `next` branch ([#172](https://github.com/lightspeed/flame/pull/172))
 
