@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
-import * as emotion from 'emotion';
+import * as emotion from 'emotion-theming';
 import { createSerializer, matchers as emotionMatchers } from 'jest-emotion';
 
 expect.addSnapshotSerializer(createSerializer(emotion));

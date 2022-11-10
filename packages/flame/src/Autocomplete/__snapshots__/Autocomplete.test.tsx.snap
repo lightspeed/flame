@@ -131,19 +131,19 @@ exports[`Autocomplete renders as disabled 1`] = `
 }
 
 <div
-  className="emotion-7 cr-autocomplete"
+  className="cr-autocomplete emotion-7"
   onKeyDown={[Function]}
 >
   <div
-    className="emotion-6 cr-autocomplete__control"
+    className="cr-autocomplete__control emotion-6"
     onMouseDown={[Function]}
     onTouchEnd={[Function]}
   >
     <div
-      className="emotion-2 cr-autocomplete__value-container"
+      className="cr-autocomplete__value-container emotion-2"
     >
       <div
-        className="emotion-0 cr-autocomplete__placeholder"
+        className="cr-autocomplete__placeholder emotion-0"
       >
         Choose a color
       </div>
@@ -206,7 +206,7 @@ exports[`Autocomplete renders as disabled 1`] = `
       </div>
     </div>
     <div
-      className="emotion-5 cr-autocomplete__indicators"
+      className="cr-autocomplete__indicators emotion-5"
     >
       <div
         aria-hidden="true"
@@ -385,19 +385,19 @@ exports[`Autocomplete renders correctly 1`] = `
 }
 
 <div
-  className="emotion-7 cr-autocomplete"
+  className="cr-autocomplete emotion-7"
   onKeyDown={[Function]}
 >
   <div
-    className="emotion-6 cr-autocomplete__control"
+    className="cr-autocomplete__control emotion-6"
     onMouseDown={[Function]}
     onTouchEnd={[Function]}
   >
     <div
-      className="emotion-2 cr-autocomplete__value-container"
+      className="cr-autocomplete__value-container emotion-2"
     >
       <div
-        className="emotion-0 cr-autocomplete__placeholder"
+        className="cr-autocomplete__placeholder emotion-0"
       >
         Choose a color
       </div>
@@ -460,7 +460,7 @@ exports[`Autocomplete renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="emotion-5 cr-autocomplete__indicators"
+      className="cr-autocomplete__indicators emotion-5"
     >
       <div
         aria-hidden="true"
@@ -661,19 +661,19 @@ exports[`Autocomplete renders in loading mode 1`] = `
 }
 
 <div
-  className="emotion-10 cr-autocomplete"
+  className="cr-autocomplete emotion-10"
   onKeyDown={[Function]}
 >
   <div
-    className="emotion-9 cr-autocomplete__control"
+    className="cr-autocomplete__control emotion-9"
     onMouseDown={[Function]}
     onTouchEnd={[Function]}
   >
     <div
-      className="emotion-2 cr-autocomplete__value-container"
+      className="cr-autocomplete__value-container emotion-2"
     >
       <div
-        className="emotion-0 cr-autocomplete__placeholder"
+        className="cr-autocomplete__placeholder emotion-0"
       >
         Choose a color
       </div>
@@ -736,7 +736,7 @@ exports[`Autocomplete renders in loading mode 1`] = `
       </div>
     </div>
     <div
-      className="emotion-8 cr-autocomplete__indicators"
+      className="cr-autocomplete__indicators emotion-8"
     >
       <svg
         className="emotion-3 cr-icon emotion-4 emotion-5"
@@ -942,19 +942,19 @@ exports[`Autocomplete renders with an initial value 1`] = `
 }
 
 <div
-  className="emotion-9 cr-autocomplete"
+  className="cr-autocomplete emotion-9"
   onKeyDown={[Function]}
 >
   <div
-    className="emotion-8 cr-autocomplete__control"
+    className="cr-autocomplete__control emotion-8"
     onMouseDown={[Function]}
     onTouchEnd={[Function]}
   >
     <div
-      className="emotion-2 cr-autocomplete__value-container cr-autocomplete__value-container--has-value"
+      className="cr-autocomplete__value-container cr-autocomplete__value-container--has-value emotion-2"
     >
       <div
-        className="emotion-0 cr-autocomplete__single-value"
+        className="cr-autocomplete__single-value emotion-0"
       >
         Red
       </div>
@@ -1017,7 +1017,7 @@ exports[`Autocomplete renders with an initial value 1`] = `
       </div>
     </div>
     <div
-      className="emotion-7 cr-autocomplete__indicators"
+      className="cr-autocomplete__indicators emotion-7"
     >
       <div
         aria-hidden="true"
