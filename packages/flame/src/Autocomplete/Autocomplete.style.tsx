@@ -1,15 +1,13 @@
 import { themeGet } from '@styled-system/theme-get';
-import { Styles, styleFn } from 'react-select/lib/styles';
-import { Merge } from 'type-fest';
+import { Styles } from 'react-select/src/styles';
+import { OptionType } from './Autocomplete';
 
 import CLASS_NAME from './autocomplete-classname';
 
-type FlameStyle = Merge<Styles, { valueContainer?: styleFn }>;
-
-const flameStyle = (theme: any): FlameStyle => {
+const flameStyle = (theme: any): Styles<OptionType, boolean> => {
   const get = (path: string) => themeGet(path)({ theme });
 
-  const style: FlameStyle = {
+  const style: Styles<OptionType, boolean> = {
     control: (styles, { isDisabled, isFocused }) => ({
       ...styles,
       backgroundColor: isDisabled
@@ -147,6 +145,7 @@ const flameStyle = (theme: any): FlameStyle => {
         : get('inputStyles.autocomplete.multiValueLabel.color'),
       whiteSpace: 'normal',
     }),
+    // @ts-ignore
     multiValueRemove: (styles, { isDisabled }) => ({
       ...styles,
       color: isDisabled

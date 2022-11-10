@@ -1,15 +1,15 @@
 import * as React from 'react';
-import ReactSelect, {
-  AsyncCreatable as ReactSelectAsyncCreatable,
-  Async as ReactSelectAsync,
-  Creatable as ReactSelectCreatable,
-  makeAnimated as Animated,
-} from 'react-select';
+
+import ReactSelect from 'react-select';
+import ReactSelectAsyncCreatable from 'react-select/async-creatable';
+import ReactSelectAsync from 'react-select/async';
+import ReactSelectCreatable from 'react-select/creatable';
+import Animated from 'react-select/animated';
 
 // Need to drill to get the right types as they are not included in the final build.
-import { Props as BaseSelectProps } from 'react-select/lib/Select';
-import { Props as BaseCreatableProps } from 'react-select/lib/Creatable';
-import { Props as BaseAsyncProps } from 'react-select/lib/Async';
+import { Props as BaseSelectProps } from 'react-select/src/Select';
+import { Props as BaseCreatableProps } from 'react-select/src/Creatable';
+import { Props as BaseAsyncProps } from 'react-select/src/Async';
 
 import { withTheme } from 'emotion-theming';
 
@@ -96,7 +96,7 @@ const customComponents = {
 export type AsyncProps = {
   theme?: any;
   loadOptions: any;
-} & BaseAsyncProps<OptionType>;
+} & BaseAsyncProps<OptionType, boolean>;
 function Async(props: AsyncProps) {
   const { components, theme, ...rest } = props;
   return (
@@ -113,8 +113,8 @@ function Async(props: AsyncProps) {
 
 export type AsyncCreatableProps = {
   theme?: any;
-} & BaseAsyncProps<OptionType> &
-  BaseCreatableProps<OptionType>;
+} & BaseAsyncProps<OptionType, boolean> &
+  BaseCreatableProps<OptionType, boolean>;
 function AsyncCreatable(props: AsyncCreatableProps) {
   const { components, theme, ...rest } = props;
   return (
@@ -131,7 +131,7 @@ function AsyncCreatable(props: AsyncCreatableProps) {
 
 export type CreatableProps = {
   theme?: any;
-} & BaseCreatableProps<OptionType>;
+} & BaseCreatableProps<OptionType, boolean>;
 function Creatable(props: CreatableProps) {
   const { components, theme, ...rest } = props;
   return (

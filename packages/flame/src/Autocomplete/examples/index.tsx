@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Props as BaseSelectProps } from 'react-select/lib/Select';
+import { Props as BaseSelectProps } from 'react-select/src/Select';
 import { Autocomplete, Creatable, formatCreateLabel } from '../index';
 import { OptionType } from '../Autocomplete';
 

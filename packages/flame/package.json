@@ -46,7 +46,7 @@
     "polished": "^2.3.0",
     "react-modal": "^3.5.1",
     "react-popper": "^2.2.4",
-    "react-select": "^2.0.0",
+    "react-select": "^3.0.0",
     "react-toast-notifications": "^2.4.0",
     "styled-system": "5.1.4",
     "type-fest": "^0.3.0"
@@ -55,7 +55,7 @@
     "@lightspeed/flame-tokens": "^1.0.1",
     "@types/lodash": "^4.14.123",
     "@types/react-modal": "^3.8.1",
-    "@types/react-select": "^2.0.15",
+    "@types/react-select": "^3.1.2",
     "@types/styled-system__css": "^5.0.11",
     "@types/styled-system__theme-get": "^5.0.0",
     "fs-extra": "7.0.1",
