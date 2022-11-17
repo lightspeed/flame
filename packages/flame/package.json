@@ -34,8 +34,8 @@
     "@emotion/core": "^10.0.0",
     "@emotion/styled": "^10.0.0",
     "emotion-theming": "^10.0.0",
-    "react": "^16.8.0-0",
-    "react-dom": "^16.8.0"
+    "react": "^16.8.0-0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.4.2",
