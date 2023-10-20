@@ -99,7 +99,7 @@
     "lerna": "^3.10.2",
     "lint-staged": "^7.1.2",
     "plop": "^2.4.0",
-    "postcss": "^6.0.17",
+    "postcss": "^8.4.31",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.5",
     "prettier": "^1.16.1",
