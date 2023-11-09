@@ -12,8 +12,10 @@ interface PopperWrapper extends PopoverContainerProps {
   className?: string;
   /** Sets position:fixed to Popover */
   positionFixed?: boolean;
+
   /** Callback after Popover closes */
   onClose?(): void;
+
   /** Disables Popover from automatically staying in view */
   isFlipEnabled?: boolean;
 }
@@ -23,6 +25,7 @@ export interface PopoverProps extends PopoverContainerProps, PopperWrapper {
   className?: string;
   /** Sets the open state of Popover */
   isOpen?: boolean;
+
   /** Node which Popover will point to */
   target(params: {
     targetProps?: object;
@@ -31,8 +34,10 @@ export interface PopoverProps extends PopoverContainerProps, PopperWrapper {
     };
     active?: boolean;
   }): React.ReactNode;
+
   /** Disables arrow on side of Popover */
   noArrow?: boolean;
+
   /** Callback after Popover opens */
   onOpen?(): void;
 }
@@ -46,32 +51,36 @@ export interface PopoverProps extends PopoverContainerProps, PopperWrapper {
 /**
  * A small extension of an action taken, containing information, or more actions still.
  */
-export const Popover: React.FC<PopoverProps> = ({
-  className,
-  isOpen = false,
-  target,
-  placement,
-  noArrow,
-  positionFixed = false,
-  onOpen = () => {},
-  onClose = () => {},
-  autoClose = true,
-  isFlipEnabled = true,
-  light,
-  zIndex,
-  children,
-}) => {
-  const [targetRef, setTargetRef] = React.useState(null);
-  const [popperRef, setPopperRef] = React.useState(null);
+export const Popover: React.FC<PopoverProps> = (
+  {
+    className,
+    isOpen = false,
+    target,
+    placement,
+    noArrow,
+    positionFixed = false,
+    onOpen = () => {
+    },
+    onClose = () => {
+    },
+    autoClose = true,
+    isFlipEnabled = true,
+    light,
+    zIndex,
+    children,
+  }) => {
+  const [ targetRef, setTargetRef ] = React.useState(null);
+  const [ popperRef, setPopperRef ] = React.useState(null);
+  const [ popperRootRef, setPopperRootRef ] = React.useState(null);
   const clickOutsideRef = React.useRef();
-  clickOutsideRef.current = popperRef;
+  clickOutsideRef.current = popperRootRef;
   const isFirstPass = React.useRef(true);
 
   const { isActive, setInactive, setActive } = useToggle(isOpen);
 
   const { styles, attributes, update } = usePopper(targetRef, popperRef, {
     placement: placement || 'bottom-start',
-    strategy: positionFixed ? 'fixed' : 'absolute',
+    strategy: positionFixed ? 'fixed':'absolute',
     modifiers: [
       {
         name: 'flip',
@@ -110,7 +119,7 @@ export const Popover: React.FC<PopoverProps> = ({
     } else {
       isFirstPass.current = false;
     }
-  }, [isOpen, setActive, setInactive]);
+  }, [ isOpen, setActive, setInactive ]);
 
   const targetProps = { ref: setTargetRef };
 
@@ -119,7 +128,7 @@ export const Popover: React.FC<PopoverProps> = ({
   };
 
   return (
-    <React.Fragment>
+    <div ref={setPopperRootRef}>
       {target({ targetProps, targetEvents, active: isOpen })}
       {isActive && (
         <PopoverContainer
@@ -134,10 +143,10 @@ export const Popover: React.FC<PopoverProps> = ({
           }
         >
           {children}
-          {!noArrow && <PopoverArrow />}
+          {!noArrow && <PopoverArrow/>}
         </PopoverContainer>
       )}
-    </React.Fragment>
+    </div>
   );
 };
 
