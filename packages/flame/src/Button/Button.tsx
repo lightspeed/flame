@@ -168,6 +168,7 @@ export type ButtonProps = BaseButtonProps & {
   disabled?: boolean;
   /** Href for navigation. Turns the Button into a link. */
   href?: string;
+  children?: React.ReactNode;
 };
 
 /**

@@ -55,15 +55,17 @@ const borderRadii = system({
 const border = compose(borderRadii, styledSystemBorder);
 
 type AsProps = { as?: string };
+type ChildrenProps = { children?: React.ReactNode };
 export type FlameBoxProps = SpaceProps &
   LayoutProps &
   FlexboxProps &
   TypographyProps &
   Partial<Omit<ColorProps, 'color'>> & // Fun clashing between native color prop & styled-system color prop
-  AsProps;
+  AsProps &
+  ChildrenProps;
 export const Box = styled('div')<FlameBoxProps>(compose(space, layout, typography, color, flexbox));
 
-export type FlameFlexProps = FlameBoxProps & FlexboxProps;
+export type FlameFlexProps = FlameBoxProps & FlexboxProps & ChildrenProps;
 export const Flex = styled(Box)<FlameFlexProps>({
   display: 'flex',
 });

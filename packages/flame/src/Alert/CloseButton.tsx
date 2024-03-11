@@ -2,7 +2,10 @@ import * as React from 'react';
 import { transparentize } from 'polished';
 import css from '@styled-system/css';
 
-const CloseButton: React.FC<React.ComponentProps<'button'>> = ({ children, ...restProps }) => (
+const CloseButton: React.FC<React.ComponentProps<'button'> & { chidlren: React.ReactNode }> = ({
+  children,
+  ...restProps
+}) => (
   <button
     type="button"
     css={css(theme => ({

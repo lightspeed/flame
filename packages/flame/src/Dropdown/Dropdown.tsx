@@ -20,6 +20,7 @@ interface Props extends Merge<PopoverContainerProps, Omit<ButtonProps, 'onClick'
   buttonContent: React.ReactNode;
   initiallyOpen?: boolean;
   placement?: Placement;
+  children?: React.ReactNode;
   onClick?: (toggle: () => void, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 

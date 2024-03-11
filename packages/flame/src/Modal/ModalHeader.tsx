@@ -52,6 +52,7 @@ export type ModalHeaderProps = React.HTMLProps<HTMLDivElement> & {
   /** Sets Close button visibility */
   showCloseButton?: boolean;
   css?: any;
+  children?: React.ReactNode;
   /** Callback when Close button is clicked */
   onCloseClicked?: () => void;
 };
