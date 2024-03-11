@@ -33,6 +33,7 @@ export interface PopoverProps extends PopoverContainerProps, PopperWrapper {
   }): React.ReactNode;
   /** Disables arrow on side of Popover */
   noArrow?: boolean;
+  children?: React.ReactNode;
   /** Callback after Popover opens */
   onOpen?(): void;
 }

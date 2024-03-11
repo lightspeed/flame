@@ -45,6 +45,7 @@ export interface LabelProps
   description?: React.ReactNode;
   disabled?: boolean;
   descriptionProps?: FormHelperProps;
+  children?: React.ReactNode;
   css?: any;
 }
 const Label: React.FC<LabelProps> = ({

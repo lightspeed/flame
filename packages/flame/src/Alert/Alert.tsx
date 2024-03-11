@@ -23,6 +23,7 @@ export interface AlertProps extends SpaceProps, React.ComponentPropsWithRef<'div
   icon?: React.ReactNode;
   /** Text for the alert's title */
   title?: string;
+  children?: React.ReactNode;
 }
 /**
  * An alert can be a warning following an action, a helpful tip or an important update about a system issue. There are four types of alert and each has a different function.

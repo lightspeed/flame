@@ -212,6 +212,7 @@ const ToasterProvider: React.FC<ToastProviderProps> = ({
 interface ActionableToastContent {
   actionCallback: () => void;
   actionTitle: string;
+  children?: React.ReactChild;
 }
 const ActionableToastContent: React.FC<ActionableToastContent> = ({
   children,

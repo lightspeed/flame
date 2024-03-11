@@ -16,7 +16,7 @@ export default {
 };
 
 const noop = () => {};
-const Spacer: React.FC = ({ children }) => {
+const Spacer: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const nextChildren = React.Children.map(children, child => (
     <div css={{ margin: '8px' }}>{child}</div>
   ));

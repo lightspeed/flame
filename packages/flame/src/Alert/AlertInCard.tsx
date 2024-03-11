@@ -12,6 +12,7 @@ interface Props extends SpaceProps, React.ComponentPropsWithRef<'div'> {
   noCloseBtn?: boolean;
   /** Function called when Close button is tapped */
   onClose?: Function;
+  children?: React.ReactNode;
 }
 const AlertInCard: React.FC<Props> = ({
   type = 'info',
