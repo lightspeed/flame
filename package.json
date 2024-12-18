@@ -1,5 +1,5 @@
 {
-  "name": "flame-monorepo",
+  "name": "@lightspeed/flame-monorepo",
   "private": true,
   "author": "Lightspeed",
   "license": "SEE LICENSE IN LICENSE",
