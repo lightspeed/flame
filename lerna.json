@@ -4,7 +4,7 @@
   "version": "independent",
   "command": {
     "publish": {
-      "allowBranch": ["master", "next"],
+      "allowBranch": ["master", "next", "LSPAY-33449"],
       "ignoreChanges": [
         "**/story.js",
         "**/story.tsx",
@@ -18,7 +18,8 @@
         "**/flame-sidebar/story/**",
         "**/packages/framerx/**",
         "packages/flame/scripts/check-changed.js"
-      ]
+      ],
+      "registry": "https://npm.pkg.github.com/"
     }
   },
   "packages": ["packages/*"]

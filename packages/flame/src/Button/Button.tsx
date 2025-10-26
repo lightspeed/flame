@@ -152,6 +152,8 @@ const ChildWrapper = styled('span')<ChildWrapperProps>`
 `;
 
 export type ButtonProps = BaseButtonProps & {
+  /** Button content */
+  children?: React.ReactNode;
   /** Sets the Button loading state */
   loading?: boolean;
   /** Disables space between a Button's children */

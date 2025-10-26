@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { layout, LayoutProps, compose } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
+import { InputHTMLAttributes } from 'react';
 import { border, BorderProps } from '../Core';
 
 export type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement>;
@@ -8,7 +9,9 @@ export type SelectProps = React.SelectHTMLAttributes<HTMLSelectElement>;
 /**
  * Offers users a single choice, among a medium-sized set of options.
  */
-export const Select = styled('select')<Omit<LayoutProps, 'size'> & BorderProps>`
+export const Select = styled('select')<
+  Omit<LayoutProps, 'size'> & BorderProps & InputHTMLAttributes<HTMLSelectElement>
+>`
   width: 100%;
   color: ${themeGet('selectStyles.color')};
   font-size: ${themeGet('fontSizes.text-s')};

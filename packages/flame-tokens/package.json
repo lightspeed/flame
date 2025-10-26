@@ -1,6 +1,6 @@
 {
   "name": "@lightspeed/flame-tokens",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Design tokens for Lightspeed's Flame design system",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
@@ -32,6 +32,8 @@
     "prepublish": "yarn clean && yarn build && node ../../scripts/validate-build"
   },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
-  }
+  },
+  "gitHead": "e43393afac001fcabc4ca191609404daff1382ba"
 }

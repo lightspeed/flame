@@ -39,6 +39,8 @@ export type TextProps = TypographyProps &
     css?: any;
     as?: any;
     color?: string;
+    /** Text content */
+    children?: React.ReactNode;
   };
 
 const BaseText = styled('div')<TextProps>(

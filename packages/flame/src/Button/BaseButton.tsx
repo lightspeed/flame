@@ -10,7 +10,7 @@ import {
   compose,
 } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
-import { border, BorderProps } from '../Core';
+import { border, BorderProps, AsProps } from '../Core';
 import { ButtonProps } from '.';
 
 export type ButtonSizes = 'small' | 'large' | 'xlarge' | 'medium';
@@ -21,7 +21,8 @@ export type BaseButtonProps = {
   disabled?: boolean;
   /** Sets display: block on Button */
   block?: boolean;
-} & SpaceProps &
+} & AsProps &
+  SpaceProps &
   LayoutProps &
   BorderProps &
   ZIndexProps;

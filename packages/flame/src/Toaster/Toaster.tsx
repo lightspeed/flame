@@ -166,7 +166,7 @@ const Toaster: React.FC<ToastProps> = ({
   );
 };
 
-const ToasterContainer: React.FC = ({ children }) => (
+const ToasterContainer: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
   <Flex
     alignItems="center"
     justifyContent="center"
@@ -210,6 +210,7 @@ const ToasterProvider: React.FC<ToastProviderProps> = ({
 );
 
 interface ActionableToastContent {
+  children?: React.ReactNode;
   actionCallback: () => void;
   actionTitle: string;
 }
