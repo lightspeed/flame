@@ -48,6 +48,8 @@ const asideHideKeyframe = keyframes`
 `;
 
 export type ModalProps = {
+  /** Modal content */
+  children?: React.ReactNode;
   /** Sets the open state of Modal */
   isOpen?: boolean;
   /** Sets whether ESC key closes Modal */

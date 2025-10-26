@@ -21,7 +21,7 @@ export default {
   title: 'Components/Flag',
 };
 
-const Description: React.FC = ({ children }) => (
+const Description: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
   <Text fontSize="text-s" mb={1}>
     {children}
   </Text>

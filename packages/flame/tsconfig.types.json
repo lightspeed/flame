@@ -5,7 +5,9 @@
     "allowJs": false,
     "noEmit": false,
     "declaration": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true,
+    "types": ["node"]
   },
   "include": ["./typings", "./src/**/*.ts", "./src/**/*.tsx"],
   "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/story.tsx", "**/*.stories.tsx"]

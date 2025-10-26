@@ -27,7 +27,7 @@ export const exampleProps = {
   initialOptions: exampleItems,
   isClearable: true,
   formatCreateLabel: (label: Pick<OptionType, 'label'>) =>
-    formatCreateLabel(<span>Add &ldquo;{label}&rdquo;</span>),
+    formatCreateLabel(<span>{`Add "${label}"`}</span>),
 };
 
 type Props = {

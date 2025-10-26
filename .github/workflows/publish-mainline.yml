@@ -21,9 +21,9 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: '${{ steps.nvm.outputs.nvmrc }}'
+          node-version: "${{ steps.nvm.outputs.nvmrc }}"
           registry-url: https://registry.npmjs.org/
-      - uses: actions/cache@v1
+      - uses: actions/cache@v4
         with:
           path: ~/.cache/yarn
           key: ${{ runner.OS }}-yarn-cache-v1-${{ hashFiles('**/yarn.lock') }}
@@ -36,6 +36,6 @@ jobs:
       - name: Publish
         run: |
           cd packages/flame
-          node ./scripts/check-changed.js && yarn build && yarn build:docgen && npm publish dist --quiet || exit 0
+          node ./scripts/check-changed.js && yarn build && yarn build:docgen && npm publish ./dist --quiet || exit 0
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

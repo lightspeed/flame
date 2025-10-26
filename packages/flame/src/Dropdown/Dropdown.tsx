@@ -16,7 +16,12 @@ import { useOnClickOutside } from '../hooks/useOnClickOutside';
 
 type Placement = 'start' | 'center' | 'end' | PopperPlacement;
 
-interface Props extends Merge<PopoverContainerProps, Omit<ButtonProps, 'onClick'>> {
+interface Props
+  extends Merge<
+    Omit<PopoverContainerProps, 'children'>,
+    Omit<ButtonProps, 'onClick' | 'children'>
+  > {
+  children?: React.ReactNode | ((closeDropdown: () => void) => React.ReactNode);
   buttonContent: React.ReactNode;
   initiallyOpen?: boolean;
   placement?: Placement;

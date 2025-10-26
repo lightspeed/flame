@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 type Props = {
+  children?: React.ReactNode;
   onCancel?: Function;
 };
 const Context = React.createContext<Props>(null);
