@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 import { Consumer } from './ModalContext';
 import { IconClose } from '../Icon/Close';
+import { AsProps } from '../Core';
 
 const Container = styled('div')`
   display: flex;
@@ -54,14 +55,14 @@ export type ModalHeaderProps = React.HTMLProps<HTMLDivElement> & {
   css?: any;
   /** Callback when Close button is clicked */
   onCloseClicked?: () => void;
-};
+} & AsProps;
 /**
  * Header of the Modal
  */
 export const ModalHeader: React.FC<ModalHeaderProps> = ({
   children,
-  showCloseButton,
-  onCloseClicked,
+  showCloseButton = true,
+  onCloseClicked = () => {},
   ...restProps
 }) => (
   <Consumer>
@@ -87,8 +88,3 @@ export const ModalHeader: React.FC<ModalHeaderProps> = ({
     )}
   </Consumer>
 );
-
-ModalHeader.defaultProps = {
-  showCloseButton: true,
-  onCloseClicked: () => {},
-};

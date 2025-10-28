@@ -1,7 +1,6 @@
 const fs = require('fs-extra');
 const path = require('path');
 const prettier = require('prettier');
-const HTMLtoJSX = require('htmltojsx');
 const _ = require('lodash');
 const prettierConfig = require('../../../prettier.config');
 
@@ -10,14 +9,60 @@ delete prettierConfig.overrides;
 // TODO: use prettier.resolveConfigFile instead...
 prettierConfig.parser = 'babel';
 
+// Function to sanitize SVG attributes for JSX compatibility
+const sanitizeSvgForJsx = svg => {
+  return (
+    svg
+      // Remove xmlns:xlink attribute (not needed in JSX)
+      .replace(/\s*xmlns:xlink="[^"]*"/g, '')
+      // Convert class to className
+      .replace(/\sclass=/g, ' className=')
+      // Convert all kebab-case and colon-separated attributes to camelCase
+      // e.g., stroke-width -> strokeWidth, xlink:href -> xlinkHref
+      .replace(/\b([a-z]+)([-:][a-z-:]+)=/g, (match, p1, p2) => {
+        const camelCase = p1 + p2.replace(/[-:]([a-z])/g, (_0, letter) => letter.toUpperCase());
+        return `${camelCase}=`;
+      })
+      // Convert non-string primitives to JSX expressions
+      // Only integers and booleans, keep decimals as strings
+      // e.g., width="16" -> width={16}, r="3.5" -> r="3.5"
+      .replace(/\b([a-zA-Z][a-zA-Z0-9]*)="([^"]*)"/g, (match, attr, value) => {
+        // Check if it's an integer (not a decimal)
+        if (/^-?\d+$/.test(value)) {
+          return `${attr}={${value}}`;
+        }
+        // Check if it's a boolean or null
+        if (value === 'true' || value === 'false' || value === 'null') {
+          return `${attr}={${value}}`;
+        }
+        // Otherwise (including decimals), keep as string
+        return match;
+      })
+      // Convert style attributes to JSX style objects
+      .replace(/style="([^"]*)"/g, (match, styleContent) => {
+        // Parse CSS properties and convert to camelCase object notation
+        const styles = styleContent
+          .split(';')
+          .filter(s => s.trim())
+          .map(prop => {
+            const [key, value] = prop.split(':').map(s => s.trim());
+            if (!key || !value) return '';
+            // Convert kebab-case to camelCase
+            const camelKey = key.replace(/-([a-z])/g, (_0, letter) => letter.toUpperCase());
+            return `${camelKey}: '${value}'`;
+          })
+          .filter(s => s)
+          .join(', ');
+        return styles ? `style={{ ${styles} }}` : '';
+      })
+  );
+};
+
 const svgDirPath = `./svg/Flags/`;
 const sourceDirPath = './src/Flag';
 const flagsDirPath = `${sourceDirPath}`;
 const componentFlagISOs = [];
 const spriteSvg = [];
-
-// Used to replace SVG html attributes into JSX, ex: xlink:href -> xlinkHref
-const converter = new HTMLtoJSX({ createClass: false });
 
 if (!fs.existsSync(flagsDirPath)) {
   fs.mkdirSync(flagsDirPath);
@@ -40,12 +85,11 @@ fs.readdir(svgDirPath, (err, svgPaths) => {
             const flagISO = svgPath.replace(/.+?([^/]+)\.svg/i, '$1').replace(/\s|\(.+?\)/g, '');
 
             const componentFlagISO = flagISO.replace('-', '_');
-            const componentSvg = converter
-              .convert(svg)
-              .replace(
-                /<svg (.+?)>/,
-                '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 12" {...rest}>',
-              );
+            // Sanitize SVG attributes and replace the opening svg tag
+            const componentSvg = sanitizeSvgForJsx(svg).replace(
+              /<svg\s+[^>]*>/i,
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 12" {...rest}>',
+            );
 
             const component = `
 import * as React from 'react';

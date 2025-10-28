@@ -1,4 +1,4 @@
-import { CSSObject } from '@emotion/core';
+import { CSSObject } from '@emotion/react';
 
 declare global {
   declare module '*.svg';
@@ -13,7 +13,6 @@ declare module '*.md' {
 declare module '*.scss';
 
 declare module '@storybook';
-declare module 'storybook-readme';
 declare module 'test-utils';
 
 // Hush now, until I type things properly..

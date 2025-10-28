@@ -1,4 +1,4 @@
-import { css, keyframes } from '@emotion/core';
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { layout, LayoutProps, position, PositionProps } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';

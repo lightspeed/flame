@@ -1,116 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Radio /> Snapshots renders a Radio with a label and description correctly 1`] = `
-.emotion-8 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-5 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:not(:checked) + .emotion-5 > .emotion-3 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-5 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-5 {
-  opacity: 0.5;
-  box-shadow: none;
-}
-
-.emotion-4 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 50%;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  background: #fff linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.375rem;
-  height: 0.375rem;
-  border-radius: 50%;
-  background: #fff linear-gradient(180deg,#fff,#f3f3f3);
-}
-
-.emotion-10 {
-  margin: 0;
-  margin-left: 1.75rem;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-}
-
 <div
-  className="emotion-12 emotion-13"
+  className="css-qpvxlq-Box e1rqh3k81"
 >
   <label
-    className="emotion-8 emotion-9"
+    className="css-19joodw-BaseLabel-Text-BaseLabel ev4kwu51"
     color="textHeading"
     fontSize="text-s"
     fontWeight="bold"
     htmlFor="Radio"
   >
     <div
-      className="emotion-6 emotion-7"
+      className="css-1fivrci-WrapperRadio exxsmtx3"
     >
       <input
         checked={false}
-        className="emotion-0 emotion-1"
+        className="css-tt5avj-RadioInput exxsmtx0"
         id="Radio"
         onChange={[MockFunction]}
         type="radio"
         value="value"
       />
       <div
-        className="emotion-4 emotion-5"
+        className="css-1p9owhe-Checkmark exxsmtx2"
       >
         <div
-          className="emotion-2 emotion-3"
+          className="css-4mstmd-Centermark exxsmtx1"
           data-testid="radio-centermark"
         />
       </div>
@@ -118,7 +34,7 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
     Label
   </label>
   <div
-    className="fl-text emotion-10 emotion-11"
+    className="fl-text css-oolp2s-Text-setSizeFonts-setSizeLineHeight e4p1v736"
     size="small"
   >
     Description
@@ -127,109 +43,32 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
 `;
 
 exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
-.emotion-8 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-5 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:not(:checked) + .emotion-5 > .emotion-3 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-5 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-5 {
-  opacity: 0.5;
-  box-shadow: none;
-}
-
-.emotion-4 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 50%;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  background: #fff linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.375rem;
-  height: 0.375rem;
-  border-radius: 50%;
-  background: #fff linear-gradient(180deg,#fff,#f3f3f3);
-}
-
 <div
-  className="emotion-10 emotion-11"
+  className="css-qpvxlq-Box e1rqh3k81"
 >
   <label
-    className="emotion-8 emotion-9"
+    className="css-19joodw-BaseLabel-Text-BaseLabel ev4kwu51"
     color="textHeading"
     fontSize="text-s"
     fontWeight="bold"
     htmlFor="Radio"
   >
     <div
-      className="emotion-6 emotion-7"
+      className="css-1fivrci-WrapperRadio exxsmtx3"
     >
       <input
         checked={true}
-        className="emotion-0 emotion-1"
+        className="css-tt5avj-RadioInput exxsmtx0"
         id="Radio"
         onChange={[MockFunction]}
         type="radio"
         value="value"
       />
       <div
-        className="emotion-4 emotion-5"
+        className="css-1p9owhe-Checkmark exxsmtx2"
       >
         <div
-          className="emotion-2 emotion-3"
+          className="css-4mstmd-Centermark exxsmtx1"
           data-testid="radio-centermark"
         />
       </div>
@@ -239,99 +78,22 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
 `;
 
 exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
-.emotion-6 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-5 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:not(:checked) + .emotion-5 > .emotion-3 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-5 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-5 {
-  opacity: 0.5;
-  box-shadow: none;
-}
-
-.emotion-4 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 50%;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  background: #fff linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.375rem;
-  height: 0.375rem;
-  border-radius: 50%;
-  background: #fff linear-gradient(180deg,#fff,#f3f3f3);
-}
-
-.emotion-8 {
-  margin: 0;
-  color: #e1e4e5;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  className="emotion-10 emotion-11"
+  className="css-qpvxlq-Box e1rqh3k81"
 >
   <label
-    className="emotion-8 emotion-9"
+    className="css-10n614t-BaseLabel-Text-BaseLabel ev4kwu51"
     color="disabled"
     fontSize="text-s"
     fontWeight="bold"
     htmlFor="Radio"
   >
     <div
-      className="emotion-6 emotion-7"
+      className="css-1fivrci-WrapperRadio exxsmtx3"
     >
       <input
         checked={false}
-        className="emotion-0 emotion-1"
+        className="css-tt5avj-RadioInput exxsmtx0"
         disabled={true}
         id="Radio"
         onChange={[MockFunction]}
@@ -339,10 +101,10 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
         value="value"
       />
       <div
-        className="emotion-4 emotion-5"
+        className="css-1p9owhe-Checkmark exxsmtx2"
       >
         <div
-          className="emotion-2 emotion-3"
+          className="css-4mstmd-Centermark exxsmtx1"
           data-testid="radio-centermark"
         />
       </div>
@@ -352,106 +114,29 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
 `;
 
 exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
-.emotion-8 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-5 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:not(:checked) + .emotion-5 > .emotion-3 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-5 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-5 {
-  opacity: 0.5;
-  box-shadow: none;
-}
-
-.emotion-4 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 50%;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  background: #fff linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.375rem;
-  height: 0.375rem;
-  border-radius: 50%;
-  background: #fff linear-gradient(180deg,#fff,#f3f3f3);
-}
-
 <div
-  className="emotion-10 emotion-11"
+  className="css-qpvxlq-Box e1rqh3k81"
 >
   <label
-    className="emotion-8 emotion-9"
+    className="css-19joodw-BaseLabel-Text-BaseLabel ev4kwu51"
     color="textHeading"
     fontSize="text-s"
     fontWeight="bold"
   >
     <div
-      className="emotion-6 emotion-7"
+      className="css-1fivrci-WrapperRadio exxsmtx3"
     >
       <input
         checked={false}
-        className="emotion-0 emotion-1"
+        className="css-tt5avj-RadioInput exxsmtx0"
         onChange={[MockFunction]}
         type="radio"
       />
       <div
-        className="emotion-4 emotion-5"
+        className="css-1p9owhe-Checkmark exxsmtx2"
       >
         <div
-          className="emotion-2 emotion-3"
+          className="css-4mstmd-Centermark exxsmtx1"
           data-testid="radio-centermark"
         />
       </div>

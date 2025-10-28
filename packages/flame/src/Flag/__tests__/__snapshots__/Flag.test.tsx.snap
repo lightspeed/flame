@@ -1,14 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Flag /> Snapshots when country code should render correctly 1`] = `
-.emotion-0 {
-  width: 1rem !important;
-  height: 0.75rem !important;
-  vertical-align: text-bottom;
-}
-
 <svg
-  className="emotion-0 emotion-1"
+  className="css-lhaflw-StyledFlag-setFlagStyle e14iup5x0"
   size="1rem"
   viewBox="0 0 16 12"
   xmlns="http://www.w3.org/2000/svg"
@@ -71,14 +65,8 @@ exports[`<Flag /> Snapshots when country code should render correctly 1`] = `
 `;
 
 exports[`<Flag /> Snapshots when country name should render correctly 1`] = `
-.emotion-0 {
-  width: 1rem !important;
-  height: 0.75rem !important;
-  vertical-align: text-bottom;
-}
-
 <svg
-  className="emotion-0 emotion-1"
+  className="css-lhaflw-StyledFlag-setFlagStyle e14iup5x0"
   size="1rem"
   viewBox="0 0 16 12"
   xmlns="http://www.w3.org/2000/svg"
@@ -141,14 +129,8 @@ exports[`<Flag /> Snapshots when country name should render correctly 1`] = `
 `;
 
 exports[`<Flag /> Snapshots when region code should render correctly 1`] = `
-.emotion-0 {
-  width: 1rem !important;
-  height: 0.75rem !important;
-  vertical-align: text-bottom;
-}
-
 <svg
-  className="emotion-0 emotion-1"
+  className="css-4xij74-StyledFlag-setFlagStyle ejomlji0"
   size="1rem"
   viewBox="0 0 16 12"
   xmlns="http://www.w3.org/2000/svg"
@@ -213,14 +195,8 @@ exports[`<Flag /> Snapshots when region code should render correctly 1`] = `
 `;
 
 exports[`<Flag /> Snapshots when region name should render correctly 1`] = `
-.emotion-0 {
-  width: 1rem !important;
-  height: 0.75rem !important;
-  vertical-align: text-bottom;
-}
-
 <svg
-  className="emotion-0 emotion-1"
+  className="css-4xij74-StyledFlag-setFlagStyle ejomlji0"
   size="1rem"
   viewBox="0 0 16 12"
   xmlns="http://www.w3.org/2000/svg"
@@ -285,14 +261,8 @@ exports[`<Flag /> Snapshots when region name should render correctly 1`] = `
 `;
 
 exports[`<Flag /> Snapshots when size should render correctly 1`] = `
-.emotion-0 {
-  width: 2rem !important;
-  height: 1.5rem !important;
-  vertical-align: text-bottom;
-}
-
 <svg
-  className="emotion-0 emotion-1"
+  className="css-19aln0d-StyledFlag-setFlagStyle e1x4uc5u0"
   size="2rem"
   viewBox="0 0 16 12"
   xmlns="http://www.w3.org/2000/svg"

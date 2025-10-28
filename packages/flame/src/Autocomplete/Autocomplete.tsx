@@ -11,7 +11,7 @@ import { Props as BaseSelectProps } from 'react-select/lib/Select';
 import { Props as BaseCreatableProps } from 'react-select/lib/Creatable';
 import { Props as BaseAsyncProps } from 'react-select/lib/Async';
 
-import { withTheme } from 'emotion-theming';
+import { withTheme } from '@emotion/react';
 
 import { Spinner } from '../Spinner';
 import { IconSmallChevronDown } from '../Icon/SmallChevronDown';

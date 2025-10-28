@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
   typography,
@@ -39,6 +39,8 @@ export type TextProps = TypographyProps &
     css?: any;
     as?: any;
     color?: string;
+    /** @deprecated HTML align attribute for backwards compatibility */
+    align?: string;
     /** Text content */
     children?: React.ReactNode;
   };

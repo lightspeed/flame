@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { css } from '@styled-system/css';
-import { withTheme } from 'emotion-theming';
+import { withTheme } from '@emotion/react';
 
 import { Box } from './index';
 import { Alert } from '../Alert';
