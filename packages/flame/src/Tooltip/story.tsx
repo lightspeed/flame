@@ -1,13 +1,11 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
 import { Tooltip, TooltipPlacement } from './Tooltip';
 import { Input } from '../Input';
 import { ExampleBox } from '../../../../.storybook/components/ExampleBox';
-import Readme from './README.md';
 
-const stories = storiesOf('Components|Tooltip', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Tooltip', module);
 
 const placements: TooltipPlacement[] = [
   'top',

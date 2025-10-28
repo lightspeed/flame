@@ -16,12 +16,17 @@ const babelOptions = {
         debug: false,
       },
     ],
-    '@babel/preset-react',
-    '@emotion/babel-preset-css-prop',
+    [
+      '@babel/preset-react',
+      {
+        runtime: 'automatic',
+        importSource: '@emotion/react',
+      },
+    ],
   ],
   plugins: [
     '@babel/plugin-proposal-object-rest-spread',
-    'emotion',
+    '@emotion/babel-plugin',
     // need to resolve the dependency differently in storybook.
     // It's an issue on their side where they use an old version of
     // react-popper which magically clashes with ours

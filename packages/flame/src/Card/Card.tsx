@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { space, color, compose, BackgroundColorProps, SpaceProps } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';

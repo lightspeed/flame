@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { withTheme } from 'emotion-theming';
+import { withTheme } from '@emotion/react';
 import { themeGet } from '@styled-system/theme-get';
 
 export type IconProps = {
@@ -68,7 +68,7 @@ export default function iconFactory(BaseIconComponent: React.FC, displayName = '
       vertical-align: text-bottom;
     `;
 
-    return <StyledIcon {...stylingProps} {...restProps} />;
+    return <StyledIcon {...stylingProps} {...restProps} theme={theme} />;
   };
 
   const Enhanced = withTheme(EnhancedIcon);

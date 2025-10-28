@@ -1,4 +1,4 @@
-const { fontSizes, fontSizeAliases } = require('../typography');
+const { fontSizes, fontSizeAliases } = require('../typography.ts');
 
 describe('fontSizes', () => {
   it('returns list of rem value by size', () => {

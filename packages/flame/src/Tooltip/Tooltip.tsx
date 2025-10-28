@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { position } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
 import { Placement as TooltipPlacement } from '@popperjs/core';
 import { usePopper, useToggle, useOnClickOutside } from '../hooks';
+import { AsProps } from '../Core';
 
 const tooltipOffset = 'space.1';
 const tooltipArrowSize = '5px';
@@ -90,8 +91,7 @@ type TooltipContainerProps = {
   light?: boolean;
   /** Sets the zIndex of Tooltip */
   zIndex?: string | number;
-  as?: string;
-};
+} & AsProps;
 const TooltipContainer = styled('div')<TooltipContainerProps>`
   padding: ${themeGet('space.1')};
   font-size: ${themeGet('fontSizes.text-xs')};
@@ -195,6 +195,7 @@ const TooltipContainer = styled('div')<TooltipContainerProps>`
 
 interface TooltipWrapper extends TooltipContainerProps {
   /** Element that will have the tooltip hover event bound to */
+  // eslint-disable-next-line react/no-unused-prop-types
   targetRef?: React.RefObject<HTMLSpanElement>;
   /** CSS class name to be applied to the wrapper of the tooltip */
   className?: string;

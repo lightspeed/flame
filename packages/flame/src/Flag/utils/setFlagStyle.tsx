@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { themeGet } from '@styled-system/theme-get';
 
 export type FlagStyleProps = {
