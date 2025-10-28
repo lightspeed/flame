@@ -44,19 +44,19 @@ export type DialogProps = Partial<OptionalProps> & {
  */
 export const Dialog: React.FC<DialogProps> = props => {
   const {
-    type,
-    title,
+    type = 'default',
+    title = '',
     message,
     isOpen,
-    isLoading,
+    isLoading = false,
     onCancel,
     onConfirm,
-    cancelText,
-    confirmText,
+    cancelText = 'Cancel',
+    confirmText = 'Ok',
     cancelRest,
     confirmRest,
     showCloseButton,
-    scroll,
+    scroll = false,
     ...rest
   } = props;
 
@@ -85,13 +85,4 @@ export const Dialog: React.FC<DialogProps> = props => {
       </ModalFooter>
     </StyledModal>
   );
-};
-
-Dialog.defaultProps = {
-  title: '',
-  type: 'default',
-  cancelText: 'Cancel',
-  confirmText: 'Ok',
-  isLoading: false,
-  scroll: false,
 };

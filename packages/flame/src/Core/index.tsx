@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { Global, css } from '@emotion/core';
+import { Global, css, ThemeProvider } from '@emotion/react';
 import styled from '@emotion/styled';
-import { ThemeProvider } from 'emotion-theming';
 import { Omit } from 'type-fest';
 
 import {
@@ -54,7 +53,7 @@ const borderRadii = system({
 
 const border = compose(borderRadii, styledSystemBorder);
 
-export type AsProps = { as?: string };
+export type AsProps = { as?: string | React.ElementType<any, any> };
 export type FlameBoxProps = SpaceProps &
   LayoutProps &
   FlexboxProps &

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 import { css } from '@styled-system/css';
 import {
   ToastProvider,

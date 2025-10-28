@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
   typography,
@@ -191,7 +191,7 @@ const textlinkColor = (props: any) =>
 /**
  * Pre-styled anchor component
  */
-export const TextLink = styled(Text)<TextProps>`
+const BaseTextLink = styled(Text)<Omit<TextProps, 'align'>>`
   color: ${textlinkColor};
   text-decoration: none;
   &:hover {
@@ -201,6 +201,9 @@ export const TextLink = styled(Text)<TextProps>`
   }
   ${color};
 `.withComponent('a');
+
+// Explicitly omit 'align' from the final merged type (which includes anchor attributes from withComponent)
+export const TextLink = BaseTextLink as Omit<typeof BaseTextLink, 'align'> & { align?: string };
 TextLink.defaultProps = {
   className: 'fl-textlink',
 };

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import { Interpolation, Theme } from '@emotion/react';
 import { themeGet } from '@styled-system/theme-get';
 
 import { Box } from '../Core';
@@ -83,16 +84,17 @@ const RadioInput = styled('input')`
 `;
 
 export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {}
-export const BaseRadio = React.forwardRef<HTMLInputElement, RadioProps>(
-  ({ css, className, ...restProps }, ref) => (
-    <WrapperRadio css={css} className={className}>
-      <RadioInput ref={ref} type="radio" {...restProps} />
-      <Checkmark>
-        <Centermark data-testid="radio-centermark" />
-      </Checkmark>
-    </WrapperRadio>
-  ),
-);
+export const BaseRadio = React.forwardRef<
+  HTMLInputElement,
+  RadioProps & { css?: Interpolation<Theme> }
+>(({ css, className, ...restProps }, ref) => (
+  <WrapperRadio css={css} className={className}>
+    <RadioInput ref={ref} type="radio" {...restProps} />
+    <Checkmark>
+      <Centermark data-testid="radio-centermark" />
+    </Checkmark>
+  </WrapperRadio>
+));
 
 interface FormRadioProps extends RadioProps {
   /** The label text that appears right besides the checkbox */
@@ -103,17 +105,18 @@ interface FormRadioProps extends RadioProps {
 /**
  * Offers users a single choice, among a small set.
  */
-export const Radio = React.forwardRef<HTMLInputElement, FormRadioProps>(
-  ({ label, id, description, disabled, css, className, ...restProps }, ref) => (
-    <RadioLabel
-      htmlFor={id}
-      disabled={disabled}
-      css={css}
-      className={className}
-      description={description}
-    >
-      <BaseRadio ref={ref} id={id} disabled={disabled} {...restProps} />
-      {label}
-    </RadioLabel>
-  ),
-);
+export const Radio = React.forwardRef<
+  HTMLInputElement,
+  FormRadioProps & { css?: Interpolation<Theme> }
+>(({ label, id, description, disabled, css, className, ...restProps }, ref) => (
+  <RadioLabel
+    htmlFor={id}
+    disabled={disabled}
+    css={css}
+    className={className}
+    description={description}
+  >
+    <BaseRadio ref={ref} id={id} disabled={disabled} {...restProps} />
+    {label}
+  </RadioLabel>
+));

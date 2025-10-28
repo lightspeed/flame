@@ -1,14 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Icon renders correctly 1`] = `
-.emotion-0 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-}
-
 <svg
-  className=" cr-icon emotion-0 emotion-1"
+  className="cr-icon css-ur13wh-StyledIcon er8b7wo0"
   style={
     Object {
       "height": "1rem",
@@ -31,14 +25,8 @@ exports[`Icon renders correctly 1`] = `
 `;
 
 exports[`Icon renders with baseColor and detailColor 1`] = `
-.emotion-0 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-}
-
 <svg
-  className=" cr-icon emotion-0 emotion-1"
+  className="cr-icon css-ur13wh-StyledIcon er8b7wo0"
   style={
     Object {
       "height": "1rem",
@@ -69,14 +57,8 @@ exports[`Icon renders with baseColor and detailColor 1`] = `
 `;
 
 exports[`Icon renders with color 1`] = `
-.emotion-0 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-}
-
 <svg
-  className=" cr-icon emotion-0 emotion-1"
+  className="cr-icon css-ur13wh-StyledIcon er8b7wo0"
   fill="cr-blue"
   style={
     Object {
