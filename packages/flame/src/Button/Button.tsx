@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { variant as styledVariant } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';

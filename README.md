@@ -98,7 +98,7 @@ If you have Emotion already installed and you would like to use the theme values
 ```jsx
 import React from 'react';
 import { FlameTheme, lightTheme } from '@lightspeed/flame/Core';
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from '@emotion/react';
 
 class App extends React.Component {
   render() {

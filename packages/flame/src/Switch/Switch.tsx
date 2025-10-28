@@ -4,6 +4,7 @@ import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
 import { IconCheckmark } from '../Icon/Checkmark';
 import { IconCross } from '../Icon/Cross';
+import { AsProps } from '../Core';
 
 const SwitchWrapper = styled('span')`
   display: flex;
@@ -117,7 +118,7 @@ export type SwitchProps = Merge<
     className?: string;
     /** Sets the checked state of Switch */
     checked?: boolean;
-  }
+  } & AsProps
 >;
 /**
  * A toggleable control which stays on (or off) until manually triggered once more.

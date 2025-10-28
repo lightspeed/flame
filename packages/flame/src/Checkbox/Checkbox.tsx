@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { css } from '@emotion/core';
+import { css, Interpolation, Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
@@ -99,35 +99,36 @@ export interface BaseCheckboxProps extends React.InputHTMLAttributes<HTMLInputEl
   /** Set the checkbox to a checked state */
   checked?: boolean;
 }
-export const BaseCheckbox = React.forwardRef<HTMLInputElement, BaseCheckboxProps>(
-  ({ indeterminate, checked, css, className, ...restProps }, ref) => {
-    return (
-      <Wrapper css={css} className={className}>
-        <CheckboxInput
-          ref={innerRef => {
-            if (innerRef) {
-              // eslint-disable-next-line no-param-reassign
-              innerRef.indeterminate = !checked && indeterminate;
-            }
+export const BaseCheckbox = React.forwardRef<
+  HTMLInputElement,
+  BaseCheckboxProps & { css?: Interpolation<Theme> }
+>(({ indeterminate, checked, css, className, ...restProps }, ref) => {
+  return (
+    <Wrapper css={css} className={className}>
+      <CheckboxInput
+        ref={innerRef => {
+          if (innerRef) {
+            // eslint-disable-next-line no-param-reassign
+            innerRef.indeterminate = !checked && indeterminate;
+          }
 
-            if (ref) {
-              // @ts-ignore
-              typeof ref === 'function' ? ref(innerRef) : (ref.current = innerRef); // eslint-disable-line no-param-reassign
-            }
-          }}
-          type="checkbox"
-          indeterminate={indeterminate}
-          checked={checked}
-          {...restProps}
-        />
-        <CheckboxCheckmarkWrapper indeterminate={indeterminate}>
-          <StyledIcon size="0.65rem" />
-          {indeterminate && !checked && <CheckboxIndeterminate />}
-        </CheckboxCheckmarkWrapper>
-      </Wrapper>
-    );
-  },
-);
+          if (ref) {
+            // @ts-ignore
+            typeof ref === 'function' ? ref(innerRef) : (ref.current = innerRef); // eslint-disable-line no-param-reassign
+          }
+        }}
+        type="checkbox"
+        indeterminate={indeterminate}
+        checked={checked}
+        {...restProps}
+      />
+      <CheckboxCheckmarkWrapper indeterminate={indeterminate}>
+        <StyledIcon size="0.65rem" />
+        {indeterminate && !checked && <CheckboxIndeterminate />}
+      </CheckboxCheckmarkWrapper>
+    </Wrapper>
+  );
+});
 
 export interface CheckboxProps extends BaseCheckboxProps {
   /** The label text that appears right besides the checkbox */
@@ -138,17 +139,18 @@ export interface CheckboxProps extends BaseCheckboxProps {
 /**
  * Used to specify choices among large groups of options.
  */
-export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ label, id, description, disabled, css, className, ...restProps }, ref) => (
-    <CheckboxLabel
-      htmlFor={id}
-      description={description}
-      css={css}
-      className={className}
-      disabled={disabled}
-    >
-      <BaseCheckbox ref={ref} id={id} disabled={disabled} {...restProps} />
-      {label}
-    </CheckboxLabel>
-  ),
-);
+export const Checkbox = React.forwardRef<
+  HTMLInputElement,
+  CheckboxProps & { css?: Interpolation<Theme> }
+>(({ label, id, description, disabled, css, className, ...restProps }, ref) => (
+  <CheckboxLabel
+    htmlFor={id}
+    description={description}
+    css={css}
+    className={className}
+    disabled={disabled}
+  >
+    <BaseCheckbox ref={ref} id={id} disabled={disabled} {...restProps} />
+    {label}
+  </CheckboxLabel>
+));

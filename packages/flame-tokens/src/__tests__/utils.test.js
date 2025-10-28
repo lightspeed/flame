@@ -1,4 +1,4 @@
-const { pxToRem } = require('../utils');
+const { pxToRem } = require('../utils.ts');
 
 describe('pxToRem', () => {
   it('returns rem value with default base value', () => {

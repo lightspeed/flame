@@ -1,14 +1,27 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 import { render } from '@testing-library/react';
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider, CacheProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
 import { theme } from '../packages/flame/src/Core/themes/oldskool';
 
+// Create a fresh deterministic cache for each render to ensure consistent snapshots
+const createEmotionCache = () => createCache({ key: 'css' });
+
 const customRender = (node: React.ReactNode, ...options: any) =>
-  render(<ThemeProvider theme={theme}>{node}</ThemeProvider>, ...options);
+  render(
+    <CacheProvider value={createEmotionCache()}>
+      <ThemeProvider theme={theme}>{node}</ThemeProvider>
+    </CacheProvider>,
+    ...options,
+  );
 
 const createComponent = (node: React.ReactNode) =>
-  renderer.create(<ThemeProvider theme={theme}>{node}</ThemeProvider>);
+  renderer.create(
+    <CacheProvider value={createEmotionCache()}>
+      <ThemeProvider theme={theme}>{node}</ThemeProvider>
+    </CacheProvider>,
+  );
 
 // re-export everything
 export * from '@testing-library/react';

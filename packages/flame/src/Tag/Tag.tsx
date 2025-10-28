@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles, withTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
-import { withTheme } from 'emotion-theming';
 import { Merge } from 'type-fest';
 import { IconClose } from '../Icon/Close';
+import { AsProps } from '../Core';
 
 const StyledTag = styled('div')`
   position: relative;
@@ -164,7 +164,7 @@ export type TagProps = Merge<
     /** onRemove event handler, creates X button */
     onRemove?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     css?: any;
-  }
+  } & AsProps
 >;
 
 /**

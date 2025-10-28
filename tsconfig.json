@@ -5,6 +5,8 @@
     "strictNullChecks": false,
     "declaration": false,
     "noEmit": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "baseUrl": ".",
     "paths": {
       "test-utils": ["tests/test-utils"]
@@ -15,6 +17,13 @@
     "**/dist/**",
     "scripts/plop/templates/**/*",
     "packages/flame-tokens/story.tsx",
+    "**/*.stories.tsx",
+    "**/*.test.tsx",
+    "**/__tests__/**",
+    "**/__mocks__/**",
+    "**/examples/**",
+    "**/story.tsx",
+    "packages/flame/src/Flag/*.tsx",
     "**/node_modules/**"
   ]
 }

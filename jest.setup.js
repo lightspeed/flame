@@ -1,11 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
-import * as emotion from 'emotion';
-import { createSerializer, matchers as emotionMatchers } from 'jest-emotion';
+import { matchers } from '@emotion/jest';
 
-expect.addSnapshotSerializer(createSerializer(emotion));
-expect.extend(emotionMatchers);
+expect.extend(matchers);
 
 afterEach(cleanup);
 
