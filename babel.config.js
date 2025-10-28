@@ -7,15 +7,26 @@ module.exports = {
       },
     ],
     '@babel/preset-typescript',
-    '@babel/preset-react',
-    '@emotion/babel-preset-css-prop',
+    [
+      '@babel/preset-react',
+      {
+        runtime: 'automatic',
+        importSource: '@emotion/react',
+      },
+    ],
   ],
-  plugins: ['@babel/plugin-proposal-object-rest-spread'],
+  plugins: ['@babel/plugin-proposal-object-rest-spread', '@emotion/babel-plugin'],
   env: {
     test: {
       presets: [
         '@babel/preset-typescript',
-        '@babel/preset-react',
+        [
+          '@babel/preset-react',
+          {
+            runtime: 'automatic',
+            importSource: '@emotion/react',
+          },
+        ],
         [
           '@babel/preset-env',
           {
@@ -26,17 +37,19 @@ module.exports = {
             },
           },
         ],
-        '@emotion/babel-preset-css-prop',
       ],
+      plugins: ['@emotion/babel-plugin'],
     },
     // for ESM builds
     production: {
-      plugins: ['transform-react-remove-prop-types'],
+      plugins: ['transform-react-remove-prop-types', '@emotion/babel-plugin'],
       presets: [
+        '@babel/preset-typescript',
         [
-          '@emotion/babel-preset-css-prop',
+          '@babel/preset-react',
           {
-            sourceMap: false,
+            runtime: 'automatic',
+            importSource: '@emotion/react',
           },
         ],
         [
@@ -45,23 +58,23 @@ module.exports = {
             modules: false,
           },
         ],
-        '@babel/preset-typescript',
       ],
     },
     cjs: {
-      plugins: ['transform-react-remove-prop-types'],
+      plugins: ['transform-react-remove-prop-types', '@emotion/babel-plugin'],
       presets: [
         '@babel/preset-typescript',
+        [
+          '@babel/preset-react',
+          {
+            runtime: 'automatic',
+            importSource: '@emotion/react',
+          },
+        ],
         [
           '@babel/preset-env',
           {
             modules: 'commonjs',
-          },
-        ],
-        [
-          '@emotion/babel-preset-css-prop',
-          {
-            sourceMap: false,
           },
         ],
       ],

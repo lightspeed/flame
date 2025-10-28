@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { customRender, fireEvent } from 'test-utils';
+import { customRender, fireEvent, waitFor } from 'test-utils';
 
 import { Modal } from './Modal';
 import { ModalHeader } from './ModalHeader';
@@ -67,7 +67,7 @@ describe('Modal', () => {
     expect(queryByTestId('modal-close-button')).toBeFalsy();
   });
 
-  it('should invoke the onAfterOpen method when the modal has been opened', () => {
+  it('should invoke the onAfterOpen method when the modal has been opened', async () => {
     const onOpen = jest.fn();
     customRender(
       <Modal isOpen title="Test Modal" onAfterOpen={onOpen}>
@@ -75,7 +75,7 @@ describe('Modal', () => {
       </Modal>,
     );
 
-    expect(onOpen).toHaveBeenCalled();
+    await waitFor(() => expect(onOpen).toHaveBeenCalled());
   });
 
   it('should invoke onRequestClose when the close button is clicked', () => {

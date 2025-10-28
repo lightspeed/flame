@@ -1,4 +1,4 @@
-import { CSSObject, InterpolationWithTheme } from '@emotion/core';
+import { CSSObject, Interpolation } from '@emotion/react';
 
 declare module '@styled-system/theme-get';
 

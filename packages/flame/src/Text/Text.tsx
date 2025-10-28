@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
   typography,
@@ -29,19 +29,20 @@ const width = system({
   },
 });
 
-export type TextProps = TypographyProps &
-  ColorProps &
-  TextTransformProp &
-  WidthProps &
-  SpaceProps & {
-    /** Theme size for Text */
-    size?: 'small' | 'normal' | 'large' | 'xlarge';
-    css?: any;
-    as?: any;
-    color?: string;
-    /** Text content */
-    children?: React.ReactNode;
-  };
+export type TextProps = Omit<
+  TypographyProps & ColorProps & TextTransformProp & WidthProps & SpaceProps,
+  'align'
+> & {
+  /** Theme size for Text */
+  size?: 'small' | 'normal' | 'large' | 'xlarge';
+  css?: any;
+  as?: any;
+  color?: string;
+  /** @deprecated HTML align attribute for backwards compatibility */
+  align?: string;
+  /** Text content */
+  children?: React.ReactNode;
+};
 
 const BaseText = styled('div')<TextProps>(
   {

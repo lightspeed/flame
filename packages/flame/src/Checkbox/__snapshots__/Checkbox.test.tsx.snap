@@ -1,122 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Checkbox /> Snapshots when all props and label/description with html should render correctly 1`] = `
-.emotion-9 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
-.emotion-11 {
-  margin: 0;
-  margin-left: 1.75rem;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-}
-
 <div
-  className="emotion-13 emotion-14"
+  className="css-qpvxlq-Box e1rqh3k81"
 >
   <label
-    className="emotion-9 emotion-10"
+    className="css-19j50o1-BaseLabel-Text-BaseLabel ev4kwu51"
     color="textHeading"
     fontSize="text-s"
     fontWeight="bold"
     htmlFor="id"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="css-1mcos5j-Wrapper eo2dg7r4"
     >
       <input
-        className="emotion-0 emotion-1"
+        className="css-1kaw2q3-CheckboxInput eo2dg7r0"
         id="id"
         type="checkbox"
         value="value"
       />
       <div
-        className="emotion-5 emotion-6"
+        className="css-1nrs9l4-CheckboxCheckmarkWrapper eo2dg7r3"
       >
         <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
+          className="eo2dg7r1 cr-icon css-1ygoflk-StyledIcon-StyledIcon er8b7wo0"
           style={
             Object {
               "height": "0.65rem",
@@ -138,7 +46,7 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
     </div>
   </label>
   <div
-    className="fl-text emotion-11 emotion-12"
+    className="fl-text css-p91gac-Text-setSizeFonts-setSizeLineHeight e4p1v736"
     size="small"
   >
     <div>
@@ -149,122 +57,30 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
 `;
 
 exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
-.emotion-9 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
-.emotion-11 {
-  margin: 0;
-  margin-left: 1.75rem;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-}
-
 <div
-  className="emotion-13 emotion-14"
+  className="css-qpvxlq-Box e1rqh3k81"
 >
   <label
-    className="emotion-9 emotion-10"
+    className="css-19j50o1-BaseLabel-Text-BaseLabel ev4kwu51"
     color="textHeading"
     fontSize="text-s"
     fontWeight="bold"
     htmlFor="id"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="css-1mcos5j-Wrapper eo2dg7r4"
     >
       <input
-        className="emotion-0 emotion-1"
+        className="css-1kaw2q3-CheckboxInput eo2dg7r0"
         id="id"
         type="checkbox"
         value="value"
       />
       <div
-        className="emotion-5 emotion-6"
+        className="css-1nrs9l4-CheckboxCheckmarkWrapper eo2dg7r3"
       >
         <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
+          className="eo2dg7r1 cr-icon css-1ygoflk-StyledIcon-StyledIcon er8b7wo0"
           style={
             Object {
               "height": "0.65rem",
@@ -284,7 +100,7 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
     Label
   </label>
   <div
-    className="fl-text emotion-11 emotion-12"
+    className="fl-text css-p91gac-Text-setSizeFonts-setSizeLineHeight e4p1v736"
     size="small"
   >
     Description
@@ -293,114 +109,29 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 `;
 
 exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
-.emotion-9 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
 <div
-  className="emotion-11 emotion-12"
+  className="css-qpvxlq-Box e1rqh3k81"
 >
   <label
-    className="emotion-9 emotion-10"
+    className="css-19j50o1-BaseLabel-Text-BaseLabel ev4kwu51"
     color="textHeading"
     fontSize="text-s"
     fontWeight="bold"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="css-1mcos5j-Wrapper eo2dg7r4"
     >
       <input
         checked={true}
-        className="emotion-0 emotion-1"
+        className="css-1kaw2q3-CheckboxInput eo2dg7r0"
         onChange={[Function]}
         type="checkbox"
       />
       <div
-        className="emotion-5 emotion-6"
+        className="css-1nrs9l4-CheckboxCheckmarkWrapper eo2dg7r3"
       >
         <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
+          className="eo2dg7r1 cr-icon css-1ygoflk-StyledIcon-StyledIcon er8b7wo0"
           style={
             Object {
               "height": "0.65rem",
@@ -422,113 +153,28 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
 `;
 
 exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
-.emotion-9 {
-  margin: 0;
-  color: #e1e4e5;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 <div
-  className="emotion-11 emotion-12"
+  className="css-qpvxlq-Box e1rqh3k81"
 >
   <label
-    className="emotion-9 emotion-10"
+    className="css-10l10vp-BaseLabel-Text-BaseLabel ev4kwu51"
     color="disabled"
     fontSize="text-s"
     fontWeight="bold"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="css-1mcos5j-Wrapper eo2dg7r4"
     >
       <input
-        className="emotion-0 emotion-1"
+        className="css-1kaw2q3-CheckboxInput eo2dg7r0"
         disabled={true}
         type="checkbox"
       />
       <div
-        className="emotion-5 emotion-6"
+        className="css-1nrs9l4-CheckboxCheckmarkWrapper eo2dg7r3"
       >
         <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
+          className="eo2dg7r1 cr-icon css-1ygoflk-StyledIcon-StyledIcon er8b7wo0"
           style={
             Object {
               "height": "0.65rem",
@@ -550,112 +196,27 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
 `;
 
 exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
-.emotion-9 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
 <div
-  className="emotion-11 emotion-12"
+  className="css-qpvxlq-Box e1rqh3k81"
 >
   <label
-    className="emotion-9 emotion-10"
+    className="css-19j50o1-BaseLabel-Text-BaseLabel ev4kwu51"
     color="textHeading"
     fontSize="text-s"
     fontWeight="bold"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="css-1mcos5j-Wrapper eo2dg7r4"
     >
       <input
-        className="emotion-0 emotion-1"
+        className="css-1kaw2q3-CheckboxInput eo2dg7r0"
         type="checkbox"
       />
       <div
-        className="emotion-5 emotion-6"
+        className="css-1nrs9l4-CheckboxCheckmarkWrapper eo2dg7r3"
       >
         <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
+          className="eo2dg7r1 cr-icon css-1ygoflk-StyledIcon-StyledIcon er8b7wo0"
           style={
             Object {
               "height": "0.65rem",
@@ -677,126 +238,27 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
 `;
 
 exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] = `
-.emotion-11 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-9 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-8 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-8 .emotion-6 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-8 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-8 {
-  opacity: 0.5;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
-.emotion-7 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-  border-color: #2875c6;
-}
-
-.emotion-5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 0.5rem;
-  height: 0.125rem;
-  border-radius: 0.1875rem;
-  background: #1d5794;
-}
-
 <div
-  className="emotion-13 emotion-14"
+  className="css-qpvxlq-Box e1rqh3k81"
 >
   <label
-    className="emotion-11 emotion-12"
+    className="css-19j50o1-BaseLabel-Text-BaseLabel ev4kwu51"
     color="textHeading"
     fontSize="text-s"
     fontWeight="bold"
   >
     <div
-      className="emotion-9 emotion-10"
+      className="css-1mcos5j-Wrapper eo2dg7r4"
     >
       <input
-        className="emotion-0 emotion-1"
+        className="css-1kaw2q3-CheckboxInput eo2dg7r0"
         type="checkbox"
       />
       <div
-        className="emotion-7 emotion-8"
+        className="css-1gkbn5y-CheckboxCheckmarkWrapper-CheckboxCheckmarkWrapper eo2dg7r3"
       >
         <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
+          className="eo2dg7r1 cr-icon css-1ygoflk-StyledIcon-StyledIcon er8b7wo0"
           style={
             Object {
               "height": "0.65rem",
@@ -812,7 +274,7 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
           />
         </svg>
         <div
-          className="emotion-5 emotion-6"
+          className="css-1vsripa-CheckboxIndeterminate eo2dg7r2"
         />
       </div>
     </div>
@@ -821,113 +283,28 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
 `;
 
 exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
-.emotion-9 {
-  margin: 0;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-7 {
-  position: relative;
-  line-height: 1rem;
-}
-
-.emotion-0 {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
-
-.emotion-0:checked + .emotion-6 {
-  background: #2875c6;
-  border-color: #1d5794;
-}
-
-.emotion-0:checked + .emotion-6 .eo2dg7r2 {
-  display: none;
-}
-
-.emotion-0:checked + div .emotion-2 {
-  display: block;
-}
-
-.emotion-0:not(:checked) + div .emotion-2 {
-  display: none;
-}
-
-.emotion-0:focus + .emotion-6 {
-  box-shadow: 0 0 0 1px #fff,0 0 0 3px #2875c6;
-}
-
-.emotion-0[disabled] + .emotion-6 {
-  opacity: 0.5;
-}
-
-.emotion-5 {
-  position: relative;
-  width: 1rem;
-  height: 1rem;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  border-radius: 0.1875rem;
-  background-color: transparent;
-  border: solid 1px #abb3b3;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: default;
-  background: linear-gradient(180deg,#fff,#f3f3f3);
-  margin-right: 0.75rem;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  fill: #fff;
-}
-
 <div
-  className="emotion-11 emotion-12"
+  className="css-qpvxlq-Box e1rqh3k81"
 >
   <label
-    className="emotion-9 emotion-10"
+    className="css-19j50o1-BaseLabel-Text-BaseLabel ev4kwu51"
     color="textHeading"
     fontSize="text-s"
     fontWeight="bold"
   >
     <div
-      className="emotion-7 emotion-8"
+      className="css-1mcos5j-Wrapper eo2dg7r4"
     >
       <input
         checked={false}
-        className="emotion-0 emotion-1"
+        className="css-1kaw2q3-CheckboxInput eo2dg7r0"
         type="checkbox"
       />
       <div
-        className="emotion-5 emotion-6"
+        className="css-1nrs9l4-CheckboxCheckmarkWrapper eo2dg7r3"
       >
         <svg
-          className="emotion-2 cr-icon emotion-3 emotion-4"
+          className="eo2dg7r1 cr-icon css-1ygoflk-StyledIcon-StyledIcon er8b7wo0"
           style={
             Object {
               "height": "0.65rem",

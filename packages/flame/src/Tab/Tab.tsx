@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { themeGet } from '@styled-system/theme-get';
 import { Box, Flex, FlameBoxProps } from '../Core';
 import { Divider } from '../Divider';
