@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { css } from '@emotion/core';
+import { css, Interpolation } from '@emotion/react';
 import styled from '@emotion/styled';
-import { variant as styledVariant } from 'styled-system';
+import { variant as styledVariant, Theme } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
 import { Spinner } from '../Spinner';
 import { BaseButton, ButtonSizes, BaseButtonProps } from './BaseButton';
@@ -170,6 +170,8 @@ export type ButtonProps = BaseButtonProps & {
   disabled?: boolean;
   /** Href for navigation. Turns the Button into a link. */
   href?: string;
+  /** Emotion css prop for custom styling */
+  css?: Interpolation<Theme>;
 };
 
 /**

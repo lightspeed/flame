@@ -1,30 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Spinner /> Snapshots when color is cr-blue should render correctly 1`] = `
-@keyframes animation-0 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.emotion-1 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  -webkit-animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-  animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-}
-
 <svg
-  className="emotion-0 cr-icon emotion-1 emotion-2"
+  className="e1pla2t60 cr-icon css-1ktlw1z-StyledIcon-StyledIcon er8b7wo0"
   fill="#2875c6"
   style={
     Object {
@@ -48,30 +26,8 @@ exports[`<Spinner /> Snapshots when color is cr-blue should render correctly 1`]
 `;
 
 exports[`<Spinner /> Snapshots when empty props should render correctly 1`] = `
-@keyframes animation-0 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.emotion-1 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  -webkit-animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-  animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-}
-
 <svg
-  className="emotion-0 cr-icon emotion-1 emotion-2"
+  className="e1pla2t60 cr-icon css-1ktlw1z-StyledIcon-StyledIcon er8b7wo0"
   style={
     Object {
       "height": "1rem",
@@ -94,30 +50,8 @@ exports[`<Spinner /> Snapshots when empty props should render correctly 1`] = `
 `;
 
 exports[`<Spinner /> Snapshots when size is xlarge should render correctly 1`] = `
-@keyframes animation-0 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.emotion-1 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  -webkit-animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-  animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-}
-
 <svg
-  className="emotion-0 cr-icon emotion-1 emotion-2"
+  className="e1pla2t60 cr-icon css-1ktlw1z-StyledIcon-StyledIcon er8b7wo0"
   style={
     Object {
       "height": "1.5rem",

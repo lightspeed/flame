@@ -1,5 +1,5 @@
 import React from 'react';
-import { Global } from '@emotion/core';
+import { Global } from '@emotion/react';
 import { addDecorator, addParameters } from '@storybook/react';
 import { FlameGlobalStyles, FlameTheme, themePicker } from '../packages/flame/src/Core/index.tsx';
 import './stories.scss';
