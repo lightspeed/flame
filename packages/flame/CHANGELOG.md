@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Refer to the [CONTRIBUTING guide](https://github.com/lightspeed/flame/blob/master/.github/CONTRIBUTING.md) for more info.
 
+## 3.0.0-alpha.10 - 2025-10-29
+
+- Version bump because lerna
+
 ## 3.0.0-alpha.1 - 2025-10-26
 
 - Version bump because lerna
