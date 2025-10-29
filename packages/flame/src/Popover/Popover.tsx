@@ -4,9 +4,11 @@ import { PopoverArrow, PopoverContainer, PopoverContainerProps } from './Popover
 import { usePopper, useToggle, useOnClickOutside, useEventListener } from '../hooks';
 
 interface PopperWrapper extends PopoverContainerProps {
+  // eslint-disable-next-line react/no-unused-prop-types
   targetRef?: React.RefObject<any>;
   /** One of "auto-start", "auto", "auto-end", "top-start", "top", "top-end", "right-start", "right", "right-end", "bottom-end", "bottom", "bottom-start", "left-end", "left", "left-start" */
   placement?: PopoverPlacement;
+  // eslint-disable-next-line react/no-unused-prop-types
   isActive?: boolean;
   autoClose?: boolean;
   className?: string;

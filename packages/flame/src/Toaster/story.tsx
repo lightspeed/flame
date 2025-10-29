@@ -1,17 +1,15 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
-import Readme from './README.md';
 import { ToasterProvider, useToasts } from './index';
 import { ActionableToastContent, Toaster } from './Toaster';
 import { Button } from '../Button';
 import { Heading2 } from '../Text';
 import { Modal } from '../Modal';
 
-const stories = storiesOf('Components|Toaster', module).addDecorator(withReadme(Readme));
+const stories = storiesOf('Components|Toaster', module);
 
 const noop = () => {};
-const Spacer: React.FC = ({ children }) => {
+const Spacer: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const nextChildren = React.Children.map(children, child => (
     <div css={{ margin: '8px' }}>{child}</div>
   ));

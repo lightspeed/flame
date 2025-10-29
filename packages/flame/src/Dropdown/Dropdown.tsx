@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { themeGet } from '@styled-system/theme-get';
 import { Merge } from 'type-fest';
@@ -16,7 +16,12 @@ import { useOnClickOutside } from '../hooks/useOnClickOutside';
 
 type Placement = 'start' | 'center' | 'end' | PopperPlacement;
 
-interface Props extends Merge<PopoverContainerProps, Omit<ButtonProps, 'onClick'>> {
+interface Props
+  extends Merge<
+    Omit<PopoverContainerProps, 'children'>,
+    Omit<ButtonProps, 'onClick' | 'children'>
+  > {
+  children?: React.ReactNode | ((closeDropdown: () => void) => React.ReactNode);
   buttonContent: React.ReactNode;
   initiallyOpen?: boolean;
   placement?: Placement;
@@ -120,7 +125,7 @@ export const Dropdown: React.FC<Props> = ({
   const clickOutsideRef = React.useRef();
   clickOutsideRef.current = popperRef;
 
-  const { styles, update } = usePopper(targetRef, popperRef, {
+  const { styles } = usePopper(targetRef, popperRef, {
     placement: (placementWhitelist[placement] as any) || placement || 'bottom-start',
     modifiers: [
       {
@@ -147,7 +152,6 @@ export const Dropdown: React.FC<Props> = ({
   });
 
   useOnClickOutside(clickOutsideRef, () => {
-    isActive && update && update();
     isActive && setInactive();
   });
 
@@ -162,6 +166,9 @@ export const Dropdown: React.FC<Props> = ({
           pr={2}
           pl={2}
           onClick={(event: any) => {
+            // Stop event from bubbling to prevent click-outside handler from firing
+            event.stopPropagation();
+
             if (typeof onClick === 'function') {
               onClick(toggle, event as React.MouseEvent<HTMLButtonElement, MouseEvent>);
             } else {

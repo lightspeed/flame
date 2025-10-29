@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ReactModal from 'react-modal';
-import { Global, keyframes, ClassNames } from '@emotion/core';
-import { withTheme } from 'emotion-theming';
+import { Global, keyframes, ClassNames, withTheme } from '@emotion/react';
 import { themeGet } from '@styled-system/theme-get';
 import { Provider } from './ModalContext';
 
@@ -48,6 +47,8 @@ const asideHideKeyframe = keyframes`
 `;
 
 export type ModalProps = {
+  /** Modal content */
+  children?: React.ReactNode;
   /** Sets the open state of Modal */
   isOpen?: boolean;
   /** Sets whether ESC key closes Modal */

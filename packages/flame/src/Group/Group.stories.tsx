@@ -16,7 +16,7 @@ export default {
   component: Group,
 };
 
-const Description: React.FC = ({ children }) => (
+const Description: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
   <Text fontSize="text-s" mb={1}>
     {children}
   </Text>

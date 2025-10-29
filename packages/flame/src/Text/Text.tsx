@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
   typography,
@@ -39,6 +39,8 @@ export type TextProps = TypographyProps &
     css?: any;
     as?: any;
     color?: string;
+    /** Text content */
+    children?: React.ReactNode;
   };
 
 const BaseText = styled('div')<TextProps>(

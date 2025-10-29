@@ -112,7 +112,7 @@ describe('Autocomplete', () => {
       );
       const input = container.querySelector('input#color-input');
       fireEvent.change(input, { target: { value: 'new option' } });
-      fireEvent.click(getByText('Add “new option”'));
+      fireEvent.click(getByText('Add "new option"'));
     });
   });
 });

@@ -5,8 +5,19 @@
     "allowJs": false,
     "noEmit": false,
     "declaration": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    "types": ["node", "@emotion/react/types/css-prop"]
   },
   "include": ["./typings", "./src/**/*.ts", "./src/**/*.tsx"],
-  "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/story.tsx", "**/*.stories.tsx"]
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/story.tsx",
+    "**/*.stories.tsx",
+    "**/examples/**",
+    "./src/Flag/*.tsx"
+  ]
 }

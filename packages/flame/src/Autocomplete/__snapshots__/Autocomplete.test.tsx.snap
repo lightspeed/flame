@@ -1,154 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Autocomplete renders as disabled 1`] = `
-.emotion-7 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-.emotion-6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fff;
-  border-color: #abb3b3;
-  border-radius: 0.1875rem;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
-  cursor: default;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.25rem;
-  outline: 0 !important;
-  position: relative;
-  -webkit-transition: all 100ms;
-  transition: all 100ms;
-  box-sizing: border-box;
-  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 0.875rem;
-  color: #494c4c;
-}
-
-.emotion-6:hover {
-  border-color: hsl(0,0%,70%);
-}
-
-.emotion-6:hover {
-  border-color: #848a8a;
-}
-
-.cr-autocomplete--error .emotion-6 {
-  border-color: #b93435;
-}
-
-.cr-autocomplete--error .emotion-6 .cr-autocomplete__dropdownIndicator {
-  fill: #b93435;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 2px 8px;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.emotion-0 {
-  color: #abb3b3;
-  margin-left: 2px;
-  margin-right: 2px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  box-sizing: border-box;
-}
-
-.emotion-1 {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  visibility: visible;
-  color: hsl(0,0%,20%);
-  box-sizing: border-box;
-}
-
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  opacity: 1;
-  cursor: pointer;
-  color: #848a8a;
-}
-
-.emotion-5 div:hover .cr-autocomplete__clearIndicator {
-  fill: #b93435;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-}
-
 <div
-  className="emotion-7 cr-autocomplete"
+  className="css-1pcexqc-container cr-autocomplete"
   onKeyDown={[Function]}
 >
   <div
-    className="emotion-6 cr-autocomplete__control"
+    className="css-1t477io-control cr-autocomplete__control"
     onMouseDown={[Function]}
     onTouchEnd={[Function]}
   >
     <div
-      className="emotion-2 cr-autocomplete__value-container"
+      className="css-1hwfws3 cr-autocomplete__value-container"
     >
       <div
-        className="emotion-0 cr-autocomplete__placeholder"
+        className="css-1f1n7m1-placeholder cr-autocomplete__placeholder"
       >
         Choose a color
       </div>
       <div
-        className="emotion-1"
+        className="css-1g6gooi"
       >
         <div
           className="cr-autocomplete__input"
@@ -199,14 +70,12 @@ exports[`Autocomplete renders as disabled 1`] = `
                 "whiteSpace": "pre",
               }
             }
-          >
-            
-          </div>
+          />
         </div>
       </div>
     </div>
     <div
-      className="emotion-5 cr-autocomplete__indicators"
+      className="css-emavf5 cr-autocomplete__indicators"
     >
       <div
         aria-hidden="true"
@@ -227,7 +96,7 @@ exports[`Autocomplete renders as disabled 1`] = `
         }
       >
         <svg
-          className="cr-autocomplete__dropdownIndicator cr-icon emotion-3 emotion-4"
+          className="cr-autocomplete__dropdownIndicator cr-icon css-ur13wh-StyledIcon er8b7wo0"
           fill="#848a8a"
           style={
             Object {
@@ -255,154 +124,25 @@ exports[`Autocomplete renders as disabled 1`] = `
 `;
 
 exports[`Autocomplete renders correctly 1`] = `
-.emotion-7 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-.emotion-6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fff;
-  border-color: #abb3b3;
-  border-radius: 0.1875rem;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
-  cursor: default;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.25rem;
-  outline: 0 !important;
-  position: relative;
-  -webkit-transition: all 100ms;
-  transition: all 100ms;
-  box-sizing: border-box;
-  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 0.875rem;
-  color: #494c4c;
-}
-
-.emotion-6:hover {
-  border-color: hsl(0,0%,70%);
-}
-
-.emotion-6:hover {
-  border-color: #848a8a;
-}
-
-.cr-autocomplete--error .emotion-6 {
-  border-color: #b93435;
-}
-
-.cr-autocomplete--error .emotion-6 .cr-autocomplete__dropdownIndicator {
-  fill: #b93435;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 2px 8px;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.emotion-0 {
-  color: #abb3b3;
-  margin-left: 2px;
-  margin-right: 2px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  box-sizing: border-box;
-}
-
-.emotion-1 {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  visibility: visible;
-  color: hsl(0,0%,20%);
-  box-sizing: border-box;
-}
-
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  opacity: 1;
-  cursor: pointer;
-  color: #848a8a;
-}
-
-.emotion-5 div:hover .cr-autocomplete__clearIndicator {
-  fill: #b93435;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-}
-
 <div
-  className="emotion-7 cr-autocomplete"
+  className="css-1pcexqc-container cr-autocomplete"
   onKeyDown={[Function]}
 >
   <div
-    className="emotion-6 cr-autocomplete__control"
+    className="css-1t477io-control cr-autocomplete__control"
     onMouseDown={[Function]}
     onTouchEnd={[Function]}
   >
     <div
-      className="emotion-2 cr-autocomplete__value-container"
+      className="css-1hwfws3 cr-autocomplete__value-container"
     >
       <div
-        className="emotion-0 cr-autocomplete__placeholder"
+        className="css-1f1n7m1-placeholder cr-autocomplete__placeholder"
       >
         Choose a color
       </div>
       <div
-        className="emotion-1"
+        className="css-1g6gooi"
       >
         <div
           className="cr-autocomplete__input"
@@ -453,14 +193,12 @@ exports[`Autocomplete renders correctly 1`] = `
                 "whiteSpace": "pre",
               }
             }
-          >
-            
-          </div>
+          />
         </div>
       </div>
     </div>
     <div
-      className="emotion-5 cr-autocomplete__indicators"
+      className="css-emavf5 cr-autocomplete__indicators"
     >
       <div
         aria-hidden="true"
@@ -481,7 +219,7 @@ exports[`Autocomplete renders correctly 1`] = `
         }
       >
         <svg
-          className="cr-autocomplete__dropdownIndicator cr-icon emotion-3 emotion-4"
+          className="cr-autocomplete__dropdownIndicator cr-icon css-ur13wh-StyledIcon er8b7wo0"
           fill="#848a8a"
           style={
             Object {
@@ -509,176 +247,25 @@ exports[`Autocomplete renders correctly 1`] = `
 `;
 
 exports[`Autocomplete renders in loading mode 1`] = `
-@keyframes animation-0 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.emotion-10 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-.emotion-9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fff;
-  border-color: #abb3b3;
-  border-radius: 0.1875rem;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
-  cursor: default;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.25rem;
-  outline: 0 !important;
-  position: relative;
-  -webkit-transition: all 100ms;
-  transition: all 100ms;
-  box-sizing: border-box;
-  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 0.875rem;
-  color: #494c4c;
-}
-
-.emotion-9:hover {
-  border-color: hsl(0,0%,70%);
-}
-
-.emotion-9:hover {
-  border-color: #848a8a;
-}
-
-.cr-autocomplete--error .emotion-9 {
-  border-color: #b93435;
-}
-
-.cr-autocomplete--error .emotion-9 .cr-autocomplete__dropdownIndicator {
-  fill: #b93435;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 2px 8px;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.emotion-0 {
-  color: #abb3b3;
-  margin-left: 2px;
-  margin-right: 2px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  box-sizing: border-box;
-}
-
-.emotion-1 {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  visibility: visible;
-  color: hsl(0,0%,20%);
-  box-sizing: border-box;
-}
-
-.emotion-8 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  opacity: 1;
-  cursor: pointer;
-  color: #848a8a;
-}
-
-.emotion-8 div:hover .cr-autocomplete__clearIndicator {
-  fill: #b93435;
-}
-
-.emotion-6 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-}
-
-.emotion-4 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-  -webkit-animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-  animation: animation-0 1s infinite cubic-bezier(0.35,0.3,0.3,0.35);
-}
-
 <div
-  className="emotion-10 cr-autocomplete"
+  className="css-1pcexqc-container cr-autocomplete"
   onKeyDown={[Function]}
 >
   <div
-    className="emotion-9 cr-autocomplete__control"
+    className="css-1t477io-control cr-autocomplete__control"
     onMouseDown={[Function]}
     onTouchEnd={[Function]}
   >
     <div
-      className="emotion-2 cr-autocomplete__value-container"
+      className="css-1hwfws3 cr-autocomplete__value-container"
     >
       <div
-        className="emotion-0 cr-autocomplete__placeholder"
+        className="css-1f1n7m1-placeholder cr-autocomplete__placeholder"
       >
         Choose a color
       </div>
       <div
-        className="emotion-1"
+        className="css-1g6gooi"
       >
         <div
           className="cr-autocomplete__input"
@@ -729,17 +316,15 @@ exports[`Autocomplete renders in loading mode 1`] = `
                 "whiteSpace": "pre",
               }
             }
-          >
-            
-          </div>
+          />
         </div>
       </div>
     </div>
     <div
-      className="emotion-8 cr-autocomplete__indicators"
+      className="css-emavf5 cr-autocomplete__indicators"
     >
       <svg
-        className="emotion-3 cr-icon emotion-4 emotion-5"
+        className="e1pla2t60 cr-icon css-1ktlw1z-StyledIcon-StyledIcon er8b7wo0"
         fill="#abb3b3"
         style={
           Object {
@@ -780,7 +365,7 @@ exports[`Autocomplete renders in loading mode 1`] = `
         }
       >
         <svg
-          className="cr-autocomplete__dropdownIndicator cr-icon emotion-6 emotion-5"
+          className="cr-autocomplete__dropdownIndicator cr-icon css-ur13wh-StyledIcon er8b7wo0"
           fill="#848a8a"
           style={
             Object {
@@ -808,158 +393,25 @@ exports[`Autocomplete renders in loading mode 1`] = `
 `;
 
 exports[`Autocomplete renders with an initial value 1`] = `
-.emotion-9 {
-  position: relative;
-  box-sizing: border-box;
-}
-
-.emotion-8 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fff;
-  border-color: #abb3b3;
-  border-radius: 0.1875rem;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: inset 0 0.0625rem 0.125rem rgba(56,61,61,0.1);
-  cursor: default;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.25rem;
-  outline: 0 !important;
-  position: relative;
-  -webkit-transition: all 100ms;
-  transition: all 100ms;
-  box-sizing: border-box;
-  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 0.875rem;
-  color: #494c4c;
-}
-
-.emotion-8:hover {
-  border-color: hsl(0,0%,70%);
-}
-
-.emotion-8:hover {
-  border-color: #848a8a;
-}
-
-.cr-autocomplete--error .emotion-8 {
-  border-color: #b93435;
-}
-
-.cr-autocomplete--error .emotion-8 .cr-autocomplete__dropdownIndicator {
-  fill: #b93435;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 2px 8px;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.emotion-1 {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  visibility: visible;
-  color: hsl(0,0%,20%);
-  box-sizing: border-box;
-}
-
-.emotion-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  opacity: 1;
-  cursor: pointer;
-  color: #848a8a;
-}
-
-.emotion-7 div:hover .cr-autocomplete__clearIndicator {
-  fill: #b93435;
-}
-
-.emotion-3 {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: text-bottom;
-}
-
-.emotion-0 {
-  color: hsl(0,0%,20%);
-  margin-left: 2px;
-  margin-right: 2px;
-  max-width: calc(100% - 8px);
-  overflow: hidden;
-  position: absolute;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  box-sizing: border-box;
-}
-
 <div
-  className="emotion-9 cr-autocomplete"
+  className="css-1pcexqc-container cr-autocomplete"
   onKeyDown={[Function]}
 >
   <div
-    className="emotion-8 cr-autocomplete__control"
+    className="css-1t477io-control cr-autocomplete__control"
     onMouseDown={[Function]}
     onTouchEnd={[Function]}
   >
     <div
-      className="emotion-2 cr-autocomplete__value-container cr-autocomplete__value-container--has-value"
+      className="css-1hwfws3 cr-autocomplete__value-container cr-autocomplete__value-container--has-value"
     >
       <div
-        className="emotion-0 cr-autocomplete__single-value"
+        className="css-dvua67-singleValue cr-autocomplete__single-value"
       >
         Red
       </div>
       <div
-        className="emotion-1"
+        className="css-1g6gooi"
       >
         <div
           className="cr-autocomplete__input"
@@ -1010,14 +462,12 @@ exports[`Autocomplete renders with an initial value 1`] = `
                 "whiteSpace": "pre",
               }
             }
-          >
-            
-          </div>
+          />
         </div>
       </div>
     </div>
     <div
-      className="emotion-7 cr-autocomplete__indicators"
+      className="css-emavf5 cr-autocomplete__indicators"
     >
       <div
         aria-hidden="true"
@@ -1038,7 +488,7 @@ exports[`Autocomplete renders with an initial value 1`] = `
         }
       >
         <svg
-          className="cr-autocomplete__clearIndicator cr-icon emotion-3 emotion-4"
+          className="cr-autocomplete__clearIndicator cr-icon css-ur13wh-StyledIcon er8b7wo0"
           fill="hsl(0, 0%, 80%)"
           style={
             Object {
@@ -1074,7 +524,7 @@ exports[`Autocomplete renders with an initial value 1`] = `
         }
       >
         <svg
-          className="cr-autocomplete__dropdownIndicator cr-icon emotion-3 emotion-4"
+          className="cr-autocomplete__dropdownIndicator cr-icon css-ur13wh-StyledIcon er8b7wo0"
           fill="#848a8a"
           style={
             Object {

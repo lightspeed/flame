@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { css } from '@styled-system/css';
-import { withTheme } from 'emotion-theming';
+import { withTheme } from '@emotion/react';
 
 import { Box } from './index';
 import { Alert } from '../Alert';
@@ -18,7 +18,7 @@ function hex2rgba(hex: string) {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-const BoxExampleGrid: React.FC = ({ ...rest }) => (
+const BoxExampleGrid: React.FC<{ children?: React.ReactNode }> = ({ children, ...rest }) => (
   <div
     css={
       // @ts-ignore
@@ -29,7 +29,9 @@ const BoxExampleGrid: React.FC = ({ ...rest }) => (
       })
     }
     {...rest}
-  />
+  >
+    {children}
+  </div>
 );
 
 export default {

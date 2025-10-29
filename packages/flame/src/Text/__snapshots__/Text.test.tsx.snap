@@ -1,17 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text Snapshots should render Heading1 with appropriate styles 1`] = `
-.emotion-0 {
-  margin: 0;
-  font-weight: 700;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 2.25rem;
-  line-height: 3.375rem;
-}
-
 <h1
-  className="fl-heading1 emotion-0 emotion-1"
+  className="fl-heading1 css-41xlmr-Heading1-BaseText-Heading1 e4p1v738"
   color="textHeading"
   fontWeight="bold"
 >
@@ -20,17 +11,8 @@ exports[`Text Snapshots should render Heading1 with appropriate styles 1`] = `
 `;
 
 exports[`Text Snapshots should render Heading2 with appropriate styles 1`] = `
-.emotion-0 {
-  margin: 0;
-  font-weight: 700;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-}
-
 <h2
-  className="fl-heading2 emotion-0 emotion-1"
+  className="fl-heading2 css-1ycstr5-Heading2-BaseText-Heading2 e4p1v739"
   color="textHeading"
   fontWeight="bold"
 >
@@ -39,17 +21,8 @@ exports[`Text Snapshots should render Heading2 with appropriate styles 1`] = `
 `;
 
 exports[`Text Snapshots should render Heading3 with appropriate styles 1`] = `
-.emotion-0 {
-  margin: 0;
-  font-weight: 700;
-  color: #0c0d0d;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.875rem;
-}
-
 <h3
-  className="fl-heading3 emotion-0 emotion-1"
+  className="fl-heading3 css-xh28yu-Heading3-BaseText-Heading3 e4p1v7310"
   color="textHeading"
   fontWeight="bold"
 >
@@ -58,22 +31,8 @@ exports[`Text Snapshots should render Heading3 with appropriate styles 1`] = `
 `;
 
 exports[`Text Snapshots should render Heading4 with appropriate styles 1`] = `
-.emotion-0 {
-  margin: 0;
-  font-weight: 700;
-  color: #0c0d0d;
-  -webkit-letter-spacing: 0.09375rem;
-  -moz-letter-spacing: 0.09375rem;
-  -ms-letter-spacing: 0.09375rem;
-  letter-spacing: 0.09375rem;
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  text-transform: uppercase;
-}
-
 <h4
-  className="fl-heading4 emotion-0 emotion-1"
+  className="fl-heading4 css-12fncb-Heading4-BaseText-Heading4 e4p1v7311"
   color="textHeading"
   fontWeight="bold"
   letterSpacing={3}
@@ -83,22 +42,8 @@ exports[`Text Snapshots should render Heading4 with appropriate styles 1`] = `
 `;
 
 exports[`Text Snapshots should render TextLink with appropriate styles 1`] = `
-.emotion-0 {
-  margin: 0;
-  color: #2875c6;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  cursor: pointer;
-  color: #2875c6;
-}
-
 <a
-  className="fl-textlink emotion-0 emotion-1"
+  className="fl-textlink css-1juad12-TextLink-Text-TextLink e4p1v7312"
   href="www.google.com"
 >
   My Heading

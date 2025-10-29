@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { Global, css } from '@emotion/core';
+import { Global, css, ThemeProvider } from '@emotion/react';
 import styled from '@emotion/styled';
-import { ThemeProvider } from 'emotion-theming';
 import { Omit } from 'type-fest';
 
 import {
@@ -54,13 +53,15 @@ const borderRadii = system({
 
 const border = compose(borderRadii, styledSystemBorder);
 
-type AsProps = { as?: string };
+export type AsProps = { as?: string | React.ElementType<any, any> };
 export type FlameBoxProps = SpaceProps &
   LayoutProps &
   FlexboxProps &
   TypographyProps &
   Partial<Omit<ColorProps, 'color'>> & // Fun clashing between native color prop & styled-system color prop
-  AsProps;
+  AsProps & {
+    children?: React.ReactNode;
+  };
 export const Box = styled('div')<FlameBoxProps>(compose(space, layout, typography, color, flexbox));
 
 export type FlameFlexProps = FlameBoxProps & FlexboxProps;

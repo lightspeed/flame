@@ -16,10 +16,18 @@ module.exports = {
     // See https://github.com/lightspeedretail/web-tools/issues/65
     '@typescript-eslint/ban-types': 'error',
     'jest/valid-describe': 'off',
+    // Allow css prop from Emotion v11
+    'react/no-unknown-property': ['error', { ignore: ['css'] }],
   },
   overrides: [
     {
       files: ['**/.storybook/*.js', 'packages/**/story.[jt]s?(x)', '**/scripts/*.js'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
+    {
+      files: ['**/*.test.tsx', '**/*.test.ts', '**/__tests__/*.tsx', '**/__tests__/*.ts'],
       rules: {
         'import/no-extraneous-dependencies': 'off',
       },

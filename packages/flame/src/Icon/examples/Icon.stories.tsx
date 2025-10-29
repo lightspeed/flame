@@ -25,7 +25,7 @@ export default {
 
 const iconList: any = IconList;
 
-type IconPresenterProps = { name?: string };
+type IconPresenterProps = { name?: string; children?: React.ReactNode };
 type IconPresenterState = { colors: any };
 class IconPresenter extends React.PureComponent<IconPresenterProps, IconPresenterState> {
   constructor(props: IconPresenterProps) {
