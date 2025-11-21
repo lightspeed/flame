@@ -2,7 +2,7 @@
 
 exports[`<Radio /> Snapshots renders a Radio with a label and description correctly 1`] = `
 <div
-  className="css-qpvxlq-Box e1rqh3k81"
+  className="css-ik298q-Box e1rqh3k81"
 >
   <label
     className="css-1s6q0wc-BaseLabel-Text-BaseLabel ev4kwu51"
@@ -44,7 +44,7 @@ exports[`<Radio /> Snapshots renders a Radio with a label and description correc
 
 exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
 <div
-  className="css-qpvxlq-Box e1rqh3k81"
+  className="css-ik298q-Box e1rqh3k81"
 >
   <label
     className="css-1s6q0wc-BaseLabel-Text-BaseLabel ev4kwu51"
@@ -79,7 +79,7 @@ exports[`<Radio /> Snapshots renders a checked Radio correctly 1`] = `
 
 exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
 <div
-  className="css-qpvxlq-Box e1rqh3k81"
+  className="css-ik298q-Box e1rqh3k81"
 >
   <label
     className="css-17miwjw-BaseLabel-Text-BaseLabel ev4kwu51"
@@ -115,7 +115,7 @@ exports[`<Radio /> Snapshots renders a disabled Radio correctly 1`] = `
 
 exports[`<Radio /> Snapshots renders a simple Radio correctly 1`] = `
 <div
-  className="css-qpvxlq-Box e1rqh3k81"
+  className="css-ik298q-Box e1rqh3k81"
 >
   <label
     className="css-1s6q0wc-BaseLabel-Text-BaseLabel ev4kwu51"

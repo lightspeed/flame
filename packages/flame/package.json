@@ -37,6 +37,7 @@
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "dependencies": {
+    "@lightspeed/unified-tokens": "^3.3.0",
     "@popperjs/core": "^2.11.8",
     "@styled-system/css": "^5.1.5",
     "@styled-system/theme-get": "5.0.16",

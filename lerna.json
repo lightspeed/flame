@@ -4,7 +4,7 @@
   "version": "independent",
   "command": {
     "publish": {
-      "allowBranch": ["master", "next", "LSPAY-33449"],
+      "allowBranch": ["master", "next", "LSPAY-34879"],
       "ignoreChanges": [
         "**/story.js",
         "**/story.tsx",

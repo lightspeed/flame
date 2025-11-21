@@ -127,10 +127,11 @@ const Toaster: React.FC<ToastProps> = ({
           </Box>
           <Flex
             flex="1"
-            fontWeight="bold"
+            fontWeight="normal"
+            lineHeight="1.25rem"
             ml={2}
             justifyContent="space-between"
-            fontSize={['text', 'text']}
+            fontSize={['text-s', 'text-s']}
             width="100%"
             className="fl-toaster__content"
             // Needs to be visually centered with icons
@@ -158,7 +159,7 @@ const Toaster: React.FC<ToastProps> = ({
             })}
             onClick={() => onDismiss()}
           >
-            <IconMathMultiply size="24px" aria-hidden="true" />
+            <IconMathMultiply size="20px" aria-hidden="true" />
           </button>
         </Flex>
       </div>
