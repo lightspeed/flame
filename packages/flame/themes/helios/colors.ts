@@ -67,6 +67,61 @@ const heliosColors = Object.keys(tokenMapping).reduce((acc, flameName) => {
   return acc;
 }, {} as Record<string, string>);
 
+// Mapping from flame-tokens color names to Helios equivalents
+// This provides backward compatibility for components using the old color names
+const flameTokensToHeliosMapping: Record<string, string> = {
+  // Maple (red/danger) → Helios "No" colors
+  maple: heliosColors['helios-no-default'],
+  'maple-100': heliosColors['helios-no-soft'],
+  'maple-200': heliosColors['helios-no-default'],
+  'maple-300': heliosColors['helios-no-strong'],
+  // Blue (primary) → Helios "Go" colors (primary action)
+  blue: heliosColors['helios-go-default'],
+  'blue-100': heliosColors['helios-go-soft'],
+  'blue-200': heliosColors['helios-go-default'],
+  'blue-300': heliosColors['helios-go-strong'],
+  // Green (success) → Helios "Success" colors
+  green: heliosColors['helios-success-default'],
+  'green-100': heliosColors['helios-success-soft'],
+  'green-200': heliosColors['helios-success-default'],
+  'green-300': heliosColors['helios-success-strong'],
+  // Orange (warning) → Helios "Warning" colors
+  orange: heliosColors['helios-warning-default'],
+  'orange-100': heliosColors['helios-warning-soft'],
+  'orange-200': heliosColors['helios-warning-default'],
+  'orange-300': heliosColors['helios-warning-strong'],
+  // Yellow (warning/attention) → Helios "Warning" colors
+  yellow: heliosColors['helios-warning-default'],
+  'yellow-100': heliosColors['helios-warning-soft'],
+  'yellow-200': heliosColors['helios-warning-default'],
+  'yellow-300': heliosColors['helios-warning-strong'],
+  // Gray (neutral) → Helios neutral colors
+  gray: heliosColors['helios-neutral-dark'],
+  'gray-100': heliosColors['helios-neutral-soft'],
+  'gray-200': heliosColors['helios-neutral-inert'],
+  'gray-300': heliosColors['helios-neutral-edge'],
+  // Seal (darker gray) → Helios neutral colors
+  seal: heliosColors['helios-neutral-dark'],
+  'seal-100': heliosColors['helios-neutral-soft'],
+  'seal-200': heliosColors['helios-neutral-inert'],
+  'seal-300': heliosColors['helios-neutral-edge'],
+  // Dive (dark blue) → Helios "Supplementary" colors
+  dive: heliosColors['helios-supplementary-default'],
+  'dive-100': heliosColors['helios-supplementary-soft'],
+  'dive-200': heliosColors['helios-supplementary-default'],
+  'dive-300': heliosColors['helios-supplementary-strong'],
+  // Night (very dark/black) → Helios neutral dark
+  night: heliosColors['helios-neutral-dark'],
+  'night-100': heliosColors['helios-neutral-soft'],
+  'night-200': heliosColors['helios-neutral-dark'],
+  'night-300': heliosColors['helios-neutral-ondark-default'],
+  // Snow (white) → white
+  snow: themeColors.white,
+  'snow-100': themeColors.white,
+  'snow-200': heliosColors['helios-neutral-backdrop'],
+  'snow-300': heliosColors['helios-neutral-edge'],
+};
+
 const aliases: ColorAliases = {
   primary: heliosColors['helios-go-default'], // Helios "Go" color
   secondary: heliosColors['helios-supplementary-default'], // Helios "Supplementary" color
@@ -84,6 +139,7 @@ const aliases: ColorAliases = {
 const colors = {
   ...themeColors,
   ...heliosColors,
+  ...flameTokensToHeliosMapping,
   ...aliases,
 };
 
