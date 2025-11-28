@@ -1,6 +1,6 @@
 {
   "name": "@lightspeed/flame",
-  "version": "3.0.0-alpha.10",
+  "version": "3.0.0-helios.1",
   "private": true,
   "description": "Lightspeed's React UI components library",
   "author": "Lightspeed",
@@ -37,6 +37,7 @@
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "dependencies": {
+    "@lightspeed/unified-tokens": "^3.3.0",
     "@popperjs/core": "^2.11.8",
     "@styled-system/css": "^5.1.5",
     "@styled-system/theme-get": "5.0.16",
@@ -51,7 +52,7 @@
     "type-fest": "^0.3.0"
   },
   "devDependencies": {
-    "@lightspeed/flame-tokens": "^2.0.0-alpha.10",
+    "@lightspeed/flame-tokens": "^2.0.0-helios.1",
     "@types/lodash": "^4.14.123",
     "@types/react-modal": "^3.8.1",
     "@types/react-select": "^2.0.15",

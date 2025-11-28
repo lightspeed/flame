@@ -10,6 +10,8 @@ jobs:
   build:
     name: Test, lint, typecheck
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@master
       - name: Read .nvmrc

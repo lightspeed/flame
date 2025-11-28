@@ -2558,6 +2558,11 @@
     eslint-plugin-react "^7.12.4"
     eslint-plugin-react-hooks "^1.6.0"
 
+"@lightspeed/unified-tokens@^3.3.0":
+  version "3.4.0"
+  resolved "https://npm.pkg.github.com/download/@lightspeed/unified-tokens/3.4.0/c1abddccc8b9bd8a414ad0319a9039cb42676fd4#c1abddccc8b9bd8a414ad0319a9039cb42676fd4"
+  integrity sha512-7CSKcOyaOV2NUAb0uV9vlATBwS3FH17u4tynregHraU2Cpc/+djgzPB4rn/nceUv10+VwdAcIv9SM0y0xIBoIA==
+
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.22.tgz#8a723157bf90e78f17dc0f27995398e6c731f1ba"

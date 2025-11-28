@@ -24,6 +24,7 @@ import { themeGet, flameTheme as ThemeUIFlame } from './theme-get';
 import { theme as lightTheme } from './themes/oldskool';
 import { theme as flameTheme } from './themes/flame';
 import { theme as darkTheme } from './themes/dark';
+import { theme as heliosTheme } from './themes/helios';
 
 export interface BorderProps extends StyledSystemBorderProps {
   borderTopLeftRadius?: string | number;
@@ -73,6 +74,8 @@ export const themePicker = (themeName?: string) => {
   switch (themeName) {
     case 'experimentaldark':
       return darkTheme;
+    case 'helios':
+      return heliosTheme;
     case 'oldskool':
     case 'light':
       return lightTheme;
@@ -138,6 +141,7 @@ const FlameGlobalStyles: React.FunctionComponent<{ themeName?: string }> = ({ th
 export {
   lightTheme,
   flameTheme,
+  heliosTheme,
   FlameFonts,
   FlameTheme,
   FlameGlobalStyles,

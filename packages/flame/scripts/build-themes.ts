@@ -1,6 +1,7 @@
 import { theme as flameTheme, themeUI as flameThemeUI } from '../themes/flame';
 import { theme as oldSkoolTheme } from '../themes/oldskool';
 import { theme as darkTheme } from '../themes/dark';
+import { theme as heliosTheme } from '../themes/helios';
 
 // @ts-ignore
 const fs = require('fs');
@@ -96,6 +97,10 @@ const themeList: ThemeList = [
   {
     filename: 'dark',
     themeObject: darkTheme,
+  },
+  {
+    filename: 'helios',
+    themeObject: heliosTheme,
   },
 ];
 

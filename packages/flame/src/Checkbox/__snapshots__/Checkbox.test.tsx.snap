@@ -2,7 +2,7 @@
 
 exports[`<Checkbox /> Snapshots when all props and label/description with html should render correctly 1`] = `
 <div
-  className="css-qpvxlq-Box e1rqh3k81"
+  className="css-ik298q-Box e1rqh3k81"
 >
   <label
     className="css-1s6q0wc-BaseLabel-Text-BaseLabel ev4kwu51"
@@ -58,7 +58,7 @@ exports[`<Checkbox /> Snapshots when all props and label/description with html s
 
 exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 <div
-  className="css-qpvxlq-Box e1rqh3k81"
+  className="css-ik298q-Box e1rqh3k81"
 >
   <label
     className="css-1s6q0wc-BaseLabel-Text-BaseLabel ev4kwu51"
@@ -110,7 +110,7 @@ exports[`<Checkbox /> Snapshots when all props should render correctly 1`] = `
 
 exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
 <div
-  className="css-qpvxlq-Box e1rqh3k81"
+  className="css-ik298q-Box e1rqh3k81"
 >
   <label
     className="css-1s6q0wc-BaseLabel-Text-BaseLabel ev4kwu51"
@@ -154,7 +154,7 @@ exports[`<Checkbox /> Snapshots when checked should render correctly 1`] = `
 
 exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
 <div
-  className="css-qpvxlq-Box e1rqh3k81"
+  className="css-ik298q-Box e1rqh3k81"
 >
   <label
     className="css-17miwjw-BaseLabel-Text-BaseLabel ev4kwu51"
@@ -197,7 +197,7 @@ exports[`<Checkbox /> Snapshots when disabled should render correctly 1`] = `
 
 exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
 <div
-  className="css-qpvxlq-Box e1rqh3k81"
+  className="css-ik298q-Box e1rqh3k81"
 >
   <label
     className="css-1s6q0wc-BaseLabel-Text-BaseLabel ev4kwu51"
@@ -239,7 +239,7 @@ exports[`<Checkbox /> Snapshots when empty props should render correctly 1`] = `
 
 exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] = `
 <div
-  className="css-qpvxlq-Box e1rqh3k81"
+  className="css-ik298q-Box e1rqh3k81"
 >
   <label
     className="css-1s6q0wc-BaseLabel-Text-BaseLabel ev4kwu51"
@@ -284,7 +284,7 @@ exports[`<Checkbox /> Snapshots when indeterminate should render correctly 1`] =
 
 exports[`<Checkbox /> Snapshots when not checked should render correctly 1`] = `
 <div
-  className="css-qpvxlq-Box e1rqh3k81"
+  className="css-ik298q-Box e1rqh3k81"
 >
   <label
     className="css-1s6q0wc-BaseLabel-Text-BaseLabel ev4kwu51"

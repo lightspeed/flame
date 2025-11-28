@@ -6,6 +6,8 @@ jobs:
     name: Run visual regression tests with chromatic (label triggered)
     if: ${{ contains(github.event.pull_request.labels.*.name, 'snapshot') }}
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
         with:

@@ -44,6 +44,18 @@ const ThemeSwitcher = () => {
           />
           Lightspeed (Old theme)
         </label>
+        <br />
+        <label htmlFor="helioscolors">
+          <input
+            type="radio"
+            value="helios"
+            id="helioscolors"
+            name="flame-theme"
+            onChange={() => onChange('helios')}
+            checked={state.selectedTheme === 'helios'}
+          />
+          Helios
+        </label>
       </fieldset>
     </div>
   );
