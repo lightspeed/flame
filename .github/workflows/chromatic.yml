@@ -11,17 +11,17 @@ jobs:
     name: Run visual regression tests with chromatic
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Read .nvmrc
-        run: echo ::set-output name=nvmrc::$(cat .nvmrc)
+        run: echo "nvmrc=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Setup node
-        uses: actions/setup-node@v1.1.1
+        uses: actions/setup-node@v4
         with:
           node-version: '${{ steps.nvm.outputs.nvmrc }}'
-      - uses: actions/cache@v1
+      - uses: actions/cache@v4
         with:
           path: ~/.cache/yarn
           key: ${{ runner.OS }}-yarn-cache-v1-${{ hashFiles('**/yarn.lock') }}

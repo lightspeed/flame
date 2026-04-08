@@ -10,20 +10,20 @@ jobs:
     name: Publish
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
       - name: Read .nvmrc
-        run: echo ::set-output name=nvmrc::$(cat .nvmrc)
+        run: echo "nvmrc=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '${{ steps.nvm.outputs.nvmrc }}'
           registry-url: https://registry.npmjs.org/
-      - uses: actions/cache@v1
+      - uses: actions/cache@v4
         with:
           path: ~/.cache/yarn
           key: ${{ runner.OS }}-yarn-cache-v1-${{ hashFiles('**/yarn.lock') }}

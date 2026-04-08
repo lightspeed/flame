@@ -3,23 +3,23 @@ name: Test
 on:
   push:
     branches:
-      - "**"
+      - '**'
     tags-ignore:
-      - "**"
+      - '**'
 jobs:
   build:
     name: Test, lint, typecheck
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
       - name: Read .nvmrc
-        run: echo ::set-output name=nvmrc::$(cat .nvmrc)
+        run: echo "nvmrc=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "${{ steps.nvm.outputs.nvmrc }}"
-      - uses: actions/cache@v1
+          node-version: '${{ steps.nvm.outputs.nvmrc }}'
+      - uses: actions/cache@v4
         with:
           path: ~/.cache/yarn
           key: ${{ runner.OS }}-yarn-cache-v1-${{ hashFiles('**/yarn.lock') }}
