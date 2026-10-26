@@ -114,6 +114,8 @@
     "yargs": "^11.0.0"
   },
   "resolutions": {
+    "webpack": "4.47.0",
+    "babel-loader": "8.4.1",
     "@types/react": "16.8.23",
     "react-docgen-typescript": "1.18.0"
   },
